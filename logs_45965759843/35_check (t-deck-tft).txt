@@ -1,0 +1,492 @@
+﻿2025-09-21T23:17:06.9138137Z Current runner version: '2.327.1'
+2025-09-21T23:17:06.9146827Z Runner name: 'fifield-110-1-c3b6'
+2025-09-21T23:17:06.9147770Z Runner group name: 'mesh-x86'
+2025-09-21T23:17:06.9148902Z Machine name: '3712f8c9253d'
+2025-09-21T23:17:06.9154407Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:17:06.9157397Z Actions: write
+2025-09-21T23:17:06.9158074Z Attestations: write
+2025-09-21T23:17:06.9158708Z Checks: write
+2025-09-21T23:17:06.9159315Z Contents: write
+2025-09-21T23:17:06.9159905Z Deployments: write
+2025-09-21T23:17:06.9160491Z Discussions: write
+2025-09-21T23:17:06.9161077Z Issues: write
+2025-09-21T23:17:06.9161614Z Metadata: read
+2025-09-21T23:17:06.9162185Z Models: read
+2025-09-21T23:17:06.9162729Z Packages: write
+2025-09-21T23:17:06.9163538Z Pages: write
+2025-09-21T23:17:06.9164100Z PullRequests: write
+2025-09-21T23:17:06.9164730Z RepositoryProjects: write
+2025-09-21T23:17:06.9165375Z SecurityEvents: write
+2025-09-21T23:17:06.9165992Z Statuses: write
+2025-09-21T23:17:06.9166734Z ##[endgroup]
+2025-09-21T23:17:06.9170130Z Secret source: Actions
+2025-09-21T23:17:06.9170960Z Prepare workflow directory
+2025-09-21T23:17:06.9954447Z Prepare all required actions
+2025-09-21T23:17:07.0015794Z Getting action download info
+2025-09-21T23:17:07.9543431Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:17:08.9147695Z Complete job name: check (t-deck-tft)
+2025-09-21T23:17:08.9992278Z ##[group]Run actions/checkout@v5
+2025-09-21T23:17:08.9994554Z with:
+2025-09-21T23:17:08.9995707Z   repository: meshtastic/firmware
+2025-09-21T23:17:08.9997497Z   token: ***
+2025-09-21T23:17:08.9998595Z   ssh-strict: true
+2025-09-21T23:17:08.9999726Z   ssh-user: git
+2025-09-21T23:17:09.0000874Z   persist-credentials: true
+2025-09-21T23:17:09.0002162Z   clean: true
+2025-09-21T23:17:09.0003507Z   sparse-checkout-cone-mode: true
+2025-09-21T23:17:09.0004952Z   fetch-depth: 1
+2025-09-21T23:17:09.0006079Z   fetch-tags: false
+2025-09-21T23:17:09.0007248Z   show-progress: true
+2025-09-21T23:17:09.0008462Z   lfs: false
+2025-09-21T23:17:09.0009530Z   submodules: false
+2025-09-21T23:17:09.0010713Z   set-safe-directory: true
+2025-09-21T23:17:09.0013257Z ##[endgroup]
+2025-09-21T23:17:09.2123530Z Syncing repository: meshtastic/firmware
+2025-09-21T23:17:09.2127184Z ##[group]Getting Git version info
+2025-09-21T23:17:09.2129130Z Working directory is '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:17:09.2132301Z [command]/usr/bin/git version
+2025-09-21T23:17:09.2133888Z git version 2.43.0
+2025-09-21T23:17:09.2137979Z ##[endgroup]
+2025-09-21T23:17:09.2146438Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/fbf53c7b-068b-48af-809a-2014a8e0a31c' before making global git config changes
+2025-09-21T23:17:09.2152194Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:17:09.2155699Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:17:09.2198063Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-09-21T23:17:09.2253762Z https://github.com/meshtastic/firmware
+2025-09-21T23:17:09.2276802Z ##[group]Removing previously created refs, to avoid conflicts
+2025-09-21T23:17:09.2282540Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-09-21T23:17:09.2343346Z refs/heads/develop
+2025-09-21T23:17:09.2406634Z [command]/usr/bin/git checkout --detach
+2025-09-21T23:17:09.2885443Z HEAD is now at 3d51287 Introduce Radio Preset elections through BaseUI (#8071)
+2025-09-21T23:17:09.2991552Z [command]/usr/bin/git branch --delete --force develop
+2025-09-21T23:17:09.3034542Z Deleted branch develop (was 3d51287).
+2025-09-21T23:17:09.3142245Z ##[endgroup]
+2025-09-21T23:17:09.3145098Z [command]/usr/bin/git submodule status
+2025-09-21T23:17:09.3933408Z  dcac7e5673005f4d8a2b1f0f6e06877b689d7519 meshtestic (heads/master)
+2025-09-21T23:17:09.4098037Z  46b81e822af1b8e408f437092337f129dee693e6 protobufs (heads/master)
+2025-09-21T23:17:09.4147964Z ##[group]Cleaning the repository
+2025-09-21T23:17:09.4152656Z [command]/usr/bin/git clean -ffdx
+2025-09-21T23:17:09.7070839Z Removing .pio/
+2025-09-21T23:17:09.7072088Z Removing bin/__pycache__/
+2025-09-21T23:17:09.7085504Z [command]/usr/bin/git reset --hard HEAD
+2025-09-21T23:17:09.7388401Z HEAD is now at 3d51287 Introduce Radio Preset elections through BaseUI (#8071)
+2025-09-21T23:17:09.7417915Z ##[endgroup]
+2025-09-21T23:17:09.7420226Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:17:09.7421975Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:17:09.7467205Z ##[endgroup]
+2025-09-21T23:17:09.7469014Z ##[group]Setting up auth
+2025-09-21T23:17:09.7487634Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:17:09.7544957Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:17:09.8038839Z Entering 'meshtestic'
+2025-09-21T23:17:09.8106913Z Entering 'protobufs'
+2025-09-21T23:17:09.8230650Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:17:09.8761133Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:17:09.8765920Z Entering 'meshtestic'
+2025-09-21T23:17:09.8857129Z Entering 'protobufs'
+2025-09-21T23:17:09.8943840Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:17:09.9001810Z ##[endgroup]
+2025-09-21T23:17:09.9003900Z ##[group]Fetching the repository
+2025-09-21T23:17:09.9015788Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3d51287ba77693e5b0140d81abfe4cd218e0c2ae:refs/remotes/origin/develop
+2025-09-21T23:17:10.5874311Z ##[endgroup]
+2025-09-21T23:17:10.5878392Z ##[group]Determining the checkout info
+2025-09-21T23:17:10.5882695Z ##[endgroup]
+2025-09-21T23:17:10.5893805Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:17:10.6072811Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:17:10.6184604Z ##[group]Checking out the ref
+2025-09-21T23:17:10.6198268Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:17:10.6431900Z Switched to a new branch 'develop'
+2025-09-21T23:17:10.6434894Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:17:10.6483597Z ##[endgroup]
+2025-09-21T23:17:10.6579378Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:17:10.6643487Z 3d51287ba77693e5b0140d81abfe4cd218e0c2ae
+2025-09-21T23:17:10.7346785Z Prepare all required actions
+2025-09-21T23:17:10.7347763Z Getting action download info
+2025-09-21T23:17:11.0712543Z Download action repository 'actions/setup-python@v6' (SHA:e797f83bcb11b83ae66e0230d6156d7c80228e7c)
+2025-09-21T23:17:12.0120524Z ##[group]Run ./.github/actions/setup-base
+2025-09-21T23:17:12.0121005Z ##[endgroup]
+2025-09-21T23:17:12.0392687Z ##[group]Run actions/checkout@v5
+2025-09-21T23:17:12.0393311Z with:
+2025-09-21T23:17:12.0393655Z   submodules: recursive
+2025-09-21T23:17:12.0394020Z   ref: develop
+2025-09-21T23:17:12.0394391Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:17:12.0395141Z   token: ***
+2025-09-21T23:17:12.0395498Z   ssh-strict: true
+2025-09-21T23:17:12.0395828Z   ssh-user: git
+2025-09-21T23:17:12.0396193Z   persist-credentials: true
+2025-09-21T23:17:12.0396552Z   clean: true
+2025-09-21T23:17:12.0396921Z   sparse-checkout-cone-mode: true
+2025-09-21T23:17:12.0397318Z   fetch-depth: 1
+2025-09-21T23:17:12.0397672Z   fetch-tags: false
+2025-09-21T23:17:12.0398100Z   show-progress: true
+2025-09-21T23:17:12.0398680Z   lfs: false
+2025-09-21T23:17:12.0399036Z   set-safe-directory: true
+2025-09-21T23:17:12.0399401Z ##[endgroup]
+2025-09-21T23:17:12.1998781Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:17:12.2004916Z ##[group]Getting Git version info
+2025-09-21T23:17:12.2007794Z Working directory is '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:17:12.2009649Z [command]/usr/bin/git version
+2025-09-21T23:17:12.2010557Z git version 2.43.0
+2025-09-21T23:17:12.2013971Z ##[endgroup]
+2025-09-21T23:17:12.2021463Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/1a47eb34-b179-4b38-8cf2-f42c242b2d13' before making global git config changes
+2025-09-21T23:17:12.2024444Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:17:12.2041697Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:17:12.2045299Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-09-21T23:17:12.2066413Z https://github.com/meshtastic/firmware
+2025-09-21T23:17:12.2069127Z Deleting the contents of '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:17:12.4289010Z ##[group]Initializing the repository
+2025-09-21T23:17:12.4298925Z [command]/usr/bin/git init /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:17:12.4394199Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:17:12.4395662Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:17:12.4405911Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:17:12.4406641Z hint: 
+2025-09-21T23:17:12.4407249Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:17:12.4407819Z hint: 
+2025-09-21T23:17:12.4408443Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:17:12.4409438Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:17:12.4410119Z hint: 
+2025-09-21T23:17:12.4410566Z hint: 	git branch -m <name>
+2025-09-21T23:17:12.4411574Z Initialized empty Git repository in /home/ubuntu/runner/_work/firmware/firmware/.git/
+2025-09-21T23:17:12.4447654Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:17:12.4495338Z ##[endgroup]
+2025-09-21T23:17:12.4496383Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:17:12.4500527Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:17:12.4564680Z ##[endgroup]
+2025-09-21T23:17:12.4565408Z ##[group]Setting up auth
+2025-09-21T23:17:12.4570346Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:17:12.4653633Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:17:12.5085721Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:17:12.5129625Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:17:12.5480210Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:17:12.5538819Z ##[endgroup]
+2025-09-21T23:17:12.5539540Z ##[group]Fetching the repository
+2025-09-21T23:17:12.5550649Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:17:13.8380629Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:17:13.8381488Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:17:13.8443488Z ##[endgroup]
+2025-09-21T23:17:13.8444697Z ##[group]Determining the checkout info
+2025-09-21T23:17:13.8463748Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:17:13.8532867Z   origin/develop
+2025-09-21T23:17:13.8543784Z ##[endgroup]
+2025-09-21T23:17:13.8555278Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:17:13.8664663Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:17:13.8745711Z ##[group]Checking out the ref
+2025-09-21T23:17:13.8757213Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:17:14.1376688Z Switched to a new branch 'develop'
+2025-09-21T23:17:14.1377794Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:17:14.1389860Z ##[endgroup]
+2025-09-21T23:17:14.1391372Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:17:14.1405628Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:17:14.1481327Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:17:14.1567788Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:17:14.1624965Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:17:14.1707402Z ##[endgroup]
+2025-09-21T23:17:14.1708724Z ##[group]Fetching submodules
+2025-09-21T23:17:14.1716939Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:17:14.2406662Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:17:14.2956763Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:17:14.2967748Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:17:14.3020981Z Cloning into '/home/ubuntu/runner/_work/firmware/firmware/meshtestic'...
+2025-09-21T23:17:15.3652896Z Cloning into '/home/ubuntu/runner/_work/firmware/firmware/protobufs'...
+2025-09-21T23:17:16.4543679Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:17:16.4931836Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:17:16.5022109Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:17:16.5691577Z Entering 'meshtestic'
+2025-09-21T23:17:16.5768901Z Entering 'protobufs'
+2025-09-21T23:17:16.5906130Z ##[endgroup]
+2025-09-21T23:17:16.5907358Z ##[group]Persisting credentials for submodules
+2025-09-21T23:17:16.5919559Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:17:16.6527530Z Entering 'meshtestic'
+2025-09-21T23:17:16.6655676Z Entering 'protobufs'
+2025-09-21T23:17:16.6805310Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:17:16.7416675Z Entering 'meshtestic'
+2025-09-21T23:17:16.7530673Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:17:16.7584233Z Entering 'protobufs'
+2025-09-21T23:17:16.7698961Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:17:16.7862046Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:17:16.8468843Z Entering 'meshtestic'
+2025-09-21T23:17:16.8583531Z Entering 'protobufs'
+2025-09-21T23:17:16.8715977Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:17:16.9314800Z Entering 'meshtestic'
+2025-09-21T23:17:16.9439153Z Entering 'protobufs'
+2025-09-21T23:17:16.9567316Z ##[endgroup]
+2025-09-21T23:17:16.9649984Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:17:16.9712919Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:17:16.9995836Z ##[group]Run sudo apt-get -y update --fix-missing
+2025-09-21T23:17:16.9996902Z [36;1msudo apt-get -y update --fix-missing[0m
+2025-09-21T23:17:16.9998321Z [36;1msudo apt-get install -y cppcheck libbluetooth-dev libgpiod-dev libyaml-cpp-dev lsb-release[0m
+2025-09-21T23:17:17.0051621Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:17:17.0052726Z ##[endgroup]
+2025-09-21T23:17:17.5823686Z Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2025-09-21T23:17:17.6721094Z Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+2025-09-21T23:17:17.9048748Z Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2025-09-21T23:17:18.9983791Z Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2025-09-21T23:17:19.3547571Z Fetched 378 kB in 2s (167 kB/s)
+2025-09-21T23:17:20.6187416Z Reading package lists...
+2025-09-21T23:17:21.8442532Z Reading package lists...
+2025-09-21T23:17:22.1009799Z Building dependency tree...
+2025-09-21T23:17:22.1015276Z Reading state information...
+2025-09-21T23:17:22.4140105Z cppcheck is already the newest version (2.13.0-2ubuntu3).
+2025-09-21T23:17:22.4141625Z libbluetooth-dev is already the newest version (5.72-0ubuntu5.4).
+2025-09-21T23:17:22.4143916Z libgpiod-dev is already the newest version (1.6.3-1.1build1).
+2025-09-21T23:17:22.4145724Z libyaml-cpp-dev is already the newest version (0.8.0+dfsg-6build1).
+2025-09-21T23:17:22.4147064Z lsb-release is already the newest version (12.0-2).
+2025-09-21T23:17:22.4148794Z 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+2025-09-21T23:17:22.4512599Z ##[group]Run actions/setup-python@v6
+2025-09-21T23:17:22.4514200Z with:
+2025-09-21T23:17:22.4515294Z   python-version: 3.x
+2025-09-21T23:17:22.4516113Z   cache: pip
+2025-09-21T23:17:22.4517190Z   cache-dependency-path: .github/actions/**
+**.ini
+
+2025-09-21T23:17:22.4518431Z   check-latest: false
+2025-09-21T23:17:22.4519740Z   token: ***
+2025-09-21T23:17:22.4520647Z   update-environment: true
+2025-09-21T23:17:22.4521869Z   allow-prereleases: false
+2025-09-21T23:17:22.4522793Z   freethreaded: false
+2025-09-21T23:17:22.4523795Z ##[endgroup]
+2025-09-21T23:17:22.6493640Z ##[group]Installed versions
+2025-09-21T23:17:22.6561254Z (node:796) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-09-21T23:17:22.6563815Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-09-21T23:17:22.6565605Z Successfully set up CPython (3.13.7)
+2025-09-21T23:17:22.6567847Z ##[endgroup]
+2025-09-21T23:17:22.7181544Z [command]/home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/bin/pip cache dir
+2025-09-21T23:17:23.0221110Z /home/ubuntu/.cache/pip
+2025-09-21T23:17:23.8310587Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-fb5db71a65bba474cfd3851c4d11114c69613241cf2b7cbeb958811f315d7ca8
+2025-09-21T23:17:23.8587146Z (node:796) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2025-09-21T23:17:25.7552300Z Received 0 of 75387094 (0.0%), 0.0 MBs/sec
+2025-09-21T23:17:26.7554326Z Received 0 of 75387094 (0.0%), 0.0 MBs/sec
+2025-09-21T23:17:27.7558703Z Received 4194304 of 75387094 (5.6%), 1.3 MBs/sec
+2025-09-21T23:17:28.7567222Z Received 50331648 of 75387094 (66.8%), 12.0 MBs/sec
+2025-09-21T23:17:29.3881188Z Received 75387094 of 75387094 (100.0%), 15.5 MBs/sec
+2025-09-21T23:17:29.3886532Z Cache Size: ~72 MB (75387094 B)
+2025-09-21T23:17:29.4047492Z [command]/usr/bin/tar -xf /home/ubuntu/runner/_work/_temp/a69292cd-df5e-469c-8169-09e49aa9ccfd/cache.tzst -P -C /home/ubuntu/runner/_work/firmware/firmware --use-compress-program unzstd
+2025-09-21T23:17:29.8330682Z Cache restored successfully
+2025-09-21T23:17:29.8518578Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-fb5db71a65bba474cfd3851c4d11114c69613241cf2b7cbeb958811f315d7ca8
+2025-09-21T23:17:29.8953841Z ##[group]Run python -m pip install --upgrade pip
+2025-09-21T23:17:29.8954951Z [36;1mpython -m pip install --upgrade pip[0m
+2025-09-21T23:17:29.8956318Z [36;1mpip install -U --no-build-isolation --no-cache-dir "setuptools<72"[0m
+2025-09-21T23:17:29.8957922Z [36;1mpip install -U platformio adafruit-nrfutil --no-build-isolation[0m
+2025-09-21T23:17:29.8959194Z [36;1mpip install -U poetry --no-build-isolation[0m
+2025-09-21T23:17:29.8960459Z [36;1mpip install -U meshtastic --pre --no-build-isolation[0m
+2025-09-21T23:17:29.9014714Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:17:29.9015738Z env:
+2025-09-21T23:17:29.9016597Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:29.9018143Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:17:29.9019618Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:29.9020951Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:29.9022294Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:29.9024255Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:17:29.9025354Z ##[endgroup]
+2025-09-21T23:17:30.4216166Z Requirement already satisfied: pip in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (25.2)
+2025-09-21T23:17:31.2800881Z Requirement already satisfied: setuptools<72 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (71.1.0)
+2025-09-21T23:17:32.3615117Z Requirement already satisfied: platformio in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (6.1.18)
+2025-09-21T23:17:32.4464551Z Requirement already satisfied: adafruit-nrfutil in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (0.5.3.post16)
+2025-09-21T23:17:32.4812642Z Requirement already satisfied: bottle==0.13.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.13.4)
+2025-09-21T23:17:32.4817872Z Requirement already satisfied: click<8.1.8,>=8.0.4 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (8.1.7)
+2025-09-21T23:17:32.4821527Z Requirement already satisfied: colorama in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.4.6)
+2025-09-21T23:17:32.4828635Z Requirement already satisfied: marshmallow==3.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (3.26.1)
+2025-09-21T23:17:32.4841370Z Requirement already satisfied: pyelftools<1,>=0.27 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.32)
+2025-09-21T23:17:32.4845314Z Requirement already satisfied: pyserial==3.5.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (3.5)
+2025-09-21T23:17:32.4853778Z Requirement already satisfied: requests==2.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (2.32.5)
+2025-09-21T23:17:32.4859984Z Requirement already satisfied: semantic_version==2.10.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (2.10.0)
+2025-09-21T23:17:32.4867668Z Requirement already satisfied: tabulate==0.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.9.0)
+2025-09-21T23:17:32.4873802Z Requirement already satisfied: ajsonrpc==1.2.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (1.2.0)
+2025-09-21T23:17:32.4883445Z Requirement already satisfied: starlette<0.47,>=0.19 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.46.2)
+2025-09-21T23:17:32.4894888Z Requirement already satisfied: uvicorn<0.35,>=0.16 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.34.3)
+2025-09-21T23:17:32.4909069Z Requirement already satisfied: wsproto==1.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (1.2.0)
+2025-09-21T23:17:32.4947708Z Requirement already satisfied: packaging>=17.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from marshmallow==3.*->platformio) (24.2)
+2025-09-21T23:17:32.4995568Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (3.4.3)
+2025-09-21T23:17:32.5001595Z Requirement already satisfied: idna<4,>=2.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (3.10)
+2025-09-21T23:17:32.5010092Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (2.5.0)
+2025-09-21T23:17:32.5017176Z Requirement already satisfied: certifi>=2017.4.17 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (2025.8.3)
+2025-09-21T23:17:32.5099965Z Requirement already satisfied: anyio<5,>=3.6.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from starlette<0.47,>=0.19->platformio) (4.10.0)
+2025-09-21T23:17:32.5129226Z Requirement already satisfied: sniffio>=1.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from anyio<5,>=3.6.2->starlette<0.47,>=0.19->platformio) (1.3.1)
+2025-09-21T23:17:32.5193382Z Requirement already satisfied: h11>=0.8 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from uvicorn<0.35,>=0.16->platformio) (0.16.0)
+2025-09-21T23:17:32.5261995Z Requirement already satisfied: ecdsa>=0.13 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from adafruit-nrfutil) (0.19.1)
+2025-09-21T23:17:32.5292781Z Requirement already satisfied: six>=1.9.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from ecdsa>=0.13->adafruit-nrfutil) (1.17.0)
+2025-09-21T23:17:33.2638076Z Requirement already satisfied: poetry in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (2.2.1)
+2025-09-21T23:17:33.3991283Z Requirement already satisfied: build<2.0.0,>=1.2.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.3.0)
+2025-09-21T23:17:33.4011070Z Requirement already satisfied: cachecontrol<0.15.0,>=0.14.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (0.14.3)
+2025-09-21T23:17:33.4021567Z Requirement already satisfied: cleo<3.0.0,>=2.1.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.1.0)
+2025-09-21T23:17:33.4032485Z Requirement already satisfied: dulwich<0.25.0,>=0.24.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.24.1)
+2025-09-21T23:17:33.4040881Z Requirement already satisfied: fastjsonschema<3.0.0,>=2.18.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.21.2)
+2025-09-21T23:17:33.4050776Z Requirement already satisfied: findpython<0.8.0,>=0.6.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.6.3)
+2025-09-21T23:17:33.4061811Z Requirement already satisfied: installer<0.8.0,>=0.7.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.7.0)
+2025-09-21T23:17:33.4072208Z Requirement already satisfied: keyring<26.0.0,>=25.1.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (25.6.0)
+2025-09-21T23:17:33.4078750Z Requirement already satisfied: packaging>=24.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (24.2)
+2025-09-21T23:17:33.4096411Z Requirement already satisfied: pbs-installer<2026.0.0,>=2025.1.6 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (2025.8.27)
+2025-09-21T23:17:33.4109974Z Requirement already satisfied: pkginfo<2.0,>=1.12 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.12.1.2)
+2025-09-21T23:17:33.4113503Z Requirement already satisfied: platformdirs<5,>=3.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (4.4.0)
+2025-09-21T23:17:33.4126034Z Requirement already satisfied: poetry-core==2.2.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.2.1)
+2025-09-21T23:17:33.4141023Z Requirement already satisfied: pyproject-hooks<2.0.0,>=1.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.2.0)
+2025-09-21T23:17:33.4144919Z Requirement already satisfied: requests<3.0,>=2.26 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.32.5)
+2025-09-21T23:17:33.4163367Z Requirement already satisfied: requests-toolbelt<2.0.0,>=1.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.0.0)
+2025-09-21T23:17:33.4166763Z Requirement already satisfied: shellingham<2.0,>=1.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.5.4)
+2025-09-21T23:17:33.4170914Z Requirement already satisfied: tomlkit<1.0.0,>=0.11.4 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.13.3)
+2025-09-21T23:17:33.4185777Z Requirement already satisfied: trove-classifiers>=2022.5.19 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2025.8.26.11)
+2025-09-21T23:17:33.4189112Z Requirement already satisfied: virtualenv>=20.26.6 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (20.32.0)
+2025-09-21T23:17:33.4257799Z Requirement already satisfied: msgpack<2.0.0,>=0.5.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol<0.15.0,>=0.14.0->cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (1.1.1)
+2025-09-21T23:17:33.4292069Z Requirement already satisfied: filelock>=3.8.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (3.19.1)
+2025-09-21T23:17:33.4313843Z Requirement already satisfied: crashtest<0.5.0,>=0.4.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cleo<3.0.0,>=2.1.0->poetry) (0.4.1)
+2025-09-21T23:17:33.4319748Z Requirement already satisfied: rapidfuzz<4.0.0,>=3.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cleo<3.0.0,>=2.1.0->poetry) (3.14.0)
+2025-09-21T23:17:33.4346982Z Requirement already satisfied: urllib3>=1.25 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from dulwich<0.25.0,>=0.24.0->poetry) (2.5.0)
+2025-09-21T23:17:33.4427215Z Requirement already satisfied: SecretStorage>=3.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (3.3.3)
+2025-09-21T23:17:33.4436326Z Requirement already satisfied: jeepney>=0.4.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (0.9.0)
+2025-09-21T23:17:33.4442218Z Requirement already satisfied: jaraco.classes in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (3.4.0)
+2025-09-21T23:17:33.4452499Z Requirement already satisfied: jaraco.functools in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (4.3.0)
+2025-09-21T23:17:33.4463658Z Requirement already satisfied: jaraco.context in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (6.0.1)
+2025-09-21T23:17:33.4526051Z Requirement already satisfied: httpx<1,>=0.27.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.28.1)
+2025-09-21T23:17:33.4533395Z Requirement already satisfied: zstandard>=0.21.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.24.0)
+2025-09-21T23:17:33.4551940Z Requirement already satisfied: anyio in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (4.10.0)
+2025-09-21T23:17:33.4573606Z Requirement already satisfied: certifi in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (2025.8.3)
+2025-09-21T23:17:33.4578135Z Requirement already satisfied: httpcore==1.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (1.0.9)
+2025-09-21T23:17:33.4582506Z Requirement already satisfied: idna in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (3.10)
+2025-09-21T23:17:33.4607950Z Requirement already satisfied: h11>=0.16 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpcore==1.*->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.16.0)
+2025-09-21T23:17:33.4702947Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0,>=2.26->poetry) (3.4.3)
+2025-09-21T23:17:33.5045210Z Requirement already satisfied: cryptography>=2.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (45.0.6)
+2025-09-21T23:17:33.5049690Z Requirement already satisfied: cffi>=1.14 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cryptography>=2.0->SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (1.17.1)
+2025-09-21T23:17:33.5056081Z Requirement already satisfied: pycparser in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cffi>=1.14->cryptography>=2.0->SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (2.22)
+2025-09-21T23:17:33.5060235Z Requirement already satisfied: distlib<1,>=0.3.7 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from virtualenv>=20.26.6->poetry) (0.4.0)
+2025-09-21T23:17:33.5137364Z Requirement already satisfied: sniffio>=1.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from anyio->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (1.3.1)
+2025-09-21T23:17:33.5174379Z Requirement already satisfied: more-itertools in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from jaraco.classes->keyring<26.0.0,>=25.1.0->poetry) (10.7.0)
+2025-09-21T23:17:34.2498698Z Requirement already satisfied: meshtastic in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (2.7.3)
+2025-09-21T23:17:34.3924955Z Requirement already satisfied: bleak<0.23.0,>=0.22.3 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (0.22.3)
+2025-09-21T23:17:34.3941839Z Requirement already satisfied: packaging<25.0,>=24.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (24.2)
+2025-09-21T23:17:34.3956228Z Requirement already satisfied: protobuf>=4.21.12 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (6.32.0)
+2025-09-21T23:17:34.3967229Z Requirement already satisfied: pypubsub<5.0.0,>=4.0.3 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (4.0.3)
+2025-09-21T23:17:34.3978125Z Requirement already satisfied: pyserial<4.0,>=3.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (3.5)
+2025-09-21T23:17:34.3991602Z Requirement already satisfied: pyyaml<7.0.0,>=6.0.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (6.0.2)
+2025-09-21T23:17:34.3999793Z Requirement already satisfied: requests<3.0.0,>=2.31.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (2.32.5)
+2025-09-21T23:17:34.4010666Z Requirement already satisfied: tabulate<0.10.0,>=0.9.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (0.9.0)
+2025-09-21T23:17:34.4041317Z Requirement already satisfied: dbus-fast<3,>=1.83.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from bleak<0.23.0,>=0.22.3->meshtastic) (2.44.3)
+2025-09-21T23:17:34.4134316Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (3.4.3)
+2025-09-21T23:17:34.4139593Z Requirement already satisfied: idna<4,>=2.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (3.10)
+2025-09-21T23:17:34.4148038Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (2.5.0)
+2025-09-21T23:17:34.4158166Z Requirement already satisfied: certifi>=2017.4.17 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (2025.8.3)
+2025-09-21T23:17:34.6158002Z ##[group]Run pio upgrade
+2025-09-21T23:17:34.6158819Z [36;1mpio upgrade[0m
+2025-09-21T23:17:34.6197904Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:17:34.6198877Z env:
+2025-09-21T23:17:34.6200253Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:34.6201735Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:17:34.6203839Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:34.6205915Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:34.6207623Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:34.6208983Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:17:34.6210057Z ##[endgroup]
+2025-09-21T23:17:36.1017593Z You're up-to-date!
+2025-09-21T23:17:36.1018669Z PlatformIO 6.1.18 is currently the newest version available.
+2025-09-21T23:17:37.1941334Z ##[group]Run bin/check-all.sh t-deck-tft
+2025-09-21T23:17:37.1942280Z [36;1mbin/check-all.sh t-deck-tft[0m
+2025-09-21T23:17:37.1978850Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:17:37.1979483Z env:
+2025-09-21T23:17:37.1980332Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:37.1981673Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:17:37.1982887Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:37.1984240Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:37.1985411Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:17:37.1986537Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:17:37.1988381Z ##[endgroup]
+2025-09-21T23:17:37.4552479Z BOARDS:t-deck-tft
+2025-09-21T23:17:38.4238008Z Checking t-deck-tft > cppcheck (board: t-deck; platform: 
+2025-09-21T23:17:38.4240161Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:17:38.4241665Z --------------------------------------------------------------------------------
+2025-09-21T23:17:54.5319860Z git version 2.43.0
+2025-09-21T23:17:54.5362624Z Cloning into '/home/ubuntu/.platformio/.cache/tmp/pkg-installing-uxjz7brq'...
+2025-09-21T23:17:55.5865357Z HEAD is now at bb03d7e Fix higher currents reporting negative/wrong
+2025-09-21T23:19:19.6088018Z src/gps/RTC.cpp:342: [low:style] Parameter 'tm' can be declared as pointer to const [constParameterPointer]
+2025-09-21T23:19:19.6092856Z src/gps/RTC.cpp:358: [low:style] Variable 'days_before_month' can be declared as const array [constVariable]
+2025-09-21T23:19:23.5347111Z src/graphics/Screen.cpp:2751: [low:style] Same expression 'cff==framesetInfo.positions.nodelist_hopsignal' found multiple times in chain of '||' operators. [duplicateExpression]
+2025-09-21T23:19:24.0526078Z src/graphics/Screen.cpp:858: [low:style] Parameter 's' can be declared as pointer to const [constParameterPointer]
+2025-09-21T23:19:24.0528851Z src/graphics/Screen.cpp:872: [low:style] Parameter 's' can be declared as pointer to const [constParameterPointer]
+2025-09-21T23:19:24.0601449Z src/graphics/Screen.cpp:994: [low:performance] Passing the result of c_str() to a function that takes std::string as argument no. 1 is slow and redundant. [stlcstrParam]
+2025-09-21T23:19:24.0605777Z src/graphics/Screen.cpp:999: [low:performance] Passing the result of c_str() to a function that takes std::string as argument no. 1 is slow and redundant. [stlcstrParam]
+2025-09-21T23:19:33.3547313Z src/graphics/draw/MenuHandler.cpp:1599: [low:portability] Assigning a pointer to an integer is not portable. [AssignmentAddressToInteger]
+2025-09-21T23:19:33.5085148Z src/graphics/draw/MenuHandler.cpp:1443: [low:style] Variable 'hasSupportBrightness' is reassigned a value before the old one has been used. [redundantAssignment]
+2025-09-21T23:19:33.9490040Z src/graphics/draw/MenuHandler.cpp:1756: [low:style] Variable 'hdr' can be declared as const array [constVariable]
+2025-09-21T23:19:33.9499571Z src/graphics/draw/MenuHandler.cpp:1779: [low:style] Variable 'hdr' can be declared as const array [constVariable]
+2025-09-21T23:19:33.9512215Z src/graphics/draw/MenuHandler.cpp:1796: [low:style] Variable 'hdr' can be declared as const array [constVariable]
+2025-09-21T23:19:33.9520292Z src/graphics/draw/MenuHandler.cpp:1813: [low:style] Variable 'hdr' can be declared as const array [constVariable]
+2025-09-21T23:19:39.9379146Z src/graphics/draw/UIRenderer.cpp:1200: [low:style] Variable 'ourNode' can be declared as pointer to const [constVariablePointer]
+2025-09-21T23:19:39.9382680Z src/graphics/draw/UIRenderer.cpp:1458: [low:style] Parameter 'state' can be declared as pointer to const [constParameterPointer]
+2025-09-21T23:19:50.7107979Z src/mesh/api/PacketAPI.h:20: [low:style] Class 'PacketAPI' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+2025-09-21T23:19:57.6753952Z src/input/TCA8418Keyboard.cpp:66: [low:style] Local variable 'next_key' shadows outer variable [shadowVariable]
+2025-09-21T23:20:06.8234007Z src/main.cpp:394: [low:style] Local variable 'spiSettings' shadows outer variable [shadowVariable]
+2025-09-21T23:20:21.5760777Z src/mesh/RadioInterface.cpp:318: [low:style] Parameter 'p' can be declared as pointer to const [constParameterPointer]
+2025-09-21T23:20:28.9743655Z src/mesh/StreamAPI.cpp:59: [low:style] Parameter 'buf' can be declared as pointer to const [constParameterPointer]
+2025-09-21T23:20:29.6519969Z src/mesh/aes-ccm.cpp:36: [low:portability] Shifting a negative value is technically undefined behaviour [shiftNegativeLHS]
+2025-09-21T23:20:30.2193764Z src/mesh/api/PacketAPI.h:20: [low:style] Class 'PacketAPI' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+2025-09-21T23:20:52.4485923Z src/mesh/http/ContentHandler.cpp:625: [low:style] Parameter 'logArray' can be declared as pointer to const [constParameterPointer]
+2025-09-21T23:21:01.0370363Z src/modules/CannedMessageModule.cpp:1245: [low:style] Local variable 'e' shadows outer variable [shadowVariable]
+2025-09-21T23:21:01.0375924Z src/modules/CannedMessageModule.cpp:1268: [low:style] Local variable 'e' shadows outer variable [shadowVariable]
+2025-09-21T23:21:01.0428634Z src/modules/CannedMessageModule.cpp:2127: [low:style] Variable 'line' can be declared as reference to const [constVariableReference]
+2025-09-21T23:21:19.8547551Z src/modules/StoreForwardModule.cpp:135: [low:performance] Searching before insertion is not necessary. [stlFindInsert]
+2025-09-21T23:22:03.4786171Z src/platform/portduino/USBHal.h:30: [low:performance] Function parameter 'serial' should be passed by const reference. [passedByValue]
+2025-09-21T23:22:03.4790470Z src/platform/portduino/PortduinoGlue.cpp:422: [low:performance] Function parameter 'gpioChipName' should be passed by const reference. [passedByValue]
+2025-09-21T23:22:03.4794478Z src/platform/portduino/PortduinoGlue.h:306: [low:style] Variable 'screen_name' can be declared as reference to const [constVariableReference]
+2025-09-21T23:22:03.4797854Z src/platform/portduino/PortduinoGlue.cpp:471: [low:style] Variable 'loraModule' can be declared as reference to const [constVariableReference]
+2025-09-21T23:22:03.4802076Z src/platform/portduino/PortduinoGlue.cpp:582: [low:style] Variable 'screen_name' can be declared as reference to const [constVariableReference]
+2025-09-21T23:22:03.4805864Z src/platform/portduino/PortduinoGlue.h:205: [low:style] Variable 'lora_pin' can be declared as pointer to const [constVariablePointer]
+2025-09-21T23:22:03.4809178Z src/platform/portduino/PortduinoGlue.h:310: [low:style] Variable 'display_pin' can be declared as pointer to const [constVariablePointer]
+2025-09-21T23:22:03.4812785Z src/platform/portduino/PortduinoGlue.h:358: [low:style] Variable 'touchscreen_pin' can be declared as pointer to const [constVariablePointer]
+2025-09-21T23:22:03.4824024Z src/platform/portduino/PortduinoGlue.h:381: [low:style] Variable 'input_pin' can be declared as pointer to const [constVariablePointer]
+2025-09-21T23:22:03.4827038Z src/platform/portduino/PortduinoGlue.cpp:386: [low:style] Variable 'i' can be declared as pointer to const [constVariablePointer]
+2025-09-21T23:22:03.4830038Z src/platform/portduino/PortduinoGlue.cpp:395: [low:style] Variable 'i' can be declared as pointer to const [constVariablePointer]
+2025-09-21T23:22:09.7656508Z ========================= [PASSED] Took 186.69 seconds =========================
+2025-09-21T23:22:09.8651519Z 
+2025-09-21T23:22:09.8660378Z Component                HIGH    MEDIUM    LOW
+2025-09-21T23:22:09.8664208Z ----------------------  ------  --------  -----
+2025-09-21T23:22:09.8666050Z src                       0        0        1
+2025-09-21T23:22:09.8667370Z src/gps                   0        0        2
+2025-09-21T23:22:09.8668349Z src/graphics              0        0        5
+2025-09-21T23:22:09.8669624Z src/graphics/draw         0        0        8
+2025-09-21T23:22:09.8670625Z src/input                 0        0        1
+2025-09-21T23:22:09.8672924Z src/mesh                  0        0        3
+2025-09-21T23:22:09.8674595Z src/mesh/api              0        0        2
+2025-09-21T23:22:09.8675805Z src/mesh/http             0        0        1
+2025-09-21T23:22:09.8676874Z src/modules               0        0        4
+2025-09-21T23:22:09.8678287Z src/platform/portduino    0        0       11
+2025-09-21T23:22:09.8679101Z 
+2025-09-21T23:22:09.8679579Z Total                     0        0       38
+2025-09-21T23:22:09.8680436Z 
+2025-09-21T23:22:09.8681036Z Environment    Tool      Status    Duration
+2025-09-21T23:22:09.8682093Z -------------  --------  --------  ------------
+2025-09-21T23:22:09.8683739Z t-deck-tft     cppcheck  PASSED    00:03:06.689
+2025-09-21T23:22:09.8685029Z ========================= 1 succeeded in 00:03:06.689 =========================
+2025-09-21T23:22:10.9833442Z Post job cleanup.
+2025-09-21T23:22:10.9975304Z Post job cleanup.
+2025-09-21T23:22:11.2152128Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-fb5db71a65bba474cfd3851c4d11114c69613241cf2b7cbeb958811f315d7ca8, not saving cache.
+2025-09-21T23:22:11.2156246Z (node:2031) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-09-21T23:22:11.2158751Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-09-21T23:22:11.2487749Z Post job cleanup.
+2025-09-21T23:22:11.4102083Z [command]/usr/bin/git version
+2025-09-21T23:22:11.4170855Z git version 2.43.0
+2025-09-21T23:22:11.4232571Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/ff1356b2-7f6a-4168-912b-27be7b04ec47' before making global git config changes
+2025-09-21T23:22:11.4235443Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:22:11.4240167Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:22:11.4324891Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:22:11.4378505Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:22:11.4983477Z Entering 'meshtestic'
+2025-09-21T23:22:11.5114763Z Entering 'protobufs'
+2025-09-21T23:22:11.5280269Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:22:11.5340362Z http.https://github.com/.extraheader
+2025-09-21T23:22:11.5372712Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:22:11.5459409Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:22:11.6085091Z Entering 'meshtestic'
+2025-09-21T23:22:11.6156004Z http.https://github.com/.extraheader
+2025-09-21T23:22:11.6260726Z Entering 'protobufs'
+2025-09-21T23:22:11.6335048Z http.https://github.com/.extraheader
+2025-09-21T23:22:11.6837082Z Post job cleanup.
+2025-09-21T23:22:11.8386298Z [command]/usr/bin/git version
+2025-09-21T23:22:11.8454308Z git version 2.43.0
+2025-09-21T23:22:11.8510882Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/f05b922b-24a2-4dff-82eb-3318a1bc9c51' before making global git config changes
+2025-09-21T23:22:11.8514110Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:22:11.8517105Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:22:11.8588875Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:22:11.8655586Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:22:11.9248747Z Entering 'meshtestic'
+2025-09-21T23:22:11.9379120Z Entering 'protobufs'
+2025-09-21T23:22:11.9540378Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:22:11.9624035Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:22:12.0220189Z Entering 'meshtestic'
+2025-09-21T23:22:12.0345417Z Entering 'protobufs'
+2025-09-21T23:22:12.0800791Z Cleaning up orphan processes

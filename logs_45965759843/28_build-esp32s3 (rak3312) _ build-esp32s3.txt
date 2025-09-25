@@ -1,0 +1,1695 @@
+﻿2025-09-21T23:32:03.7361834Z Current runner version: '2.328.0'
+2025-09-21T23:32:03.7383728Z ##[group]Runner Image Provisioner
+2025-09-21T23:32:03.7384496Z Hosted Compute Agent
+2025-09-21T23:32:03.7385273Z Version: 20250829.383
+2025-09-21T23:32:03.7385963Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:32:03.7386693Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:32:03.7387276Z ##[endgroup]
+2025-09-21T23:32:03.7387854Z ##[group]Operating System
+2025-09-21T23:32:03.7388435Z Ubuntu
+2025-09-21T23:32:03.7388892Z 24.04.3
+2025-09-21T23:32:03.7389412Z LTS
+2025-09-21T23:32:03.7389878Z ##[endgroup]
+2025-09-21T23:32:03.7390377Z ##[group]Runner Image
+2025-09-21T23:32:03.7390979Z Image: ubuntu-24.04
+2025-09-21T23:32:03.7391458Z Version: 20250907.24.1
+2025-09-21T23:32:03.7392479Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:32:03.7394036Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:32:03.7395129Z ##[endgroup]
+2025-09-21T23:32:03.7397518Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:32:03.7399352Z Actions: read
+2025-09-21T23:32:03.7399995Z Attestations: read
+2025-09-21T23:32:03.7400540Z Checks: read
+2025-09-21T23:32:03.7401032Z Contents: read
+2025-09-21T23:32:03.7401574Z Deployments: read
+2025-09-21T23:32:03.7402071Z Discussions: read
+2025-09-21T23:32:03.7402582Z Issues: read
+2025-09-21T23:32:03.7403025Z Metadata: read
+2025-09-21T23:32:03.7403632Z Models: read
+2025-09-21T23:32:03.7404097Z Packages: read
+2025-09-21T23:32:03.7404756Z Pages: read
+2025-09-21T23:32:03.7405440Z PullRequests: read
+2025-09-21T23:32:03.7405990Z RepositoryProjects: read
+2025-09-21T23:32:03.7406524Z SecurityEvents: read
+2025-09-21T23:32:03.7407234Z Statuses: read
+2025-09-21T23:32:03.7407740Z ##[endgroup]
+2025-09-21T23:32:03.7409617Z Secret source: Actions
+2025-09-21T23:32:03.7410417Z Prepare workflow directory
+2025-09-21T23:32:03.7730034Z Prepare all required actions
+2025-09-21T23:32:03.7766769Z Getting action download info
+2025-09-21T23:32:04.1706631Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:32:04.3803840Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:32:04.8969859Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:32:05.1726510Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:32:05.1732655Z ##[group] Inputs
+2025-09-21T23:32:05.1733613Z   version: 2.7.10.3d51287
+2025-09-21T23:32:05.1734580Z   platform: esp32s3
+2025-09-21T23:32:05.1735798Z   pio_env: rak3312
+2025-09-21T23:32:05.1736673Z ##[endgroup]
+2025-09-21T23:32:05.1737721Z Complete job name: build-esp32s3 (rak3312) / build-esp32s3
+2025-09-21T23:32:05.2437459Z ##[group]Run actions/checkout@v5
+2025-09-21T23:32:05.2438709Z with:
+2025-09-21T23:32:05.2439453Z   submodules: recursive
+2025-09-21T23:32:05.2440290Z   ref: develop
+2025-09-21T23:32:05.2441147Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:05.2442476Z   token: ***
+2025-09-21T23:32:05.2443201Z   ssh-strict: true
+2025-09-21T23:32:05.2443961Z   ssh-user: git
+2025-09-21T23:32:05.2444894Z   persist-credentials: true
+2025-09-21T23:32:05.2445767Z   clean: true
+2025-09-21T23:32:05.2446552Z   sparse-checkout-cone-mode: true
+2025-09-21T23:32:05.2447495Z   fetch-depth: 1
+2025-09-21T23:32:05.2448263Z   fetch-tags: false
+2025-09-21T23:32:05.2449056Z   show-progress: true
+2025-09-21T23:32:05.2449845Z   lfs: false
+2025-09-21T23:32:05.2450598Z   set-safe-directory: true
+2025-09-21T23:32:05.2451836Z ##[endgroup]
+2025-09-21T23:32:05.3365434Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:05.3368477Z ##[group]Getting Git version info
+2025-09-21T23:32:05.3369901Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:05.3371925Z [command]/usr/bin/git version
+2025-09-21T23:32:05.3437858Z git version 2.51.0
+2025-09-21T23:32:05.3458756Z ##[endgroup]
+2025-09-21T23:32:05.3472333Z Temporarily overriding HOME='/home/runner/work/_temp/116c8ac3-da0a-4785-919e-633a8bba8402' before making global git config changes
+2025-09-21T23:32:05.3475462Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:32:05.3478135Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:32:05.3518190Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:05.3521622Z ##[group]Initializing the repository
+2025-09-21T23:32:05.3526065Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:32:05.3639827Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:32:05.3643163Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:32:05.3646068Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:32:05.3647499Z hint:
+2025-09-21T23:32:05.3648808Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:32:05.3650523Z hint:
+2025-09-21T23:32:05.3651655Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:32:05.3654192Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:32:05.3655941Z hint:
+2025-09-21T23:32:05.3656743Z hint: 	git branch -m <name>
+2025-09-21T23:32:05.3657645Z hint:
+2025-09-21T23:32:05.3658860Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:32:05.3660830Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:32:05.3664059Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:05.3695267Z ##[endgroup]
+2025-09-21T23:32:05.3696807Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:32:05.3698473Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:32:05.3725986Z ##[endgroup]
+2025-09-21T23:32:05.3727806Z ##[group]Setting up auth
+2025-09-21T23:32:05.3731282Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:32:05.3761373Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:32:05.4109646Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:32:05.4139967Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:32:05.4353979Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:05.4386667Z ##[endgroup]
+2025-09-21T23:32:05.4388034Z ##[group]Fetching the repository
+2025-09-21T23:32:05.4398524Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:32:06.4031114Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:06.4033265Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:32:06.4095969Z ##[endgroup]
+2025-09-21T23:32:06.4096877Z ##[group]Determining the checkout info
+2025-09-21T23:32:06.4103470Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:32:06.4126496Z   origin/develop
+2025-09-21T23:32:06.4131022Z ##[endgroup]
+2025-09-21T23:32:06.4135785Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:32:06.4171073Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:32:06.4196407Z ##[group]Checking out the ref
+2025-09-21T23:32:06.4200125Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:32:06.5228795Z Switched to a new branch 'develop'
+2025-09-21T23:32:06.5231699Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:32:06.5239787Z ##[endgroup]
+2025-09-21T23:32:06.5240298Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:32:06.5245178Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:06.5285367Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:32:06.5313194Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:32:06.5340860Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:32:06.5365512Z ##[endgroup]
+2025-09-21T23:32:06.5365977Z ##[group]Fetching submodules
+2025-09-21T23:32:06.5368941Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:32:06.5592343Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:32:06.5803917Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:32:06.5808048Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:32:06.5833449Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:32:07.1611621Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:32:07.7205790Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:32:07.7315320Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:32:07.7346600Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:32:07.7556993Z Entering 'meshtestic'
+2025-09-21T23:32:07.7593224Z Entering 'protobufs'
+2025-09-21T23:32:07.7636336Z ##[endgroup]
+2025-09-21T23:32:07.7637029Z ##[group]Persisting credentials for submodules
+2025-09-21T23:32:07.7643039Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:32:07.7850087Z Entering 'meshtestic'
+2025-09-21T23:32:07.7891272Z Entering 'protobufs'
+2025-09-21T23:32:07.7943720Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:32:07.8146538Z Entering 'meshtestic'
+2025-09-21T23:32:07.8183210Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:32:07.8201652Z Entering 'protobufs'
+2025-09-21T23:32:07.8238771Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:32:07.8279049Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:32:07.8483157Z Entering 'meshtestic'
+2025-09-21T23:32:07.8519342Z Entering 'protobufs'
+2025-09-21T23:32:07.8566919Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:32:07.8769587Z Entering 'meshtestic'
+2025-09-21T23:32:07.8805389Z Entering 'protobufs'
+2025-09-21T23:32:07.8849074Z ##[endgroup]
+2025-09-21T23:32:07.8882658Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:32:07.8904791Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:32:07.9102227Z ##[group]Run if [ "$PIO_PLATFORM" = "esp32s3" ]; then
+2025-09-21T23:32:07.9102681Z [36;1mif [ "$PIO_PLATFORM" = "esp32s3" ]; then[0m
+2025-09-21T23:32:07.9103028Z [36;1m  echo "src=firmware-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:07.9103373Z [36;1m  echo "tgt=release/bleota-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:07.9103998Z [36;1melif [ "$PIO_PLATFORM" = "esp32c3" ] || [ "$PIO_PLATFORM" = "esp32c6" ]; then[0m
+2025-09-21T23:32:07.9104416Z [36;1m  echo "src=firmware-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:07.9105035Z [36;1m  echo "tgt=release/bleota-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:07.9105363Z [36;1melif [ "$PIO_PLATFORM" = "esp32" ]; then[0m
+2025-09-21T23:32:07.9105686Z [36;1m  echo "src=firmware.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:07.9106001Z [36;1m  echo "tgt=release/bleota.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:07.9106276Z [36;1mfi[0m
+2025-09-21T23:32:07.9162265Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:32:07.9162571Z env:
+2025-09-21T23:32:07.9162762Z   PIO_PLATFORM: esp32s3
+2025-09-21T23:32:07.9162986Z ##[endgroup]
+2025-09-21T23:32:07.9324961Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:32:07.9392235Z with:
+2025-09-21T23:32:07.9392492Z   pio_platform: esp32s3
+2025-09-21T23:32:07.9392719Z   pio_env: rak3312
+2025-09-21T23:32:07.9392959Z   pio_target: build
+2025-09-21T23:32:07.9393212Z   ota_firmware_source: firmware-s3.bin
+2025-09-21T23:32:07.9393542Z   ota_firmware_target: release/bleota-s3.bin
+2025-09-21T23:32:07.9393861Z ##[endgroup]
+2025-09-21T23:32:07.9470256Z ##[group]Run docker run --rm \
+2025-09-21T23:32:07.9470545Z [36;1mdocker run --rm \[0m
+2025-09-21T23:32:07.9470785Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:32:07.9471031Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:32:07.9471268Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:32:07.9471501Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:32:07.9471740Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:32:07.9471990Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:32:07.9472258Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:32:07.9472557Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:32:07.9472842Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:32:07.9473191Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-esp32s3[0m
+2025-09-21T23:32:07.9504560Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:32:07.9505131Z env:
+2025-09-21T23:32:07.9505306Z   MT_ENV: rak3312
+2025-09-21T23:32:07.9505507Z   MT_PLATFORM: esp32s3
+2025-09-21T23:32:07.9505713Z   MT_TARGET: build
+2025-09-21T23:32:07.9505925Z   MT_OTA_FIRMWARE_SOURCE: firmware-s3.bin
+2025-09-21T23:32:07.9506226Z   MT_OTA_FIRMWARE_TARGET: release/bleota-s3.bin
+2025-09-21T23:32:07.9506520Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:32:07.9506778Z ##[endgroup]
+2025-09-21T23:32:08.8367010Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-esp32s3' locally
+2025-09-21T23:32:09.5757937Z master-esp32s3: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:32:09.8628884Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:32:09.8629717Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:32:09.8630180Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:32:09.8630595Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:32:09.8631002Z 815e87185931: Pulling fs layer
+2025-09-21T23:32:09.8631414Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:32:09.8631737Z da9989870cf6: Pulling fs layer
+2025-09-21T23:32:09.8631963Z 5842d1ef8948: Pulling fs layer
+2025-09-21T23:32:09.8632192Z a234b2703096: Pulling fs layer
+2025-09-21T23:32:09.8632409Z 3a39df0b1bf9: Pulling fs layer
+2025-09-21T23:32:09.8632628Z a63a25a82ec9: Pulling fs layer
+2025-09-21T23:32:09.8632842Z 10215da75b3f: Pulling fs layer
+2025-09-21T23:32:09.8633045Z f243992d4a31: Pulling fs layer
+2025-09-21T23:32:09.8633256Z 832340f4ac8c: Pulling fs layer
+2025-09-21T23:32:09.8633457Z c611f5bb386b: Waiting
+2025-09-21T23:32:09.8633647Z 815e87185931: Waiting
+2025-09-21T23:32:09.8633830Z 71c11f7c6832: Waiting
+2025-09-21T23:32:09.8634010Z a63a25a82ec9: Waiting
+2025-09-21T23:32:09.8634192Z da9989870cf6: Waiting
+2025-09-21T23:32:09.8634373Z 10215da75b3f: Waiting
+2025-09-21T23:32:09.8634545Z 5842d1ef8948: Waiting
+2025-09-21T23:32:09.8634989Z f243992d4a31: Waiting
+2025-09-21T23:32:09.8635171Z a234b2703096: Waiting
+2025-09-21T23:32:09.8635584Z 3a39df0b1bf9: Waiting
+2025-09-21T23:32:09.8635770Z 832340f4ac8c: Waiting
+2025-09-21T23:32:10.3021646Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:32:10.3022115Z ccbbb2080a06: Download complete
+2025-09-21T23:32:10.4583518Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:32:10.4583965Z 7d5073558d5a: Download complete
+2025-09-21T23:32:10.6274984Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:32:10.6275850Z 8fb375ec14f3: Download complete
+2025-09-21T23:32:10.8212856Z 815e87185931: Verifying Checksum
+2025-09-21T23:32:10.8213310Z 815e87185931: Download complete
+2025-09-21T23:32:11.0482377Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:32:11.0482836Z 71c11f7c6832: Download complete
+2025-09-21T23:32:11.0704110Z da9989870cf6: Download complete
+2025-09-21T23:32:11.3069705Z a234b2703096: Verifying Checksum
+2025-09-21T23:32:11.3070210Z a234b2703096: Download complete
+2025-09-21T23:32:11.4648130Z 5842d1ef8948: Verifying Checksum
+2025-09-21T23:32:11.4648653Z 5842d1ef8948: Download complete
+2025-09-21T23:32:11.8359429Z 3a39df0b1bf9: Verifying Checksum
+2025-09-21T23:32:11.8360309Z 3a39df0b1bf9: Download complete
+2025-09-21T23:32:12.0497113Z 10215da75b3f: Verifying Checksum
+2025-09-21T23:32:12.0497641Z 10215da75b3f: Download complete
+2025-09-21T23:32:12.2818604Z f243992d4a31: Verifying Checksum
+2025-09-21T23:32:12.2819929Z f243992d4a31: Download complete
+2025-09-21T23:32:12.5133259Z 832340f4ac8c: Verifying Checksum
+2025-09-21T23:32:12.5133959Z 832340f4ac8c: Download complete
+2025-09-21T23:32:12.6061651Z 8fb375ec14f3: Pull complete
+2025-09-21T23:32:12.6620211Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:32:12.6620720Z c611f5bb386b: Download complete
+2025-09-21T23:32:15.5927446Z ccbbb2080a06: Pull complete
+2025-09-21T23:32:19.8524099Z 7d5073558d5a: Pull complete
+2025-09-21T23:32:25.5818468Z a63a25a82ec9: Verifying Checksum
+2025-09-21T23:32:25.5818956Z a63a25a82ec9: Download complete
+2025-09-21T23:32:29.0916710Z c611f5bb386b: Pull complete
+2025-09-21T23:32:29.3467048Z 815e87185931: Pull complete
+2025-09-21T23:32:30.0439422Z 71c11f7c6832: Pull complete
+2025-09-21T23:32:30.0538824Z da9989870cf6: Pull complete
+2025-09-21T23:32:31.0920323Z 5842d1ef8948: Pull complete
+2025-09-21T23:32:31.1040037Z a234b2703096: Pull complete
+2025-09-21T23:32:32.6092332Z 3a39df0b1bf9: Pull complete
+2025-09-21T23:33:41.7976348Z a63a25a82ec9: Pull complete
+2025-09-21T23:33:41.8074403Z 10215da75b3f: Pull complete
+2025-09-21T23:33:41.8183237Z f243992d4a31: Pull complete
+2025-09-21T23:33:41.8265588Z 832340f4ac8c: Pull complete
+2025-09-21T23:33:41.8306468Z Digest: sha256:7269912521d83174316445d896859f9f0601d0c16d966400e9e0d3e20da1f1bd
+2025-09-21T23:33:41.8321179Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-esp32s3
+2025-09-21T23:33:42.4787094Z Building PlatformIO environment: rak3312
+2025-09-21T23:33:42.7682558Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:33:43.4499129Z Resolving rak3312 dependencies...
+2025-09-21T23:33:43.4750833Z Removing unused dependencies...
+2025-09-21T23:33:43.4836871Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:33:43.5955541Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:33:43.9134485Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:33:47.6567743Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:47.8715647Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:47.9638123Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:33:48.6344124Z Building for rak3312 with 
+2025-09-21T23:33:49.3924512Z Processing rak3312 (board: wiscore_rak3312; platform: 
+2025-09-21T23:33:49.3925356Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:33:49.3925809Z --------------------------------------------------------------------------------
+2025-09-21T23:33:50.6152243Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:33:50.6300243Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/wiscore_rak3312.html
+2025-09-21T23:33:50.6301354Z PLATFORM: Espressif 32 (6.11.0) > WisCore RAK3312 Board
+2025-09-21T23:33:50.6302490Z HARDWARE: ESP32S3 240MHz, 320KB RAM, 16MB Flash
+2025-09-21T23:33:50.6304205Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:33:50.6306094Z PACKAGES: 
+2025-09-21T23:33:50.6306643Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:33:50.6307343Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:33:50.6307821Z  - tool-openocd-esp32 @ 2.1100.20220706 (11.0) 
+2025-09-21T23:33:50.6308323Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:33:50.6308966Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:33:50.6602005Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:33:50.6602828Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:33:50.7825379Z [nanopb] No generation needed.
+2025-09-21T23:33:51.2561552Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:33:53.6309780Z Downloading 0% 10%
+2025-09-21T23:33:53.6355997Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:33:53.6389999Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:33:53.7602104Z [nanopb] No generation needed.
+2025-09-21T23:33:53.8948017Z Found 96 compatible libraries
+2025-09-21T23:33:53.8948625Z Scanning dependencies...
+2025-09-21T23:34:04.6287515Z Dependency Graph
+2025-09-21T23:34:04.6289605Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:34:04.6290477Z |-- OneButton @ 2.6.1
+2025-09-21T23:34:04.6291005Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:34:04.6292298Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:34:04.6292928Z |-- ArduinoThread @ 0.0.0+20250919060234
+2025-09-21T23:34:04.6295996Z |-- Nanopb @ 0.4.91
+2025-09-21T23:34:04.6297171Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:34:04.6298444Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:34:04.6301069Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:34:04.6301468Z |-- NTPClient @ 3.2.1
+2025-09-21T23:34:04.6305229Z |-- Syslog @ 2.0.0
+2025-09-21T23:34:04.6305564Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:34:04.6307335Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:34:04.6309233Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:34:04.6311503Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:34:04.6313352Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:34:04.6315218Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:34:04.6316766Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:34:04.6318194Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:34:04.6320279Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:34:04.6322006Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:34:04.6324057Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:34:04.6325504Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:34:04.6327977Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:34:04.6328923Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:34:04.6330425Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:34:04.6332566Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:34:04.6334113Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:34:04.6337405Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:34:04.6338469Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:34:04.6340601Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:34:04.6342436Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:34:04.6344041Z |-- INA226 @ 0.6.4
+2025-09-21T23:34:04.6345937Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:34:04.6348277Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:34:04.6349742Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:34:04.6351475Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:34:04.6353288Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:34:04.6355838Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:34:04.6357718Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:34:04.6358999Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:34:04.6361342Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:34:04.6362717Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:34:04.6365133Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:34:04.6366533Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:34:04.6368608Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:34:04.6371580Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:34:04.6372399Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:04.6374812Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:34:04.6376806Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:34:04.6378464Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:34:04.6380549Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:34:04.6383224Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:34:04.6383951Z |-- RadioLib @ 7.3.0
+2025-09-21T23:34:04.6386576Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:34:04.6390662Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:34:04.6391224Z |-- libpax @ 1.1.0
+2025-09-21T23:34:04.6394416Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:34:04.6396895Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:34:04.6399740Z |-- Crypto @ 0.4.0
+2025-09-21T23:34:04.6400703Z |-- SD @ 2.0.0
+2025-09-21T23:34:04.6401276Z |-- SPI @ 2.0.0
+2025-09-21T23:34:04.6401585Z |-- WiFi @ 2.0.0
+2025-09-21T23:34:04.6401888Z |-- Wire @ 2.0.0
+2025-09-21T23:34:04.6402231Z |-- Preferences @ 2.0.0
+2025-09-21T23:34:04.6402641Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:34:04.6404581Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:34:04.6405098Z |-- WebServer @ 2.0.0
+2025-09-21T23:34:04.6405422Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:34:04.6405862Z |-- LittleFS @ 2.0.0
+2025-09-21T23:34:04.6407116Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:34:04.6408666Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:34:05.1596468Z Building in release mode
+2025-09-21T23:34:05.3184439Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on rak3312
+2025-09-21T23:34:05.3198367Z Using flags:
+2025-09-21T23:34:05.3198788Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:34:05.3199213Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:34:05.3199615Z -DAPP_ENV=rak3312
+2025-09-21T23:34:05.3199992Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:05.3200490Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:34:05.3201246Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:34:05.3202241Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:34:05.6332382Z Compiling .pio/build/rak3312/src/BluetoothCommon.cpp.o
+2025-09-21T23:34:05.7670057Z Compiling .pio/build/rak3312/src/DebugConfiguration.cpp.o
+2025-09-21T23:34:05.7842188Z Compiling .pio/build/rak3312/src/DisplayFormatters.cpp.o
+2025-09-21T23:34:05.8107339Z Compiling .pio/build/rak3312/src/FSCommon.cpp.o
+2025-09-21T23:34:06.8340446Z Compiling .pio/build/rak3312/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:34:06.9153818Z Compiling .pio/build/rak3312/src/Fusion/FusionCompass.c.o
+2025-09-21T23:34:06.9764020Z Compiling .pio/build/rak3312/src/Fusion/FusionOffset.c.o
+2025-09-21T23:34:07.0036297Z Compiling .pio/build/rak3312/src/GpioLogic.cpp.o
+2025-09-21T23:34:07.1261920Z Compiling .pio/build/rak3312/src/Led.cpp.o
+2025-09-21T23:34:07.1557247Z Compiling .pio/build/rak3312/src/Observer.cpp.o
+2025-09-21T23:34:07.3425793Z Compiling .pio/build/rak3312/src/Power.cpp.o
+2025-09-21T23:34:08.0970796Z Compiling .pio/build/rak3312/src/PowerFSM.cpp.o
+2025-09-21T23:34:08.2754792Z Compiling .pio/build/rak3312/src/PowerMon.cpp.o
+2025-09-21T23:34:08.8234918Z Compiling .pio/build/rak3312/src/RedirectablePrint.cpp.o
+2025-09-21T23:34:09.2017866Z Compiling .pio/build/rak3312/src/SPILock.cpp.o
+2025-09-21T23:34:09.5228891Z Compiling .pio/build/rak3312/src/SafeFile.cpp.o
+2025-09-21T23:34:09.8613972Z Compiling .pio/build/rak3312/src/SerialConsole.cpp.o
+2025-09-21T23:34:10.3415686Z Compiling .pio/build/rak3312/src/airtime.cpp.o
+2025-09-21T23:34:10.5613557Z Compiling .pio/build/rak3312/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:34:10.6829748Z Compiling .pio/build/rak3312/src/buzz/buzz.cpp.o
+2025-09-21T23:34:11.1141573Z Compiling .pio/build/rak3312/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:34:11.5570084Z Compiling .pio/build/rak3312/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:34:11.8382450Z Compiling .pio/build/rak3312/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:34:11.9045715Z Compiling .pio/build/rak3312/src/concurrency/Lock.cpp.o
+2025-09-21T23:34:12.2419060Z Compiling .pio/build/rak3312/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:34:12.6641792Z Compiling .pio/build/rak3312/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:34:12.9701895Z Compiling .pio/build/rak3312/src/concurrency/OSThread.cpp.o
+2025-09-21T23:34:13.0242910Z Compiling .pio/build/rak3312/src/detect/ScanI2C.cpp.o
+2025-09-21T23:34:13.1152975Z Compiling .pio/build/rak3312/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:34:13.3951849Z Compiling .pio/build/rak3312/src/gps/GPS.cpp.o
+2025-09-21T23:34:14.1571202Z Compiling .pio/build/rak3312/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:34:14.3455507Z Compiling .pio/build/rak3312/src/gps/GeoCoord.cpp.o
+2025-09-21T23:34:14.5425180Z Compiling .pio/build/rak3312/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:34:15.0495100Z Compiling .pio/build/rak3312/src/gps/RTC.cpp.o
+2025-09-21T23:34:15.3687315Z Compiling .pio/build/rak3312/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:34:15.4968135Z Compiling .pio/build/rak3312/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:34:16.2656630Z Compiling .pio/build/rak3312/src/graphics/Screen.cpp.o
+2025-09-21T23:34:16.5134000Z Compiling .pio/build/rak3312/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:34:16.6210349Z Compiling .pio/build/rak3312/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:34:16.7373721Z Compiling .pio/build/rak3312/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:34:17.1112260Z Compiling .pio/build/rak3312/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:34:17.2173207Z Compiling .pio/build/rak3312/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:34:17.7597505Z src/graphics/Screen.cpp: In function 'void graphics::drawFavNodeChatFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:17.7598756Z src/graphics/Screen.cpp:568:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:17.7599445Z      const int h     = display->height();
+2025-09-21T23:34:17.7599849Z                ^
+2025-09-21T23:34:17.7614125Z src/graphics/Screen.cpp: In function 'void graphics::drawChannelChatTabFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:17.7615656Z src/graphics/Screen.cpp:701:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:17.7616397Z      const int h     = display->height();
+2025-09-21T23:34:17.7616861Z                ^
+2025-09-21T23:34:17.7793097Z src/graphics/Screen.cpp: In constructor 'graphics::Screen::Screen(ScanI2C::DeviceAddress, meshtastic_Config_DisplayConfig_OledType, OLEDDISPLAY_GEOMETRY)':
+2025-09-21T23:34:17.7802285Z src/graphics/Screen.cpp:1120:24: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:17.7805326Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:17.7806427Z              ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:17.7809329Z src/graphics/Screen.cpp:1120:45: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:17.7811592Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:17.7812163Z                                   ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:17.7813009Z src/graphics/Screen.cpp:1120:66: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:17.7814013Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:17.7815111Z                                                        ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:17.8134755Z src/graphics/Screen.cpp: In member function 'int graphics::Screen::handleInputEvent(const InputEvent*)':
+2025-09-21T23:34:17.8136046Z src/graphics/Screen.cpp:2649:24: warning: unused variable 'shortPressAsDown' [-Wunused-variable]
+2025-09-21T23:34:17.8137189Z              const bool shortPressAsDown =
+2025-09-21T23:34:17.8139348Z                         ^~~~~~~~~~~~~~~~
+2025-09-21T23:34:18.2113836Z src/graphics/Screen.cpp: In member function 'virtual int32_t graphics::Screen::runOnce()':
+2025-09-21T23:34:18.2115364Z src/graphics/Screen.cpp:1578:47: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2025-09-21T23:34:18.2126890Z              NotificationRenderer::pauseBanner = false;
+2025-09-21T23:34:18.2127407Z              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+2025-09-21T23:34:18.2129103Z src/graphics/Screen.cpp:1579:9: note: here
+2025-09-21T23:34:18.2130113Z          case Cmd::STOP_BOOT_SCREEN:
+2025-09-21T23:34:18.2130527Z          ^~~~
+2025-09-21T23:34:18.2493707Z src/graphics/Screen.cpp: At global scope:
+2025-09-21T23:34:18.2495930Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:34:18.2498506Z  static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:34:18.2500886Z              ^~~~~~~~~~~~~~~~~
+2025-09-21T23:34:18.2504928Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:18.2506044Z  static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:34:18.2506609Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:18.2508690Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:34:18.2511117Z  static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:34:18.2555270Z              ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:18.4942301Z Compiling .pio/build/rak3312/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:34:18.5410496Z Compiling .pio/build/rak3312/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:34:18.8622019Z Compiling .pio/build/rak3312/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:34:19.4716029Z Compiling .pio/build/rak3312/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:34:19.8027124Z src/graphics/VirtualKeyboard.cpp: In member function 'void graphics::VirtualKeyboard::drawInputArea(OLEDDisplay*, int16_t, int16_t, int16_t)':
+2025-09-21T23:34:19.8031913Z src/graphics/VirtualKeyboard.cpp:356:23: warning: unused variable 'innerLeft' [-Wunused-variable]
+2025-09-21T23:34:19.8032744Z              const int innerLeft = boxX + 1;
+2025-09-21T23:34:19.8033184Z                        ^~~~~~~~~
+2025-09-21T23:34:19.8034001Z src/graphics/VirtualKeyboard.cpp:357:23: warning: unused variable 'innerRight' [-Wunused-variable]
+2025-09-21T23:34:19.8035107Z              const int innerRight = boxX + boxWidth - 2;
+2025-09-21T23:34:19.8035614Z                        ^~~~~~~~~~
+2025-09-21T23:34:19.8507992Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawDigitalClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:19.8511599Z src/graphics/draw/ClockRenderer.cpp:195:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:19.8512392Z      int line = 0;
+2025-09-21T23:34:19.8512703Z          ^~~~
+2025-09-21T23:34:19.8547981Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawAnalogClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:19.8550196Z src/graphics/draw/ClockRenderer.cpp:320:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:19.8551731Z      int line = 0;
+2025-09-21T23:34:19.8565095Z          ^~~~
+2025-09-21T23:34:20.2729950Z Compiling .pio/build/rak3312/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:34:20.3392361Z Compiling .pio/build/rak3312/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:34:20.3737475Z Compiling .pio/build/rak3312/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:34:21.4106749Z Compiling .pio/build/rak3312/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:34:21.5854235Z src/graphics/draw/NodeListRenderer.cpp: In function 'void graphics::NodeListRenderer::drawCompassArrow(OLEDDisplay*, meshtastic_NodeInfoLite*, int16_t, int16_t, int, float, double, double)':
+2025-09-21T23:34:21.5856634Z src/graphics/draw/NodeListRenderer.cpp:359:11: warning: unused variable 'angle' [-Wunused-variable]
+2025-09-21T23:34:21.5857748Z      float angle = relativeBearing * DEG_TO_RAD;
+2025-09-21T23:34:21.5863348Z            ^~~~~
+2025-09-21T23:34:21.6768116Z src/graphics/draw/MessageRenderer.cpp: In function 'void graphics::MessageRenderer::drawTextMessageFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:21.6769879Z src/graphics/draw/MessageRenderer.cpp:386:15: warning: unused variable 'page' [-Wunused-variable]
+2025-09-21T23:34:21.6788569Z          float page = (float)usableScrollHeight * 0.9f;  // 90% page
+2025-09-21T23:34:21.6789740Z                ^~~~
+2025-09-21T23:34:21.7153361Z src/graphics/draw/MenuHandler.cpp: In static member function 'static void graphics::menuHandler::wifiConfigMenu()':
+2025-09-21T23:34:21.7155265Z src/graphics/draw/MenuHandler.cpp:1315:22: warning: operation on 'count' may be undefined [-Wsequence-point]
+2025-09-21T23:34:21.7157196Z          options[count++] = labels[count];
+2025-09-21T23:34:21.7157612Z                  ~~~~~^~
+2025-09-21T23:34:21.9932188Z Compiling .pio/build/rak3312/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:34:22.2878458Z Compiling .pio/build/rak3312/src/graphics/emotes.cpp.o
+2025-09-21T23:34:22.7380399Z src/graphics/draw/NotificationRenderer.cpp: In static member function 'static void graphics::NotificationRenderer::drawTextInput(OLEDDisplay*, OLEDDisplayUiState*)':
+2025-09-21T23:34:22.7382838Z src/graphics/draw/NotificationRenderer.cpp:774:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:22.7384838Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:22.7386540Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:22.7387583Z src/graphics/draw/NotificationRenderer.cpp:775:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:22.7388739Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:22.7389306Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:22.7390411Z src/graphics/draw/NotificationRenderer.cpp:782:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:22.7391724Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:22.7392414Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:22.7405782Z src/graphics/draw/NotificationRenderer.cpp:783:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:22.7406959Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:22.7407538Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:23.0591867Z Compiling .pio/build/rak3312/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:34:23.1134543Z Compiling .pio/build/rak3312/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:34:23.1641931Z Compiling .pio/build/rak3312/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:34:23.2139326Z Compiling .pio/build/rak3312/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:34:23.2644865Z Compiling .pio/build/rak3312/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:34:23.3083412Z Compiling .pio/build/rak3312/src/graphics/tftSetup.cpp.o
+2025-09-21T23:34:23.3262927Z Compiling .pio/build/rak3312/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:34:23.3657522Z Compiling .pio/build/rak3312/src/input/ButtonThread.cpp.o
+2025-09-21T23:34:23.3977669Z Compiling .pio/build/rak3312/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:34:24.0099051Z Compiling .pio/build/rak3312/src/input/InputBroker.cpp.o
+2025-09-21T23:34:24.4479401Z Compiling .pio/build/rak3312/src/input/LinuxInput.cpp.o
+2025-09-21T23:34:24.5255858Z Compiling .pio/build/rak3312/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:34:25.2510872Z Compiling .pio/build/rak3312/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:34:25.3966149Z Compiling .pio/build/rak3312/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:34:25.4441167Z Compiling .pio/build/rak3312/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:34:25.5689776Z Compiling .pio/build/rak3312/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:34:25.6373262Z Compiling .pio/build/rak3312/src/input/SeesawRotary.cpp.o
+2025-09-21T23:34:25.6861069Z Compiling .pio/build/rak3312/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:34:26.7377336Z Compiling .pio/build/rak3312/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:34:26.8182648Z Compiling .pio/build/rak3312/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:34:26.8438533Z Compiling .pio/build/rak3312/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:34:26.9529900Z Compiling .pio/build/rak3312/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:34:27.0031381Z Compiling .pio/build/rak3312/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:34:27.0523438Z Compiling .pio/build/rak3312/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:34:27.9595987Z Compiling .pio/build/rak3312/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:34:28.0216848Z Compiling .pio/build/rak3312/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:34:28.4071557Z Compiling .pio/build/rak3312/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:34:28.7661591Z Compiling .pio/build/rak3312/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:34:29.2657627Z Compiling .pio/build/rak3312/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:34:29.2993748Z Compiling .pio/build/rak3312/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:34:29.6412668Z Compiling .pio/build/rak3312/src/input/i2cButton.cpp.o
+2025-09-21T23:34:30.0449535Z Compiling .pio/build/rak3312/src/input/kbI2cBase.cpp.o
+2025-09-21T23:34:30.5166562Z Compiling .pio/build/rak3312/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:34:30.7639727Z Compiling .pio/build/rak3312/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:34:31.0975285Z Compiling .pio/build/rak3312/src/main.cpp.o
+2025-09-21T23:34:31.6526559Z Compiling .pio/build/rak3312/src/memGet.cpp.o
+2025-09-21T23:34:31.7899880Z Compiling .pio/build/rak3312/src/mesh/Channels.cpp.o
+2025-09-21T23:34:32.4205805Z Compiling .pio/build/rak3312/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:34:32.6754325Z src/main.cpp: In function 'void setup()':
+2025-09-21T23:34:32.6756553Z src/main.cpp:1257:104: warning: 'new' of type 'SX1262Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:34:32.6757651Z          auto *sxIf = new SX1262Interface(RadioLibHAL, SX126X_CS, SX126X_DIO1, SX126X_RESET, SX126X_BUSY);
+2025-09-21T23:34:32.6758436Z                                                                                                         ^
+2025-09-21T23:34:32.6759302Z src/main.cpp:1257:104: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:34:32.6760569Z src/main.cpp:1257:104: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:34:32.6773963Z src/main.cpp:981:9: warning: unused variable 'pullup_sense' [-Wunused-variable]
+2025-09-21T23:34:32.6774801Z      int pullup_sense = 0;
+2025-09-21T23:34:32.6775190Z          ^~~~~~~~~~~~
+2025-09-21T23:34:32.8415657Z Compiling .pio/build/rak3312/src/mesh/Default.cpp.o
+2025-09-21T23:34:33.2146115Z Compiling .pio/build/rak3312/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:34:33.6583426Z Compiling .pio/build/rak3312/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:34:33.6905795Z Compiling .pio/build/rak3312/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:34:34.0500935Z Compiling .pio/build/rak3312/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:34:34.4958920Z Compiling .pio/build/rak3312/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:34:34.9918155Z Compiling .pio/build/rak3312/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:34:35.3044416Z Compiling .pio/build/rak3312/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:34:35.3776487Z Compiling .pio/build/rak3312/src/mesh/MeshModule.cpp.o
+2025-09-21T23:34:35.8165952Z Compiling .pio/build/rak3312/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:34:36.3526568Z Compiling .pio/build/rak3312/src/mesh/MeshService.cpp.o
+2025-09-21T23:34:36.6090098Z Compiling .pio/build/rak3312/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:34:36.8850404Z Compiling .pio/build/rak3312/src/mesh/NodeDB.cpp.o
+2025-09-21T23:34:37.2045903Z Compiling .pio/build/rak3312/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:34:38.0427769Z Compiling .pio/build/rak3312/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:34:38.3287470Z Compiling .pio/build/rak3312/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:34:38.4922627Z Compiling .pio/build/rak3312/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:34:39.0131730Z Compiling .pio/build/rak3312/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:34:39.5644078Z Compiling .pio/build/rak3312/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:34:39.8236856Z Compiling .pio/build/rak3312/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:34:40.1759103Z Compiling .pio/build/rak3312/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:34:40.9014857Z Compiling .pio/build/rak3312/src/mesh/Router.cpp.o
+2025-09-21T23:34:41.0565100Z Compiling .pio/build/rak3312/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:34:41.3867749Z Compiling .pio/build/rak3312/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:34:41.5172816Z Compiling .pio/build/rak3312/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:34:42.1475158Z Compiling .pio/build/rak3312/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:34:42.6872349Z Compiling .pio/build/rak3312/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:34:42.8462599Z Compiling .pio/build/rak3312/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:34:42.8726792Z Compiling .pio/build/rak3312/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:34:43.4759152Z Compiling .pio/build/rak3312/src/mesh/Throttle.cpp.o
+2025-09-21T23:34:44.0103191Z Compiling .pio/build/rak3312/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:34:44.0443739Z Compiling .pio/build/rak3312/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:34:44.1662869Z Compiling .pio/build/rak3312/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:34:44.2151972Z Compiling .pio/build/rak3312/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:34:44.2467816Z Compiling .pio/build/rak3312/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:34:45.0484414Z src/mesh/aes-ccm.cpp: In function 'int constant_time_compare(const void*, const void*, size_t)':
+2025-09-21T23:34:45.0485871Z src/mesh/aes-ccm.cpp:24:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:45.0486905Z      const volatile uint8_t *volatile a = (const volatile uint8_t *volatile)a_;
+2025-09-21T23:34:45.0487592Z                                                                             ^~
+2025-09-21T23:34:45.0488417Z src/mesh/aes-ccm.cpp:25:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:45.0489412Z      const volatile uint8_t *volatile b = (const volatile uint8_t *volatile)b_;
+2025-09-21T23:34:45.0490087Z                                                                             ^~
+2025-09-21T23:34:45.1732929Z Compiling .pio/build/rak3312/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:34:45.2171402Z Compiling .pio/build/rak3312/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:34:45.3506934Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:34:45.4252016Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:34:45.4723607Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:34:45.5305807Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:34:45.5571367Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:34:45.6092621Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:34:45.6495462Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:34:45.6853205Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:34:45.7549334Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:34:45.8200988Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:34:45.8509888Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:34:45.8961773Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:34:45.9853641Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:34:46.0390593Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:34:46.1377860Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:34:46.2315372Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:34:46.2581549Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:34:46.2796053Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:34:46.3096961Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:34:46.3535753Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:34:46.4393110Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:34:46.4593387Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:34:46.4748009Z Compiling .pio/build/rak3312/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:34:46.5787879Z Compiling .pio/build/rak3312/src/mesh/http/ContentHandler.cpp.o
+2025-09-21T23:34:46.6001400Z Compiling .pio/build/rak3312/src/mesh/http/ContentHelper.cpp.o
+2025-09-21T23:34:46.6372592Z Compiling .pio/build/rak3312/src/mesh/http/WebServer.cpp.o
+2025-09-21T23:34:46.6641995Z Compiling .pio/build/rak3312/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:34:47.2264463Z In file included from /pio/workspace/libdeps/rak3312/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:47.2266631Z                  from /pio/workspace/libdeps/rak3312/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:47.2268316Z                  from src/mesh/http/ContentHandler.cpp:41:
+2025-09-21T23:34:47.2269995Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:47.2272498Z  #define NO_DATA         211
+2025-09-21T23:34:47.2295731Z  
+2025-09-21T23:34:47.2297296Z In file included from /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:47.2298731Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:47.2299680Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:47.2300938Z                  from src/main.h:69,
+2025-09-21T23:34:47.2301653Z                  from src/mesh/http/ContentHandler.cpp:6:
+2025-09-21T23:34:47.2303365Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:47.2305014Z  #define NO_DATA                          -32768
+2025-09-21T23:34:47.2305759Z  
+2025-09-21T23:34:47.2869336Z In file included from /pio/workspace/libdeps/rak3312/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:47.2870957Z                  from /pio/workspace/libdeps/rak3312/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:47.2875862Z                  from src/mesh/http/WebServer.cpp:44:
+2025-09-21T23:34:47.2877076Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:47.2878527Z  #define NO_DATA         211
+2025-09-21T23:34:47.2878882Z  
+2025-09-21T23:34:47.2879429Z In file included from /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:47.2880141Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:47.2880629Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:47.2881080Z                  from src/main.h:69,
+2025-09-21T23:34:47.2881499Z                  from src/mesh/http/WebServer.cpp:5:
+2025-09-21T23:34:47.2882387Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:47.2883493Z  #define NO_DATA                          -32768
+2025-09-21T23:34:47.2883906Z  
+2025-09-21T23:34:47.3146229Z Compiling .pio/build/rak3312/src/mesh/wifi/WiFiAPClient.cpp.o
+2025-09-21T23:34:47.8176932Z Compiling .pio/build/rak3312/src/meshUtils.cpp.o
+2025-09-21T23:34:48.5405018Z Compiling .pio/build/rak3312/src/modules/AdminModule.cpp.o
+2025-09-21T23:34:49.0177596Z Compiling .pio/build/rak3312/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:34:49.0589614Z Compiling .pio/build/rak3312/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:34:49.1663929Z Compiling .pio/build/rak3312/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:34:50.5104247Z src/modules/CannedMessageModule.cpp: In member function 'virtual void CannedMessageModule::drawFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:50.5106997Z src/modules/CannedMessageModule.cpp:2347:17: warning: unused variable 'textYOffset' [-Wunused-variable]
+2025-09-21T23:34:50.5107904Z              int textYOffset = (rowHeight - FONT_HEIGHT_SMALL) / 2;
+2025-09-21T23:34:50.5108446Z                  ^~~~~~~~~~~
+2025-09-21T23:34:50.5937097Z Compiling .pio/build/rak3312/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:34:50.7770914Z src/modules/CannedMessageModule.cpp: At global scope:
+2025-09-21T23:34:50.7773005Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:50.7774197Z  static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:34:50.7774957Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:50.7878250Z Compiling .pio/build/rak3312/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:34:50.8442521Z Compiling .pio/build/rak3312/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:34:51.1860257Z Compiling .pio/build/rak3312/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:34:51.5340825Z Compiling .pio/build/rak3312/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:34:52.4353212Z Compiling .pio/build/rak3312/src/modules/Modules.cpp.o
+2025-09-21T23:34:52.5589565Z Compiling .pio/build/rak3312/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:34:52.6482510Z Compiling .pio/build/rak3312/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:34:53.3851476Z Compiling .pio/build/rak3312/src/modules/PositionModule.cpp.o
+2025-09-21T23:34:54.0952439Z Compiling .pio/build/rak3312/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:34:54.3296936Z Compiling .pio/build/rak3312/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:34:54.4463723Z Compiling .pio/build/rak3312/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:34:55.3017943Z Compiling .pio/build/rak3312/src/modules/ReplyModule.cpp.o
+2025-09-21T23:34:55.7472507Z Compiling .pio/build/rak3312/src/modules/RoutingModule.cpp.o
+2025-09-21T23:34:55.8307577Z Compiling .pio/build/rak3312/src/modules/SerialModule.cpp.o
+2025-09-21T23:34:56.2224532Z Compiling .pio/build/rak3312/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:34:57.0413413Z Compiling .pio/build/rak3312/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:34:57.4991051Z Compiling .pio/build/rak3312/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:34:57.6393401Z Compiling .pio/build/rak3312/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:34:57.8484820Z Compiling .pio/build/rak3312/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:34:58.9145770Z Compiling .pio/build/rak3312/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:34:59.3817220Z Compiling .pio/build/rak3312/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:34:59.5211693Z Compiling .pio/build/rak3312/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:34:59.9444028Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:35:00.0573698Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:35:00.7493673Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:35:01.2118923Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:35:01.3203199Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:35:01.3521950Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:35:02.0483870Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:35:02.4684225Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:35:02.6319742Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:35:02.7029345Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:35:03.2998676Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:35:03.7473843Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:35:03.9591247Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:35:03.9907342Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:35:04.5690528Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:35:05.0188713Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:35:05.2393437Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:35:05.2774726Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:35:05.6911660Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:35:06.2869936Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:35:06.5108235Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:35:06.6801616Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:35:06.8271639Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:35:07.5515499Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:35:07.7769657Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:35:07.9535157Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:35:08.1299799Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:35:08.7970673Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:35:09.0445668Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:35:09.0745646Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:35:09.2348171Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:35:10.0587990Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:35:10.3209246Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:35:10.3518714Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:35:10.4880983Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:35:11.1677888Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:35:11.5956018Z Compiling .pio/build/rak3312/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:35:11.6233601Z Compiling .pio/build/rak3312/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:35:11.6813566Z Compiling .pio/build/rak3312/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:35:12.1217017Z Compiling .pio/build/rak3312/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:35:12.4429681Z Compiling .pio/build/rak3312/src/modules/WaypointModule.cpp.o
+2025-09-21T23:35:12.8582095Z Compiling .pio/build/rak3312/src/modules/esp32/AudioModule.cpp.o
+2025-09-21T23:35:13.3941099Z Compiling .pio/build/rak3312/src/modules/esp32/PaxcounterModule.cpp.o
+2025-09-21T23:35:13.9108291Z Compiling .pio/build/rak3312/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:35:14.0146520Z Compiling .pio/build/rak3312/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:35:14.1896125Z Compiling .pio/build/rak3312/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:35:14.7705175Z Compiling .pio/build/rak3312/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:35:15.4045443Z Compiling .pio/build/rak3312/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:35:15.5740264Z Compiling .pio/build/rak3312/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:35:15.6898782Z Compiling .pio/build/rak3312/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:35:16.3993036Z Compiling .pio/build/rak3312/src/motion/MotionSensor.cpp.o
+2025-09-21T23:35:16.9547745Z Compiling .pio/build/rak3312/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:35:17.1135865Z Compiling .pio/build/rak3312/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:35:17.2336554Z Compiling .pio/build/rak3312/src/mqtt/MQTT.cpp.o
+2025-09-21T23:35:17.9564542Z Compiling .pio/build/rak3312/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:35:18.4557543Z Compiling .pio/build/rak3312/src/network-stubs.cpp.o
+2025-09-21T23:35:18.7087399Z Compiling .pio/build/rak3312/src/nimble/NimbleBluetooth.cpp.o
+2025-09-21T23:35:18.7505678Z Compiling .pio/build/rak3312/src/platform/esp32/BleOta.cpp.o
+2025-09-21T23:35:19.5023826Z Compiling .pio/build/rak3312/src/platform/esp32/ESP32CryptoEngine.cpp.o
+2025-09-21T23:35:19.5718710Z Compiling .pio/build/rak3312/src/platform/esp32/SimpleAllocator.cpp.o
+2025-09-21T23:35:19.6358525Z Compiling .pio/build/rak3312/src/platform/esp32/WiFiOTA.cpp.o
+2025-09-21T23:35:20.6467913Z Compiling .pio/build/rak3312/src/platform/esp32/iram-quirk.c.o
+2025-09-21T23:35:20.7054456Z Compiling .pio/build/rak3312/src/platform/esp32/main-esp32.cpp.o
+2025-09-21T23:35:20.7834102Z Compiling .pio/build/rak3312/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:35:20.8330833Z Compiling .pio/build/rak3312/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:35:20.8744334Z Compiling .pio/build/rak3312/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:35:21.8902704Z Compiling .pio/build/rak3312/src/serialization/JSON.cpp.o
+2025-09-21T23:35:21.9490407Z Compiling .pio/build/rak3312/src/serialization/JSONValue.cpp.o
+2025-09-21T23:35:22.0022749Z Compiling .pio/build/rak3312/src/serialization/MeshPacketSerializer.cpp.o
+2025-09-21T23:35:22.4372661Z Compiling .pio/build/rak3312/src/serialization/MeshPacketSerializer_nRF52.cpp.o
+2025-09-21T23:35:22.4568327Z Compiling .pio/build/rak3312/src/serialization/cobs.cpp.o
+2025-09-21T23:35:22.5068703Z Compiling .pio/build/rak3312/src/sleep.cpp.o
+2025-09-21T23:35:23.0498020Z Compiling .pio/build/rak3312/src/xmodem.cpp.o
+2025-09-21T23:35:23.5628702Z Building .pio/build/rak3312/bootloader.bin
+2025-09-21T23:35:23.6421929Z Generating partitions .pio/build/rak3312/partitions.bin
+2025-09-21T23:35:23.6548301Z esptool.py v4.5.1
+2025-09-21T23:35:23.6553023Z Creating esp32s3 image...
+2025-09-21T23:35:23.6554014Z Merged 1 ELF section
+2025-09-21T23:35:23.6556191Z Successfully created esp32s3 image.
+2025-09-21T23:35:23.8380598Z Compiling .pio/build/rak3312/lib062/Wire/Wire.cpp.o
+2025-09-21T23:35:23.9543217Z src/sleep.cpp: In function 'void enableLoraInterrupt()':
+2025-09-21T23:35:23.9544895Z src/sleep.cpp:532:15: warning: unused variable 'res' [-Wunused-variable]
+2025-09-21T23:35:23.9545748Z      esp_err_t res;
+2025-09-21T23:35:23.9546221Z                ^~~
+2025-09-21T23:35:24.0332941Z Compiling .pio/build/rak3312/lib207/SPI/SPI.cpp.o
+2025-09-21T23:35:24.3439337Z Compiling .pio/build/rak3312/lib3f5/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:35:24.4401126Z Compiling .pio/build/rak3312/lib3f5/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:35:24.5143734Z Archiving .pio/build/rak3312/lib062/libWire.a
+2025-09-21T23:35:24.5205419Z Indexing .pio/build/rak3312/lib062/libWire.a
+2025-09-21T23:35:24.5373300Z Compiling .pio/build/rak3312/lib3f5/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:35:24.6704905Z Archiving .pio/build/rak3312/lib207/libSPI.a
+2025-09-21T23:35:24.6762524Z Indexing .pio/build/rak3312/lib207/libSPI.a
+2025-09-21T23:35:24.8541465Z Compiling .pio/build/rak3312/lib815/OneButton/OneButton.cpp.o
+2025-09-21T23:35:25.0927612Z Compiling .pio/build/rak3312/lib815/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:35:25.2928678Z Compiling .pio/build/rak3312/lib4f3/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:35:25.3045510Z Archiving .pio/build/rak3312/lib3f5/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:25.3146015Z Indexing .pio/build/rak3312/lib3f5/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:25.4835988Z Compiling .pio/build/rak3312/lib295/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:35:25.6449977Z Compiling .pio/build/rak3312/lib1be/ArduinoThread/Thread.cpp.o
+2025-09-21T23:35:25.6982867Z Archiving .pio/build/rak3312/lib815/libOneButton.a
+2025-09-21T23:35:25.7056988Z Indexing .pio/build/rak3312/lib815/libOneButton.a
+2025-09-21T23:35:25.7248315Z Compiling .pio/build/rak3312/lib1be/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:35:25.9136139Z Archiving .pio/build/rak3312/lib4f3/libarduino-fsm.a
+2025-09-21T23:35:25.9195591Z Indexing .pio/build/rak3312/lib4f3/libarduino-fsm.a
+2025-09-21T23:35:25.9369922Z Compiling .pio/build/rak3312/lib468/Nanopb/pb_common.c.o
+2025-09-21T23:35:26.0372232Z Compiling .pio/build/rak3312/lib468/Nanopb/pb_decode.c.o
+2025-09-21T23:35:26.1605697Z Archiving .pio/build/rak3312/lib295/libTinyGPSPlus.a
+2025-09-21T23:35:26.1674426Z Indexing .pio/build/rak3312/lib295/libTinyGPSPlus.a
+2025-09-21T23:35:26.1841178Z Compiling .pio/build/rak3312/lib468/Nanopb/pb_encode.c.o
+2025-09-21T23:35:26.2195955Z Compiling .pio/build/rak3312/lib6b5/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:35:26.3732128Z Compiling .pio/build/rak3312/lib01d/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:35:26.3870641Z Archiving .pio/build/rak3312/lib1be/libArduinoThread.a
+2025-09-21T23:35:26.3885066Z Archiving .pio/build/rak3312/lib6b5/libErriezCRC32.a
+2025-09-21T23:35:26.3902780Z Archiving .pio/build/rak3312/lib468/libNanopb.a
+2025-09-21T23:35:26.3929866Z Indexing .pio/build/rak3312/lib1be/libArduinoThread.a
+2025-09-21T23:35:26.3953697Z Indexing .pio/build/rak3312/lib6b5/libErriezCRC32.a
+2025-09-21T23:35:26.3970103Z Indexing .pio/build/rak3312/lib468/libNanopb.a
+2025-09-21T23:35:26.4922509Z Compiling .pio/build/rak3312/libaad/TBPubSubClient/PubSubClient.cpp.o
+2025-09-21T23:35:26.6456741Z Compiling .pio/build/rak3312/libceb/NTPClient/NTPClient.cpp.o
+2025-09-21T23:35:26.8099112Z Compiling .pio/build/rak3312/libd97/Syslog/Syslog.cpp.o
+2025-09-21T23:35:26.9353392Z Archiving .pio/build/rak3312/lib01d/libNonBlockingRTTTL.a
+2025-09-21T23:35:26.9407555Z Indexing .pio/build/rak3312/lib01d/libNonBlockingRTTTL.a
+2025-09-21T23:35:27.1229187Z Compiling .pio/build/rak3312/lib8de/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:35:27.1464030Z Archiving .pio/build/rak3312/libaad/libTBPubSubClient.a
+2025-09-21T23:35:27.1543178Z Indexing .pio/build/rak3312/libaad/libTBPubSubClient.a
+2025-09-21T23:35:27.1736284Z Compiling .pio/build/rak3312/lib8de/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:35:27.3007871Z Archiving .pio/build/rak3312/libceb/libNTPClient.a
+2025-09-21T23:35:27.3064551Z Indexing .pio/build/rak3312/libceb/libNTPClient.a
+2025-09-21T23:35:27.3223827Z Compiling .pio/build/rak3312/lib8de/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:35:27.4647514Z Archiving .pio/build/rak3312/libd97/libSyslog.a
+2025-09-21T23:35:27.4711186Z Indexing .pio/build/rak3312/libd97/libSyslog.a
+2025-09-21T23:35:27.4878657Z Compiling .pio/build/rak3312/lib8de/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:35:27.9245112Z Compiling .pio/build/rak3312/lib087/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:35:28.0848986Z Compiling .pio/build/rak3312/lib978/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:35:28.0996627Z Archiving .pio/build/rak3312/lib8de/libAdafruit BusIO.a
+2025-09-21T23:35:28.1128436Z Indexing .pio/build/rak3312/lib8de/libAdafruit BusIO.a
+2025-09-21T23:35:28.2623443Z Compiling .pio/build/rak3312/libb32/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:35:28.4460474Z Compiling .pio/build/rak3312/lib0f2/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:35:28.4815933Z Archiving .pio/build/rak3312/lib087/libAdafruit Unified Sensor.a
+2025-09-21T23:35:28.4876256Z Indexing .pio/build/rak3312/lib087/libAdafruit Unified Sensor.a
+2025-09-21T23:35:28.6569940Z Compiling .pio/build/rak3312/lib398/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:35:28.6788959Z Archiving .pio/build/rak3312/lib978/libAdafruit BMP280 Library.a
+2025-09-21T23:35:28.6846082Z Indexing .pio/build/rak3312/lib978/libAdafruit BMP280 Library.a
+2025-09-21T23:35:28.8578357Z Compiling .pio/build/rak3312/libf6b/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:35:28.8973010Z Archiving .pio/build/rak3312/libb32/libAdafruit BMP085 Library.a
+2025-09-21T23:35:28.9027558Z Indexing .pio/build/rak3312/libb32/libAdafruit BMP085 Library.a
+2025-09-21T23:35:29.0815704Z Compiling .pio/build/rak3312/lib09f/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:35:29.1259737Z Archiving .pio/build/rak3312/lib0f2/libAdafruit BME280 Library.a
+2025-09-21T23:35:29.1321808Z Indexing .pio/build/rak3312/lib0f2/libAdafruit BME280 Library.a
+2025-09-21T23:35:29.3116516Z Compiling .pio/build/rak3312/lib073/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:35:29.3300865Z Archiving .pio/build/rak3312/lib398/libAdafruit DPS310.a
+2025-09-21T23:35:29.3355307Z Indexing .pio/build/rak3312/lib398/libAdafruit DPS310.a
+2025-09-21T23:35:29.5063955Z Compiling .pio/build/rak3312/lib95b/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:35:29.5215744Z Archiving .pio/build/rak3312/libf6b/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:29.5269911Z Indexing .pio/build/rak3312/libf6b/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:29.5456693Z Compiling .pio/build/rak3312/lib95b/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:35:29.7299872Z Archiving .pio/build/rak3312/lib09f/libAdafruit INA260 Library.a
+2025-09-21T23:35:29.7353709Z Indexing .pio/build/rak3312/lib09f/libAdafruit INA260 Library.a
+2025-09-21T23:35:29.7518615Z Compiling .pio/build/rak3312/lib95b/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:35:29.9407953Z Archiving .pio/build/rak3312/lib073/libAdafruit INA219.a
+2025-09-21T23:35:29.9475356Z Indexing .pio/build/rak3312/lib073/libAdafruit INA219.a
+2025-09-21T23:35:29.9661775Z Compiling .pio/build/rak3312/lib95b/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:35:30.2631403Z /pio/workspace/libdeps/rak3312/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp: In member function 'virtual bool Adafruit_PM25AQI_I2C::read(PM25_AQI_Data*)':
+2025-09-21T23:35:30.2633412Z /pio/workspace/libdeps/rak3312/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp:50:10: warning: unused variable 'bufLen' [-Wunused-variable]
+2025-09-21T23:35:30.2634834Z    size_t bufLen = sizeof(buffer);
+2025-09-21T23:35:30.2635280Z           ^~~~~~
+2025-09-21T23:35:30.2840428Z Compiling .pio/build/rak3312/lib790/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:35:30.3969288Z Compiling .pio/build/rak3312/lib181/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:35:30.5299972Z /pio/workspace/libdeps/rak3312/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:35:30.5303285Z /pio/workspace/libdeps/rak3312/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:172:11: warning: unused variable 'csum' [-Wunused-variable]
+2025-09-21T23:35:30.5304387Z    uint8_t csum = 0;
+2025-09-21T23:35:30.5304930Z            ^~~~
+2025-09-21T23:35:30.5604966Z Compiling .pio/build/rak3312/libcf1/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:35:30.6063288Z Archiving .pio/build/rak3312/lib95b/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:30.6132077Z Indexing .pio/build/rak3312/lib95b/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:30.7999174Z Compiling .pio/build/rak3312/libcf9/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:35:30.9819064Z Archiving .pio/build/rak3312/lib790/libAdafruit MPU6050.a
+2025-09-21T23:35:30.9874435Z Indexing .pio/build/rak3312/lib790/libAdafruit MPU6050.a
+2025-09-21T23:35:31.0047472Z Compiling .pio/build/rak3312/libcf9/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:35:31.0569766Z Archiving .pio/build/rak3312/lib181/libAdafruit LIS3DH.a
+2025-09-21T23:35:31.0631579Z Indexing .pio/build/rak3312/lib181/libAdafruit LIS3DH.a
+2025-09-21T23:35:31.0825658Z Compiling .pio/build/rak3312/libcf9/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:35:31.2057042Z Archiving .pio/build/rak3312/libcf1/libAdafruit AHTX0.a
+2025-09-21T23:35:31.2109318Z Indexing .pio/build/rak3312/libcf1/libAdafruit AHTX0.a
+2025-09-21T23:35:31.2272146Z Compiling .pio/build/rak3312/libcf9/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:35:31.4328096Z Compiling .pio/build/rak3312/libcf9/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:35:31.7012024Z Compiling .pio/build/rak3312/libcf9/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:35:31.7263390Z Compiling .pio/build/rak3312/libcf9/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:35:31.8685574Z Compiling .pio/build/rak3312/libcf9/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:35:32.2427159Z Compiling .pio/build/rak3312/lib653/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:35:32.4940287Z Compiling .pio/build/rak3312/lib8ca/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:35:32.5089862Z Archiving .pio/build/rak3312/libcf9/libAdafruit LSM6DS.a
+2025-09-21T23:35:32.5226426Z Indexing .pio/build/rak3312/libcf9/libAdafruit LSM6DS.a
+2025-09-21T23:35:32.6627889Z Compiling .pio/build/rak3312/lib302/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:35:32.8249154Z Compiling .pio/build/rak3312/lib6bd/INA3221/INA3221.cpp.o
+2025-09-21T23:35:32.8343120Z Archiving .pio/build/rak3312/lib653/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:32.8401498Z Indexing .pio/build/rak3312/lib653/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:32.9978699Z Compiling .pio/build/rak3312/lib1f2/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:35:33.0326753Z /pio/workspace/libdeps/rak3312/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'float MLX90632::getObjectTempF()':
+2025-09-21T23:35:33.0329866Z /pio/workspace/libdeps/rak3312/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:419:9: warning: unused variable 'AMB' [-Wunused-variable]
+2025-09-21T23:35:33.0330966Z    float AMB;
+2025-09-21T23:35:33.0331252Z          ^~~
+2025-09-21T23:35:33.0332235Z /pio/workspace/libdeps/rak3312/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:420:9: warning: unused variable 'Sto' [-Wunused-variable]
+2025-09-21T23:35:33.0333309Z    float Sto;
+2025-09-21T23:35:33.0333589Z          ^~~
+2025-09-21T23:35:33.0369065Z /pio/workspace/libdeps/rak3312/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'void MLX90632::setMeasurementRate(uint8_t)':
+2025-09-21T23:35:33.0371385Z /pio/workspace/libdeps/rak3312/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:775:19: warning: unused variable 'returnError' [-Wunused-variable]
+2025-09-21T23:35:33.0374122Z   MLX90632::status returnError = setMode(MODE_STEP);
+2025-09-21T23:35:33.0374768Z                    ^~~~~~~~~~~
+2025-09-21T23:35:33.1378281Z Archiving .pio/build/rak3312/lib8ca/libEmotiBit MLX90632.a
+2025-09-21T23:35:33.1434162Z Indexing .pio/build/rak3312/lib8ca/libEmotiBit MLX90632.a
+2025-09-21T23:35:33.3203492Z Compiling .pio/build/rak3312/libc97/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:35:33.3365010Z Archiving .pio/build/rak3312/lib302/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:33.3425938Z Indexing .pio/build/rak3312/lib302/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:33.5252926Z Compiling .pio/build/rak3312/lib504/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:35:33.5367085Z Archiving .pio/build/rak3312/lib6bd/libINA3221.a
+2025-09-21T23:35:33.5467515Z Indexing .pio/build/rak3312/lib6bd/libINA3221.a
+2025-09-21T23:35:33.7252752Z Compiling .pio/build/rak3312/liba21/INA226/INA226.cpp.o
+2025-09-21T23:35:33.7399520Z Archiving .pio/build/rak3312/lib1f2/libQMC5883LCompass.a
+2025-09-21T23:35:33.7472680Z Indexing .pio/build/rak3312/lib1f2/libQMC5883LCompass.a
+2025-09-21T23:35:33.9217828Z Compiling .pio/build/rak3312/lib27e/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:35:33.9697347Z Archiving .pio/build/rak3312/libc97/libDFRobot_RTU.a
+2025-09-21T23:35:33.9747468Z Indexing .pio/build/rak3312/libc97/libDFRobot_RTU.a
+2025-09-21T23:35:33.9949137Z Compiling .pio/build/rak3312/lib27e/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:35:34.1326834Z Archiving .pio/build/rak3312/lib504/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:34.1397554Z Indexing .pio/build/rak3312/lib504/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:34.1588646Z Compiling .pio/build/rak3312/lib27e/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:35:34.2418743Z In file included from /pio/workspace/libdeps/rak3312/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:34.2421751Z /pio/workspace/libdeps/rak3312/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:42: warning: "I2C_BUFFER_LENGTH" redefined
+2025-09-21T23:35:34.2423702Z    #define I2C_BUFFER_LENGTH 32
+2025-09-21T23:35:34.2424106Z  
+2025-09-21T23:35:34.2425103Z In file included from /pio/workspace/libdeps/rak3312/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:20,
+2025-09-21T23:35:34.2426450Z                  from /pio/workspace/libdeps/rak3312/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:34.2427847Z /pio/core/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h:43: note: this is the location of the previous definition
+2025-09-21T23:35:34.2429093Z      #define I2C_BUFFER_LENGTH 128  // Default size, if none is set using Wire::setBuffersize(size_t)
+2025-09-21T23:35:34.2429908Z  
+2025-09-21T23:35:34.3785376Z Archiving .pio/build/rak3312/liba21/libINA226.a
+2025-09-21T23:35:34.3850509Z Indexing .pio/build/rak3312/liba21/libINA226.a
+2025-09-21T23:35:34.4782331Z /pio/workspace/libdeps/rak3312/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp: In member function 'void MAX30105::enableSlot(uint8_t, uint8_t)':
+2025-09-21T23:35:34.4784487Z /pio/workspace/libdeps/rak3312/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:292:11: warning: unused variable 'originalContents' [-Wunused-variable]
+2025-09-21T23:35:34.4786055Z    uint8_t originalContents;
+2025-09-21T23:35:34.4786512Z            ^~~~~~~~~~~~~~~~
+2025-09-21T23:35:34.5381881Z /pio/workspace/libdeps/rak3312/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:35:34.5384043Z /pio/workspace/libdeps/rak3312/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:35:34.5385743Z      if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:35:34.5386525Z          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:35:34.5636742Z Compiling .pio/build/rak3312/lib2b8/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:35:34.5879488Z Compiling .pio/build/rak3312/lib2b8/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:35:34.7839615Z Compiling .pio/build/rak3312/libe38/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:35:34.9509982Z Compiling .pio/build/rak3312/lib92c/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:35:34.9639384Z Archiving .pio/build/rak3312/lib27e/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:34.9708098Z Indexing .pio/build/rak3312/lib27e/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:35.1307894Z Compiling .pio/build/rak3312/lib3b9/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:35:35.2157764Z Archiving .pio/build/rak3312/lib2b8/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:35.2223767Z Indexing .pio/build/rak3312/lib2b8/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:35.3986792Z Compiling .pio/build/rak3312/lib2c2/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:35:35.4211886Z Archiving .pio/build/rak3312/libe38/libAdafruit LTR390 Library.a
+2025-09-21T23:35:35.4271530Z Indexing .pio/build/rak3312/libe38/libAdafruit LTR390 Library.a
+2025-09-21T23:35:35.6140417Z Compiling .pio/build/rak3312/lib326/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:35:35.6253453Z Archiving .pio/build/rak3312/lib92c/libAdafruit PCT2075.a
+2025-09-21T23:35:35.6319271Z Indexing .pio/build/rak3312/lib92c/libAdafruit PCT2075.a
+2025-09-21T23:35:35.6576893Z Compiling .pio/build/rak3312/lib326/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:35:35.7061951Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::sensorInit()':
+2025-09-21T23:35:35.7064297Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp:23:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:35.7066613Z    int8_t  rslt    = 0;
+2025-09-21T23:35:35.7066968Z            ^~~~
+2025-09-21T23:35:35.7118185Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setMeasurementXYZ(uint8_t, uint8_t, uint8_t)':
+2025-09-21T23:35:35.7120224Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp:263:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:35.7125966Z    int8_t  rslt;
+2025-09-21T23:35:35.7126313Z            ^~~~
+2025-09-21T23:35:35.7127312Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setInterruputLatch(uint8_t)':
+2025-09-21T23:35:35.7128968Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp:489:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:35.7129965Z    int8_t  rslt;
+2025-09-21T23:35:35.7130291Z            ^~~~
+2025-09-21T23:35:35.7149355Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::normalSelfTest()':
+2025-09-21T23:35:35.7158269Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp:706:10: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:35.7159289Z    int8_t rslt;
+2025-09-21T23:35:35.7159616Z           ^~~~
+2025-09-21T23:35:35.7160508Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::advSelfTest()':
+2025-09-21T23:35:35.7162157Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp:776:11: warning: unused variable 'selfTestCurrent' [-Wunused-variable]
+2025-09-21T23:35:35.7177866Z    uint8_t selfTestCurrent;
+2025-09-21T23:35:35.7205199Z            ^~~~~~~~~~~~~~~
+2025-09-21T23:35:35.7206552Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getDataOverrunState()':
+2025-09-21T23:35:35.7211612Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp:853:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:35.7212572Z    int8_t  rslt;
+2025-09-21T23:35:35.7212889Z            ^~~~
+2025-09-21T23:35:35.7213810Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setOverflowPin(uint8_t)':
+2025-09-21T23:35:35.7215596Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp:865:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:35.7216552Z    int8_t  rslt;
+2025-09-21T23:35:35.7216862Z            ^~~~
+2025-09-21T23:35:35.7218034Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getOverflowState()':
+2025-09-21T23:35:35.7219603Z /pio/workspace/libdeps/rak3312/DFRobot_BMM150/DFRobot_BMM150.cpp:878:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:35.7220598Z    int8_t  rslt;
+2025-09-21T23:35:35.7220923Z            ^~~~
+2025-09-21T23:35:35.9587057Z /pio/workspace/libdeps/rak3312/Adafruit TSL2561/Adafruit_TSL2561_U.cpp: In member function 'uint32_t Adafruit_TSL2561_Unified::calculateLux(uint16_t, uint16_t)':
+2025-09-21T23:35:35.9590469Z /pio/workspace/libdeps/rak3312/Adafruit TSL2561/Adafruit_TSL2561_U.cpp:421:14: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+2025-09-21T23:35:35.9591644Z    if ((ratio >= 0) && (ratio <= TSL2561_LUX_K1T)) {
+2025-09-21T23:35:35.9592080Z         ~~~~~~^~~~
+2025-09-21T23:35:36.0548794Z Compiling .pio/build/rak3312/lib43a/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:35:36.0676389Z Archiving .pio/build/rak3312/lib2c2/libAdafruit TSL2561.a
+2025-09-21T23:35:36.0694154Z Archiving .pio/build/rak3312/lib3b9/libDFRobot_BMM150.a
+2025-09-21T23:35:36.0738292Z Indexing .pio/build/rak3312/lib2c2/libAdafruit TSL2561.a
+2025-09-21T23:35:36.0757262Z Indexing .pio/build/rak3312/lib3b9/libDFRobot_BMM150.a
+2025-09-21T23:35:36.1825177Z Compiling .pio/build/rak3312/lib0d2/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:35:36.3457519Z Compiling .pio/build/rak3312/lib84f/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:35:36.3592800Z Archiving .pio/build/rak3312/lib326/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:36.3652343Z Indexing .pio/build/rak3312/lib326/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:36.3821777Z Compiling .pio/build/rak3312/lib84f/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:35:36.6848462Z Archiving .pio/build/rak3312/lib43a/libAdafruit MAX1704X.a
+2025-09-21T23:35:36.6906169Z Indexing .pio/build/rak3312/lib43a/libAdafruit MAX1704X.a
+2025-09-21T23:35:36.7096107Z Compiling .pio/build/rak3312/lib84f/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:35:36.7441583Z Archiving .pio/build/rak3312/lib0d2/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:36.7507851Z Indexing .pio/build/rak3312/lib0d2/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:36.9348321Z Compiling .pio/build/rak3312/lib782/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:35:37.1683371Z Compiling .pio/build/rak3312/lib0db/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:35:37.3583794Z Compiling .pio/build/rak3312/liba14/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:35:37.3734231Z Archiving .pio/build/rak3312/lib84f/libAdafruit LPS2X.a
+2025-09-21T23:35:37.3801585Z Indexing .pio/build/rak3312/lib84f/libAdafruit LPS2X.a
+2025-09-21T23:35:37.5439859Z Compiling .pio/build/rak3312/lib1bb/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:35:37.5597021Z Archiving .pio/build/rak3312/lib782/libAdafruit SHT31 Library.a
+2025-09-21T23:35:37.5652514Z Indexing .pio/build/rak3312/lib782/libAdafruit SHT31 Library.a
+2025-09-21T23:35:37.7320309Z Compiling .pio/build/rak3312/lib9cf/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:35:37.8097896Z Archiving .pio/build/rak3312/lib0db/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:37.8155126Z Indexing .pio/build/rak3312/lib0db/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:37.8331101Z Compiling .pio/build/rak3312/lib645/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:35:37.9896597Z Archiving .pio/build/rak3312/liba14/libAdafruit SHT4x Library.a
+2025-09-21T23:35:37.9954991Z Indexing .pio/build/rak3312/liba14/libAdafruit SHT4x Library.a
+2025-09-21T23:35:38.0997987Z Compiling .pio/build/rak3312/lib645/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:35:38.2660341Z Compiling .pio/build/rak3312/lib4e0/bsec2/bsec2.cpp.o
+2025-09-21T23:35:38.2713065Z /pio/workspace/libdeps/rak3312/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp: In member function 'OPT3001_ErrorCode ClosedCube_OPT3001::begin(uint8_t)':
+2025-09-21T23:35:38.2719666Z /pio/workspace/libdeps/rak3312/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp:39:20: warning: unused variable 'error' [-Wunused-variable]
+2025-09-21T23:35:38.2720740Z   OPT3001_ErrorCode error = NO_ERROR;
+2025-09-21T23:35:38.2721150Z                     ^~~~~
+2025-09-21T23:35:38.2815589Z Archiving .pio/build/rak3312/lib1bb/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:38.2883637Z Indexing .pio/build/rak3312/lib1bb/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:38.3077626Z Compiling .pio/build/rak3312/lib4e0/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:35:38.3458096Z Archiving .pio/build/rak3312/lib9cf/libClosedCube OPT3001.a
+2025-09-21T23:35:38.3516698Z Indexing .pio/build/rak3312/lib9cf/libClosedCube OPT3001.a
+2025-09-21T23:35:38.5234851Z Compiling .pio/build/rak3312/lib8a1/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:35:38.7611638Z Archiving .pio/build/rak3312/lib645/libBME68x Sensor library.a
+2025-09-21T23:35:38.7678769Z Indexing .pio/build/rak3312/lib645/libBME68x Sensor library.a
+2025-09-21T23:35:38.7871383Z Compiling .pio/build/rak3312/lib9cb/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:35:38.8892789Z Compiling .pio/build/rak3312/lib9cb/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:35:39.0530006Z Compiling .pio/build/rak3312/lib9cb/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:35:39.0657334Z Archiving .pio/build/rak3312/lib4e0/libbsec2.a
+2025-09-21T23:35:39.0720192Z Indexing .pio/build/rak3312/lib4e0/libbsec2.a
+2025-09-21T23:35:39.0772886Z Compiling .pio/build/rak3312/lib9cb/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:35:39.0920154Z Compiling .pio/build/rak3312/lib9cb/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:35:39.1702530Z Archiving .pio/build/rak3312/lib8a1/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:39.1757704Z Indexing .pio/build/rak3312/lib8a1/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:39.1943656Z Compiling .pio/build/rak3312/lib9cb/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:35:39.2123897Z Compiling .pio/build/rak3312/lib9cb/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:35:39.8099767Z Compiling .pio/build/rak3312/lib30f/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:35:39.9173026Z Compiling .pio/build/rak3312/lib8f8/RadioLib/Hal.cpp.o
+2025-09-21T23:35:39.9279596Z Archiving .pio/build/rak3312/lib9cb/libSensirion Core.a
+2025-09-21T23:35:39.9510116Z Compiling .pio/build/rak3312/lib8f8/RadioLib/Module.cpp.o
+2025-09-21T23:35:39.9570747Z Indexing .pio/build/rak3312/lib9cb/libSensirion Core.a
+2025-09-21T23:35:39.9756376Z Compiling .pio/build/rak3312/lib8f8/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:35:40.4225873Z Archiving .pio/build/rak3312/lib30f/libSensirion I2C SCD4x.a
+2025-09-21T23:35:40.4298691Z Indexing .pio/build/rak3312/lib30f/libSensirion I2C SCD4x.a
+2025-09-21T23:35:40.5611774Z Compiling .pio/build/rak3312/lib8f8/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:35:40.5837450Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:35:40.6067934Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:35:40.6246264Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:35:40.6488523Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:35:40.6886109Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:35:41.2607526Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:35:41.2899844Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:35:41.3058805Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:35:41.3283513Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:35:41.9629121Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:35:42.0178697Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:35:42.0404456Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:35:42.0614263Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:35:42.6319661Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:35:42.6535831Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:35:42.6729070Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:35:42.6945711Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:35:43.2390712Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:35:43.2653197Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:35:43.3191330Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:35:43.3419100Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:35:43.8923447Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:35:43.9807135Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:35:44.0048419Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:35:44.0241424Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:35:44.5860424Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:35:44.6440612Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:35:44.6659537Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:35:44.6906531Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:35:45.2322577Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:35:45.3192422Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:35:45.3456720Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:35:45.5315855Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:35:45.8923051Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:35:45.9711171Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:35:46.0184576Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:35:46.3121963Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:35:46.5292548Z Compiling .pio/build/rak3312/lib8f8/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:35:46.6209587Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:35:46.6440281Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:35:46.6706789Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:35:46.9168866Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:35:47.2219326Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:35:47.2682595Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:35:47.3263296Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:35:47.5433227Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:35:47.6497027Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:35:47.6995759Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:35:47.7663711Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:35:47.8563620Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:35:47.8889651Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:35:47.9085759Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:35:47.9798017Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:35:48.5163602Z Compiling .pio/build/rak3312/lib8f8/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:35:48.5419368Z Compiling .pio/build/rak3312/lib8f8/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:35:48.5673236Z Compiling .pio/build/rak3312/lib8f8/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:35:48.6095431Z Compiling .pio/build/rak3312/lib8f8/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:35:49.1358480Z Compiling .pio/build/rak3312/lib8f8/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:35:49.3391889Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/ConnectionContext.cpp.o
+2025-09-21T23:35:49.3782882Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPConnection.cpp.o
+2025-09-21T23:35:49.3988089Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPHeader.cpp.o
+2025-09-21T23:35:49.6737422Z Archiving .pio/build/rak3312/lib8f8/libRadioLib.a
+2025-09-21T23:35:49.7067265Z Indexing .pio/build/rak3312/lib8f8/libRadioLib.a
+2025-09-21T23:35:49.7662125Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPHeaders.cpp.o
+2025-09-21T23:35:49.9595688Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPMultipartBodyParser.cpp.o
+2025-09-21T23:35:50.2813461Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPNode.cpp.o
+2025-09-21T23:35:50.5415597Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPRequest.cpp.o
+2025-09-21T23:35:50.5987470Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPResponse.cpp.o
+2025-09-21T23:35:50.8859460Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPSConnection.cpp.o
+2025-09-21T23:35:51.0799605Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPSServer.cpp.o
+2025-09-21T23:35:51.3135914Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPServer.cpp.o
+2025-09-21T23:35:51.3855773Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPURLEncodedBodyParser.cpp.o
+2025-09-21T23:35:51.7502625Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/HTTPValidator.cpp.o
+2025-09-21T23:35:51.9753046Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/ResolvedResource.cpp.o
+2025-09-21T23:35:52.1272120Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/ResourceNode.cpp.o
+2025-09-21T23:35:52.1733639Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/ResourceParameters.cpp.o
+2025-09-21T23:35:52.2218441Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/ResourceResolver.cpp.o
+2025-09-21T23:35:52.7045710Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/SSLCert.cpp.o
+2025-09-21T23:35:52.8668737Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/ValidatorFunctions.cpp.o
+2025-09-21T23:35:52.9786875Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/WebsocketHandler.cpp.o
+2025-09-21T23:35:53.2545155Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/WebsocketInputStreambuf.cpp.o
+2025-09-21T23:35:53.4190592Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/WebsocketNode.cpp.o
+2025-09-21T23:35:53.5443778Z Compiling .pio/build/rak3312/lib6a0/esp32_https_server/util.cpp.o
+2025-09-21T23:35:53.9873480Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLE2904.cpp.o
+2025-09-21T23:35:54.0576186Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEAddress.cpp.o
+2025-09-21T23:35:54.2435745Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEAdvertisedDevice.cpp.o
+2025-09-21T23:35:54.3145794Z Archiving .pio/build/rak3312/lib6a0/libesp32_https_server.a
+2025-09-21T23:35:54.3342383Z Indexing .pio/build/rak3312/lib6a0/libesp32_https_server.a
+2025-09-21T23:35:54.3836521Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEAdvertising.cpp.o
+2025-09-21T23:35:54.6075161Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEBeacon.cpp.o
+2025-09-21T23:35:54.7467490Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLECharacteristic.cpp.o
+2025-09-21T23:35:55.0706774Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEClient.cpp.o
+2025-09-21T23:35:55.2453881Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEDescriptor.cpp.o
+2025-09-21T23:35:55.5594231Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEDevice.cpp.o
+2025-09-21T23:35:55.8235889Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEEddystoneTLM.cpp.o
+2025-09-21T23:35:56.0528537Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEEddystoneURL.cpp.o
+2025-09-21T23:35:56.2251871Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEExtAdvertising.cpp.o
+2025-09-21T23:35:56.2675449Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEHIDDevice.cpp.o
+2025-09-21T23:35:56.2902291Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLERemoteCharacteristic.cpp.o
+2025-09-21T23:35:56.5020028Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLERemoteDescriptor.cpp.o
+2025-09-21T23:35:56.6733444Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLERemoteService.cpp.o
+2025-09-21T23:35:57.0713374Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEScan.cpp.o
+2025-09-21T23:35:57.2152250Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLESecurity.cpp.o
+2025-09-21T23:35:57.3252100Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEServer.cpp.o
+2025-09-21T23:35:57.6191441Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEService.cpp.o
+2025-09-21T23:35:58.0657349Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEUUID.cpp.o
+2025-09-21T23:35:58.0853826Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/NimBLEUtils.cpp.o
+2025-09-21T23:35:58.4287733Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/esp_port/esp-hci/src/esp_nimble_hci.c.o
+2025-09-21T23:35:58.5475603Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/esp_port/port/src/esp_nimble_mem.c.o
+2025-09-21T23:35:58.6257258Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_decrypt.c.o
+2025-09-21T23:35:58.6504797Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_encrypt.c.o
+2025-09-21T23:35:58.6709392Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/cbc_mode.c.o
+2025-09-21T23:35:58.6856000Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/ccm_mode.c.o
+2025-09-21T23:35:58.7036755Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/cmac_mode.c.o
+2025-09-21T23:35:58.7224041Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_mode.c.o
+2025-09-21T23:35:58.7472138Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_prng.c.o
+2025-09-21T23:35:58.7727151Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc.c.o
+2025-09-21T23:35:58.7906137Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dh.c.o
+2025-09-21T23:35:58.8156339Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dsa.c.o
+2025-09-21T23:35:58.8339037Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_platform_specific.c.o
+2025-09-21T23:35:58.8720827Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac.c.o
+2025-09-21T23:35:58.8900580Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac_prng.c.o
+2025-09-21T23:35:58.9127228Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/sha256.c.o
+2025-09-21T23:35:58.9271764Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/ext/tinycrypt/src/utils.c.o
+2025-09-21T23:35:58.9776951Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll.c.o
+2025-09-21T23:35:58.9962432Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_adv.c.o
+2025-09-21T23:35:59.0110559Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn.c.o
+2025-09-21T23:35:59.0253002Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn_hci.c.o
+2025-09-21T23:35:59.0428221Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_ctrl.c.o
+2025-09-21T23:35:59.0538190Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_dtm.c.o
+2025-09-21T23:35:59.0713338Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci.c.o
+2025-09-21T23:35:59.0872930Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci_ev.c.o
+2025-09-21T23:35:59.0984800Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_iso.c.o
+2025-09-21T23:35:59.1134978Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rand.c.o
+2025-09-21T23:35:59.1272903Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_resolv.c.o
+2025-09-21T23:35:59.1405457Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rfmgmt.c.o
+2025-09-21T23:35:59.1569457Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_scan.c.o
+2025-09-21T23:35:59.1680092Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sched.c.o
+2025-09-21T23:35:59.1833717Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_supp_cmd.c.o
+2025-09-21T23:35:59.1992118Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sync.c.o
+2025-09-21T23:35:59.2111600Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_trace.c.o
+2025-09-21T23:35:59.2252938Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_utils.c.o
+2025-09-21T23:35:59.2390172Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_whitelist.c.o
+2025-09-21T23:35:59.2631741Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_hw.c.o
+2025-09-21T23:35:59.2797427Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_phy.c.o
+2025-09-21T23:35:59.3010357Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_hw.c.o
+2025-09-21T23:35:59.3183892Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy.c.o
+2025-09-21T23:35:59.3316992Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy_trace.c.o
+2025-09-21T23:35:59.3822595Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/access.c.o
+2025-09-21T23:35:59.4125198Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/adv.c.o
+2025-09-21T23:35:59.4266518Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/aes-ccm.c.o
+2025-09-21T23:35:59.4401880Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/app_keys.c.o
+2025-09-21T23:35:59.4555528Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/beacon.c.o
+2025-09-21T23:35:59.4697088Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/cdb.c.o
+2025-09-21T23:35:59.4851859Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg.c.o
+2025-09-21T23:35:59.5002836Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_cli.c.o
+2025-09-21T23:35:59.5148579Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_srv.c.o
+2025-09-21T23:35:59.5386016Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/crypto.c.o
+2025-09-21T23:35:59.5557416Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/friend.c.o
+2025-09-21T23:35:59.5725719Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/glue.c.o
+2025-09-21T23:35:59.5856285Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_cli.c.o
+2025-09-21T23:35:59.6009788Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_srv.c.o
+2025-09-21T23:35:59.6152664Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/heartbeat.c.o
+2025-09-21T23:35:59.6314806Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/light_model.c.o
+2025-09-21T23:35:59.6456489Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/lpn.c.o
+2025-09-21T23:35:59.6617142Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/mesh.c.o
+2025-09-21T23:35:59.6754730Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_cli.c.o
+2025-09-21T23:35:59.6914198Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_srv.c.o
+2025-09-21T23:35:59.7067133Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/net.c.o
+2025-09-21T23:35:59.7221703Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/nodes.c.o
+2025-09-21T23:35:59.7382115Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_adv.c.o
+2025-09-21T23:35:59.7524753Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_gatt.c.o
+2025-09-21T23:35:59.7671305Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov.c.o
+2025-09-21T23:35:59.7815480Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov_device.c.o
+2025-09-21T23:35:59.7962143Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/provisioner.c.o
+2025-09-21T23:35:59.8191959Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/proxy.c.o
+2025-09-21T23:35:59.8352788Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/rpl.c.o
+2025-09-21T23:35:59.8473053Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/settings.c.o
+2025-09-21T23:35:59.8659600Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/shell.c.o
+2025-09-21T23:35:59.8826189Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/subnet.c.o
+2025-09-21T23:35:59.8940541Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/mesh/src/transport.c.o
+2025-09-21T23:35:59.9148626Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/services/ans/src/ble_svc_ans.c.o
+2025-09-21T23:35:59.9385108Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/services/bas/src/ble_svc_bas.c.o
+2025-09-21T23:35:59.9571469Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/services/dis/src/ble_svc_dis.c.o
+2025-09-21T23:35:59.9828639Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/services/gap/src/ble_svc_gap.c.o
+2025-09-21T23:36:00.0822920Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/services/gatt/src/ble_svc_gatt.c.o
+2025-09-21T23:36:00.1128416Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/services/ias/src/ble_svc_ias.c.o
+2025-09-21T23:36:00.1376242Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/services/ipss/src/ble_svc_ipss.c.o
+2025-09-21T23:36:00.1687408Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/services/lls/src/ble_svc_lls.c.o
+2025-09-21T23:36:00.2494289Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_att.c.o
+2025-09-21T23:36:00.2800572Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_att_clt.c.o
+2025-09-21T23:36:00.3060443Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_att_cmd.c.o
+2025-09-21T23:36:00.3435325Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_att_svr.c.o
+2025-09-21T23:36:00.4447789Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_eddystone.c.o
+2025-09-21T23:36:00.4955531Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_gap.c.o
+2025-09-21T23:36:00.5185714Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_gattc.c.o
+2025-09-21T23:36:00.6046401Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts.c.o
+2025-09-21T23:36:00.6283235Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts_lcl.c.o
+2025-09-21T23:36:00.8077456Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs.c.o
+2025-09-21T23:36:00.8272542Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_adv.c.o
+2025-09-21T23:36:00.8452252Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_atomic.c.o
+2025-09-21T23:36:00.8666881Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_cfg.c.o
+2025-09-21T23:36:01.0145875Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_conn.c.o
+2025-09-21T23:36:01.0312332Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_flow.c.o
+2025-09-21T23:36:01.0474826Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci.c.o
+2025-09-21T23:36:01.0598159Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_cmd.c.o
+2025-09-21T23:36:01.2000663Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_evt.c.o
+2025-09-21T23:36:01.2187952Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_util.c.o
+2025-09-21T23:36:01.2367728Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_id.c.o
+2025-09-21T23:36:01.2576387Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_log.c.o
+2025-09-21T23:36:01.3942785Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mbuf.c.o
+2025-09-21T23:36:01.4107161Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_misc.c.o
+2025-09-21T23:36:01.4328646Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mqueue.c.o
+2025-09-21T23:36:01.4530271Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_periodic_sync.c.o
+2025-09-21T23:36:01.5668700Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_pvcy.c.o
+2025-09-21T23:36:01.5968993Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_resolv.c.o
+2025-09-21T23:36:01.6208167Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_shutdown.c.o
+2025-09-21T23:36:01.6380905Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_startup.c.o
+2025-09-21T23:36:01.6524847Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_stop.c.o
+2025-09-21T23:36:01.6747592Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_ibeacon.c.o
+2025-09-21T23:36:01.7348054Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap.c.o
+2025-09-21T23:36:01.8274437Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_coc.c.o
+2025-09-21T23:36:01.8497661Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig.c.o
+2025-09-21T23:36:01.8698809Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig_cmd.c.o
+2025-09-21T23:36:01.9645468Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_monitor.c.o
+2025-09-21T23:36:01.9950386Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_sm.c.o
+2025-09-21T23:36:02.0311788Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_alg.c.o
+2025-09-21T23:36:02.0586072Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_cmd.c.o
+2025-09-21T23:36:02.0788984Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_lgcy.c.o
+2025-09-21T23:36:02.2196727Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_sc.c.o
+2025-09-21T23:36:02.2378608Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_store.c.o
+2025-09-21T23:36:02.2622107Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_store_util.c.o
+2025-09-21T23:36:02.2848427Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/src/ble_uuid.c.o
+2025-09-21T23:36:02.4321164Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config.c.o
+2025-09-21T23:36:02.4557340Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config_conf.c.o
+2025-09-21T23:36:02.4771270Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_nvs.c.o
+2025-09-21T23:36:02.4932969Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/host/util/src/addr.c.o
+2025-09-21T23:36:02.5288115Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/nimble/transport/ram/src/ble_hci_ram.c.o
+2025-09-21T23:36:02.5639595Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/endian.c.o
+2025-09-21T23:36:02.6067090Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/hal_timer.c.o
+2025-09-21T23:36:02.6531446Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/hal_uart.c.o
+2025-09-21T23:36:02.6729578Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/mem.c.o
+2025-09-21T23:36:02.6952919Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/nimble_port.c.o
+2025-09-21T23:36:02.7078483Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime.c.o
+2025-09-21T23:36:02.7230257Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime_pwr2.c.o
+2025-09-21T23:36:02.7873943Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/os_mbuf.c.o
+2025-09-21T23:36:02.8060264Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/os_mempool.c.o
+2025-09-21T23:36:02.8283397Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/nimble/src/os_msys_init.c.o
+2025-09-21T23:36:02.8608253Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/npl/freertos/src/nimble_port_freertos.c.o
+2025-09-21T23:36:02.9777039Z Compiling .pio/build/rak3312/lib821/NimBLE-Arduino/nimble/porting/npl/freertos/src/npl_os_freertos.c.o
+2025-09-21T23:36:03.0862711Z Compiling .pio/build/rak3312/lib220/libpax/blescan.cpp.o
+2025-09-21T23:36:03.1024581Z Archiving .pio/build/rak3312/lib821/libNimBLE-Arduino.a
+2025-09-21T23:36:03.1188663Z Compiling .pio/build/rak3312/lib220/libpax/bt_hci_common.c.o
+2025-09-21T23:36:03.1435386Z Compiling .pio/build/rak3312/lib220/libpax/libpax.cpp.o
+2025-09-21T23:36:03.1695511Z Indexing .pio/build/rak3312/lib821/libNimBLE-Arduino.a
+2025-09-21T23:36:03.2400487Z Compiling .pio/build/rak3312/lib220/libpax/libpax_api.cpp.o
+2025-09-21T23:36:03.2885990Z Compiling .pio/build/rak3312/lib220/libpax/wifiscan.cpp.o
+2025-09-21T23:36:03.8622771Z Compiling .pio/build/rak3312/lib70a/XPowersLib/XPowersLibInterface.cpp.o
+2025-09-21T23:36:03.8828090Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/ButterworthFilter.cpp.o
+2025-09-21T23:36:03.8979395Z Archiving .pio/build/rak3312/lib220/libpax.a
+2025-09-21T23:36:03.9079831Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/SampleFilter.cpp.o
+2025-09-21T23:36:03.9136323Z Indexing .pio/build/rak3312/lib220/libpax.a
+2025-09-21T23:36:03.9347483Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebook.c.o
+2025-09-21T23:36:03.9507198Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookd.c.o
+2025-09-21T23:36:03.9758175Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookdt.c.o
+2025-09-21T23:36:03.9913460Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookge.c.o
+2025-09-21T23:36:04.0089315Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookjnd.c.o
+2025-09-21T23:36:04.0286047Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookjvm.c.o
+2025-09-21T23:36:04.0454191Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebooklspmelvq.c.o
+2025-09-21T23:36:04.0987784Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookmel.c.o
+2025-09-21T23:36:04.1375442Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookres.c.o
+2025-09-21T23:36:04.1672402Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookvq.c.o
+2025-09-21T23:36:04.1817066Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codebookvqanssi.c.o
+2025-09-21T23:36:04.2068315Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/codec2.c.o
+2025-09-21T23:36:04.2667369Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/dump.c.o
+2025-09-21T23:36:04.3741592Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/fifo.c.o
+2025-09-21T23:36:04.4028826Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/interp.c.o
+2025-09-21T23:36:04.4693258Z Archiving .pio/build/rak3312/lib70a/libXPowersLib.a
+2025-09-21T23:36:04.4757535Z Indexing .pio/build/rak3312/lib70a/libXPowersLib.a
+2025-09-21T23:36:04.4848360Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/kiss_fft.c.o
+2025-09-21T23:36:04.6195899Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/lpc.c.o
+2025-09-21T23:36:04.6337100Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/lsp.c.o
+2025-09-21T23:36:04.6496211Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/nlp.c.o
+2025-09-21T23:36:04.7066729Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/pack.c.o
+2025-09-21T23:36:04.7350252Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/phase.c.o
+2025-09-21T23:36:04.7551944Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/phaseexp.c.o
+2025-09-21T23:36:04.7712809Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/postfilter.c.o
+2025-09-21T23:36:04.8151869Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/quantise.c.o
+2025-09-21T23:36:04.8510031Z Compiling .pio/build/rak3312/liba6f/ESP32 Codec2/sine.c.o
+2025-09-21T23:36:04.8864448Z Compiling .pio/build/rak3312/lib575/Crypto/AES128.cpp.o
+2025-09-21T23:36:04.9260160Z Compiling .pio/build/rak3312/lib575/Crypto/AES192.cpp.o
+2025-09-21T23:36:04.9849601Z Compiling .pio/build/rak3312/lib575/Crypto/AES256.cpp.o
+2025-09-21T23:36:05.0044952Z Compiling .pio/build/rak3312/lib575/Crypto/AESCommon.cpp.o
+2025-09-21T23:36:05.0153821Z Archiving .pio/build/rak3312/liba6f/libESP32 Codec2.a
+2025-09-21T23:36:05.0297990Z Indexing .pio/build/rak3312/liba6f/libESP32 Codec2.a
+2025-09-21T23:36:05.0306245Z Compiling .pio/build/rak3312/lib575/Crypto/AESEsp32.cpp.o
+2025-09-21T23:36:05.0565158Z Compiling .pio/build/rak3312/lib575/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:36:05.0763830Z Compiling .pio/build/rak3312/lib575/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:36:05.0966592Z Compiling .pio/build/rak3312/lib575/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:36:05.1176141Z Compiling .pio/build/rak3312/lib575/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:36:05.1392938Z Compiling .pio/build/rak3312/lib575/Crypto/BlockCipher.cpp.o
+2025-09-21T23:36:05.2025066Z Compiling .pio/build/rak3312/lib575/Crypto/CTR.cpp.o
+2025-09-21T23:36:05.2229889Z Compiling .pio/build/rak3312/lib575/Crypto/ChaCha.cpp.o
+2025-09-21T23:36:05.2390109Z Compiling .pio/build/rak3312/lib575/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:36:05.2547030Z Compiling .pio/build/rak3312/lib575/Crypto/Cipher.cpp.o
+2025-09-21T23:36:05.3072956Z Compiling .pio/build/rak3312/lib575/Crypto/Crypto.cpp.o
+2025-09-21T23:36:05.3287402Z Compiling .pio/build/rak3312/lib575/Crypto/Curve25519.cpp.o
+2025-09-21T23:36:05.3573810Z Compiling .pio/build/rak3312/lib575/Crypto/EAX.cpp.o
+2025-09-21T23:36:05.3698305Z Compiling .pio/build/rak3312/lib575/Crypto/Ed25519.cpp.o
+2025-09-21T23:36:05.3916045Z Compiling .pio/build/rak3312/lib575/Crypto/GCM.cpp.o
+2025-09-21T23:36:05.4620416Z Compiling .pio/build/rak3312/lib575/Crypto/GF128.cpp.o
+2025-09-21T23:36:05.4830910Z Compiling .pio/build/rak3312/lib575/Crypto/GHASH.cpp.o
+2025-09-21T23:36:05.5043097Z Compiling .pio/build/rak3312/lib575/Crypto/HKDF.cpp.o
+2025-09-21T23:36:05.5249572Z Compiling .pio/build/rak3312/lib575/Crypto/Hash.cpp.o
+2025-09-21T23:36:05.5723132Z Compiling .pio/build/rak3312/lib575/Crypto/KeccakCore.cpp.o
+2025-09-21T23:36:05.5938799Z Compiling .pio/build/rak3312/lib575/Crypto/NoiseSource.cpp.o
+2025-09-21T23:36:05.6165730Z Compiling .pio/build/rak3312/lib575/Crypto/OMAC.cpp.o
+2025-09-21T23:36:05.6350174Z Compiling .pio/build/rak3312/lib575/Crypto/P521.cpp.o
+2025-09-21T23:36:05.6607998Z Compiling .pio/build/rak3312/lib575/Crypto/Poly1305.cpp.o
+2025-09-21T23:36:05.8147695Z Compiling .pio/build/rak3312/lib575/Crypto/RNG.cpp.o
+2025-09-21T23:36:05.8335116Z Compiling .pio/build/rak3312/lib575/Crypto/SHA224.cpp.o
+2025-09-21T23:36:05.8468029Z Compiling .pio/build/rak3312/lib575/Crypto/SHA256.cpp.o
+2025-09-21T23:36:05.8656124Z Compiling .pio/build/rak3312/lib575/Crypto/SHA3.cpp.o
+2025-09-21T23:36:05.8946972Z Compiling .pio/build/rak3312/lib575/Crypto/SHA384.cpp.o
+2025-09-21T23:36:05.9385690Z Compiling .pio/build/rak3312/lib575/Crypto/SHA512.cpp.o
+2025-09-21T23:36:05.9793434Z Compiling .pio/build/rak3312/lib575/Crypto/SHAKE.cpp.o
+2025-09-21T23:36:05.9995132Z Compiling .pio/build/rak3312/lib575/Crypto/XOF.cpp.o
+2025-09-21T23:36:06.0536983Z Compiling .pio/build/rak3312/lib575/Crypto/XTS.cpp.o
+2025-09-21T23:36:06.1591713Z Compiling .pio/build/rak3312/lib937/FS/FS.cpp.o
+2025-09-21T23:36:06.1754063Z Compiling .pio/build/rak3312/lib937/FS/vfs_api.cpp.o
+2025-09-21T23:36:06.3686543Z Compiling .pio/build/rak3312/lib998/SD/SD.cpp.o
+2025-09-21T23:36:06.4183785Z Archiving .pio/build/rak3312/lib575/libCrypto.a
+2025-09-21T23:36:06.4334563Z Indexing .pio/build/rak3312/lib575/libCrypto.a
+2025-09-21T23:36:06.4956917Z Compiling .pio/build/rak3312/lib998/SD/sd_diskio.cpp.o
+2025-09-21T23:36:06.8886011Z Compiling .pio/build/rak3312/lib998/SD/sd_diskio_crc.c.o
+2025-09-21T23:36:07.1005597Z Compiling .pio/build/rak3312/libabe/WiFi/WiFi.cpp.o
+2025-09-21T23:36:07.1093748Z Archiving .pio/build/rak3312/lib937/libFS.a
+2025-09-21T23:36:07.1168977Z Indexing .pio/build/rak3312/lib937/libFS.a
+2025-09-21T23:36:07.1340722Z Compiling .pio/build/rak3312/libabe/WiFi/WiFiAP.cpp.o
+2025-09-21T23:36:07.1648451Z Compiling .pio/build/rak3312/libabe/WiFi/WiFiClient.cpp.o
+2025-09-21T23:36:07.1762490Z Archiving .pio/build/rak3312/lib998/libSD.a
+2025-09-21T23:36:07.1818464Z Indexing .pio/build/rak3312/lib998/libSD.a
+2025-09-21T23:36:07.2037291Z Compiling .pio/build/rak3312/libabe/WiFi/WiFiGeneric.cpp.o
+2025-09-21T23:36:07.8324186Z Compiling .pio/build/rak3312/libabe/WiFi/WiFiMulti.cpp.o
+2025-09-21T23:36:07.8765286Z Compiling .pio/build/rak3312/libabe/WiFi/WiFiSTA.cpp.o
+2025-09-21T23:36:08.0131671Z Compiling .pio/build/rak3312/libabe/WiFi/WiFiScan.cpp.o
+2025-09-21T23:36:08.1508797Z Compiling .pio/build/rak3312/libabe/WiFi/WiFiServer.cpp.o
+2025-09-21T23:36:08.6399715Z Compiling .pio/build/rak3312/libabe/WiFi/WiFiUdp.cpp.o
+2025-09-21T23:36:08.7816495Z Compiling .pio/build/rak3312/lib46d/Preferences/Preferences.cpp.o
+2025-09-21T23:36:09.0105814Z Compiling .pio/build/rak3312/libfb1/WiFiClientSecure/WiFiClientSecure.cpp.o
+2025-09-21T23:36:09.0337741Z Compiling .pio/build/rak3312/libfb1/WiFiClientSecure/esp_crt_bundle.c.o
+2025-09-21T23:36:09.2138349Z Compiling .pio/build/rak3312/libfb1/WiFiClientSecure/ssl_client.cpp.o
+2025-09-21T23:36:09.2365780Z Archiving .pio/build/rak3312/libabe/libWiFi.a
+2025-09-21T23:36:09.2468996Z Indexing .pio/build/rak3312/libabe/libWiFi.a
+2025-09-21T23:36:09.4673479Z Compiling .pio/build/rak3312/lib042/HTTPClient/HTTPClient.cpp.o
+2025-09-21T23:36:09.4847479Z Archiving .pio/build/rak3312/lib46d/libPreferences.a
+2025-09-21T23:36:09.4884420Z Indexing .pio/build/rak3312/lib46d/libPreferences.a
+2025-09-21T23:36:09.6753795Z Compiling .pio/build/rak3312/liba0d/WebServer/Parsing.cpp.o
+2025-09-21T23:36:09.8174847Z Compiling .pio/build/rak3312/liba0d/WebServer/WebServer.cpp.o
+2025-09-21T23:36:10.0555920Z Archiving .pio/build/rak3312/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:10.0639256Z Indexing .pio/build/rak3312/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:10.0834061Z Compiling .pio/build/rak3312/liba0d/WebServer/detail/mimetable.cpp.o
+2025-09-21T23:36:10.2980697Z Compiling .pio/build/rak3312/libf52/ESPmDNS/ESPmDNS.cpp.o
+2025-09-21T23:36:10.7270636Z Compiling .pio/build/rak3312/lib917/LittleFS/LittleFS.cpp.o
+2025-09-21T23:36:10.7395800Z Archiving .pio/build/rak3312/lib042/libHTTPClient.a
+2025-09-21T23:36:10.7460719Z Indexing .pio/build/rak3312/lib042/libHTTPClient.a
+2025-09-21T23:36:10.8851963Z Compiling .pio/build/rak3312/lib1cb/AsyncUDP/AsyncUDP.cpp.o
+2025-09-21T23:36:10.8966601Z Archiving .pio/build/rak3312/liba0d/libWebServer.a
+2025-09-21T23:36:10.9047438Z Indexing .pio/build/rak3312/liba0d/libWebServer.a
+2025-09-21T23:36:11.0725220Z Compiling .pio/build/rak3312/lib5d1/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:36:11.0816715Z Archiving .pio/build/rak3312/libf52/libESPmDNS.a
+2025-09-21T23:36:11.0880171Z Indexing .pio/build/rak3312/libf52/libESPmDNS.a
+2025-09-21T23:36:11.1045860Z Compiling .pio/build/rak3312/lib5d1/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:36:11.1522434Z Compiling .pio/build/rak3312/lib5d1/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:36:11.3280245Z Compiling .pio/build/rak3312/lib5d1/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:36:11.3678989Z Compiling .pio/build/rak3312/lib5d1/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:36:11.5893811Z Compiling .pio/build/rak3312/FrameworkArduino/Esp.cpp.o
+2025-09-21T23:36:11.6038489Z Archiving .pio/build/rak3312/lib917/libLittleFS.a
+2025-09-21T23:36:11.6098036Z Indexing .pio/build/rak3312/lib917/libLittleFS.a
+2025-09-21T23:36:11.6282290Z Compiling .pio/build/rak3312/FrameworkArduino/FirmwareMSC.cpp.o
+2025-09-21T23:36:11.6495519Z Archiving .pio/build/rak3312/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:11.6552514Z Indexing .pio/build/rak3312/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:11.6726405Z Compiling .pio/build/rak3312/FrameworkArduino/FunctionalInterrupt.cpp.o
+2025-09-21T23:36:11.7100072Z Archiving .pio/build/rak3312/lib5d1/libAdafruit NeoPixel.a
+2025-09-21T23:36:11.7162519Z Indexing .pio/build/rak3312/lib5d1/libAdafruit NeoPixel.a
+2025-09-21T23:36:11.7437570Z Compiling .pio/build/rak3312/FrameworkArduino/HWCDC.cpp.o
+2025-09-21T23:36:11.9349828Z Compiling .pio/build/rak3312/FrameworkArduino/HardwareSerial.cpp.o
+2025-09-21T23:36:12.1338946Z Compiling .pio/build/rak3312/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:36:12.2717592Z Compiling .pio/build/rak3312/FrameworkArduino/IPv6Address.cpp.o
+2025-09-21T23:36:12.3327059Z Compiling .pio/build/rak3312/FrameworkArduino/MD5Builder.cpp.o
+2025-09-21T23:36:12.6256616Z Compiling .pio/build/rak3312/FrameworkArduino/Print.cpp.o
+2025-09-21T23:36:12.7777258Z Compiling .pio/build/rak3312/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:36:12.9080498Z Compiling .pio/build/rak3312/FrameworkArduino/StreamString.cpp.o
+2025-09-21T23:36:12.9733276Z Compiling .pio/build/rak3312/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:36:13.3522445Z Compiling .pio/build/rak3312/FrameworkArduino/USB.cpp.o
+2025-09-21T23:36:13.4215239Z Compiling .pio/build/rak3312/FrameworkArduino/USBCDC.cpp.o
+2025-09-21T23:36:13.5456971Z Compiling .pio/build/rak3312/FrameworkArduino/USBMSC.cpp.o
+2025-09-21T23:36:13.6045403Z Compiling .pio/build/rak3312/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:36:13.7279662Z Compiling .pio/build/rak3312/FrameworkArduino/WString.cpp.o
+2025-09-21T23:36:13.7543012Z Compiling .pio/build/rak3312/FrameworkArduino/base64.cpp.o
+2025-09-21T23:36:13.8126825Z Compiling .pio/build/rak3312/FrameworkArduino/cbuf.cpp.o
+2025-09-21T23:36:13.8376419Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-adc.c.o
+2025-09-21T23:36:13.9278608Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-bt.c.o
+2025-09-21T23:36:14.0267300Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-cpu.c.o
+2025-09-21T23:36:14.0980562Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-dac.c.o
+2025-09-21T23:36:14.2416610Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-gpio.c.o
+2025-09-21T23:36:14.2827204Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-i2c-slave.c.o
+2025-09-21T23:36:14.3763677Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-i2c.c.o
+2025-09-21T23:36:14.4673561Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-ledc.c.o
+2025-09-21T23:36:14.4902589Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-matrix.c.o
+2025-09-21T23:36:14.5155553Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-misc.c.o
+2025-09-21T23:36:14.5753276Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-psram.c.o
+2025-09-21T23:36:14.6457712Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-rgb-led.c.o
+2025-09-21T23:36:14.6737853Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-rmt.c.o
+2025-09-21T23:36:14.7225988Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-sigmadelta.c.o
+2025-09-21T23:36:14.7616487Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-spi.c.o
+2025-09-21T23:36:14.8167966Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-time.c.o
+2025-09-21T23:36:14.8776192Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-timer.c.o
+2025-09-21T23:36:14.9392706Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-tinyusb.c.o
+2025-09-21T23:36:15.0191888Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-touch.c.o
+2025-09-21T23:36:15.0458980Z Compiling .pio/build/rak3312/FrameworkArduino/esp32-hal-uart.c.o
+2025-09-21T23:36:15.0638917Z Compiling .pio/build/rak3312/FrameworkArduino/firmware_msc_fat.c.o
+2025-09-21T23:36:15.1878065Z Compiling .pio/build/rak3312/FrameworkArduino/libb64/cdecode.c.o
+2025-09-21T23:36:15.2126065Z Compiling .pio/build/rak3312/FrameworkArduino/libb64/cencode.c.o
+2025-09-21T23:36:15.2455485Z Compiling .pio/build/rak3312/FrameworkArduino/main.cpp.o
+2025-09-21T23:36:15.2621456Z Compiling .pio/build/rak3312/FrameworkArduino/stdlib_noniso.c.o
+2025-09-21T23:36:15.2837237Z Compiling .pio/build/rak3312/FrameworkArduino/wiring_pulse.c.o
+2025-09-21T23:36:15.3052993Z Compiling .pio/build/rak3312/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:36:15.7013916Z Archiving .pio/build/rak3312/libFrameworkArduino.a
+2025-09-21T23:36:15.7181877Z Indexing .pio/build/rak3312/libFrameworkArduino.a
+2025-09-21T23:36:15.7699756Z Linking .pio/build/rak3312/firmware.elf
+2025-09-21T23:36:41.8930742Z /pio/workspace/libdeps/rak3312/Crypto/AESEsp32.cpp:33:5: warning: type of 'esp_aes_setkey' does not match original declaration [-Wlto-type-mismatch]
+2025-09-21T23:36:41.8931849Z  int esp_aes_setkey(unsigned char *ctx, const unsigned char *key,
+2025-09-21T23:36:41.8932338Z      ^
+2025-09-21T23:36:41.8933510Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: 'esp_aes_setkey' was previously declared here
+2025-09-21T23:36:41.8935095Z  int mbedtls_aes_setkey_dec(mbedtls_aes_context *ctx, const unsigned char *key,
+2025-09-21T23:36:41.8935637Z      ^
+2025-09-21T23:36:41.8936800Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: code may be misoptimized unless -fno-strict-aliasing is used
+2025-09-21T23:36:41.9437841Z Retrieving maximum program size .pio/build/rak3312/firmware.elf
+2025-09-21T23:36:41.9439594Z Checking size .pio/build/rak3312/firmware.elf
+2025-09-21T23:36:41.9503971Z Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+2025-09-21T23:36:41.9505145Z RAM:   [====      ]  39.0% (used 127824 bytes from 327680 bytes)
+2025-09-21T23:36:41.9505477Z Flash: [========  ]  84.3% (used 2043069 bytes from 2424832 bytes)
+2025-09-21T23:36:41.9517604Z Building .pio/build/rak3312/firmware.bin
+2025-09-21T23:36:42.1130587Z esptool.py v4.5.1
+2025-09-21T23:36:42.1131552Z Creating esp32s3 image...
+2025-09-21T23:36:42.1131973Z Merged 3 ELF sections
+2025-09-21T23:36:42.1132245Z Successfully created esp32s3 image.
+2025-09-21T23:36:42.1217825Z esp32_create_combined_bin([".pio/build/rak3312/firmware.bin"], [".pio/build/rak3312/firmware.elf"])
+2025-09-21T23:36:42.1218426Z Generating combined binary for serial flashing
+2025-09-21T23:36:42.1223811Z     Offset | File
+2025-09-21T23:36:42.1225115Z  -  0x0000 | /workspace/.pio/build/rak3312/bootloader.bin
+2025-09-21T23:36:42.1225872Z  -  0x8000 | /workspace/.pio/build/rak3312/partitions.bin
+2025-09-21T23:36:42.1226735Z  -  0xe000 | /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin
+2025-09-21T23:36:42.1227610Z  - 0x10000 | /workspace/.pio/build/rak3312/firmware.bin
+2025-09-21T23:36:42.1230339Z Using esptool.py arguments: --chip esp32s3 merge_bin -o /workspace/.pio/build/rak3312/firmware.factory.bin --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0000 /workspace/.pio/build/rak3312/bootloader.bin 0x8000 /workspace/.pio/build/rak3312/partitions.bin 0xe000 /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin 0x10000 /workspace/.pio/build/rak3312/firmware.bin
+2025-09-21T23:36:42.1270956Z esptool.py v4.5.1
+2025-09-21T23:36:42.1291433Z Wrote 0x202e70 bytes to file /workspace/.pio/build/rak3312/firmware.factory.bin, ready to flash to offset 0x0
+2025-09-21T23:36:42.7834544Z ======================== [SUCCESS] Took 173.39 seconds ========================
+2025-09-21T23:36:42.7835832Z 
+2025-09-21T23:36:42.7840773Z Environment    Status    Duration
+2025-09-21T23:36:42.7841295Z -------------  --------  ------------
+2025-09-21T23:36:42.7841706Z rak3312        SUCCESS   00:02:53.391
+2025-09-21T23:36:42.7842059Z ========================= 1 succeeded in 00:02:53.391 =========================
+2025-09-21T23:36:42.8282221Z Copying ESP32 bin file
+2025-09-21T23:36:42.8308487Z Copying ESP32 update bin file
+2025-09-21T23:36:42.8334969Z Building Filesystem for ESP32 targets
+2025-09-21T23:36:43.5944437Z Processing rak3312 (board: wiscore_rak3312; platform: 
+2025-09-21T23:36:43.5945303Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:36:43.5945736Z --------------------------------------------------------------------------------
+2025-09-21T23:36:44.6466123Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:36:44.6623159Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/wiscore_rak3312.html
+2025-09-21T23:36:44.6624111Z PLATFORM: Espressif 32 (6.11.0) > WisCore RAK3312 Board
+2025-09-21T23:36:44.6624910Z HARDWARE: ESP32S3 240MHz, 320KB RAM, 16MB Flash
+2025-09-21T23:36:44.6626374Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:36:44.6627783Z PACKAGES: 
+2025-09-21T23:36:44.6628257Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:36:44.6628856Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:36:44.6629324Z  - tool-mklittlefs @ 1.203.210628 (2.3) 
+2025-09-21T23:36:44.6629811Z  - tool-openocd-esp32 @ 2.1100.20220706 (11.0) 
+2025-09-21T23:36:44.6630333Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:36:44.6630872Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:36:44.6929233Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:36:44.6929977Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:36:44.8185182Z [nanopb] No generation needed.
+2025-09-21T23:36:45.2816440Z Found 96 compatible libraries
+2025-09-21T23:36:45.2816911Z Scanning dependencies...
+2025-09-21T23:36:55.9243128Z Dependency Graph
+2025-09-21T23:36:55.9243659Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:36:55.9247700Z |-- OneButton @ 2.6.1
+2025-09-21T23:36:55.9248693Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:36:55.9249147Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:36:55.9251592Z |-- ArduinoThread @ 0.0.0+20250919060234
+2025-09-21T23:36:55.9253312Z |-- Nanopb @ 0.4.91
+2025-09-21T23:36:55.9255404Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:36:55.9257202Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:36:55.9258983Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:36:55.9261351Z |-- NTPClient @ 3.2.1
+2025-09-21T23:36:55.9263188Z |-- Syslog @ 2.0.0
+2025-09-21T23:36:55.9265301Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:36:55.9267283Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:36:55.9269524Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:36:55.9271149Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:36:55.9273535Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:36:55.9275342Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:36:55.9277158Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:36:55.9279562Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:36:55.9282205Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:36:55.9282607Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:36:55.9283909Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:36:55.9286319Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:36:55.9288122Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:36:55.9290044Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:36:55.9292109Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:36:55.9294061Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:36:55.9296062Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:36:55.9298059Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:36:55.9299717Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:36:55.9301433Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:36:55.9304136Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:36:55.9305124Z |-- INA226 @ 0.6.4
+2025-09-21T23:36:55.9307655Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:36:55.9309644Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:36:55.9311461Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:36:55.9313668Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:36:55.9315080Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:36:55.9317238Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:36:55.9319326Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:36:55.9320577Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:36:55.9323124Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:36:55.9324834Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:36:55.9326900Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:36:55.9329691Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:36:55.9330385Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:36:55.9332612Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:36:55.9334861Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:36:55.9336862Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:36:55.9338701Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:36:55.9340688Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:36:55.9342761Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:36:55.9345327Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:36:55.9346641Z |-- RadioLib @ 7.3.0
+2025-09-21T23:36:55.9349196Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:36:55.9349716Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:36:55.9352303Z |-- libpax @ 1.1.0
+2025-09-21T23:36:55.9353510Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:36:55.9355782Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:36:55.9357250Z |-- Crypto @ 0.4.0
+2025-09-21T23:36:55.9358624Z |-- SD @ 2.0.0
+2025-09-21T23:36:55.9360034Z |-- SPI @ 2.0.0
+2025-09-21T23:36:55.9362299Z |-- WiFi @ 2.0.0
+2025-09-21T23:36:55.9362726Z |-- Wire @ 2.0.0
+2025-09-21T23:36:55.9363283Z |-- Preferences @ 2.0.0
+2025-09-21T23:36:55.9363619Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:36:55.9364191Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:36:55.9364951Z |-- WebServer @ 2.0.0
+2025-09-21T23:36:55.9365848Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:36:55.9367642Z |-- LittleFS @ 2.0.0
+2025-09-21T23:36:55.9368022Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:36:55.9369603Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:36:56.4841343Z Building in release mode
+2025-09-21T23:36:56.6033983Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on rak3312
+2025-09-21T23:36:56.6048244Z Using flags:
+2025-09-21T23:36:56.6048691Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:36:56.6049093Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:36:56.6049444Z -DAPP_ENV=rak3312
+2025-09-21T23:36:56.6049808Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:56.6050253Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:36:56.6051298Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:36:56.6052295Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:36:56.6135434Z Building FS image from 'data' directory to .pio/build/rak3312/littlefs.bin
+2025-09-21T23:36:56.6161205Z /static/.gitkeep
+2025-09-21T23:36:56.7539549Z ========================= [SUCCESS] Took 13.16 seconds =========================
+2025-09-21T23:36:56.7539953Z 
+2025-09-21T23:36:56.7545744Z Environment    Status    Duration
+2025-09-21T23:36:56.7546194Z -------------  --------  ------------
+2025-09-21T23:36:56.7546599Z rak3312        SUCCESS   00:00:13.159
+2025-09-21T23:36:56.7547063Z ========================= 1 succeeded in 00:00:13.159 =========================
+2025-09-21T23:36:56.7875196Z Build artifacts are located at: /workspace/.pio/build
+2025-09-21T23:36:56.7876044Z Downloading OTA firmware firmware-s3.bin from https://github.com/meshtastic/firmware-ota
+2025-09-21T23:36:56.7948709Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-09-21T23:36:56.7949330Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-09-21T23:36:56.7949623Z 
+2025-09-21T23:36:57.0070688Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:36:57.0071499Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:36:57.1264475Z 
+2025-09-21T23:36:57.1265306Z 100  494k  100  494k    0     0  1491k      0 --:--:-- --:--:-- --:--:-- 1491k
+2025-09-21T23:36:57.2880360Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:36:57.2880671Z with:
+2025-09-21T23:36:57.2880889Z   name: firmware-esp32s3-rak3312-2.7.10.3d51287.zip
+2025-09-21T23:36:57.2881164Z   overwrite: true
+2025-09-21T23:36:57.2881475Z   path: release/*.bin
+release/*.elf
+release/*.uf2
+release/*.hex
+release/*-ota.zip
+
+2025-09-21T23:36:57.2881847Z   if-no-files-found: warn
+2025-09-21T23:36:57.2882063Z   compression-level: 6
+2025-09-21T23:36:57.2882276Z   include-hidden-files: false
+2025-09-21T23:36:57.2882500Z ##[endgroup]
+2025-09-21T23:36:57.4997649Z With the provided path, there will be 5 files uploaded
+2025-09-21T23:36:57.7113696Z Artifact name is valid!
+2025-09-21T23:36:57.7114962Z Root directory input is valid!
+2025-09-21T23:36:57.7993022Z Beginning upload of artifact content to blob storage
+2025-09-21T23:36:59.5046606Z Uploaded bytes 8388608
+2025-09-21T23:36:59.7105553Z Uploaded bytes 10683033
+2025-09-21T23:36:59.8041925Z Finished uploading artifact content to blob storage!
+2025-09-21T23:36:59.8045554Z SHA256 digest of uploaded artifact zip is 28b1ed8bb6d815e829863cad39d4ae45bf382367e8ecae185a60e2d1fd861c56
+2025-09-21T23:36:59.8046217Z Finalizing artifact upload
+2025-09-21T23:36:59.9365931Z Artifact firmware-esp32s3-rak3312-2.7.10.3d51287.zip.zip successfully finalized. Artifact ID 4067354196
+2025-09-21T23:36:59.9367605Z Artifact firmware-esp32s3-rak3312-2.7.10.3d51287.zip has been successfully uploaded! Final size is 10683033 bytes. Artifact ID is 4067354196
+2025-09-21T23:36:59.9373999Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067354196
+2025-09-21T23:36:59.9528270Z Post job cleanup.
+2025-09-21T23:37:00.0269524Z [command]/usr/bin/git version
+2025-09-21T23:37:00.0304549Z git version 2.51.0
+2025-09-21T23:37:00.0371768Z Temporarily overriding HOME='/home/runner/work/_temp/895b3422-462d-416e-ad99-74d4102224bc' before making global git config changes
+2025-09-21T23:37:00.0372623Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:37:00.0377097Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:37:00.0412368Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:37:00.0444208Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:37:00.0651650Z Entering 'meshtestic'
+2025-09-21T23:37:00.0693397Z Entering 'protobufs'
+2025-09-21T23:37:00.0747795Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:37:00.0768642Z http.https://github.com/.extraheader
+2025-09-21T23:37:00.0779183Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:37:00.0809006Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:37:00.1013942Z Entering 'meshtestic'
+2025-09-21T23:37:00.1037340Z http.https://github.com/.extraheader
+2025-09-21T23:37:00.1069089Z Entering 'protobufs'
+2025-09-21T23:37:00.1092629Z http.https://github.com/.extraheader
+2025-09-21T23:37:00.1241219Z Cleaning up orphan processes

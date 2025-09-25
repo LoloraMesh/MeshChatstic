@@ -1,0 +1,1690 @@
+﻿2025-09-21T23:32:14.7723935Z Current runner version: '2.328.0'
+2025-09-21T23:32:14.7761294Z ##[group]Runner Image Provisioner
+2025-09-21T23:32:14.7762771Z Hosted Compute Agent
+2025-09-21T23:32:14.7763677Z Version: 20250829.383
+2025-09-21T23:32:14.7764648Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:32:14.7765994Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:32:14.7767027Z ##[endgroup]
+2025-09-21T23:32:14.7767990Z ##[group]Operating System
+2025-09-21T23:32:14.7769116Z Ubuntu
+2025-09-21T23:32:14.7769867Z 24.04.3
+2025-09-21T23:32:14.7770604Z LTS
+2025-09-21T23:32:14.7771417Z ##[endgroup]
+2025-09-21T23:32:14.7772449Z ##[group]Runner Image
+2025-09-21T23:32:14.7773332Z Image: ubuntu-24.04
+2025-09-21T23:32:14.7774328Z Version: 20250907.24.1
+2025-09-21T23:32:14.7776126Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:32:14.7778961Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:32:14.7780664Z ##[endgroup]
+2025-09-21T23:32:14.7785235Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:32:14.7788007Z Actions: read
+2025-09-21T23:32:14.7788931Z Attestations: read
+2025-09-21T23:32:14.7789780Z Checks: read
+2025-09-21T23:32:14.7790567Z Contents: read
+2025-09-21T23:32:14.7791590Z Deployments: read
+2025-09-21T23:32:14.7792617Z Discussions: read
+2025-09-21T23:32:14.7793593Z Issues: read
+2025-09-21T23:32:14.7794382Z Metadata: read
+2025-09-21T23:32:14.7795176Z Models: read
+2025-09-21T23:32:14.7795914Z Packages: read
+2025-09-21T23:32:14.7796975Z Pages: read
+2025-09-21T23:32:14.7797789Z PullRequests: read
+2025-09-21T23:32:14.7798775Z RepositoryProjects: read
+2025-09-21T23:32:14.7799751Z SecurityEvents: read
+2025-09-21T23:32:14.7800862Z Statuses: read
+2025-09-21T23:32:14.7802041Z ##[endgroup]
+2025-09-21T23:32:14.7805464Z Secret source: Actions
+2025-09-21T23:32:14.7806961Z Prepare workflow directory
+2025-09-21T23:32:14.8281266Z Prepare all required actions
+2025-09-21T23:32:14.8339253Z Getting action download info
+2025-09-21T23:32:15.0593347Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:32:15.2458039Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:32:15.3853151Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:32:15.5954736Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:32:15.5959417Z ##[group] Inputs
+2025-09-21T23:32:15.5959893Z   version: 2.7.10.3d51287
+2025-09-21T23:32:15.5960354Z   platform: esp32s3
+2025-09-21T23:32:15.5960793Z   pio_env: station-g2
+2025-09-21T23:32:15.5961241Z ##[endgroup]
+2025-09-21T23:32:15.5961922Z Complete job name: build-esp32s3 (station-g2) / build-esp32s3
+2025-09-21T23:32:15.6592208Z ##[group]Run actions/checkout@v5
+2025-09-21T23:32:15.6593083Z with:
+2025-09-21T23:32:15.6593463Z   submodules: recursive
+2025-09-21T23:32:15.6593919Z   ref: develop
+2025-09-21T23:32:15.6594369Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:15.6595085Z   token: ***
+2025-09-21T23:32:15.6595474Z   ssh-strict: true
+2025-09-21T23:32:15.6595864Z   ssh-user: git
+2025-09-21T23:32:15.6596270Z   persist-credentials: true
+2025-09-21T23:32:15.6596728Z   clean: true
+2025-09-21T23:32:15.6597133Z   sparse-checkout-cone-mode: true
+2025-09-21T23:32:15.6597600Z   fetch-depth: 1
+2025-09-21T23:32:15.6597990Z   fetch-tags: false
+2025-09-21T23:32:15.6598381Z   show-progress: true
+2025-09-21T23:32:15.6598786Z   lfs: false
+2025-09-21T23:32:15.6599161Z   set-safe-directory: true
+2025-09-21T23:32:15.6599798Z ##[endgroup]
+2025-09-21T23:32:15.7543784Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:15.7545698Z ##[group]Getting Git version info
+2025-09-21T23:32:15.7546673Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:15.7547615Z [command]/usr/bin/git version
+2025-09-21T23:32:15.7608015Z git version 2.51.0
+2025-09-21T23:32:15.7631155Z ##[endgroup]
+2025-09-21T23:32:15.7649336Z Temporarily overriding HOME='/home/runner/work/_temp/73905beb-dca6-4aeb-9744-6391c0cf0e1e' before making global git config changes
+2025-09-21T23:32:15.7651647Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:32:15.7656048Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:32:15.7696847Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:15.7700411Z ##[group]Initializing the repository
+2025-09-21T23:32:15.7705223Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:32:15.7802985Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:32:15.7805132Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:32:15.7806903Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:32:15.7808061Z hint:
+2025-09-21T23:32:15.7811268Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:32:15.7815396Z hint:
+2025-09-21T23:32:15.7816870Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:32:15.7818388Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:32:15.7819549Z hint:
+2025-09-21T23:32:15.7820181Z hint: 	git branch -m <name>
+2025-09-21T23:32:15.7820926Z hint:
+2025-09-21T23:32:15.7822087Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:32:15.7823722Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:32:15.7826334Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:15.7863013Z ##[endgroup]
+2025-09-21T23:32:15.7864295Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:32:15.7865870Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:32:15.7893935Z ##[endgroup]
+2025-09-21T23:32:15.7895143Z ##[group]Setting up auth
+2025-09-21T23:32:15.7900360Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:32:15.7939713Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:32:15.8273910Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:32:15.8304657Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:32:15.8538597Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:15.8573988Z ##[endgroup]
+2025-09-21T23:32:15.8575561Z ##[group]Fetching the repository
+2025-09-21T23:32:15.8585002Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:32:16.4396152Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:16.4397640Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:32:16.4428674Z ##[endgroup]
+2025-09-21T23:32:16.4429979Z ##[group]Determining the checkout info
+2025-09-21T23:32:16.4437004Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:32:16.4461622Z   origin/develop
+2025-09-21T23:32:16.4467963Z ##[endgroup]
+2025-09-21T23:32:16.4472605Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:32:16.4512807Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:32:16.4540884Z ##[group]Checking out the ref
+2025-09-21T23:32:16.4545715Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:32:16.5567285Z Switched to a new branch 'develop'
+2025-09-21T23:32:16.5569516Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:32:16.5580269Z ##[endgroup]
+2025-09-21T23:32:16.5583261Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:32:16.5587936Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:16.5661432Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:32:16.5692125Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:32:16.5721536Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:32:16.5746543Z ##[endgroup]
+2025-09-21T23:32:16.5747855Z ##[group]Fetching submodules
+2025-09-21T23:32:16.5749234Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:32:16.5978274Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:32:16.6192078Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:32:16.6196086Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:32:16.6220395Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:32:16.8276491Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:32:17.0464465Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:32:17.0574784Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:32:17.0607218Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:32:17.0835379Z Entering 'meshtestic'
+2025-09-21T23:32:17.0872010Z Entering 'protobufs'
+2025-09-21T23:32:17.0917078Z ##[endgroup]
+2025-09-21T23:32:17.0917901Z ##[group]Persisting credentials for submodules
+2025-09-21T23:32:17.0924744Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:32:17.1136265Z Entering 'meshtestic'
+2025-09-21T23:32:17.1178635Z Entering 'protobufs'
+2025-09-21T23:32:17.1232776Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:32:17.1440062Z Entering 'meshtestic'
+2025-09-21T23:32:17.1477820Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:32:17.1497593Z Entering 'protobufs'
+2025-09-21T23:32:17.1535730Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:32:17.1578388Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:32:17.1786777Z Entering 'meshtestic'
+2025-09-21T23:32:17.1824554Z Entering 'protobufs'
+2025-09-21T23:32:17.1873192Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:32:17.2079876Z Entering 'meshtestic'
+2025-09-21T23:32:17.2117405Z Entering 'protobufs'
+2025-09-21T23:32:17.2162983Z ##[endgroup]
+2025-09-21T23:32:17.2198689Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:32:17.2221932Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:32:17.2423611Z ##[group]Run if [ "$PIO_PLATFORM" = "esp32s3" ]; then
+2025-09-21T23:32:17.2424101Z [36;1mif [ "$PIO_PLATFORM" = "esp32s3" ]; then[0m
+2025-09-21T23:32:17.2424510Z [36;1m  echo "src=firmware-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:17.2424888Z [36;1m  echo "tgt=release/bleota-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:17.2425562Z [36;1melif [ "$PIO_PLATFORM" = "esp32c3" ] || [ "$PIO_PLATFORM" = "esp32c6" ]; then[0m
+2025-09-21T23:32:17.2426067Z [36;1m  echo "src=firmware-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:17.2426440Z [36;1m  echo "tgt=release/bleota-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:17.2426803Z [36;1melif [ "$PIO_PLATFORM" = "esp32" ]; then[0m
+2025-09-21T23:32:17.2427157Z [36;1m  echo "src=firmware.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:17.2427543Z [36;1m  echo "tgt=release/bleota.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:17.2427854Z [36;1mfi[0m
+2025-09-21T23:32:17.2483768Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:32:17.2484148Z env:
+2025-09-21T23:32:17.2484389Z   PIO_PLATFORM: esp32s3
+2025-09-21T23:32:17.2484663Z ##[endgroup]
+2025-09-21T23:32:17.2722374Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:32:17.2722823Z with:
+2025-09-21T23:32:17.2723075Z   pio_platform: esp32s3
+2025-09-21T23:32:17.2723394Z   pio_env: station-g2
+2025-09-21T23:32:17.2723706Z   pio_target: build
+2025-09-21T23:32:17.2724021Z   ota_firmware_source: firmware-s3.bin
+2025-09-21T23:32:17.2724375Z   ota_firmware_target: release/bleota-s3.bin
+2025-09-21T23:32:17.2724691Z ##[endgroup]
+2025-09-21T23:32:17.2804836Z ##[group]Run docker run --rm \
+2025-09-21T23:32:17.2805155Z [36;1mdocker run --rm \[0m
+2025-09-21T23:32:17.2805447Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:32:17.2805733Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:32:17.2806005Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:32:17.2806272Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:32:17.2806535Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:32:17.2806813Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:32:17.2807117Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:32:17.2807455Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:32:17.2807768Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:32:17.2808139Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-esp32s3[0m
+2025-09-21T23:32:17.2839945Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:32:17.2840303Z env:
+2025-09-21T23:32:17.2840518Z   MT_ENV: station-g2
+2025-09-21T23:32:17.2840754Z   MT_PLATFORM: esp32s3
+2025-09-21T23:32:17.2840982Z   MT_TARGET: build
+2025-09-21T23:32:17.2841219Z   MT_OTA_FIRMWARE_SOURCE: firmware-s3.bin
+2025-09-21T23:32:17.2841539Z   MT_OTA_FIRMWARE_TARGET: release/bleota-s3.bin
+2025-09-21T23:32:17.2842000Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:32:17.2842295Z ##[endgroup]
+2025-09-21T23:32:17.4026525Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-esp32s3' locally
+2025-09-21T23:32:17.5659506Z master-esp32s3: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:32:17.6076871Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:32:17.6078744Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:32:17.6079349Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:32:17.6079927Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:32:17.6080504Z 815e87185931: Pulling fs layer
+2025-09-21T23:32:17.6081150Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:32:17.6081519Z da9989870cf6: Pulling fs layer
+2025-09-21T23:32:17.6082102Z 5842d1ef8948: Pulling fs layer
+2025-09-21T23:32:17.6082440Z a234b2703096: Pulling fs layer
+2025-09-21T23:32:17.6082765Z 3a39df0b1bf9: Pulling fs layer
+2025-09-21T23:32:17.6083094Z a63a25a82ec9: Pulling fs layer
+2025-09-21T23:32:17.6083384Z 10215da75b3f: Pulling fs layer
+2025-09-21T23:32:17.6083623Z f243992d4a31: Pulling fs layer
+2025-09-21T23:32:17.6083848Z 832340f4ac8c: Pulling fs layer
+2025-09-21T23:32:17.6084067Z a234b2703096: Waiting
+2025-09-21T23:32:17.6084266Z 3a39df0b1bf9: Waiting
+2025-09-21T23:32:17.6084450Z a63a25a82ec9: Waiting
+2025-09-21T23:32:17.6084633Z c611f5bb386b: Waiting
+2025-09-21T23:32:17.6084822Z 815e87185931: Waiting
+2025-09-21T23:32:17.6085002Z 10215da75b3f: Waiting
+2025-09-21T23:32:17.6085174Z f243992d4a31: Waiting
+2025-09-21T23:32:17.6085352Z 832340f4ac8c: Waiting
+2025-09-21T23:32:17.6085527Z 71c11f7c6832: Waiting
+2025-09-21T23:32:17.6086105Z 5842d1ef8948: Waiting
+2025-09-21T23:32:17.6086277Z da9989870cf6: Waiting
+2025-09-21T23:32:17.7334038Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:32:17.7335819Z ccbbb2080a06: Download complete
+2025-09-21T23:32:17.9590384Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:32:17.9591121Z 8fb375ec14f3: Download complete
+2025-09-21T23:32:17.9664372Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:32:17.9664896Z 7d5073558d5a: Download complete
+2025-09-21T23:32:18.0332503Z 815e87185931: Verifying Checksum
+2025-09-21T23:32:18.0337163Z 815e87185931: Download complete
+2025-09-21T23:32:18.0919116Z da9989870cf6: Verifying Checksum
+2025-09-21T23:32:18.0920338Z da9989870cf6: Download complete
+2025-09-21T23:32:18.1007817Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:32:18.1009171Z 71c11f7c6832: Download complete
+2025-09-21T23:32:18.1503692Z a234b2703096: Verifying Checksum
+2025-09-21T23:32:18.1504621Z a234b2703096: Download complete
+2025-09-21T23:32:18.2494036Z 5842d1ef8948: Verifying Checksum
+2025-09-21T23:32:18.2497803Z 5842d1ef8948: Download complete
+2025-09-21T23:32:18.3847221Z 3a39df0b1bf9: Verifying Checksum
+2025-09-21T23:32:18.3848092Z 3a39df0b1bf9: Download complete
+2025-09-21T23:32:18.4491801Z 10215da75b3f: Verifying Checksum
+2025-09-21T23:32:18.4492660Z 10215da75b3f: Download complete
+2025-09-21T23:32:18.4998104Z f243992d4a31: Verifying Checksum
+2025-09-21T23:32:18.4998537Z f243992d4a31: Download complete
+2025-09-21T23:32:18.5410320Z 832340f4ac8c: Verifying Checksum
+2025-09-21T23:32:18.5412012Z 832340f4ac8c: Download complete
+2025-09-21T23:32:18.5857006Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:32:18.5859721Z c611f5bb386b: Download complete
+2025-09-21T23:32:20.1340643Z 8fb375ec14f3: Pull complete
+2025-09-21T23:32:23.8408305Z ccbbb2080a06: Pull complete
+2025-09-21T23:32:25.4320634Z a63a25a82ec9: Verifying Checksum
+2025-09-21T23:32:25.4321135Z a63a25a82ec9: Download complete
+2025-09-21T23:32:29.4621965Z 7d5073558d5a: Pull complete
+2025-09-21T23:32:35.8047454Z c611f5bb386b: Pull complete
+2025-09-21T23:32:36.0774311Z 815e87185931: Pull complete
+2025-09-21T23:32:36.7952149Z 71c11f7c6832: Pull complete
+2025-09-21T23:32:36.8053473Z da9989870cf6: Pull complete
+2025-09-21T23:32:37.8408301Z 5842d1ef8948: Pull complete
+2025-09-21T23:32:37.8509167Z a234b2703096: Pull complete
+2025-09-21T23:32:39.3310550Z 3a39df0b1bf9: Pull complete
+2025-09-21T23:33:50.1186659Z a63a25a82ec9: Pull complete
+2025-09-21T23:33:50.1289588Z 10215da75b3f: Pull complete
+2025-09-21T23:33:50.1378447Z f243992d4a31: Pull complete
+2025-09-21T23:33:50.1458051Z 832340f4ac8c: Pull complete
+2025-09-21T23:33:50.1494462Z Digest: sha256:7269912521d83174316445d896859f9f0601d0c16d966400e9e0d3e20da1f1bd
+2025-09-21T23:33:50.1504721Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-esp32s3
+2025-09-21T23:33:50.8650103Z Building PlatformIO environment: station-g2
+2025-09-21T23:33:51.1642733Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:33:51.8682370Z Resolving station-g2 dependencies...
+2025-09-21T23:33:51.8949329Z Removing unused dependencies...
+2025-09-21T23:33:51.9036342Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:33:52.0173847Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:33:52.3434468Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:33:55.5549787Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:55.7791877Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:55.8772294Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:33:56.3515308Z Building for station-g2 with 
+2025-09-21T23:33:57.1268490Z Processing station-g2 (board: station-g2; platform: 
+2025-09-21T23:33:57.1269109Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:33:57.1269727Z --------------------------------------------------------------------------------
+2025-09-21T23:33:58.3758349Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:33:58.3917689Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/station-g2.html
+2025-09-21T23:33:58.3919631Z PLATFORM: Espressif 32 (6.11.0) > BQ Station G2
+2025-09-21T23:33:58.3920619Z HARDWARE: ESP32S3 240MHz, 320KB RAM, 16MB Flash
+2025-09-21T23:33:58.3923578Z DEBUG: Current (esp-builtin) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:33:58.3925539Z PACKAGES: 
+2025-09-21T23:33:58.3925989Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:33:58.3926651Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:33:58.3927160Z  - tool-openocd-esp32 @ 2.1100.20220706 (11.0) 
+2025-09-21T23:33:58.3928028Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:33:58.3928616Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:33:58.4237937Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:33:58.4238630Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:33:58.5485556Z [nanopb] No generation needed.
+2025-09-21T23:33:59.0329383Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:01.3393305Z Downloading 0% 10%
+2025-09-21T23:34:01.3447450Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:34:01.3482044Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:34:01.4714083Z [nanopb] No generation needed.
+2025-09-21T23:34:01.6080650Z Found 96 compatible libraries
+2025-09-21T23:34:01.6081337Z Scanning dependencies...
+2025-09-21T23:34:12.4793576Z Dependency Graph
+2025-09-21T23:34:12.4794201Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:34:12.4795425Z |-- OneButton @ 2.6.1
+2025-09-21T23:34:12.4798138Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:34:12.4800010Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:34:12.4802023Z |-- ArduinoThread @ 0.0.0+20250919053829
+2025-09-21T23:34:12.4804312Z |-- Nanopb @ 0.4.91
+2025-09-21T23:34:12.4806202Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:34:12.4807849Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:34:12.4809969Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:34:12.4813954Z |-- NTPClient @ 3.2.1
+2025-09-21T23:34:12.4814307Z |-- Syslog @ 2.0.0
+2025-09-21T23:34:12.4817514Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:34:12.4818173Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:34:12.4819862Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:34:12.4821502Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:34:12.4824801Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:34:12.4825364Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:34:12.4827506Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:34:12.4829032Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:34:12.4830675Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:34:12.4832613Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:34:12.4834552Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:34:12.4836285Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:34:12.4838699Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:34:12.4840432Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:34:12.4842558Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:34:12.4845626Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:34:12.4846423Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:34:12.4848836Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:34:12.4850223Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:34:12.4852284Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:34:12.4854815Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:34:12.4856244Z |-- INA226 @ 0.6.4
+2025-09-21T23:34:12.4858382Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:34:12.4860391Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:34:12.4861651Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:34:12.4864580Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:34:12.4865945Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:34:12.4868153Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:34:12.4869326Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:34:12.4871825Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:34:12.4873307Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:34:12.4875669Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:34:12.4876636Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:34:12.4878373Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:34:12.4880446Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:34:12.4882199Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:34:12.4885052Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:12.4887196Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:34:12.4887840Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:34:12.4891088Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:34:12.4892234Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:34:12.4893924Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:34:12.4895231Z |-- RadioLib @ 7.3.0
+2025-09-21T23:34:12.4896979Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:34:12.4901981Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:34:12.4902375Z |-- libpax @ 1.1.0
+2025-09-21T23:34:12.4902750Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:34:12.4904640Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:34:12.4910213Z |-- Crypto @ 0.4.0
+2025-09-21T23:34:12.4911183Z |-- SD @ 2.0.0
+2025-09-21T23:34:12.4911639Z |-- SPI @ 2.0.0
+2025-09-21T23:34:12.4912084Z |-- WiFi @ 2.0.0
+2025-09-21T23:34:12.4912387Z |-- Wire @ 2.0.0
+2025-09-21T23:34:12.4912749Z |-- Preferences @ 2.0.0
+2025-09-21T23:34:12.4914782Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:34:12.4915157Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:34:12.4915534Z |-- WebServer @ 2.0.0
+2025-09-21T23:34:12.4915854Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:34:12.4916178Z |-- LittleFS @ 2.0.0
+2025-09-21T23:34:12.4916525Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:34:12.4917039Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:34:13.0402679Z Building in release mode
+2025-09-21T23:34:13.2015372Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on station-g2
+2025-09-21T23:34:13.2031132Z Using flags:
+2025-09-21T23:34:13.2031641Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:34:13.2033576Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:34:13.2033980Z -DAPP_ENV=station-g2
+2025-09-21T23:34:13.2034410Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:13.2034745Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:34:13.2035290Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:34:13.2035968Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:34:13.5333184Z Compiling .pio/build/station-g2/src/BluetoothCommon.cpp.o
+2025-09-21T23:34:13.6742211Z Compiling .pio/build/station-g2/src/DebugConfiguration.cpp.o
+2025-09-21T23:34:13.6925589Z Compiling .pio/build/station-g2/src/DisplayFormatters.cpp.o
+2025-09-21T23:34:13.7185889Z Compiling .pio/build/station-g2/src/FSCommon.cpp.o
+2025-09-21T23:34:14.8177382Z Compiling .pio/build/station-g2/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:34:14.8705072Z Compiling .pio/build/station-g2/src/Fusion/FusionCompass.c.o
+2025-09-21T23:34:14.9323857Z Compiling .pio/build/station-g2/src/Fusion/FusionOffset.c.o
+2025-09-21T23:34:14.9654288Z Compiling .pio/build/station-g2/src/GpioLogic.cpp.o
+2025-09-21T23:34:15.0861351Z Compiling .pio/build/station-g2/src/Led.cpp.o
+2025-09-21T23:34:15.1161179Z Compiling .pio/build/station-g2/src/Observer.cpp.o
+2025-09-21T23:34:15.3124996Z Compiling .pio/build/station-g2/src/Power.cpp.o
+2025-09-21T23:34:16.0892811Z Compiling .pio/build/station-g2/src/PowerFSM.cpp.o
+2025-09-21T23:34:16.2871946Z Compiling .pio/build/station-g2/src/PowerMon.cpp.o
+2025-09-21T23:34:16.8455923Z Compiling .pio/build/station-g2/src/RedirectablePrint.cpp.o
+2025-09-21T23:34:17.1987196Z Compiling .pio/build/station-g2/src/SPILock.cpp.o
+2025-09-21T23:34:17.5588047Z Compiling .pio/build/station-g2/src/SafeFile.cpp.o
+2025-09-21T23:34:17.9087985Z Compiling .pio/build/station-g2/src/SerialConsole.cpp.o
+2025-09-21T23:34:18.3713220Z Compiling .pio/build/station-g2/src/airtime.cpp.o
+2025-09-21T23:34:18.6462879Z Compiling .pio/build/station-g2/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:34:18.7865093Z Compiling .pio/build/station-g2/src/buzz/buzz.cpp.o
+2025-09-21T23:34:19.2109221Z Compiling .pio/build/station-g2/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:34:19.6393024Z Compiling .pio/build/station-g2/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:34:19.9622776Z Compiling .pio/build/station-g2/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:34:20.0485852Z Compiling .pio/build/station-g2/src/concurrency/Lock.cpp.o
+2025-09-21T23:34:20.3868621Z Compiling .pio/build/station-g2/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:34:20.7809471Z Compiling .pio/build/station-g2/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:34:21.1129376Z Compiling .pio/build/station-g2/src/concurrency/OSThread.cpp.o
+2025-09-21T23:34:21.2410104Z Compiling .pio/build/station-g2/src/detect/ScanI2C.cpp.o
+2025-09-21T23:34:21.3338227Z Compiling .pio/build/station-g2/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:34:21.5762629Z Compiling .pio/build/station-g2/src/gps/GPS.cpp.o
+2025-09-21T23:34:22.3183728Z Compiling .pio/build/station-g2/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:34:22.5293011Z Compiling .pio/build/station-g2/src/gps/GeoCoord.cpp.o
+2025-09-21T23:34:22.7960928Z Compiling .pio/build/station-g2/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:34:23.2575693Z Compiling .pio/build/station-g2/src/gps/RTC.cpp.o
+2025-09-21T23:34:23.5667709Z Compiling .pio/build/station-g2/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:34:23.7344681Z Compiling .pio/build/station-g2/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:34:24.5977234Z Compiling .pio/build/station-g2/src/graphics/Screen.cpp.o
+2025-09-21T23:34:24.7299622Z Compiling .pio/build/station-g2/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:34:24.9054052Z Compiling .pio/build/station-g2/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:34:24.9933025Z Compiling .pio/build/station-g2/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:34:25.4035919Z Compiling .pio/build/station-g2/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:34:25.4477115Z Compiling .pio/build/station-g2/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:34:26.1767954Z src/graphics/Screen.cpp: In function 'void graphics::drawFavNodeChatFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:26.1769224Z src/graphics/Screen.cpp:568:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:26.1769895Z      const int h     = display->height();
+2025-09-21T23:34:26.1770304Z                ^
+2025-09-21T23:34:26.1803622Z src/graphics/Screen.cpp: In function 'void graphics::drawChannelChatTabFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:26.1809640Z src/graphics/Screen.cpp:701:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:26.1810315Z      const int h     = display->height();
+2025-09-21T23:34:26.1810734Z                ^
+2025-09-21T23:34:26.2008745Z src/graphics/Screen.cpp: In constructor 'graphics::Screen::Screen(ScanI2C::DeviceAddress, meshtastic_Config_DisplayConfig_OledType, OLEDDISPLAY_GEOMETRY)':
+2025-09-21T23:34:26.2014231Z src/graphics/Screen.cpp:1120:24: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:26.2015272Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:26.2023360Z              ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:26.2024423Z src/graphics/Screen.cpp:1120:45: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:26.2025356Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:26.2025888Z                                   ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:26.2026739Z src/graphics/Screen.cpp:1120:66: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:26.2030183Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:26.2054733Z                                                        ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:26.2358415Z src/graphics/Screen.cpp: In member function 'int graphics::Screen::handleInputEvent(const InputEvent*)':
+2025-09-21T23:34:26.2363597Z src/graphics/Screen.cpp:2649:24: warning: unused variable 'shortPressAsDown' [-Wunused-variable]
+2025-09-21T23:34:26.2366456Z              const bool shortPressAsDown =
+2025-09-21T23:34:26.2366918Z                         ^~~~~~~~~~~~~~~~
+2025-09-21T23:34:26.6559815Z src/graphics/Screen.cpp: In member function 'virtual int32_t graphics::Screen::runOnce()':
+2025-09-21T23:34:26.6585579Z src/graphics/Screen.cpp:1578:47: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2025-09-21T23:34:26.6586454Z              NotificationRenderer::pauseBanner = false;
+2025-09-21T23:34:26.6587304Z              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+2025-09-21T23:34:26.6587790Z src/graphics/Screen.cpp:1579:9: note: here
+2025-09-21T23:34:26.6588428Z          case Cmd::STOP_BOOT_SCREEN:
+2025-09-21T23:34:26.6588824Z          ^~~~
+2025-09-21T23:34:26.7002194Z src/graphics/Screen.cpp: At global scope:
+2025-09-21T23:34:26.7005972Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:34:26.7007237Z  static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:34:26.7012838Z              ^~~~~~~~~~~~~~~~~
+2025-09-21T23:34:26.7014393Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:26.7015531Z  static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:34:26.7016106Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:26.7017496Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:34:26.7019005Z  static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:34:26.7019731Z              ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:26.7410166Z Compiling .pio/build/station-g2/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:34:26.8556160Z Compiling .pio/build/station-g2/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:34:27.2074593Z Compiling .pio/build/station-g2/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:34:27.9484046Z Compiling .pio/build/station-g2/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:34:28.0789925Z src/graphics/VirtualKeyboard.cpp: In member function 'void graphics::VirtualKeyboard::drawInputArea(OLEDDisplay*, int16_t, int16_t, int16_t)':
+2025-09-21T23:34:28.0791479Z src/graphics/VirtualKeyboard.cpp:356:23: warning: unused variable 'innerLeft' [-Wunused-variable]
+2025-09-21T23:34:28.0792497Z              const int innerLeft = boxX + 1;
+2025-09-21T23:34:28.0792983Z                        ^~~~~~~~~
+2025-09-21T23:34:28.0806005Z src/graphics/VirtualKeyboard.cpp:357:23: warning: unused variable 'innerRight' [-Wunused-variable]
+2025-09-21T23:34:28.0806852Z              const int innerRight = boxX + boxWidth - 2;
+2025-09-21T23:34:28.0807576Z                        ^~~~~~~~~~
+2025-09-21T23:34:28.2129139Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawDigitalClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:28.2130579Z src/graphics/draw/ClockRenderer.cpp:195:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:28.2131271Z      int line = 0;
+2025-09-21T23:34:28.2131556Z          ^~~~
+2025-09-21T23:34:28.2141212Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawAnalogClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:28.2142819Z src/graphics/draw/ClockRenderer.cpp:320:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:28.2143516Z      int line = 0;
+2025-09-21T23:34:28.2143796Z          ^~~~
+2025-09-21T23:34:28.6423095Z Compiling .pio/build/station-g2/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:34:28.6793901Z Compiling .pio/build/station-g2/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:34:28.7526737Z Compiling .pio/build/station-g2/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:34:29.9769474Z Compiling .pio/build/station-g2/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:34:30.0309629Z src/graphics/draw/MessageRenderer.cpp: In function 'void graphics::MessageRenderer::drawTextMessageFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:30.0313131Z src/graphics/draw/MessageRenderer.cpp:386:15: warning: unused variable 'page' [-Wunused-variable]
+2025-09-21T23:34:30.0314435Z          float page = (float)usableScrollHeight * 0.9f;  // 90% page
+2025-09-21T23:34:30.0314965Z                ^~~~
+2025-09-21T23:34:30.0404779Z src/graphics/draw/NodeListRenderer.cpp: In function 'void graphics::NodeListRenderer::drawCompassArrow(OLEDDisplay*, meshtastic_NodeInfoLite*, int16_t, int16_t, int, float, double, double)':
+2025-09-21T23:34:30.0408367Z src/graphics/draw/NodeListRenderer.cpp:359:11: warning: unused variable 'angle' [-Wunused-variable]
+2025-09-21T23:34:30.0409190Z      float angle = relativeBearing * DEG_TO_RAD;
+2025-09-21T23:34:30.0409624Z            ^~~~~
+2025-09-21T23:34:30.1263724Z src/graphics/draw/MenuHandler.cpp: In static member function 'static void graphics::menuHandler::wifiConfigMenu()':
+2025-09-21T23:34:30.1265896Z src/graphics/draw/MenuHandler.cpp:1315:22: warning: operation on 'count' may be undefined [-Wsequence-point]
+2025-09-21T23:34:30.1267379Z          options[count++] = labels[count];
+2025-09-21T23:34:30.1269016Z                  ~~~~~^~
+2025-09-21T23:34:30.4283424Z Compiling .pio/build/station-g2/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:34:30.6938867Z Compiling .pio/build/station-g2/src/graphics/emotes.cpp.o
+2025-09-21T23:34:31.3428745Z src/graphics/draw/NotificationRenderer.cpp: In static member function 'static void graphics::NotificationRenderer::drawTextInput(OLEDDisplay*, OLEDDisplayUiState*)':
+2025-09-21T23:34:31.3431145Z src/graphics/draw/NotificationRenderer.cpp:774:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:31.3433041Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:31.3441117Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:31.3442330Z src/graphics/draw/NotificationRenderer.cpp:775:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:31.3443431Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:31.3444017Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:31.3445061Z src/graphics/draw/NotificationRenderer.cpp:782:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:31.3446278Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:31.3446952Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:31.3447963Z src/graphics/draw/NotificationRenderer.cpp:783:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:31.3448979Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:31.3449527Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:31.4641325Z Compiling .pio/build/station-g2/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:34:31.5187491Z Compiling .pio/build/station-g2/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:34:31.5693351Z Compiling .pio/build/station-g2/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:34:31.6233841Z Compiling .pio/build/station-g2/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:34:31.6741995Z Compiling .pio/build/station-g2/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:34:31.7327767Z Compiling .pio/build/station-g2/src/graphics/tftSetup.cpp.o
+2025-09-21T23:34:31.7820575Z Compiling .pio/build/station-g2/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:34:31.8196810Z Compiling .pio/build/station-g2/src/input/ButtonThread.cpp.o
+2025-09-21T23:34:31.9642989Z Compiling .pio/build/station-g2/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:34:32.5581604Z Compiling .pio/build/station-g2/src/input/InputBroker.cpp.o
+2025-09-21T23:34:32.9328416Z Compiling .pio/build/station-g2/src/input/LinuxInput.cpp.o
+2025-09-21T23:34:33.1006325Z Compiling .pio/build/station-g2/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:34:33.8144424Z Compiling .pio/build/station-g2/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:34:33.8704076Z Compiling .pio/build/station-g2/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:34:33.9243648Z Compiling .pio/build/station-g2/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:34:34.0996409Z Compiling .pio/build/station-g2/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:34:34.2670624Z Compiling .pio/build/station-g2/src/input/SeesawRotary.cpp.o
+2025-09-21T23:34:34.3170602Z Compiling .pio/build/station-g2/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:34:35.2427525Z Compiling .pio/build/station-g2/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:34:35.3862451Z Compiling .pio/build/station-g2/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:34:35.5314880Z Compiling .pio/build/station-g2/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:34:35.6044502Z Compiling .pio/build/station-g2/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:34:35.6558879Z Compiling .pio/build/station-g2/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:34:35.7073500Z Compiling .pio/build/station-g2/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:34:36.5473777Z Compiling .pio/build/station-g2/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:34:36.7210437Z Compiling .pio/build/station-g2/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:34:36.9135149Z Compiling .pio/build/station-g2/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:34:37.4487971Z Compiling .pio/build/station-g2/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:34:37.8903853Z Compiling .pio/build/station-g2/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:34:38.0455347Z Compiling .pio/build/station-g2/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:34:38.1961592Z Compiling .pio/build/station-g2/src/input/i2cButton.cpp.o
+2025-09-21T23:34:38.7612645Z Compiling .pio/build/station-g2/src/input/kbI2cBase.cpp.o
+2025-09-21T23:34:39.1830780Z Compiling .pio/build/station-g2/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:34:39.3727835Z Compiling .pio/build/station-g2/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:34:39.9664410Z Compiling .pio/build/station-g2/src/main.cpp.o
+2025-09-21T23:34:40.3569600Z Compiling .pio/build/station-g2/src/memGet.cpp.o
+2025-09-21T23:34:40.5852781Z Compiling .pio/build/station-g2/src/mesh/Channels.cpp.o
+2025-09-21T23:34:41.0902600Z Compiling .pio/build/station-g2/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:34:41.5258314Z Compiling .pio/build/station-g2/src/mesh/Default.cpp.o
+2025-09-21T23:34:41.5767607Z src/main.cpp: In function 'void setup()':
+2025-09-21T23:34:41.5768952Z src/main.cpp:1257:104: warning: 'new' of type 'SX1262Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:34:41.5771550Z          auto *sxIf = new SX1262Interface(RadioLibHAL, SX126X_CS, SX126X_DIO1, SX126X_RESET, SX126X_BUSY);
+2025-09-21T23:34:41.5772430Z                                                                                                         ^
+2025-09-21T23:34:41.5773240Z src/main.cpp:1257:104: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:34:41.5774214Z src/main.cpp:1257:104: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:34:42.0954837Z Compiling .pio/build/station-g2/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:34:42.4085514Z Compiling .pio/build/station-g2/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:34:42.5967035Z Compiling .pio/build/station-g2/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:34:42.7908360Z Compiling .pio/build/station-g2/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:34:43.4050049Z Compiling .pio/build/station-g2/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:34:43.9538731Z Compiling .pio/build/station-g2/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:34:44.0874952Z Compiling .pio/build/station-g2/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:34:44.1587579Z Compiling .pio/build/station-g2/src/mesh/MeshModule.cpp.o
+2025-09-21T23:34:44.7758144Z Compiling .pio/build/station-g2/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:34:45.3121540Z Compiling .pio/build/station-g2/src/mesh/MeshService.cpp.o
+2025-09-21T23:34:45.4518647Z Compiling .pio/build/station-g2/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:34:45.7475867Z Compiling .pio/build/station-g2/src/mesh/NodeDB.cpp.o
+2025-09-21T23:34:46.1988466Z Compiling .pio/build/station-g2/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:34:46.9238075Z Compiling .pio/build/station-g2/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:34:47.3796326Z Compiling .pio/build/station-g2/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:34:47.5244156Z Compiling .pio/build/station-g2/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:34:47.9507168Z Compiling .pio/build/station-g2/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:34:48.6511984Z Compiling .pio/build/station-g2/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:34:48.9052430Z Compiling .pio/build/station-g2/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:34:49.1083646Z Compiling .pio/build/station-g2/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:34:49.8962141Z Compiling .pio/build/station-g2/src/mesh/Router.cpp.o
+2025-09-21T23:34:50.1833379Z Compiling .pio/build/station-g2/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:34:50.4937668Z Compiling .pio/build/station-g2/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:34:50.5638776Z Compiling .pio/build/station-g2/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:34:51.3107037Z Compiling .pio/build/station-g2/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:34:51.8628491Z Compiling .pio/build/station-g2/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:34:51.9051055Z Compiling .pio/build/station-g2/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:34:51.9337465Z Compiling .pio/build/station-g2/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:34:52.6903485Z Compiling .pio/build/station-g2/src/mesh/Throttle.cpp.o
+2025-09-21T23:34:53.1467417Z Compiling .pio/build/station-g2/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:34:53.1782113Z Compiling .pio/build/station-g2/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:34:53.2697412Z Compiling .pio/build/station-g2/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:34:53.3209845Z Compiling .pio/build/station-g2/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:34:53.4358379Z Compiling .pio/build/station-g2/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:34:54.2142936Z src/mesh/aes-ccm.cpp: In function 'int constant_time_compare(const void*, const void*, size_t)':
+2025-09-21T23:34:54.2144087Z src/mesh/aes-ccm.cpp:24:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:54.2145081Z      const volatile uint8_t *volatile a = (const volatile uint8_t *volatile)a_;
+2025-09-21T23:34:54.2145728Z                                                                             ^~
+2025-09-21T23:34:54.2146488Z src/mesh/aes-ccm.cpp:25:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:54.2147360Z      const volatile uint8_t *volatile b = (const volatile uint8_t *volatile)b_;
+2025-09-21T23:34:54.2147973Z                                                                             ^~
+2025-09-21T23:34:54.3469058Z Compiling .pio/build/station-g2/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:34:54.4275534Z Compiling .pio/build/station-g2/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:34:54.4769234Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:34:54.6441602Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:34:54.6725936Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:34:54.7003281Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:34:54.7716584Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:34:54.8247183Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:34:54.8503503Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:34:54.8940687Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:34:54.9969491Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:34:55.0257611Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:34:55.0473970Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:34:55.1549248Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:34:55.1827742Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:34:55.3162477Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:34:55.3472519Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:34:55.4610927Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:34:55.4837025Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:34:55.5117740Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:34:55.5821278Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:34:55.6060220Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:34:55.6297825Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:34:55.6549502Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:34:55.7115630Z Compiling .pio/build/station-g2/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:34:55.8079789Z Compiling .pio/build/station-g2/src/mesh/http/ContentHandler.cpp.o
+2025-09-21T23:34:55.8310776Z Compiling .pio/build/station-g2/src/mesh/http/ContentHelper.cpp.o
+2025-09-21T23:34:55.8672117Z Compiling .pio/build/station-g2/src/mesh/http/WebServer.cpp.o
+2025-09-21T23:34:55.8946034Z Compiling .pio/build/station-g2/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:34:56.4890317Z In file included from /pio/workspace/libdeps/station-g2/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:56.4891462Z                  from /pio/workspace/libdeps/station-g2/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:56.4892430Z                  from src/mesh/http/ContentHandler.cpp:41:
+2025-09-21T23:34:56.4919255Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:56.4922772Z  #define NO_DATA         211
+2025-09-21T23:34:56.4923130Z  
+2025-09-21T23:34:56.4923677Z In file included from /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:56.4924399Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:56.4924874Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:56.4925305Z                  from src/main.h:69,
+2025-09-21T23:34:56.4925724Z                  from src/mesh/http/ContentHandler.cpp:6:
+2025-09-21T23:34:56.4926564Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:56.4927400Z  #define NO_DATA                          -32768
+2025-09-21T23:34:56.4942485Z  
+2025-09-21T23:34:56.5171030Z In file included from /pio/workspace/libdeps/station-g2/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:56.5179026Z                  from /pio/workspace/libdeps/station-g2/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:56.5182015Z                  from src/mesh/http/WebServer.cpp:44:
+2025-09-21T23:34:56.5187596Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:56.5188758Z  #define NO_DATA         211
+2025-09-21T23:34:56.5189135Z  
+2025-09-21T23:34:56.5189728Z In file included from /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:56.5190506Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:56.5191010Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:56.5192053Z                  from src/main.h:69,
+2025-09-21T23:34:56.5192557Z                  from src/mesh/http/WebServer.cpp:5:
+2025-09-21T23:34:56.5194071Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:56.5196718Z  #define NO_DATA                          -32768
+2025-09-21T23:34:56.5198055Z  
+2025-09-21T23:34:56.5629684Z Compiling .pio/build/station-g2/src/mesh/wifi/WiFiAPClient.cpp.o
+2025-09-21T23:34:57.0668722Z Compiling .pio/build/station-g2/src/meshUtils.cpp.o
+2025-09-21T23:34:57.8417355Z Compiling .pio/build/station-g2/src/modules/AdminModule.cpp.o
+2025-09-21T23:34:58.3352298Z Compiling .pio/build/station-g2/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:34:58.3760618Z Compiling .pio/build/station-g2/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:34:58.4464555Z Compiling .pio/build/station-g2/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:34:59.8910905Z src/modules/CannedMessageModule.cpp: In member function 'virtual void CannedMessageModule::drawFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:59.8912692Z src/modules/CannedMessageModule.cpp:2347:17: warning: unused variable 'textYOffset' [-Wunused-variable]
+2025-09-21T23:34:59.8913791Z              int textYOffset = (rowHeight - FONT_HEIGHT_SMALL) / 2;
+2025-09-21T23:34:59.8914395Z                  ^~~~~~~~~~~
+2025-09-21T23:34:59.9503685Z Compiling .pio/build/station-g2/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:35:00.2189702Z Compiling .pio/build/station-g2/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:35:00.2230634Z src/modules/CannedMessageModule.cpp: At global scope:
+2025-09-21T23:35:00.2236853Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:00.2237824Z  static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:35:00.2238271Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:00.2778554Z Compiling .pio/build/station-g2/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:35:00.5476519Z Compiling .pio/build/station-g2/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:35:01.0015756Z Compiling .pio/build/station-g2/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:35:01.8352143Z Compiling .pio/build/station-g2/src/modules/Modules.cpp.o
+2025-09-21T23:35:01.9176451Z Compiling .pio/build/station-g2/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:35:02.1742705Z Compiling .pio/build/station-g2/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:35:02.9505887Z Compiling .pio/build/station-g2/src/modules/PositionModule.cpp.o
+2025-09-21T23:35:03.5023862Z Compiling .pio/build/station-g2/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:35:03.8201167Z Compiling .pio/build/station-g2/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:35:04.0147888Z Compiling .pio/build/station-g2/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:35:04.9260027Z Compiling .pio/build/station-g2/src/modules/ReplyModule.cpp.o
+2025-09-21T23:35:05.2707624Z Compiling .pio/build/station-g2/src/modules/RoutingModule.cpp.o
+2025-09-21T23:35:05.3513059Z Compiling .pio/build/station-g2/src/modules/SerialModule.cpp.o
+2025-09-21T23:35:05.8160756Z Compiling .pio/build/station-g2/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:35:06.7304276Z Compiling .pio/build/station-g2/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:35:07.0892919Z Compiling .pio/build/station-g2/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:35:07.2197526Z Compiling .pio/build/station-g2/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:35:07.5240985Z Compiling .pio/build/station-g2/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:35:08.6471660Z Compiling .pio/build/station-g2/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:35:09.0304304Z Compiling .pio/build/station-g2/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:35:09.1758516Z Compiling .pio/build/station-g2/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:35:09.6423298Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:35:09.7829376Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:35:10.5507970Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:35:10.9596669Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:35:11.0882180Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:35:11.1394150Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:35:11.9124092Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:35:12.2605573Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:35:12.3941100Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:35:12.4499640Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:35:13.1977435Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:35:13.5703605Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:35:13.7155043Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:35:13.7522183Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:35:14.5256426Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:35:14.9167967Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:35:15.0378757Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:35:15.0605749Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:35:15.6632754Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:35:16.2226501Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:35:16.3451224Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:35:16.5001341Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:35:16.8072527Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:35:17.5272086Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:35:17.6320577Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:35:17.7966957Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:35:18.1454095Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:35:18.8240824Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:35:18.9323381Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:35:18.9616742Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:35:19.2929973Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:35:20.1319507Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:35:20.2139248Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:35:20.2549901Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:35:20.6043542Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:35:21.2705016Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:35:21.5059403Z Compiling .pio/build/station-g2/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:35:21.5458934Z Compiling .pio/build/station-g2/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:35:21.6001144Z Compiling .pio/build/station-g2/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:35:22.3530068Z Compiling .pio/build/station-g2/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:35:22.6168290Z Compiling .pio/build/station-g2/src/modules/WaypointModule.cpp.o
+2025-09-21T23:35:22.7794285Z Compiling .pio/build/station-g2/src/modules/esp32/AudioModule.cpp.o
+2025-09-21T23:35:23.3498117Z Compiling .pio/build/station-g2/src/modules/esp32/PaxcounterModule.cpp.o
+2025-09-21T23:35:23.9131956Z Compiling .pio/build/station-g2/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:35:24.2173586Z Compiling .pio/build/station-g2/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:35:24.4320358Z Compiling .pio/build/station-g2/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:35:24.8123882Z Compiling .pio/build/station-g2/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:35:25.4531352Z Compiling .pio/build/station-g2/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:35:25.8086463Z Compiling .pio/build/station-g2/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:35:25.9681525Z Compiling .pio/build/station-g2/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:35:26.4921949Z Compiling .pio/build/station-g2/src/motion/MotionSensor.cpp.o
+2025-09-21T23:35:27.0463464Z Compiling .pio/build/station-g2/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:35:27.3843711Z Compiling .pio/build/station-g2/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:35:27.5494658Z Compiling .pio/build/station-g2/src/mqtt/MQTT.cpp.o
+2025-09-21T23:35:28.0949163Z Compiling .pio/build/station-g2/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:35:28.5905074Z Compiling .pio/build/station-g2/src/network-stubs.cpp.o
+2025-09-21T23:35:28.9997342Z Compiling .pio/build/station-g2/src/nimble/NimbleBluetooth.cpp.o
+2025-09-21T23:35:29.0352839Z Compiling .pio/build/station-g2/src/platform/esp32/BleOta.cpp.o
+2025-09-21T23:35:29.7043462Z Compiling .pio/build/station-g2/src/platform/esp32/ESP32CryptoEngine.cpp.o
+2025-09-21T23:35:29.8067499Z Compiling .pio/build/station-g2/src/platform/esp32/SimpleAllocator.cpp.o
+2025-09-21T23:35:29.9938443Z Compiling .pio/build/station-g2/src/platform/esp32/WiFiOTA.cpp.o
+2025-09-21T23:35:30.9142001Z Compiling .pio/build/station-g2/src/platform/esp32/iram-quirk.c.o
+2025-09-21T23:35:30.9814876Z Compiling .pio/build/station-g2/src/platform/esp32/main-esp32.cpp.o
+2025-09-21T23:35:31.0547260Z Compiling .pio/build/station-g2/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:35:31.1968569Z Compiling .pio/build/station-g2/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:35:31.2330825Z Compiling .pio/build/station-g2/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:35:32.1827492Z Compiling .pio/build/station-g2/src/serialization/JSON.cpp.o
+2025-09-21T23:35:32.3412642Z Compiling .pio/build/station-g2/src/serialization/JSONValue.cpp.o
+2025-09-21T23:35:32.3851111Z Compiling .pio/build/station-g2/src/serialization/MeshPacketSerializer.cpp.o
+2025-09-21T23:35:32.7476171Z Compiling .pio/build/station-g2/src/serialization/MeshPacketSerializer_nRF52.cpp.o
+2025-09-21T23:35:32.7800951Z Compiling .pio/build/station-g2/src/serialization/cobs.cpp.o
+2025-09-21T23:35:32.8365909Z Compiling .pio/build/station-g2/src/sleep.cpp.o
+2025-09-21T23:35:33.4312735Z Compiling .pio/build/station-g2/src/xmodem.cpp.o
+2025-09-21T23:35:33.9582402Z Building .pio/build/station-g2/bootloader.bin
+2025-09-21T23:35:34.0417823Z esptool.py v4.5.1
+2025-09-21T23:35:34.0434236Z Creating esp32s3 image...
+2025-09-21T23:35:34.0435341Z Merged 1 ELF section
+2025-09-21T23:35:34.0437196Z Successfully created esp32s3 image.
+2025-09-21T23:35:34.0578969Z Generating partitions .pio/build/station-g2/partitions.bin
+2025-09-21T23:35:34.1872426Z Compiling .pio/build/station-g2/lib062/Wire/Wire.cpp.o
+2025-09-21T23:35:34.3496232Z Compiling .pio/build/station-g2/lib207/SPI/SPI.cpp.o
+2025-09-21T23:35:34.8495804Z Compiling .pio/build/station-g2/liba9e/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:35:34.8731466Z Compiling .pio/build/station-g2/liba9e/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:35:34.9027534Z Archiving .pio/build/station-g2/lib062/libWire.a
+2025-09-21T23:35:34.9094384Z Indexing .pio/build/station-g2/lib062/libWire.a
+2025-09-21T23:35:34.9286515Z Compiling .pio/build/station-g2/liba9e/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:35:35.0143068Z Archiving .pio/build/station-g2/lib207/libSPI.a
+2025-09-21T23:35:35.0204204Z Indexing .pio/build/station-g2/lib207/libSPI.a
+2025-09-21T23:35:35.1818898Z Compiling .pio/build/station-g2/libb2c/OneButton/OneButton.cpp.o
+2025-09-21T23:35:35.5910239Z Compiling .pio/build/station-g2/libb2c/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:35:35.7563448Z Compiling .pio/build/station-g2/libb46/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:35:35.7724587Z Archiving .pio/build/station-g2/liba9e/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:35.7803037Z Indexing .pio/build/station-g2/liba9e/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:35.8963026Z Compiling .pio/build/station-g2/lib8d2/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:35:36.0627672Z Compiling .pio/build/station-g2/lib64a/ArduinoThread/Thread.cpp.o
+2025-09-21T23:35:36.2262979Z Archiving .pio/build/station-g2/libb2c/libOneButton.a
+2025-09-21T23:35:36.2341379Z Indexing .pio/build/station-g2/libb2c/libOneButton.a
+2025-09-21T23:35:36.2543270Z Compiling .pio/build/station-g2/lib64a/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:35:36.3863009Z Archiving .pio/build/station-g2/libb46/libarduino-fsm.a
+2025-09-21T23:35:36.3920365Z Indexing .pio/build/station-g2/libb46/libarduino-fsm.a
+2025-09-21T23:35:36.4141226Z Compiling .pio/build/station-g2/lib265/Nanopb/pb_common.c.o
+2025-09-21T23:35:36.5308594Z Compiling .pio/build/station-g2/lib265/Nanopb/pb_decode.c.o
+2025-09-21T23:35:36.5642935Z Archiving .pio/build/station-g2/lib8d2/libTinyGPSPlus.a
+2025-09-21T23:35:36.5703366Z Indexing .pio/build/station-g2/lib8d2/libTinyGPSPlus.a
+2025-09-21T23:35:36.5856179Z Compiling .pio/build/station-g2/lib265/Nanopb/pb_encode.c.o
+2025-09-21T23:35:36.7041001Z Compiling .pio/build/station-g2/lib46e/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:35:36.8474205Z Compiling .pio/build/station-g2/lib818/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:35:36.8586624Z Archiving .pio/build/station-g2/lib46e/libErriezCRC32.a
+2025-09-21T23:35:36.8633579Z Archiving .pio/build/station-g2/lib64a/libArduinoThread.a
+2025-09-21T23:35:36.8642426Z Indexing .pio/build/station-g2/lib46e/libErriezCRC32.a
+2025-09-21T23:35:36.8659732Z Archiving .pio/build/station-g2/lib265/libNanopb.a
+2025-09-21T23:35:36.8694797Z Indexing .pio/build/station-g2/lib64a/libArduinoThread.a
+2025-09-21T23:35:36.8769604Z Indexing .pio/build/station-g2/lib265/libNanopb.a
+2025-09-21T23:35:36.9836784Z Compiling .pio/build/station-g2/lib414/TBPubSubClient/PubSubClient.cpp.o
+2025-09-21T23:35:37.1445942Z Compiling .pio/build/station-g2/libc5d/NTPClient/NTPClient.cpp.o
+2025-09-21T23:35:37.3209865Z Compiling .pio/build/station-g2/libfd5/Syslog/Syslog.cpp.o
+2025-09-21T23:35:37.4277991Z Archiving .pio/build/station-g2/lib818/libNonBlockingRTTTL.a
+2025-09-21T23:35:37.4344838Z Indexing .pio/build/station-g2/lib818/libNonBlockingRTTTL.a
+2025-09-21T23:35:37.6192996Z Compiling .pio/build/station-g2/lib9c2/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:35:37.6506118Z Archiving .pio/build/station-g2/lib414/libTBPubSubClient.a
+2025-09-21T23:35:37.6556299Z Indexing .pio/build/station-g2/lib414/libTBPubSubClient.a
+2025-09-21T23:35:37.6744641Z Compiling .pio/build/station-g2/lib9c2/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:35:37.8310507Z Archiving .pio/build/station-g2/libc5d/libNTPClient.a
+2025-09-21T23:35:37.8377216Z Indexing .pio/build/station-g2/libc5d/libNTPClient.a
+2025-09-21T23:35:37.8550716Z Compiling .pio/build/station-g2/lib9c2/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:35:37.9760016Z Archiving .pio/build/station-g2/libfd5/libSyslog.a
+2025-09-21T23:35:37.9822592Z Indexing .pio/build/station-g2/libfd5/libSyslog.a
+2025-09-21T23:35:38.0002661Z Compiling .pio/build/station-g2/lib9c2/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:35:38.4499052Z Compiling .pio/build/station-g2/libeb8/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:35:38.6032065Z Compiling .pio/build/station-g2/lib7a4/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:35:38.6196788Z Archiving .pio/build/station-g2/lib9c2/libAdafruit BusIO.a
+2025-09-21T23:35:38.6332493Z Indexing .pio/build/station-g2/lib9c2/libAdafruit BusIO.a
+2025-09-21T23:35:38.7783115Z Compiling .pio/build/station-g2/libdad/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:35:38.9761620Z Compiling .pio/build/station-g2/lib793/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:35:38.9872576Z Archiving .pio/build/station-g2/libeb8/libAdafruit Unified Sensor.a
+2025-09-21T23:35:38.9934813Z Indexing .pio/build/station-g2/libeb8/libAdafruit Unified Sensor.a
+2025-09-21T23:35:39.1627467Z Compiling .pio/build/station-g2/lib7d6/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:35:39.2720794Z Archiving .pio/build/station-g2/lib7a4/libAdafruit BMP280 Library.a
+2025-09-21T23:35:39.2789926Z Indexing .pio/build/station-g2/lib7a4/libAdafruit BMP280 Library.a
+2025-09-21T23:35:39.4428012Z Compiling .pio/build/station-g2/lib97a/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:35:39.4518492Z Archiving .pio/build/station-g2/libdad/libAdafruit BMP085 Library.a
+2025-09-21T23:35:39.4577483Z Indexing .pio/build/station-g2/libdad/libAdafruit BMP085 Library.a
+2025-09-21T23:35:39.6244224Z Compiling .pio/build/station-g2/libb3a/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:35:39.6717606Z Archiving .pio/build/station-g2/lib793/libAdafruit BME280 Library.a
+2025-09-21T23:35:39.6794254Z Indexing .pio/build/station-g2/lib793/libAdafruit BME280 Library.a
+2025-09-21T23:35:39.8563825Z Compiling .pio/build/station-g2/lib3b9/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:35:39.8714214Z Archiving .pio/build/station-g2/lib7d6/libAdafruit DPS310.a
+2025-09-21T23:35:39.8775728Z Indexing .pio/build/station-g2/lib7d6/libAdafruit DPS310.a
+2025-09-21T23:35:40.0599780Z Compiling .pio/build/station-g2/lib8e2/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:35:40.1024147Z Archiving .pio/build/station-g2/lib97a/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:40.1080912Z Indexing .pio/build/station-g2/lib97a/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:40.1275998Z Compiling .pio/build/station-g2/lib8e2/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:35:40.2741347Z Archiving .pio/build/station-g2/libb3a/libAdafruit INA260 Library.a
+2025-09-21T23:35:40.2826321Z Indexing .pio/build/station-g2/libb3a/libAdafruit INA260 Library.a
+2025-09-21T23:35:40.3005110Z Compiling .pio/build/station-g2/lib8e2/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:35:40.5121199Z Archiving .pio/build/station-g2/lib3b9/libAdafruit INA219.a
+2025-09-21T23:35:40.5178470Z Indexing .pio/build/station-g2/lib3b9/libAdafruit INA219.a
+2025-09-21T23:35:40.5352583Z Compiling .pio/build/station-g2/lib8e2/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:35:40.8368687Z Compiling .pio/build/station-g2/libadf/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:35:40.8689310Z /pio/workspace/libdeps/station-g2/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp: In member function 'virtual bool Adafruit_PM25AQI_I2C::read(PM25_AQI_Data*)':
+2025-09-21T23:35:40.8691109Z /pio/workspace/libdeps/station-g2/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp:50:10: warning: unused variable 'bufLen' [-Wunused-variable]
+2025-09-21T23:35:40.8692283Z    size_t bufLen = sizeof(buffer);
+2025-09-21T23:35:40.8692651Z           ^~~~~~
+2025-09-21T23:35:41.0275829Z Compiling .pio/build/station-g2/libbe3/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:35:41.0986676Z /pio/workspace/libdeps/station-g2/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:35:41.0996227Z /pio/workspace/libdeps/station-g2/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:172:11: warning: unused variable 'csum' [-Wunused-variable]
+2025-09-21T23:35:41.1015702Z    uint8_t csum = 0;
+2025-09-21T23:35:41.1019591Z            ^~~~
+2025-09-21T23:35:41.2110470Z Compiling .pio/build/station-g2/libe27/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:35:41.2260698Z Archiving .pio/build/station-g2/lib8e2/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:41.2355977Z Indexing .pio/build/station-g2/lib8e2/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:41.4107152Z Compiling .pio/build/station-g2/libc39/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:35:41.4942581Z Archiving .pio/build/station-g2/libadf/libAdafruit MPU6050.a
+2025-09-21T23:35:41.5008041Z Indexing .pio/build/station-g2/libadf/libAdafruit MPU6050.a
+2025-09-21T23:35:41.5186090Z Compiling .pio/build/station-g2/libc39/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:35:41.6987181Z Archiving .pio/build/station-g2/libbe3/libAdafruit LIS3DH.a
+2025-09-21T23:35:41.7060190Z Indexing .pio/build/station-g2/libbe3/libAdafruit LIS3DH.a
+2025-09-21T23:35:41.7259940Z Compiling .pio/build/station-g2/libc39/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:35:41.8777509Z Archiving .pio/build/station-g2/libe27/libAdafruit AHTX0.a
+2025-09-21T23:35:41.8861828Z Indexing .pio/build/station-g2/libe27/libAdafruit AHTX0.a
+2025-09-21T23:35:41.9092583Z Compiling .pio/build/station-g2/libc39/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:35:42.0896303Z Compiling .pio/build/station-g2/libc39/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:35:42.2601401Z Compiling .pio/build/station-g2/libc39/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:35:42.4106309Z Compiling .pio/build/station-g2/libc39/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:35:42.5851467Z Compiling .pio/build/station-g2/libc39/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:35:42.9106807Z Compiling .pio/build/station-g2/libe35/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:35:43.0815649Z Compiling .pio/build/station-g2/lib514/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:35:43.2501103Z Compiling .pio/build/station-g2/lib744/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:35:43.2677920Z Archiving .pio/build/station-g2/libc39/libAdafruit LSM6DS.a
+2025-09-21T23:35:43.2760543Z Indexing .pio/build/station-g2/libc39/libAdafruit LSM6DS.a
+2025-09-21T23:35:43.4708231Z Compiling .pio/build/station-g2/lib845/INA3221/INA3221.cpp.o
+2025-09-21T23:35:43.5699879Z Archiving .pio/build/station-g2/libe35/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:43.5760405Z Indexing .pio/build/station-g2/libe35/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:43.6410581Z /pio/workspace/libdeps/station-g2/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'float MLX90632::getObjectTempF()':
+2025-09-21T23:35:43.6413402Z /pio/workspace/libdeps/station-g2/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:419:9: warning: unused variable 'AMB' [-Wunused-variable]
+2025-09-21T23:35:43.6415718Z    float AMB;
+2025-09-21T23:35:43.6416037Z          ^~~
+2025-09-21T23:35:43.6417370Z /pio/workspace/libdeps/station-g2/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:420:9: warning: unused variable 'Sto' [-Wunused-variable]
+2025-09-21T23:35:43.6418376Z    float Sto;
+2025-09-21T23:35:43.6418647Z          ^~~
+2025-09-21T23:35:43.6459439Z /pio/workspace/libdeps/station-g2/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'void MLX90632::setMeasurementRate(uint8_t)':
+2025-09-21T23:35:43.6462094Z /pio/workspace/libdeps/station-g2/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:775:19: warning: unused variable 'returnError' [-Wunused-variable]
+2025-09-21T23:35:43.6465728Z   MLX90632::status returnError = setMode(MODE_STEP);
+2025-09-21T23:35:43.6466560Z                    ^~~~~~~~~~~
+2025-09-21T23:35:43.7519219Z Compiling .pio/build/station-g2/libc4b/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:35:43.7608187Z Archiving .pio/build/station-g2/lib514/libEmotiBit MLX90632.a
+2025-09-21T23:35:43.7667661Z Indexing .pio/build/station-g2/lib514/libEmotiBit MLX90632.a
+2025-09-21T23:35:43.9451931Z Compiling .pio/build/station-g2/libd31/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:35:43.9609962Z Archiving .pio/build/station-g2/lib744/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:43.9671571Z Indexing .pio/build/station-g2/lib744/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:44.1497665Z Compiling .pio/build/station-g2/lib384/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:35:44.1649334Z Archiving .pio/build/station-g2/lib845/libINA3221.a
+2025-09-21T23:35:44.1718677Z Indexing .pio/build/station-g2/lib845/libINA3221.a
+2025-09-21T23:35:44.3450915Z Compiling .pio/build/station-g2/lib343/INA226/INA226.cpp.o
+2025-09-21T23:35:44.3770645Z Archiving .pio/build/station-g2/libc4b/libQMC5883LCompass.a
+2025-09-21T23:35:44.3823513Z Indexing .pio/build/station-g2/libc4b/libQMC5883LCompass.a
+2025-09-21T23:35:44.5573487Z Compiling .pio/build/station-g2/libe24/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:35:44.6235163Z Archiving .pio/build/station-g2/libd31/libDFRobot_RTU.a
+2025-09-21T23:35:44.6299795Z Indexing .pio/build/station-g2/libd31/libDFRobot_RTU.a
+2025-09-21T23:35:44.6479085Z Compiling .pio/build/station-g2/libe24/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:35:44.8092201Z Archiving .pio/build/station-g2/lib384/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:44.8151995Z Indexing .pio/build/station-g2/lib384/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:44.8338671Z Compiling .pio/build/station-g2/libe24/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:35:44.8934038Z In file included from /pio/workspace/libdeps/station-g2/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:44.8936049Z /pio/workspace/libdeps/station-g2/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:42: warning: "I2C_BUFFER_LENGTH" redefined
+2025-09-21T23:35:44.8939261Z    #define I2C_BUFFER_LENGTH 32
+2025-09-21T23:35:44.8939667Z  
+2025-09-21T23:35:44.8942497Z In file included from /pio/workspace/libdeps/station-g2/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:20,
+2025-09-21T23:35:44.8956312Z                  from /pio/workspace/libdeps/station-g2/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:44.8958031Z /pio/core/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h:43: note: this is the location of the previous definition
+2025-09-21T23:35:44.8960353Z      #define I2C_BUFFER_LENGTH 128  // Default size, if none is set using Wire::setBuffersize(size_t)
+2025-09-21T23:35:44.8961052Z  
+2025-09-21T23:35:45.0032376Z Archiving .pio/build/station-g2/lib343/libINA226.a
+2025-09-21T23:35:45.0109633Z Indexing .pio/build/station-g2/lib343/libINA226.a
+2025-09-21T23:35:45.1189518Z /pio/workspace/libdeps/station-g2/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp: In member function 'void MAX30105::enableSlot(uint8_t, uint8_t)':
+2025-09-21T23:35:45.1193728Z /pio/workspace/libdeps/station-g2/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:292:11: warning: unused variable 'originalContents' [-Wunused-variable]
+2025-09-21T23:35:45.1197371Z    uint8_t originalContents;
+2025-09-21T23:35:45.1198317Z            ^~~~~~~~~~~~~~~~
+2025-09-21T23:35:45.2097412Z Compiling .pio/build/station-g2/liba4c/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:35:45.2338559Z /pio/workspace/libdeps/station-g2/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:35:45.2353780Z /pio/workspace/libdeps/station-g2/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:35:45.2355732Z      if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:35:45.2356792Z          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:35:45.2358179Z Compiling .pio/build/station-g2/liba4c/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:35:45.4613621Z Compiling .pio/build/station-g2/libab6/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:35:45.4788316Z Archiving .pio/build/station-g2/libe24/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:45.4881084Z Indexing .pio/build/station-g2/libe24/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:45.6499204Z Compiling .pio/build/station-g2/lib206/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:35:45.9910132Z Compiling .pio/build/station-g2/lib259/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:35:46.0022381Z Archiving .pio/build/station-g2/liba4c/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:46.0097190Z Indexing .pio/build/station-g2/liba4c/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:46.1305418Z Compiling .pio/build/station-g2/lib9af/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:35:46.1412461Z Archiving .pio/build/station-g2/libab6/libAdafruit LTR390 Library.a
+2025-09-21T23:35:46.1477944Z Indexing .pio/build/station-g2/libab6/libAdafruit LTR390 Library.a
+2025-09-21T23:35:46.3177429Z Compiling .pio/build/station-g2/libdfe/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:35:46.3924098Z Archiving .pio/build/station-g2/lib206/libAdafruit PCT2075.a
+2025-09-21T23:35:46.4005239Z Indexing .pio/build/station-g2/lib206/libAdafruit PCT2075.a
+2025-09-21T23:35:46.4197052Z Compiling .pio/build/station-g2/libdfe/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:35:46.5793864Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::sensorInit()':
+2025-09-21T23:35:46.5801555Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp:23:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:46.5802673Z    int8_t  rslt    = 0;
+2025-09-21T23:35:46.5803016Z            ^~~~
+2025-09-21T23:35:46.5821605Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setMeasurementXYZ(uint8_t, uint8_t, uint8_t)':
+2025-09-21T23:35:46.5845934Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp:263:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:46.5846896Z    int8_t  rslt;
+2025-09-21T23:35:46.5847216Z            ^~~~
+2025-09-21T23:35:46.5854502Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setInterruputLatch(uint8_t)':
+2025-09-21T23:35:46.5861164Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp:489:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:46.5862307Z    int8_t  rslt;
+2025-09-21T23:35:46.5862626Z            ^~~~
+2025-09-21T23:35:46.5892333Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::normalSelfTest()':
+2025-09-21T23:35:46.5926393Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp:706:10: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:46.5927248Z    int8_t rslt;
+2025-09-21T23:35:46.5927534Z           ^~~~
+2025-09-21T23:35:46.5928369Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::advSelfTest()':
+2025-09-21T23:35:46.5929891Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp:776:11: warning: unused variable 'selfTestCurrent' [-Wunused-variable]
+2025-09-21T23:35:46.5930893Z    uint8_t selfTestCurrent;
+2025-09-21T23:35:46.5931269Z            ^~~~~~~~~~~~~~~
+2025-09-21T23:35:46.5945590Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getDataOverrunState()':
+2025-09-21T23:35:46.5947173Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp:853:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:46.5948140Z    int8_t  rslt;
+2025-09-21T23:35:46.5948463Z            ^~~~
+2025-09-21T23:35:46.5949390Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setOverflowPin(uint8_t)':
+2025-09-21T23:35:46.5950927Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp:865:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:46.5952081Z    int8_t  rslt;
+2025-09-21T23:35:46.5952389Z            ^~~~
+2025-09-21T23:35:46.5953294Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getOverflowState()':
+2025-09-21T23:35:46.5954840Z /pio/workspace/libdeps/station-g2/DFRobot_BMM150/DFRobot_BMM150.cpp:878:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:46.5955790Z    int8_t  rslt;
+2025-09-21T23:35:46.5956103Z            ^~~~
+2025-09-21T23:35:46.6867313Z /pio/workspace/libdeps/station-g2/Adafruit TSL2561/Adafruit_TSL2561_U.cpp: In member function 'uint32_t Adafruit_TSL2561_Unified::calculateLux(uint16_t, uint16_t)':
+2025-09-21T23:35:46.6876074Z /pio/workspace/libdeps/station-g2/Adafruit TSL2561/Adafruit_TSL2561_U.cpp:421:14: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+2025-09-21T23:35:46.6877295Z    if ((ratio >= 0) && (ratio <= TSL2561_LUX_K1T)) {
+2025-09-21T23:35:46.6877722Z         ~~~~~~^~~~
+2025-09-21T23:35:46.7288766Z Compiling .pio/build/station-g2/lib388/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:35:46.7409560Z Archiving .pio/build/station-g2/lib259/libDFRobot_BMM150.a
+2025-09-21T23:35:46.7479882Z Indexing .pio/build/station-g2/lib259/libDFRobot_BMM150.a
+2025-09-21T23:35:46.9398820Z Compiling .pio/build/station-g2/lib629/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:35:46.9545177Z Archiving .pio/build/station-g2/lib9af/libAdafruit TSL2561.a
+2025-09-21T23:35:46.9609937Z Indexing .pio/build/station-g2/lib9af/libAdafruit TSL2561.a
+2025-09-21T23:35:47.0792732Z Compiling .pio/build/station-g2/lib908/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:35:47.0915963Z Archiving .pio/build/station-g2/libdfe/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:47.0985286Z Indexing .pio/build/station-g2/libdfe/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:47.1192926Z Compiling .pio/build/station-g2/lib908/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:35:47.3047586Z Archiving .pio/build/station-g2/lib388/libAdafruit MAX1704X.a
+2025-09-21T23:35:47.3116078Z Indexing .pio/build/station-g2/lib388/libAdafruit MAX1704X.a
+2025-09-21T23:35:47.3295651Z Compiling .pio/build/station-g2/lib908/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:35:47.6286852Z Archiving .pio/build/station-g2/lib629/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:47.6349458Z Indexing .pio/build/station-g2/lib629/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:47.8015805Z Compiling .pio/build/station-g2/libc5c/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:35:47.9265817Z Compiling .pio/build/station-g2/libc1e/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:35:48.0915067Z Compiling .pio/build/station-g2/lib32b/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:35:48.1054883Z Archiving .pio/build/station-g2/lib908/libAdafruit LPS2X.a
+2025-09-21T23:35:48.1127020Z Indexing .pio/build/station-g2/lib908/libAdafruit LPS2X.a
+2025-09-21T23:35:48.2882448Z Compiling .pio/build/station-g2/libf02/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:35:48.4400145Z Archiving .pio/build/station-g2/libc5c/libAdafruit SHT31 Library.a
+2025-09-21T23:35:48.4466200Z Indexing .pio/build/station-g2/libc5c/libAdafruit SHT31 Library.a
+2025-09-21T23:35:48.6142602Z Compiling .pio/build/station-g2/liba8a/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:35:48.6294624Z Archiving .pio/build/station-g2/libc1e/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:48.6362013Z Indexing .pio/build/station-g2/libc1e/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:48.6579542Z Compiling .pio/build/station-g2/libcad/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:35:48.7364769Z Archiving .pio/build/station-g2/lib32b/libAdafruit SHT4x Library.a
+2025-09-21T23:35:48.7473077Z Indexing .pio/build/station-g2/lib32b/libAdafruit SHT4x Library.a
+2025-09-21T23:35:48.9172278Z Compiling .pio/build/station-g2/libcad/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:35:49.0926782Z Compiling .pio/build/station-g2/libf9d/bsec2/bsec2.cpp.o
+2025-09-21T23:35:49.1079949Z Archiving .pio/build/station-g2/libf02/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:49.1148011Z Indexing .pio/build/station-g2/libf02/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:49.1250606Z /pio/workspace/libdeps/station-g2/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp: In member function 'OPT3001_ErrorCode ClosedCube_OPT3001::begin(uint8_t)':
+2025-09-21T23:35:49.1258642Z /pio/workspace/libdeps/station-g2/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp:39:20: warning: unused variable 'error' [-Wunused-variable]
+2025-09-21T23:35:49.1259677Z   OPT3001_ErrorCode error = NO_ERROR;
+2025-09-21T23:35:49.1260275Z                     ^~~~~
+2025-09-21T23:35:49.1376550Z Compiling .pio/build/station-g2/libf9d/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:35:49.2079884Z Archiving .pio/build/station-g2/liba8a/libClosedCube OPT3001.a
+2025-09-21T23:35:49.2147907Z Indexing .pio/build/station-g2/liba8a/libClosedCube OPT3001.a
+2025-09-21T23:35:49.3817171Z Compiling .pio/build/station-g2/libaa0/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:35:49.5920582Z Archiving .pio/build/station-g2/libcad/libBME68x Sensor library.a
+2025-09-21T23:35:49.6002651Z Indexing .pio/build/station-g2/libcad/libBME68x Sensor library.a
+2025-09-21T23:35:49.6173284Z Compiling .pio/build/station-g2/lib7ae/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:35:49.7113782Z Compiling .pio/build/station-g2/lib7ae/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:35:49.8730654Z Compiling .pio/build/station-g2/lib7ae/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:35:49.8935906Z Archiving .pio/build/station-g2/libf9d/libbsec2.a
+2025-09-21T23:35:49.9026076Z Indexing .pio/build/station-g2/libf9d/libbsec2.a
+2025-09-21T23:35:49.9043037Z Compiling .pio/build/station-g2/lib7ae/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:35:49.9245454Z Compiling .pio/build/station-g2/lib7ae/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:35:50.0309270Z Compiling .pio/build/station-g2/lib7ae/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:35:50.0448652Z Archiving .pio/build/station-g2/libaa0/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:50.0510903Z Indexing .pio/build/station-g2/libaa0/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:50.0688472Z Compiling .pio/build/station-g2/lib7ae/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:35:50.6633984Z Compiling .pio/build/station-g2/libbf4/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:35:50.7842716Z Compiling .pio/build/station-g2/libe98/RadioLib/Hal.cpp.o
+2025-09-21T23:35:50.7969216Z Archiving .pio/build/station-g2/lib7ae/libSensirion Core.a
+2025-09-21T23:35:50.8078010Z Indexing .pio/build/station-g2/lib7ae/libSensirion Core.a
+2025-09-21T23:35:50.8154128Z Compiling .pio/build/station-g2/libe98/RadioLib/Module.cpp.o
+2025-09-21T23:35:50.8347040Z Compiling .pio/build/station-g2/libe98/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:35:51.2915401Z Archiving .pio/build/station-g2/libbf4/libSensirion I2C SCD4x.a
+2025-09-21T23:35:51.2985357Z Indexing .pio/build/station-g2/libbf4/libSensirion I2C SCD4x.a
+2025-09-21T23:35:51.4253415Z Compiling .pio/build/station-g2/libe98/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:35:51.4494518Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:35:51.4700601Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:35:51.4923941Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:35:51.5176977Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:35:51.5561169Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:35:52.1485456Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:35:52.1717893Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:35:52.1990429Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:35:52.2209101Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:35:52.8710144Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:35:52.9205151Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:35:52.9431006Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:35:52.9769609Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:35:53.5492494Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:35:53.5738211Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:35:53.5966937Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:35:53.6235479Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:35:54.1773660Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:35:54.2080064Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:35:54.2656681Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:35:54.2900834Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:35:54.8468715Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:35:54.9469173Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:35:54.9685908Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:35:54.9946172Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:35:55.5521424Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:35:55.6257371Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:35:55.6435177Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:35:55.6647014Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:35:56.2162864Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:35:56.2994934Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:35:56.3246925Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:35:56.4568562Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:35:56.8776591Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:35:56.9450718Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:35:56.9710545Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:35:57.2455056Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:35:57.5031906Z Compiling .pio/build/station-g2/libe98/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:35:57.5785075Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:35:57.6045057Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:35:57.6304498Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:35:57.8701082Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:35:58.2041277Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:35:58.2374347Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:35:58.2638281Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:35:58.5086377Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:35:58.6128084Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:35:58.6646017Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:35:58.7350220Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:35:58.8581184Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:35:58.8774624Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:35:58.8937786Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:35:58.9206980Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:35:59.5044988Z Compiling .pio/build/station-g2/libe98/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:35:59.5409341Z Compiling .pio/build/station-g2/libe98/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:35:59.5623107Z Compiling .pio/build/station-g2/libe98/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:35:59.5902888Z Compiling .pio/build/station-g2/libe98/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:36:00.1302749Z Compiling .pio/build/station-g2/libe98/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:36:00.3417005Z Compiling .pio/build/station-g2/lib940/esp32_https_server/ConnectionContext.cpp.o
+2025-09-21T23:36:00.3708038Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPConnection.cpp.o
+2025-09-21T23:36:00.3893482Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPHeader.cpp.o
+2025-09-21T23:36:00.6892659Z Archiving .pio/build/station-g2/libe98/libRadioLib.a
+2025-09-21T23:36:00.7287118Z Indexing .pio/build/station-g2/libe98/libRadioLib.a
+2025-09-21T23:36:00.7975671Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPHeaders.cpp.o
+2025-09-21T23:36:01.0010651Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPMultipartBodyParser.cpp.o
+2025-09-21T23:36:01.2786680Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPNode.cpp.o
+2025-09-21T23:36:01.5520502Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPRequest.cpp.o
+2025-09-21T23:36:01.5768792Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPResponse.cpp.o
+2025-09-21T23:36:01.9404769Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPSConnection.cpp.o
+2025-09-21T23:36:02.0767822Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPSServer.cpp.o
+2025-09-21T23:36:02.3605683Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPServer.cpp.o
+2025-09-21T23:36:02.3862692Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPURLEncodedBodyParser.cpp.o
+2025-09-21T23:36:02.8408545Z Compiling .pio/build/station-g2/lib940/esp32_https_server/HTTPValidator.cpp.o
+2025-09-21T23:36:02.9676594Z Compiling .pio/build/station-g2/lib940/esp32_https_server/ResolvedResource.cpp.o
+2025-09-21T23:36:03.1701622Z Compiling .pio/build/station-g2/lib940/esp32_https_server/ResourceNode.cpp.o
+2025-09-21T23:36:03.2315643Z Compiling .pio/build/station-g2/lib940/esp32_https_server/ResourceParameters.cpp.o
+2025-09-21T23:36:03.2684305Z Compiling .pio/build/station-g2/lib940/esp32_https_server/ResourceResolver.cpp.o
+2025-09-21T23:36:03.6796263Z Compiling .pio/build/station-g2/lib940/esp32_https_server/SSLCert.cpp.o
+2025-09-21T23:36:03.9146839Z Compiling .pio/build/station-g2/lib940/esp32_https_server/ValidatorFunctions.cpp.o
+2025-09-21T23:36:04.0715978Z Compiling .pio/build/station-g2/lib940/esp32_https_server/WebsocketHandler.cpp.o
+2025-09-21T23:36:04.3028729Z Compiling .pio/build/station-g2/lib940/esp32_https_server/WebsocketInputStreambuf.cpp.o
+2025-09-21T23:36:04.3872717Z Compiling .pio/build/station-g2/lib940/esp32_https_server/WebsocketNode.cpp.o
+2025-09-21T23:36:04.6159613Z Compiling .pio/build/station-g2/lib940/esp32_https_server/util.cpp.o
+2025-09-21T23:36:05.1292393Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLE2904.cpp.o
+2025-09-21T23:36:05.1495287Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEAddress.cpp.o
+2025-09-21T23:36:05.2606960Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEAdvertisedDevice.cpp.o
+2025-09-21T23:36:05.2920606Z Archiving .pio/build/station-g2/lib940/libesp32_https_server.a
+2025-09-21T23:36:05.3124727Z Indexing .pio/build/station-g2/lib940/libesp32_https_server.a
+2025-09-21T23:36:05.3585630Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEAdvertising.cpp.o
+2025-09-21T23:36:05.6966996Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEBeacon.cpp.o
+2025-09-21T23:36:05.8904058Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLECharacteristic.cpp.o
+2025-09-21T23:36:06.1716465Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEClient.cpp.o
+2025-09-21T23:36:06.2984015Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEDescriptor.cpp.o
+2025-09-21T23:36:06.5783357Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEDevice.cpp.o
+2025-09-21T23:36:06.9726632Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEEddystoneTLM.cpp.o
+2025-09-21T23:36:07.1270744Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEEddystoneURL.cpp.o
+2025-09-21T23:36:07.3209494Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEExtAdvertising.cpp.o
+2025-09-21T23:36:07.3741054Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEHIDDevice.cpp.o
+2025-09-21T23:36:07.4173561Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLERemoteCharacteristic.cpp.o
+2025-09-21T23:36:07.5926912Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLERemoteDescriptor.cpp.o
+2025-09-21T23:36:07.7602956Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLERemoteService.cpp.o
+2025-09-21T23:36:08.1948547Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEScan.cpp.o
+2025-09-21T23:36:08.3800372Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLESecurity.cpp.o
+2025-09-21T23:36:08.4428186Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEServer.cpp.o
+2025-09-21T23:36:08.7400738Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEService.cpp.o
+2025-09-21T23:36:09.1865797Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEUUID.cpp.o
+2025-09-21T23:36:09.2548641Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/NimBLEUtils.cpp.o
+2025-09-21T23:36:09.5785907Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/esp_port/esp-hci/src/esp_nimble_hci.c.o
+2025-09-21T23:36:09.7291202Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/esp_port/port/src/esp_nimble_mem.c.o
+2025-09-21T23:36:09.7529644Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_decrypt.c.o
+2025-09-21T23:36:09.7735651Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_encrypt.c.o
+2025-09-21T23:36:09.7941508Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/cbc_mode.c.o
+2025-09-21T23:36:09.8223414Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/ccm_mode.c.o
+2025-09-21T23:36:09.8417739Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/cmac_mode.c.o
+2025-09-21T23:36:09.8656381Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_mode.c.o
+2025-09-21T23:36:09.8831024Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_prng.c.o
+2025-09-21T23:36:09.9072848Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc.c.o
+2025-09-21T23:36:09.9258159Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dh.c.o
+2025-09-21T23:36:09.9449006Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dsa.c.o
+2025-09-21T23:36:09.9777225Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_platform_specific.c.o
+2025-09-21T23:36:10.0112893Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac.c.o
+2025-09-21T23:36:10.0340265Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac_prng.c.o
+2025-09-21T23:36:10.0496426Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/sha256.c.o
+2025-09-21T23:36:10.0641453Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/ext/tinycrypt/src/utils.c.o
+2025-09-21T23:36:10.1244901Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll.c.o
+2025-09-21T23:36:10.1477515Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_adv.c.o
+2025-09-21T23:36:10.1655171Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn.c.o
+2025-09-21T23:36:10.1779748Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn_hci.c.o
+2025-09-21T23:36:10.1940163Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_ctrl.c.o
+2025-09-21T23:36:10.2093293Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_dtm.c.o
+2025-09-21T23:36:10.2273871Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci.c.o
+2025-09-21T23:36:10.2438905Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci_ev.c.o
+2025-09-21T23:36:10.2553591Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_iso.c.o
+2025-09-21T23:36:10.2723649Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rand.c.o
+2025-09-21T23:36:10.2885863Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_resolv.c.o
+2025-09-21T23:36:10.3034854Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rfmgmt.c.o
+2025-09-21T23:36:10.3198150Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_scan.c.o
+2025-09-21T23:36:10.3364168Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sched.c.o
+2025-09-21T23:36:10.3539994Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_supp_cmd.c.o
+2025-09-21T23:36:10.3705582Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sync.c.o
+2025-09-21T23:36:10.3897346Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_trace.c.o
+2025-09-21T23:36:10.4080292Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_utils.c.o
+2025-09-21T23:36:10.4246349Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_whitelist.c.o
+2025-09-21T23:36:10.4488047Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_hw.c.o
+2025-09-21T23:36:10.4679286Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_phy.c.o
+2025-09-21T23:36:10.4900482Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_hw.c.o
+2025-09-21T23:36:10.5078758Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy.c.o
+2025-09-21T23:36:10.5214125Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy_trace.c.o
+2025-09-21T23:36:10.5792688Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/access.c.o
+2025-09-21T23:36:10.6116286Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/adv.c.o
+2025-09-21T23:36:10.6261975Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/aes-ccm.c.o
+2025-09-21T23:36:10.6415762Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/app_keys.c.o
+2025-09-21T23:36:10.6561931Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/beacon.c.o
+2025-09-21T23:36:10.6712756Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/cdb.c.o
+2025-09-21T23:36:10.6879106Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg.c.o
+2025-09-21T23:36:10.7034121Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_cli.c.o
+2025-09-21T23:36:10.7189734Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_srv.c.o
+2025-09-21T23:36:10.7413238Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/crypto.c.o
+2025-09-21T23:36:10.7585717Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/friend.c.o
+2025-09-21T23:36:10.7711215Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/glue.c.o
+2025-09-21T23:36:10.7875196Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_cli.c.o
+2025-09-21T23:36:10.8028330Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_srv.c.o
+2025-09-21T23:36:10.8184595Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/heartbeat.c.o
+2025-09-21T23:36:10.8343543Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/light_model.c.o
+2025-09-21T23:36:10.8488623Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/lpn.c.o
+2025-09-21T23:36:10.8655484Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/mesh.c.o
+2025-09-21T23:36:10.8796674Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_cli.c.o
+2025-09-21T23:36:10.8967296Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_srv.c.o
+2025-09-21T23:36:10.9118734Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/net.c.o
+2025-09-21T23:36:10.9293046Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/nodes.c.o
+2025-09-21T23:36:10.9501609Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_adv.c.o
+2025-09-21T23:36:10.9647607Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_gatt.c.o
+2025-09-21T23:36:10.9805156Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov.c.o
+2025-09-21T23:36:10.9962296Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov_device.c.o
+2025-09-21T23:36:11.0119315Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/provisioner.c.o
+2025-09-21T23:36:11.0359674Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/proxy.c.o
+2025-09-21T23:36:11.0536154Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/rpl.c.o
+2025-09-21T23:36:11.0679064Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/settings.c.o
+2025-09-21T23:36:11.0870100Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/shell.c.o
+2025-09-21T23:36:11.1033043Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/subnet.c.o
+2025-09-21T23:36:11.1200342Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/mesh/src/transport.c.o
+2025-09-21T23:36:11.1393701Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/services/ans/src/ble_svc_ans.c.o
+2025-09-21T23:36:11.1585581Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/services/bas/src/ble_svc_bas.c.o
+2025-09-21T23:36:11.1824951Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/services/dis/src/ble_svc_dis.c.o
+2025-09-21T23:36:11.2069452Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/services/gap/src/ble_svc_gap.c.o
+2025-09-21T23:36:11.3164508Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/services/gatt/src/ble_svc_gatt.c.o
+2025-09-21T23:36:11.3422397Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/services/ias/src/ble_svc_ias.c.o
+2025-09-21T23:36:11.3667716Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/services/ipss/src/ble_svc_ipss.c.o
+2025-09-21T23:36:11.3946992Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/services/lls/src/ble_svc_lls.c.o
+2025-09-21T23:36:11.4914463Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_att.c.o
+2025-09-21T23:36:11.5176307Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_att_clt.c.o
+2025-09-21T23:36:11.5383938Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_att_cmd.c.o
+2025-09-21T23:36:11.5712834Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_att_svr.c.o
+2025-09-21T23:36:11.6954653Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_eddystone.c.o
+2025-09-21T23:36:11.7284967Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_gap.c.o
+2025-09-21T23:36:11.7522671Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_gattc.c.o
+2025-09-21T23:36:11.8343270Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts.c.o
+2025-09-21T23:36:11.8834813Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts_lcl.c.o
+2025-09-21T23:36:12.0494136Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs.c.o
+2025-09-21T23:36:12.0728534Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_adv.c.o
+2025-09-21T23:36:12.0928446Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_atomic.c.o
+2025-09-21T23:36:12.1153382Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_cfg.c.o
+2025-09-21T23:36:12.2572932Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_conn.c.o
+2025-09-21T23:36:12.2729322Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_flow.c.o
+2025-09-21T23:36:12.2976371Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci.c.o
+2025-09-21T23:36:12.3073226Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_cmd.c.o
+2025-09-21T23:36:12.4472089Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_evt.c.o
+2025-09-21T23:36:12.4671066Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_util.c.o
+2025-09-21T23:36:12.4870323Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_id.c.o
+2025-09-21T23:36:12.5103100Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_log.c.o
+2025-09-21T23:36:12.6453658Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mbuf.c.o
+2025-09-21T23:36:12.6616390Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_misc.c.o
+2025-09-21T23:36:12.6854763Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mqueue.c.o
+2025-09-21T23:36:12.7065559Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_periodic_sync.c.o
+2025-09-21T23:36:12.8185979Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_pvcy.c.o
+2025-09-21T23:36:12.8504888Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_resolv.c.o
+2025-09-21T23:36:12.8712832Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_shutdown.c.o
+2025-09-21T23:36:12.8873118Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_startup.c.o
+2025-09-21T23:36:13.0436302Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_stop.c.o
+2025-09-21T23:36:13.0627076Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_ibeacon.c.o
+2025-09-21T23:36:13.0754837Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap.c.o
+2025-09-21T23:36:13.0924642Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_coc.c.o
+2025-09-21T23:36:13.2174064Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig.c.o
+2025-09-21T23:36:13.2382183Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig_cmd.c.o
+2025-09-21T23:36:13.2621330Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_monitor.c.o
+2025-09-21T23:36:13.2873702Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_sm.c.o
+2025-09-21T23:36:13.3170605Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_alg.c.o
+2025-09-21T23:36:13.4112581Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_cmd.c.o
+2025-09-21T23:36:13.4325567Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_lgcy.c.o
+2025-09-21T23:36:13.5138501Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_sc.c.o
+2025-09-21T23:36:13.5604833Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_store.c.o
+2025-09-21T23:36:13.5890668Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_store_util.c.o
+2025-09-21T23:36:13.6178975Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/src/ble_uuid.c.o
+2025-09-21T23:36:13.7276378Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config.c.o
+2025-09-21T23:36:13.7532669Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config_conf.c.o
+2025-09-21T23:36:13.7779409Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_nvs.c.o
+2025-09-21T23:36:13.8055484Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/host/util/src/addr.c.o
+2025-09-21T23:36:13.8395495Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/nimble/transport/ram/src/ble_hci_ram.c.o
+2025-09-21T23:36:13.8832967Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/endian.c.o
+2025-09-21T23:36:13.9144362Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/hal_timer.c.o
+2025-09-21T23:36:13.9692289Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/hal_uart.c.o
+2025-09-21T23:36:13.9881044Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/mem.c.o
+2025-09-21T23:36:14.0189351Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/nimble_port.c.o
+2025-09-21T23:36:14.0351561Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime.c.o
+2025-09-21T23:36:14.0553696Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime_pwr2.c.o
+2025-09-21T23:36:14.1202904Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/os_mbuf.c.o
+2025-09-21T23:36:14.1394816Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/os_mempool.c.o
+2025-09-21T23:36:14.1613058Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/nimble/src/os_msys_init.c.o
+2025-09-21T23:36:14.1912733Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/npl/freertos/src/nimble_port_freertos.c.o
+2025-09-21T23:36:14.3089191Z Compiling .pio/build/station-g2/libeb2/NimBLE-Arduino/nimble/porting/npl/freertos/src/npl_os_freertos.c.o
+2025-09-21T23:36:14.4279160Z Compiling .pio/build/station-g2/libb55/libpax/blescan.cpp.o
+2025-09-21T23:36:14.4439646Z Compiling .pio/build/station-g2/libb55/libpax/bt_hci_common.c.o
+2025-09-21T23:36:14.4605437Z Archiving .pio/build/station-g2/libeb2/libNimBLE-Arduino.a
+2025-09-21T23:36:14.4850160Z Compiling .pio/build/station-g2/libb55/libpax/libpax.cpp.o
+2025-09-21T23:36:14.5470618Z Indexing .pio/build/station-g2/libeb2/libNimBLE-Arduino.a
+2025-09-21T23:36:14.5524329Z Compiling .pio/build/station-g2/libb55/libpax/libpax_api.cpp.o
+2025-09-21T23:36:14.6576336Z Compiling .pio/build/station-g2/libb55/libpax/wifiscan.cpp.o
+2025-09-21T23:36:15.1950090Z Compiling .pio/build/station-g2/lib893/XPowersLib/XPowersLibInterface.cpp.o
+2025-09-21T23:36:15.2166804Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/ButterworthFilter.cpp.o
+2025-09-21T23:36:15.2317267Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/SampleFilter.cpp.o
+2025-09-21T23:36:15.2731389Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebook.c.o
+2025-09-21T23:36:15.2967114Z Archiving .pio/build/station-g2/libb55/libpax.a
+2025-09-21T23:36:15.3047170Z Indexing .pio/build/station-g2/libb55/libpax.a
+2025-09-21T23:36:15.3198319Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookd.c.o
+2025-09-21T23:36:15.3453628Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookdt.c.o
+2025-09-21T23:36:15.3694093Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookge.c.o
+2025-09-21T23:36:15.3832660Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookjnd.c.o
+2025-09-21T23:36:15.4028630Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookjvm.c.o
+2025-09-21T23:36:15.4275311Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebooklspmelvq.c.o
+2025-09-21T23:36:15.4760032Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookmel.c.o
+2025-09-21T23:36:15.5162115Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookres.c.o
+2025-09-21T23:36:15.5446502Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookvq.c.o
+2025-09-21T23:36:15.5653762Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codebookvqanssi.c.o
+2025-09-21T23:36:15.5976783Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/codec2.c.o
+2025-09-21T23:36:15.6770358Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/dump.c.o
+2025-09-21T23:36:15.7877928Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/fifo.c.o
+2025-09-21T23:36:15.8056660Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/interp.c.o
+2025-09-21T23:36:15.8146683Z Archiving .pio/build/station-g2/lib893/libXPowersLib.a
+2025-09-21T23:36:15.8210801Z Indexing .pio/build/station-g2/lib893/libXPowersLib.a
+2025-09-21T23:36:15.8317851Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/kiss_fft.c.o
+2025-09-21T23:36:15.8492202Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/lpc.c.o
+2025-09-21T23:36:15.8992742Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/lsp.c.o
+2025-09-21T23:36:15.9189597Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/nlp.c.o
+2025-09-21T23:36:15.9483145Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/pack.c.o
+2025-09-21T23:36:15.9712418Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/phase.c.o
+2025-09-21T23:36:16.0145271Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/phaseexp.c.o
+2025-09-21T23:36:16.0506239Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/postfilter.c.o
+2025-09-21T23:36:16.0680415Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/quantise.c.o
+2025-09-21T23:36:16.0904548Z Compiling .pio/build/station-g2/lib000/ESP32 Codec2/sine.c.o
+2025-09-21T23:36:16.1679801Z Compiling .pio/build/station-g2/lib47b/Crypto/AES128.cpp.o
+2025-09-21T23:36:16.1900046Z Compiling .pio/build/station-g2/lib47b/Crypto/AES192.cpp.o
+2025-09-21T23:36:16.2308274Z Compiling .pio/build/station-g2/lib47b/Crypto/AES256.cpp.o
+2025-09-21T23:36:16.2542609Z Archiving .pio/build/station-g2/lib000/libESP32 Codec2.a
+2025-09-21T23:36:16.2720280Z Indexing .pio/build/station-g2/lib000/libESP32 Codec2.a
+2025-09-21T23:36:16.2725565Z Compiling .pio/build/station-g2/lib47b/Crypto/AESCommon.cpp.o
+2025-09-21T23:36:16.2954070Z Compiling .pio/build/station-g2/lib47b/Crypto/AESEsp32.cpp.o
+2025-09-21T23:36:16.3156120Z Compiling .pio/build/station-g2/lib47b/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:36:16.3397708Z Compiling .pio/build/station-g2/lib47b/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:36:16.3580446Z Compiling .pio/build/station-g2/lib47b/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:36:16.3825119Z Compiling .pio/build/station-g2/lib47b/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:36:16.4050259Z Compiling .pio/build/station-g2/lib47b/Crypto/BlockCipher.cpp.o
+2025-09-21T23:36:16.4684889Z Compiling .pio/build/station-g2/lib47b/Crypto/CTR.cpp.o
+2025-09-21T23:36:16.4899469Z Compiling .pio/build/station-g2/lib47b/Crypto/ChaCha.cpp.o
+2025-09-21T23:36:16.5145951Z Compiling .pio/build/station-g2/lib47b/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:36:16.5342674Z Compiling .pio/build/station-g2/lib47b/Crypto/Cipher.cpp.o
+2025-09-21T23:36:16.5800684Z Compiling .pio/build/station-g2/lib47b/Crypto/Crypto.cpp.o
+2025-09-21T23:36:16.5996570Z Compiling .pio/build/station-g2/lib47b/Crypto/Curve25519.cpp.o
+2025-09-21T23:36:16.6232957Z Compiling .pio/build/station-g2/lib47b/Crypto/EAX.cpp.o
+2025-09-21T23:36:16.6377806Z Compiling .pio/build/station-g2/lib47b/Crypto/Ed25519.cpp.o
+2025-09-21T23:36:16.6555133Z Compiling .pio/build/station-g2/lib47b/Crypto/GCM.cpp.o
+2025-09-21T23:36:16.7373560Z Compiling .pio/build/station-g2/lib47b/Crypto/GF128.cpp.o
+2025-09-21T23:36:16.7537099Z Compiling .pio/build/station-g2/lib47b/Crypto/GHASH.cpp.o
+2025-09-21T23:36:16.7769161Z Compiling .pio/build/station-g2/lib47b/Crypto/HKDF.cpp.o
+2025-09-21T23:36:16.7972255Z Compiling .pio/build/station-g2/lib47b/Crypto/Hash.cpp.o
+2025-09-21T23:36:16.8563309Z Compiling .pio/build/station-g2/lib47b/Crypto/KeccakCore.cpp.o
+2025-09-21T23:36:16.8717897Z Compiling .pio/build/station-g2/lib47b/Crypto/NoiseSource.cpp.o
+2025-09-21T23:36:16.8959026Z Compiling .pio/build/station-g2/lib47b/Crypto/OMAC.cpp.o
+2025-09-21T23:36:16.9174758Z Compiling .pio/build/station-g2/lib47b/Crypto/P521.cpp.o
+2025-09-21T23:36:16.9378163Z Compiling .pio/build/station-g2/lib47b/Crypto/Poly1305.cpp.o
+2025-09-21T23:36:17.0883314Z Compiling .pio/build/station-g2/lib47b/Crypto/RNG.cpp.o
+2025-09-21T23:36:17.1075331Z Compiling .pio/build/station-g2/lib47b/Crypto/SHA224.cpp.o
+2025-09-21T23:36:17.1208008Z Compiling .pio/build/station-g2/lib47b/Crypto/SHA256.cpp.o
+2025-09-21T23:36:17.1424726Z Compiling .pio/build/station-g2/lib47b/Crypto/SHA3.cpp.o
+2025-09-21T23:36:17.1641358Z Compiling .pio/build/station-g2/lib47b/Crypto/SHA384.cpp.o
+2025-09-21T23:36:17.2184018Z Compiling .pio/build/station-g2/lib47b/Crypto/SHA512.cpp.o
+2025-09-21T23:36:17.2524644Z Compiling .pio/build/station-g2/lib47b/Crypto/SHAKE.cpp.o
+2025-09-21T23:36:17.2732993Z Compiling .pio/build/station-g2/lib47b/Crypto/XOF.cpp.o
+2025-09-21T23:36:17.3282729Z Compiling .pio/build/station-g2/lib47b/Crypto/XTS.cpp.o
+2025-09-21T23:36:17.4736359Z Compiling .pio/build/station-g2/lib937/FS/FS.cpp.o
+2025-09-21T23:36:17.4935569Z Compiling .pio/build/station-g2/lib937/FS/vfs_api.cpp.o
+2025-09-21T23:36:17.6633573Z Compiling .pio/build/station-g2/lib998/SD/SD.cpp.o
+2025-09-21T23:36:17.6850215Z Archiving .pio/build/station-g2/lib47b/libCrypto.a
+2025-09-21T23:36:17.7006643Z Indexing .pio/build/station-g2/lib47b/libCrypto.a
+2025-09-21T23:36:17.7722375Z Compiling .pio/build/station-g2/lib998/SD/sd_diskio.cpp.o
+2025-09-21T23:36:18.2493955Z Compiling .pio/build/station-g2/lib998/SD/sd_diskio_crc.c.o
+2025-09-21T23:36:18.4477046Z Compiling .pio/build/station-g2/libabe/WiFi/WiFi.cpp.o
+2025-09-21T23:36:18.4621352Z Archiving .pio/build/station-g2/lib937/libFS.a
+2025-09-21T23:36:18.4733062Z Indexing .pio/build/station-g2/lib937/libFS.a
+2025-09-21T23:36:18.4782657Z Compiling .pio/build/station-g2/libabe/WiFi/WiFiAP.cpp.o
+2025-09-21T23:36:18.5066080Z Compiling .pio/build/station-g2/libabe/WiFi/WiFiClient.cpp.o
+2025-09-21T23:36:18.5208798Z Archiving .pio/build/station-g2/lib998/libSD.a
+2025-09-21T23:36:18.5275018Z Indexing .pio/build/station-g2/lib998/libSD.a
+2025-09-21T23:36:18.5488015Z Compiling .pio/build/station-g2/libabe/WiFi/WiFiGeneric.cpp.o
+2025-09-21T23:36:19.1820380Z Compiling .pio/build/station-g2/libabe/WiFi/WiFiMulti.cpp.o
+2025-09-21T23:36:19.2315678Z Compiling .pio/build/station-g2/libabe/WiFi/WiFiSTA.cpp.o
+2025-09-21T23:36:19.3703203Z Compiling .pio/build/station-g2/libabe/WiFi/WiFiScan.cpp.o
+2025-09-21T23:36:19.5204355Z Compiling .pio/build/station-g2/libabe/WiFi/WiFiServer.cpp.o
+2025-09-21T23:36:20.0154852Z Compiling .pio/build/station-g2/libabe/WiFi/WiFiUdp.cpp.o
+2025-09-21T23:36:20.2104399Z Compiling .pio/build/station-g2/lib46d/Preferences/Preferences.cpp.o
+2025-09-21T23:36:20.3864281Z Compiling .pio/build/station-g2/libfb1/WiFiClientSecure/WiFiClientSecure.cpp.o
+2025-09-21T23:36:20.4067275Z Compiling .pio/build/station-g2/libfb1/WiFiClientSecure/esp_crt_bundle.c.o
+2025-09-21T23:36:20.5760759Z Compiling .pio/build/station-g2/libfb1/WiFiClientSecure/ssl_client.cpp.o
+2025-09-21T23:36:20.6530649Z Archiving .pio/build/station-g2/libabe/libWiFi.a
+2025-09-21T23:36:20.6660687Z Indexing .pio/build/station-g2/libabe/libWiFi.a
+2025-09-21T23:36:20.9132699Z Compiling .pio/build/station-g2/lib042/HTTPClient/HTTPClient.cpp.o
+2025-09-21T23:36:20.9330156Z Archiving .pio/build/station-g2/lib46d/libPreferences.a
+2025-09-21T23:36:20.9389344Z Indexing .pio/build/station-g2/lib46d/libPreferences.a
+2025-09-21T23:36:21.1080812Z Compiling .pio/build/station-g2/liba0d/WebServer/Parsing.cpp.o
+2025-09-21T23:36:21.2170772Z Compiling .pio/build/station-g2/liba0d/WebServer/WebServer.cpp.o
+2025-09-21T23:36:21.4600580Z Archiving .pio/build/station-g2/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:21.4679925Z Indexing .pio/build/station-g2/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:21.4872555Z Compiling .pio/build/station-g2/liba0d/WebServer/detail/mimetable.cpp.o
+2025-09-21T23:36:21.6966221Z Compiling .pio/build/station-g2/libf52/ESPmDNS/ESPmDNS.cpp.o
+2025-09-21T23:36:22.1404372Z Compiling .pio/build/station-g2/lib917/LittleFS/LittleFS.cpp.o
+2025-09-21T23:36:22.1496991Z Archiving .pio/build/station-g2/lib042/libHTTPClient.a
+2025-09-21T23:36:22.1564298Z Indexing .pio/build/station-g2/lib042/libHTTPClient.a
+2025-09-21T23:36:22.3537768Z Compiling .pio/build/station-g2/lib1cb/AsyncUDP/AsyncUDP.cpp.o
+2025-09-21T23:36:22.3683060Z Archiving .pio/build/station-g2/liba0d/libWebServer.a
+2025-09-21T23:36:22.3762477Z Indexing .pio/build/station-g2/liba0d/libWebServer.a
+2025-09-21T23:36:22.5494701Z Compiling .pio/build/station-g2/lib6cf/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:36:22.5659957Z Archiving .pio/build/station-g2/libf52/libESPmDNS.a
+2025-09-21T23:36:22.5715631Z Indexing .pio/build/station-g2/libf52/libESPmDNS.a
+2025-09-21T23:36:22.5885712Z Compiling .pio/build/station-g2/lib6cf/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:36:22.6375458Z Compiling .pio/build/station-g2/lib6cf/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:36:22.8376063Z Compiling .pio/build/station-g2/lib6cf/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:36:22.8876237Z Compiling .pio/build/station-g2/lib6cf/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:36:22.9029660Z Archiving .pio/build/station-g2/lib917/libLittleFS.a
+2025-09-21T23:36:22.9097230Z Indexing .pio/build/station-g2/lib917/libLittleFS.a
+2025-09-21T23:36:23.0996460Z Compiling .pio/build/station-g2/FrameworkArduino/Esp.cpp.o
+2025-09-21T23:36:23.1288984Z Compiling .pio/build/station-g2/FrameworkArduino/FirmwareMSC.cpp.o
+2025-09-21T23:36:23.1408074Z Archiving .pio/build/station-g2/lib6cf/libAdafruit NeoPixel.a
+2025-09-21T23:36:23.1477204Z Indexing .pio/build/station-g2/lib6cf/libAdafruit NeoPixel.a
+2025-09-21T23:36:23.1485072Z Archiving .pio/build/station-g2/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:23.1545007Z Indexing .pio/build/station-g2/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:23.1643774Z Compiling .pio/build/station-g2/FrameworkArduino/FunctionalInterrupt.cpp.o
+2025-09-21T23:36:23.1962838Z Compiling .pio/build/station-g2/FrameworkArduino/HWCDC.cpp.o
+2025-09-21T23:36:23.4371203Z Compiling .pio/build/station-g2/FrameworkArduino/HardwareSerial.cpp.o
+2025-09-21T23:36:23.5808257Z Compiling .pio/build/station-g2/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:36:23.7818727Z Compiling .pio/build/station-g2/FrameworkArduino/IPv6Address.cpp.o
+2025-09-21T23:36:23.8528593Z Compiling .pio/build/station-g2/FrameworkArduino/MD5Builder.cpp.o
+2025-09-21T23:36:24.1487798Z Compiling .pio/build/station-g2/FrameworkArduino/Print.cpp.o
+2025-09-21T23:36:24.2308183Z Compiling .pio/build/station-g2/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:36:24.4235518Z Compiling .pio/build/station-g2/FrameworkArduino/StreamString.cpp.o
+2025-09-21T23:36:24.5036405Z Compiling .pio/build/station-g2/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:36:24.9223656Z Compiling .pio/build/station-g2/FrameworkArduino/USB.cpp.o
+2025-09-21T23:36:24.9523487Z Compiling .pio/build/station-g2/FrameworkArduino/USBCDC.cpp.o
+2025-09-21T23:36:25.0344096Z Compiling .pio/build/station-g2/FrameworkArduino/USBMSC.cpp.o
+2025-09-21T23:36:25.1585636Z Compiling .pio/build/station-g2/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:36:25.2951324Z Compiling .pio/build/station-g2/FrameworkArduino/WString.cpp.o
+2025-09-21T23:36:25.3145243Z Compiling .pio/build/station-g2/FrameworkArduino/base64.cpp.o
+2025-09-21T23:36:25.3298320Z Compiling .pio/build/station-g2/FrameworkArduino/cbuf.cpp.o
+2025-09-21T23:36:25.3553102Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-adc.c.o
+2025-09-21T23:36:25.4489092Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-bt.c.o
+2025-09-21T23:36:25.5503468Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-cpu.c.o
+2025-09-21T23:36:25.6247361Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-dac.c.o
+2025-09-21T23:36:25.7555370Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-gpio.c.o
+2025-09-21T23:36:25.8028498Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-i2c-slave.c.o
+2025-09-21T23:36:25.9501358Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-i2c.c.o
+2025-09-21T23:36:25.9801241Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-ledc.c.o
+2025-09-21T23:36:26.0251474Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-matrix.c.o
+2025-09-21T23:36:26.0510694Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-misc.c.o
+2025-09-21T23:36:26.1600983Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-psram.c.o
+2025-09-21T23:36:26.1803105Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-rgb-led.c.o
+2025-09-21T23:36:26.2056343Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-rmt.c.o
+2025-09-21T23:36:26.2639031Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-sigmadelta.c.o
+2025-09-21T23:36:26.3435547Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-spi.c.o
+2025-09-21T23:36:26.3734799Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-time.c.o
+2025-09-21T23:36:26.4171619Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-timer.c.o
+2025-09-21T23:36:26.4833360Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-tinyusb.c.o
+2025-09-21T23:36:26.5897326Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-touch.c.o
+2025-09-21T23:36:26.6175525Z Compiling .pio/build/station-g2/FrameworkArduino/esp32-hal-uart.c.o
+2025-09-21T23:36:26.6385836Z Compiling .pio/build/station-g2/FrameworkArduino/firmware_msc_fat.c.o
+2025-09-21T23:36:26.7603003Z Compiling .pio/build/station-g2/FrameworkArduino/libb64/cdecode.c.o
+2025-09-21T23:36:26.7846122Z Compiling .pio/build/station-g2/FrameworkArduino/libb64/cencode.c.o
+2025-09-21T23:36:26.8081893Z Compiling .pio/build/station-g2/FrameworkArduino/main.cpp.o
+2025-09-21T23:36:26.8331892Z Compiling .pio/build/station-g2/FrameworkArduino/stdlib_noniso.c.o
+2025-09-21T23:36:26.8584131Z Compiling .pio/build/station-g2/FrameworkArduino/wiring_pulse.c.o
+2025-09-21T23:36:26.8805971Z Compiling .pio/build/station-g2/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:36:27.2750857Z Archiving .pio/build/station-g2/libFrameworkArduino.a
+2025-09-21T23:36:27.2925378Z Indexing .pio/build/station-g2/libFrameworkArduino.a
+2025-09-21T23:36:27.3460371Z Linking .pio/build/station-g2/firmware.elf
+2025-09-21T23:36:54.3155309Z /pio/workspace/libdeps/station-g2/Crypto/AESEsp32.cpp:33:5: warning: type of 'esp_aes_setkey' does not match original declaration [-Wlto-type-mismatch]
+2025-09-21T23:36:54.3156399Z  int esp_aes_setkey(unsigned char *ctx, const unsigned char *key,
+2025-09-21T23:36:54.3156879Z      ^
+2025-09-21T23:36:54.3157969Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: 'esp_aes_setkey' was previously declared here
+2025-09-21T23:36:54.3159418Z  int mbedtls_aes_setkey_dec(mbedtls_aes_context *ctx, const unsigned char *key,
+2025-09-21T23:36:54.3159968Z      ^
+2025-09-21T23:36:54.3161134Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: code may be misoptimized unless -fno-strict-aliasing is used
+2025-09-21T23:36:54.3679325Z Retrieving maximum program size .pio/build/station-g2/firmware.elf
+2025-09-21T23:36:54.3681610Z Checking size .pio/build/station-g2/firmware.elf
+2025-09-21T23:36:54.3747267Z Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+2025-09-21T23:36:54.3747995Z RAM:   [====      ]  42.6% (used 139520 bytes from 327680 bytes)
+2025-09-21T23:36:54.3748526Z Flash: [===       ]  31.5% (used 2064009 bytes from 6553600 bytes)
+2025-09-21T23:36:54.3761607Z Building .pio/build/station-g2/firmware.bin
+2025-09-21T23:36:54.5393787Z esptool.py v4.5.1
+2025-09-21T23:36:54.5394134Z Creating esp32s3 image...
+2025-09-21T23:36:54.5394448Z Merged 3 ELF sections
+2025-09-21T23:36:54.5394772Z Successfully created esp32s3 image.
+2025-09-21T23:36:54.5488551Z esp32_create_combined_bin([".pio/build/station-g2/firmware.bin"], [".pio/build/station-g2/firmware.elf"])
+2025-09-21T23:36:54.5489411Z Generating combined binary for serial flashing
+2025-09-21T23:36:54.5494791Z     Offset | File
+2025-09-21T23:36:54.5495533Z  -  0x0000 | /workspace/.pio/build/station-g2/bootloader.bin
+2025-09-21T23:36:54.5497148Z  -  0x8000 | /workspace/.pio/build/station-g2/partitions.bin
+2025-09-21T23:36:54.5498189Z  -  0xe000 | /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin
+2025-09-21T23:36:54.5498947Z  - 0x10000 | /workspace/.pio/build/station-g2/firmware.bin
+2025-09-21T23:36:54.5501378Z Using esptool.py arguments: --chip esp32s3 merge_bin -o /workspace/.pio/build/station-g2/firmware.factory.bin --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0000 /workspace/.pio/build/station-g2/bootloader.bin 0x8000 /workspace/.pio/build/station-g2/partitions.bin 0xe000 /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin 0x10000 /workspace/.pio/build/station-g2/firmware.bin
+2025-09-21T23:36:54.5545125Z esptool.py v4.5.1
+2025-09-21T23:36:54.5565604Z Wrote 0x208030 bytes to file /workspace/.pio/build/station-g2/firmware.factory.bin, ready to flash to offset 0x0
+2025-09-21T23:36:55.2730064Z ======================== [SUCCESS] Took 178.15 seconds ========================
+2025-09-21T23:36:55.2730535Z 
+2025-09-21T23:36:55.2735465Z Environment    Status    Duration
+2025-09-21T23:36:55.2735785Z -------------  --------  ------------
+2025-09-21T23:36:55.2736127Z station-g2     SUCCESS   00:02:58.146
+2025-09-21T23:36:55.2736421Z ========================= 1 succeeded in 00:02:58.146 =========================
+2025-09-21T23:36:55.3179202Z Copying ESP32 bin file
+2025-09-21T23:36:55.3207124Z Copying ESP32 update bin file
+2025-09-21T23:36:55.3232527Z Building Filesystem for ESP32 targets
+2025-09-21T23:36:56.0783084Z Processing station-g2 (board: station-g2; platform: 
+2025-09-21T23:36:56.0784124Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:36:56.0784742Z --------------------------------------------------------------------------------
+2025-09-21T23:36:57.1446676Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:36:57.1607761Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/station-g2.html
+2025-09-21T23:36:57.1608747Z PLATFORM: Espressif 32 (6.11.0) > BQ Station G2
+2025-09-21T23:36:57.1609284Z HARDWARE: ESP32S3 240MHz, 320KB RAM, 16MB Flash
+2025-09-21T23:36:57.1610734Z DEBUG: Current (esp-builtin) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:36:57.1612331Z PACKAGES: 
+2025-09-21T23:36:57.1612775Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:36:57.1613349Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:36:57.1613804Z  - tool-mklittlefs @ 1.203.210628 (2.3) 
+2025-09-21T23:36:57.1614267Z  - tool-openocd-esp32 @ 2.1100.20220706 (11.0) 
+2025-09-21T23:36:57.1614768Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:36:57.1615295Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:36:57.1932587Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:36:57.1933233Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:36:57.3212886Z [nanopb] No generation needed.
+2025-09-21T23:36:57.7918422Z Found 96 compatible libraries
+2025-09-21T23:36:57.7918882Z Scanning dependencies...
+2025-09-21T23:37:08.6181418Z Dependency Graph
+2025-09-21T23:37:08.6182378Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:37:08.6183546Z |-- OneButton @ 2.6.1
+2025-09-21T23:37:08.6185956Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:37:08.6187011Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:37:08.6188914Z |-- ArduinoThread @ 0.0.0+20250919053829
+2025-09-21T23:37:08.6190851Z |-- Nanopb @ 0.4.91
+2025-09-21T23:37:08.6192977Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:37:08.6194410Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:37:08.6197043Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:37:08.6198125Z |-- NTPClient @ 3.2.1
+2025-09-21T23:37:08.6200836Z |-- Syslog @ 2.0.0
+2025-09-21T23:37:08.6202197Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:37:08.6203709Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:37:08.6207077Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:37:08.6207781Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:37:08.6208521Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:37:08.6210792Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:37:08.6212820Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:37:08.6215927Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:37:08.6216392Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:37:08.6218479Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:37:08.6219923Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:37:08.6221987Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:37:08.6223931Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:37:08.6225694Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:37:08.6227954Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:37:08.6229071Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:37:08.6231939Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:37:08.6234097Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:37:08.6234501Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:37:08.6236084Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:37:08.6237899Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:37:08.6240235Z |-- INA226 @ 0.6.4
+2025-09-21T23:37:08.6242235Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:37:08.6245232Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:37:08.6245826Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:37:08.6248115Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:37:08.6249589Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:37:08.6250968Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:37:08.6253328Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:37:08.6255127Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:37:08.6256724Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:37:08.6258811Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:37:08.6260335Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:37:08.6262448Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:37:08.6264361Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:37:08.6265283Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:37:08.6267646Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:37:08.6268636Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:37:08.6271968Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:37:08.6272467Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:37:08.6274850Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:37:08.6275859Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:37:08.6278237Z |-- RadioLib @ 7.3.0
+2025-09-21T23:37:08.6279348Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:37:08.6281232Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:37:08.6282889Z |-- libpax @ 1.1.0
+2025-09-21T23:37:08.6284870Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:37:08.6286053Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:37:08.6288279Z |-- Crypto @ 0.4.0
+2025-09-21T23:37:08.6290006Z |-- SD @ 2.0.0
+2025-09-21T23:37:08.6290327Z |-- SPI @ 2.0.0
+2025-09-21T23:37:08.6291389Z |-- WiFi @ 2.0.0
+2025-09-21T23:37:08.6291955Z |-- Wire @ 2.0.0
+2025-09-21T23:37:08.6298043Z |-- Preferences @ 2.0.0
+2025-09-21T23:37:08.6298411Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:37:08.6298793Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:37:08.6299183Z |-- WebServer @ 2.0.0
+2025-09-21T23:37:08.6299609Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:37:08.6299971Z |-- LittleFS @ 2.0.0
+2025-09-21T23:37:08.6300484Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:37:08.6300848Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:37:09.2162874Z Building in release mode
+2025-09-21T23:37:09.3367661Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on station-g2
+2025-09-21T23:37:09.3383156Z Using flags:
+2025-09-21T23:37:09.3383962Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:37:09.3384465Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:37:09.3384980Z -DAPP_ENV=station-g2
+2025-09-21T23:37:09.3385458Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:37:09.3386049Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:37:09.3387176Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:37:09.3388624Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:37:09.3486770Z Building FS image from 'data' directory to .pio/build/station-g2/littlefs.bin
+2025-09-21T23:37:09.3524031Z /static/.gitkeep
+2025-09-21T23:37:09.5147791Z ========================= [SUCCESS] Took 13.44 seconds =========================
+2025-09-21T23:37:09.5148270Z 
+2025-09-21T23:37:09.5153348Z Environment    Status    Duration
+2025-09-21T23:37:09.5154006Z -------------  --------  ------------
+2025-09-21T23:37:09.5155065Z station-g2     SUCCESS   00:00:13.436
+2025-09-21T23:37:09.5155566Z ========================= 1 succeeded in 00:00:13.436 =========================
+2025-09-21T23:37:09.5524002Z Build artifacts are located at: /workspace/.pio/build
+2025-09-21T23:37:09.5525142Z Downloading OTA firmware firmware-s3.bin from https://github.com/meshtastic/firmware-ota
+2025-09-21T23:37:09.5597295Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-09-21T23:37:09.5597947Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-09-21T23:37:09.5598291Z 
+2025-09-21T23:37:09.6883141Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:09.6884889Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:09.6885608Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:09.7256534Z 
+2025-09-21T23:37:09.7257421Z 100  494k  100  494k    0     0  2979k      0 --:--:-- --:--:-- --:--:-- 2979k
+2025-09-21T23:37:09.8825038Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:37:09.8825333Z with:
+2025-09-21T23:37:09.8825571Z   name: firmware-esp32s3-station-g2-2.7.10.3d51287.zip
+2025-09-21T23:37:09.8825867Z   overwrite: true
+2025-09-21T23:37:09.8826171Z   path: release/*.bin
+release/*.elf
+release/*.uf2
+release/*.hex
+release/*-ota.zip
+
+2025-09-21T23:37:09.8826531Z   if-no-files-found: warn
+2025-09-21T23:37:09.8826740Z   compression-level: 6
+2025-09-21T23:37:09.8826960Z   include-hidden-files: false
+2025-09-21T23:37:09.8827164Z ##[endgroup]
+2025-09-21T23:37:10.1063869Z With the provided path, there will be 5 files uploaded
+2025-09-21T23:37:10.2015954Z Artifact name is valid!
+2025-09-21T23:37:10.2017156Z Root directory input is valid!
+2025-09-21T23:37:10.2280929Z Beginning upload of artifact content to blob storage
+2025-09-21T23:37:10.9892607Z Uploaded bytes 8388608
+2025-09-21T23:37:11.2668115Z Uploaded bytes 10802421
+2025-09-21T23:37:11.2824795Z Finished uploading artifact content to blob storage!
+2025-09-21T23:37:11.2828808Z SHA256 digest of uploaded artifact zip is 8e0ccd3b3a279311df61605295e5a7d433e7ddcd3ae8512b4905d504efd4cce7
+2025-09-21T23:37:11.2829642Z Finalizing artifact upload
+2025-09-21T23:37:11.3529267Z Artifact firmware-esp32s3-station-g2-2.7.10.3d51287.zip.zip successfully finalized. Artifact ID 4067354721
+2025-09-21T23:37:11.3532271Z Artifact firmware-esp32s3-station-g2-2.7.10.3d51287.zip has been successfully uploaded! Final size is 10802421 bytes. Artifact ID is 4067354721
+2025-09-21T23:37:11.3539608Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067354721
+2025-09-21T23:37:11.3716815Z Post job cleanup.
+2025-09-21T23:37:11.4508770Z [command]/usr/bin/git version
+2025-09-21T23:37:11.4546186Z git version 2.51.0
+2025-09-21T23:37:11.4584744Z Temporarily overriding HOME='/home/runner/work/_temp/0c3ec917-2d99-4c5e-a34f-250130191774' before making global git config changes
+2025-09-21T23:37:11.4585973Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:37:11.4590439Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:37:11.4625870Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:37:11.4659805Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:37:11.4876836Z Entering 'meshtestic'
+2025-09-21T23:37:11.4919251Z Entering 'protobufs'
+2025-09-21T23:37:11.4973680Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:37:11.4996027Z http.https://github.com/.extraheader
+2025-09-21T23:37:11.5006345Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:37:11.5036574Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:37:11.5242170Z Entering 'meshtestic'
+2025-09-21T23:37:11.5266524Z http.https://github.com/.extraheader
+2025-09-21T23:37:11.5299044Z Entering 'protobufs'
+2025-09-21T23:37:11.5323220Z http.https://github.com/.extraheader
+2025-09-21T23:37:11.5489524Z Cleaning up orphan processes

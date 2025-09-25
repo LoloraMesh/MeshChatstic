@@ -1,0 +1,1476 @@
+﻿2025-09-21T23:33:17.8920417Z Current runner version: '2.328.0'
+2025-09-21T23:33:17.8943850Z ##[group]Runner Image Provisioner
+2025-09-21T23:33:17.8944622Z Hosted Compute Agent
+2025-09-21T23:33:17.8945132Z Version: 20250829.383
+2025-09-21T23:33:17.8946016Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:33:17.8946667Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:33:17.8947255Z ##[endgroup]
+2025-09-21T23:33:17.8947867Z ##[group]Operating System
+2025-09-21T23:33:17.8948395Z Ubuntu
+2025-09-21T23:33:17.8948857Z 24.04.3
+2025-09-21T23:33:17.8949350Z LTS
+2025-09-21T23:33:17.8949800Z ##[endgroup]
+2025-09-21T23:33:17.8950254Z ##[group]Runner Image
+2025-09-21T23:33:17.8950860Z Image: ubuntu-24.04
+2025-09-21T23:33:17.8951322Z Version: 20250907.24.1
+2025-09-21T23:33:17.8952323Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:33:17.8953878Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:33:17.8954812Z ##[endgroup]
+2025-09-21T23:33:17.8957348Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:33:17.8959222Z Actions: read
+2025-09-21T23:33:17.8959834Z Attestations: read
+2025-09-21T23:33:17.8960348Z Checks: read
+2025-09-21T23:33:17.8960800Z Contents: read
+2025-09-21T23:33:17.8961379Z Deployments: read
+2025-09-21T23:33:17.8961884Z Discussions: read
+2025-09-21T23:33:17.8962336Z Issues: read
+2025-09-21T23:33:17.8962854Z Metadata: read
+2025-09-21T23:33:17.8963301Z Models: read
+2025-09-21T23:33:17.8963780Z Packages: read
+2025-09-21T23:33:17.8964296Z Pages: read
+2025-09-21T23:33:17.8964791Z PullRequests: read
+2025-09-21T23:33:17.8965525Z RepositoryProjects: read
+2025-09-21T23:33:17.8966190Z SecurityEvents: read
+2025-09-21T23:33:17.8966798Z Statuses: read
+2025-09-21T23:33:17.8967251Z ##[endgroup]
+2025-09-21T23:33:17.8969663Z Secret source: Actions
+2025-09-21T23:33:17.8970661Z Prepare workflow directory
+2025-09-21T23:33:17.9284493Z Prepare all required actions
+2025-09-21T23:33:17.9321601Z Getting action download info
+2025-09-21T23:33:18.2457721Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:33:18.4513422Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:33:18.6047387Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:33:19.1349076Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:33:19.1355580Z ##[group] Inputs
+2025-09-21T23:33:19.1356596Z   version: 2.7.10.3d51287
+2025-09-21T23:33:19.1357597Z   platform: nrf52840
+2025-09-21T23:33:19.1358535Z   pio_env: rak4631
+2025-09-21T23:33:19.1359437Z ##[endgroup]
+2025-09-21T23:33:19.1360585Z Complete job name: build-nrf52840 (rak4631) / build-nrf52840
+2025-09-21T23:33:19.2074539Z ##[group]Run actions/checkout@v5
+2025-09-21T23:33:19.2076098Z with:
+2025-09-21T23:33:19.2076857Z   submodules: recursive
+2025-09-21T23:33:19.2077757Z   ref: develop
+2025-09-21T23:33:19.2078657Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:19.2080026Z   token: ***
+2025-09-21T23:33:19.2080802Z   ssh-strict: true
+2025-09-21T23:33:19.2081602Z   ssh-user: git
+2025-09-21T23:33:19.2082414Z   persist-credentials: true
+2025-09-21T23:33:19.2083308Z   clean: true
+2025-09-21T23:33:19.2084124Z   sparse-checkout-cone-mode: true
+2025-09-21T23:33:19.2085089Z   fetch-depth: 1
+2025-09-21T23:33:19.2086004Z   fetch-tags: false
+2025-09-21T23:33:19.2086797Z   show-progress: true
+2025-09-21T23:33:19.2087615Z   lfs: false
+2025-09-21T23:33:19.2088376Z   set-safe-directory: true
+2025-09-21T23:33:19.2089517Z ##[endgroup]
+2025-09-21T23:33:19.3011996Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:19.3015067Z ##[group]Getting Git version info
+2025-09-21T23:33:19.3016779Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:19.3019032Z [command]/usr/bin/git version
+2025-09-21T23:33:19.3065208Z git version 2.51.0
+2025-09-21T23:33:19.3086749Z ##[endgroup]
+2025-09-21T23:33:19.3099221Z Temporarily overriding HOME='/home/runner/work/_temp/977294b8-3eaa-4224-b81b-289e860c8869' before making global git config changes
+2025-09-21T23:33:19.3102073Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:33:19.3105489Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:33:19.3139292Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:19.3142985Z ##[group]Initializing the repository
+2025-09-21T23:33:19.3147445Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:33:19.3246569Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:33:19.3249849Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:33:19.3252454Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:33:19.3253899Z hint:
+2025-09-21T23:33:19.3254899Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:33:19.3256399Z hint:
+2025-09-21T23:33:19.3257952Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:33:19.3259992Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:33:19.3261759Z hint:
+2025-09-21T23:33:19.3262608Z hint: 	git branch -m <name>
+2025-09-21T23:33:19.3263542Z hint:
+2025-09-21T23:33:19.3264810Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:33:19.3267107Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:33:19.3270710Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:19.3301639Z ##[endgroup]
+2025-09-21T23:33:19.3303721Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:33:19.3305095Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:33:19.3332370Z ##[endgroup]
+2025-09-21T23:33:19.3334043Z ##[group]Setting up auth
+2025-09-21T23:33:19.3338315Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:33:19.3370901Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:33:19.3690344Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:33:19.3723962Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:33:19.3940852Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:19.3973673Z ##[endgroup]
+2025-09-21T23:33:19.3975044Z ##[group]Fetching the repository
+2025-09-21T23:33:19.3983199Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:33:19.9860152Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:19.9861713Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:33:19.9893370Z ##[endgroup]
+2025-09-21T23:33:19.9895002Z ##[group]Determining the checkout info
+2025-09-21T23:33:19.9899497Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:33:19.9923021Z   origin/develop
+2025-09-21T23:33:19.9929755Z ##[endgroup]
+2025-09-21T23:33:19.9933419Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:33:19.9976012Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:33:20.0004366Z ##[group]Checking out the ref
+2025-09-21T23:33:20.0008468Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:33:20.1041315Z Switched to a new branch 'develop'
+2025-09-21T23:33:20.1043297Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:33:20.1052659Z ##[endgroup]
+2025-09-21T23:33:20.1054684Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:33:20.1058715Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:20.1131469Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:33:20.1160572Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:33:20.1190504Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:33:20.1217030Z ##[endgroup]
+2025-09-21T23:33:20.1219459Z ##[group]Fetching submodules
+2025-09-21T23:33:20.1221268Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:33:20.1444728Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:33:20.1659000Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:33:20.1663662Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:33:20.1689918Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:33:20.3733435Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:33:20.6048258Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:33:20.6164183Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:33:20.6197418Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:33:20.6411258Z Entering 'meshtestic'
+2025-09-21T23:33:20.6447258Z Entering 'protobufs'
+2025-09-21T23:33:20.6491664Z ##[endgroup]
+2025-09-21T23:33:20.6492241Z ##[group]Persisting credentials for submodules
+2025-09-21T23:33:20.6497790Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:33:20.6703247Z Entering 'meshtestic'
+2025-09-21T23:33:20.6744538Z Entering 'protobufs'
+2025-09-21T23:33:20.6796438Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:33:20.6999578Z Entering 'meshtestic'
+2025-09-21T23:33:20.7036388Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:33:20.7054481Z Entering 'protobufs'
+2025-09-21T23:33:20.7091805Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:33:20.7133508Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:33:20.7337951Z Entering 'meshtestic'
+2025-09-21T23:33:20.7374588Z Entering 'protobufs'
+2025-09-21T23:33:20.7422078Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:33:20.7627462Z Entering 'meshtestic'
+2025-09-21T23:33:20.7664215Z Entering 'protobufs'
+2025-09-21T23:33:20.7708517Z ##[endgroup]
+2025-09-21T23:33:20.7742694Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:33:20.7763993Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:33:20.8000945Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:33:20.8001315Z with:
+2025-09-21T23:33:20.8001538Z   pio_platform: nrf52840
+2025-09-21T23:33:20.8001790Z   pio_env: rak4631
+2025-09-21T23:33:20.8002017Z   pio_target: build
+2025-09-21T23:33:20.8002243Z ##[endgroup]
+2025-09-21T23:33:20.8089597Z ##[group]Run docker run --rm \
+2025-09-21T23:33:20.8090172Z [36;1mdocker run --rm \[0m
+2025-09-21T23:33:20.8090471Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:33:20.8090757Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:33:20.8091030Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:33:20.8091291Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:33:20.8091567Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:33:20.8091844Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:33:20.8092154Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:33:20.8092465Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:33:20.8092823Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:33:20.8093233Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-nrf52840[0m
+2025-09-21T23:33:20.8153928Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:33:20.8154310Z env:
+2025-09-21T23:33:20.8154513Z   MT_ENV: rak4631
+2025-09-21T23:33:20.8154749Z   MT_PLATFORM: nrf52840
+2025-09-21T23:33:20.8155009Z   MT_TARGET: build
+2025-09-21T23:33:20.8155397Z   MT_OTA_FIRMWARE_SOURCE: 
+2025-09-21T23:33:20.8155659Z   MT_OTA_FIRMWARE_TARGET: 
+2025-09-21T23:33:20.8221588Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:33:20.8221971Z ##[endgroup]
+2025-09-21T23:33:20.9127889Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-nrf52840' locally
+2025-09-21T23:33:21.0889801Z master-nrf52840: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:33:21.1319470Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:33:21.1339524Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:33:21.1340782Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:33:21.1341391Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:33:21.1341946Z 815e87185931: Pulling fs layer
+2025-09-21T23:33:21.1342472Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:33:21.1342924Z da9989870cf6: Pulling fs layer
+2025-09-21T23:33:21.1343364Z 9900591a02d8: Pulling fs layer
+2025-09-21T23:33:21.1343819Z d47368ccdb52: Pulling fs layer
+2025-09-21T23:33:21.1344261Z 0b0a90cba924: Pulling fs layer
+2025-09-21T23:33:21.1344685Z f1d53622d37c: Pulling fs layer
+2025-09-21T23:33:21.1345102Z b4174266f6e9: Pulling fs layer
+2025-09-21T23:33:21.1345813Z b789b525833f: Pulling fs layer
+2025-09-21T23:33:21.1346251Z d9b2841dabc1: Pulling fs layer
+2025-09-21T23:33:21.1346511Z 9900591a02d8: Waiting
+2025-09-21T23:33:21.1346747Z 71c11f7c6832: Waiting
+2025-09-21T23:33:21.1346973Z d47368ccdb52: Waiting
+2025-09-21T23:33:21.1347198Z da9989870cf6: Waiting
+2025-09-21T23:33:21.1347416Z 0b0a90cba924: Waiting
+2025-09-21T23:33:21.1347635Z b789b525833f: Waiting
+2025-09-21T23:33:21.1347848Z f1d53622d37c: Waiting
+2025-09-21T23:33:21.1348065Z d9b2841dabc1: Waiting
+2025-09-21T23:33:21.1348302Z b4174266f6e9: Waiting
+2025-09-21T23:33:21.1348517Z c611f5bb386b: Waiting
+2025-09-21T23:33:21.1348732Z 815e87185931: Waiting
+2025-09-21T23:33:21.3501134Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:33:21.3501882Z ccbbb2080a06: Download complete
+2025-09-21T23:33:21.3559546Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:33:21.3560147Z 8fb375ec14f3: Download complete
+2025-09-21T23:33:21.4157268Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:33:21.4162566Z 7d5073558d5a: Download complete
+2025-09-21T23:33:21.4461780Z 815e87185931: Verifying Checksum
+2025-09-21T23:33:21.4464874Z 815e87185931: Download complete
+2025-09-21T23:33:21.5648346Z da9989870cf6: Verifying Checksum
+2025-09-21T23:33:21.5652121Z da9989870cf6: Download complete
+2025-09-21T23:33:21.5900470Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:33:21.5901073Z 71c11f7c6832: Download complete
+2025-09-21T23:33:21.6549694Z d47368ccdb52: Verifying Checksum
+2025-09-21T23:33:21.6550432Z d47368ccdb52: Download complete
+2025-09-21T23:33:21.7932731Z 9900591a02d8: Verifying Checksum
+2025-09-21T23:33:21.7933305Z 9900591a02d8: Download complete
+2025-09-21T23:33:22.0885016Z 0b0a90cba924: Verifying Checksum
+2025-09-21T23:33:22.0885802Z 0b0a90cba924: Download complete
+2025-09-21T23:33:22.1475969Z b4174266f6e9: Verifying Checksum
+2025-09-21T23:33:22.1478804Z b4174266f6e9: Download complete
+2025-09-21T23:33:22.1996894Z b789b525833f: Verifying Checksum
+2025-09-21T23:33:22.1998557Z b789b525833f: Download complete
+2025-09-21T23:33:22.2206376Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:33:22.2207017Z c611f5bb386b: Download complete
+2025-09-21T23:33:22.2465673Z d9b2841dabc1: Verifying Checksum
+2025-09-21T23:33:22.2466240Z d9b2841dabc1: Download complete
+2025-09-21T23:33:23.5456511Z f1d53622d37c: Verifying Checksum
+2025-09-21T23:33:23.5456946Z f1d53622d37c: Download complete
+2025-09-21T23:33:23.6584578Z 8fb375ec14f3: Pull complete
+2025-09-21T23:33:27.0635152Z ccbbb2080a06: Pull complete
+2025-09-21T23:33:29.3525436Z 7d5073558d5a: Pull complete
+2025-09-21T23:33:35.7271158Z c611f5bb386b: Pull complete
+2025-09-21T23:33:35.9999958Z 815e87185931: Pull complete
+2025-09-21T23:33:36.7213259Z 71c11f7c6832: Pull complete
+2025-09-21T23:33:36.7346341Z da9989870cf6: Pull complete
+2025-09-21T23:33:37.7933900Z 9900591a02d8: Pull complete
+2025-09-21T23:33:37.8045676Z d47368ccdb52: Pull complete
+2025-09-21T23:33:39.3066149Z 0b0a90cba924: Pull complete
+2025-09-21T23:34:08.1544403Z f1d53622d37c: Pull complete
+2025-09-21T23:34:08.1673531Z b4174266f6e9: Pull complete
+2025-09-21T23:34:08.1778921Z b789b525833f: Pull complete
+2025-09-21T23:34:08.1883046Z d9b2841dabc1: Pull complete
+2025-09-21T23:34:08.1925831Z Digest: sha256:ffa8225c3c4384645d1d6147f70390b55eb3616694869ddf1aca034ab72430a9
+2025-09-21T23:34:08.1937923Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-nrf52840
+2025-09-21T23:34:08.3721376Z Building PlatformIO environment: rak4631
+2025-09-21T23:34:08.6592966Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:34:09.3615114Z Resolving rak4631 dependencies...
+2025-09-21T23:34:09.3850639Z Removing unused dependencies...
+2025-09-21T23:34:09.3937503Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:34:09.5372923Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:34:09.5906373Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:34:12.5156935Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:34:12.7311446Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:34:12.8238748Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:34:13.5467209Z Building for rak4631 with 
+2025-09-21T23:34:14.3071246Z Processing rak4631 (board: wiscore_rak4631; platform: 
+2025-09-21T23:34:14.3071872Z platformio/nordicnrf52@^10.8.0; framework: arduino)
+2025-09-21T23:34:14.3072297Z --------------------------------------------------------------------------------
+2025-09-21T23:34:15.5558511Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:34:15.5707466Z CONFIGURATION: https://docs.platformio.org/page/boards/nordicnrf52/wiscore_rak4631.html
+2025-09-21T23:34:15.5708474Z PLATFORM: Nordic nRF52 (10.9.0) > WisCore RAK4631 Board
+2025-09-21T23:34:15.5709109Z HARDWARE: NRF52840 64MHz, 243KB RAM, 796KB Flash
+2025-09-21T23:34:15.5709693Z DEBUG: Current (stlink) External (jlink, stlink)
+2025-09-21T23:34:15.5710242Z PACKAGES: 
+2025-09-21T23:34:15.5710763Z  - framework-arduinoadafruitnrf52 @ 1.10601.0+sha.e13f5820 
+2025-09-21T23:34:15.5711419Z  - framework-cmsis @ 2.50700.210515 (5.7.0) 
+2025-09-21T23:34:15.5711925Z  - tool-adafruit-nrfutil @ 1.503.0 (5.3) 
+2025-09-21T23:34:15.5712247Z  - tool-sreccat @ 1.164.0 (1.64) 
+2025-09-21T23:34:15.5712576Z  - toolchain-gccarmnoneeabi @ 1.90301.200702 (9.3.1)
+2025-09-21T23:34:15.5992589Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:34:15.5993381Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:34:15.6796655Z [nanopb] No generation needed.
+2025-09-21T23:34:16.0696202Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:18.2231744Z Downloading 0% 10%
+2025-09-21T23:34:18.2283355Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:34:18.2317851Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:34:18.3073506Z [nanopb] No generation needed.
+2025-09-21T23:34:18.3579476Z Found 77 compatible libraries
+2025-09-21T23:34:18.3580001Z Scanning dependencies...
+2025-09-21T23:34:27.9187749Z Dependency Graph
+2025-09-21T23:34:27.9188408Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:34:27.9189350Z |-- OneButton @ 2.6.1
+2025-09-21T23:34:27.9193540Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:34:27.9194269Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:34:27.9194922Z |-- ArduinoThread @ 0.0.0+20250919051219
+2025-09-21T23:34:27.9197901Z |-- Nanopb @ 0.4.91
+2025-09-21T23:34:27.9198231Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:34:27.9200504Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:34:27.9203308Z |-- RadioLib @ 7.3.0
+2025-09-21T23:34:27.9204199Z |-- Crypto @ 0.4.0
+2025-09-21T23:34:27.9206963Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:34:27.9210263Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:34:27.9214090Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:34:27.9214553Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:34:27.9216570Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:34:27.9221623Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:34:27.9222073Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:34:27.9223855Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:34:27.9225709Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:34:27.9226364Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:34:27.9228558Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:34:27.9230506Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:34:27.9233320Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:34:27.9234219Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:34:27.9236038Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:34:27.9236650Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:34:27.9238659Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:34:27.9240312Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:34:27.9243221Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:34:27.9246311Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:34:27.9247647Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:34:27.9249512Z |-- INA226 @ 0.6.4
+2025-09-21T23:34:27.9253213Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:34:27.9254180Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:34:27.9256604Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:34:27.9259127Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:34:27.9259542Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:34:27.9260588Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:34:27.9262989Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:34:27.9264148Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:34:27.9266724Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:34:27.9268875Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:34:27.9270292Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:34:27.9272173Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:34:27.9273719Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:34:27.9276405Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:34:27.9277883Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:27.9281104Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:34:27.9281757Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:34:27.9283881Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:34:27.9286045Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:34:27.9288945Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:34:27.9289328Z |-- Adafruit nRFCrypto @ 0.0.5
+2025-09-21T23:34:27.9291190Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:34:27.9293732Z |-- NTPClient @ 3.2.1
+2025-09-21T23:34:27.9295819Z |-- Melopero RV3028 @ 1.2.0
+2025-09-21T23:34:27.9297727Z |-- RAK13800-W5100S @ 1.0.2
+2025-09-21T23:34:27.9299601Z |-- RAKwireless NCP5623 RGB LED library @ 1.0.3
+2025-09-21T23:34:27.9302371Z |-- RAK12035_SoilMoisture @ 1.0.4
+2025-09-21T23:34:27.9303290Z |-- RAKwireless RAK12034 @ 1.0.0
+2025-09-21T23:34:27.9311369Z |-- SPI @ 1.0
+2025-09-21T23:34:27.9311984Z |-- Wire @ 1.0
+2025-09-21T23:34:27.9312431Z |-- Rotary Encoder @ 0.8.0
+2025-09-21T23:34:27.9315894Z |-- Adafruit Bluefruit nRF52 Libraries @ 0.21.0
+2025-09-21T23:34:27.9316932Z |-- Adafruit TinyUSB Library
+2025-09-21T23:34:27.9317446Z |-- Adafruit Internal File System on Bluefruit nRF52 @ 0.11.0
+2025-09-21T23:34:27.9317992Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:34:28.1932890Z Building in debug mode
+2025-09-21T23:34:28.3051482Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on rak4631
+2025-09-21T23:34:28.3067409Z Using flags:
+2025-09-21T23:34:28.3068153Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:34:28.3068536Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:34:28.3068888Z -DAPP_ENV=rak4631
+2025-09-21T23:34:28.3069239Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:28.3069678Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:34:28.3070498Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:34:28.3071485Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:34:28.4631238Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_TinyUSB_API.cpp.o
+2025-09-21T23:34:28.4724354Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_CDC.cpp.o
+2025-09-21T23:34:28.4819228Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Device.cpp.o
+2025-09-21T23:34:28.4953616Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Interface.cpp.o
+2025-09-21T23:34:28.6517086Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBH_Host.cpp.o
+2025-09-21T23:34:28.7406635Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/cdc/Adafruit_USBH_CDC.cpp.o
+2025-09-21T23:34:28.7934790Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/hid/Adafruit_USBD_HID.cpp.o
+2025-09-21T23:34:28.8036644Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/midi/Adafruit_USBD_MIDI.cpp.o
+2025-09-21T23:34:28.9529942Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBD_MSC.cpp.o
+2025-09-21T23:34:28.9633384Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBH_MSC.cpp.o
+2025-09-21T23:34:29.0193725Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/esp32/Adafruit_TinyUSB_esp32.cpp.o
+2025-09-21T23:34:29.0394752Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/nrf/Adafruit_TinyUSB_nrf.cpp.o
+2025-09-21T23:34:29.1010956Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp.o
+2025-09-21T23:34:29.1191544Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/samd/Adafruit_TinyUSB_samd.cpp.o
+2025-09-21T23:34:29.1628450Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/video/Adafruit_USBD_Video.cpp.o
+2025-09-21T23:34:29.1773769Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/arduino/webusb/Adafruit_USBD_WebUSB.cpp.o
+2025-09-21T23:34:29.1936021Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/audio/audio_device.c.o
+2025-09-21T23:34:29.2515191Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/bth/bth_device.c.o
+2025-09-21T23:34:29.3129608Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/cdc/cdc_device.c.o
+2025-09-21T23:34:29.3322869Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/cdc/cdc_host.c.o
+2025-09-21T23:34:29.3632042Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/dfu/dfu_device.c.o
+2025-09-21T23:34:29.4224906Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/dfu/dfu_rt_device.c.o
+2025-09-21T23:34:29.4824986Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/hid/hid_device.c.o
+2025-09-21T23:34:29.4924389Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/hid/hid_host.c.o
+2025-09-21T23:34:29.5058373Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/midi/midi_device.c.o
+2025-09-21T23:34:29.6469982Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/msc/msc_device.c.o
+2025-09-21T23:34:29.6840774Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/msc/msc_host.c.o
+2025-09-21T23:34:29.7040701Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/net/ecm_rndis_device.c.o
+2025-09-21T23:34:29.7198755Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/net/ncm_device.c.o
+2025-09-21T23:34:29.7625406Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/usbtmc/usbtmc_device.c.o
+2025-09-21T23:34:29.7779456Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/vendor/vendor_device.c.o
+2025-09-21T23:34:29.8217186Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/class/video/video_device.c.o
+2025-09-21T23:34:29.8512600Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/common/tusb_fifo.c.o
+2025-09-21T23:34:29.8726510Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/device/usbd.c.o
+2025-09-21T23:34:29.9199858Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/device/usbd_control.c.o
+2025-09-21T23:34:30.0650134Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/host/hub.c.o
+2025-09-21T23:34:30.0777317Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/host/usbh.c.o
+2025-09-21T23:34:30.1305935Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/analog/max3421/hcd_max3421.c.o
+2025-09-21T23:34:30.1530800Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/microchip/samd/dcd_samd.c.o
+2025-09-21T23:34:30.2231186Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/nordic/nrf5x/dcd_nrf5x.c.o
+2025-09-21T23:34:30.2390772Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/pio_usb/dcd_pio_usb.c.o
+2025-09-21T23:34:30.2956574Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/pio_usb/hcd_pio_usb.c.o
+2025-09-21T23:34:30.3554859Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+2025-09-21T23:34:30.3693135Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/hcd_rp2040.c.o
+2025-09-21T23:34:30.4184304Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/rp2040_usb.c.o
+2025-09-21T23:34:30.4340252Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/portable/synopsys/dwc2/dcd_dwc2.c.o
+2025-09-21T23:34:30.4522433Z Compiling .pio/build/rak4631/lib62c/Adafruit_TinyUSB_Arduino/tusb.c.o
+2025-09-21T23:34:30.5019290Z Compiling .pio/build/rak4631/lib1ae/Adafruit nRFCrypto/Adafruit_nRFCrypto.cpp.o
+2025-09-21T23:34:30.5131920Z Compiling .pio/build/rak4631/lib1ae/Adafruit nRFCrypto/ecc/nRFCrypto_ECC.cpp.o
+2025-09-21T23:34:30.5268181Z Compiling .pio/build/rak4631/lib1ae/Adafruit nRFCrypto/ecc/nRFCrypto_ECC_PrivateKey.cpp.o
+2025-09-21T23:34:30.6211158Z Compiling .pio/build/rak4631/lib1ae/Adafruit nRFCrypto/ecc/nRFCrypto_ECC_PublicKey.cpp.o
+2025-09-21T23:34:30.6785066Z Compiling .pio/build/rak4631/lib1ae/Adafruit nRFCrypto/nRFCrypto_AES.cpp.o
+2025-09-21T23:34:30.6902382Z Compiling .pio/build/rak4631/lib1ae/Adafruit nRFCrypto/nRFCrypto_Chacha.cpp.o
+2025-09-21T23:34:30.7740154Z Compiling .pio/build/rak4631/lib1ae/Adafruit nRFCrypto/nRFCrypto_Hash.cpp.o
+2025-09-21T23:34:30.7870915Z Compiling .pio/build/rak4631/lib1ae/Adafruit nRFCrypto/nRFCrypto_Random.cpp.o
+2025-09-21T23:34:30.8125141Z Compiling .pio/build/rak4631/variants/nrf52840/rak4631/variant.cpp.o
+2025-09-21T23:34:30.8988905Z /pio/workspace/libdeps/rak4631/Adafruit nRFCrypto/src/nRFCrypto_Chacha.cpp: In member function 'CRYSError_t nRFCrypto_Chacha::Process(uint8_t*, uint32_t, uint8_t*, CRYS_CHACHA_EncryptMode_t)':
+2025-09-21T23:34:30.8991326Z /pio/workspace/libdeps/rak4631/Adafruit nRFCrypto/src/nRFCrypto_Chacha.cpp:59:39: warning: 'initialCounter' is used uninitialized in this function [-Wuninitialized]
+2025-09-21T23:34:30.9006575Z    59 |   CRYSError_t error = CRYS_CHACHA_Init(&pContextID, pNonce, (CRYS_CHACHA_NonceSize_t) 1, myKey, initialCounter++, mode);
+2025-09-21T23:34:30.9007883Z       |                       ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:30.9818294Z Compiling .pio/build/rak4631/src/BluetoothCommon.cpp.o
+2025-09-21T23:34:31.0540668Z Compiling .pio/build/rak4631/src/DebugConfiguration.cpp.o
+2025-09-21T23:34:31.0682151Z Compiling .pio/build/rak4631/src/DisplayFormatters.cpp.o
+2025-09-21T23:34:31.0919617Z Compiling .pio/build/rak4631/src/FSCommon.cpp.o
+2025-09-21T23:34:31.7336076Z Compiling .pio/build/rak4631/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:34:31.8382400Z Compiling .pio/build/rak4631/src/Fusion/FusionCompass.c.o
+2025-09-21T23:34:31.9742266Z Compiling .pio/build/rak4631/src/Fusion/FusionOffset.c.o
+2025-09-21T23:34:31.9946728Z Compiling .pio/build/rak4631/src/GpioLogic.cpp.o
+2025-09-21T23:34:32.0700466Z Compiling .pio/build/rak4631/src/Led.cpp.o
+2025-09-21T23:34:32.0886752Z Compiling .pio/build/rak4631/src/Observer.cpp.o
+2025-09-21T23:34:32.1207712Z Compiling .pio/build/rak4631/src/Power.cpp.o
+2025-09-21T23:34:32.7611341Z Compiling .pio/build/rak4631/src/PowerFSM.cpp.o
+2025-09-21T23:34:32.8723724Z Compiling .pio/build/rak4631/src/PowerMon.cpp.o
+2025-09-21T23:34:33.4684590Z Compiling .pio/build/rak4631/src/RedirectablePrint.cpp.o
+2025-09-21T23:34:33.8296103Z Compiling .pio/build/rak4631/src/SPILock.cpp.o
+2025-09-21T23:34:33.8522269Z Compiling .pio/build/rak4631/src/SafeFile.cpp.o
+2025-09-21T23:34:34.2374959Z Compiling .pio/build/rak4631/src/SerialConsole.cpp.o
+2025-09-21T23:34:34.5773246Z Compiling .pio/build/rak4631/src/airtime.cpp.o
+2025-09-21T23:34:34.6759617Z Compiling .pio/build/rak4631/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:34:34.9493243Z Compiling .pio/build/rak4631/src/buzz/buzz.cpp.o
+2025-09-21T23:34:35.2274561Z Compiling .pio/build/rak4631/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:34:35.5824034Z Compiling .pio/build/rak4631/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:34:35.7144969Z Compiling .pio/build/rak4631/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:34:35.9309606Z Compiling .pio/build/rak4631/src/concurrency/Lock.cpp.o
+2025-09-21T23:34:36.0004228Z Compiling .pio/build/rak4631/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:34:36.3634686Z Compiling .pio/build/rak4631/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:34:36.4959022Z Compiling .pio/build/rak4631/src/concurrency/OSThread.cpp.o
+2025-09-21T23:34:36.7218006Z Compiling .pio/build/rak4631/src/detect/ScanI2C.cpp.o
+2025-09-21T23:34:36.7664556Z Compiling .pio/build/rak4631/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:34:36.8629916Z Compiling .pio/build/rak4631/src/gps/GPS.cpp.o
+2025-09-21T23:34:37.2828394Z Compiling .pio/build/rak4631/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:34:37.7758423Z Compiling .pio/build/rak4631/src/gps/GeoCoord.cpp.o
+2025-09-21T23:34:37.9449054Z Compiling .pio/build/rak4631/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:34:38.2809358Z Compiling .pio/build/rak4631/src/gps/RTC.cpp.o
+2025-09-21T23:34:38.4634426Z Compiling .pio/build/rak4631/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:34:38.9096695Z Compiling .pio/build/rak4631/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:34:39.2719678Z Compiling .pio/build/rak4631/src/graphics/Screen.cpp.o
+2025-09-21T23:34:39.3819248Z Compiling .pio/build/rak4631/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:34:39.6977346Z Compiling .pio/build/rak4631/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:34:39.7439471Z Compiling .pio/build/rak4631/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:34:39.9972012Z Compiling .pio/build/rak4631/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:34:40.0235894Z Compiling .pio/build/rak4631/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:34:40.9629280Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:34:40.9630807Z  1061 | static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:34:40.9631942Z       |             ^~~~~~~~~~~~~~~~~
+2025-09-21T23:34:40.9641419Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:40.9642432Z   222 | static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:34:40.9642932Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:40.9644063Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:34:40.9645430Z   166 | static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:34:40.9645884Z       |             ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:41.0171633Z Compiling .pio/build/rak4631/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:34:41.2876185Z Compiling .pio/build/rak4631/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:34:41.4471420Z Compiling .pio/build/rak4631/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:34:42.7144788Z Compiling .pio/build/rak4631/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:34:42.7734846Z Compiling .pio/build/rak4631/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:34:42.8215839Z Compiling .pio/build/rak4631/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:34:43.3600420Z Compiling .pio/build/rak4631/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:34:44.2997954Z Compiling .pio/build/rak4631/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:34:44.6484144Z Compiling .pio/build/rak4631/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:34:44.7610526Z Compiling .pio/build/rak4631/src/graphics/emotes.cpp.o
+2025-09-21T23:34:45.0565581Z Compiling .pio/build/rak4631/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:34:45.1580795Z Compiling .pio/build/rak4631/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:34:45.2586982Z Compiling .pio/build/rak4631/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:34:45.3596618Z Compiling .pio/build/rak4631/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:34:45.4623640Z Compiling .pio/build/rak4631/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:34:45.5638814Z Compiling .pio/build/rak4631/src/graphics/tftSetup.cpp.o
+2025-09-21T23:34:45.6572515Z Compiling .pio/build/rak4631/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:34:45.9646348Z Compiling .pio/build/rak4631/src/input/ButtonThread.cpp.o
+2025-09-21T23:34:46.0141323Z Compiling .pio/build/rak4631/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:34:46.4369919Z Compiling .pio/build/rak4631/src/input/InputBroker.cpp.o
+2025-09-21T23:34:46.7314081Z Compiling .pio/build/rak4631/src/input/LinuxInput.cpp.o
+2025-09-21T23:34:46.7510314Z Compiling .pio/build/rak4631/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:34:47.3244565Z Compiling .pio/build/rak4631/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:34:47.5025691Z Compiling .pio/build/rak4631/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:34:47.5191186Z Compiling .pio/build/rak4631/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:34:47.5388146Z Compiling .pio/build/rak4631/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:34:47.5912639Z Compiling .pio/build/rak4631/src/input/SeesawRotary.cpp.o
+2025-09-21T23:34:47.6795559Z Compiling .pio/build/rak4631/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:34:48.4874167Z Compiling .pio/build/rak4631/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:34:48.5331789Z Compiling .pio/build/rak4631/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:34:48.5519126Z Compiling .pio/build/rak4631/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:34:48.7529622Z Compiling .pio/build/rak4631/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:34:48.8530774Z Compiling .pio/build/rak4631/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:34:48.9537863Z Compiling .pio/build/rak4631/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:34:49.3306550Z Compiling .pio/build/rak4631/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:34:49.3575878Z Compiling .pio/build/rak4631/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:34:49.8622668Z Compiling .pio/build/rak4631/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:34:50.3892106Z Compiling .pio/build/rak4631/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:34:50.4108513Z Compiling .pio/build/rak4631/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:34:50.4247227Z Compiling .pio/build/rak4631/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:34:50.8550709Z Compiling .pio/build/rak4631/src/input/i2cButton.cpp.o
+2025-09-21T23:34:51.3874596Z Compiling .pio/build/rak4631/src/input/kbI2cBase.cpp.o
+2025-09-21T23:34:51.4079617Z Compiling .pio/build/rak4631/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:34:51.7054572Z Compiling .pio/build/rak4631/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:34:51.9477039Z Compiling .pio/build/rak4631/src/main.cpp.o
+2025-09-21T23:34:52.1957936Z Compiling .pio/build/rak4631/src/memGet.cpp.o
+2025-09-21T23:34:52.8683007Z Compiling .pio/build/rak4631/src/mesh/Channels.cpp.o
+2025-09-21T23:34:52.9704995Z Compiling .pio/build/rak4631/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:34:53.1025089Z Compiling .pio/build/rak4631/src/mesh/Default.cpp.o
+2025-09-21T23:34:53.9436156Z Compiling .pio/build/rak4631/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:34:53.9909411Z Compiling .pio/build/rak4631/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:34:54.0791806Z Compiling .pio/build/rak4631/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:34:54.1623167Z Compiling .pio/build/rak4631/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:34:54.2516266Z Compiling .pio/build/rak4631/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:34:54.3412413Z Compiling .pio/build/rak4631/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:34:54.4426047Z Compiling .pio/build/rak4631/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:34:54.5448245Z Compiling .pio/build/rak4631/src/mesh/MeshModule.cpp.o
+2025-09-21T23:34:54.9523546Z Compiling .pio/build/rak4631/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:34:55.0735573Z Compiling .pio/build/rak4631/src/mesh/MeshService.cpp.o
+2025-09-21T23:34:55.3029130Z Compiling .pio/build/rak4631/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:34:55.8926257Z Compiling .pio/build/rak4631/src/mesh/NodeDB.cpp.o
+2025-09-21T23:34:56.0442147Z Compiling .pio/build/rak4631/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:34:56.5155944Z Compiling .pio/build/rak4631/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:34:56.8005952Z Compiling .pio/build/rak4631/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:34:57.0330279Z Compiling .pio/build/rak4631/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:34:57.1351721Z Compiling .pio/build/rak4631/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:34:57.8231106Z Compiling .pio/build/rak4631/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:34:58.0387778Z Compiling .pio/build/rak4631/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:34:58.1282548Z Compiling .pio/build/rak4631/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:34:58.3486473Z Compiling .pio/build/rak4631/src/mesh/Router.cpp.o
+2025-09-21T23:34:58.8213194Z Compiling .pio/build/rak4631/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:34:59.2504863Z Compiling .pio/build/rak4631/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:34:59.3433762Z Compiling .pio/build/rak4631/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:34:59.6192781Z Compiling .pio/build/rak4631/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:34:59.9230457Z Compiling .pio/build/rak4631/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:35:00.0253466Z Compiling .pio/build/rak4631/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:35:00.1278874Z Compiling .pio/build/rak4631/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:35:00.2541631Z Compiling .pio/build/rak4631/src/mesh/Throttle.cpp.o
+2025-09-21T23:35:00.3554399Z Compiling .pio/build/rak4631/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:35:00.5173326Z Compiling .pio/build/rak4631/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:35:00.6527259Z Compiling .pio/build/rak4631/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:35:00.7528637Z Compiling .pio/build/rak4631/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:35:00.9459118Z Compiling .pio/build/rak4631/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:35:01.3234831Z Compiling .pio/build/rak4631/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:35:01.3354295Z Compiling .pio/build/rak4631/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:35:01.5232795Z Compiling .pio/build/rak4631/src/mesh/eth/ethClient.cpp.o
+2025-09-21T23:35:01.7179242Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:35:01.8221139Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:35:01.8771733Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:35:01.9315992Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:35:01.9930869Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:35:02.0350157Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:35:02.1018184Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:35:02.1225959Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:35:02.1536323Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:35:02.2279620Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:35:02.2636964Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:35:02.2816684Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:35:02.3795789Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:35:02.4107979Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:35:02.4842847Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:35:02.5724583Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:35:02.6094302Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:35:02.6289526Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:35:02.6707336Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:35:02.7182240Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:35:02.7321170Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:35:02.7687515Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:35:02.8114243Z Compiling .pio/build/rak4631/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:35:02.8360372Z Compiling .pio/build/rak4631/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:35:02.9123454Z Compiling .pio/build/rak4631/src/meshUtils.cpp.o
+2025-09-21T23:35:02.9311007Z Compiling .pio/build/rak4631/src/modules/AdminModule.cpp.o
+2025-09-21T23:35:02.9545371Z Compiling .pio/build/rak4631/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:35:03.6360442Z Compiling .pio/build/rak4631/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:35:03.7822131Z Compiling .pio/build/rak4631/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:35:04.4825697Z Compiling .pio/build/rak4631/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:35:04.7877288Z Compiling .pio/build/rak4631/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:35:04.8880760Z Compiling .pio/build/rak4631/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:35:05.1064262Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:05.1066144Z    76 | static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:35:05.1067167Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:05.9691868Z Compiling .pio/build/rak4631/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:35:06.0437013Z Compiling .pio/build/rak4631/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:35:06.3359688Z Compiling .pio/build/rak4631/src/modules/Modules.cpp.o
+2025-09-21T23:35:06.4329077Z Compiling .pio/build/rak4631/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:35:06.9582224Z Compiling .pio/build/rak4631/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:35:07.6099788Z Compiling .pio/build/rak4631/src/modules/PositionModule.cpp.o
+2025-09-21T23:35:07.7256190Z Compiling .pio/build/rak4631/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:35:07.9316726Z Compiling .pio/build/rak4631/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:35:08.4326575Z Compiling .pio/build/rak4631/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:35:09.0151254Z Compiling .pio/build/rak4631/src/modules/ReplyModule.cpp.o
+2025-09-21T23:35:09.2007555Z Compiling .pio/build/rak4631/src/modules/RoutingModule.cpp.o
+2025-09-21T23:35:09.2306412Z Compiling .pio/build/rak4631/src/modules/SerialModule.cpp.o
+2025-09-21T23:35:09.9263715Z Compiling .pio/build/rak4631/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:35:10.4324109Z Compiling .pio/build/rak4631/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:35:10.6613090Z Compiling .pio/build/rak4631/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:35:10.7716899Z Compiling .pio/build/rak4631/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:35:11.3312606Z Compiling .pio/build/rak4631/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:35:11.9574928Z Compiling .pio/build/rak4631/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:35:12.2550438Z Compiling .pio/build/rak4631/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:35:12.3501819Z Compiling .pio/build/rak4631/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:35:12.7473907Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:35:13.1873015Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:35:13.3699000Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:35:13.7178693Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:35:13.9001449Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:35:14.1847930Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:35:14.4057396Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:35:14.6990205Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:35:14.8950562Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:35:15.1914744Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:35:15.3995157Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:35:15.6953003Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:35:15.9109683Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:35:16.2128779Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:35:16.4285974Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:35:16.7039800Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:35:16.9280168Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:35:17.1961574Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:35:17.2232181Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:35:17.7035801Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:35:17.9247732Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:35:18.0246827Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:35:18.3524630Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:35:18.7020880Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:35:18.9051893Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:35:19.0131853Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:35:19.3866133Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:35:19.6836887Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:35:19.9006462Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:35:20.0007280Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:35:20.1578913Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:35:20.7524693Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:35:20.8901024Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:35:20.9907500Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:35:21.1503779Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:35:21.5143529Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:35:21.8720972Z Compiling .pio/build/rak4631/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:35:21.9836787Z Compiling .pio/build/rak4631/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:35:22.0946721Z Compiling .pio/build/rak4631/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:35:22.5065592Z Compiling .pio/build/rak4631/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:35:22.5606714Z Compiling .pio/build/rak4631/src/modules/WaypointModule.cpp.o
+2025-09-21T23:35:22.8416986Z Compiling .pio/build/rak4631/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:35:23.5124451Z Compiling .pio/build/rak4631/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:35:24.0474548Z Compiling .pio/build/rak4631/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:35:24.0988158Z Compiling .pio/build/rak4631/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:35:24.2041359Z Compiling .pio/build/rak4631/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:35:24.7558629Z Compiling .pio/build/rak4631/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:35:25.3620703Z Compiling .pio/build/rak4631/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:35:25.4393816Z Compiling .pio/build/rak4631/src/motion/MotionSensor.cpp.o
+2025-09-21T23:35:25.4613161Z Compiling .pio/build/rak4631/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:35:26.0142424Z Compiling .pio/build/rak4631/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:35:26.6234115Z Compiling .pio/build/rak4631/src/mqtt/MQTT.cpp.o
+2025-09-21T23:35:26.6987533Z Compiling .pio/build/rak4631/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:35:26.7191626Z Compiling .pio/build/rak4631/src/network-stubs.cpp.o
+2025-09-21T23:35:26.9370765Z Compiling .pio/build/rak4631/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:35:27.2500239Z Compiling .pio/build/rak4631/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:35:27.4784735Z Compiling .pio/build/rak4631/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:35:27.7312310Z Compiling .pio/build/rak4631/src/platform/nrf52/AsyncUDP.cpp.o
+2025-09-21T23:35:28.0211731Z Compiling .pio/build/rak4631/src/platform/nrf52/BLEDfuScure.cpp.o
+2025-09-21T23:35:28.2594978Z Compiling .pio/build/rak4631/src/platform/nrf52/NRF52Bluetooth.cpp.o
+2025-09-21T23:35:28.4156303Z Compiling .pio/build/rak4631/src/platform/nrf52/NRF52CryptoEngine.cpp.o
+2025-09-21T23:35:28.5732911Z Compiling .pio/build/rak4631/src/platform/nrf52/aes-256/tiny-aes.cpp.o
+2025-09-21T23:35:28.6006119Z Compiling .pio/build/rak4631/src/platform/nrf52/alloc.cpp.o
+2025-09-21T23:35:28.7039423Z Compiling .pio/build/rak4631/src/platform/nrf52/hardfault.cpp.o
+2025-09-21T23:35:29.2189217Z Compiling .pio/build/rak4631/src/platform/nrf52/main-bare.cpp.o
+2025-09-21T23:35:29.3704834Z Compiling .pio/build/rak4631/src/platform/nrf52/main-nrf52.cpp.o
+2025-09-21T23:35:29.4910841Z Compiling .pio/build/rak4631/src/sleep.cpp.o
+2025-09-21T23:35:29.5105073Z Compiling .pio/build/rak4631/src/xmodem.cpp.o
+2025-09-21T23:35:30.2351533Z Compiling .pio/build/rak4631/lib1c0/Wire/Wire_nRF52.cpp.o
+2025-09-21T23:35:30.3365543Z Compiling .pio/build/rak4631/libc79/SPI/SPI.cpp.o
+2025-09-21T23:35:30.5749992Z Archiving .pio/build/rak4631/lib1c0/libWire.a
+2025-09-21T23:35:30.5800252Z Indexing .pio/build/rak4631/lib1c0/libWire.a
+2025-09-21T23:35:30.5919650Z Compiling .pio/build/rak4631/libc79/SPI/SPI_nrf52832.cpp.o
+2025-09-21T23:35:30.6736758Z Compiling .pio/build/rak4631/libe7d/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:35:30.6803309Z Archiving .pio/build/rak4631/libc79/libSPI.a
+2025-09-21T23:35:30.6848097Z Indexing .pio/build/rak4631/libc79/libSPI.a
+2025-09-21T23:35:30.6970946Z Compiling .pio/build/rak4631/libe7d/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:35:30.8803514Z Compiling .pio/build/rak4631/libe7d/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:35:30.9562848Z Compiling .pio/build/rak4631/libba7/OneButton/OneButton.cpp.o
+2025-09-21T23:35:30.9999248Z Compiling .pio/build/rak4631/libba7/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:35:31.2136362Z Compiling .pio/build/rak4631/libb3d/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:35:31.2705561Z Compiling .pio/build/rak4631/libea3/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:35:31.2789585Z Archiving .pio/build/rak4631/libba7/libOneButton.a
+2025-09-21T23:35:31.2842667Z Indexing .pio/build/rak4631/libba7/libOneButton.a
+2025-09-21T23:35:31.3111684Z Compiling .pio/build/rak4631/libfe3/ArduinoThread/Thread.cpp.o
+2025-09-21T23:35:31.4556224Z Archiving .pio/build/rak4631/libb3d/libarduino-fsm.a
+2025-09-21T23:35:31.4601820Z Indexing .pio/build/rak4631/libb3d/libarduino-fsm.a
+2025-09-21T23:35:31.4724662Z Compiling .pio/build/rak4631/libfe3/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:35:31.5304731Z Archiving .pio/build/rak4631/libe7d/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:31.5361262Z Indexing .pio/build/rak4631/libe7d/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:31.5486133Z Compiling .pio/build/rak4631/lib83f/Nanopb/pb_common.c.o
+2025-09-21T23:35:31.5611094Z Compiling .pio/build/rak4631/lib83f/Nanopb/pb_decode.c.o
+2025-09-21T23:35:31.6506092Z Compiling .pio/build/rak4631/lib83f/Nanopb/pb_encode.c.o
+2025-09-21T23:35:31.6646319Z Archiving .pio/build/rak4631/libea3/libTinyGPSPlus.a
+2025-09-21T23:35:31.6695793Z Indexing .pio/build/rak4631/libea3/libTinyGPSPlus.a
+2025-09-21T23:35:31.6806253Z Compiling .pio/build/rak4631/lib7b9/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:35:31.7325647Z Archiving .pio/build/rak4631/libfe3/libArduinoThread.a
+2025-09-21T23:35:31.7393696Z Indexing .pio/build/rak4631/libfe3/libArduinoThread.a
+2025-09-21T23:35:31.7406659Z Archiving .pio/build/rak4631/lib7b9/libErriezCRC32.a
+2025-09-21T23:35:31.7435646Z Indexing .pio/build/rak4631/lib7b9/libErriezCRC32.a
+2025-09-21T23:35:31.7585721Z Compiling .pio/build/rak4631/lib9e5/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:35:31.7876584Z Compiling .pio/build/rak4631/lib278/RadioLib/Hal.cpp.o
+2025-09-21T23:35:31.8211468Z Compiling .pio/build/rak4631/lib278/RadioLib/Module.cpp.o
+2025-09-21T23:35:31.8268817Z Archiving .pio/build/rak4631/lib83f/libNanopb.a
+2025-09-21T23:35:31.8325876Z Indexing .pio/build/rak4631/lib83f/libNanopb.a
+2025-09-21T23:35:31.8453291Z Compiling .pio/build/rak4631/lib278/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:35:32.0113934Z Archiving .pio/build/rak4631/lib9e5/libNonBlockingRTTTL.a
+2025-09-21T23:35:32.0153975Z Indexing .pio/build/rak4631/lib9e5/libNonBlockingRTTTL.a
+2025-09-21T23:35:32.0468284Z Compiling .pio/build/rak4631/lib278/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:35:32.0645163Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:35:32.1214701Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:35:32.1338388Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:35:32.1560459Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:35:32.1718152Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:35:32.3673001Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:35:32.3926413Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:35:32.4062599Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:35:32.4211893Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:35:32.6103447Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:35:32.6417650Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:35:32.6541120Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:35:32.6687655Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:35:32.8387532Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:35:32.8744364Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:35:32.8919514Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:35:32.9043021Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:35:33.0724925Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:35:33.1105654Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:35:33.1612994Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:35:33.1952874Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:35:33.3671145Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:35:33.4993507Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:35:33.5152478Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:35:33.6320640Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:35:33.7277455Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:35:33.7559994Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:35:33.7695026Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:35:33.8684880Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:35:33.9621033Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:35:33.9910716Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:35:34.0037120Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:35:34.1077406Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:35:34.1986075Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:35:34.2262078Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:35:34.2383000Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:35:34.3452659Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:35:34.4338908Z Compiling .pio/build/rak4631/lib278/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:35:34.4612455Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:35:34.4747257Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:35:34.5170846Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:35:34.5801455Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:35:34.6982386Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:35:34.7147957Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:35:34.7499602Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:35:34.8299449Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:35:34.9491134Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:35:34.9730006Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:35:34.9872959Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:35:35.0004172Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:35:35.0299718Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:35:35.0438471Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:35:35.0819826Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:35:35.2928404Z Compiling .pio/build/rak4631/lib278/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:35:35.3220587Z Compiling .pio/build/rak4631/lib278/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:35:35.3350689Z Compiling .pio/build/rak4631/lib278/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:35:35.3675049Z Compiling .pio/build/rak4631/lib278/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:35:35.5281748Z Compiling .pio/build/rak4631/lib278/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:35:35.5842186Z Compiling .pio/build/rak4631/lib00f/Crypto/AES128.cpp.o
+2025-09-21T23:35:35.6547450Z Compiling .pio/build/rak4631/lib00f/Crypto/AES192.cpp.o
+2025-09-21T23:35:35.6971072Z Compiling .pio/build/rak4631/lib00f/Crypto/AES256.cpp.o
+2025-09-21T23:35:35.7350636Z Compiling .pio/build/rak4631/lib00f/Crypto/AESCommon.cpp.o
+2025-09-21T23:35:35.7471496Z Compiling .pio/build/rak4631/lib00f/Crypto/AESEsp32.cpp.o
+2025-09-21T23:35:35.7656231Z Archiving .pio/build/rak4631/lib278/libRadioLib.a
+2025-09-21T23:35:35.8012267Z Indexing .pio/build/rak4631/lib278/libRadioLib.a
+2025-09-21T23:35:35.8227513Z Compiling .pio/build/rak4631/lib00f/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:35:35.8424240Z Compiling .pio/build/rak4631/lib00f/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:35:35.8700069Z Compiling .pio/build/rak4631/lib00f/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:35:35.8850290Z Compiling .pio/build/rak4631/lib00f/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:35:35.8980018Z Compiling .pio/build/rak4631/lib00f/Crypto/BlockCipher.cpp.o
+2025-09-21T23:35:35.9766141Z Compiling .pio/build/rak4631/lib00f/Crypto/CTR.cpp.o
+2025-09-21T23:35:36.0061331Z Compiling .pio/build/rak4631/lib00f/Crypto/ChaCha.cpp.o
+2025-09-21T23:35:36.0209582Z Compiling .pio/build/rak4631/lib00f/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:35:36.0339008Z Compiling .pio/build/rak4631/lib00f/Crypto/Cipher.cpp.o
+2025-09-21T23:35:36.0699612Z Compiling .pio/build/rak4631/lib00f/Crypto/Crypto.cpp.o
+2025-09-21T23:35:36.1089511Z Compiling .pio/build/rak4631/lib00f/Crypto/Curve25519.cpp.o
+2025-09-21T23:35:36.1261967Z Compiling .pio/build/rak4631/lib00f/Crypto/EAX.cpp.o
+2025-09-21T23:35:36.1375088Z Compiling .pio/build/rak4631/lib00f/Crypto/Ed25519.cpp.o
+2025-09-21T23:35:36.1540468Z Compiling .pio/build/rak4631/lib00f/Crypto/GCM.cpp.o
+2025-09-21T23:35:36.2385552Z Compiling .pio/build/rak4631/lib00f/Crypto/GF128.cpp.o
+2025-09-21T23:35:36.2802814Z Compiling .pio/build/rak4631/lib00f/Crypto/GHASH.cpp.o
+2025-09-21T23:35:36.2895882Z Compiling .pio/build/rak4631/lib00f/Crypto/HKDF.cpp.o
+2025-09-21T23:35:36.3008092Z Compiling .pio/build/rak4631/lib00f/Crypto/Hash.cpp.o
+2025-09-21T23:35:36.3413561Z Compiling .pio/build/rak4631/lib00f/Crypto/KeccakCore.cpp.o
+2025-09-21T23:35:36.3725759Z Compiling .pio/build/rak4631/lib00f/Crypto/NoiseSource.cpp.o
+2025-09-21T23:35:36.3837262Z Compiling .pio/build/rak4631/lib00f/Crypto/OMAC.cpp.o
+2025-09-21T23:35:36.4015048Z Compiling .pio/build/rak4631/lib00f/Crypto/P521.cpp.o
+2025-09-21T23:35:36.4554026Z Compiling .pio/build/rak4631/lib00f/Crypto/Poly1305.cpp.o
+2025-09-21T23:35:36.4923445Z Compiling .pio/build/rak4631/lib00f/Crypto/RNG.cpp.o
+2025-09-21T23:35:36.5089541Z Compiling .pio/build/rak4631/lib00f/Crypto/SHA224.cpp.o
+2025-09-21T23:35:36.5694745Z Compiling .pio/build/rak4631/lib00f/Crypto/SHA256.cpp.o
+2025-09-21T23:35:36.5795989Z /pio/workspace/libdeps/rak4631/Crypto/RNG.cpp:63:2: warning: #warning "no hardware random number source detected for this platform" [-Wcpp]
+2025-09-21T23:35:36.5797335Z    63 | #warning "no hardware random number source detected for this platform"
+2025-09-21T23:35:36.5798008Z       |  ^~~~~~~
+2025-09-21T23:35:36.5953736Z Compiling .pio/build/rak4631/lib00f/Crypto/SHA3.cpp.o
+2025-09-21T23:35:36.6470554Z Compiling .pio/build/rak4631/lib00f/Crypto/SHA384.cpp.o
+2025-09-21T23:35:36.7036116Z Compiling .pio/build/rak4631/lib00f/Crypto/SHA512.cpp.o
+2025-09-21T23:35:36.7162210Z Compiling .pio/build/rak4631/lib00f/Crypto/SHAKE.cpp.o
+2025-09-21T23:35:36.7312819Z Compiling .pio/build/rak4631/lib00f/Crypto/XOF.cpp.o
+2025-09-21T23:35:36.7712571Z Compiling .pio/build/rak4631/lib00f/Crypto/XTS.cpp.o
+2025-09-21T23:35:36.8269001Z Compiling .pio/build/rak4631/lib066/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:35:36.8418600Z Compiling .pio/build/rak4631/lib066/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:35:36.8631737Z Compiling .pio/build/rak4631/lib066/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:35:36.8796892Z Archiving .pio/build/rak4631/lib00f/libCrypto.a
+2025-09-21T23:35:36.8955841Z Indexing .pio/build/rak4631/lib00f/libCrypto.a
+2025-09-21T23:35:36.9183693Z Compiling .pio/build/rak4631/lib066/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:35:37.0997922Z Compiling .pio/build/rak4631/libea7/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:35:37.1336424Z Compiling .pio/build/rak4631/libabd/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:35:37.1616663Z Compiling .pio/build/rak4631/lib979/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:35:37.2189423Z Archiving .pio/build/rak4631/lib066/libAdafruit BusIO.a
+2025-09-21T23:35:37.2252816Z Indexing .pio/build/rak4631/lib066/libAdafruit BusIO.a
+2025-09-21T23:35:37.2572464Z Compiling .pio/build/rak4631/libc6d/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:35:37.3446701Z Archiving .pio/build/rak4631/libea7/libAdafruit Unified Sensor.a
+2025-09-21T23:35:37.3485948Z Indexing .pio/build/rak4631/libea7/libAdafruit Unified Sensor.a
+2025-09-21T23:35:37.3792700Z Compiling .pio/build/rak4631/lib4db/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:35:37.4330522Z Archiving .pio/build/rak4631/lib979/libAdafruit BMP085 Library.a
+2025-09-21T23:35:37.4373262Z Indexing .pio/build/rak4631/lib979/libAdafruit BMP085 Library.a
+2025-09-21T23:35:37.4635724Z Compiling .pio/build/rak4631/libc4e/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:35:37.4776288Z Archiving .pio/build/rak4631/libabd/libAdafruit BMP280 Library.a
+2025-09-21T23:35:37.4822448Z Indexing .pio/build/rak4631/libabd/libAdafruit BMP280 Library.a
+2025-09-21T23:35:37.5081157Z Compiling .pio/build/rak4631/libf4d/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:35:37.6257831Z Archiving .pio/build/rak4631/libc6d/libAdafruit BME280 Library.a
+2025-09-21T23:35:37.6300247Z Indexing .pio/build/rak4631/libc6d/libAdafruit BME280 Library.a
+2025-09-21T23:35:37.6570375Z Compiling .pio/build/rak4631/lib7c8/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:35:37.7208007Z Archiving .pio/build/rak4631/lib4db/libAdafruit DPS310.a
+2025-09-21T23:35:37.7246849Z Indexing .pio/build/rak4631/lib4db/libAdafruit DPS310.a
+2025-09-21T23:35:37.7522255Z Compiling .pio/build/rak4631/lib9eb/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:35:37.7610350Z Archiving .pio/build/rak4631/libc4e/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:37.7661269Z Indexing .pio/build/rak4631/libc4e/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:37.7846387Z Compiling .pio/build/rak4631/lib9eb/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:35:37.7966910Z Archiving .pio/build/rak4631/libf4d/libAdafruit INA260 Library.a
+2025-09-21T23:35:37.7989841Z Indexing .pio/build/rak4631/libf4d/libAdafruit INA260 Library.a
+2025-09-21T23:35:37.8092746Z Compiling .pio/build/rak4631/lib9eb/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:35:37.9353963Z Archiving .pio/build/rak4631/lib7c8/libAdafruit INA219.a
+2025-09-21T23:35:37.9393669Z Indexing .pio/build/rak4631/lib7c8/libAdafruit INA219.a
+2025-09-21T23:35:37.9511765Z Compiling .pio/build/rak4631/lib9eb/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:35:38.0424207Z Compiling .pio/build/rak4631/lib884/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:35:38.0734722Z Compiling .pio/build/rak4631/libbb5/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:35:38.1064685Z Compiling .pio/build/rak4631/libba3/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:35:38.1393195Z /pio/workspace/libdeps/rak4631/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In static member function 'static bool UARTDevice::uart_read(void*, uint8_t*, size_t)':
+2025-09-21T23:35:38.1401649Z /pio/workspace/libdeps/rak4631/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:120:40: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:35:38.1407831Z   120 |   while (dev->_serial_dev->available() < len && timeout--) {
+2025-09-21T23:35:38.1412180Z       |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+2025-09-21T23:35:38.1418004Z /pio/workspace/libdeps/rak4631/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:35:38.1426340Z /pio/workspace/libdeps/rak4631/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:198:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:35:38.1431495Z   198 |   if (_uart_dev->available() < bufLen)
+2025-09-21T23:35:38.1433088Z       |       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2025-09-21T23:35:38.1437245Z /pio/workspace/libdeps/rak4631/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM1006(PM25_AQI_Data*)':
+2025-09-21T23:35:38.1439906Z /pio/workspace/libdeps/rak4631/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:271:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:35:38.1442511Z   271 |   if (_uart_dev->available() < bufLen) {
+2025-09-21T23:35:38.1442962Z       |       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2025-09-21T23:35:38.2190889Z Archiving .pio/build/rak4631/lib9eb/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:38.2258020Z Indexing .pio/build/rak4631/lib9eb/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:38.2586242Z Compiling .pio/build/rak4631/libbf9/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:35:38.4021827Z Archiving .pio/build/rak4631/libba3/libAdafruit AHTX0.a
+2025-09-21T23:35:38.4068761Z Indexing .pio/build/rak4631/libba3/libAdafruit AHTX0.a
+2025-09-21T23:35:38.4082856Z Archiving .pio/build/rak4631/libbb5/libAdafruit LIS3DH.a
+2025-09-21T23:35:38.4123267Z Archiving .pio/build/rak4631/lib884/libAdafruit MPU6050.a
+2025-09-21T23:35:38.4131228Z Indexing .pio/build/rak4631/libbb5/libAdafruit LIS3DH.a
+2025-09-21T23:35:38.4176546Z Indexing .pio/build/rak4631/lib884/libAdafruit MPU6050.a
+2025-09-21T23:35:38.4214153Z Compiling .pio/build/rak4631/libbf9/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:35:38.4335048Z Compiling .pio/build/rak4631/libbf9/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:35:38.4479170Z Compiling .pio/build/rak4631/libbf9/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:35:38.5158612Z Compiling .pio/build/rak4631/libbf9/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:35:38.6962654Z Compiling .pio/build/rak4631/libbf9/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:35:38.7120134Z Compiling .pio/build/rak4631/libbf9/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:35:38.7757129Z Compiling .pio/build/rak4631/libbf9/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:35:38.8290784Z Compiling .pio/build/rak4631/lib3f7/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:35:38.9724137Z Compiling .pio/build/rak4631/lib74f/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:35:39.0087176Z Compiling .pio/build/rak4631/lib738/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:35:39.0422039Z Archiving .pio/build/rak4631/libbf9/libAdafruit LSM6DS.a
+2025-09-21T23:35:39.0494349Z Indexing .pio/build/rak4631/libbf9/libAdafruit LSM6DS.a
+2025-09-21T23:35:39.0774423Z Compiling .pio/build/rak4631/lib997/INA3221/INA3221.cpp.o
+2025-09-21T23:35:39.1227684Z Archiving .pio/build/rak4631/lib3f7/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:39.1269519Z Indexing .pio/build/rak4631/lib3f7/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:39.1561512Z Compiling .pio/build/rak4631/lib1b9/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:35:39.2756261Z Archiving .pio/build/rak4631/lib738/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:39.2805106Z Indexing .pio/build/rak4631/lib738/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:39.2827432Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::reset()':
+2025-09-21T23:35:39.2829682Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:88:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2831674Z    88 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2832308Z       |                                                  ^
+2025-09-21T23:35:39.2833085Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2849591Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2851250Z   101 |     typedef struct {
+2025-09-21T23:35:39.2853352Z       |                    ^
+2025-09-21T23:35:39.2855070Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:90:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2856853Z    90 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2857270Z       |                                                   ^
+2025-09-21T23:35:39.2857831Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2858590Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2859206Z   101 |     typedef struct {
+2025-09-21T23:35:39.2859526Z       |                    ^
+2025-09-21T23:35:39.2860285Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModePowerDown()':
+2025-09-21T23:35:39.2862564Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:96:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2864280Z    96 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2864765Z       |                                                  ^
+2025-09-21T23:35:39.2865610Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2866756Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2867415Z   101 |     typedef struct {
+2025-09-21T23:35:39.2867747Z       |                    ^
+2025-09-21T23:35:39.2869316Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:99:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2871050Z    99 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2871555Z       |                                                   ^
+2025-09-21T23:35:39.2872196Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2873068Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2873734Z   101 |     typedef struct {
+2025-09-21T23:35:39.2874081Z       |                    ^
+2025-09-21T23:35:39.2874890Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeContinious()':
+2025-09-21T23:35:39.2880867Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:105:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2882865Z   105 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2883357Z       |                                                  ^
+2025-09-21T23:35:39.2884013Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2884897Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2885966Z   101 |     typedef struct {
+2025-09-21T23:35:39.2886314Z       |                    ^
+2025-09-21T23:35:39.2887911Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:107:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2905879Z   107 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2906621Z       |                                                   ^
+2025-09-21T23:35:39.2907440Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2908535Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2909225Z   101 |     typedef struct {
+2025-09-21T23:35:39.2909589Z       |                    ^
+2025-09-21T23:35:39.2910595Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeTriggered()':
+2025-09-21T23:35:39.2913218Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:113:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2915511Z   113 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2916034Z       |                                                  ^
+2025-09-21T23:35:39.2916685Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2917735Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2918749Z   101 |     typedef struct {
+2025-09-21T23:35:39.2919314Z       |                    ^
+2025-09-21T23:35:39.2921185Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:115:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2922897Z   115 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2923574Z       |                                                   ^
+2025-09-21T23:35:39.2924237Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2925149Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2926273Z   101 |     typedef struct {
+2025-09-21T23:35:39.2926635Z       |                    ^
+2025-09-21T23:35:39.2927477Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasEnable()':
+2025-09-21T23:35:39.2929662Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:121:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2931504Z   121 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2932010Z       |                                                  ^
+2025-09-21T23:35:39.2932681Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2933568Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2934238Z   101 |     typedef struct {
+2025-09-21T23:35:39.2934583Z       |                    ^
+2025-09-21T23:35:39.2965905Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:123:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2967736Z   123 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2968258Z       |                                                   ^
+2025-09-21T23:35:39.2968937Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2969957Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2970667Z   101 |     typedef struct {
+2025-09-21T23:35:39.2971071Z       |                    ^
+2025-09-21T23:35:39.2971933Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasDisable()':
+2025-09-21T23:35:39.2974114Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:129:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2976089Z   129 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2976614Z       |                                                  ^
+2025-09-21T23:35:39.2978417Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.2979360Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.2982142Z   101 |     typedef struct {
+2025-09-21T23:35:39.2982725Z       |                    ^
+2025-09-21T23:35:39.2984656Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:131:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.2997825Z   131 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.2998570Z       |                                                   ^
+2025-09-21T23:35:39.2999506Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3000438Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3001129Z   101 |     typedef struct {
+2025-09-21T23:35:39.3001480Z       |                    ^
+2025-09-21T23:35:39.3002304Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasEnable()':
+2025-09-21T23:35:39.3004764Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:137:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3006705Z   137 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3007208Z       |                                                  ^
+2025-09-21T23:35:39.3007870Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3008784Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3009450Z   101 |     typedef struct {
+2025-09-21T23:35:39.3009806Z       |                    ^
+2025-09-21T23:35:39.3011403Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:139:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3013099Z   139 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3013586Z       |                                                   ^
+2025-09-21T23:35:39.3014220Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3015104Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3015953Z   101 |     typedef struct {
+2025-09-21T23:35:39.3016306Z       |                    ^
+2025-09-21T23:35:39.3017125Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasDisable()':
+2025-09-21T23:35:39.3019416Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:145:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3021156Z   145 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3021657Z       |                                                  ^
+2025-09-21T23:35:39.3022307Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3023228Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3023915Z   101 |     typedef struct {
+2025-09-21T23:35:39.3024284Z       |                    ^
+2025-09-21T23:35:39.3026129Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:147:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3027873Z   147 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3028388Z       |                                                   ^
+2025-09-21T23:35:39.3029061Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3029961Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3030616Z   101 |     typedef struct {
+2025-09-21T23:35:39.3030970Z       |                    ^
+2025-09-21T23:35:39.3031868Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setAveragingMode(ina3221_avg_mode_t)':
+2025-09-21T23:35:39.3034317Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:153:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3096410Z   153 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3096943Z       |                                                  ^
+2025-09-21T23:35:39.3097886Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3098805Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3099488Z   101 |     typedef struct {
+2025-09-21T23:35:39.3099846Z       |                    ^
+2025-09-21T23:35:39.3101467Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:155:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3103336Z   155 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3103838Z       |                                                   ^
+2025-09-21T23:35:39.3104517Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3105743Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3106412Z   101 |     typedef struct {
+2025-09-21T23:35:39.3106748Z       |                    ^
+2025-09-21T23:35:39.3107667Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:35:39.3109939Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:161:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3111622Z   161 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3112102Z       |                                                  ^
+2025-09-21T23:35:39.3112719Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3113617Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3114265Z   101 |     typedef struct {
+2025-09-21T23:35:39.3114612Z       |                    ^
+2025-09-21T23:35:39.3116421Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:163:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3118193Z   163 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3118704Z       |                                                   ^
+2025-09-21T23:35:39.3119375Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3120283Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3120978Z   101 |     typedef struct {
+2025-09-21T23:35:39.3121332Z       |                    ^
+2025-09-21T23:35:39.3122358Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:35:39.3124669Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:169:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3156774Z   169 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3157297Z       |                                                  ^
+2025-09-21T23:35:39.3157967Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3159133Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3159816Z   101 |     typedef struct {
+2025-09-21T23:35:39.3160177Z       |                    ^
+2025-09-21T23:35:39.3161782Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:171:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3163787Z   171 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3164290Z       |                                                   ^
+2025-09-21T23:35:39.3164949Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3166067Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3166731Z   101 |     typedef struct {
+2025-09-21T23:35:39.3167094Z       |                    ^
+2025-09-21T23:35:39.3167963Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchEnable()':
+2025-09-21T23:35:39.3170165Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:197:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3171995Z   197 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3172542Z       |                                                           ^
+2025-09-21T23:35:39.3173223Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3174123Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3174789Z   115 |     typedef struct {
+2025-09-21T23:35:39.3175132Z       |                    ^
+2025-09-21T23:35:39.3176943Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:199:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3178740Z   199 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3179279Z       |                                                            ^
+2025-09-21T23:35:39.3179951Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3180843Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3181501Z   115 |     typedef struct {
+2025-09-21T23:35:39.3181848Z       |                    ^
+2025-09-21T23:35:39.3182712Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchDisable()':
+2025-09-21T23:35:39.3184933Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:206:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3186930Z   206 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3187519Z       |                                                           ^
+2025-09-21T23:35:39.3188191Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3189113Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3189885Z   115 |     typedef struct {
+2025-09-21T23:35:39.3190261Z       |                    ^
+2025-09-21T23:35:39.3216751Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:208:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3218827Z   208 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3219424Z       |                                                            ^
+2025-09-21T23:35:39.3220079Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3220989Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3221922Z   115 |     typedef struct {
+2025-09-21T23:35:39.3222281Z       |                    ^
+2025-09-21T23:35:39.3223161Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchEnable()':
+2025-09-21T23:35:39.3225509Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:215:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3227318Z   215 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3227867Z       |                                                           ^
+2025-09-21T23:35:39.3228504Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3229399Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3230102Z   115 |     typedef struct {
+2025-09-21T23:35:39.3230465Z       |                    ^
+2025-09-21T23:35:39.3232069Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:217:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3233772Z   217 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3234286Z       |                                                            ^
+2025-09-21T23:35:39.3234922Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3235997Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3236676Z   115 |     typedef struct {
+2025-09-21T23:35:39.3237046Z       |                    ^
+2025-09-21T23:35:39.3237924Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchDisable()':
+2025-09-21T23:35:39.3240151Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:224:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3241907Z   224 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3242456Z       |                                                           ^
+2025-09-21T23:35:39.3243120Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3244038Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3244712Z   115 |     typedef struct {
+2025-09-21T23:35:39.3245073Z       |                    ^
+2025-09-21T23:35:39.3246913Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:226:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3248716Z   226 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3249274Z       |                                                            ^
+2025-09-21T23:35:39.3249933Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3250800Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3251455Z   115 |     typedef struct {
+2025-09-21T23:35:39.3252044Z       |                    ^
+2025-09-21T23:35:39.3252927Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelEnable(ina3221_ch_t)':
+2025-09-21T23:35:39.3255111Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:265:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3257320Z   265 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3257815Z       |                                                  ^
+2025-09-21T23:35:39.3258476Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3259381Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3260051Z   101 |     typedef struct {
+2025-09-21T23:35:39.3260422Z       |                    ^
+2025-09-21T23:35:39.3262042Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:279:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3263771Z   279 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3264314Z       |                                                   ^
+2025-09-21T23:35:39.3264914Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3296436Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3297111Z   101 |     typedef struct {
+2025-09-21T23:35:39.3297479Z       |                    ^
+2025-09-21T23:35:39.3298365Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelDisable(ina3221_ch_t)':
+2025-09-21T23:35:39.3300509Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:285:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3302280Z   285 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3302820Z       |                                                  ^
+2025-09-21T23:35:39.3303495Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3304329Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3305007Z   101 |     typedef struct {
+2025-09-21T23:35:39.3305562Z       |                    ^
+2025-09-21T23:35:39.3307180Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:299:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3308951Z   299 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:39.3309464Z       |                                                   ^
+2025-09-21T23:35:39.3310085Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3310983Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:39.3311684Z   101 |     typedef struct {
+2025-09-21T23:35:39.3312035Z       |                    ^
+2025-09-21T23:35:39.3312887Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumEnable(ina3221_ch_t)':
+2025-09-21T23:35:39.3315133Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:359:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3317524Z   359 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3318094Z       |                                                           ^
+2025-09-21T23:35:39.3318712Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3319634Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3320574Z   115 |     typedef struct {
+2025-09-21T23:35:39.3320939Z       |                    ^
+2025-09-21T23:35:39.3322591Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:373:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3324382Z   373 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3324941Z       |                                                            ^
+2025-09-21T23:35:39.3325843Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3326724Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3327374Z   115 |     typedef struct {
+2025-09-21T23:35:39.3327718Z       |                    ^
+2025-09-21T23:35:39.3328615Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumDisable(ina3221_ch_t)':
+2025-09-21T23:35:39.3330774Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:380:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3332557Z   380 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3333089Z       |                                                           ^
+2025-09-21T23:35:39.3333739Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3334612Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3335424Z   115 |     typedef struct {
+2025-09-21T23:35:39.3335784Z       |                    ^
+2025-09-21T23:35:39.3337352Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:394:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:39.3339121Z   394 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:39.3339693Z       |                                                            ^
+2025-09-21T23:35:39.3340371Z In file included from /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:39.3341278Z /pio/workspace/libdeps/rak4631/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:39.3341959Z   115 |     typedef struct {
+2025-09-21T23:35:39.3342329Z       |                    ^
+2025-09-21T23:35:39.3342884Z Compiling .pio/build/rak4631/lib216/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:35:39.3828677Z Archiving .pio/build/rak4631/lib74f/libEmotiBit MLX90632.a
+2025-09-21T23:35:39.3870653Z Indexing .pio/build/rak4631/lib74f/libEmotiBit MLX90632.a
+2025-09-21T23:35:39.4120763Z Compiling .pio/build/rak4631/lib5ae/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:35:39.4241439Z Archiving .pio/build/rak4631/lib997/libINA3221.a
+2025-09-21T23:35:39.4284947Z Indexing .pio/build/rak4631/lib997/libINA3221.a
+2025-09-21T23:35:39.4524276Z Compiling .pio/build/rak4631/lib155/INA226/INA226.cpp.o
+2025-09-21T23:35:39.4647983Z Archiving .pio/build/rak4631/lib1b9/libQMC5883LCompass.a
+2025-09-21T23:35:39.4656570Z Indexing .pio/build/rak4631/lib1b9/libQMC5883LCompass.a
+2025-09-21T23:35:39.4941499Z Compiling .pio/build/rak4631/lib63f/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:35:39.6799869Z Archiving .pio/build/rak4631/lib216/libDFRobot_RTU.a
+2025-09-21T23:35:39.6879307Z Indexing .pio/build/rak4631/lib216/libDFRobot_RTU.a
+2025-09-21T23:35:39.7005121Z Compiling .pio/build/rak4631/lib63f/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:35:39.7096115Z Archiving .pio/build/rak4631/lib5ae/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:39.7136893Z Indexing .pio/build/rak4631/lib5ae/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:39.7247645Z Compiling .pio/build/rak4631/lib63f/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:35:39.7641629Z Archiving .pio/build/rak4631/lib155/libINA226.a
+2025-09-21T23:35:39.7677112Z Indexing .pio/build/rak4631/lib155/libINA226.a
+2025-09-21T23:35:39.7936255Z Compiling .pio/build/rak4631/lib537/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:35:39.8374530Z Compiling .pio/build/rak4631/lib537/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:35:39.8993556Z /pio/workspace/libdeps/rak4631/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:35:39.8997154Z /pio/workspace/libdeps/rak4631/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:35:39.8998666Z   108 |     if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:35:39.8999223Z       |         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:35:39.9716616Z Compiling .pio/build/rak4631/lib2b8/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:35:40.0044000Z Archiving .pio/build/rak4631/lib63f/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:40.0102909Z Indexing .pio/build/rak4631/lib63f/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:40.0416135Z Compiling .pio/build/rak4631/lib76c/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:35:40.2130314Z Compiling .pio/build/rak4631/lib9f0/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:35:40.2490697Z Archiving .pio/build/rak4631/lib2b8/libAdafruit LTR390 Library.a
+2025-09-21T23:35:40.2538895Z Indexing .pio/build/rak4631/lib2b8/libAdafruit LTR390 Library.a
+2025-09-21T23:35:40.2779810Z Compiling .pio/build/rak4631/libf90/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:35:40.3256915Z Archiving .pio/build/rak4631/lib76c/libAdafruit PCT2075.a
+2025-09-21T23:35:40.3293180Z Indexing .pio/build/rak4631/lib76c/libAdafruit PCT2075.a
+2025-09-21T23:35:40.3538223Z Compiling .pio/build/rak4631/lib537/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:35:40.3636308Z Archiving .pio/build/rak4631/lib537/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:40.3682391Z Indexing .pio/build/rak4631/lib537/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:40.3813494Z Compiling .pio/build/rak4631/lib537/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:35:40.4843859Z /pio/workspace/libdeps/rak4631/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'uint8_t DFRobot_BMM150::getRate()':
+2025-09-21T23:35:40.4845752Z /pio/workspace/libdeps/rak4631/DFRobot_BMM150/DFRobot_BMM150.cpp:161:10: warning: 'result' may be used uninitialized in this function [-Wmaybe-uninitialized]
+2025-09-21T23:35:40.4846902Z   161 |   return result;
+2025-09-21T23:35:40.4847227Z       |          ^~~~~~
+2025-09-21T23:35:40.5774279Z Archiving .pio/build/rak4631/libf90/libAdafruit TSL2561.a
+2025-09-21T23:35:40.5829700Z Indexing .pio/build/rak4631/libf90/libAdafruit TSL2561.a
+2025-09-21T23:35:40.6064698Z Compiling .pio/build/rak4631/lib5e5/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:35:40.6194090Z Archiving .pio/build/rak4631/lib9f0/libDFRobot_BMM150.a
+2025-09-21T23:35:40.6234285Z Indexing .pio/build/rak4631/lib9f0/libDFRobot_BMM150.a
+2025-09-21T23:35:40.6487660Z Compiling .pio/build/rak4631/libadb/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:35:40.6778722Z Compiling .pio/build/rak4631/lib93c/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:35:40.6863615Z Archiving .pio/build/rak4631/lib537/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:40.6920970Z Indexing .pio/build/rak4631/lib537/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:40.7033845Z Compiling .pio/build/rak4631/lib93c/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:35:40.9171370Z Archiving .pio/build/rak4631/lib5e5/libAdafruit MAX1704X.a
+2025-09-21T23:35:40.9212222Z Indexing .pio/build/rak4631/lib5e5/libAdafruit MAX1704X.a
+2025-09-21T23:35:40.9320022Z Compiling .pio/build/rak4631/lib93c/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:35:40.9434220Z Archiving .pio/build/rak4631/libadb/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:40.9613663Z Indexing .pio/build/rak4631/libadb/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:40.9677482Z Compiling .pio/build/rak4631/lib9ce/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:35:40.9936090Z Compiling .pio/build/rak4631/liba48/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:35:41.0251042Z Compiling .pio/build/rak4631/libe89/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:35:41.2161476Z Archiving .pio/build/rak4631/lib9ce/libAdafruit SHT31 Library.a
+2025-09-21T23:35:41.2204642Z Archiving .pio/build/rak4631/lib93c/libAdafruit LPS2X.a
+2025-09-21T23:35:41.2234169Z Indexing .pio/build/rak4631/lib9ce/libAdafruit SHT31 Library.a
+2025-09-21T23:35:41.2259662Z Indexing .pio/build/rak4631/lib93c/libAdafruit LPS2X.a
+2025-09-21T23:35:41.2556986Z Compiling .pio/build/rak4631/libe9f/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:35:41.2791600Z Compiling .pio/build/rak4631/libc2b/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:35:41.2956769Z Archiving .pio/build/rak4631/liba48/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:41.2985649Z Indexing .pio/build/rak4631/liba48/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:41.3093461Z Compiling .pio/build/rak4631/lib788/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:35:41.3261373Z Archiving .pio/build/rak4631/libe89/libAdafruit SHT4x Library.a
+2025-09-21T23:35:41.3300527Z Indexing .pio/build/rak4631/libe89/libAdafruit SHT4x Library.a
+2025-09-21T23:35:41.3572020Z Compiling .pio/build/rak4631/lib788/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:35:41.5442557Z Archiving .pio/build/rak4631/libc2b/libClosedCube OPT3001.a
+2025-09-21T23:35:41.5486246Z Indexing .pio/build/rak4631/libc2b/libClosedCube OPT3001.a
+2025-09-21T23:35:41.5683159Z Compiling .pio/build/rak4631/lib67e/bsec2/bsec2.cpp.o
+2025-09-21T23:35:41.5792736Z Compiling .pio/build/rak4631/lib67e/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:35:41.5873381Z Archiving .pio/build/rak4631/libe9f/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:41.5924141Z Indexing .pio/build/rak4631/libe9f/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:41.6253320Z Compiling .pio/build/rak4631/libd09/SoftwareSerial/SoftwareSerial.cpp.o
+2025-09-21T23:35:41.6810074Z Archiving .pio/build/rak4631/lib788/libBME68x Sensor library.a
+2025-09-21T23:35:41.6862592Z Indexing .pio/build/rak4631/lib788/libBME68x Sensor library.a
+2025-09-21T23:35:41.7164720Z Compiling .pio/build/rak4631/libcbf/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:35:41.8467807Z Compiling .pio/build/rak4631/lib728/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:35:41.8903041Z Archiving .pio/build/rak4631/lib67e/libbsec2.a
+2025-09-21T23:35:41.8950166Z Indexing .pio/build/rak4631/lib67e/libbsec2.a
+2025-09-21T23:35:41.9063509Z Compiling .pio/build/rak4631/lib728/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:35:41.9528407Z Compiling .pio/build/rak4631/lib728/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:35:41.9626993Z Archiving .pio/build/rak4631/libd09/libSoftwareSerial.a
+2025-09-21T23:35:41.9667085Z Indexing .pio/build/rak4631/libd09/libSoftwareSerial.a
+2025-09-21T23:35:41.9774463Z Compiling .pio/build/rak4631/lib728/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:35:41.9942667Z Compiling .pio/build/rak4631/lib728/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:35:42.0388178Z Archiving .pio/build/rak4631/libcbf/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:42.0428452Z Indexing .pio/build/rak4631/libcbf/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:42.0571143Z Compiling .pio/build/rak4631/lib728/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:35:42.0990441Z Compiling .pio/build/rak4631/lib728/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:35:42.2323844Z Compiling .pio/build/rak4631/libf42/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:35:42.2623198Z Compiling .pio/build/rak4631/libee4/TBPubSubClient/PubSubClient.cpp.o
+2025-09-21T23:35:42.3410636Z Compiling .pio/build/rak4631/lib8d4/NTPClient/NTPClient.cpp.o
+2025-09-21T23:35:42.3505431Z Archiving .pio/build/rak4631/lib728/libSensirion Core.a
+2025-09-21T23:35:42.3568540Z Indexing .pio/build/rak4631/lib728/libSensirion Core.a
+2025-09-21T23:35:42.3839293Z Compiling .pio/build/rak4631/lib0a7/Melopero RV3028/Melopero_RV3028.cpp.o
+2025-09-21T23:35:42.6162365Z Archiving .pio/build/rak4631/libf42/libSensirion I2C SCD4x.a
+2025-09-21T23:35:42.6206095Z Indexing .pio/build/rak4631/libf42/libSensirion I2C SCD4x.a
+2025-09-21T23:35:42.6486554Z Compiling .pio/build/rak4631/lib716/RAK13800-W5100S/Dhcp.cpp.o
+2025-09-21T23:35:42.6540670Z Archiving .pio/build/rak4631/lib8d4/libNTPClient.a
+2025-09-21T23:35:42.6575972Z Indexing .pio/build/rak4631/lib8d4/libNTPClient.a
+2025-09-21T23:35:42.6686563Z Compiling .pio/build/rak4631/lib716/RAK13800-W5100S/Dns.cpp.o
+2025-09-21T23:35:42.7108111Z Archiving .pio/build/rak4631/lib0a7/libMelopero RV3028.a
+2025-09-21T23:35:42.7152765Z Indexing .pio/build/rak4631/lib0a7/libMelopero RV3028.a
+2025-09-21T23:35:42.7276516Z Compiling .pio/build/rak4631/lib716/RAK13800-W5100S/Ethernet.cpp.o
+2025-09-21T23:35:42.9235544Z Archiving .pio/build/rak4631/libee4/libTBPubSubClient.a
+2025-09-21T23:35:42.9279616Z Indexing .pio/build/rak4631/libee4/libTBPubSubClient.a
+2025-09-21T23:35:42.9404882Z Compiling .pio/build/rak4631/lib716/RAK13800-W5100S/EthernetClient.cpp.o
+2025-09-21T23:35:42.9697408Z Compiling .pio/build/rak4631/lib716/RAK13800-W5100S/EthernetServer.cpp.o
+2025-09-21T23:35:42.9849737Z Compiling .pio/build/rak4631/lib716/RAK13800-W5100S/EthernetUdp.cpp.o
+2025-09-21T23:35:43.0669656Z Compiling .pio/build/rak4631/lib716/RAK13800-W5100S/socket.cpp.o
+2025-09-21T23:35:43.2635147Z Compiling .pio/build/rak4631/lib716/RAK13800-W5100S/w5100.cpp.o
+2025-09-21T23:35:43.2928019Z Compiling .pio/build/rak4631/libcfa/RAKwireless NCP5623 RGB LED library/NCP5623.cpp.o
+2025-09-21T23:35:43.3237230Z Compiling .pio/build/rak4631/lib080/RAK12035_SoilMoisture/RAK12035_SoilMoisture.cpp.o
+2025-09-21T23:35:43.4798368Z Compiling .pio/build/rak4631/lib52a/RAKwireless RAK12034/DFRobot_BMX160.cpp.o
+2025-09-21T23:35:43.5533941Z Archiving .pio/build/rak4631/libcfa/libRAKwireless NCP5623 RGB LED library.a
+2025-09-21T23:35:43.5579689Z Indexing .pio/build/rak4631/libcfa/libRAKwireless NCP5623 RGB LED library.a
+2025-09-21T23:35:43.5686358Z Compiling .pio/build/rak4631/lib52a/RAKwireless RAK12034/Rak_BMX160.cpp.o
+2025-09-21T23:35:43.5996110Z Archiving .pio/build/rak4631/lib716/libRAK13800-W5100S.a
+2025-09-21T23:35:43.6056632Z Archiving .pio/build/rak4631/lib080/libRAK12035_SoilMoisture.a
+2025-09-21T23:35:43.6081102Z Indexing .pio/build/rak4631/lib080/libRAK12035_SoilMoisture.a
+2025-09-21T23:35:43.6109864Z Indexing .pio/build/rak4631/lib716/libRAK13800-W5100S.a
+2025-09-21T23:35:43.6471618Z Compiling .pio/build/rak4631/lib947/RotaryEncoder/RotaryEncoder.cpp.o
+2025-09-21T23:35:43.6615630Z Compiling .pio/build/rak4631/lib947/RotaryEncoder/SwRotaryEncoder.cpp.o
+2025-09-21T23:35:43.8051603Z Compiling .pio/build/rak4631/libf88/Adafruit_LittleFS/Adafruit_LittleFS.cpp.o
+2025-09-21T23:35:43.8149273Z Archiving .pio/build/rak4631/lib52a/libRAKwireless RAK12034.a
+2025-09-21T23:35:43.8189897Z Indexing .pio/build/rak4631/lib52a/libRAKwireless RAK12034.a
+2025-09-21T23:35:43.8346615Z Compiling .pio/build/rak4631/libf88/Adafruit_LittleFS/Adafruit_LittleFS_File.cpp.o
+2025-09-21T23:35:43.9074323Z Compiling .pio/build/rak4631/libf88/Adafruit_LittleFS/littlefs/lfs.c.o
+2025-09-21T23:35:43.9465163Z Archiving .pio/build/rak4631/lib947/libRotaryEncoder.a
+2025-09-21T23:35:43.9509074Z Indexing .pio/build/rak4631/lib947/libRotaryEncoder.a
+2025-09-21T23:35:43.9617690Z Compiling .pio/build/rak4631/libf88/Adafruit_LittleFS/littlefs/lfs_util.c.o
+2025-09-21T23:35:44.0444264Z Compiling .pio/build/rak4631/liba05/InternalFileSytem/InternalFileSystem.cpp.o
+2025-09-21T23:35:44.1413496Z Compiling .pio/build/rak4631/liba05/InternalFileSytem/flash/flash_cache.c.o
+2025-09-21T23:35:44.1705861Z Compiling .pio/build/rak4631/liba05/InternalFileSytem/flash/flash_nrf5x.c.o
+2025-09-21T23:35:44.2553371Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEAdvertising.cpp.o
+2025-09-21T23:35:44.2678390Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLECentral.cpp.o
+2025-09-21T23:35:44.2948387Z Archiving .pio/build/rak4631/liba05/libInternalFileSytem.a
+2025-09-21T23:35:44.2988991Z Indexing .pio/build/rak4631/liba05/libInternalFileSytem.a
+2025-09-21T23:35:44.3137965Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLECharacteristic.cpp.o
+2025-09-21T23:35:44.3469041Z Archiving .pio/build/rak4631/libf88/libAdafruit_LittleFS.a
+2025-09-21T23:35:44.3528372Z Indexing .pio/build/rak4631/libf88/libAdafruit_LittleFS.a
+2025-09-21T23:35:44.3656021Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEClientCharacteristic.cpp.o
+2025-09-21T23:35:44.6241054Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEClientService.cpp.o
+2025-09-21T23:35:44.6789665Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEConnection.cpp.o
+2025-09-21T23:35:44.7973576Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEDiscovery.cpp.o
+2025-09-21T23:35:44.8117138Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEGatt.cpp.o
+2025-09-21T23:35:44.9734909Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEPeriph.cpp.o
+2025-09-21T23:35:45.0930219Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEScanner.cpp.o
+2025-09-21T23:35:45.1660483Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLESecurity.cpp.o
+2025-09-21T23:35:45.1871257Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEService.cpp.o
+2025-09-21T23:35:45.3348061Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/BLEUuid.cpp.o
+2025-09-21T23:35:45.5171398Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/bluefruit.cpp.o
+2025-09-21T23:35:45.5370484Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/clients/BLEAncs.cpp.o
+2025-09-21T23:35:45.5527869Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/clients/BLEClientBas.cpp.o
+2025-09-21T23:35:45.6469576Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/clients/BLEClientCts.cpp.o
+2025-09-21T23:35:45.8976653Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/clients/BLEClientDis.cpp.o
+2025-09-21T23:35:45.9253562Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/clients/BLEClientHidAdafruit.cpp.o
+2025-09-21T23:35:46.0050089Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/clients/BLEClientIas.cpp.o
+2025-09-21T23:35:46.0207833Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/clients/BLEClientUart.cpp.o
+2025-09-21T23:35:46.2474570Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEBas.cpp.o
+2025-09-21T23:35:46.3119546Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEBeacon.cpp.o
+2025-09-21T23:35:46.3508590Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEDfu.cpp.o
+2025-09-21T23:35:46.3832221Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEDis.cpp.o
+2025-09-21T23:35:46.5914662Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEHidAdafruit.cpp.o
+2025-09-21T23:35:46.6645001Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEHidGamepad.cpp.o
+2025-09-21T23:35:46.7191476Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEHidGeneric.cpp.o
+2025-09-21T23:35:46.7447523Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEIas.cpp.o
+2025-09-21T23:35:46.9855746Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEMidi.cpp.o
+2025-09-21T23:35:47.0310753Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/BLEUart.cpp.o
+2025-09-21T23:35:47.0890492Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/services/EddyStone.cpp.o
+2025-09-21T23:35:47.1160148Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/utility/AdaMsg.cpp.o
+2025-09-21T23:35:47.3727700Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/utility/bonding.cpp.o
+2025-09-21T23:35:47.3876479Z Compiling .pio/build/rak4631/lib982/Bluefruit52Lib/utility/bootloader_util.c.o
+2025-09-21T23:35:47.4463561Z Compiling .pio/build/rak4631/lib66a/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:35:47.4608415Z Compiling .pio/build/rak4631/lib66a/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:35:47.5672899Z Compiling .pio/build/rak4631/lib66a/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:35:47.6279551Z Compiling .pio/build/rak4631/lib66a/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:35:47.6430484Z Compiling .pio/build/rak4631/lib66a/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:35:47.6808743Z Archiving .pio/build/rak4631/libFrameworkArduinoVariant.a
+2025-09-21T23:35:47.6841037Z Indexing .pio/build/rak4631/libFrameworkArduinoVariant.a
+2025-09-21T23:35:47.7076557Z Compiling .pio/build/rak4631/FrameworkArduino/HardwarePWM.cpp.o
+2025-09-21T23:35:47.7185994Z Archiving .pio/build/rak4631/lib982/libBluefruit52Lib.a
+2025-09-21T23:35:47.7263379Z Compiling .pio/build/rak4631/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:35:47.7498954Z Indexing .pio/build/rak4631/lib982/libBluefruit52Lib.a
+2025-09-21T23:35:47.7852223Z Compiling .pio/build/rak4631/FrameworkArduino/Print.cpp.o
+2025-09-21T23:35:47.7922001Z Archiving .pio/build/rak4631/lib66a/libAdafruit NeoPixel.a
+2025-09-21T23:35:47.7977076Z Indexing .pio/build/rak4631/lib66a/libAdafruit NeoPixel.a
+2025-09-21T23:35:47.8096202Z Compiling .pio/build/rak4631/FrameworkArduino/RingBuffer.cpp.o
+2025-09-21T23:35:47.8992281Z Compiling .pio/build/rak4631/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:35:47.9848603Z Compiling .pio/build/rak4631/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:35:47.9976654Z Compiling .pio/build/rak4631/FrameworkArduino/Uart.cpp.o
+2025-09-21T23:35:48.0789736Z Compiling .pio/build/rak4631/FrameworkArduino/WInterrupts.c.o
+2025-09-21T23:35:48.1913728Z Compiling .pio/build/rak4631/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:35:48.2079557Z Compiling .pio/build/rak4631/FrameworkArduino/WString.cpp.o
+2025-09-21T23:35:48.2607347Z Compiling .pio/build/rak4631/FrameworkArduino/abi.cpp.o
+2025-09-21T23:35:48.2752746Z Compiling .pio/build/rak4631/FrameworkArduino/avr/dtostrf.c.o
+2025-09-21T23:35:48.2900093Z Compiling .pio/build/rak4631/FrameworkArduino/delay.c.o
+2025-09-21T23:35:48.3376170Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/Source/croutine.c.o
+2025-09-21T23:35:48.3530140Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/Source/event_groups.c.o
+2025-09-21T23:35:48.3996711Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/Source/list.c.o
+2025-09-21T23:35:48.4288441Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/Source/portable/MemMang/heap_3.c.o
+2025-09-21T23:35:48.4602817Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/Source/queue.c.o
+2025-09-21T23:35:48.4863586Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/Source/stream_buffer.c.o
+2025-09-21T23:35:48.5031480Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/Source/tasks.c.o
+2025-09-21T23:35:48.5341113Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/Source/timers.c.o
+2025-09-21T23:35:48.6468484Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis.c.o
+2025-09-21T23:35:48.6657026Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis_systick.c.o
+2025-09-21T23:35:48.6863231Z Compiling .pio/build/rak4631/FrameworkArduino/freertos/portable/GCC/nrf52/port.c.o
+2025-09-21T23:35:48.7470461Z Compiling .pio/build/rak4631/FrameworkArduino/hooks.c.o
+2025-09-21T23:35:48.7786380Z Compiling .pio/build/rak4631/FrameworkArduino/itoa.c.o
+2025-09-21T23:35:48.7899498Z Compiling .pio/build/rak4631/FrameworkArduino/linker/gcc_startup_nrf52.S.o
+2025-09-21T23:35:48.8006148Z Compiling .pio/build/rak4631/FrameworkArduino/linker/gcc_startup_nrf52833.S.o
+2025-09-21T23:35:48.8119106Z Compiling .pio/build/rak4631/FrameworkArduino/linker/gcc_startup_nrf52840.S.o
+2025-09-21T23:35:48.8265738Z Compiling .pio/build/rak4631/FrameworkArduino/main.cpp.o
+2025-09-21T23:35:48.8379130Z Compiling .pio/build/rak4631/FrameworkArduino/new.cpp.o
+2025-09-21T23:35:48.8499901Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_gpiote.c.o
+2025-09-21T23:35:48.8657138Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_power.c.o
+2025-09-21T23:35:48.9356536Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_pwm.c.o
+2025-09-21T23:35:48.9919137Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_qspi.c.o
+2025-09-21T23:35:49.0081336Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spim.c.o
+2025-09-21T23:35:49.0221436Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spis.c.o
+2025-09-21T23:35:49.0614333Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_temp.c.o
+2025-09-21T23:35:49.1917935Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_timer.c.o
+2025-09-21T23:35:49.2036532Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/mdk/system_nrf52.c.o
+2025-09-21T23:35:49.2120550Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/mdk/system_nrf52833.c.o
+2025-09-21T23:35:49.2259360Z Compiling .pio/build/rak4631/FrameworkArduino/nordic/nrfx/mdk/system_nrf52840.c.o
+2025-09-21T23:35:49.2557889Z Compiling .pio/build/rak4631/FrameworkArduino/pulse.c.o
+2025-09-21T23:35:49.2644279Z Compiling .pio/build/rak4631/FrameworkArduino/pulse_asm.S.o
+2025-09-21T23:35:49.2758936Z Compiling .pio/build/rak4631/FrameworkArduino/rtos.cpp.o
+2025-09-21T23:35:49.2909813Z Compiling .pio/build/rak4631/FrameworkArduino/sysview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c.o
+2025-09-21T23:35:49.3424505Z Compiling .pio/build/rak4631/FrameworkArduino/sysview/SEGGER/SEGGER_RTT.c.o
+2025-09-21T23:35:49.3640613Z Compiling .pio/build/rak4631/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S.o
+2025-09-21T23:35:49.3829855Z Compiling .pio/build/rak4631/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_printf.c.o
+2025-09-21T23:35:49.3987254Z Compiling .pio/build/rak4631/FrameworkArduino/sysview/SEGGER/SEGGER_SYSVIEW.c.o
+2025-09-21T23:35:49.4874319Z Compiling .pio/build/rak4631/FrameworkArduino/sysview/SEGGER_SYSVIEW_FreeRTOS.c.o
+2025-09-21T23:35:49.5251517Z Compiling .pio/build/rak4631/FrameworkArduino/utility/AdaCallback.c.o
+2025-09-21T23:35:49.5363341Z Compiling .pio/build/rak4631/FrameworkArduino/utility/SoftwareTimer.cpp.o
+2025-09-21T23:35:49.5506646Z Compiling .pio/build/rak4631/FrameworkArduino/utility/adafruit_fifo.cpp.o
+2025-09-21T23:35:49.6538379Z Compiling .pio/build/rak4631/FrameworkArduino/utility/debug.cpp.o
+2025-09-21T23:35:49.7460551Z Compiling .pio/build/rak4631/FrameworkArduino/utility/utilities.c.o
+2025-09-21T23:35:49.7988351Z Compiling .pio/build/rak4631/FrameworkArduino/wiring.c.o
+2025-09-21T23:35:49.8217480Z Compiling .pio/build/rak4631/FrameworkArduino/wiring_analog.cpp.o
+2025-09-21T23:35:49.8719868Z Compiling .pio/build/rak4631/FrameworkArduino/wiring_analog_nRF52.c.o
+2025-09-21T23:35:49.9269445Z Compiling .pio/build/rak4631/FrameworkArduino/wiring_digital.c.o
+2025-09-21T23:35:49.9430790Z Compiling .pio/build/rak4631/FrameworkArduino/wiring_private.c.o
+2025-09-21T23:35:49.9927524Z Compiling .pio/build/rak4631/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:35:50.0640568Z Archiving .pio/build/rak4631/libFrameworkArduino.a
+2025-09-21T23:35:50.0857868Z Indexing .pio/build/rak4631/libFrameworkArduino.a
+2025-09-21T23:35:50.1299109Z Linking .pio/build/rak4631/firmware.elf
+2025-09-21T23:35:51.1238998Z /pio/core/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/bin/ld: .pio/build/rak4631/firmware.elf section `.text' will not fit in region `FLASH'
+2025-09-21T23:35:51.1240727Z /pio/core/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/bin/ld: region `FLASH' overflowed by 125296 bytes
+2025-09-21T23:35:51.1241539Z collect2: error: ld returned 1 exit status
+2025-09-21T23:35:51.1245901Z *** [.pio/build/rak4631/firmware.elf] Error 1
+2025-09-21T23:35:51.4956564Z ========================= [FAILED] Took 97.19 seconds =========================
+2025-09-21T23:35:51.4957385Z 
+2025-09-21T23:35:51.4962495Z Environment    Status    Duration
+2025-09-21T23:35:51.4962904Z -------------  --------  ------------
+2025-09-21T23:35:51.4963291Z rak4631        FAILED    00:01:37.188
+2025-09-21T23:35:51.4963743Z ==================== 1 failed, 0 succeeded in 00:01:37.188 ====================
+2025-09-21T23:35:51.6553083Z ##[error]Process completed with exit code 1.
+2025-09-21T23:35:51.6680334Z Post job cleanup.
+2025-09-21T23:35:51.7451566Z [command]/usr/bin/git version
+2025-09-21T23:35:51.7487366Z git version 2.51.0
+2025-09-21T23:35:51.7523863Z Temporarily overriding HOME='/home/runner/work/_temp/a5501285-a362-42b8-9320-d3bd2f95e1d8' before making global git config changes
+2025-09-21T23:35:51.7525104Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:35:51.7529638Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:35:51.7565101Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:35:51.7599183Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:35:51.7807620Z Entering 'meshtestic'
+2025-09-21T23:35:51.7849938Z Entering 'protobufs'
+2025-09-21T23:35:51.7904896Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:35:51.7950895Z http.https://github.com/.extraheader
+2025-09-21T23:35:51.7960211Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:35:51.7989268Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:35:51.8194620Z Entering 'meshtestic'
+2025-09-21T23:35:51.8218619Z http.https://github.com/.extraheader
+2025-09-21T23:35:51.8250999Z Entering 'protobufs'
+2025-09-21T23:35:51.8274814Z http.https://github.com/.extraheader
+2025-09-21T23:35:51.8435985Z Cleaning up orphan processes

@@ -1,0 +1,1643 @@
+﻿2025-09-21T23:11:33.5628911Z Current runner version: '2.327.1'
+2025-09-21T23:11:33.5636730Z Runner name: 'fifield-3038-16-8a01'
+2025-09-21T23:11:33.5637877Z Runner group name: 'mesh-x86'
+2025-09-21T23:11:33.5638912Z Machine name: '12d299f0c4d1'
+2025-09-21T23:11:33.5642372Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:11:33.5644892Z Metadata: read
+2025-09-21T23:11:33.5645724Z ##[endgroup]
+2025-09-21T23:11:33.5648362Z Secret source: Actions
+2025-09-21T23:11:33.5649293Z Prepare workflow directory
+2025-09-21T23:11:33.6284063Z Prepare all required actions
+2025-09-21T23:11:33.6332920Z Getting action download info
+2025-09-21T23:11:34.5725529Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:11:35.3459779Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:11:36.3716198Z Uses: meshtastic/firmware/.github/workflows/test_native.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:11:36.3724257Z Complete job name: test-native / Native PlatformIO Tests
+2025-09-21T23:11:36.4582948Z ##[group]Run actions/checkout@v5
+2025-09-21T23:11:36.4584671Z with:
+2025-09-21T23:11:36.4585550Z   ref: develop
+2025-09-21T23:11:36.4586642Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:36.4588048Z   submodules: recursive
+2025-09-21T23:11:36.4589499Z   token: ***
+2025-09-21T23:11:36.4590596Z   ssh-strict: true
+2025-09-21T23:11:36.4591556Z   ssh-user: git
+2025-09-21T23:11:36.4592553Z   persist-credentials: true
+2025-09-21T23:11:36.4593714Z   clean: true
+2025-09-21T23:11:36.4594734Z   sparse-checkout-cone-mode: true
+2025-09-21T23:11:36.4595989Z   fetch-depth: 1
+2025-09-21T23:11:36.4597014Z   fetch-tags: false
+2025-09-21T23:11:36.4598026Z   show-progress: true
+2025-09-21T23:11:36.4599038Z   lfs: false
+2025-09-21T23:11:36.4600090Z   set-safe-directory: true
+2025-09-21T23:11:36.4601659Z env:
+2025-09-21T23:11:36.4604510Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:36.4607621Z ##[endgroup]
+2025-09-21T23:11:36.6047363Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:36.6055196Z ##[group]Getting Git version info
+2025-09-21T23:11:36.6059372Z Working directory is '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:11:36.6065680Z [command]/usr/bin/git version
+2025-09-21T23:11:36.6068515Z git version 2.43.0
+2025-09-21T23:11:36.6077244Z ##[endgroup]
+2025-09-21T23:11:36.6094822Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/bf532df0-20b3-44b7-8bac-2a05bdc3c862' before making global git config changes
+2025-09-21T23:11:36.6103399Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:11:36.6110235Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:11:36.6119189Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-09-21T23:11:36.6123232Z https://github.com/meshtastic/firmware
+2025-09-21T23:11:36.6130378Z Deleting the contents of '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:11:36.8625635Z ##[group]Initializing the repository
+2025-09-21T23:11:36.8630401Z [command]/usr/bin/git init /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:11:36.8691888Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:11:36.8694413Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:11:36.8696790Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:11:36.8698598Z hint: 
+2025-09-21T23:11:36.8699884Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:11:36.8701362Z hint: 
+2025-09-21T23:11:36.8702854Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:11:36.8705248Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:11:36.8707724Z hint: 
+2025-09-21T23:11:36.8708680Z hint: 	git branch -m <name>
+2025-09-21T23:11:36.8710804Z Initialized empty Git repository in /home/ubuntu/runner/_work/firmware/firmware/.git/
+2025-09-21T23:11:36.8715308Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:36.8747981Z ##[endgroup]
+2025-09-21T23:11:36.8749798Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:11:36.8751447Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:11:36.8781063Z ##[endgroup]
+2025-09-21T23:11:36.8782728Z ##[group]Setting up auth
+2025-09-21T23:11:36.8789507Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:11:36.8823602Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:11:36.9097964Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:11:36.9138419Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:11:36.9381800Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:36.9418868Z ##[endgroup]
+2025-09-21T23:11:36.9420721Z ##[group]Fetching the repository
+2025-09-21T23:11:36.9431004Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:11:38.4410736Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:38.4412135Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:11:38.4450037Z ##[endgroup]
+2025-09-21T23:11:38.4451233Z ##[group]Determining the checkout info
+2025-09-21T23:11:38.4465595Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:11:38.4505077Z   origin/develop
+2025-09-21T23:11:38.4514408Z ##[endgroup]
+2025-09-21T23:11:38.4524515Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:11:38.4591149Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:11:38.4647010Z ##[group]Checking out the ref
+2025-09-21T23:11:38.4656391Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:11:38.6167632Z Switched to a new branch 'develop'
+2025-09-21T23:11:38.6168819Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:11:38.6177464Z ##[endgroup]
+2025-09-21T23:11:38.6178660Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:11:38.6187318Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:38.6249067Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:11:38.6300252Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:11:38.6343595Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:11:38.6378354Z ##[endgroup]
+2025-09-21T23:11:38.6379439Z ##[group]Fetching submodules
+2025-09-21T23:11:38.6382768Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:11:38.6705173Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:11:38.6997474Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:11:38.7002945Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:11:38.7036510Z Cloning into '/home/ubuntu/runner/_work/firmware/firmware/meshtestic'...
+2025-09-21T23:11:39.6407637Z Cloning into '/home/ubuntu/runner/_work/firmware/firmware/protobufs'...
+2025-09-21T23:11:40.5580313Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:11:40.5756081Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:11:40.5807797Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:11:40.6090708Z Entering 'meshtestic'
+2025-09-21T23:11:40.6131323Z Entering 'protobufs'
+2025-09-21T23:11:40.6198427Z ##[endgroup]
+2025-09-21T23:11:40.6199526Z ##[group]Persisting credentials for submodules
+2025-09-21T23:11:40.6207223Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:11:40.6451783Z Entering 'meshtestic'
+2025-09-21T23:11:40.6503683Z Entering 'protobufs'
+2025-09-21T23:11:40.6571779Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:11:40.6833000Z Entering 'meshtestic'
+2025-09-21T23:11:40.6881177Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:11:40.6904478Z Entering 'protobufs'
+2025-09-21T23:11:40.6955878Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:11:40.7022186Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:11:40.7321446Z Entering 'meshtestic'
+2025-09-21T23:11:40.7382059Z Entering 'protobufs'
+2025-09-21T23:11:40.7454132Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:11:40.7737023Z Entering 'meshtestic'
+2025-09-21T23:11:40.7785139Z Entering 'protobufs'
+2025-09-21T23:11:40.7846863Z ##[endgroup]
+2025-09-21T23:11:40.7897947Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:11:40.7928021Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:11:40.8452003Z Prepare all required actions
+2025-09-21T23:11:40.8453190Z Getting action download info
+2025-09-21T23:11:40.8572318Z ##[group]Run ./.github/actions/setup-native
+2025-09-21T23:11:40.8572978Z env:
+2025-09-21T23:11:40.8574313Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:40.8575850Z ##[endgroup]
+2025-09-21T23:11:40.8762127Z Prepare all required actions
+2025-09-21T23:11:40.8763027Z Getting action download info
+2025-09-21T23:11:41.2310375Z Download action repository 'actions/setup-python@v6' (SHA:e797f83bcb11b83ae66e0230d6156d7c80228e7c)
+2025-09-21T23:11:42.1264854Z ##[group]Run ./.github/actions/setup-base
+2025-09-21T23:11:42.1265259Z env:
+2025-09-21T23:11:42.1266086Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:42.1267107Z ##[endgroup]
+2025-09-21T23:11:42.1351868Z ##[group]Run actions/checkout@v5
+2025-09-21T23:11:42.1352174Z with:
+2025-09-21T23:11:42.1352391Z   submodules: recursive
+2025-09-21T23:11:42.1352655Z   ref: develop
+2025-09-21T23:11:42.1352931Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:42.1353432Z   token: ***
+2025-09-21T23:11:42.1353677Z   ssh-strict: true
+2025-09-21T23:11:42.1353911Z   ssh-user: git
+2025-09-21T23:11:42.1354167Z   persist-credentials: true
+2025-09-21T23:11:42.1354439Z   clean: true
+2025-09-21T23:11:42.1354702Z   sparse-checkout-cone-mode: true
+2025-09-21T23:11:42.1355008Z   fetch-depth: 1
+2025-09-21T23:11:42.1355259Z   fetch-tags: false
+2025-09-21T23:11:42.1355502Z   show-progress: true
+2025-09-21T23:11:42.1355757Z   lfs: false
+2025-09-21T23:11:42.1355996Z   set-safe-directory: true
+2025-09-21T23:11:42.1356541Z env:
+2025-09-21T23:11:42.1357250Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:42.1358014Z ##[endgroup]
+2025-09-21T23:11:42.2377945Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:42.2379468Z ##[group]Getting Git version info
+2025-09-21T23:11:42.2380720Z Working directory is '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:11:42.2412495Z [command]/usr/bin/git version
+2025-09-21T23:11:42.2455403Z git version 2.43.0
+2025-09-21T23:11:42.2481090Z ##[endgroup]
+2025-09-21T23:11:42.2497633Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/c0e50cea-81d1-4914-a3c5-162a294446b1' before making global git config changes
+2025-09-21T23:11:42.2500117Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:11:42.2502737Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:11:42.2547016Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-09-21T23:11:42.2571442Z https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:42.2585359Z ##[group]Removing previously created refs, to avoid conflicts
+2025-09-21T23:11:42.2589438Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-09-21T23:11:42.2613755Z refs/heads/develop
+2025-09-21T23:11:42.2656892Z [command]/usr/bin/git checkout --detach
+2025-09-21T23:11:42.4391060Z HEAD is now at e236535 chore: Update RadioLib to version 7.3.0
+2025-09-21T23:11:42.4444260Z [command]/usr/bin/git branch --delete --force develop
+2025-09-21T23:11:42.4488151Z Deleted branch develop (was e236535).
+2025-09-21T23:11:42.4532663Z ##[endgroup]
+2025-09-21T23:11:42.4537406Z [command]/usr/bin/git submodule status
+2025-09-21T23:11:42.4951010Z  dcac7e5673005f4d8a2b1f0f6e06877b689d7519 meshtestic (heads/master)
+2025-09-21T23:11:42.5041614Z  46b81e822af1b8e408f437092337f129dee693e6 protobufs (heads/master)
+2025-09-21T23:11:42.5053623Z ##[group]Cleaning the repository
+2025-09-21T23:11:42.5060043Z [command]/usr/bin/git clean -ffdx
+2025-09-21T23:11:42.5165601Z [command]/usr/bin/git reset --hard HEAD
+2025-09-21T23:11:42.5293042Z HEAD is now at e236535 chore: Update RadioLib to version 7.3.0
+2025-09-21T23:11:42.5298918Z ##[endgroup]
+2025-09-21T23:11:42.5302062Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:11:42.5306859Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:11:42.5338860Z ##[endgroup]
+2025-09-21T23:11:42.5339935Z ##[group]Setting up auth
+2025-09-21T23:11:42.5349843Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:11:42.5382504Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:11:42.5644253Z Entering 'meshtestic'
+2025-09-21T23:11:42.5706474Z Entering 'protobufs'
+2025-09-21T23:11:42.5784497Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:11:42.5816699Z http.https://github.com/.extraheader
+2025-09-21T23:11:42.5825179Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:11:42.5864228Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:11:42.6142182Z Entering 'meshtestic'
+2025-09-21T23:11:42.6176233Z http.https://github.com/.extraheader
+2025-09-21T23:11:42.6218782Z Entering 'protobufs'
+2025-09-21T23:11:42.6251897Z http.https://github.com/.extraheader
+2025-09-21T23:11:42.6311423Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:42.6356974Z ##[endgroup]
+2025-09-21T23:11:42.6357995Z ##[group]Fetching the repository
+2025-09-21T23:11:42.6370269Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:11:43.5290573Z ##[endgroup]
+2025-09-21T23:11:43.5291205Z ##[group]Determining the checkout info
+2025-09-21T23:11:43.5300611Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:11:43.5346165Z   origin/develop
+2025-09-21T23:11:43.5352391Z ##[endgroup]
+2025-09-21T23:11:43.5358969Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:11:43.5422529Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:11:43.5457206Z ##[group]Checking out the ref
+2025-09-21T23:11:43.5462507Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:11:43.5576791Z Switched to a new branch 'develop'
+2025-09-21T23:11:43.5578814Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:11:43.5584772Z ##[endgroup]
+2025-09-21T23:11:43.5585835Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:11:43.5591128Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:43.5657188Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:11:43.5709753Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:11:43.5758876Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:11:43.5802004Z ##[endgroup]
+2025-09-21T23:11:43.5803035Z ##[group]Fetching submodules
+2025-09-21T23:11:43.5810897Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:11:43.6107009Z Synchronizing submodule url for 'meshtestic'
+2025-09-21T23:11:43.6139515Z Synchronizing submodule url for 'protobufs'
+2025-09-21T23:11:43.6182229Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:11:43.6542872Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:11:43.6653707Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:11:43.6690024Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:11:43.6978521Z Entering 'meshtestic'
+2025-09-21T23:11:43.7032271Z Entering 'protobufs'
+2025-09-21T23:11:43.7097130Z ##[endgroup]
+2025-09-21T23:11:43.7098252Z ##[group]Persisting credentials for submodules
+2025-09-21T23:11:43.7110073Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:11:43.7386774Z Entering 'meshtestic'
+2025-09-21T23:11:43.7433010Z url.https://github.com/.insteadof
+2025-09-21T23:11:43.7433836Z url.https://github.com/.insteadof
+2025-09-21T23:11:43.7473883Z Entering 'protobufs'
+2025-09-21T23:11:43.7514583Z url.https://github.com/.insteadof
+2025-09-21T23:11:43.7515390Z url.https://github.com/.insteadof
+2025-09-21T23:11:43.7573452Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:11:43.7840684Z Entering 'meshtestic'
+2025-09-21T23:11:43.7890070Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:11:43.7912371Z Entering 'protobufs'
+2025-09-21T23:11:43.7962567Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:11:43.8016842Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:11:43.8278510Z Entering 'meshtestic'
+2025-09-21T23:11:43.8326363Z Entering 'protobufs'
+2025-09-21T23:11:43.8387622Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:11:43.8642440Z Entering 'meshtestic'
+2025-09-21T23:11:43.8692791Z Entering 'protobufs'
+2025-09-21T23:11:43.8749132Z ##[endgroup]
+2025-09-21T23:11:43.8795934Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:11:43.8820411Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:11:43.9044259Z ##[group]Run sudo apt-get -y update --fix-missing
+2025-09-21T23:11:43.9045420Z [36;1msudo apt-get -y update --fix-missing[0m
+2025-09-21T23:11:43.9046934Z [36;1msudo apt-get install -y cppcheck libbluetooth-dev libgpiod-dev libyaml-cpp-dev lsb-release[0m
+2025-09-21T23:11:43.9089410Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:11:43.9090523Z env:
+2025-09-21T23:11:43.9092266Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:43.9094363Z ##[endgroup]
+2025-09-21T23:11:44.4730383Z Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+2025-09-21T23:11:44.5936046Z Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2025-09-21T23:11:44.7023556Z Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2025-09-21T23:11:45.7528268Z Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2025-09-21T23:11:46.0143007Z Fetched 378 kB in 2s (184 kB/s)
+2025-09-21T23:11:47.0728946Z Reading package lists...
+2025-09-21T23:11:48.1584685Z Reading package lists...
+2025-09-21T23:11:48.3509496Z Building dependency tree...
+2025-09-21T23:11:48.3514934Z Reading state information...
+2025-09-21T23:11:48.5652393Z cppcheck is already the newest version (2.13.0-2ubuntu3).
+2025-09-21T23:11:48.5653682Z libbluetooth-dev is already the newest version (5.72-0ubuntu5.4).
+2025-09-21T23:11:48.5654957Z libgpiod-dev is already the newest version (1.6.3-1.1build1).
+2025-09-21T23:11:48.5656250Z libyaml-cpp-dev is already the newest version (0.8.0+dfsg-6build1).
+2025-09-21T23:11:48.5658105Z lsb-release is already the newest version (12.0-2).
+2025-09-21T23:11:48.5659255Z 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+2025-09-21T23:11:48.5842982Z ##[group]Run actions/setup-python@v6
+2025-09-21T23:11:48.5843742Z with:
+2025-09-21T23:11:48.5844277Z   python-version: 3.x
+2025-09-21T23:11:48.5844864Z   cache: pip
+2025-09-21T23:11:48.5845549Z   cache-dependency-path: .github/actions/**
+**.ini
+
+2025-09-21T23:11:48.5846424Z   check-latest: false
+2025-09-21T23:11:48.5847309Z   token: ***
+2025-09-21T23:11:48.5847865Z   update-environment: true
+2025-09-21T23:11:48.5848559Z   allow-prereleases: false
+2025-09-21T23:11:48.5849225Z   freethreaded: false
+2025-09-21T23:11:48.5849930Z env:
+2025-09-21T23:11:48.5851573Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:48.5853454Z ##[endgroup]
+2025-09-21T23:11:48.7644957Z ##[group]Installed versions
+2025-09-21T23:11:48.7704915Z (node:1100) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-09-21T23:11:48.7706844Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-09-21T23:11:48.7707988Z Successfully set up CPython (3.13.7)
+2025-09-21T23:11:48.7709178Z ##[endgroup]
+2025-09-21T23:11:48.8156148Z [command]/home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/bin/pip cache dir
+2025-09-21T23:11:49.0372116Z /home/ubuntu/.cache/pip
+2025-09-21T23:11:49.7873047Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-fb5db71a65bba474cfd3851c4d11114c69613241cf2b7cbeb958811f315d7ca8
+2025-09-21T23:11:49.8149910Z (node:1100) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2025-09-21T23:11:51.7371096Z Received 0 of 75387094 (0.0%), 0.0 MBs/sec
+2025-09-21T23:11:52.7369489Z Received 0 of 75387094 (0.0%), 0.0 MBs/sec
+2025-09-21T23:11:53.7369939Z Received 25165824 of 75387094 (33.4%), 8.0 MBs/sec
+2025-09-21T23:11:54.7364289Z Received 66998486 of 75387094 (88.9%), 16.0 MBs/sec
+2025-09-21T23:11:55.7365457Z Received 66998486 of 75387094 (88.9%), 12.8 MBs/sec
+2025-09-21T23:11:56.7369191Z Received 66998486 of 75387094 (88.9%), 10.6 MBs/sec
+2025-09-21T23:11:57.5786147Z Received 75387094 of 75387094 (100.0%), 10.5 MBs/sec
+2025-09-21T23:11:57.5790185Z Cache Size: ~72 MB (75387094 B)
+2025-09-21T23:11:57.5878767Z [command]/usr/bin/tar -xf /home/ubuntu/runner/_work/_temp/e663e06e-f098-4a45-83fb-3eb7d9482f93/cache.tzst -P -C /home/ubuntu/runner/_work/firmware/firmware --use-compress-program unzstd
+2025-09-21T23:11:57.8077470Z Cache restored successfully
+2025-09-21T23:11:57.8418399Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-fb5db71a65bba474cfd3851c4d11114c69613241cf2b7cbeb958811f315d7ca8
+2025-09-21T23:11:57.8786644Z ##[group]Run python -m pip install --upgrade pip
+2025-09-21T23:11:57.8787799Z [36;1mpython -m pip install --upgrade pip[0m
+2025-09-21T23:11:57.8789032Z [36;1mpip install -U --no-build-isolation --no-cache-dir "setuptools<72"[0m
+2025-09-21T23:11:57.8790699Z [36;1mpip install -U platformio adafruit-nrfutil --no-build-isolation[0m
+2025-09-21T23:11:57.8791981Z [36;1mpip install -U poetry --no-build-isolation[0m
+2025-09-21T23:11:57.8793134Z [36;1mpip install -U meshtastic --pre --no-build-isolation[0m
+2025-09-21T23:11:57.8835608Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:11:57.8836612Z env:
+2025-09-21T23:11:57.8838264Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:57.8840674Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:11:57.8842207Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:11:57.8844118Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:11:57.8845479Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:11:57.8846802Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:11:57.8848152Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:11:57.8849200Z ##[endgroup]
+2025-09-21T23:11:58.3435599Z Requirement already satisfied: pip in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (25.2)
+2025-09-21T23:11:59.0546328Z Requirement already satisfied: setuptools<72 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (71.1.0)
+2025-09-21T23:12:00.0066954Z Requirement already satisfied: platformio in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (6.1.18)
+2025-09-21T23:12:00.0848553Z Requirement already satisfied: adafruit-nrfutil in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (0.5.3.post16)
+2025-09-21T23:12:00.0942755Z Requirement already satisfied: bottle==0.13.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.13.4)
+2025-09-21T23:12:00.0949605Z Requirement already satisfied: click<8.1.8,>=8.0.4 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (8.1.7)
+2025-09-21T23:12:00.0955096Z Requirement already satisfied: colorama in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.4.6)
+2025-09-21T23:12:00.0961693Z Requirement already satisfied: marshmallow==3.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (3.26.1)
+2025-09-21T23:12:00.0968460Z Requirement already satisfied: pyelftools<1,>=0.27 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.32)
+2025-09-21T23:12:00.0974703Z Requirement already satisfied: pyserial==3.5.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (3.5)
+2025-09-21T23:12:00.0981031Z Requirement already satisfied: requests==2.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (2.32.5)
+2025-09-21T23:12:00.0987494Z Requirement already satisfied: semantic_version==2.10.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (2.10.0)
+2025-09-21T23:12:00.0993681Z Requirement already satisfied: tabulate==0.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.9.0)
+2025-09-21T23:12:00.0999888Z Requirement already satisfied: ajsonrpc==1.2.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (1.2.0)
+2025-09-21T23:12:00.1007215Z Requirement already satisfied: starlette<0.47,>=0.19 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.46.2)
+2025-09-21T23:12:00.1013985Z Requirement already satisfied: uvicorn<0.35,>=0.16 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.34.3)
+2025-09-21T23:12:00.1020233Z Requirement already satisfied: wsproto==1.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (1.2.0)
+2025-09-21T23:12:00.1060983Z Requirement already satisfied: packaging>=17.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from marshmallow==3.*->platformio) (24.2)
+2025-09-21T23:12:00.1107202Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (3.4.3)
+2025-09-21T23:12:00.1113942Z Requirement already satisfied: idna<4,>=2.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (3.10)
+2025-09-21T23:12:00.1121426Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (2.5.0)
+2025-09-21T23:12:00.1127485Z Requirement already satisfied: certifi>=2017.4.17 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (2025.8.3)
+2025-09-21T23:12:00.1202850Z Requirement already satisfied: anyio<5,>=3.6.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from starlette<0.47,>=0.19->platformio) (4.10.0)
+2025-09-21T23:12:00.1229996Z Requirement already satisfied: sniffio>=1.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from anyio<5,>=3.6.2->starlette<0.47,>=0.19->platformio) (1.3.1)
+2025-09-21T23:12:00.1287761Z Requirement already satisfied: h11>=0.8 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from uvicorn<0.35,>=0.16->platformio) (0.16.0)
+2025-09-21T23:12:00.1351010Z Requirement already satisfied: ecdsa>=0.13 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from adafruit-nrfutil) (0.19.1)
+2025-09-21T23:12:00.1380140Z Requirement already satisfied: six>=1.9.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from ecdsa>=0.13->adafruit-nrfutil) (1.17.0)
+2025-09-21T23:12:00.7446627Z Requirement already satisfied: poetry in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (2.2.1)
+2025-09-21T23:12:00.8462230Z Requirement already satisfied: build<2.0.0,>=1.2.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.3.0)
+2025-09-21T23:12:00.8475885Z Requirement already satisfied: cachecontrol<0.15.0,>=0.14.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (0.14.3)
+2025-09-21T23:12:00.8487104Z Requirement already satisfied: cleo<3.0.0,>=2.1.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.1.0)
+2025-09-21T23:12:00.8495298Z Requirement already satisfied: dulwich<0.25.0,>=0.24.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.24.1)
+2025-09-21T23:12:00.8503754Z Requirement already satisfied: fastjsonschema<3.0.0,>=2.18.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.21.2)
+2025-09-21T23:12:00.8511842Z Requirement already satisfied: findpython<0.8.0,>=0.6.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.6.3)
+2025-09-21T23:12:00.8522625Z Requirement already satisfied: installer<0.8.0,>=0.7.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.7.0)
+2025-09-21T23:12:00.8530749Z Requirement already satisfied: keyring<26.0.0,>=25.1.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (25.6.0)
+2025-09-21T23:12:00.8537978Z Requirement already satisfied: packaging>=24.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (24.2)
+2025-09-21T23:12:00.8550792Z Requirement already satisfied: pbs-installer<2026.0.0,>=2025.1.6 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (2025.9.2)
+2025-09-21T23:12:00.8561693Z Requirement already satisfied: pkginfo<2.0,>=1.12 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.12.1.2)
+2025-09-21T23:12:00.8569895Z Requirement already satisfied: platformdirs<5,>=3.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (4.4.0)
+2025-09-21T23:12:00.8576971Z Requirement already satisfied: poetry-core==2.2.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.2.1)
+2025-09-21T23:12:00.8586070Z Requirement already satisfied: pyproject-hooks<2.0.0,>=1.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.2.0)
+2025-09-21T23:12:00.8593722Z Requirement already satisfied: requests<3.0,>=2.26 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.32.5)
+2025-09-21T23:12:00.8601940Z Requirement already satisfied: requests-toolbelt<2.0.0,>=1.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.0.0)
+2025-09-21T23:12:00.8611820Z Requirement already satisfied: shellingham<2.0,>=1.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.5.4)
+2025-09-21T23:12:00.8622334Z Requirement already satisfied: tomlkit<1.0.0,>=0.11.4 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.13.3)
+2025-09-21T23:12:00.8629988Z Requirement already satisfied: trove-classifiers>=2022.5.19 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2025.8.26.11)
+2025-09-21T23:12:00.8636998Z Requirement already satisfied: virtualenv>=20.26.6 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (20.32.0)
+2025-09-21T23:12:00.8693112Z Requirement already satisfied: msgpack<2.0.0,>=0.5.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol<0.15.0,>=0.14.0->cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (1.1.1)
+2025-09-21T23:12:00.8729435Z Requirement already satisfied: filelock>=3.8.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (3.19.1)
+2025-09-21T23:12:00.8748460Z Requirement already satisfied: crashtest<0.5.0,>=0.4.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cleo<3.0.0,>=2.1.0->poetry) (0.4.1)
+2025-09-21T23:12:00.8756839Z Requirement already satisfied: rapidfuzz<4.0.0,>=3.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cleo<3.0.0,>=2.1.0->poetry) (3.14.0)
+2025-09-21T23:12:00.8780094Z Requirement already satisfied: urllib3>=1.25 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from dulwich<0.25.0,>=0.24.0->poetry) (2.5.0)
+2025-09-21T23:12:00.8853095Z Requirement already satisfied: SecretStorage>=3.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (3.3.3)
+2025-09-21T23:12:00.8862177Z Requirement already satisfied: jeepney>=0.4.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (0.9.0)
+2025-09-21T23:12:00.8869437Z Requirement already satisfied: jaraco.classes in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (3.4.0)
+2025-09-21T23:12:00.8876395Z Requirement already satisfied: jaraco.functools in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (4.3.0)
+2025-09-21T23:12:00.8881446Z Requirement already satisfied: jaraco.context in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (6.0.1)
+2025-09-21T23:12:00.8942775Z Requirement already satisfied: httpx<1,>=0.27.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.28.1)
+2025-09-21T23:12:00.8950711Z Requirement already satisfied: zstandard>=0.21.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.24.0)
+2025-09-21T23:12:00.8966864Z Requirement already satisfied: anyio in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (4.10.0)
+2025-09-21T23:12:00.8971746Z Requirement already satisfied: certifi in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (2025.8.3)
+2025-09-21T23:12:00.8977593Z Requirement already satisfied: httpcore==1.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (1.0.9)
+2025-09-21T23:12:00.8982643Z Requirement already satisfied: idna in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (3.10)
+2025-09-21T23:12:00.9016110Z Requirement already satisfied: h11>=0.16 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpcore==1.*->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.16.0)
+2025-09-21T23:12:00.9103304Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0,>=2.26->poetry) (3.4.3)
+2025-09-21T23:12:00.9298011Z Requirement already satisfied: cryptography>=2.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (45.0.7)
+2025-09-21T23:12:00.9327333Z Requirement already satisfied: cffi>=1.14 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cryptography>=2.0->SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (1.17.1)
+2025-09-21T23:12:00.9378890Z Requirement already satisfied: pycparser in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cffi>=1.14->cryptography>=2.0->SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (2.22)
+2025-09-21T23:12:00.9409748Z Requirement already satisfied: distlib<1,>=0.3.7 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from virtualenv>=20.26.6->poetry) (0.4.0)
+2025-09-21T23:12:00.9501372Z Requirement already satisfied: sniffio>=1.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from anyio->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (1.3.1)
+2025-09-21T23:12:00.9533463Z Requirement already satisfied: more-itertools in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from jaraco.classes->keyring<26.0.0,>=25.1.0->poetry) (10.8.0)
+2025-09-21T23:12:01.5418457Z Requirement already satisfied: meshtastic in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (2.7.3)
+2025-09-21T23:12:01.6688160Z Requirement already satisfied: bleak<0.23.0,>=0.22.3 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (0.22.3)
+2025-09-21T23:12:01.6702823Z Requirement already satisfied: packaging<25.0,>=24.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (24.2)
+2025-09-21T23:12:01.6716552Z Requirement already satisfied: protobuf>=4.21.12 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (6.32.0)
+2025-09-21T23:12:01.6724993Z Requirement already satisfied: pypubsub<5.0.0,>=4.0.3 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (4.0.3)
+2025-09-21T23:12:01.6735346Z Requirement already satisfied: pyserial<4.0,>=3.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (3.5)
+2025-09-21T23:12:01.6746274Z Requirement already satisfied: pyyaml<7.0.0,>=6.0.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (6.0.2)
+2025-09-21T23:12:01.6754872Z Requirement already satisfied: requests<3.0.0,>=2.31.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (2.32.5)
+2025-09-21T23:12:01.6762623Z Requirement already satisfied: tabulate<0.10.0,>=0.9.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (0.9.0)
+2025-09-21T23:12:01.6788929Z Requirement already satisfied: dbus-fast<3,>=1.83.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from bleak<0.23.0,>=0.22.3->meshtastic) (2.44.3)
+2025-09-21T23:12:01.6866949Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (3.4.3)
+2025-09-21T23:12:01.6873796Z Requirement already satisfied: idna<4,>=2.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (3.10)
+2025-09-21T23:12:01.6880867Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (2.5.0)
+2025-09-21T23:12:01.6887333Z Requirement already satisfied: certifi>=2017.4.17 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (2025.8.3)
+2025-09-21T23:12:01.8685456Z ##[group]Run pio upgrade
+2025-09-21T23:12:01.8686235Z [36;1mpio upgrade[0m
+2025-09-21T23:12:01.8720277Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:12:01.8721243Z env:
+2025-09-21T23:12:01.8722926Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:01.8725136Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:01.8726662Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:01.8728555Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:01.8730035Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:01.8731369Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:01.8732718Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:01.8818282Z ##[endgroup]
+2025-09-21T23:12:03.1745866Z You're up-to-date!
+2025-09-21T23:12:03.1746843Z PlatformIO 6.1.18 is currently the newest version available.
+2025-09-21T23:12:04.2458010Z ##[group]Run sudo apt-get install -y libbluetooth-dev libgpiod-dev libyaml-cpp-dev openssl libssl-dev libulfius-dev liborcania-dev libusb-1.0-0-dev libi2c-dev libuv1-dev
+2025-09-21T23:12:04.2461639Z [36;1msudo apt-get install -y libbluetooth-dev libgpiod-dev libyaml-cpp-dev openssl libssl-dev libulfius-dev liborcania-dev libusb-1.0-0-dev libi2c-dev libuv1-dev[0m
+2025-09-21T23:12:04.2497784Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:12:04.2498785Z env:
+2025-09-21T23:12:04.2500651Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:04.2502856Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:04.2504324Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:04.2505790Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:04.2507115Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:04.2508428Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:04.2509871Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:04.2510947Z ##[endgroup]
+2025-09-21T23:12:05.3175515Z Reading package lists...
+2025-09-21T23:12:05.5081981Z Building dependency tree...
+2025-09-21T23:12:05.5086547Z Reading state information...
+2025-09-21T23:12:05.7230177Z libbluetooth-dev is already the newest version (5.72-0ubuntu5.4).
+2025-09-21T23:12:05.7231572Z libgpiod-dev is already the newest version (1.6.3-1.1build1).
+2025-09-21T23:12:05.7232962Z libyaml-cpp-dev is already the newest version (0.8.0+dfsg-6build1).
+2025-09-21T23:12:05.7234284Z openssl is already the newest version (3.0.13-0ubuntu3.5).
+2025-09-21T23:12:05.7235490Z libssl-dev is already the newest version (3.0.13-0ubuntu3.5).
+2025-09-21T23:12:05.7236713Z libulfius-dev is already the newest version (2.7.15-2.2build1).
+2025-09-21T23:12:05.7237928Z liborcania-dev is already the newest version (2.3.3-1).
+2025-09-21T23:12:05.7239099Z libusb-1.0-0-dev is already the newest version (2:1.0.27-1).
+2025-09-21T23:12:05.7240387Z libi2c-dev is already the newest version (4.3-4build2).
+2025-09-21T23:12:05.7241534Z libuv1-dev is already the newest version (1.48.0-1.1build1).
+2025-09-21T23:12:05.7242787Z 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+2025-09-21T23:12:05.7336415Z ##[group]Run echo "long=$(./bin/buildinfo.py long)" >> $GITHUB_OUTPUT
+2025-09-21T23:12:05.7337821Z [36;1mecho "long=$(./bin/buildinfo.py long)" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:12:05.7375510Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:12:05.7376250Z env:
+2025-09-21T23:12:05.7377943Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:05.7380292Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.7381750Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:05.7383200Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.7384514Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.7385837Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.7387735Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:05.7388778Z ##[endgroup]
+2025-09-21T23:12:05.8188661Z ##[group]Run sed -i 's/-DBUILD_EPOCH=$UNIX_TIME/#-DBUILD_EPOCH=$UNIX_TIME/' platformio.ini
+2025-09-21T23:12:05.8190520Z [36;1msed -i 's/-DBUILD_EPOCH=$UNIX_TIME/#-DBUILD_EPOCH=$UNIX_TIME/' platformio.ini[0m
+2025-09-21T23:12:05.8223515Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:12:05.8224241Z env:
+2025-09-21T23:12:05.8225937Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:05.8228145Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.8229605Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:05.8231212Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.8232562Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.8233956Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.8235309Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:05.8236341Z ##[endgroup]
+2025-09-21T23:12:05.8394601Z ##[group]Run platformio test -e coverage -v --junit-output-path testreport.xml
+2025-09-21T23:12:05.8396277Z [36;1mplatformio test -e coverage -v --junit-output-path testreport.xml[0m
+2025-09-21T23:12:05.8428709Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:12:05.8429453Z env:
+2025-09-21T23:12:05.8431272Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:05.8433481Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.8434947Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:05.8436439Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.8437765Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.8439090Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.8440645Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:05.8441692Z ##[endgroup]
+2025-09-21T23:12:06.6152153Z Collected 4 tests (test_crypto, test_meshpacket_serializer, test_mqtt, test_serial)
+2025-09-21T23:12:06.6190091Z 
+2025-09-21T23:12:06.6190561Z Processing test_crypto in coverage environment
+2025-09-21T23:12:06.6191690Z --------------------------------------------------------------------------------
+2025-09-21T23:12:06.6192706Z Building...
+2025-09-21T23:12:06.8673969Z Library Manager: Installing https://github.com/meshtastic/esp8266-oled-ssd1306/archive/0cbc26b1f8f61957af0475f486b362eafe7cc4e2.zip
+2025-09-21T23:12:06.8833386Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:06.8971626Z Library Manager: ESP8266 and ESP32 OLED driver for SSD1306 displays@4.4.1 has been installed!
+2025-09-21T23:12:06.8982068Z Library Manager: Installing https://github.com/meshtastic/OneButton/archive/fa352d668c53f290cfa480a5f79ad422cd828c70.zip
+2025-09-21T23:12:06.9050576Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:06.9125482Z Library Manager: OneButton@2.6.1 has been installed!
+2025-09-21T23:12:06.9134759Z Library Manager: Installing https://github.com/meshtastic/arduino-fsm/archive/7db3702bf0cfe97b783d6c72595e3f38e0b19159.zip
+2025-09-21T23:12:06.9169892Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:06.9211453Z Library Manager: arduino-fsm@2.2.0 has been installed!
+2025-09-21T23:12:06.9222365Z Library Manager: Installing https://github.com/meshtastic/TinyGPSPlus/archive/71a82db35f3b973440044c476d4bcdc673b104f4.zip
+2025-09-21T23:12:06.9278650Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:06.9337295Z Library Manager: TinyGPSPlus@1.0.3 has been installed!
+2025-09-21T23:12:06.9349510Z Library Manager: Installing https://github.com/meshtastic/ArduinoThread/archive/7c3ee9e1951551b949763b1f5280f8db1fa4068d.zip
+2025-09-21T23:12:06.9404913Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:06.9467669Z Library Manager: ArduinoThread@0.0.0+20250921231206 has been installed!
+2025-09-21T23:12:06.9479318Z Library Manager: Installing nanopb/Nanopb @ 0.4.91
+2025-09-21T23:12:06.9829195Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:06.9987820Z Library Manager: Nanopb@0.4.91 has been installed!
+2025-09-21T23:12:07.0001141Z Library Manager: Installing erriez/ErriezCRC32 @ 1.0.1
+2025-09-21T23:12:07.4615559Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:07.4680218Z Library Manager: ErriezCRC32@1.0.1 has been installed!
+2025-09-21T23:12:07.4694977Z Library Manager: Installing thingsboard/TBPubSubClient @ 2.12.1
+2025-09-21T23:12:07.9592512Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:07.9648584Z Library Manager: TBPubSubClient@2.12.1 has been installed!
+2025-09-21T23:12:07.9663736Z Library Manager: Installing arduino-libraries/NTPClient @ 3.2.1
+2025-09-21T23:12:08.4583362Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:08.4632361Z Library Manager: NTPClient@3.2.1 has been installed!
+2025-09-21T23:12:08.4648766Z Library Manager: Installing arcao/Syslog @ 2.0.0
+2025-09-21T23:12:08.9589852Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:08.9643689Z Library Manager: Syslog@2.0.0 has been installed!
+2025-09-21T23:12:08.9661029Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:12:09.7190270Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:09.8155918Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:12:09.8174809Z Library Manager: Installing adafruit/Adafruit BusIO @ 1.17.3
+2025-09-21T23:12:09.9639233Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:09.9721735Z Library Manager: Adafruit BusIO@1.17.3 has been installed!
+2025-09-21T23:12:09.9741284Z Library Manager: Installing adafruit/Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:12:10.4564474Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:12:10.4594061Z Library Manager: Adafruit Unified Sensor@1.1.15 has been installed!
+2025-09-21T23:12:10.4614862Z Library Manager: Installing adafruit/Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:12:10.9583805Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:10.9627338Z Library Manager: Adafruit BMP280 Library@2.6.8 has been installed!
+2025-09-21T23:12:10.9630204Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:11.0358076Z Library Manager: Installing adafruit/Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:12:11.4574811Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80%
+2025-09-21T23:12:11.4608696Z Library Manager: Adafruit BMP085 Library@1.2.4 has been installed!
+2025-09-21T23:12:11.4611542Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:11.4633311Z Library Manager: Installing adafruit/Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:12:11.9618961Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:11.9675679Z Library Manager: Adafruit BME280 Library@2.3.0 has been installed!
+2025-09-21T23:12:11.9679614Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:11.9707965Z Library Manager: Installing adafruit/Adafruit DPS310 @ 1.1.5
+2025-09-21T23:12:12.4620440Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:12.4677680Z Library Manager: Adafruit DPS310@1.1.5 has been installed!
+2025-09-21T23:12:12.4682230Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:12.4715912Z Library Manager: Installing adafruit/Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:12:12.9633989Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:12.9702413Z Library Manager: Adafruit MCP9808 Library@2.0.2 has been installed!
+2025-09-21T23:12:12.9707314Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:12.9744971Z Library Manager: Installing Adafruit SH110X
+2025-09-21T23:12:13.4681671Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:13.4775446Z Library Manager: Adafruit SH110X@2.1.14 has been installed!
+2025-09-21T23:12:13.4780926Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:13.4821070Z Library Manager: Installing Adafruit GFX Library
+2025-09-21T23:12:14.0235888Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:14.0409968Z Library Manager: Adafruit GFX Library@1.12.2 has been installed!
+2025-09-21T23:12:14.0412771Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:14.0439540Z Library Manager: Installing adafruit/Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:12:14.4590627Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:14.4635834Z Library Manager: Adafruit INA260 Library@1.5.3 has been installed!
+2025-09-21T23:12:14.4638577Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:14.4664105Z Library Manager: Installing Adafruit NeoPixel
+2025-09-21T23:12:14.9710929Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:14.9818194Z Library Manager: Adafruit NeoPixel@1.15.1 has been installed!
+2025-09-21T23:12:14.9849400Z Library Manager: Installing adafruit/Adafruit INA219 @ 1.2.3
+2025-09-21T23:12:15.4611560Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:15.4659879Z Library Manager: Adafruit INA219@1.2.3 has been installed!
+2025-09-21T23:12:15.4663525Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:15.4695760Z Library Manager: Installing Adafruit SSD1306
+2025-09-21T23:12:15.9665772Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:15.9753188Z Library Manager: Adafruit SSD1306@2.5.15 has been installed!
+2025-09-21T23:12:15.9757326Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:15.9798168Z Library Manager: Installing adafruit/Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:12:16.4672993Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:16.4754951Z Library Manager: Adafruit PM25 AQI Sensor@2.0.0 has been installed!
+2025-09-21T23:12:16.4759241Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:16.4805463Z Library Manager: Installing adafruit/Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:12:16.9702487Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:16.9793109Z Library Manager: Adafruit MPU6050@2.2.6 has been installed!
+2025-09-21T23:12:16.9798394Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:16.9854644Z Library Manager: Installing adafruit/Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:12:17.4693517Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:17.4783895Z Library Manager: Adafruit LIS3DH@1.3.0 has been installed!
+2025-09-21T23:12:17.4790394Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:17.4860300Z Library Manager: Installing adafruit/Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:12:17.9684326Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:17.9775484Z Library Manager: Adafruit AHTX0@2.0.5 has been installed!
+2025-09-21T23:12:17.9782430Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:17.9854860Z Library Manager: Installing adafruit/Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:12:18.4846576Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:18.5022052Z Library Manager: Adafruit LSM6DS@4.7.4 has been installed!
+2025-09-21T23:12:18.5027967Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:18.5091337Z Library Manager: Installing adafruit/Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:12:18.9641233Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:18.9701904Z Library Manager: Adafruit TSL2591 Library@1.4.5 has been installed!
+2025-09-21T23:12:18.9706833Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:18.9766257Z Library Manager: Installing emotibit/EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:12:19.4694100Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:19.4790440Z Library Manager: EmotiBit MLX90632@1.0.8 has been installed!
+2025-09-21T23:12:19.4863564Z Library Manager: Installing adafruit/Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:12:19.9661109Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:19.9731567Z Library Manager: Adafruit MLX90614 Library@2.1.5 has been installed!
+2025-09-21T23:12:19.9737096Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:19.9812651Z Library Manager: Installing git+https://github.com/sgtwilko/INA3221#bb03d7e9bfcc74fc798838a54f4f99738f29fc6a
+2025-09-21T23:12:19.9867539Z git version 2.43.0
+2025-09-21T23:12:19.9897402Z Cloning into '/home/ubuntu/.platformio/.cache/tmp/pkg-installing-n1va5lb6'...
+2025-09-21T23:12:20.8953341Z HEAD is now at bb03d7e Fix higher currents reporting negative/wrong
+2025-09-21T23:12:20.9477688Z Library Manager: INA3221@1.0.1+sha.bb03d7e has been installed!
+2025-09-21T23:12:20.9571455Z Library Manager: Installing mprograms/QMC5883LCompass @ 1.2.3
+2025-09-21T23:12:20.9769990Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:20.9848881Z Library Manager: QMC5883LCompass@1.2.3 has been installed!
+2025-09-21T23:12:20.9914226Z Library Manager: Installing dfrobot/DFRobot_RTU @ 1.0.3
+2025-09-21T23:12:21.4715080Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:21.4783505Z Library Manager: DFRobot_RTU@1.0.3 has been installed!
+2025-09-21T23:12:21.4849581Z Library Manager: Installing https://github.com/DFRobot/DFRobot_RainfallSensor/archive/38fea5e02b40a5430be6dab39a99a6f6347d667e.zip
+2025-09-21T23:12:21.4916302Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:21.4982828Z Library Manager: DFRobot_RainfallSensor@1.0.0 has been installed!
+2025-09-21T23:12:21.4987100Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:21.5105570Z Library Manager: Installing robtillaart/INA226 @ 0.6.4
+2025-09-21T23:12:21.9764158Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:21.9872040Z Library Manager: INA226@0.6.4 has been installed!
+2025-09-21T23:12:21.9932470Z Library Manager: Installing sparkfun/SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:12:22.4750612Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:22.4846162Z Library Manager: SparkFun MAX3010x Pulse and Proximity Sensor Library@1.1.2 has been installed!
+2025-09-21T23:12:22.4912814Z Library Manager: Installing sparkfun/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:12:22.9899154Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:23.0050188Z Library Manager: SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library@1.3.2 has been installed!
+2025-09-21T23:12:23.0118204Z Library Manager: Installing adafruit/Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:12:23.4683999Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:23.4731931Z Library Manager: Adafruit LTR390 Library@1.1.2 has been installed!
+2025-09-21T23:12:23.4735976Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:23.4799040Z Library Manager: Installing adafruit/Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:12:23.9703169Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:23.9762208Z Library Manager: Adafruit PCT2075@1.0.5 has been installed!
+2025-09-21T23:12:23.9766738Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:23.9836887Z Library Manager: Installing dfrobot/DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:12:24.4813113Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:24.4906010Z Library Manager: DFRobot_BMM150@1.0.0 has been installed!
+2025-09-21T23:12:24.4988851Z Library Manager: Installing adafruit/Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:12:24.9698779Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80%
+2025-09-21T23:12:24.9752814Z Library Manager: Adafruit TSL2561@1.1.2 has been installed!
+2025-09-21T23:12:24.9757814Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:24.9838428Z Library Manager: Installing rweather/Crypto @ 0.4.0
+2025-09-21T23:12:25.5339290Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:25.5589995Z Library Manager: Crypto@0.4.0 has been installed!
+2025-09-21T23:12:25.5646969Z Library Manager: Installing lovyan03/LovyanGFX @ ^1.2.0
+2025-09-21T23:12:27.7302810Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:27.9534748Z Library Manager: LovyanGFX@1.2.7 has been installed!
+2025-09-21T23:12:27.9596557Z Library Manager: Installing https://github.com/pine64/libch341-spi-userspace/archive/af9bc27c9c30fa90772279925b7c5913dff789b4.zip
+2025-09-21T23:12:27.9634482Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:27.9674760Z Library Manager: Pine libch341-spi Userspace library@0.0.1 has been installed!
+2025-09-21T23:12:27.9731493Z Library Manager: Installing adafruit/Adafruit seesaw Library @ 1.7.9
+2025-09-21T23:12:30.8969270Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:30.9237471Z Library Manager: Adafruit seesaw Library@1.7.9 has been installed!
+2025-09-21T23:12:30.9241056Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:30.9293686Z Library Manager: Installing Adafruit ST7735 and ST7789 Library
+2025-09-21T23:12:32.7892078Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:32.8095887Z Library Manager: Adafruit ST7735 and ST7789 Library@1.11.0 has been installed!
+2025-09-21T23:12:32.8102122Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:32.8259841Z Library Manager: Installing https://github.com/RAKWireless/RAK12034-BMX160/archive/dcead07ffa267d3c906e9ca4a1330ab989e957e2.zip
+2025-09-21T23:12:32.8489511Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:32.8583278Z Library Manager: RAKwireless RAK12034@1.0.0 has been installed!
+2025-09-21T23:12:32.8641499Z Library Manager: Installing melopero/Melopero RV3028 @ ^1.1.0
+2025-09-21T23:12:34.7555268Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:34.7647956Z Library Manager: Melopero RV3028@1.2.0 has been installed!
+2025-09-21T23:12:34.7777839Z Library Manager: Installing throwtheswitch/Unity @ ^2.6.0
+2025-09-21T23:12:36.7837316Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:36.8058237Z Library Manager: Unity@2.6.0 has been installed!
+2025-09-21T23:13:42.6054304Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::visibleLines()':
+2025-09-21T23:13:42.6057746Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:13:(.text+0xd): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:42.6061684Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:16:(.text+0x2b): undefined reference to `graphics::DisplayIface::height()'
+2025-09-21T23:13:42.6065260Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderDetail()':
+2025-09-21T23:13:42.6068789Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:113:(.text+0x657): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:13:42.6073005Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:122:(.text+0x977): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:42.6077302Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:128:(.text+0xad6): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:42.6081457Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb15): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:42.6085738Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb36): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:42.6090622Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderPicker()':
+2025-09-21T23:13:42.6094072Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:57:(.text+0x127a): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:13:42.6098157Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:62:(.text+0x12d4): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:42.6102532Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:67:(.text+0x12e0): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:42.6106549Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1512): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:42.6110957Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1531): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:42.6115597Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x176f): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:42.6119980Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x178e): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:43.0989501Z collect2: error: ld returned 1 exit status
+2025-09-21T23:13:43.1000358Z *** [.pio/build/coverage/program] Error 1
+2025-09-21T23:13:43.5331856Z Building stage has failed, see errors above. Use `pio test -vvv` option to enable verbose output.
+2025-09-21T23:13:43.5333558Z -------------- coverage:test_crypto [ERRORED] Took 96.91 seconds --------------
+2025-09-21T23:13:43.5356752Z 
+2025-09-21T23:13:43.5357192Z Processing test_serial in coverage environment
+2025-09-21T23:13:43.5358303Z --------------------------------------------------------------------------------
+2025-09-21T23:13:43.5359288Z Building...
+2025-09-21T23:14:00.7322666Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::visibleLines()':
+2025-09-21T23:14:00.7326279Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:13:(.text+0xd): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:00.7330276Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:16:(.text+0x2b): undefined reference to `graphics::DisplayIface::height()'
+2025-09-21T23:14:00.7333855Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderDetail()':
+2025-09-21T23:14:00.7337345Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:113:(.text+0x657): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:14:00.7341578Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:122:(.text+0x977): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:00.7345887Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:128:(.text+0xad6): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:00.7350015Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb15): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:00.7354319Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb36): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:00.7358948Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderPicker()':
+2025-09-21T23:14:00.7362554Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:57:(.text+0x127a): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:14:00.7366645Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:62:(.text+0x12d4): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:00.7374207Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:67:(.text+0x12e0): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:00.7378029Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1512): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:00.7382278Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1531): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:00.7386829Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x176f): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:00.7391009Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x178e): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:01.2184081Z collect2: error: ld returned 1 exit status
+2025-09-21T23:14:01.2192231Z *** [.pio/build/coverage/program] Error 1
+2025-09-21T23:14:01.5770498Z Building stage has failed, see errors above. Use `pio test -vvv` option to enable verbose output.
+2025-09-21T23:14:01.5772261Z -------------- coverage:test_serial [ERRORED] Took 18.04 seconds --------------
+2025-09-21T23:14:01.5795585Z 
+2025-09-21T23:14:01.5796510Z Processing test_meshpacket_serializer in coverage environment
+2025-09-21T23:14:01.5797786Z --------------------------------------------------------------------------------
+2025-09-21T23:14:01.5798806Z Building...
+2025-09-21T23:14:19.9999870Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::visibleLines()':
+2025-09-21T23:14:20.0004473Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:13:(.text+0xd): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:20.0008306Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:16:(.text+0x2b): undefined reference to `graphics::DisplayIface::height()'
+2025-09-21T23:14:20.0012046Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderDetail()':
+2025-09-21T23:14:20.0015325Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:113:(.text+0x657): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:14:20.0019241Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:122:(.text+0x977): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:20.0023421Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:128:(.text+0xad6): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:20.0027229Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb15): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:20.0031440Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb36): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:20.0035116Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderPicker()':
+2025-09-21T23:14:20.0039115Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:57:(.text+0x127a): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:14:20.0043146Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:62:(.text+0x12d4): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:20.0047176Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:67:(.text+0x12e0): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:20.0051137Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1512): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:20.0055292Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1531): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:20.0059861Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x176f): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:20.0064086Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x178e): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:20.4862752Z collect2: error: ld returned 1 exit status
+2025-09-21T23:14:20.4873765Z *** [.pio/build/coverage/program] Error 1
+2025-09-21T23:14:20.8468803Z Building stage has failed, see errors above. Use `pio test -vvv` option to enable verbose output.
+2025-09-21T23:14:20.8469990Z ------- coverage:test_meshpacket_serializer [ERRORED] Took 19.27 seconds -------
+2025-09-21T23:14:20.8494136Z 
+2025-09-21T23:14:20.8494689Z Processing test_mqtt in coverage environment
+2025-09-21T23:14:20.8495884Z --------------------------------------------------------------------------------
+2025-09-21T23:14:20.8496889Z Building...
+2025-09-21T23:14:40.9410740Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::visibleLines()':
+2025-09-21T23:14:40.9415036Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:13:(.text+0xd): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:40.9418710Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:16:(.text+0x2b): undefined reference to `graphics::DisplayIface::height()'
+2025-09-21T23:14:40.9422381Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderDetail()':
+2025-09-21T23:14:40.9425667Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:113:(.text+0x657): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:14:40.9429823Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:122:(.text+0x977): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:40.9434136Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:128:(.text+0xad6): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:40.9438187Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb15): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:40.9442608Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb36): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:40.9446515Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderPicker()':
+2025-09-21T23:14:40.9453799Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:57:(.text+0x127a): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:14:40.9457738Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:62:(.text+0x12d4): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:40.9462009Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:67:(.text+0x12e0): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:40.9465849Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1512): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:40.9469965Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1531): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:40.9474006Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x176f): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:14:40.9478519Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x178e): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:14:41.4350942Z collect2: error: ld returned 1 exit status
+2025-09-21T23:14:41.4359280Z *** [.pio/build/coverage/program] Error 1
+2025-09-21T23:14:41.7866790Z Building stage has failed, see errors above. Use `pio test -vvv` option to enable verbose output.
+2025-09-21T23:14:41.7868290Z --------------- coverage:test_mqtt [ERRORED] Took 20.94 seconds ---------------
+2025-09-21T23:14:41.7884068Z 
+2025-09-21T23:14:41.7917302Z =================================== SUMMARY ===================================
+2025-09-21T23:14:41.8187875Z Environment                       Test                        Status    Duration
+2025-09-21T23:14:41.8190468Z --------------------------------  --------------------------  --------  ------------
+2025-09-21T23:14:41.8192860Z native                            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8194818Z native                            test_serial                 SKIPPED
+2025-09-21T23:14:41.8195914Z native                            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8196971Z native                            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8198069Z native-tft                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8200004Z native-tft                        test_serial                 SKIPPED
+2025-09-21T23:14:41.8202012Z native-tft                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8204389Z native-tft                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8205747Z native-sdl                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8206871Z native-sdl                        test_serial                 SKIPPED
+2025-09-21T23:14:41.8207985Z native-sdl                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8209201Z native-sdl                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8210531Z native-fb                         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8211594Z native-fb                         test_serial                 SKIPPED
+2025-09-21T23:14:41.8212703Z native-fb                         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8213806Z native-fb                         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8214969Z native-tft-debug                  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8216188Z native-tft-debug                  test_serial                 SKIPPED
+2025-09-21T23:14:41.8217455Z native-tft-debug                  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8219344Z native-tft-debug                  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8220763Z coverage                          test_crypto                 ERRORED   00:01:36.914
+2025-09-21T23:14:41.8222007Z coverage                          test_serial                 ERRORED   00:00:18.041
+2025-09-21T23:14:41.8223273Z coverage                          test_meshpacket_serializer  ERRORED   00:00:19.267
+2025-09-21T23:14:41.8224519Z coverage                          test_mqtt                   ERRORED   00:00:20.937
+2025-09-21T23:14:41.8226193Z buildroot                         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8227498Z buildroot                         test_serial                 SKIPPED
+2025-09-21T23:14:41.8228978Z buildroot                         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8230666Z buildroot                         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8232112Z ai-c3                             test_crypto                 SKIPPED
+2025-09-21T23:14:41.8233320Z ai-c3                             test_serial                 SKIPPED
+2025-09-21T23:14:41.8234717Z ai-c3                             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8236394Z ai-c3                             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8237717Z m5stack-stamp-c3                  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8239337Z m5stack-stamp-c3                  test_serial                 SKIPPED
+2025-09-21T23:14:41.8412569Z m5stack-stamp-c3                  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8414052Z m5stack-stamp-c3                  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8415381Z heltec-ht62-esp32c3-sx1262        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8416742Z heltec-ht62-esp32c3-sx1262        test_serial                 SKIPPED
+2025-09-21T23:14:41.8418144Z heltec-ht62-esp32c3-sx1262        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8419561Z heltec-ht62-esp32c3-sx1262        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8421200Z hackerboxes-esp32c3-oled          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8422562Z hackerboxes-esp32c3-oled          test_serial                 SKIPPED
+2025-09-21T23:14:41.8423949Z hackerboxes-esp32c3-oled          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8425326Z hackerboxes-esp32c3-oled          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8426584Z heltec-hru-3601                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8427783Z heltec-hru-3601                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8429002Z heltec-hru-3601                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8430378Z heltec-hru-3601                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8431482Z pico2w                            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8432570Z pico2w                            test_serial                 SKIPPED
+2025-09-21T23:14:41.8433644Z pico2w                            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8434709Z pico2w                            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8435733Z pico2                             test_crypto                 SKIPPED
+2025-09-21T23:14:41.8436751Z pico2                             test_serial                 SKIPPED
+2025-09-21T23:14:41.8437789Z pico2                             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8438817Z pico2                             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8440092Z tbeam-s3-core                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8441248Z tbeam-s3-core                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8442428Z tbeam-s3-core                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8444101Z tbeam-s3-core                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8445328Z tlora-t3s3-v1                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8446464Z tlora-t3s3-v1                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8447638Z tlora-t3s3-v1                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8448780Z tlora-t3s3-v1                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8450336Z heltec-vision-master-e290         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8451764Z heltec-vision-master-e290         test_serial                 SKIPPED
+2025-09-21T23:14:41.8453157Z heltec-vision-master-e290         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8454522Z heltec-vision-master-e290         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8455922Z heltec-vision-master-e290-inkhud  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8457365Z heltec-vision-master-e290-inkhud  test_serial                 SKIPPED
+2025-09-21T23:14:41.8458836Z heltec-vision-master-e290-inkhud  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8460420Z heltec-vision-master-e290-inkhud  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8462047Z ESP32-S3-Pico                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8463233Z ESP32-S3-Pico                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8464394Z ESP32-S3-Pico                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8465571Z ESP32-S3-Pico                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8466671Z icarus                            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8467700Z icarus                            test_serial                 SKIPPED
+2025-09-21T23:14:41.8468775Z icarus                            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8469935Z icarus                            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8471069Z nugget-s3-lora                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8472242Z nugget-s3-lora                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8473444Z nugget-s3-lora                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8474647Z nugget-s3-lora                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8475809Z dreamcatcher                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8476992Z dreamcatcher                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8478184Z dreamcatcher                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8479378Z dreamcatcher                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8480683Z dreamcatcher-2206                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.8481957Z dreamcatcher-2206                 test_serial                 SKIPPED
+2025-09-21T23:14:41.8483246Z dreamcatcher-2206                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8484490Z dreamcatcher-2206                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8485679Z thinknode_m5                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8486827Z thinknode_m5                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8487985Z thinknode_m5                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8489114Z thinknode_m5                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8490356Z EBYTE_ESP32-S3                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8491506Z EBYTE_ESP32-S3                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8492687Z EBYTE_ESP32-S3                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8493840Z EBYTE_ESP32-S3                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8495024Z picomputer-s3                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8496507Z picomputer-s3                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8497691Z picomputer-s3                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8498902Z picomputer-s3                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8500210Z picomputer-s3-tft                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.8501459Z picomputer-s3-tft                 test_serial                 SKIPPED
+2025-09-21T23:14:41.8502748Z picomputer-s3-tft                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8504022Z picomputer-s3-tft                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8505222Z tracksenger                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8506360Z tracksenger                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8507545Z tracksenger                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8508740Z tracksenger                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8510040Z tracksenger-lcd                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8511317Z tracksenger-lcd                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8512823Z tracksenger-lcd                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8514090Z tracksenger-lcd                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8515306Z tracksenger-oled                  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8516556Z tracksenger-oled                  test_serial                 SKIPPED
+2025-09-21T23:14:41.8517825Z tracksenger-oled                  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8519085Z tracksenger-oled                  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8520432Z m5stack-cores3                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8521645Z m5stack-cores3                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8522876Z m5stack-cores3                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8524076Z m5stack-cores3                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8525403Z heltec-vision-master-e213         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8526783Z heltec-vision-master-e213         test_serial                 SKIPPED
+2025-09-21T23:14:41.8528189Z heltec-vision-master-e213         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8529564Z heltec-vision-master-e213         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8531133Z heltec-vision-master-e213-inkhud  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8532580Z heltec-vision-master-e213-inkhud  test_serial                 SKIPPED
+2025-09-21T23:14:41.8534027Z heltec-vision-master-e213-inkhud  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8535521Z heltec-vision-master-e213-inkhud  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8536815Z t-deck-pro                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8537923Z t-deck-pro                        test_serial                 SKIPPED
+2025-09-21T23:14:41.8539036Z t-deck-pro                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8540290Z t-deck-pro                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8541426Z nibble-esp32                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8542587Z nibble-esp32                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8543751Z nibble-esp32                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8544930Z nibble-esp32                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8546085Z tlora-pager                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8547207Z tlora-pager                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8548682Z tlora-pager                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8549943Z tlora-pager                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8551125Z tlora-pager-tft                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8552336Z tlora-pager-tft                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8553583Z tlora-pager-tft                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8554816Z tlora-pager-tft                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8555969Z t-eth-elite                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8557101Z t-eth-elite                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8558247Z t-eth-elite                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8559391Z t-eth-elite                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8560750Z seeed-sensecap-indicator          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8562130Z seeed-sensecap-indicator          test_serial                 SKIPPED
+2025-09-21T23:14:41.8563535Z seeed-sensecap-indicator          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8565228Z seeed-sensecap-indicator          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8566656Z seeed-sensecap-indicator-tft      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8568094Z seeed-sensecap-indicator-tft      test_serial                 SKIPPED
+2025-09-21T23:14:41.8569550Z seeed-sensecap-indicator-tft      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8571156Z seeed-sensecap-indicator-tft      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8572510Z elecrow-adv-24-28-tft             test_crypto                 SKIPPED
+2025-09-21T23:14:41.8573761Z elecrow-adv-24-28-tft             test_serial                 SKIPPED
+2025-09-21T23:14:41.8575011Z elecrow-adv-24-28-tft             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8576306Z elecrow-adv-24-28-tft             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8577541Z elecrow-adv-35-tft                test_crypto                 SKIPPED
+2025-09-21T23:14:41.8578788Z elecrow-adv-35-tft                test_serial                 SKIPPED
+2025-09-21T23:14:41.8580117Z elecrow-adv-35-tft                test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8581372Z elecrow-adv-35-tft                test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8582640Z elecrow-adv1-43-50-70-tft         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8583913Z elecrow-adv1-43-50-70-tft         test_serial                 SKIPPED
+2025-09-21T23:14:41.8585233Z elecrow-adv1-43-50-70-tft         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8586544Z elecrow-adv1-43-50-70-tft         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8587759Z heltec-wsl-v3                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8588907Z heltec-wsl-v3                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8590186Z heltec-wsl-v3                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8591354Z heltec-wsl-v3                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8592541Z heltec_sensor_hub                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.8593730Z heltec_sensor_hub                 test_serial                 SKIPPED
+2025-09-21T23:14:41.8594967Z heltec_sensor_hub                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8596204Z heltec_sensor_hub                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8597456Z mesh-tab-3-2-TN-resistive         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8598787Z mesh-tab-3-2-TN-resistive         test_serial                 SKIPPED
+2025-09-21T23:14:41.8600210Z mesh-tab-3-2-TN-resistive         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8601837Z mesh-tab-3-2-TN-resistive         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8603168Z mesh-tab-3-2-IPS-resistive        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8604514Z mesh-tab-3-2-IPS-resistive        test_serial                 SKIPPED
+2025-09-21T23:14:41.8605901Z mesh-tab-3-2-IPS-resistive        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8607253Z mesh-tab-3-2-IPS-resistive        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8608709Z mesh-tab-3-5-IPS-resistive        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8610137Z mesh-tab-3-5-IPS-resistive        test_serial                 SKIPPED
+2025-09-21T23:14:41.8611513Z mesh-tab-3-5-IPS-resistive        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8612871Z mesh-tab-3-5-IPS-resistive        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8614207Z mesh-tab-3-5-TN-resistive         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8615523Z mesh-tab-3-5-TN-resistive         test_serial                 SKIPPED
+2025-09-21T23:14:41.8616857Z mesh-tab-3-5-TN-resistive         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8618195Z mesh-tab-3-5-TN-resistive         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8619904Z mesh-tab-3-2-IPS-capacitive       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8621287Z mesh-tab-3-2-IPS-capacitive       test_serial                 SKIPPED
+2025-09-21T23:14:41.8622670Z mesh-tab-3-2-IPS-capacitive       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8624123Z mesh-tab-3-2-IPS-capacitive       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8625382Z mesh-tab-3-5-IPS-capacitive       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8626624Z mesh-tab-3-5-IPS-capacitive       test_serial                 SKIPPED
+2025-09-21T23:14:41.8627911Z mesh-tab-3-5-IPS-capacitive       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8629196Z mesh-tab-3-5-IPS-capacitive       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8630534Z mesh-tab-4-0-IPS-capacitive       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8631797Z mesh-tab-4-0-IPS-capacitive       test_serial                 SKIPPED
+2025-09-21T23:14:41.8633106Z mesh-tab-4-0-IPS-capacitive       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8634396Z mesh-tab-4-0-IPS-capacitive       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8635511Z heltec-v3                         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8636514Z heltec-v3                         test_serial                 SKIPPED
+2025-09-21T23:14:41.8637533Z heltec-v3                         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8638527Z heltec-v3                         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8639565Z CDEBYTE_EoRa-S3                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8640749Z CDEBYTE_EoRa-S3                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8641862Z CDEBYTE_EoRa-S3                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8642962Z CDEBYTE_EoRa-S3                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8644049Z bpi_picow_esp32_s3                test_crypto                 SKIPPED
+2025-09-21T23:14:41.8645169Z bpi_picow_esp32_s3                test_serial                 SKIPPED
+2025-09-21T23:14:41.8646275Z bpi_picow_esp32_s3                test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8647391Z bpi_picow_esp32_s3                test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8648536Z heltec_capsule_sensor_v3          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8649805Z heltec_capsule_sensor_v3          test_serial                 SKIPPED
+2025-09-21T23:14:41.8651001Z heltec_capsule_sensor_v3          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8652216Z heltec_capsule_sensor_v3          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8653385Z rak_wismesh_tap_v2-tft            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8654790Z rak_wismesh_tap_v2-tft            test_serial                 SKIPPED
+2025-09-21T23:14:41.8655950Z rak_wismesh_tap_v2-tft            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8657109Z rak_wismesh_tap_v2-tft            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8658155Z t-deck                            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8659090Z t-deck                            test_serial                 SKIPPED
+2025-09-21T23:14:41.8660146Z t-deck                            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8661108Z t-deck                            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8662090Z t-deck-tft                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8663082Z t-deck-tft                        test_serial                 SKIPPED
+2025-09-21T23:14:41.8664116Z t-deck-tft                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8665160Z t-deck-tft                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8666167Z thinknode_m2                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8667215Z thinknode_m2                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8668541Z thinknode_m2                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8669739Z thinknode_m2                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8670748Z unphone                           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8671736Z unphone                           test_serial                 SKIPPED
+2025-09-21T23:14:41.8672744Z unphone                           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8673725Z unphone                           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8674845Z unphone-tft                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8675829Z unphone-tft                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8676845Z unphone-tft                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8677830Z unphone-tft                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8678944Z heltec-wireless-tracker-V1-0      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8680251Z heltec-wireless-tracker-V1-0      test_serial                 SKIPPED
+2025-09-21T23:14:41.8681535Z heltec-wireless-tracker-V1-0      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8682772Z heltec-wireless-tracker-V1-0      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8683977Z crowpanel-esp32s3-5-epaper        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8685180Z crowpanel-esp32s3-5-epaper        test_serial                 SKIPPED
+2025-09-21T23:14:41.8686378Z crowpanel-esp32s3-5-epaper        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8687589Z crowpanel-esp32s3-5-epaper        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8688791Z crowpanel-esp32s3-4-epaper        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8690058Z crowpanel-esp32s3-4-epaper        test_serial                 SKIPPED
+2025-09-21T23:14:41.8691287Z crowpanel-esp32s3-4-epaper        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8692564Z crowpanel-esp32s3-4-epaper        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8693676Z crowpanel-esp32s3-2-epaper        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8694789Z crowpanel-esp32s3-2-epaper        test_serial                 SKIPPED
+2025-09-21T23:14:41.8695930Z crowpanel-esp32s3-2-epaper        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8697060Z crowpanel-esp32s3-2-epaper        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8698167Z heltec-vision-master-t190         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8699249Z heltec-vision-master-t190         test_serial                 SKIPPED
+2025-09-21T23:14:41.8700759Z heltec-vision-master-t190         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8701880Z heltec-vision-master-t190         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8702873Z seeed-xiao-s3                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8703817Z seeed-xiao-s3                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8704773Z seeed-xiao-s3                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8705713Z seeed-xiao-s3                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8706600Z t-watch-s3                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8707476Z t-watch-s3                        test_serial                 SKIPPED
+2025-09-21T23:14:41.8708374Z t-watch-s3                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8709261Z t-watch-s3                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8710245Z heltec-v4                         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8711129Z heltec-v4                         test_serial                 SKIPPED
+2025-09-21T23:14:41.8712025Z heltec-v4                         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8713110Z heltec-v4                         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8714126Z heltec-wireless-tracker           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8715230Z heltec-wireless-tracker           test_serial                 SKIPPED
+2025-09-21T23:14:41.8716330Z heltec-wireless-tracker           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8717452Z heltec-wireless-tracker           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8718512Z tlora-t3s3-epaper                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.8719549Z tlora-t3s3-epaper                 test_serial                 SKIPPED
+2025-09-21T23:14:41.8720654Z tlora-t3s3-epaper                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8721696Z tlora-t3s3-epaper                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8722749Z tlora-t3s3-epaper-inkhud          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8723834Z tlora-t3s3-epaper-inkhud          test_serial                 SKIPPED
+2025-09-21T23:14:41.8724945Z tlora-t3s3-epaper-inkhud          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8726057Z tlora-t3s3-epaper-inkhud          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8727147Z heltec-wireless-paper             test_crypto                 SKIPPED
+2025-09-21T23:14:41.8728210Z heltec-wireless-paper             test_serial                 SKIPPED
+2025-09-21T23:14:41.8729309Z heltec-wireless-paper             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8730609Z heltec-wireless-paper             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8731671Z heltec-wireless-paper-inkhud      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8732750Z heltec-wireless-paper-inkhud      test_serial                 SKIPPED
+2025-09-21T23:14:41.8733864Z heltec-wireless-paper-inkhud      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8734966Z heltec-wireless-paper-inkhud      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8735926Z station-g2                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8736765Z station-g2                        test_serial                 SKIPPED
+2025-09-21T23:14:41.8737624Z station-g2                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8738473Z station-g2                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8739300Z link32-s3-v1                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8740222Z link32-s3-v1                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8741083Z link32-s3-v1                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8741925Z link32-s3-v1                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8743016Z rak3312                           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8743814Z rak3312                           test_serial                 SKIPPED
+2025-09-21T23:14:41.8744648Z rak3312                           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8745450Z rak3312                           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8746370Z heltec-wireless-paper-v1_0        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8747409Z heltec-wireless-paper-v1_0        test_serial                 SKIPPED
+2025-09-21T23:14:41.8748455Z heltec-wireless-paper-v1_0        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8749511Z heltec-wireless-paper-v1_0        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8750524Z tlora-c6                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8751326Z tlora-c6                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8752146Z tlora-c6                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8752963Z tlora-c6                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8754057Z m5stack-unitc6l                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8754987Z m5stack-unitc6l                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8755930Z m5stack-unitc6l                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8756873Z m5stack-unitc6l                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8757795Z seeed_wio_tracker_L1              test_crypto                 SKIPPED
+2025-09-21T23:14:41.8758712Z seeed_wio_tracker_L1              test_serial                 SKIPPED
+2025-09-21T23:14:41.8759729Z seeed_wio_tracker_L1              test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8760682Z seeed_wio_tracker_L1              test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8761572Z thinknode_m1                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8762441Z thinknode_m1                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8763317Z thinknode_m1                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8764203Z thinknode_m1                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8765100Z thinknode_m1-inkhud               test_crypto                 SKIPPED
+2025-09-21T23:14:41.8766051Z thinknode_m1-inkhud               test_serial                 SKIPPED
+2025-09-21T23:14:41.8767025Z thinknode_m1-inkhud               test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8767994Z thinknode_m1-inkhud               test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8768936Z gat562_mesh_trial_tracker         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8770001Z gat562_mesh_trial_tracker         test_serial                 SKIPPED
+2025-09-21T23:14:41.8770990Z gat562_mesh_trial_tracker         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8771966Z gat562_mesh_trial_tracker         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8772946Z heltec-mesh-node-t114             test_crypto                 SKIPPED
+2025-09-21T23:14:41.8773931Z heltec-mesh-node-t114             test_serial                 SKIPPED
+2025-09-21T23:14:41.8775037Z heltec-mesh-node-t114             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8775954Z heltec-mesh-node-t114             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8776867Z ME25LS01-4Y10TD_e-ink             test_crypto                 SKIPPED
+2025-09-21T23:14:41.8777765Z ME25LS01-4Y10TD_e-ink             test_serial                 SKIPPED
+2025-09-21T23:14:41.8778661Z ME25LS01-4Y10TD_e-ink             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8779568Z ME25LS01-4Y10TD_e-ink             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8780508Z rak_wismeshtag                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8781566Z rak_wismeshtag                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8782413Z rak_wismeshtag                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8783277Z rak_wismeshtag                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8784107Z monteops_hw1                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8784905Z monteops_hw1                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8785738Z monteops_hw1                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8786585Z monteops_hw1                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8787391Z rak4631_eth_gw                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8788178Z rak4631_eth_gw                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8789001Z rak4631_eth_gw                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8789923Z rak4631_eth_gw                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8790832Z rak4631_eth_gw_dbg                test_crypto                 SKIPPED
+2025-09-21T23:14:41.8791632Z rak4631_eth_gw_dbg                test_serial                 SKIPPED
+2025-09-21T23:14:41.8792636Z rak4631_eth_gw_dbg                test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8793465Z rak4631_eth_gw_dbg                test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8794227Z wio-t1000-s                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8794976Z wio-t1000-s                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8795736Z wio-t1000-s                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8796478Z wio-t1000-s                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8797252Z nano-g2-ultra                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8798038Z nano-g2-ultra                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8798850Z nano-g2-ultra                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8799694Z nano-g2-ultra                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8800485Z rak4631_eink                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8801257Z rak4631_eink                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8802039Z rak4631_eink                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8802814Z rak4631_eink                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8803581Z t-echo-lite                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8804343Z t-echo-lite                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8805102Z t-echo-lite                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8805880Z t-echo-lite                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8806730Z makerpython_nrf52840_sx1280_oled  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8807650Z makerpython_nrf52840_sx1280_oled  test_serial                 SKIPPED
+2025-09-21T23:14:41.8808580Z makerpython_nrf52840_sx1280_oled  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8809518Z makerpython_nrf52840_sx1280_oled  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8810523Z heltec-mesh-pocket-5000           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8811412Z heltec-mesh-pocket-5000           test_serial                 SKIPPED
+2025-09-21T23:14:41.8812337Z heltec-mesh-pocket-5000           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8813252Z heltec-mesh-pocket-5000           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8814194Z heltec-mesh-pocket-5000-inkhud    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8815140Z heltec-mesh-pocket-5000-inkhud    test_serial                 SKIPPED
+2025-09-21T23:14:41.8816338Z heltec-mesh-pocket-5000-inkhud    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8817322Z heltec-mesh-pocket-5000-inkhud    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8818261Z heltec-mesh-pocket-10000          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8819168Z heltec-mesh-pocket-10000          test_serial                 SKIPPED
+2025-09-21T23:14:41.8820172Z heltec-mesh-pocket-10000          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8821106Z heltec-mesh-pocket-10000          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8822023Z heltec-mesh-pocket-10000-inkhud   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8822995Z heltec-mesh-pocket-10000-inkhud   test_serial                 SKIPPED
+2025-09-21T23:14:41.8823982Z heltec-mesh-pocket-10000-inkhud   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8824976Z heltec-mesh-pocket-10000-inkhud   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8825859Z tracker-t1000-e                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8826681Z tracker-t1000-e                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8827509Z tracker-t1000-e                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8828496Z tracker-t1000-e                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8829330Z ME25LS01-4Y10TD                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8830248Z ME25LS01-4Y10TD                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8831160Z ME25LS01-4Y10TD                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8831952Z ME25LS01-4Y10TD                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8832665Z t-echo                            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8833313Z t-echo                            test_serial                 SKIPPED
+2025-09-21T23:14:41.8833994Z t-echo                            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8834679Z t-echo                            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8835406Z t-echo-inkhud                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8836144Z t-echo-inkhud                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8836923Z t-echo-inkhud                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8837693Z t-echo-inkhud                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8838412Z feather_diy                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8839136Z feather_diy                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8839955Z feather_diy                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8840690Z feather_diy                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8841389Z canaryone                         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8842123Z canaryone                         test_serial                 SKIPPED
+2025-09-21T23:14:41.8842856Z canaryone                         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8843597Z canaryone                         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8844353Z wio-tracker-wm1110                test_crypto                 SKIPPED
+2025-09-21T23:14:41.8845176Z wio-tracker-wm1110                test_serial                 SKIPPED
+2025-09-21T23:14:41.8846009Z wio-tracker-wm1110                test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8846812Z wio-tracker-wm1110                test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8847623Z heltec-mesh-solar                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.8848433Z heltec-mesh-solar                 test_serial                 SKIPPED
+2025-09-21T23:14:41.8849256Z heltec-mesh-solar                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8850117Z heltec-mesh-solar                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8851107Z rak_wismeshtap                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8851863Z rak_wismeshtap                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8852627Z rak_wismeshtap                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8853401Z rak_wismeshtap                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8854223Z makerpython_nrf52840_sx1280_eink  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8855112Z makerpython_nrf52840_sx1280_eink  test_serial                 SKIPPED
+2025-09-21T23:14:41.8855987Z makerpython_nrf52840_sx1280_eink  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8856873Z makerpython_nrf52840_sx1280_eink  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8857696Z pca10059_diy_eink                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.8858450Z pca10059_diy_eink                 test_serial                 SKIPPED
+2025-09-21T23:14:41.8859252Z pca10059_diy_eink                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8860135Z pca10059_diy_eink                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8861056Z seeed_xiao_nrf52840_kit           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8862767Z seeed_xiao_nrf52840_kit           test_serial                 SKIPPED
+2025-09-21T23:14:41.8864559Z seeed_xiao_nrf52840_kit           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8865707Z seeed_xiao_nrf52840_kit           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8866486Z seeed_xiao_nrf52840_kit_i2c       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8867253Z seeed_xiao_nrf52840_kit_i2c       test_serial                 SKIPPED
+2025-09-21T23:14:41.8868067Z seeed_xiao_nrf52840_kit_i2c       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8868872Z seeed_xiao_nrf52840_kit_i2c       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8869586Z rak4631                           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8870427Z rak4631                           test_serial                 SKIPPED
+2025-09-21T23:14:41.8871096Z rak4631                           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8871768Z rak4631                           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8872415Z rak4631_dbg                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8873090Z rak4631_dbg                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8873783Z rak4631_dbg                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8874450Z rak4631_dbg                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8875112Z ms24sf1                           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8875761Z ms24sf1                           test_serial                 SKIPPED
+2025-09-21T23:14:41.8876421Z ms24sf1                           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8877077Z ms24sf1                           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8877744Z TWC_mesh_v4                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8878413Z TWC_mesh_v4                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8879106Z TWC_mesh_v4                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8879856Z TWC_mesh_v4                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8880596Z rak4631_nomadstar_meteor_pro      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8881407Z rak4631_nomadstar_meteor_pro      test_serial                 SKIPPED
+2025-09-21T23:14:41.8882218Z rak4631_nomadstar_meteor_pro      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8883037Z rak4631_nomadstar_meteor_pro      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8883855Z rak4631_nomadstar_meteor_pro_dbg  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8884961Z rak4631_nomadstar_meteor_pro_dbg  test_serial                 SKIPPED
+2025-09-21T23:14:41.8885786Z rak4631_nomadstar_meteor_pro_dbg  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8886644Z rak4631_nomadstar_meteor_pro_dbg  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8887392Z rak2560                           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8888034Z rak2560                           test_serial                 SKIPPED
+2025-09-21T23:14:41.8888706Z rak2560                           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8889366Z rak2560                           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8890116Z meshlink                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8890768Z meshlink                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8891448Z meshlink                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8892141Z meshlink                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8892812Z meshlink_eink                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.8893527Z meshlink_eink                     test_serial                 SKIPPED
+2025-09-21T23:14:41.8894432Z meshlink_eink                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8895173Z meshlink_eink                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8895898Z seeed_wio_tracker_L1_eink         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8896682Z seeed_wio_tracker_L1_eink         test_serial                 SKIPPED
+2025-09-21T23:14:41.8897477Z seeed_wio_tracker_L1_eink         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8898252Z seeed_wio_tracker_L1_eink         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8899044Z seeed_wio_tracker_L1_eink-inkhud  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8899932Z seeed_wio_tracker_L1_eink-inkhud  test_serial                 SKIPPED
+2025-09-21T23:14:41.8900771Z seeed_wio_tracker_L1_eink-inkhud  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8901580Z seeed_wio_tracker_L1_eink-inkhud  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8902327Z meshtiny                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8903004Z meshtiny                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8903678Z meshtiny                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8904365Z meshtiny                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8905062Z wio-sdk-wm1110                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8905806Z wio-sdk-wm1110                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8906529Z wio-sdk-wm1110                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8907260Z wio-sdk-wm1110                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8908060Z heltec-mesh-node-t114-inkhud      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8908909Z heltec-mesh-node-t114-inkhud      test_serial                 SKIPPED
+2025-09-21T23:14:41.8909848Z heltec-mesh-node-t114-inkhud      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8910831Z heltec-mesh-node-t114-inkhud      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8911587Z seeed_solar_node                  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8912270Z seeed_solar_node                  test_serial                 SKIPPED
+2025-09-21T23:14:41.8912985Z seeed_solar_node                  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8913690Z seeed_solar_node                  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8914398Z rak4631_eink_onrxtx               test_crypto                 SKIPPED
+2025-09-21T23:14:41.8915105Z rak4631_eink_onrxtx               test_serial                 SKIPPED
+2025-09-21T23:14:41.8916029Z rak4631_eink_onrxtx               test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8916759Z rak4631_eink_onrxtx               test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8917458Z betafpv_2400_tx_micro             test_crypto                 SKIPPED
+2025-09-21T23:14:41.8918196Z betafpv_2400_tx_micro             test_serial                 SKIPPED
+2025-09-21T23:14:41.8918943Z betafpv_2400_tx_micro             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8919745Z betafpv_2400_tx_micro             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8920413Z chatter2                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8921050Z chatter2                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8921708Z chatter2                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8922336Z chatter2                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8922987Z tlora-v2-1-1_6                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8923655Z tlora-v2-1-1_6                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8924327Z tlora-v2-1-1_6                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8925149Z tlora-v2-1-1_6                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8925813Z tlora_v1_3                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8926435Z tlora_v1_3                        test_serial                 SKIPPED
+2025-09-21T23:14:41.8927056Z tlora_v1_3                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8927696Z tlora_v1_3                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8928388Z radiomaster_900_bandit_nano       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8929155Z radiomaster_900_bandit_nano       test_serial                 SKIPPED
+2025-09-21T23:14:41.8929979Z radiomaster_900_bandit_nano       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8930773Z radiomaster_900_bandit_nano       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8931488Z tlora-v1                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8932092Z tlora-v1                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8932737Z tlora-v1                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8933370Z tlora-v1                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8934033Z tlora-v3-3-0-tcxo                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.8934716Z tlora-v3-3-0-tcxo                 test_serial                 SKIPPED
+2025-09-21T23:14:41.8935436Z tlora-v3-3-0-tcxo                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8936162Z tlora-v3-3-0-tcxo                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8936874Z nano-g1-explorer                  test_crypto                 SKIPPED
+2025-09-21T23:14:41.8937587Z nano-g1-explorer                  test_serial                 SKIPPED
+2025-09-21T23:14:41.8938316Z nano-g1-explorer                  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8939042Z nano-g1-explorer                  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8939933Z radiomaster_900_bandit_micro      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8940721Z radiomaster_900_bandit_micro      test_serial                 SKIPPED
+2025-09-21T23:14:41.8941515Z radiomaster_900_bandit_micro      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8942308Z radiomaster_900_bandit_micro      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8943006Z station-g1                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.8943661Z station-g1                        test_serial                 SKIPPED
+2025-09-21T23:14:41.8944421Z station-g1                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8945035Z station-g1                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8945842Z heltec-v2_1                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8946459Z heltec-v2_1                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8947102Z heltec-v2_1                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8947717Z heltec-v2_1                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8948411Z hackerboxes-esp32-io              test_crypto                 SKIPPED
+2025-09-21T23:14:41.8949150Z hackerboxes-esp32-io              test_serial                 SKIPPED
+2025-09-21T23:14:41.8949949Z hackerboxes-esp32-io              test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8950698Z hackerboxes-esp32-io              test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8951400Z betafpv_900_tx_nano               test_crypto                 SKIPPED
+2025-09-21T23:14:41.8952071Z betafpv_900_tx_nano               test_serial                 SKIPPED
+2025-09-21T23:14:41.8952748Z betafpv_900_tx_nano               test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8953435Z betafpv_900_tx_nano               test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8954093Z heltec-v2_0                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.8954855Z heltec-v2_0                       test_serial                 SKIPPED
+2025-09-21T23:14:41.8955508Z heltec-v2_0                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8956151Z heltec-v2_0                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8956756Z rak11200                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8957339Z rak11200                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8957950Z rak11200                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8958567Z rak11200                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8959249Z heltec-wireless-bridge            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8960051Z heltec-wireless-bridge            test_serial                 SKIPPED
+2025-09-21T23:14:41.8960819Z heltec-wireless-bridge            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8961589Z heltec-wireless-bridge            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8962251Z wiphone                           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8962856Z wiphone                           test_serial                 SKIPPED
+2025-09-21T23:14:41.8963471Z wiphone                           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8964084Z wiphone                           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8964662Z tlora-v2                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8965254Z tlora-v2                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8965862Z tlora-v2                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8966458Z tlora-v2                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8967084Z heltec-wsl-v2_1                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8967746Z heltec-wsl-v2_1                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8968416Z heltec-wsl-v2_1                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8969065Z heltec-wsl-v2_1                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8969768Z trackerd                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8970401Z trackerd                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8971011Z trackerd                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8971751Z trackerd                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8972350Z tlora-v2-1-1_8                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.8973136Z tlora-v2-1-1_8                    test_serial                 SKIPPED
+2025-09-21T23:14:41.8973740Z tlora-v2-1-1_8                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8974363Z tlora-v2-1-1_8                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8974964Z heltec-v1                         test_crypto                 SKIPPED
+2025-09-21T23:14:41.8975534Z heltec-v1                         test_serial                 SKIPPED
+2025-09-21T23:14:41.8976133Z heltec-v1                         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8976812Z heltec-v1                         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8977449Z radiomaster_900_bandit            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8978141Z radiomaster_900_bandit            test_serial                 SKIPPED
+2025-09-21T23:14:41.8978844Z radiomaster_900_bandit            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8979523Z radiomaster_900_bandit            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8980233Z nano-g1                           test_crypto                 SKIPPED
+2025-09-21T23:14:41.8980794Z nano-g1                           test_serial                 SKIPPED
+2025-09-21T23:14:41.8981559Z nano-g1                           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8982146Z nano-g1                           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8982756Z m5stack-coreink                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8983417Z m5stack-coreink                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8984073Z m5stack-coreink                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8984743Z m5stack-coreink                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8985380Z m5stack-core                      test_crypto                 SKIPPED
+2025-09-21T23:14:41.8985982Z m5stack-core                      test_serial                 SKIPPED
+2025-09-21T23:14:41.8986627Z m5stack-core                      test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8987249Z m5stack-core                      test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8987855Z tbeam                             test_crypto                 SKIPPED
+2025-09-21T23:14:41.8988401Z tbeam                             test_serial                 SKIPPED
+2025-09-21T23:14:41.8988967Z tbeam                             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8989529Z tbeam                             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8990213Z tlora-v2-1-1_6-tcxo               test_crypto                 SKIPPED
+2025-09-21T23:14:41.8990846Z tlora-v2-1-1_6-tcxo               test_serial                 SKIPPED
+2025-09-21T23:14:41.8991503Z tlora-v2-1-1_6-tcxo               test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8992165Z tlora-v2-1-1_6-tcxo               test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8992763Z tbeam0_7                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.8993338Z tbeam0_7                          test_serial                 SKIPPED
+2025-09-21T23:14:41.8993920Z tbeam0_7                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8994504Z tbeam0_7                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8995047Z wio-e5                            test_crypto                 SKIPPED
+2025-09-21T23:14:41.8995588Z wio-e5                            test_serial                 SKIPPED
+2025-09-21T23:14:41.8996144Z wio-e5                            test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8996682Z wio-e5                            test_mqtt                   SKIPPED
+2025-09-21T23:14:41.8997268Z CDEBYTE_E77-MBL                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.8997899Z CDEBYTE_E77-MBL                   test_serial                 SKIPPED
+2025-09-21T23:14:41.8998541Z CDEBYTE_E77-MBL                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.8999342Z CDEBYTE_E77-MBL                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9000064Z rak3172                           test_crypto                 SKIPPED
+2025-09-21T23:14:41.9000639Z rak3172                           test_serial                 SKIPPED
+2025-09-21T23:14:41.9001207Z rak3172                           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9001788Z rak3172                           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9002394Z nugget-s2-lora                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.9003040Z nugget-s2-lora                    test_serial                 SKIPPED
+2025-09-21T23:14:41.9003670Z nugget-s2-lora                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9004322Z nugget-s2-lora                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9004977Z challenger_2040_lora              test_crypto                 SKIPPED
+2025-09-21T23:14:41.9005637Z challenger_2040_lora              test_serial                 SKIPPED
+2025-09-21T23:14:41.9006324Z challenger_2040_lora              test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9007154Z challenger_2040_lora              test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9007828Z pico_slowclock                    test_crypto                 SKIPPED
+2025-09-21T23:14:41.9008449Z pico_slowclock                    test_serial                 SKIPPED
+2025-09-21T23:14:41.9009103Z pico_slowclock                    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9009835Z pico_slowclock                    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9010472Z catsniffer                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.9011069Z catsniffer                        test_serial                 SKIPPED
+2025-09-21T23:14:41.9011692Z catsniffer                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9012450Z catsniffer                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9013018Z rp2040-lora                       test_crypto                 SKIPPED
+2025-09-21T23:14:41.9013603Z rp2040-lora                       test_serial                 SKIPPED
+2025-09-21T23:14:41.9014209Z rp2040-lora                       test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9014805Z rp2040-lora                       test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9015387Z senselora_rp2040                  test_crypto                 SKIPPED
+2025-09-21T23:14:41.9016014Z senselora_rp2040                  test_serial                 SKIPPED
+2025-09-21T23:14:41.9016648Z senselora_rp2040                  test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9017265Z senselora_rp2040                  test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9017852Z rak11310                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.9018402Z rak11310                          test_serial                 SKIPPED
+2025-09-21T23:14:41.9018975Z rak11310                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9019525Z rak11310                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9020204Z nibble-rp2040                     test_crypto                 SKIPPED
+2025-09-21T23:14:41.9020817Z nibble-rp2040                     test_serial                 SKIPPED
+2025-09-21T23:14:41.9021419Z nibble-rp2040                     test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9022034Z nibble-rp2040                     test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9022602Z picow                             test_crypto                 SKIPPED
+2025-09-21T23:14:41.9023132Z picow                             test_serial                 SKIPPED
+2025-09-21T23:14:41.9023663Z picow                             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9024202Z picow                             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9024919Z pico                              test_crypto                 SKIPPED
+2025-09-21T23:14:41.9025422Z pico                              test_serial                 SKIPPED
+2025-09-21T23:14:41.9025959Z pico                              test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9026491Z pico                              test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9027067Z feather_rp2040_rfm95              test_crypto                 SKIPPED
+2025-09-21T23:14:41.9027694Z feather_rp2040_rfm95              test_serial                 SKIPPED
+2025-09-21T23:14:41.9028348Z feather_rp2040_rfm95              test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9029000Z feather_rp2040_rfm95              test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9029684Z esp32c3_super_mini                test_crypto                 SKIPPED
+2025-09-21T23:14:41.9030332Z esp32c3_super_mini                test_serial                 SKIPPED
+2025-09-21T23:14:41.9030986Z esp32c3_super_mini                test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9031632Z esp32c3_super_mini                test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9032262Z my-esp32s3-diy-eink               test_crypto                 SKIPPED
+2025-09-21T23:14:41.9033062Z my-esp32s3-diy-eink               test_serial                 SKIPPED
+2025-09-21T23:14:41.9033751Z my-esp32s3-diy-eink               test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9034532Z my-esp32s3-diy-eink               test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9035059Z my-esp32s3-diy-oled               test_crypto                 SKIPPED
+2025-09-21T23:14:41.9035600Z my-esp32s3-diy-oled               test_serial                 SKIPPED
+2025-09-21T23:14:41.9036153Z my-esp32s3-diy-oled               test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9036689Z my-esp32s3-diy-oled               test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9037215Z t-energy-s3_e22                   test_crypto                 SKIPPED
+2025-09-21T23:14:41.9037730Z t-energy-s3_e22                   test_serial                 SKIPPED
+2025-09-21T23:14:41.9038247Z t-energy-s3_e22                   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9038749Z t-energy-s3_e22                   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9039242Z xiao_ble                          test_crypto                 SKIPPED
+2025-09-21T23:14:41.9039749Z xiao_ble                          test_serial                 SKIPPED
+2025-09-21T23:14:41.9040208Z xiao_ble                          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9040676Z xiao_ble                          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9041179Z nrf52_promicro_diy_tcxo           test_crypto                 SKIPPED
+2025-09-21T23:14:41.9041730Z nrf52_promicro_diy_tcxo           test_serial                 SKIPPED
+2025-09-21T23:14:41.9042274Z nrf52_promicro_diy_tcxo           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9042838Z nrf52_promicro_diy_tcxo           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9043392Z nrf52_promicro_diy-inkhud         test_crypto                 SKIPPED
+2025-09-21T23:14:41.9043944Z nrf52_promicro_diy-inkhud         test_serial                 SKIPPED
+2025-09-21T23:14:41.9044519Z nrf52_promicro_diy-inkhud         test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9045098Z nrf52_promicro_diy-inkhud         test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9045658Z seeed_xiao_nrf52840_e22_900m30s   test_crypto                 SKIPPED
+2025-09-21T23:14:41.9046199Z seeed_xiao_nrf52840_e22_900m30s   test_serial                 SKIPPED
+2025-09-21T23:14:41.9046768Z seeed_xiao_nrf52840_e22_900m30s   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9047337Z seeed_xiao_nrf52840_e22_900m30s   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9047888Z seeed_xiao_nrf52840_e22_900m33s   test_crypto                 SKIPPED
+2025-09-21T23:14:41.9048596Z seeed_xiao_nrf52840_e22_900m33s   test_serial                 SKIPPED
+2025-09-21T23:14:41.9049163Z seeed_xiao_nrf52840_e22_900m33s   test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9049793Z seeed_xiao_nrf52840_e22_900m33s   test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9050375Z seeed-xiao-nrf52840-wio-sx1262    test_crypto                 SKIPPED
+2025-09-21T23:14:41.9050979Z seeed-xiao-nrf52840-wio-sx1262    test_serial                 SKIPPED
+2025-09-21T23:14:41.9051591Z seeed-xiao-nrf52840-wio-sx1262    test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9052185Z seeed-xiao-nrf52840-wio-sx1262    test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9052732Z WashTastic                        test_crypto                 SKIPPED
+2025-09-21T23:14:41.9053222Z WashTastic                        test_serial                 SKIPPED
+2025-09-21T23:14:41.9053719Z WashTastic                        test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9054202Z WashTastic                        test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9054732Z nrf52_promicro_diy_xtal           test_crypto                 SKIPPED
+2025-09-21T23:14:41.9055280Z nrf52_promicro_diy_xtal           test_serial                 SKIPPED
+2025-09-21T23:14:41.9055969Z nrf52_promicro_diy_xtal           test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9056531Z nrf52_promicro_diy_xtal           test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9057079Z meshtastic-diy-v1_1               test_crypto                 SKIPPED
+2025-09-21T23:14:41.9057626Z meshtastic-diy-v1_1               test_serial                 SKIPPED
+2025-09-21T23:14:41.9058159Z meshtastic-diy-v1_1               test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9058709Z meshtastic-diy-v1_1               test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9059249Z meshtastic-dr-dev                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.9059856Z meshtastic-dr-dev                 test_serial                 SKIPPED
+2025-09-21T23:14:41.9060396Z meshtastic-dr-dev                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9060948Z meshtastic-dr-dev                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9061498Z 9m2ibr_aprs_lora_tracker          test_crypto                 SKIPPED
+2025-09-21T23:14:41.9062049Z 9m2ibr_aprs_lora_tracker          test_serial                 SKIPPED
+2025-09-21T23:14:41.9062612Z 9m2ibr_aprs_lora_tracker          test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9063175Z 9m2ibr_aprs_lora_tracker          test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9063720Z meshtastic-diy-v1                 test_crypto                 SKIPPED
+2025-09-21T23:14:41.9064243Z meshtastic-diy-v1                 test_serial                 SKIPPED
+2025-09-21T23:14:41.9064803Z meshtastic-diy-v1                 test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9065354Z meshtastic-diy-v1                 test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9065837Z hydra                             test_crypto                 SKIPPED
+2025-09-21T23:14:41.9066293Z hydra                             test_serial                 SKIPPED
+2025-09-21T23:14:41.9066755Z hydra                             test_meshpacket_serializer  SKIPPED
+2025-09-21T23:14:41.9067225Z hydra                             test_mqtt                   SKIPPED
+2025-09-21T23:14:41.9067691Z ================== 4 test cases: 0 succeeded in 00:02:35.159 ==================
+2025-09-21T23:14:41.9068175Z Saved JUnit report to the testreport.xml
+2025-09-21T23:14:41.9083045Z ##[error]Process completed with exit code 1.
+2025-09-21T23:14:41.9183260Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:14:41.9183646Z with:
+2025-09-21T23:14:41.9183959Z   name: platformio-test-report-2.7.10.e236535.zip
+2025-09-21T23:14:41.9184354Z   overwrite: true
+2025-09-21T23:14:41.9184619Z   path: ./testreport.xml
+2025-09-21T23:14:41.9184928Z   if-no-files-found: warn
+2025-09-21T23:14:41.9185239Z   compression-level: 6
+2025-09-21T23:14:41.9185746Z   include-hidden-files: false
+2025-09-21T23:14:41.9186057Z env:
+2025-09-21T23:14:41.9186780Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:14:41.9187708Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:41.9188322Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:14:41.9188945Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:41.9189561Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:41.9190220Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:41.9190802Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:14:41.9191262Z ##[endgroup]
+2025-09-21T23:14:42.2116305Z With the provided path, there will be 1 file uploaded
+2025-09-21T23:14:42.9317106Z Artifact name is valid!
+2025-09-21T23:14:42.9321917Z Root directory input is valid!
+2025-09-21T23:14:43.1832921Z Beginning upload of artifact content to blob storage
+2025-09-21T23:14:44.1698023Z Uploaded bytes 4420
+2025-09-21T23:14:44.4202206Z Finished uploading artifact content to blob storage!
+2025-09-21T23:14:44.4209901Z SHA256 digest of uploaded artifact zip is b02bdde417a05fd644fe45f6e124a56335f825673e04903a3f7c21f076452ab1
+2025-09-21T23:14:44.4210880Z Finalizing artifact upload
+2025-09-21T23:14:44.7126421Z Artifact platformio-test-report-2.7.10.e236535.zip.zip successfully finalized. Artifact ID 4067306241
+2025-09-21T23:14:44.7128982Z Artifact platformio-test-report-2.7.10.e236535.zip has been successfully uploaded! Final size is 4420 bytes. Artifact ID is 4067306241
+2025-09-21T23:14:44.7145636Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067306241
+2025-09-21T23:14:44.7366765Z ##[group]Run sudo apt-get install -y lcov
+2025-09-21T23:14:44.7367843Z [36;1msudo apt-get install -y lcov[0m
+2025-09-21T23:14:44.7370432Z [36;1mlcov --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}" --test-name tests --output-file coverage_tests.info[0m
+2025-09-21T23:14:44.7373086Z [36;1msed -i -e "s#${PWD}#.#" coverage_tests.info # Make paths relative.[0m
+2025-09-21T23:14:44.7406962Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:14:44.7407757Z env:
+2025-09-21T23:14:44.7409468Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:14:44.7411933Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:44.7413436Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:14:44.7415002Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:44.7416338Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:44.7417677Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:44.7419037Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:14:44.7420203Z ##[endgroup]
+2025-09-21T23:14:45.8108638Z Reading package lists...
+2025-09-21T23:14:46.0041226Z Building dependency tree...
+2025-09-21T23:14:46.0045933Z Reading state information...
+2025-09-21T23:14:46.2186415Z lcov is already the newest version (2.0-4ubuntu2).
+2025-09-21T23:14:46.2188492Z 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+2025-09-21T23:14:46.7159427Z geninfo: ERROR: no .gcda files found in .pio/build/coverage/src
+2025-09-21T23:14:46.7161682Z 	(use "geninfo --ignore-errors empty ..." to bypass this error)
+2025-09-21T23:14:46.7305595Z ##[error]Process completed with exit code 1.
+2025-09-21T23:14:46.7411958Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:14:46.7412842Z with:
+2025-09-21T23:14:46.7414292Z   name: lcov-coverage-info-native-platformio-tests-2.7.10.e236535.zip
+2025-09-21T23:14:46.7415498Z   overwrite: true
+2025-09-21T23:14:46.7416121Z   path: ./coverage_*.info
+2025-09-21T23:14:46.7416839Z   if-no-files-found: warn
+2025-09-21T23:14:46.7417550Z   compression-level: 6
+2025-09-21T23:14:46.7418257Z   include-hidden-files: false
+2025-09-21T23:14:46.7418974Z env:
+2025-09-21T23:14:46.7420914Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:14:46.7423146Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:46.7424618Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:14:46.7426078Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:46.7427488Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:46.7428823Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:14:46.7430343Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:14:46.7431395Z ##[endgroup]
+2025-09-21T23:14:47.0335518Z With the provided path, there will be 1 file uploaded
+2025-09-21T23:14:47.7450258Z Artifact name is valid!
+2025-09-21T23:14:47.7453825Z Root directory input is valid!
+2025-09-21T23:14:47.9883022Z Beginning upload of artifact content to blob storage
+2025-09-21T23:14:48.9557298Z Uploaded bytes 154
+2025-09-21T23:14:49.2035642Z Finished uploading artifact content to blob storage!
+2025-09-21T23:14:49.2043492Z SHA256 digest of uploaded artifact zip is f6d2622a386a653c1c40e9572a1de0f68e7ba08d997903cf541af13fa3ef5ae5
+2025-09-21T23:14:49.2045077Z Finalizing artifact upload
+2025-09-21T23:14:49.4971394Z Artifact lcov-coverage-info-native-platformio-tests-2.7.10.e236535.zip.zip successfully finalized. Artifact ID 4067306440
+2025-09-21T23:14:49.4974521Z Artifact lcov-coverage-info-native-platformio-tests-2.7.10.e236535.zip has been successfully uploaded! Final size is 154 bytes. Artifact ID is 4067306440
+2025-09-21T23:14:49.4989561Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067306440
+2025-09-21T23:14:49.5255882Z Post job cleanup.
+2025-09-21T23:14:49.5385062Z Post job cleanup.
+2025-09-21T23:14:49.6479053Z [command]/usr/bin/git version
+2025-09-21T23:14:49.6529206Z git version 2.43.0
+2025-09-21T23:14:49.6581062Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/8b782010-ae59-43fa-bd0f-e07d434b7c95' before making global git config changes
+2025-09-21T23:14:49.6583473Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:14:49.6586853Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:14:49.6642104Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:14:49.6683205Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:14:49.7047626Z Entering 'meshtestic'
+2025-09-21T23:14:49.7104787Z Entering 'protobufs'
+2025-09-21T23:14:49.7183200Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:14:49.7211862Z http.https://github.com/.extraheader
+2025-09-21T23:14:49.7223385Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:14:49.7262271Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:14:49.7539940Z Entering 'meshtestic'
+2025-09-21T23:14:49.7581665Z http.https://github.com/.extraheader
+2025-09-21T23:14:49.7625136Z Entering 'protobufs'
+2025-09-21T23:14:49.7661877Z http.https://github.com/.extraheader
+2025-09-21T23:14:49.7904622Z Post job cleanup.
+2025-09-21T23:14:49.8965723Z [command]/usr/bin/git version
+2025-09-21T23:14:49.9008628Z git version 2.43.0
+2025-09-21T23:14:49.9055955Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/e146b5e3-104c-4bbb-a2f5-a199028e2b52' before making global git config changes
+2025-09-21T23:14:49.9058340Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:14:49.9060848Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:14:49.9115605Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:14:49.9151523Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:14:49.9445522Z Entering 'meshtestic'
+2025-09-21T23:14:49.9501124Z Entering 'protobufs'
+2025-09-21T23:14:49.9571051Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:14:49.9604919Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:14:49.9874071Z Entering 'meshtestic'
+2025-09-21T23:14:49.9929389Z Entering 'protobufs'
+2025-09-21T23:14:50.0175520Z Cleaning up orphan processes

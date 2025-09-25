@@ -1,0 +1,1517 @@
+﻿2025-09-21T23:11:33.5921494Z Current runner version: '2.327.1'
+2025-09-21T23:11:33.5929219Z Runner name: 'fifield-3038-12-e683'
+2025-09-21T23:11:33.5930396Z Runner group name: 'mesh-x86'
+2025-09-21T23:11:33.5931519Z Machine name: '44c980e11dc2'
+2025-09-21T23:11:33.5934919Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:11:33.5937461Z Metadata: read
+2025-09-21T23:11:33.5938147Z ##[endgroup]
+2025-09-21T23:11:33.5940909Z Secret source: Actions
+2025-09-21T23:11:33.5942091Z Prepare workflow directory
+2025-09-21T23:11:33.6565816Z Prepare all required actions
+2025-09-21T23:11:33.6613913Z Getting action download info
+2025-09-21T23:11:34.5754833Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:11:35.3810628Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:11:36.4346281Z Uses: meshtastic/firmware/.github/workflows/test_native.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:11:36.4354745Z Complete job name: test-native / Native Simulator Tests
+2025-09-21T23:11:36.5236167Z ##[group]Run actions/checkout@v5
+2025-09-21T23:11:36.5238045Z with:
+2025-09-21T23:11:36.5239065Z   ref: develop
+2025-09-21T23:11:36.5240422Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:36.5241944Z   submodules: recursive
+2025-09-21T23:11:36.5243471Z   token: ***
+2025-09-21T23:11:36.5244512Z   ssh-strict: true
+2025-09-21T23:11:36.5245605Z   ssh-user: git
+2025-09-21T23:11:36.5246711Z   persist-credentials: true
+2025-09-21T23:11:36.5247952Z   clean: true
+2025-09-21T23:11:36.5249071Z   sparse-checkout-cone-mode: true
+2025-09-21T23:11:36.5250474Z   fetch-depth: 1
+2025-09-21T23:11:36.5251569Z   fetch-tags: false
+2025-09-21T23:11:36.5252656Z   show-progress: true
+2025-09-21T23:11:36.5253818Z   lfs: false
+2025-09-21T23:11:36.5254853Z   set-safe-directory: true
+2025-09-21T23:11:36.5256458Z env:
+2025-09-21T23:11:36.5259318Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:36.5262514Z ##[endgroup]
+2025-09-21T23:11:36.6544310Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:36.6547859Z ##[group]Getting Git version info
+2025-09-21T23:11:36.6549845Z Working directory is '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:11:36.6552600Z [command]/usr/bin/git version
+2025-09-21T23:11:36.6553881Z git version 2.43.0
+2025-09-21T23:11:36.6557852Z ##[endgroup]
+2025-09-21T23:11:36.6565824Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/f39a88d4-4f58-465f-8b04-7724dd41bbd2' before making global git config changes
+2025-09-21T23:11:36.6569735Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:11:36.6572816Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:11:36.6610590Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-09-21T23:11:36.6636895Z https://github.com/meshtastic/firmware
+2025-09-21T23:11:36.6644868Z Deleting the contents of '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:11:36.8335207Z ##[group]Initializing the repository
+2025-09-21T23:11:36.8338268Z [command]/usr/bin/git init /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:11:36.8391532Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:11:36.8395775Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:11:36.8400290Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:11:36.8403392Z hint: 
+2025-09-21T23:11:36.8405621Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:11:36.8408298Z hint: 
+2025-09-21T23:11:36.8411011Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:11:36.8415250Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:11:36.8418582Z hint: 
+2025-09-21T23:11:36.8421200Z hint: 	git branch -m <name>
+2025-09-21T23:11:36.8424698Z Initialized empty Git repository in /home/ubuntu/runner/_work/firmware/firmware/.git/
+2025-09-21T23:11:36.8432494Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:36.8454436Z ##[endgroup]
+2025-09-21T23:11:36.8461051Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:11:36.8467027Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:11:36.8493992Z ##[endgroup]
+2025-09-21T23:11:36.8498210Z ##[group]Setting up auth
+2025-09-21T23:11:36.8502686Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:11:36.8545360Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:11:36.8863977Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:11:36.8901049Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:11:36.9160006Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:36.9196764Z ##[endgroup]
+2025-09-21T23:11:36.9200879Z ##[group]Fetching the repository
+2025-09-21T23:11:36.9212967Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:11:38.2701007Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:38.2702390Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:11:38.2736819Z ##[endgroup]
+2025-09-21T23:11:38.2737954Z ##[group]Determining the checkout info
+2025-09-21T23:11:38.2753340Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:11:38.2798540Z   origin/develop
+2025-09-21T23:11:38.2810038Z ##[endgroup]
+2025-09-21T23:11:38.2821324Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:11:38.2889978Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:11:38.2937886Z ##[group]Checking out the ref
+2025-09-21T23:11:38.2947279Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:11:38.4457558Z Switched to a new branch 'develop'
+2025-09-21T23:11:38.4458650Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:11:38.4465548Z ##[endgroup]
+2025-09-21T23:11:38.4466737Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:11:38.4471484Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:38.4517222Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:11:38.4561271Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:11:38.4615321Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:11:38.4675127Z ##[endgroup]
+2025-09-21T23:11:38.4677134Z ##[group]Fetching submodules
+2025-09-21T23:11:38.4686165Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:11:38.4994896Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:11:38.5273228Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:11:38.5278922Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:11:38.5312117Z Cloning into '/home/ubuntu/runner/_work/firmware/firmware/meshtestic'...
+2025-09-21T23:11:39.4425473Z Cloning into '/home/ubuntu/runner/_work/firmware/firmware/protobufs'...
+2025-09-21T23:11:40.3818034Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:11:40.4006643Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:11:40.4061540Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:11:40.4362914Z Entering 'meshtestic'
+2025-09-21T23:11:40.4425153Z Entering 'protobufs'
+2025-09-21T23:11:40.4491089Z ##[endgroup]
+2025-09-21T23:11:40.4492196Z ##[group]Persisting credentials for submodules
+2025-09-21T23:11:40.4505259Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:11:40.4772643Z Entering 'meshtestic'
+2025-09-21T23:11:40.4843556Z Entering 'protobufs'
+2025-09-21T23:11:40.4937803Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:11:40.5218772Z Entering 'meshtestic'
+2025-09-21T23:11:40.5281585Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:11:40.5302268Z Entering 'protobufs'
+2025-09-21T23:11:40.5368862Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:11:40.5442167Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:11:40.5755779Z Entering 'meshtestic'
+2025-09-21T23:11:40.5812419Z Entering 'protobufs'
+2025-09-21T23:11:40.5893671Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:11:40.6152849Z Entering 'meshtestic'
+2025-09-21T23:11:40.6203593Z Entering 'protobufs'
+2025-09-21T23:11:40.6256586Z ##[endgroup]
+2025-09-21T23:11:40.6295395Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:11:40.6319064Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:11:40.6595877Z Prepare all required actions
+2025-09-21T23:11:40.6596485Z Getting action download info
+2025-09-21T23:11:40.6655028Z ##[group]Run ./.github/actions/setup-native
+2025-09-21T23:11:40.6655384Z env:
+2025-09-21T23:11:40.6656060Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:40.6656840Z ##[endgroup]
+2025-09-21T23:11:40.6770197Z Prepare all required actions
+2025-09-21T23:11:40.6770571Z Getting action download info
+2025-09-21T23:11:40.9963016Z Download action repository 'actions/setup-python@v6' (SHA:e797f83bcb11b83ae66e0230d6156d7c80228e7c)
+2025-09-21T23:11:41.8791429Z ##[group]Run ./.github/actions/setup-base
+2025-09-21T23:11:41.8791845Z env:
+2025-09-21T23:11:41.8792693Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:41.8793704Z ##[endgroup]
+2025-09-21T23:11:41.8878394Z ##[group]Run actions/checkout@v5
+2025-09-21T23:11:41.8878708Z with:
+2025-09-21T23:11:41.8878931Z   submodules: recursive
+2025-09-21T23:11:41.8879197Z   ref: develop
+2025-09-21T23:11:41.8879474Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:41.8880111Z   token: ***
+2025-09-21T23:11:41.8880363Z   ssh-strict: true
+2025-09-21T23:11:41.8880601Z   ssh-user: git
+2025-09-21T23:11:41.8880875Z   persist-credentials: true
+2025-09-21T23:11:41.8881152Z   clean: true
+2025-09-21T23:11:41.8881422Z   sparse-checkout-cone-mode: true
+2025-09-21T23:11:41.8881725Z   fetch-depth: 1
+2025-09-21T23:11:41.8881983Z   fetch-tags: false
+2025-09-21T23:11:41.8882236Z   show-progress: true
+2025-09-21T23:11:41.8882503Z   lfs: false
+2025-09-21T23:11:41.8882751Z   set-safe-directory: true
+2025-09-21T23:11:41.8883346Z env:
+2025-09-21T23:11:41.8884042Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:41.8884807Z ##[endgroup]
+2025-09-21T23:11:41.9921498Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:41.9923018Z ##[group]Getting Git version info
+2025-09-21T23:11:41.9924068Z Working directory is '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:11:41.9957961Z [command]/usr/bin/git version
+2025-09-21T23:11:42.0009430Z git version 2.43.0
+2025-09-21T23:11:42.0036197Z ##[endgroup]
+2025-09-21T23:11:42.0053011Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/402ccb50-fa91-4f67-a51d-b3f2955a0ee4' before making global git config changes
+2025-09-21T23:11:42.0054956Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:11:42.0090910Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:11:42.0141513Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-09-21T23:11:42.0175988Z https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:11:42.0193800Z ##[group]Removing previously created refs, to avoid conflicts
+2025-09-21T23:11:42.0198865Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-09-21T23:11:42.0228288Z refs/heads/develop
+2025-09-21T23:11:42.0238276Z [command]/usr/bin/git checkout --detach
+2025-09-21T23:11:42.1979806Z HEAD is now at e236535 chore: Update RadioLib to version 7.3.0
+2025-09-21T23:11:42.2028750Z [command]/usr/bin/git branch --delete --force develop
+2025-09-21T23:11:42.2071269Z Deleted branch develop (was e236535).
+2025-09-21T23:11:42.2111636Z ##[endgroup]
+2025-09-21T23:11:42.2114237Z [command]/usr/bin/git submodule status
+2025-09-21T23:11:42.2579177Z  dcac7e5673005f4d8a2b1f0f6e06877b689d7519 meshtestic (heads/master)
+2025-09-21T23:11:42.2670372Z  46b81e822af1b8e408f437092337f129dee693e6 protobufs (heads/master)
+2025-09-21T23:11:42.2686041Z ##[group]Cleaning the repository
+2025-09-21T23:11:42.2695923Z [command]/usr/bin/git clean -ffdx
+2025-09-21T23:11:42.2812912Z [command]/usr/bin/git reset --hard HEAD
+2025-09-21T23:11:42.2937227Z HEAD is now at e236535 chore: Update RadioLib to version 7.3.0
+2025-09-21T23:11:42.2946020Z ##[endgroup]
+2025-09-21T23:11:42.2950423Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:11:42.2959134Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:11:42.2999130Z ##[endgroup]
+2025-09-21T23:11:42.3000158Z ##[group]Setting up auth
+2025-09-21T23:11:42.3017695Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:11:42.3067321Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:11:42.3381697Z Entering 'meshtestic'
+2025-09-21T23:11:42.3439323Z Entering 'protobufs'
+2025-09-21T23:11:42.3523722Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:11:42.3553332Z http.https://github.com/.extraheader
+2025-09-21T23:11:42.3564318Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:11:42.3605509Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:11:42.3922668Z Entering 'meshtestic'
+2025-09-21T23:11:42.3952455Z http.https://github.com/.extraheader
+2025-09-21T23:11:42.3995066Z Entering 'protobufs'
+2025-09-21T23:11:42.4027305Z http.https://github.com/.extraheader
+2025-09-21T23:11:42.4090560Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:42.4136105Z ##[endgroup]
+2025-09-21T23:11:42.4138075Z ##[group]Fetching the repository
+2025-09-21T23:11:42.4150092Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:11:43.3022823Z ##[endgroup]
+2025-09-21T23:11:43.3024112Z ##[group]Determining the checkout info
+2025-09-21T23:11:43.3038767Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:11:43.3095163Z   origin/develop
+2025-09-21T23:11:43.3104268Z ##[endgroup]
+2025-09-21T23:11:43.3113148Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:11:43.3199353Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:11:43.3248478Z ##[group]Checking out the ref
+2025-09-21T23:11:43.3256108Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:11:43.3377446Z Switched to a new branch 'develop'
+2025-09-21T23:11:43.3378711Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:11:43.3385973Z ##[endgroup]
+2025-09-21T23:11:43.3387305Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:11:43.3397187Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:43.3453189Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:11:43.3500074Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:11:43.3547473Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:11:43.3593565Z ##[endgroup]
+2025-09-21T23:11:43.3595169Z ##[group]Fetching submodules
+2025-09-21T23:11:43.3600906Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:11:43.3896729Z Synchronizing submodule url for 'meshtestic'
+2025-09-21T23:11:43.3935160Z Synchronizing submodule url for 'protobufs'
+2025-09-21T23:11:43.3974847Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:11:43.4326565Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:11:43.4450599Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:11:43.4498443Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:11:43.4756564Z Entering 'meshtestic'
+2025-09-21T23:11:43.4806378Z Entering 'protobufs'
+2025-09-21T23:11:43.4876139Z ##[endgroup]
+2025-09-21T23:11:43.4878196Z ##[group]Persisting credentials for submodules
+2025-09-21T23:11:43.4882807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:11:43.5191319Z Entering 'meshtestic'
+2025-09-21T23:11:43.5228008Z url.https://github.com/.insteadof
+2025-09-21T23:11:43.5228957Z url.https://github.com/.insteadof
+2025-09-21T23:11:43.5273450Z Entering 'protobufs'
+2025-09-21T23:11:43.5320601Z url.https://github.com/.insteadof
+2025-09-21T23:11:43.5321742Z url.https://github.com/.insteadof
+2025-09-21T23:11:43.5380594Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:11:43.5649410Z Entering 'meshtestic'
+2025-09-21T23:11:43.5699892Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:11:43.5723130Z Entering 'protobufs'
+2025-09-21T23:11:43.5776005Z file:/home/ubuntu/runner/_work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:11:43.5850304Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:11:43.6120632Z Entering 'meshtestic'
+2025-09-21T23:11:43.6178768Z Entering 'protobufs'
+2025-09-21T23:11:43.6244261Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:11:43.6506726Z Entering 'meshtestic'
+2025-09-21T23:11:43.6555342Z Entering 'protobufs'
+2025-09-21T23:11:43.6619612Z ##[endgroup]
+2025-09-21T23:11:43.6661980Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:11:43.6690046Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:11:43.6880377Z ##[group]Run sudo apt-get -y update --fix-missing
+2025-09-21T23:11:43.6881446Z [36;1msudo apt-get -y update --fix-missing[0m
+2025-09-21T23:11:43.6882838Z [36;1msudo apt-get install -y cppcheck libbluetooth-dev libgpiod-dev libyaml-cpp-dev lsb-release[0m
+2025-09-21T23:11:43.6911087Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:11:43.6912152Z env:
+2025-09-21T23:11:43.6913531Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:43.6914879Z ##[endgroup]
+2025-09-21T23:11:44.4731811Z Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+2025-09-21T23:11:44.5924500Z Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2025-09-21T23:11:44.7025834Z Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2025-09-21T23:11:45.7471962Z Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2025-09-21T23:11:46.0198090Z Fetched 378 kB in 2s (166 kB/s)
+2025-09-21T23:11:47.0752795Z Reading package lists...
+2025-09-21T23:11:48.1600870Z Reading package lists...
+2025-09-21T23:11:48.3600572Z Building dependency tree...
+2025-09-21T23:11:48.3604771Z Reading state information...
+2025-09-21T23:11:48.5764690Z cppcheck is already the newest version (2.13.0-2ubuntu3).
+2025-09-21T23:11:48.5766725Z libbluetooth-dev is already the newest version (5.72-0ubuntu5.4).
+2025-09-21T23:11:48.5768482Z libgpiod-dev is already the newest version (1.6.3-1.1build1).
+2025-09-21T23:11:48.5770758Z libyaml-cpp-dev is already the newest version (0.8.0+dfsg-6build1).
+2025-09-21T23:11:48.5773033Z lsb-release is already the newest version (12.0-2).
+2025-09-21T23:11:48.5774904Z 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+2025-09-21T23:11:48.5978124Z ##[group]Run actions/setup-python@v6
+2025-09-21T23:11:48.5979093Z with:
+2025-09-21T23:11:48.5979968Z   python-version: 3.x
+2025-09-21T23:11:48.5980706Z   cache: pip
+2025-09-21T23:11:48.5981600Z   cache-dependency-path: .github/actions/**
+**.ini
+
+2025-09-21T23:11:48.5982599Z   check-latest: false
+2025-09-21T23:11:48.5983723Z   token: ***
+2025-09-21T23:11:48.5984432Z   update-environment: true
+2025-09-21T23:11:48.5985335Z   allow-prereleases: false
+2025-09-21T23:11:48.5986202Z   freethreaded: false
+2025-09-21T23:11:48.5986900Z env:
+2025-09-21T23:11:48.5988715Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:48.5990786Z ##[endgroup]
+2025-09-21T23:11:48.7720781Z ##[group]Installed versions
+2025-09-21T23:11:48.7780494Z (node:1101) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-09-21T23:11:48.7782902Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-09-21T23:11:48.7784784Z Successfully set up CPython (3.13.7)
+2025-09-21T23:11:48.7786880Z ##[endgroup]
+2025-09-21T23:11:48.8239851Z [command]/home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/bin/pip cache dir
+2025-09-21T23:11:49.0460510Z /home/ubuntu/.cache/pip
+2025-09-21T23:11:49.8272236Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-fb5db71a65bba474cfd3851c4d11114c69613241cf2b7cbeb958811f315d7ca8
+2025-09-21T23:11:49.8549791Z (node:1101) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2025-09-21T23:11:51.7415685Z Received 0 of 75387094 (0.0%), 0.0 MBs/sec
+2025-09-21T23:11:52.7414654Z Received 0 of 75387094 (0.0%), 0.0 MBs/sec
+2025-09-21T23:11:53.7414623Z Received 29360128 of 75387094 (38.9%), 9.3 MBs/sec
+2025-09-21T23:11:54.7421215Z Received 66998486 of 75387094 (88.9%), 16.0 MBs/sec
+2025-09-21T23:11:55.7415642Z Received 71192790 of 75387094 (94.4%), 13.6 MBs/sec
+2025-09-21T23:11:56.7421908Z Received 71192790 of 75387094 (94.4%), 11.3 MBs/sec
+2025-09-21T23:11:57.6258676Z Received 75387094 of 75387094 (100.0%), 10.4 MBs/sec
+2025-09-21T23:11:57.6261767Z Cache Size: ~72 MB (75387094 B)
+2025-09-21T23:11:57.6336480Z [command]/usr/bin/tar -xf /home/ubuntu/runner/_work/_temp/1c2b8d04-f48f-49c7-9163-8d0e4e8851e7/cache.tzst -P -C /home/ubuntu/runner/_work/firmware/firmware --use-compress-program unzstd
+2025-09-21T23:11:57.8470538Z Cache restored successfully
+2025-09-21T23:11:57.8820995Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-fb5db71a65bba474cfd3851c4d11114c69613241cf2b7cbeb958811f315d7ca8
+2025-09-21T23:11:57.9285943Z ##[group]Run python -m pip install --upgrade pip
+2025-09-21T23:11:57.9287554Z [36;1mpython -m pip install --upgrade pip[0m
+2025-09-21T23:11:57.9289439Z [36;1mpip install -U --no-build-isolation --no-cache-dir "setuptools<72"[0m
+2025-09-21T23:11:57.9291673Z [36;1mpip install -U platformio adafruit-nrfutil --no-build-isolation[0m
+2025-09-21T23:11:57.9293621Z [36;1mpip install -U poetry --no-build-isolation[0m
+2025-09-21T23:11:57.9295163Z [36;1mpip install -U meshtastic --pre --no-build-isolation[0m
+2025-09-21T23:11:57.9337244Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:11:57.9338871Z env:
+2025-09-21T23:11:57.9341342Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:11:57.9344146Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:11:57.9346191Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:11:57.9348759Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:11:57.9350921Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:11:57.9352928Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:11:57.9354664Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:11:57.9356352Z ##[endgroup]
+2025-09-21T23:11:58.3909911Z Requirement already satisfied: pip in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (25.2)
+2025-09-21T23:11:59.0850119Z Requirement already satisfied: setuptools<72 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (71.1.0)
+2025-09-21T23:12:00.0217856Z Requirement already satisfied: platformio in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (6.1.18)
+2025-09-21T23:12:00.0971109Z Requirement already satisfied: adafruit-nrfutil in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (0.5.3.post16)
+2025-09-21T23:12:00.1066890Z Requirement already satisfied: bottle==0.13.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.13.4)
+2025-09-21T23:12:00.1073906Z Requirement already satisfied: click<8.1.8,>=8.0.4 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (8.1.7)
+2025-09-21T23:12:00.1078458Z Requirement already satisfied: colorama in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.4.6)
+2025-09-21T23:12:00.1084628Z Requirement already satisfied: marshmallow==3.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (3.26.1)
+2025-09-21T23:12:00.1091546Z Requirement already satisfied: pyelftools<1,>=0.27 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.32)
+2025-09-21T23:12:00.1097393Z Requirement already satisfied: pyserial==3.5.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (3.5)
+2025-09-21T23:12:00.1104075Z Requirement already satisfied: requests==2.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (2.32.5)
+2025-09-21T23:12:00.1110184Z Requirement already satisfied: semantic_version==2.10.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (2.10.0)
+2025-09-21T23:12:00.1116139Z Requirement already satisfied: tabulate==0.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.9.0)
+2025-09-21T23:12:00.1122056Z Requirement already satisfied: ajsonrpc==1.2.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (1.2.0)
+2025-09-21T23:12:00.1128891Z Requirement already satisfied: starlette<0.47,>=0.19 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.46.2)
+2025-09-21T23:12:00.1135592Z Requirement already satisfied: uvicorn<0.35,>=0.16 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (0.34.3)
+2025-09-21T23:12:00.1141917Z Requirement already satisfied: wsproto==1.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from platformio) (1.2.0)
+2025-09-21T23:12:00.1181414Z Requirement already satisfied: packaging>=17.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from marshmallow==3.*->platformio) (24.2)
+2025-09-21T23:12:00.1226088Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (3.4.3)
+2025-09-21T23:12:00.1232670Z Requirement already satisfied: idna<4,>=2.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (3.10)
+2025-09-21T23:12:00.1240039Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (2.5.0)
+2025-09-21T23:12:00.1245609Z Requirement already satisfied: certifi>=2017.4.17 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests==2.*->platformio) (2025.8.3)
+2025-09-21T23:12:00.1319166Z Requirement already satisfied: anyio<5,>=3.6.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from starlette<0.47,>=0.19->platformio) (4.10.0)
+2025-09-21T23:12:00.1345480Z Requirement already satisfied: sniffio>=1.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from anyio<5,>=3.6.2->starlette<0.47,>=0.19->platformio) (1.3.1)
+2025-09-21T23:12:00.1401421Z Requirement already satisfied: h11>=0.8 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from uvicorn<0.35,>=0.16->platformio) (0.16.0)
+2025-09-21T23:12:00.1463073Z Requirement already satisfied: ecdsa>=0.13 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from adafruit-nrfutil) (0.19.1)
+2025-09-21T23:12:00.1491097Z Requirement already satisfied: six>=1.9.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from ecdsa>=0.13->adafruit-nrfutil) (1.17.0)
+2025-09-21T23:12:00.7425315Z Requirement already satisfied: poetry in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (2.2.1)
+2025-09-21T23:12:00.8440221Z Requirement already satisfied: build<2.0.0,>=1.2.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.3.0)
+2025-09-21T23:12:00.8454261Z Requirement already satisfied: cachecontrol<0.15.0,>=0.14.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (0.14.3)
+2025-09-21T23:12:00.8464834Z Requirement already satisfied: cleo<3.0.0,>=2.1.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.1.0)
+2025-09-21T23:12:00.8473143Z Requirement already satisfied: dulwich<0.25.0,>=0.24.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.24.1)
+2025-09-21T23:12:00.8481650Z Requirement already satisfied: fastjsonschema<3.0.0,>=2.18.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.21.2)
+2025-09-21T23:12:00.8489791Z Requirement already satisfied: findpython<0.8.0,>=0.6.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.6.3)
+2025-09-21T23:12:00.8500301Z Requirement already satisfied: installer<0.8.0,>=0.7.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.7.0)
+2025-09-21T23:12:00.8508348Z Requirement already satisfied: keyring<26.0.0,>=25.1.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (25.6.0)
+2025-09-21T23:12:00.8515613Z Requirement already satisfied: packaging>=24.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (24.2)
+2025-09-21T23:12:00.8528286Z Requirement already satisfied: pbs-installer<2026.0.0,>=2025.1.6 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (2025.9.2)
+2025-09-21T23:12:00.8539384Z Requirement already satisfied: pkginfo<2.0,>=1.12 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.12.1.2)
+2025-09-21T23:12:00.8547709Z Requirement already satisfied: platformdirs<5,>=3.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (4.4.0)
+2025-09-21T23:12:00.8554654Z Requirement already satisfied: poetry-core==2.2.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.2.1)
+2025-09-21T23:12:00.8563794Z Requirement already satisfied: pyproject-hooks<2.0.0,>=1.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.2.0)
+2025-09-21T23:12:00.8571202Z Requirement already satisfied: requests<3.0,>=2.26 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2.32.5)
+2025-09-21T23:12:00.8579468Z Requirement already satisfied: requests-toolbelt<2.0.0,>=1.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.0.0)
+2025-09-21T23:12:00.8589478Z Requirement already satisfied: shellingham<2.0,>=1.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (1.5.4)
+2025-09-21T23:12:00.8599912Z Requirement already satisfied: tomlkit<1.0.0,>=0.11.4 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (0.13.3)
+2025-09-21T23:12:00.8607532Z Requirement already satisfied: trove-classifiers>=2022.5.19 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (2025.8.26.11)
+2025-09-21T23:12:00.8614712Z Requirement already satisfied: virtualenv>=20.26.6 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from poetry) (20.32.0)
+2025-09-21T23:12:00.8670980Z Requirement already satisfied: msgpack<2.0.0,>=0.5.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol<0.15.0,>=0.14.0->cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (1.1.1)
+2025-09-21T23:12:00.8706866Z Requirement already satisfied: filelock>=3.8.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry) (3.19.1)
+2025-09-21T23:12:00.8725937Z Requirement already satisfied: crashtest<0.5.0,>=0.4.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cleo<3.0.0,>=2.1.0->poetry) (0.4.1)
+2025-09-21T23:12:00.8734093Z Requirement already satisfied: rapidfuzz<4.0.0,>=3.0.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cleo<3.0.0,>=2.1.0->poetry) (3.14.0)
+2025-09-21T23:12:00.8756413Z Requirement already satisfied: urllib3>=1.25 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from dulwich<0.25.0,>=0.24.0->poetry) (2.5.0)
+2025-09-21T23:12:00.8829450Z Requirement already satisfied: SecretStorage>=3.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (3.3.3)
+2025-09-21T23:12:00.8838541Z Requirement already satisfied: jeepney>=0.4.2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (0.9.0)
+2025-09-21T23:12:00.8845929Z Requirement already satisfied: jaraco.classes in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (3.4.0)
+2025-09-21T23:12:00.8852836Z Requirement already satisfied: jaraco.functools in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (4.3.0)
+2025-09-21T23:12:00.8857885Z Requirement already satisfied: jaraco.context in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from keyring<26.0.0,>=25.1.0->poetry) (6.0.1)
+2025-09-21T23:12:00.8919158Z Requirement already satisfied: httpx<1,>=0.27.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.28.1)
+2025-09-21T23:12:00.8927019Z Requirement already satisfied: zstandard>=0.21.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.24.0)
+2025-09-21T23:12:00.8943220Z Requirement already satisfied: anyio in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (4.10.0)
+2025-09-21T23:12:00.8947645Z Requirement already satisfied: certifi in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (2025.8.3)
+2025-09-21T23:12:00.8953885Z Requirement already satisfied: httpcore==1.* in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (1.0.9)
+2025-09-21T23:12:00.8958672Z Requirement already satisfied: idna in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (3.10)
+2025-09-21T23:12:00.8992221Z Requirement already satisfied: h11>=0.16 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from httpcore==1.*->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (0.16.0)
+2025-09-21T23:12:00.9079055Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0,>=2.26->poetry) (3.4.3)
+2025-09-21T23:12:00.9273930Z Requirement already satisfied: cryptography>=2.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (45.0.7)
+2025-09-21T23:12:00.9303145Z Requirement already satisfied: cffi>=1.14 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cryptography>=2.0->SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (1.17.1)
+2025-09-21T23:12:00.9354613Z Requirement already satisfied: pycparser in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from cffi>=1.14->cryptography>=2.0->SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry) (2.22)
+2025-09-21T23:12:00.9385002Z Requirement already satisfied: distlib<1,>=0.3.7 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from virtualenv>=20.26.6->poetry) (0.4.0)
+2025-09-21T23:12:00.9475462Z Requirement already satisfied: sniffio>=1.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from anyio->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry) (1.3.1)
+2025-09-21T23:12:00.9508686Z Requirement already satisfied: more-itertools in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from jaraco.classes->keyring<26.0.0,>=25.1.0->poetry) (10.8.0)
+2025-09-21T23:12:01.5417633Z Requirement already satisfied: meshtastic in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (2.7.3)
+2025-09-21T23:12:01.6680276Z Requirement already satisfied: bleak<0.23.0,>=0.22.3 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (0.22.3)
+2025-09-21T23:12:01.6694189Z Requirement already satisfied: packaging<25.0,>=24.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (24.2)
+2025-09-21T23:12:01.6707709Z Requirement already satisfied: protobuf>=4.21.12 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (6.32.0)
+2025-09-21T23:12:01.6716081Z Requirement already satisfied: pypubsub<5.0.0,>=4.0.3 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (4.0.3)
+2025-09-21T23:12:01.6726247Z Requirement already satisfied: pyserial<4.0,>=3.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (3.5)
+2025-09-21T23:12:01.6736633Z Requirement already satisfied: pyyaml<7.0.0,>=6.0.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (6.0.2)
+2025-09-21T23:12:01.6746718Z Requirement already satisfied: requests<3.0.0,>=2.31.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (2.32.5)
+2025-09-21T23:12:01.6753313Z Requirement already satisfied: tabulate<0.10.0,>=0.9.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from meshtastic) (0.9.0)
+2025-09-21T23:12:01.6779257Z Requirement already satisfied: dbus-fast<3,>=1.83.0 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from bleak<0.23.0,>=0.22.3->meshtastic) (2.44.3)
+2025-09-21T23:12:01.6857233Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (3.4.3)
+2025-09-21T23:12:01.6864003Z Requirement already satisfied: idna<4,>=2.5 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (3.10)
+2025-09-21T23:12:01.6871138Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (2.5.0)
+2025-09-21T23:12:01.6877784Z Requirement already satisfied: certifi>=2017.4.17 in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (from requests<3.0.0,>=2.31.0->meshtastic) (2025.8.3)
+2025-09-21T23:12:01.8676094Z ##[group]Run pio upgrade
+2025-09-21T23:12:01.8677316Z [36;1mpio upgrade[0m
+2025-09-21T23:12:01.8713146Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:12:01.8714776Z env:
+2025-09-21T23:12:01.8717145Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:01.8720133Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:01.8722057Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:01.8724661Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:01.8726644Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:01.8728426Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:01.8730517Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:01.8732275Z ##[endgroup]
+2025-09-21T23:12:03.1419463Z You're up-to-date!
+2025-09-21T23:12:03.1421403Z PlatformIO 6.1.18 is currently the newest version available.
+2025-09-21T23:12:04.2130405Z ##[group]Run sudo apt-get install -y libbluetooth-dev libgpiod-dev libyaml-cpp-dev openssl libssl-dev libulfius-dev liborcania-dev libusb-1.0-0-dev libi2c-dev libuv1-dev
+2025-09-21T23:12:04.2133838Z [36;1msudo apt-get install -y libbluetooth-dev libgpiod-dev libyaml-cpp-dev openssl libssl-dev libulfius-dev liborcania-dev libusb-1.0-0-dev libi2c-dev libuv1-dev[0m
+2025-09-21T23:12:04.2169764Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:12:04.2170735Z env:
+2025-09-21T23:12:04.2172381Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:04.2174550Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:04.2175988Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:04.2177397Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:04.2178656Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:04.2180080Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:04.2181396Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:04.2182421Z ##[endgroup]
+2025-09-21T23:12:05.2866787Z Reading package lists...
+2025-09-21T23:12:05.4734015Z Building dependency tree...
+2025-09-21T23:12:05.4738744Z Reading state information...
+2025-09-21T23:12:05.6830409Z libbluetooth-dev is already the newest version (5.72-0ubuntu5.4).
+2025-09-21T23:12:05.6831946Z libgpiod-dev is already the newest version (1.6.3-1.1build1).
+2025-09-21T23:12:05.6833305Z libyaml-cpp-dev is already the newest version (0.8.0+dfsg-6build1).
+2025-09-21T23:12:05.6834611Z openssl is already the newest version (3.0.13-0ubuntu3.5).
+2025-09-21T23:12:05.6835882Z libssl-dev is already the newest version (3.0.13-0ubuntu3.5).
+2025-09-21T23:12:05.6837195Z libulfius-dev is already the newest version (2.7.15-2.2build1).
+2025-09-21T23:12:05.6838518Z liborcania-dev is already the newest version (2.3.3-1).
+2025-09-21T23:12:05.6839843Z libusb-1.0-0-dev is already the newest version (2:1.0.27-1).
+2025-09-21T23:12:05.6841154Z libi2c-dev is already the newest version (4.3-4build2).
+2025-09-21T23:12:05.6842461Z libuv1-dev is already the newest version (1.48.0-1.1build1).
+2025-09-21T23:12:05.6843786Z 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+2025-09-21T23:12:05.6943372Z ##[group]Run pip install -U dotmap
+2025-09-21T23:12:05.6944390Z [36;1mpip install -U dotmap[0m
+2025-09-21T23:12:05.6981572Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:12:05.6982432Z env:
+2025-09-21T23:12:05.6984256Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:05.6986543Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.6988171Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:05.6989927Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.6991416Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.6992817Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:05.6994326Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:05.6996298Z ##[endgroup]
+2025-09-21T23:12:06.1573364Z Requirement already satisfied: dotmap in /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/python3.13/site-packages (1.3.30)
+2025-09-21T23:12:06.6211763Z ##[group]Run platformio run -e coverage
+2025-09-21T23:12:06.6213247Z [36;1mplatformio run -e coverage[0m
+2025-09-21T23:12:06.6247891Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:12:06.6249329Z env:
+2025-09-21T23:12:06.6251761Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:12:06.6254357Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:06.6256529Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:12:06.6258635Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:06.6260673Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:06.6262442Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:12:06.6265114Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:12:06.6266608Z ##[endgroup]
+2025-09-21T23:12:07.5338946Z Processing coverage (board: cross_platform; platform: 
+2025-09-21T23:12:07.5341390Z https://github.com/meshtastic/platform-native/archive/c490bcd019e0658404088a61b96e653c9da22c45.zip; framework: arduino)
+2025-09-21T23:12:07.5343894Z --------------------------------------------------------------------------------
+2025-09-21T23:12:07.5552336Z Library Manager: Installing https://github.com/meshtastic/esp8266-oled-ssd1306/archive/0cbc26b1f8f61957af0475f486b362eafe7cc4e2.zip
+2025-09-21T23:12:07.5710329Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:07.5848475Z Library Manager: ESP8266 and ESP32 OLED driver for SSD1306 displays@4.4.1 has been installed!
+2025-09-21T23:12:07.5858935Z Library Manager: Installing https://github.com/meshtastic/OneButton/archive/fa352d668c53f290cfa480a5f79ad422cd828c70.zip
+2025-09-21T23:12:07.5925421Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:07.5999498Z Library Manager: OneButton@2.6.1 has been installed!
+2025-09-21T23:12:07.6008758Z Library Manager: Installing https://github.com/meshtastic/arduino-fsm/archive/7db3702bf0cfe97b783d6c72595e3f38e0b19159.zip
+2025-09-21T23:12:07.6043309Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:07.6085202Z Library Manager: arduino-fsm@2.2.0 has been installed!
+2025-09-21T23:12:07.6095659Z Library Manager: Installing https://github.com/meshtastic/TinyGPSPlus/archive/71a82db35f3b973440044c476d4bcdc673b104f4.zip
+2025-09-21T23:12:07.6152305Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:07.6209981Z Library Manager: TinyGPSPlus@1.0.3 has been installed!
+2025-09-21T23:12:07.6221199Z Library Manager: Installing https://github.com/meshtastic/ArduinoThread/archive/7c3ee9e1951551b949763b1f5280f8db1fa4068d.zip
+2025-09-21T23:12:07.6275176Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:07.6337053Z Library Manager: ArduinoThread@0.0.0+20250921231207 has been installed!
+2025-09-21T23:12:07.6348555Z Library Manager: Installing nanopb/Nanopb @ 0.4.91
+2025-09-21T23:12:07.6688218Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:07.6840609Z Library Manager: Nanopb@0.4.91 has been installed!
+2025-09-21T23:12:07.6853499Z Library Manager: Installing erriez/ErriezCRC32 @ 1.0.1
+2025-09-21T23:12:08.1485434Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:08.1546922Z Library Manager: ErriezCRC32@1.0.1 has been installed!
+2025-09-21T23:12:08.1560930Z Library Manager: Installing thingsboard/TBPubSubClient @ 2.12.1
+2025-09-21T23:12:08.6455482Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:08.6510560Z Library Manager: TBPubSubClient@2.12.1 has been installed!
+2025-09-21T23:12:08.6525286Z Library Manager: Installing arduino-libraries/NTPClient @ 3.2.1
+2025-09-21T23:12:09.1452108Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:09.1501318Z Library Manager: NTPClient@3.2.1 has been installed!
+2025-09-21T23:12:09.1517692Z Library Manager: Installing arcao/Syslog @ 2.0.0
+2025-09-21T23:12:09.6455721Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:09.6509457Z Library Manager: Syslog@2.0.0 has been installed!
+2025-09-21T23:12:09.6526455Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:12:10.4032551Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:10.4972224Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:12:10.4990576Z Library Manager: Installing adafruit/Adafruit BusIO @ 1.17.3
+2025-09-21T23:12:10.6510125Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:10.6591766Z Library Manager: Adafruit BusIO@1.17.3 has been installed!
+2025-09-21T23:12:10.6610887Z Library Manager: Installing adafruit/Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:12:11.1431363Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:12:11.1459755Z Library Manager: Adafruit Unified Sensor@1.1.15 has been installed!
+2025-09-21T23:12:11.1479362Z Library Manager: Installing adafruit/Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:12:11.6448445Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:11.6491949Z Library Manager: Adafruit BMP280 Library@2.6.8 has been installed!
+2025-09-21T23:12:11.6494832Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:11.7209321Z Library Manager: Installing adafruit/Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:12:12.1432471Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80%
+2025-09-21T23:12:12.1465872Z Library Manager: Adafruit BMP085 Library@1.2.4 has been installed!
+2025-09-21T23:12:12.1468359Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:12.1489776Z Library Manager: Installing adafruit/Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:12:12.6450073Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:12.6495516Z Library Manager: Adafruit BME280 Library@2.3.0 has been installed!
+2025-09-21T23:12:12.6498097Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:12.6520031Z Library Manager: Installing adafruit/Adafruit DPS310 @ 1.1.5
+2025-09-21T23:12:13.1459147Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:13.1505796Z Library Manager: Adafruit DPS310@1.1.5 has been installed!
+2025-09-21T23:12:13.1509589Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:13.1535757Z Library Manager: Installing adafruit/Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:12:13.6466587Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:13.6520639Z Library Manager: Adafruit MCP9808 Library@2.0.2 has been installed!
+2025-09-21T23:12:13.6524636Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:13.6552138Z Library Manager: Installing Adafruit SH110X
+2025-09-21T23:12:14.1508403Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:14.1587400Z Library Manager: Adafruit SH110X@2.1.14 has been installed!
+2025-09-21T23:12:14.1592149Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:14.1624745Z Library Manager: Installing Adafruit GFX Library
+2025-09-21T23:12:14.7036501Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:14.7207696Z Library Manager: Adafruit GFX Library@1.12.2 has been installed!
+2025-09-21T23:12:14.7210758Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:14.7236413Z Library Manager: Installing adafruit/Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:12:15.1446393Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:15.1491187Z Library Manager: Adafruit INA260 Library@1.5.3 has been installed!
+2025-09-21T23:12:15.1493935Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:15.1517930Z Library Manager: Installing Adafruit NeoPixel
+2025-09-21T23:12:15.6565425Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:15.6676517Z Library Manager: Adafruit NeoPixel@1.15.1 has been installed!
+2025-09-21T23:12:15.6705624Z Library Manager: Installing adafruit/Adafruit INA219 @ 1.2.3
+2025-09-21T23:12:16.1458442Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:16.1506466Z Library Manager: Adafruit INA219@1.2.3 has been installed!
+2025-09-21T23:12:16.1510107Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:16.1540580Z Library Manager: Installing Adafruit SSD1306
+2025-09-21T23:12:16.6507328Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:16.6589423Z Library Manager: Adafruit SSD1306@2.5.15 has been installed!
+2025-09-21T23:12:16.6593612Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:16.6632354Z Library Manager: Installing adafruit/Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:12:17.1514013Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:17.1595137Z Library Manager: Adafruit PM25 AQI Sensor@2.0.0 has been installed!
+2025-09-21T23:12:17.1599421Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:17.1642788Z Library Manager: Installing adafruit/Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:12:17.6510104Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:17.6581755Z Library Manager: Adafruit MPU6050@2.2.6 has been installed!
+2025-09-21T23:12:17.6585671Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:17.6628117Z Library Manager: Installing adafruit/Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:12:18.1541858Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:18.1631551Z Library Manager: Adafruit LIS3DH@1.3.0 has been installed!
+2025-09-21T23:12:18.1637928Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:18.1703511Z Library Manager: Installing adafruit/Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:12:18.6534534Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:18.6623383Z Library Manager: Adafruit AHTX0@2.0.5 has been installed!
+2025-09-21T23:12:18.6629739Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:18.6703407Z Library Manager: Installing adafruit/Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:12:19.1688873Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:19.1861310Z Library Manager: Adafruit LSM6DS@4.7.4 has been installed!
+2025-09-21T23:12:19.1867277Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:19.1928131Z Library Manager: Installing adafruit/Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:12:19.6494360Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:19.6555413Z Library Manager: Adafruit TSL2591 Library@1.4.5 has been installed!
+2025-09-21T23:12:19.6560338Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:19.6617054Z Library Manager: Installing emotibit/EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:12:20.1533393Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:20.1626648Z Library Manager: EmotiBit MLX90632@1.0.8 has been installed!
+2025-09-21T23:12:20.1695080Z Library Manager: Installing adafruit/Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:12:20.6510032Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:20.6584417Z Library Manager: Adafruit MLX90614 Library@2.1.5 has been installed!
+2025-09-21T23:12:20.6590187Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:20.6665881Z Library Manager: Installing git+https://github.com/sgtwilko/INA3221#bb03d7e9bfcc74fc798838a54f4f99738f29fc6a
+2025-09-21T23:12:20.6716671Z git version 2.43.0
+2025-09-21T23:12:20.6738831Z Cloning into '/home/ubuntu/.platformio/.cache/tmp/pkg-installing-wzapk19q'...
+2025-09-21T23:12:21.5653649Z HEAD is now at bb03d7e Fix higher currents reporting negative/wrong
+2025-09-21T23:12:21.6127576Z Library Manager: INA3221@1.0.1+sha.bb03d7e has been installed!
+2025-09-21T23:12:21.6181124Z Library Manager: Installing mprograms/QMC5883LCompass @ 1.2.3
+2025-09-21T23:12:21.6313178Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:21.6388929Z Library Manager: QMC5883LCompass@1.2.3 has been installed!
+2025-09-21T23:12:21.6448386Z Library Manager: Installing dfrobot/DFRobot_RTU @ 1.0.3
+2025-09-21T23:12:22.1318580Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:22.1387144Z Library Manager: DFRobot_RTU@1.0.3 has been installed!
+2025-09-21T23:12:22.1450043Z Library Manager: Installing https://github.com/DFRobot/DFRobot_RainfallSensor/archive/38fea5e02b40a5430be6dab39a99a6f6347d667e.zip
+2025-09-21T23:12:22.1514679Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:22.1581087Z Library Manager: DFRobot_RainfallSensor@1.0.0 has been installed!
+2025-09-21T23:12:22.1585274Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:22.1690907Z Library Manager: Installing robtillaart/INA226 @ 0.6.4
+2025-09-21T23:12:22.6373442Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:22.6485426Z Library Manager: INA226@0.6.4 has been installed!
+2025-09-21T23:12:22.6544100Z Library Manager: Installing sparkfun/SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:12:23.1354129Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:23.1445234Z Library Manager: SparkFun MAX3010x Pulse and Proximity Sensor Library@1.1.2 has been installed!
+2025-09-21T23:12:23.1504407Z Library Manager: Installing sparkfun/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:12:23.6505330Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:23.6653808Z Library Manager: SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library@1.3.2 has been installed!
+2025-09-21T23:12:23.6718319Z Library Manager: Installing adafruit/Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:12:24.1318929Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:24.1366675Z Library Manager: Adafruit LTR390 Library@1.1.2 has been installed!
+2025-09-21T23:12:24.1370871Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:24.1430109Z Library Manager: Installing adafruit/Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:12:24.6311692Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:24.6370387Z Library Manager: Adafruit PCT2075@1.0.5 has been installed!
+2025-09-21T23:12:24.6374706Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:24.6440734Z Library Manager: Installing dfrobot/DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:12:25.1387289Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:25.1483912Z Library Manager: DFRobot_BMM150@1.0.0 has been installed!
+2025-09-21T23:12:25.1568774Z Library Manager: Installing adafruit/Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:12:25.6306944Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80%
+2025-09-21T23:12:25.6359360Z Library Manager: Adafruit TSL2561@1.1.2 has been installed!
+2025-09-21T23:12:25.6364496Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:25.6440790Z Library Manager: Installing rweather/Crypto @ 0.4.0
+2025-09-21T23:12:26.1940074Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:26.2187367Z Library Manager: Crypto@0.4.0 has been installed!
+2025-09-21T23:12:26.2241067Z Library Manager: Installing lovyan03/LovyanGFX @ ^1.2.0
+2025-09-21T23:12:28.3791178Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:28.6001944Z Library Manager: LovyanGFX@1.2.7 has been installed!
+2025-09-21T23:12:28.6060385Z Library Manager: Installing https://github.com/pine64/libch341-spi-userspace/archive/af9bc27c9c30fa90772279925b7c5913dff789b4.zip
+2025-09-21T23:12:28.6097185Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:28.6136825Z Library Manager: Pine libch341-spi Userspace library@0.0.1 has been installed!
+2025-09-21T23:12:28.6190472Z Library Manager: Installing adafruit/Adafruit seesaw Library @ 1.7.9
+2025-09-21T23:12:31.5896058Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:31.6175449Z Library Manager: Adafruit seesaw Library@1.7.9 has been installed!
+2025-09-21T23:12:31.6178934Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:31.6231277Z Library Manager: Installing Adafruit ST7735 and ST7789 Library
+2025-09-21T23:12:33.4752280Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:33.4958401Z Library Manager: Adafruit ST7735 and ST7789 Library@1.11.0 has been installed!
+2025-09-21T23:12:33.4963212Z Library Manager: Resolving dependencies...
+2025-09-21T23:12:33.5120102Z Library Manager: Installing https://github.com/RAKWireless/RAK12034-BMX160/archive/dcead07ffa267d3c906e9ca4a1330ab989e957e2.zip
+2025-09-21T23:12:33.5345299Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:33.5436202Z Library Manager: RAKwireless RAK12034@1.0.0 has been installed!
+2025-09-21T23:12:33.5492233Z Library Manager: Installing melopero/Melopero RV3028 @ ^1.1.0
+2025-09-21T23:12:35.4506676Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:12:35.4601698Z Library Manager: Melopero RV3028@1.2.0 has been installed!
+2025-09-21T23:12:36.2705315Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:12:36.2891273Z CONFIGURATION: https://docs.platformio.org/page/boards/native/cross_platform.html
+2025-09-21T23:12:36.2892599Z PLATFORM: Native (1.2.1) > Portduino
+2025-09-21T23:12:36.2893493Z HARDWARE: 95.37MB RAM, 95.37MB Flash
+2025-09-21T23:12:36.2894222Z PACKAGES: 
+2025-09-21T23:12:36.2895575Z  - framework-portduino @ 0.0.1+sha.8d70ba1
+2025-09-21T23:12:36.3150385Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:12:36.3151175Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:12:36.3947667Z [nanopb] No generation needed.
+2025-09-21T23:12:36.6705106Z Found 51 compatible libraries
+2025-09-21T23:12:36.6705889Z Scanning dependencies...
+2025-09-21T23:12:47.2865059Z Dependency Graph
+2025-09-21T23:12:47.2866011Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:12:47.2867396Z |-- OneButton @ 2.6.1
+2025-09-21T23:12:47.2868584Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:12:47.2870136Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:12:47.2871784Z |-- ArduinoThread @ 0.0.0+20250921231207
+2025-09-21T23:12:47.2873269Z |-- Nanopb @ 0.4.91
+2025-09-21T23:12:47.2874659Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:12:47.2876063Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:12:47.2877470Z |-- NTPClient @ 3.2.1
+2025-09-21T23:12:47.2878811Z |-- Syslog @ 2.0.0
+2025-09-21T23:12:47.2880519Z |-- RadioLib @ 7.3.0
+2025-09-21T23:12:47.2881799Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:12:47.2883262Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:12:47.2884607Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:12:47.2886141Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:12:47.2887404Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:12:47.2888814Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:12:47.2890366Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:12:47.2891972Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:12:47.2893115Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:12:47.2894566Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:12:47.2895978Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:12:47.2897265Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:12:47.2898641Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:12:47.2900254Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:12:47.2901588Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:12:47.2903056Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:12:47.2904409Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:12:47.2905628Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:12:47.2907083Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:12:47.2908400Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:12:47.2909999Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:12:47.2911331Z |-- INA226 @ 0.6.4
+2025-09-21T23:12:47.2913015Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:12:47.2914438Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:12:47.2915537Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:12:47.2917058Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:12:47.2918475Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:12:47.2919818Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:12:47.2921263Z |-- Crypto @ 0.4.0
+2025-09-21T23:12:47.2922662Z |-- LovyanGFX @ 1.2.7
+2025-09-21T23:12:47.2924732Z |-- Pine libch341-spi Userspace library @ 0.0.1
+2025-09-21T23:12:47.2925976Z |-- Adafruit seesaw Library @ 1.7.9
+2025-09-21T23:12:47.2926833Z |-- RAKwireless RAK12034 @ 1.0.0
+2025-09-21T23:12:47.2928305Z |-- Melopero RV3028 @ 1.2.0
+2025-09-21T23:12:47.2928956Z |-- SPI
+2025-09-21T23:12:47.2929576Z |-- WiFi @ 1.2.7
+2025-09-21T23:12:47.2930385Z |-- Wire
+2025-09-21T23:12:47.5496257Z Building in release mode
+2025-09-21T23:12:47.5722456Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on coverage
+2025-09-21T23:12:47.5746876Z Using flags:
+2025-09-21T23:12:47.5747517Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:12:47.5748272Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:12:47.5748936Z -DAPP_ENV=coverage
+2025-09-21T23:12:47.5749797Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:12:47.5750735Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:12:47.5752150Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:12:47.5754158Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:12:47.7068449Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/Fonts/IPA/lgfx_font_japan.c.o
+2025-09-21T23:12:47.7594194Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/Fonts/efont/lgfx_efont_cn.c.o
+2025-09-21T23:12:47.8274759Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/Fonts/efont/lgfx_efont_ja.c.o
+2025-09-21T23:12:47.8794993Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/Fonts/efont/lgfx_efont_kr.c.o
+2025-09-21T23:12:47.9673072Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/Fonts/efont/lgfx_efont_tw.c.o
+2025-09-21T23:12:47.9763131Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/utility/lgfx_miniz.c.o
+2025-09-21T23:12:47.9852659Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/utility/lgfx_pngle.c.o
+2025-09-21T23:12:47.9912209Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/utility/lgfx_qoi.c.o
+2025-09-21T23:12:47.9984996Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/utility/lgfx_qrcode.c.o
+2025-09-21T23:12:48.0045934Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/utility/lgfx_tjpgd.c.o
+2025-09-21T23:12:48.0283325Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/LGFXBase.cpp.o
+2025-09-21T23:12:48.0352949Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/LGFX_Button.cpp.o
+2025-09-21T23:12:48.0413720Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/LGFX_Sprite.cpp.o
+2025-09-21T23:12:48.0699479Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/lgfx_fonts.cpp.o
+2025-09-21T23:12:48.0758455Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/misc/DividedFrameBuffer.cpp.o
+2025-09-21T23:12:48.0806504Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/misc/SpriteBuffer.cpp.o
+2025-09-21T23:12:48.0861458Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/misc/common_function.cpp.o
+2025-09-21T23:12:48.0918159Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/misc/pixelcopy.cpp.o
+2025-09-21T23:12:48.1035228Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_Device.cpp.o
+2025-09-21T23:12:48.1132469Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_EPDiy.cpp.o
+2025-09-21T23:12:48.1191133Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_FlexibleFrameBuffer.cpp.o
+2025-09-21T23:12:48.1247055Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_FrameBufferBase.cpp.o
+2025-09-21T23:12:48.1303784Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_GDEW0154M09.cpp.o
+2025-09-21T23:12:48.1355357Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_HUB75.cpp.o
+2025-09-21T23:12:48.1405831Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_HasBuffer.cpp.o
+2025-09-21T23:12:48.1472947Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_ILI9225.cpp.o
+2025-09-21T23:12:48.1527094Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_IT8951.cpp.o
+2025-09-21T23:12:48.1587742Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_LCD.cpp.o
+2025-09-21T23:12:48.1783658Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_M5HDMI.cpp.o
+2025-09-21T23:12:48.1855381Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_M5UnitGLASS.cpp.o
+2025-09-21T23:12:48.1944251Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_M5UnitLCD.cpp.o
+2025-09-21T23:12:48.2023188Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_NT35510.cpp.o
+2025-09-21T23:12:48.2132128Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_RA8875.cpp.o
+2025-09-21T23:12:48.2260916Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_RM68120.cpp.o
+2025-09-21T23:12:48.2352870Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_SSD1306.cpp.o
+2025-09-21T23:12:48.2449799Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_SSD1327.cpp.o
+2025-09-21T23:12:48.2563400Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_SSD1331.cpp.o
+2025-09-21T23:12:48.2658536Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_SSD1351.cpp.o
+2025-09-21T23:12:48.2745382Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/panel/Panel_SSD1963.cpp.o
+2025-09-21T23:12:48.2838286Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/arduino_default/Bus_SPI.cpp.o
+2025-09-21T23:12:48.2931234Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/arduino_default/Bus_Stream.cpp.o
+2025-09-21T23:12:48.3017546Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/arduino_default/common.cpp.o
+2025-09-21T23:12:48.3121872Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32/Bus_HUB75.cpp.o
+2025-09-21T23:12:48.3213035Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32/Bus_I2C.cpp.o
+2025-09-21T23:12:48.3304674Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32/Bus_Parallel8.cpp.o
+2025-09-21T23:12:48.3408542Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32/Bus_SPI.cpp.o
+2025-09-21T23:12:48.3493501Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32/Light_PWM.cpp.o
+2025-09-21T23:12:48.3642523Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32/Panel_CVBS.cpp.o
+2025-09-21T23:12:48.3790608Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32/common.cpp.o
+2025-09-21T23:12:48.3929318Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32c3/Bus_Parallel8.cpp.o
+2025-09-21T23:12:48.4049018Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32s2/Bus_Parallel16.cpp.o
+2025-09-21T23:12:48.4159935Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32s2/Bus_Parallel8.cpp.o
+2025-09-21T23:12:48.4259343Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32s3/Bus_Parallel16.cpp.o
+2025-09-21T23:12:48.4365329Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32s3/Bus_Parallel8.cpp.o
+2025-09-21T23:12:48.4519342Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32s3/Bus_RGB.cpp.o
+2025-09-21T23:12:48.4663324Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp32s3/Panel_RGB.cpp.o
+2025-09-21T23:12:48.4774367Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp8266/Bus_I2C.cpp.o
+2025-09-21T23:12:48.4908212Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp8266/Bus_SPI.cpp.o
+2025-09-21T23:12:48.5000796Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/esp8266/common.cpp.o
+2025-09-21T23:12:48.5213472Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/framebuffer/Panel_fb.cpp.o
+2025-09-21T23:12:48.5329890Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/framebuffer/common.cpp.o
+2025-09-21T23:12:48.5474110Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/opencv/Panel_OpenCV.cpp.o
+2025-09-21T23:12:48.5709086Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/opencv/common.cpp.o
+2025-09-21T23:12:48.5875689Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/rp2040/Bus_I2C.cpp.o
+2025-09-21T23:12:48.5960822Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/rp2040/Bus_SPI.cpp.o
+2025-09-21T23:12:48.6062388Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/rp2040/Light_PWM.cpp.o
+2025-09-21T23:12:48.6155017Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/rp2040/common.cpp.o
+2025-09-21T23:12:48.6278742Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/samd21/Bus_I2C.cpp.o
+2025-09-21T23:12:48.6420957Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/samd21/Bus_SPI.cpp.o
+2025-09-21T23:12:48.6565253Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/samd21/common.cpp.o
+2025-09-21T23:12:48.6639270Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/samd51/Bus_I2C.cpp.o
+2025-09-21T23:12:48.6718766Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/samd51/Bus_SPI.cpp.o
+2025-09-21T23:12:48.6827958Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/samd51/common.cpp.o
+2025-09-21T23:12:48.6941613Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/sdl/Panel_sdl.cpp.o
+2025-09-21T23:12:48.7060116Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/sdl/common.cpp.o
+2025-09-21T23:12:48.7139198Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/spresense/Bus_SPI.cpp.o
+2025-09-21T23:12:48.7257046Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/spresense/common.cpp.o
+2025-09-21T23:12:48.7350329Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/stm32/Bus_SPI.cpp.o
+2025-09-21T23:12:48.7684138Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/platforms/stm32/common.cpp.o
+2025-09-21T23:12:48.7800147Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_CST816S.cpp.o
+2025-09-21T23:12:48.7857042Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_FT5x06.cpp.o
+2025-09-21T23:12:48.7975935Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_GSLx680.cpp.o
+2025-09-21T23:12:48.8071415Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_GT911.cpp.o
+2025-09-21T23:12:48.8183650Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_NS2009.cpp.o
+2025-09-21T23:12:48.8271416Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_RA8875.cpp.o
+2025-09-21T23:12:48.8369163Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_STMPE610.cpp.o
+2025-09-21T23:12:48.8454880Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_TT21xxx.cpp.o
+2025-09-21T23:12:48.8545671Z Compiling .pio/build/coverage/lib140/LovyanGFX/lgfx/v1/touch/Touch_XPT2046.cpp.o
+2025-09-21T23:12:48.9146037Z Compiling .pio/build/coverage/src/BluetoothCommon.cpp.o
+2025-09-21T23:12:49.0922919Z Compiling .pio/build/coverage/src/DebugConfiguration.cpp.o
+2025-09-21T23:12:49.1852545Z Compiling .pio/build/coverage/src/DisplayFormatters.cpp.o
+2025-09-21T23:12:49.2022892Z Compiling .pio/build/coverage/src/FSCommon.cpp.o
+2025-09-21T23:12:49.2150672Z Compiling .pio/build/coverage/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:12:49.2275207Z Compiling .pio/build/coverage/src/Fusion/FusionCompass.c.o
+2025-09-21T23:12:49.2425696Z Compiling .pio/build/coverage/src/Fusion/FusionOffset.c.o
+2025-09-21T23:12:49.2556597Z Compiling .pio/build/coverage/src/GpioLogic.cpp.o
+2025-09-21T23:12:49.5234807Z Compiling .pio/build/coverage/src/Led.cpp.o
+2025-09-21T23:12:49.5524429Z Compiling .pio/build/coverage/src/Observer.cpp.o
+2025-09-21T23:12:49.6005092Z Compiling .pio/build/coverage/src/Power.cpp.o
+2025-09-21T23:12:49.6232024Z Compiling .pio/build/coverage/src/PowerFSM.cpp.o
+2025-09-21T23:12:49.6344215Z Compiling .pio/build/coverage/src/PowerMon.cpp.o
+2025-09-21T23:12:49.6503191Z Compiling .pio/build/coverage/src/RedirectablePrint.cpp.o
+2025-09-21T23:12:49.6990711Z Compiling .pio/build/coverage/src/SPILock.cpp.o
+2025-09-21T23:12:49.7203958Z Compiling .pio/build/coverage/src/SafeFile.cpp.o
+2025-09-21T23:12:49.7348089Z Compiling .pio/build/coverage/src/SerialConsole.cpp.o
+2025-09-21T23:12:49.7496510Z Compiling .pio/build/coverage/src/airtime.cpp.o
+2025-09-21T23:12:49.7688096Z Compiling .pio/build/coverage/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:12:49.7838033Z Compiling .pio/build/coverage/src/buzz/buzz.cpp.o
+2025-09-21T23:12:49.7981045Z Compiling .pio/build/coverage/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:12:49.8107541Z Compiling .pio/build/coverage/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:12:49.8235604Z Compiling .pio/build/coverage/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:12:49.8393599Z Compiling .pio/build/coverage/src/concurrency/Lock.cpp.o
+2025-09-21T23:12:49.8529736Z Compiling .pio/build/coverage/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:12:49.8752332Z Compiling .pio/build/coverage/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:12:49.8885635Z Compiling .pio/build/coverage/src/concurrency/OSThread.cpp.o
+2025-09-21T23:12:49.9013721Z Compiling .pio/build/coverage/src/detect/ScanI2C.cpp.o
+2025-09-21T23:12:49.9154316Z Compiling .pio/build/coverage/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:12:49.9401746Z Compiling .pio/build/coverage/src/gps/GPS.cpp.o
+2025-09-21T23:12:49.9561619Z Compiling .pio/build/coverage/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:12:49.9725859Z Compiling .pio/build/coverage/src/gps/GeoCoord.cpp.o
+2025-09-21T23:12:50.0006127Z Compiling .pio/build/coverage/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:12:50.0323902Z Compiling .pio/build/coverage/src/gps/RTC.cpp.o
+2025-09-21T23:12:50.0543945Z Compiling .pio/build/coverage/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:12:50.0690116Z Compiling .pio/build/coverage/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:12:50.1138624Z Compiling .pio/build/coverage/src/graphics/Screen.cpp.o
+2025-09-21T23:12:50.1403983Z Compiling .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:12:50.1493502Z Compiling .pio/build/coverage/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:12:50.1962139Z Compiling .pio/build/coverage/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:12:50.3236434Z Compiling .pio/build/coverage/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:12:50.3680240Z Compiling .pio/build/coverage/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:12:50.4085373Z Compiling .pio/build/coverage/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:12:50.4594029Z Compiling .pio/build/coverage/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:12:50.5062045Z Compiling .pio/build/coverage/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:12:50.5312253Z Compiling .pio/build/coverage/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:12:50.5732611Z Compiling .pio/build/coverage/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:12:50.5973994Z Compiling .pio/build/coverage/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:12:50.6151973Z Compiling .pio/build/coverage/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:12:50.6344344Z Compiling .pio/build/coverage/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:12:50.6514060Z Compiling .pio/build/coverage/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:12:50.6643885Z Compiling .pio/build/coverage/src/graphics/emotes.cpp.o
+2025-09-21T23:12:50.6767752Z Compiling .pio/build/coverage/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:12:50.7294659Z Compiling .pio/build/coverage/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:12:50.7754218Z Compiling .pio/build/coverage/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:12:50.7970490Z Compiling .pio/build/coverage/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:12:50.8404521Z Compiling .pio/build/coverage/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:12:50.8826446Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/Backlight/LatchingBacklight.cpp.o
+2025-09-21T23:12:50.9025786Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/DEPG0213BNS800.cpp.o
+2025-09-21T23:12:50.9354739Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/DEPG0290BNS800.cpp.o
+2025-09-21T23:12:50.9741560Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/E0213A367.cpp.o
+2025-09-21T23:12:51.0296135Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/EInk.cpp.o
+2025-09-21T23:12:51.0582415Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/GDEY0154D67.cpp.o
+2025-09-21T23:12:51.0978043Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/GDEY0213B74.cpp.o
+2025-09-21T23:12:51.1176965Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/HINK_E0213A289.cpp.o
+2025-09-21T23:12:51.1423572Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/HINK_E042A87.cpp.o
+2025-09-21T23:12:51.1905806Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/LCMEN2R13ECC1.cpp.o
+2025-09-21T23:12:51.2171079Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/LCMEN2R13EFC1.cpp.o
+2025-09-21T23:12:51.2377667Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/SSD1682.cpp.o
+2025-09-21T23:12:51.2498192Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/SSD16XX.cpp.o
+2025-09-21T23:12:51.2702367Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/ZJY122250_0213BAAMFGN.cpp.o
+2025-09-21T23:12:51.3022545Z Compiling .pio/build/coverage/src/graphics/niche/Drivers/EInk/ZJY128296_029EAAMFGN.cpp.o
+2025-09-21T23:12:51.3760434Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applet.cpp.o
+2025-09-21T23:12:51.4246061Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/AppletFont.cpp.o
+2025-09-21T23:12:51.4477534Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/Bases/Map/MapApplet.cpp.o
+2025-09-21T23:12:51.4664911Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/Bases/NodeList/NodeListApplet.cpp.o
+2025-09-21T23:12:51.4891670Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/Examples/BasicExample/BasicExampleApplet.cpp.o
+2025-09-21T23:12:51.5354954Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/Examples/NewMsgExample/NewMsgExampleApplet.cpp.o
+2025-09-21T23:12:51.5790201Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/System/BatteryIcon/BatteryIconApplet.cpp.o
+2025-09-21T23:12:51.6193349Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/System/Logo/LogoApplet.cpp.o
+2025-09-21T23:12:51.6724854Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/System/Menu/MenuApplet.cpp.o
+2025-09-21T23:12:51.7014672Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/System/Notification/NotificationApplet.cpp.o
+2025-09-21T23:12:51.7244684Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/System/Pairing/PairingApplet.cpp.o
+2025-09-21T23:12:51.7485203Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/System/Placeholder/PlaceholderApplet.cpp.o
+2025-09-21T23:12:51.7674935Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/System/Tips/TipsApplet.cpp.o
+2025-09-21T23:12:51.7851206Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/User/AllMessage/AllMessageApplet.cpp.o
+2025-09-21T23:12:51.8386918Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/User/DM/DMApplet.cpp.o
+2025-09-21T23:12:51.8789262Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/User/Heard/HeardApplet.cpp.o
+2025-09-21T23:12:51.9348254Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/User/Positions/PositionsApplet.cpp.o
+2025-09-21T23:12:51.9847750Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/User/RecentsList/RecentsListApplet.cpp.o
+2025-09-21T23:12:52.0144534Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Applets/User/ThreadedMessage/ThreadedMessageApplet.cpp.o
+2025-09-21T23:12:52.0372532Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/DisplayHealth.cpp.o
+2025-09-21T23:12:52.0757578Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Events.cpp.o
+2025-09-21T23:12:52.1295816Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/InkHUD.cpp.o
+2025-09-21T23:12:52.1559568Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/MessageStore.cpp.o
+2025-09-21T23:12:52.1826963Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Persistence.cpp.o
+2025-09-21T23:12:52.2229198Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Renderer.cpp.o
+2025-09-21T23:12:52.2525551Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/Tile.cpp.o
+2025-09-21T23:12:52.3062824Z Compiling .pio/build/coverage/src/graphics/niche/InkHUD/WindowManager.cpp.o
+2025-09-21T23:12:52.3496755Z Compiling .pio/build/coverage/src/graphics/niche/Inputs/TwoButton.cpp.o
+2025-09-21T23:12:52.3695731Z Compiling .pio/build/coverage/src/graphics/niche/Utils/CannedMessageStore.cpp.o
+2025-09-21T23:12:52.4036818Z Compiling .pio/build/coverage/src/graphics/tftSetup.cpp.o
+2025-09-21T23:12:52.4235209Z Compiling .pio/build/coverage/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:12:52.4704162Z Compiling .pio/build/coverage/src/input/ButtonThread.cpp.o
+2025-09-21T23:12:52.5157616Z Compiling .pio/build/coverage/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:12:52.5473673Z Compiling .pio/build/coverage/src/input/InputBroker.cpp.o
+2025-09-21T23:12:52.5880656Z Compiling .pio/build/coverage/src/input/LinuxInput.cpp.o
+2025-09-21T23:12:52.6126383Z Compiling .pio/build/coverage/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:12:52.6549254Z Compiling .pio/build/coverage/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:12:52.6854494Z Compiling .pio/build/coverage/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:12:52.7203378Z Compiling .pio/build/coverage/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:12:52.7400157Z Compiling .pio/build/coverage/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:12:52.7555865Z Compiling .pio/build/coverage/src/input/SeesawRotary.cpp.o
+2025-09-21T23:12:52.7754756Z Compiling .pio/build/coverage/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:12:52.7886121Z Compiling .pio/build/coverage/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:12:52.8314164Z Compiling .pio/build/coverage/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:12:52.8364837Z Compiling .pio/build/coverage/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:12:52.8647944Z Compiling .pio/build/coverage/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:12:52.8879397Z Compiling .pio/build/coverage/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:12:52.9041285Z Compiling .pio/build/coverage/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:12:52.9223698Z Compiling .pio/build/coverage/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:12:52.9534051Z Compiling .pio/build/coverage/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:12:52.9915215Z Compiling .pio/build/coverage/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:12:53.0363521Z Compiling .pio/build/coverage/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:12:53.0782401Z Compiling .pio/build/coverage/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:12:53.1203342Z Compiling .pio/build/coverage/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:12:53.1564092Z Compiling .pio/build/coverage/src/input/i2cButton.cpp.o
+2025-09-21T23:12:53.1931796Z Compiling .pio/build/coverage/src/input/kbI2cBase.cpp.o
+2025-09-21T23:12:53.2213750Z Compiling .pio/build/coverage/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:12:53.2673678Z Compiling .pio/build/coverage/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:12:53.6783579Z Compiling .pio/build/coverage/src/main.cpp.o
+2025-09-21T23:12:53.7317641Z Compiling .pio/build/coverage/src/memGet.cpp.o
+2025-09-21T23:12:54.9363944Z Compiling .pio/build/coverage/src/mesh/Channels.cpp.o
+2025-09-21T23:12:54.9576857Z Compiling .pio/build/coverage/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:12:55.0393802Z Compiling .pio/build/coverage/src/mesh/Default.cpp.o
+2025-09-21T23:12:55.1402262Z Compiling .pio/build/coverage/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:12:55.3564048Z Compiling .pio/build/coverage/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:12:55.4122385Z Compiling .pio/build/coverage/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:12:55.4604948Z Compiling .pio/build/coverage/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:12:55.5994387Z Compiling .pio/build/coverage/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:12:55.7722285Z Compiling .pio/build/coverage/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:12:55.8057227Z Compiling .pio/build/coverage/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:12:55.9283906Z Compiling .pio/build/coverage/src/mesh/MeshModule.cpp.o
+2025-09-21T23:12:56.1543975Z Compiling .pio/build/coverage/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:12:56.5123662Z Compiling .pio/build/coverage/src/mesh/MeshService.cpp.o
+2025-09-21T23:12:56.6191258Z Compiling .pio/build/coverage/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:12:56.7343707Z Compiling .pio/build/coverage/src/mesh/NodeDB.cpp.o
+2025-09-21T23:12:57.3034034Z Compiling .pio/build/coverage/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:12:57.3257358Z Compiling .pio/build/coverage/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:12:57.9711866Z Compiling .pio/build/coverage/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:12:58.0344027Z Compiling .pio/build/coverage/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:12:58.1324013Z Compiling .pio/build/coverage/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:12:58.2804147Z Compiling .pio/build/coverage/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:12:58.3043792Z Compiling .pio/build/coverage/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:12:58.3511812Z Compiling .pio/build/coverage/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:12:58.7359991Z Compiling .pio/build/coverage/src/mesh/Router.cpp.o
+2025-09-21T23:12:58.8294427Z Compiling .pio/build/coverage/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:12:59.1323662Z Compiling .pio/build/coverage/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:12:59.1914110Z Compiling .pio/build/coverage/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:12:59.2552657Z Compiling .pio/build/coverage/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:12:59.3532052Z Compiling .pio/build/coverage/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:12:59.3815960Z Compiling .pio/build/coverage/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:12:59.4244619Z Compiling .pio/build/coverage/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:12:59.4633831Z Compiling .pio/build/coverage/src/mesh/Throttle.cpp.o
+2025-09-21T23:12:59.6275611Z Compiling .pio/build/coverage/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:12:59.6667762Z Compiling .pio/build/coverage/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:12:59.8240997Z Compiling .pio/build/coverage/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:12:59.9225709Z Compiling .pio/build/coverage/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:13:00.0402513Z Compiling .pio/build/coverage/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:13:00.0693711Z Compiling .pio/build/coverage/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:13:00.4670132Z Compiling .pio/build/coverage/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:13:00.5256048Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:13:00.5723212Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:13:00.6935134Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:13:00.7460454Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:13:00.7811592Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:13:00.8745540Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:13:00.9283325Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:13:01.0576205Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:13:01.0985984Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:13:01.1326976Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:13:01.1613435Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:13:01.2264550Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:13:01.2581950Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:13:01.3252034Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:13:01.3591988Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:13:01.4584204Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:13:01.4941663Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:13:01.5181987Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:13:01.6531823Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:13:01.6897187Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:13:01.7223924Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:13:01.7672620Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:13:01.8002959Z Compiling .pio/build/coverage/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:13:01.8371637Z Compiling .pio/build/coverage/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:13:01.9954131Z Compiling .pio/build/coverage/src/mesh/raspihttp/PiWebServer.cpp.o
+2025-09-21T23:13:02.0398861Z Compiling .pio/build/coverage/src/meshUtils.cpp.o
+2025-09-21T23:13:02.0925339Z Compiling .pio/build/coverage/src/modules/AdminModule.cpp.o
+2025-09-21T23:13:02.1682321Z Compiling .pio/build/coverage/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:13:02.2315055Z Compiling .pio/build/coverage/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:13:02.2491681Z Compiling .pio/build/coverage/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:13:02.2770272Z Compiling .pio/build/coverage/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:13:02.3128976Z Compiling .pio/build/coverage/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:13:02.3460268Z Compiling .pio/build/coverage/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:13:02.3713660Z Compiling .pio/build/coverage/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:13:02.4233894Z Compiling .pio/build/coverage/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:13:02.5292393Z Compiling .pio/build/coverage/src/modules/Modules.cpp.o
+2025-09-21T23:13:02.5685620Z Compiling .pio/build/coverage/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:13:02.6084944Z Compiling .pio/build/coverage/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:13:02.6552093Z Compiling .pio/build/coverage/src/modules/PositionModule.cpp.o
+2025-09-21T23:13:02.7454073Z Compiling .pio/build/coverage/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:13:02.7794451Z Compiling .pio/build/coverage/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:13:02.8167078Z Compiling .pio/build/coverage/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:13:02.8794235Z Compiling .pio/build/coverage/src/modules/ReplyModule.cpp.o
+2025-09-21T23:13:02.9134411Z Compiling .pio/build/coverage/src/modules/RoutingModule.cpp.o
+2025-09-21T23:13:02.9594625Z Compiling .pio/build/coverage/src/modules/SerialModule.cpp.o
+2025-09-21T23:13:02.9924362Z Compiling .pio/build/coverage/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:13:03.0444271Z Compiling .pio/build/coverage/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:13:03.0734697Z Compiling .pio/build/coverage/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:13:03.1054615Z Compiling .pio/build/coverage/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:13:03.2195180Z Compiling .pio/build/coverage/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:13:03.2564794Z Compiling .pio/build/coverage/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:13:03.2824104Z Compiling .pio/build/coverage/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:13:03.7324365Z Compiling .pio/build/coverage/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:13:04.2365736Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:13:04.3840445Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:13:04.4643586Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:13:04.7536706Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:13:05.0884824Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:13:05.4433913Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:13:05.5334156Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:13:05.5993951Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:13:05.9162195Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:13:05.9997501Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:13:06.4443838Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:13:06.4636883Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:13:07.0020538Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:13:07.1484747Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:13:07.2066643Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:13:07.2483974Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:13:07.4922071Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:13:07.6351923Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:13:08.7053895Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:13:08.8537800Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:13:08.9314520Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:13:08.9766093Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:13:09.5403230Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:13:09.6324805Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:13:09.9579547Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:13:10.1051695Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:13:10.1501882Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:13:10.2901433Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:13:10.3813165Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:13:10.5497886Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:13:10.7043205Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:13:11.1512389Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:13:11.6593963Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:13:11.8662049Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:13:11.9512041Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:13:11.9911901Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:13:12.0497358Z Compiling .pio/build/coverage/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:13:12.0950977Z Compiling .pio/build/coverage/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:13:12.1632950Z Compiling .pio/build/coverage/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:13:12.2541800Z Compiling .pio/build/coverage/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:13:12.2853993Z Compiling .pio/build/coverage/src/modules/WaypointModule.cpp.o
+2025-09-21T23:13:12.3226158Z Compiling .pio/build/coverage/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:13:12.4996542Z Compiling .pio/build/coverage/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:13:12.6331832Z Compiling .pio/build/coverage/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:13:12.7097654Z Compiling .pio/build/coverage/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:13:12.7414136Z Compiling .pio/build/coverage/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:13:12.8394108Z Compiling .pio/build/coverage/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:13:12.8593812Z Compiling .pio/build/coverage/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:13:12.8799342Z Compiling .pio/build/coverage/src/motion/MotionSensor.cpp.o
+2025-09-21T23:13:12.9294872Z Compiling .pio/build/coverage/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:13:13.0002600Z Compiling .pio/build/coverage/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:13:13.1202096Z Compiling .pio/build/coverage/src/mqtt/MQTT.cpp.o
+2025-09-21T23:13:13.1574340Z Compiling .pio/build/coverage/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:13:13.1912010Z Compiling .pio/build/coverage/src/network-stubs.cpp.o
+2025-09-21T23:13:13.3395145Z Compiling .pio/build/coverage/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:13:13.3884833Z Compiling .pio/build/coverage/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:13:13.4121652Z Compiling .pio/build/coverage/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:13:13.5082060Z Compiling .pio/build/coverage/src/platform/portduino/PortduinoGlue.cpp.o
+2025-09-21T23:13:13.5236743Z Compiling .pio/build/coverage/src/platform/portduino/SimRadio.cpp.o
+2025-09-21T23:13:13.8143488Z Compiling .pio/build/coverage/src/serialization/JSON.cpp.o
+2025-09-21T23:13:13.8601022Z Compiling .pio/build/coverage/src/serialization/JSONValue.cpp.o
+2025-09-21T23:13:14.0072039Z Compiling .pio/build/coverage/src/serialization/MeshPacketSerializer.cpp.o
+2025-09-21T23:13:14.2043528Z Compiling .pio/build/coverage/src/serialization/MeshPacketSerializer_nRF52.cpp.o
+2025-09-21T23:13:14.2317621Z Compiling .pio/build/coverage/src/serialization/cobs.cpp.o
+2025-09-21T23:13:14.3046175Z Compiling .pio/build/coverage/src/sleep.cpp.o
+2025-09-21T23:13:14.3263774Z Compiling .pio/build/coverage/src/xmodem.cpp.o
+2025-09-21T23:13:14.3496577Z Compiling .pio/build/coverage/lib523/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:13:14.5211690Z Compiling .pio/build/coverage/lib523/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:13:14.5524085Z Compiling .pio/build/coverage/lib523/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:13:14.6764017Z Compiling .pio/build/coverage/lib124/OneButton/OneButton.cpp.o
+2025-09-21T23:13:14.7164299Z Compiling .pio/build/coverage/lib124/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:13:14.8903439Z Compiling .pio/build/coverage/libba1/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:13:15.1863360Z Compiling .pio/build/coverage/libcaf/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:13:15.2695653Z Compiling .pio/build/coverage/lib341/ArduinoThread/Thread.cpp.o
+2025-09-21T23:13:15.2944970Z Compiling .pio/build/coverage/lib341/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:13:15.3248024Z Compiling .pio/build/coverage/libc42/Nanopb/pb_common.c.o
+2025-09-21T23:13:15.6097031Z Compiling .pio/build/coverage/libc42/Nanopb/pb_decode.c.o
+2025-09-21T23:13:15.9090833Z Compiling .pio/build/coverage/libc42/Nanopb/pb_encode.c.o
+2025-09-21T23:13:16.1088878Z Compiling .pio/build/coverage/lib8b6/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:13:16.2001895Z Compiling .pio/build/coverage/libe52/TBPubSubClient/PubSubClient.cpp.o
+2025-09-21T23:13:16.2486835Z Compiling .pio/build/coverage/lib979/NTPClient/NTPClient.cpp.o
+2025-09-21T23:13:16.2973278Z Compiling .pio/build/coverage/lib781/Syslog/Syslog.cpp.o
+2025-09-21T23:13:16.3223774Z Archiving .pio/build/coverage/lib8b6/libErriezCRC32.a
+2025-09-21T23:13:16.3445922Z Indexing .pio/build/coverage/lib8b6/libErriezCRC32.a
+2025-09-21T23:13:16.3718477Z Compiling .pio/build/coverage/libc1f/RadioLib/Hal.cpp.o
+2025-09-21T23:13:16.3889067Z Archiving .pio/build/coverage/libba1/libarduino-fsm.a
+2025-09-21T23:13:16.4251972Z Indexing .pio/build/coverage/libba1/libarduino-fsm.a
+2025-09-21T23:13:16.4269230Z Compiling .pio/build/coverage/libc1f/RadioLib/Module.cpp.o
+2025-09-21T23:13:16.4542391Z Compiling .pio/build/coverage/libc1f/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:13:16.5552639Z Archiving .pio/build/coverage/lib124/libOneButton.a
+2025-09-21T23:13:16.5783917Z Indexing .pio/build/coverage/lib124/libOneButton.a
+2025-09-21T23:13:16.6173181Z Compiling .pio/build/coverage/libc1f/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:13:16.6413447Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:13:16.6674114Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:13:16.7124251Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:13:16.7313006Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:13:16.7466570Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:13:16.8848020Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:13:17.0325720Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:13:17.3012141Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:13:17.3158523Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:13:17.3293936Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:13:17.7064762Z Archiving .pio/build/coverage/lib341/libArduinoThread.a
+2025-09-21T23:13:17.7326861Z Indexing .pio/build/coverage/lib341/libArduinoThread.a
+2025-09-21T23:13:17.7676667Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:13:17.8281634Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:13:17.8814576Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:13:18.0484212Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:13:18.0704207Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:13:18.1204772Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:13:18.2142096Z Archiving .pio/build/coverage/lib979/libNTPClient.a
+2025-09-21T23:13:18.2276362Z Indexing .pio/build/coverage/lib979/libNTPClient.a
+2025-09-21T23:13:18.2662437Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:13:18.2893615Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:13:18.3832399Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:13:18.4131131Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:13:18.4712387Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:13:18.7373843Z Archiving .pio/build/coverage/libc42/libNanopb.a
+2025-09-21T23:13:18.7428669Z Archiving .pio/build/coverage/lib781/libSyslog.a
+2025-09-21T23:13:18.7524055Z Indexing .pio/build/coverage/libc42/libNanopb.a
+2025-09-21T23:13:18.7607699Z Indexing .pio/build/coverage/lib781/libSyslog.a
+2025-09-21T23:13:18.7824100Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:13:18.8034987Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:13:18.8607906Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:13:18.8663658Z Archiving .pio/build/coverage/libcaf/libTinyGPSPlus.a
+2025-09-21T23:13:18.8890248Z Indexing .pio/build/coverage/libcaf/libTinyGPSPlus.a
+2025-09-21T23:13:18.9283305Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:13:19.0214790Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:13:19.0604959Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:13:19.2377683Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:13:19.2931848Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:13:19.3144917Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:13:19.3580869Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:13:19.4743423Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:13:19.5165017Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:13:19.5429044Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:13:19.7294552Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:13:19.7544981Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:13:19.8715222Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:13:19.8910568Z Compiling .pio/build/coverage/libc1f/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:13:19.9112528Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:13:20.0182044Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:13:20.0601930Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:13:20.0922077Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:13:20.1303875Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:13:20.1514588Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:13:20.1702180Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:13:20.2473880Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:13:20.2944480Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:13:20.3439002Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:13:20.3872333Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:13:20.4092138Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:13:20.4267289Z Archiving .pio/build/coverage/lib523/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:13:20.4381789Z Indexing .pio/build/coverage/lib523/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:13:20.4749433Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:13:20.6033994Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:13:20.7232017Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:13:20.7550772Z Compiling .pio/build/coverage/libc1f/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:13:20.7846890Z Compiling .pio/build/coverage/libc1f/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:13:20.8045703Z Compiling .pio/build/coverage/libc1f/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:13:20.8422243Z Compiling .pio/build/coverage/libc1f/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:13:20.9122339Z Compiling .pio/build/coverage/libc1f/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:13:21.0382730Z Compiling .pio/build/coverage/lib4f2/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:13:21.0711207Z Compiling .pio/build/coverage/lib4f2/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:13:21.1301673Z Compiling .pio/build/coverage/lib4f2/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:13:21.1564709Z Compiling .pio/build/coverage/lib4f2/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:13:21.2026513Z Compiling .pio/build/coverage/libba9/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:13:21.2387348Z Compiling .pio/build/coverage/lib0ba/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:13:21.2547666Z Compiling .pio/build/coverage/lib8fa/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:13:21.4834374Z Compiling .pio/build/coverage/libbd9/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:13:21.5383957Z Compiling .pio/build/coverage/lib9b7/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:13:21.5984465Z Compiling .pio/build/coverage/libbbe/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:13:21.6503268Z Compiling .pio/build/coverage/lib5de/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:13:21.6942333Z Compiling .pio/build/coverage/lib6a4/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:13:21.7368814Z Compiling .pio/build/coverage/libcbf/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:13:21.7763031Z Compiling .pio/build/coverage/libcbf/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:13:21.8326014Z Compiling .pio/build/coverage/libcbf/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:13:21.8604805Z Compiling .pio/build/coverage/libcbf/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:13:21.8922126Z Compiling .pio/build/coverage/lib5db/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:13:21.9438780Z Compiling .pio/build/coverage/lib2d3/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:13:21.9964881Z Compiling .pio/build/coverage/libeb4/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:13:22.0560042Z Compiling .pio/build/coverage/libab8/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:13:22.1014329Z Compiling .pio/build/coverage/libab8/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:13:22.1203906Z Compiling .pio/build/coverage/libab8/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:13:22.1347544Z Compiling .pio/build/coverage/libab8/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:13:22.1514856Z Compiling .pio/build/coverage/libab8/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:13:22.1794582Z Compiling .pio/build/coverage/libab8/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:13:22.1904095Z Compiling .pio/build/coverage/libab8/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:13:22.3151820Z Compiling .pio/build/coverage/libab8/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:13:22.3754710Z Compiling .pio/build/coverage/lib213/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:13:22.4174542Z Compiling .pio/build/coverage/libc22/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:13:22.4303836Z Archiving .pio/build/coverage/libe52/libTBPubSubClient.a
+2025-09-21T23:13:22.4456802Z Indexing .pio/build/coverage/libe52/libTBPubSubClient.a
+2025-09-21T23:13:22.5384589Z Compiling .pio/build/coverage/liba46/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:13:22.6681941Z Compiling .pio/build/coverage/lib19a/INA3221/INA3221.cpp.o
+2025-09-21T23:13:22.7255282Z Compiling .pio/build/coverage/libeab/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:13:22.7804928Z Compiling .pio/build/coverage/lib495/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:13:22.8145391Z Compiling .pio/build/coverage/libe35/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:13:22.8501756Z Compiling .pio/build/coverage/libc16/INA226/INA226.cpp.o
+2025-09-21T23:13:22.8873319Z Compiling .pio/build/coverage/lib7aa/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:13:22.9115284Z Compiling .pio/build/coverage/lib7aa/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:13:22.9394727Z Compiling .pio/build/coverage/lib7aa/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:13:22.9757907Z Compiling .pio/build/coverage/lib1fd/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:13:22.9990758Z Compiling .pio/build/coverage/lib1fd/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:13:23.0474230Z Compiling .pio/build/coverage/libc45/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:13:23.0864331Z Compiling .pio/build/coverage/lib348/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:13:23.0958648Z Archiving .pio/build/coverage/lib8fa/libAdafruit BMP085 Library.a
+2025-09-21T23:13:23.1162251Z Indexing .pio/build/coverage/lib8fa/libAdafruit BMP085 Library.a
+2025-09-21T23:13:23.1834406Z Compiling .pio/build/coverage/liba3a/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:13:23.2388460Z Compiling .pio/build/coverage/libb88/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:13:23.2494481Z Archiving .pio/build/coverage/libba9/libAdafruit Unified Sensor.a
+2025-09-21T23:13:23.2713620Z Indexing .pio/build/coverage/libba9/libAdafruit Unified Sensor.a
+2025-09-21T23:13:23.3196237Z Compiling .pio/build/coverage/libd0c/Crypto/AES128.cpp.o
+2025-09-21T23:13:23.4524493Z Compiling .pio/build/coverage/libd0c/Crypto/AES192.cpp.o
+2025-09-21T23:13:23.4908238Z Compiling .pio/build/coverage/libd0c/Crypto/AES256.cpp.o
+2025-09-21T23:13:23.5484418Z Compiling .pio/build/coverage/libd0c/Crypto/AESCommon.cpp.o
+2025-09-21T23:13:23.6030995Z Archiving .pio/build/coverage/libbbe/libAdafruit MCP9808 Library.a
+2025-09-21T23:13:23.6194079Z Compiling .pio/build/coverage/libd0c/Crypto/AESEsp32.cpp.o
+2025-09-21T23:13:23.6253420Z Indexing .pio/build/coverage/libbbe/libAdafruit MCP9808 Library.a
+2025-09-21T23:13:23.6495864Z Compiling .pio/build/coverage/libd0c/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:13:23.6564406Z Compiling .pio/build/coverage/libd0c/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:13:23.6956160Z Compiling .pio/build/coverage/libd0c/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:13:23.7235434Z Archiving .pio/build/coverage/lib4f2/libAdafruit BusIO.a
+2025-09-21T23:13:23.7361589Z Indexing .pio/build/coverage/lib4f2/libAdafruit BusIO.a
+2025-09-21T23:13:23.7561854Z Compiling .pio/build/coverage/libd0c/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:13:23.7664922Z Compiling .pio/build/coverage/libd0c/Crypto/BlockCipher.cpp.o
+2025-09-21T23:13:23.7944597Z Compiling .pio/build/coverage/libd0c/Crypto/CTR.cpp.o
+2025-09-21T23:13:23.8182784Z Compiling .pio/build/coverage/libd0c/Crypto/ChaCha.cpp.o
+2025-09-21T23:13:23.8576235Z Compiling .pio/build/coverage/libd0c/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:13:23.8653749Z Compiling .pio/build/coverage/libd0c/Crypto/Cipher.cpp.o
+2025-09-21T23:13:23.8851429Z Compiling .pio/build/coverage/libd0c/Crypto/Crypto.cpp.o
+2025-09-21T23:13:23.9172278Z Compiling .pio/build/coverage/libd0c/Crypto/Curve25519.cpp.o
+2025-09-21T23:13:23.9276056Z Compiling .pio/build/coverage/libd0c/Crypto/EAX.cpp.o
+2025-09-21T23:13:23.9544184Z Compiling .pio/build/coverage/libd0c/Crypto/Ed25519.cpp.o
+2025-09-21T23:13:23.9761220Z Compiling .pio/build/coverage/libd0c/Crypto/GCM.cpp.o
+2025-09-21T23:13:23.9994448Z Archiving .pio/build/coverage/lib9b7/libAdafruit DPS310.a
+2025-09-21T23:13:24.0125288Z Compiling .pio/build/coverage/libd0c/Crypto/GF128.cpp.o
+2025-09-21T23:13:24.0228107Z Compiling .pio/build/coverage/libd0c/Crypto/GHASH.cpp.o
+2025-09-21T23:13:24.0322278Z Indexing .pio/build/coverage/lib9b7/libAdafruit DPS310.a
+2025-09-21T23:13:24.0409436Z Compiling .pio/build/coverage/libd0c/Crypto/HKDF.cpp.o
+2025-09-21T23:13:24.0426009Z Archiving .pio/build/coverage/lib6a4/libAdafruit INA219.a
+2025-09-21T23:13:24.0553914Z Compiling .pio/build/coverage/libd0c/Crypto/Hash.cpp.o
+2025-09-21T23:13:24.0605829Z Indexing .pio/build/coverage/lib6a4/libAdafruit INA219.a
+2025-09-21T23:13:24.0757310Z Compiling .pio/build/coverage/libd0c/Crypto/KeccakCore.cpp.o
+2025-09-21T23:13:24.0940262Z Compiling .pio/build/coverage/libd0c/Crypto/NoiseSource.cpp.o
+2025-09-21T23:13:24.1084770Z Compiling .pio/build/coverage/libd0c/Crypto/OMAC.cpp.o
+2025-09-21T23:13:24.1562835Z Compiling .pio/build/coverage/libd0c/Crypto/P521.cpp.o
+2025-09-21T23:13:24.2202077Z Archiving .pio/build/coverage/liba46/libAdafruit MLX90614 Library.a
+2025-09-21T23:13:24.2411796Z Compiling .pio/build/coverage/libd0c/Crypto/Poly1305.cpp.o
+2025-09-21T23:13:24.2545193Z Indexing .pio/build/coverage/liba46/libAdafruit MLX90614 Library.a
+2025-09-21T23:13:24.2834197Z Compiling .pio/build/coverage/libd0c/Crypto/RNG.cpp.o
+2025-09-21T23:13:24.3044300Z Compiling .pio/build/coverage/libd0c/Crypto/SHA224.cpp.o
+2025-09-21T23:13:24.3132234Z Compiling .pio/build/coverage/libd0c/Crypto/SHA256.cpp.o
+2025-09-21T23:13:24.3176074Z Compiling .pio/build/coverage/libd0c/Crypto/SHA3.cpp.o
+2025-09-21T23:13:24.3376222Z Compiling .pio/build/coverage/libd0c/Crypto/SHA384.cpp.o
+2025-09-21T23:13:24.3530113Z Compiling .pio/build/coverage/libd0c/Crypto/SHA512.cpp.o
+2025-09-21T23:13:24.3807229Z Compiling .pio/build/coverage/libd0c/Crypto/SHAKE.cpp.o
+2025-09-21T23:13:24.4064257Z Archiving .pio/build/coverage/libbd9/libAdafruit BME280 Library.a
+2025-09-21T23:13:24.4171328Z Compiling .pio/build/coverage/libd0c/Crypto/XOF.cpp.o
+2025-09-21T23:13:24.4306321Z Indexing .pio/build/coverage/libbd9/libAdafruit BME280 Library.a
+2025-09-21T23:13:24.4432286Z Compiling .pio/build/coverage/libd0c/Crypto/XTS.cpp.o
+2025-09-21T23:13:24.4792514Z Compiling .pio/build/coverage/libf13/Pine libch341-spi Userspace library/libpinedio-usb.c.o
+2025-09-21T23:13:24.5231073Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/Adafruit_Crickit.cpp.o
+2025-09-21T23:13:24.5432405Z Archiving .pio/build/coverage/lib5de/libAdafruit INA260 Library.a
+2025-09-21T23:13:24.5758305Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/Adafruit_NeoKey_1x4.cpp.o
+2025-09-21T23:13:24.5878276Z Indexing .pio/build/coverage/lib5de/libAdafruit INA260 Library.a
+2025-09-21T23:13:24.5981584Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/Adafruit_NeoTrellis.cpp.o
+2025-09-21T23:13:24.6331896Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/Adafruit_TFTShield18.cpp.o
+2025-09-21T23:13:24.6701486Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/Adafruit_miniTFTWing.cpp.o
+2025-09-21T23:13:24.7031806Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/Adafruit_seesaw.cpp.o
+2025-09-21T23:13:24.7314858Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/seesaw_neopixel.cpp.o
+2025-09-21T23:13:24.7693618Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/seesaw_servo.cpp.o
+2025-09-21T23:13:24.7954190Z Compiling .pio/build/coverage/libbcf/Adafruit seesaw Library/seesaw_spectrum.cpp.o
+2025-09-21T23:13:24.8343402Z Compiling .pio/build/coverage/libdce/RAKwireless RAK12034/DFRobot_BMX160.cpp.o
+2025-09-21T23:13:24.8407178Z Archiving .pio/build/coverage/libcbf/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:13:24.8591793Z Archiving .pio/build/coverage/lib2d3/libAdafruit LIS3DH.a
+2025-09-21T23:13:24.8653644Z Indexing .pio/build/coverage/libcbf/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:13:24.8724592Z Archiving .pio/build/coverage/lib213/libAdafruit TSL2591 Library.a
+2025-09-21T23:13:24.8837157Z Indexing .pio/build/coverage/lib2d3/libAdafruit LIS3DH.a
+2025-09-21T23:13:24.8857382Z Compiling .pio/build/coverage/libdce/RAKwireless RAK12034/Rak_BMX160.cpp.o
+2025-09-21T23:13:24.9058407Z Indexing .pio/build/coverage/lib213/libAdafruit TSL2591 Library.a
+2025-09-21T23:13:24.9395672Z Compiling .pio/build/coverage/lib6ef/Melopero RV3028/Melopero_RV3028.cpp.o
+2025-09-21T23:13:24.9667147Z Archiving .pio/build/coverage/libeb4/libAdafruit AHTX0.a
+2025-09-21T23:13:24.9809906Z Archiving .pio/build/coverage/lib0ba/libAdafruit BMP280 Library.a
+2025-09-21T23:13:24.9815001Z Indexing .pio/build/coverage/libeb4/libAdafruit AHTX0.a
+2025-09-21T23:13:24.9926629Z Archiving .pio/build/coverage/lib348/libAdafruit PCT2075.a
+2025-09-21T23:13:24.9956586Z Archiving .pio/build/coverage/libc16/libINA226.a
+2025-09-21T23:13:25.0056027Z Indexing .pio/build/coverage/lib0ba/libAdafruit BMP280 Library.a
+2025-09-21T23:13:25.0123813Z Archiving .pio/build/coverage/libeab/libQMC5883LCompass.a
+2025-09-21T23:13:25.0256688Z Indexing .pio/build/coverage/libc16/libINA226.a
+2025-09-21T23:13:25.0265368Z Indexing .pio/build/coverage/lib348/libAdafruit PCT2075.a
+2025-09-21T23:13:25.0437236Z Indexing .pio/build/coverage/libeab/libQMC5883LCompass.a
+2025-09-21T23:13:25.0458285Z Compiling .pio/build/coverage/libc91/WiFi/WiFi.cpp.o
+2025-09-21T23:13:25.0751613Z Compiling .pio/build/coverage/libc91/WiFi/WiFiClient.cpp.o
+2025-09-21T23:13:25.0983806Z Compiling .pio/build/coverage/libc91/WiFi/WiFiServer.cpp.o
+2025-09-21T23:13:25.1622053Z Compiling .pio/build/coverage/libc91/WiFi/WiFiUdp.cpp.o
+2025-09-21T23:13:25.1671763Z Archiving .pio/build/coverage/libFrameworkArduinoVariant.a
+2025-09-21T23:13:25.1908473Z Indexing .pio/build/coverage/libFrameworkArduinoVariant.a
+2025-09-21T23:13:25.1949555Z Compiling .pio/build/coverage/FrameworkArduino/arduino/api/Common.cpp.o
+2025-09-21T23:13:25.2304163Z Compiling .pio/build/coverage/FrameworkArduino/arduino/api/IPAddress.cpp.o
+2025-09-21T23:13:25.2652253Z Archiving .pio/build/coverage/libc45/libAdafruit LTR390 Library.a
+2025-09-21T23:13:25.2654346Z Archiving .pio/build/coverage/libb88/libAdafruit TSL2561.a
+2025-09-21T23:13:25.2799000Z Indexing .pio/build/coverage/libc45/libAdafruit LTR390 Library.a
+2025-09-21T23:13:25.2854708Z Indexing .pio/build/coverage/libb88/libAdafruit TSL2561.a
+2025-09-21T23:13:25.2860571Z Compiling .pio/build/coverage/FrameworkArduino/arduino/api/PluggableUSB.cpp.o
+2025-09-21T23:13:25.3152223Z Compiling .pio/build/coverage/FrameworkArduino/arduino/api/Print.cpp.o
+2025-09-21T23:13:25.3335349Z Compiling .pio/build/coverage/FrameworkArduino/arduino/api/Stream.cpp.o
+2025-09-21T23:13:25.3714411Z Compiling .pio/build/coverage/FrameworkArduino/arduino/api/String.cpp.o
+2025-09-21T23:13:25.3981842Z Compiling .pio/build/coverage/FrameworkArduino/portduino/AsyncUDP.cpp.o
+2025-09-21T23:13:25.4192342Z Compiling .pio/build/coverage/FrameworkArduino/portduino/FS/FS.cpp.o
+2025-09-21T23:13:25.4385099Z Compiling .pio/build/coverage/FrameworkArduino/portduino/FS/PortduinoFS.cpp.o
+2025-09-21T23:13:25.4764647Z Compiling .pio/build/coverage/FrameworkArduino/portduino/FS/vfs_api.cpp.o
+2025-09-21T23:13:25.4844232Z Archiving .pio/build/coverage/libe35/libDFRobot_RainfallSensor.a
+2025-09-21T23:13:25.5014331Z Compiling .pio/build/coverage/FrameworkArduino/portduino/PortduinoGPIO.cpp.o
+2025-09-21T23:13:25.5067496Z Indexing .pio/build/coverage/libe35/libDFRobot_RainfallSensor.a
+2025-09-21T23:13:25.5113920Z Compiling .pio/build/coverage/FrameworkArduino/portduino/PortduinoPrint.cpp.o
+2025-09-21T23:13:25.5240778Z Compiling .pio/build/coverage/FrameworkArduino/portduino/Utility.cpp.o
+2025-09-21T23:13:25.5288456Z Compiling .pio/build/coverage/FrameworkArduino/portduino/dtostrf.c.o
+2025-09-21T23:13:25.5535206Z Compiling .pio/build/coverage/FrameworkArduino/portduino/itoa.cpp.o
+2025-09-21T23:13:25.5814820Z Compiling .pio/build/coverage/FrameworkArduino/portduino/linux/LinuxCommon.cpp.o
+2025-09-21T23:13:25.6175190Z Compiling .pio/build/coverage/FrameworkArduino/portduino/linux/LinuxHardwareI2C.cpp.o
+2025-09-21T23:13:25.6315107Z Compiling .pio/build/coverage/FrameworkArduino/portduino/linux/LinuxHardwareSPI.cpp.o
+2025-09-21T23:13:25.6404566Z Compiling .pio/build/coverage/FrameworkArduino/portduino/linux/LinuxSerial.cpp.o
+2025-09-21T23:13:25.6502558Z Compiling .pio/build/coverage/FrameworkArduino/portduino/linux/gpio/LinuxGPIOPin.cpp.o
+2025-09-21T23:13:25.6721765Z Compiling .pio/build/coverage/FrameworkArduino/portduino/linux/millis.cpp.o
+2025-09-21T23:13:25.6792213Z Compiling .pio/build/coverage/FrameworkArduino/portduino/logging.cpp.o
+2025-09-21T23:13:25.6850317Z Compiling .pio/build/coverage/FrameworkArduino/portduino/main.cpp.o
+2025-09-21T23:13:25.7074330Z Compiling .pio/build/coverage/FrameworkArduino/portduino/simulated/SimCommon.cpp.o
+2025-09-21T23:13:25.7595186Z Compiling .pio/build/coverage/FrameworkArduino/portduino/simulated/SimHardwareI2C.cpp.o
+2025-09-21T23:13:25.7864451Z Compiling .pio/build/coverage/FrameworkArduino/portduino/simulated/SimHardwareSPI.cpp.o
+2025-09-21T23:13:25.9880288Z Archiving .pio/build/coverage/libc1f/libRadioLib.a
+2025-09-21T23:13:26.0063958Z Archiving .pio/build/coverage/lib19a/libINA3221.a
+2025-09-21T23:13:26.0302452Z Indexing .pio/build/coverage/lib19a/libINA3221.a
+2025-09-21T23:13:26.0853696Z Archiving .pio/build/coverage/libf13/libPine libch341-spi Userspace library.a
+2025-09-21T23:13:26.0935289Z Indexing .pio/build/coverage/libc1f/libRadioLib.a
+2025-09-21T23:13:26.0974978Z Indexing .pio/build/coverage/libf13/libPine libch341-spi Userspace library.a
+2025-09-21T23:13:26.1165076Z Archiving .pio/build/coverage/lib5db/libAdafruit MPU6050.a
+2025-09-21T23:13:26.1415826Z Indexing .pio/build/coverage/lib5db/libAdafruit MPU6050.a
+2025-09-21T23:13:26.2343831Z Archiving .pio/build/coverage/libd0c/libCrypto.a
+2025-09-21T23:13:26.2550728Z Archiving .pio/build/coverage/lib7aa/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:13:26.2689395Z Indexing .pio/build/coverage/lib7aa/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:13:26.3018634Z Indexing .pio/build/coverage/libd0c/libCrypto.a
+2025-09-21T23:13:26.7771610Z Archiving .pio/build/coverage/lib6ef/libMelopero RV3028.a
+2025-09-21T23:13:26.7881908Z Archiving .pio/build/coverage/lib495/libDFRobot_RTU.a
+2025-09-21T23:13:26.7931800Z Indexing .pio/build/coverage/lib6ef/libMelopero RV3028.a
+2025-09-21T23:13:26.7993670Z Indexing .pio/build/coverage/lib495/libDFRobot_RTU.a
+2025-09-21T23:13:26.9669392Z Archiving .pio/build/coverage/libdce/libRAKwireless RAK12034.a
+2025-09-21T23:13:26.9783244Z Indexing .pio/build/coverage/libdce/libRAKwireless RAK12034.a
+2025-09-21T23:13:27.0026643Z Archiving .pio/build/coverage/libc91/libWiFi.a
+2025-09-21T23:13:27.0157526Z Indexing .pio/build/coverage/libc91/libWiFi.a
+2025-09-21T23:13:27.0363875Z Archiving .pio/build/coverage/libab8/libAdafruit LSM6DS.a
+2025-09-21T23:13:27.0565854Z Indexing .pio/build/coverage/libab8/libAdafruit LSM6DS.a
+2025-09-21T23:13:27.0827346Z Archiving .pio/build/coverage/libc22/libEmotiBit MLX90632.a
+2025-09-21T23:13:27.0993966Z Indexing .pio/build/coverage/libc22/libEmotiBit MLX90632.a
+2025-09-21T23:13:27.2255905Z Archiving .pio/build/coverage/liba3a/libDFRobot_BMM150.a
+2025-09-21T23:13:27.2327045Z Indexing .pio/build/coverage/liba3a/libDFRobot_BMM150.a
+2025-09-21T23:13:27.5568839Z Archiving .pio/build/coverage/libbcf/libAdafruit seesaw Library.a
+2025-09-21T23:13:27.5702486Z Indexing .pio/build/coverage/libbcf/libAdafruit seesaw Library.a
+2025-09-21T23:13:27.6277215Z Archiving .pio/build/coverage/lib1fd/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:13:27.6384768Z Indexing .pio/build/coverage/lib1fd/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:13:28.3891151Z Archiving .pio/build/coverage/libFrameworkArduino.a
+2025-09-21T23:13:28.4159214Z Indexing .pio/build/coverage/libFrameworkArduino.a
+2025-09-21T23:13:40.0995446Z Linking .pio/build/coverage/program
+2025-09-21T23:13:41.0852020Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::visibleLines()':
+2025-09-21T23:13:41.0855296Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:13:(.text+0xd): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:41.0858832Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:16:(.text+0x2b): undefined reference to `graphics::DisplayIface::height()'
+2025-09-21T23:13:41.0862344Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderDetail()':
+2025-09-21T23:13:41.0866455Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:113:(.text+0x657): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:13:41.0870918Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:122:(.text+0x977): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:41.0875090Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:128:(.text+0xad6): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:41.0878988Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb15): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:41.0883296Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:136:(.text+0xb36): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:41.0887074Z /usr/bin/ld: .pio/build/coverage/src/graphics/ScreenChatHistory.cpp.o: in function `graphics::chatui::ScreenChatHistory::renderPicker()':
+2025-09-21T23:13:41.0890580Z /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:57:(.text+0x127a): undefined reference to `graphics::DisplayIface::clear()'
+2025-09-21T23:13:41.0894534Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:62:(.text+0x12d4): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:41.0898683Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:67:(.text+0x12e0): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:41.0902710Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1512): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:41.0906861Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:77:(.text+0x1531): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:41.0911097Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x176f): undefined reference to `graphics::DisplayIface::lineHeight()'
+2025-09-21T23:13:41.0915235Z /usr/bin/ld: /home/ubuntu/runner/_work/firmware/firmware/src/graphics/ScreenChatHistory.cpp:88:(.text+0x178e): undefined reference to `graphics::DisplayIface::drawText(int, int, char const*, bool)'
+2025-09-21T23:13:41.5713283Z collect2: error: ld returned 1 exit status
+2025-09-21T23:13:41.5721882Z *** [.pio/build/coverage/program] Error 1
+2025-09-21T23:13:42.0818650Z ========================= [FAILED] Took 94.55 seconds =========================
+2025-09-21T23:13:42.0848514Z 
+2025-09-21T23:13:42.0874066Z Environment    Status    Duration
+2025-09-21T23:13:42.0874966Z -------------  --------  ------------
+2025-09-21T23:13:42.0875775Z coverage       FAILED    00:01:34.548
+2025-09-21T23:13:42.0877068Z ==================== 1 failed, 0 succeeded in 00:01:34.548 ====================
+2025-09-21T23:13:42.1664025Z ##[error]Process completed with exit code 1.
+2025-09-21T23:13:42.1860612Z ##[group]Run lcov --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}" --test-name integration --output-file coverage_integration.info
+2025-09-21T23:13:42.1864936Z [36;1mlcov --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}" --test-name integration --output-file coverage_integration.info[0m
+2025-09-21T23:13:42.1867687Z [36;1msed -i -e "s#${PWD}#.#" coverage_integration.info # Make paths relative.[0m
+2025-09-21T23:13:42.1901873Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:13:42.1902596Z env:
+2025-09-21T23:13:42.1904713Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:13:42.1906886Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.1908475Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:13:42.1910229Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.1911551Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.1912878Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.1914201Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:13:42.1915218Z ##[endgroup]
+2025-09-21T23:13:42.6962250Z geninfo: ERROR: no .gcda files found in .pio/build/coverage/src
+2025-09-21T23:13:42.6963600Z 	(use "geninfo --ignore-errors empty ..." to bypass this error)
+2025-09-21T23:13:42.7127338Z ##[error]Process completed with exit code 1.
+2025-09-21T23:13:42.7192021Z ##[group]Run echo "long=$(./bin/buildinfo.py long)" >> $GITHUB_OUTPUT
+2025-09-21T23:13:42.7193406Z [36;1mecho "long=$(./bin/buildinfo.py long)" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:13:42.7226466Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:13:42.7227212Z env:
+2025-09-21T23:13:42.7228852Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:13:42.7231209Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.7232641Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:13:42.7234064Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.7235358Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.7236651Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.7238071Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:13:42.7239097Z ##[endgroup]
+2025-09-21T23:13:42.8044278Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:13:42.8045152Z with:
+2025-09-21T23:13:42.8046026Z   name: lcov-coverage-info-native-simulator-test-2.7.10.e236535.zip
+2025-09-21T23:13:42.8047123Z   overwrite: true
+2025-09-21T23:13:42.8047734Z   path: ./coverage_*.info
+2025-09-21T23:13:42.8048397Z   if-no-files-found: warn
+2025-09-21T23:13:42.8049080Z   compression-level: 6
+2025-09-21T23:13:42.8088623Z   include-hidden-files: false
+2025-09-21T23:13:42.8089453Z env:
+2025-09-21T23:13:42.8091246Z   LCOV_CAPTURE_FLAGS: --quiet --capture --include "${PWD}/src/*" --exclude '*/src/mesh/generated/*' --directory .pio/build/coverage/src --base-directory "${PWD}"
+2025-09-21T23:13:42.8093430Z   pythonLocation: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.8094900Z   PKG_CONFIG_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:13:42.8096346Z   Python_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.8097737Z   Python2_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.8099014Z   Python3_ROOT_DIR: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64
+2025-09-21T23:13:42.8100465Z   LD_LIBRARY_PATH: /home/ubuntu/runner/_work/_tool/Python/3.13.7/x64/lib
+2025-09-21T23:13:42.8101512Z ##[endgroup]
+2025-09-21T23:13:43.1016396Z With the provided path, there will be 1 file uploaded
+2025-09-21T23:13:43.8202551Z Artifact name is valid!
+2025-09-21T23:13:43.8206090Z Root directory input is valid!
+2025-09-21T23:13:44.0896007Z Beginning upload of artifact content to blob storage
+2025-09-21T23:13:45.0572823Z Uploaded bytes 166
+2025-09-21T23:13:45.3052446Z Finished uploading artifact content to blob storage!
+2025-09-21T23:13:45.3060052Z SHA256 digest of uploaded artifact zip is 1c3d85a9fc661c201863c19665acc70932c698ea03d4a6fe92e547505df3a883
+2025-09-21T23:13:45.3062240Z Finalizing artifact upload
+2025-09-21T23:13:45.5928439Z Artifact lcov-coverage-info-native-simulator-test-2.7.10.e236535.zip.zip successfully finalized. Artifact ID 4067304084
+2025-09-21T23:13:45.5931507Z Artifact lcov-coverage-info-native-simulator-test-2.7.10.e236535.zip has been successfully uploaded! Final size is 166 bytes. Artifact ID is 4067304084
+2025-09-21T23:13:45.5947918Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067304084
+2025-09-21T23:13:45.6203357Z Post job cleanup.
+2025-09-21T23:13:45.6333836Z Post job cleanup.
+2025-09-21T23:13:45.7452082Z [command]/usr/bin/git version
+2025-09-21T23:13:45.7500743Z git version 2.43.0
+2025-09-21T23:13:45.7552957Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/7e18ba1b-f4d6-4ec0-bad5-6077b6d0ca86' before making global git config changes
+2025-09-21T23:13:45.7555303Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:13:45.7558354Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:13:45.7600000Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:13:45.7637331Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:13:45.7967611Z Entering 'meshtestic'
+2025-09-21T23:13:45.8034766Z Entering 'protobufs'
+2025-09-21T23:13:45.8115505Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:13:45.8143040Z http.https://github.com/.extraheader
+2025-09-21T23:13:45.8153996Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:13:45.8186735Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:13:45.8466607Z Entering 'meshtestic'
+2025-09-21T23:13:45.8509021Z http.https://github.com/.extraheader
+2025-09-21T23:13:45.8558299Z Entering 'protobufs'
+2025-09-21T23:13:45.8590772Z http.https://github.com/.extraheader
+2025-09-21T23:13:45.8872324Z Post job cleanup.
+2025-09-21T23:13:45.9935143Z [command]/usr/bin/git version
+2025-09-21T23:13:45.9984071Z git version 2.43.0
+2025-09-21T23:13:46.0032725Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/2c57f251-63a3-4824-bce9-50cc9c406d24' before making global git config changes
+2025-09-21T23:13:46.0035029Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:13:46.0037565Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:13:46.0078599Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:13:46.0115029Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:13:46.0402045Z Entering 'meshtestic'
+2025-09-21T23:13:46.0469844Z Entering 'protobufs'
+2025-09-21T23:13:46.0558208Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:13:46.0593022Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:13:46.0910865Z Entering 'meshtestic'
+2025-09-21T23:13:46.0975574Z Entering 'protobufs'
+2025-09-21T23:13:46.1293362Z Cleaning up orphan processes

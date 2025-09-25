@@ -1,0 +1,967 @@
+﻿2025-09-21T23:33:09.3990827Z Current runner version: '2.328.0'
+2025-09-21T23:33:09.4012887Z ##[group]Runner Image Provisioner
+2025-09-21T23:33:09.4013743Z Hosted Compute Agent
+2025-09-21T23:33:09.4014266Z Version: 20250829.383
+2025-09-21T23:33:09.4014860Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:33:09.4015526Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:33:09.4016177Z ##[endgroup]
+2025-09-21T23:33:09.4016690Z ##[group]Operating System
+2025-09-21T23:33:09.4017189Z Ubuntu
+2025-09-21T23:33:09.4017720Z 24.04.3
+2025-09-21T23:33:09.4018144Z LTS
+2025-09-21T23:33:09.4018602Z ##[endgroup]
+2025-09-21T23:33:09.4019109Z ##[group]Runner Image
+2025-09-21T23:33:09.4019635Z Image: ubuntu-24.04
+2025-09-21T23:33:09.4020098Z Version: 20250907.24.1
+2025-09-21T23:33:09.4021152Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:33:09.4023050Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:33:09.4024094Z ##[endgroup]
+2025-09-21T23:33:09.4026455Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:33:09.4028398Z Actions: read
+2025-09-21T23:33:09.4028909Z Attestations: read
+2025-09-21T23:33:09.4029547Z Checks: read
+2025-09-21T23:33:09.4030034Z Contents: read
+2025-09-21T23:33:09.4030540Z Deployments: read
+2025-09-21T23:33:09.4031007Z Discussions: read
+2025-09-21T23:33:09.4031898Z Issues: read
+2025-09-21T23:33:09.4032385Z Metadata: read
+2025-09-21T23:33:09.4032864Z Models: read
+2025-09-21T23:33:09.4033375Z Packages: read
+2025-09-21T23:33:09.4033848Z Pages: read
+2025-09-21T23:33:09.4034324Z PullRequests: read
+2025-09-21T23:33:09.4034791Z RepositoryProjects: read
+2025-09-21T23:33:09.4035403Z SecurityEvents: read
+2025-09-21T23:33:09.4036027Z Statuses: read
+2025-09-21T23:33:09.4036463Z ##[endgroup]
+2025-09-21T23:33:09.4038491Z Secret source: Actions
+2025-09-21T23:33:09.4039136Z Prepare workflow directory
+2025-09-21T23:33:09.4348602Z Prepare all required actions
+2025-09-21T23:33:09.4388496Z Getting action download info
+2025-09-21T23:33:09.9131859Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:33:10.0706660Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:33:10.4581115Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:33:10.7017016Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:33:10.7021925Z ##[group] Inputs
+2025-09-21T23:33:10.7022447Z   version: 2.7.10.3d51287
+2025-09-21T23:33:10.7022941Z   platform: esp32c6
+2025-09-21T23:33:10.7023382Z   pio_env: tlora-c6
+2025-09-21T23:33:10.7023832Z ##[endgroup]
+2025-09-21T23:33:10.7024371Z Complete job name: build-esp32c6 (tlora-c6) / build-esp32c6
+2025-09-21T23:33:10.7649362Z ##[group]Run actions/checkout@v5
+2025-09-21T23:33:10.7650255Z with:
+2025-09-21T23:33:10.7650670Z   submodules: recursive
+2025-09-21T23:33:10.7651157Z   ref: develop
+2025-09-21T23:33:10.7652028Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:10.7652784Z   token: ***
+2025-09-21T23:33:10.7653203Z   ssh-strict: true
+2025-09-21T23:33:10.7653636Z   ssh-user: git
+2025-09-21T23:33:10.7654071Z   persist-credentials: true
+2025-09-21T23:33:10.7654542Z   clean: true
+2025-09-21T23:33:10.7654972Z   sparse-checkout-cone-mode: true
+2025-09-21T23:33:10.7655483Z   fetch-depth: 1
+2025-09-21T23:33:10.7655889Z   fetch-tags: false
+2025-09-21T23:33:10.7656319Z   show-progress: true
+2025-09-21T23:33:10.7656751Z   lfs: false
+2025-09-21T23:33:10.7657152Z   set-safe-directory: true
+2025-09-21T23:33:10.7657942Z ##[endgroup]
+2025-09-21T23:33:10.8604475Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:10.8606418Z ##[group]Getting Git version info
+2025-09-21T23:33:10.8607236Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:10.8608391Z [command]/usr/bin/git version
+2025-09-21T23:33:10.8663841Z git version 2.51.0
+2025-09-21T23:33:10.8684744Z ##[endgroup]
+2025-09-21T23:33:10.8700477Z Temporarily overriding HOME='/home/runner/work/_temp/236928e8-50e2-47ef-bf0c-038dacf719ac' before making global git config changes
+2025-09-21T23:33:10.8703458Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:33:10.8705901Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:33:10.8742304Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:10.8746248Z ##[group]Initializing the repository
+2025-09-21T23:33:10.8750999Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:33:10.8859173Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:33:10.8860662Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:33:10.8862169Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:33:10.8863292Z hint:
+2025-09-21T23:33:10.8863916Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:33:10.8865075Z hint:
+2025-09-21T23:33:10.8866224Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:33:10.8868095Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:33:10.8869582Z hint:
+2025-09-21T23:33:10.8870379Z hint: 	git branch -m <name>
+2025-09-21T23:33:10.8871506Z hint:
+2025-09-21T23:33:10.8872655Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:33:10.8874700Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:33:10.8877852Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:10.8913169Z ##[endgroup]
+2025-09-21T23:33:10.8914532Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:33:10.8917091Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:33:10.8945518Z ##[endgroup]
+2025-09-21T23:33:10.8946888Z ##[group]Setting up auth
+2025-09-21T23:33:10.8952721Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:33:10.8983491Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:33:10.9378756Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:33:10.9408197Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:33:10.9624573Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:10.9656985Z ##[endgroup]
+2025-09-21T23:33:10.9657844Z ##[group]Fetching the repository
+2025-09-21T23:33:10.9667152Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:33:11.8365349Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:11.8369022Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:33:11.8398461Z ##[endgroup]
+2025-09-21T23:33:11.8400273Z ##[group]Determining the checkout info
+2025-09-21T23:33:11.8406332Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:33:11.8429281Z   origin/develop
+2025-09-21T23:33:11.8435753Z ##[endgroup]
+2025-09-21T23:33:11.8438997Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:33:11.8480326Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:33:11.8508850Z ##[group]Checking out the ref
+2025-09-21T23:33:11.8512301Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:33:11.9510106Z Switched to a new branch 'develop'
+2025-09-21T23:33:11.9512546Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:33:11.9522909Z ##[endgroup]
+2025-09-21T23:33:11.9524616Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:33:11.9528616Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:11.9598664Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:33:11.9628623Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:33:11.9658195Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:33:11.9685178Z ##[endgroup]
+2025-09-21T23:33:11.9687704Z ##[group]Fetching submodules
+2025-09-21T23:33:11.9689726Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:33:11.9912775Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:33:12.0120365Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:33:12.0124830Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:33:12.0149567Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:33:12.5196758Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:33:13.0406282Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:33:13.0515001Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:33:13.0545441Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:33:13.0754780Z Entering 'meshtestic'
+2025-09-21T23:33:13.0791089Z Entering 'protobufs'
+2025-09-21T23:33:13.0834222Z ##[endgroup]
+2025-09-21T23:33:13.0834676Z ##[group]Persisting credentials for submodules
+2025-09-21T23:33:13.0839975Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:33:13.1043674Z Entering 'meshtestic'
+2025-09-21T23:33:13.1085137Z Entering 'protobufs'
+2025-09-21T23:33:13.1136461Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:33:13.1337029Z Entering 'meshtestic'
+2025-09-21T23:33:13.1372696Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:33:13.1391558Z Entering 'protobufs'
+2025-09-21T23:33:13.1428341Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:33:13.1468173Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:33:13.1668969Z Entering 'meshtestic'
+2025-09-21T23:33:13.1705051Z Entering 'protobufs'
+2025-09-21T23:33:13.1752370Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:33:13.1953762Z Entering 'meshtestic'
+2025-09-21T23:33:13.1989338Z Entering 'protobufs'
+2025-09-21T23:33:13.2032657Z ##[endgroup]
+2025-09-21T23:33:13.2065552Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:33:13.2086918Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:33:13.2277289Z ##[group]Run if [ "$PIO_PLATFORM" = "esp32s3" ]; then
+2025-09-21T23:33:13.2277724Z [36;1mif [ "$PIO_PLATFORM" = "esp32s3" ]; then[0m
+2025-09-21T23:33:13.2278046Z [36;1m  echo "src=firmware-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:13.2278378Z [36;1m  echo "tgt=release/bleota-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:13.2278976Z [36;1melif [ "$PIO_PLATFORM" = "esp32c3" ] || [ "$PIO_PLATFORM" = "esp32c6" ]; then[0m
+2025-09-21T23:33:13.2279378Z [36;1m  echo "src=firmware-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:13.2279688Z [36;1m  echo "tgt=release/bleota-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:13.2279984Z [36;1melif [ "$PIO_PLATFORM" = "esp32" ]; then[0m
+2025-09-21T23:33:13.2280274Z [36;1m  echo "src=firmware.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:13.2280571Z [36;1m  echo "tgt=release/bleota.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:13.2280833Z [36;1mfi[0m
+2025-09-21T23:33:13.2336070Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:33:13.2336358Z env:
+2025-09-21T23:33:13.2336533Z   PIO_PLATFORM: esp32c6
+2025-09-21T23:33:13.2336735Z ##[endgroup]
+2025-09-21T23:33:13.2492051Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:33:13.2492378Z with:
+2025-09-21T23:33:13.2556712Z   pio_platform: esp32c6
+2025-09-21T23:33:13.2556980Z   pio_env: tlora-c6
+2025-09-21T23:33:13.2557205Z   pio_target: build
+2025-09-21T23:33:13.2557441Z   ota_firmware_source: firmware-c3.bin
+2025-09-21T23:33:13.2557759Z   ota_firmware_target: release/bleota-c3.bin
+2025-09-21T23:33:13.2558051Z ##[endgroup]
+2025-09-21T23:33:13.2632698Z ##[group]Run docker run --rm \
+2025-09-21T23:33:13.2632975Z [36;1mdocker run --rm \[0m
+2025-09-21T23:33:13.2633211Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:33:13.2633438Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:33:13.2633667Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:33:13.2633876Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:33:13.2634101Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:33:13.2634329Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:33:13.2634581Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:33:13.2634869Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:33:13.2635142Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:33:13.2635479Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-esp32c6[0m
+2025-09-21T23:33:13.2665812Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:33:13.2666141Z env:
+2025-09-21T23:33:13.2666308Z   MT_ENV: tlora-c6
+2025-09-21T23:33:13.2666496Z   MT_PLATFORM: esp32c6
+2025-09-21T23:33:13.2666679Z   MT_TARGET: build
+2025-09-21T23:33:13.2666870Z   MT_OTA_FIRMWARE_SOURCE: firmware-c3.bin
+2025-09-21T23:33:13.2667136Z   MT_OTA_FIRMWARE_TARGET: release/bleota-c3.bin
+2025-09-21T23:33:13.2667419Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:33:13.2667673Z ##[endgroup]
+2025-09-21T23:33:14.1169269Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-esp32c6' locally
+2025-09-21T23:33:14.8031149Z master-esp32c6: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:33:14.9825615Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:33:14.9826270Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:33:14.9826767Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:33:14.9827258Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:33:14.9827735Z 815e87185931: Pulling fs layer
+2025-09-21T23:33:14.9828148Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:33:14.9828444Z da9989870cf6: Pulling fs layer
+2025-09-21T23:33:14.9828726Z c4187f287d88: Pulling fs layer
+2025-09-21T23:33:14.9829013Z 2a1093fa362a: Pulling fs layer
+2025-09-21T23:33:14.9829302Z 49d30055ceea: Pulling fs layer
+2025-09-21T23:33:14.9829583Z 85c400f91724: Pulling fs layer
+2025-09-21T23:33:14.9829867Z 23e08fd9357b: Pulling fs layer
+2025-09-21T23:33:14.9830152Z 2c6824a05f51: Pulling fs layer
+2025-09-21T23:33:14.9830438Z 942132fae369: Pulling fs layer
+2025-09-21T23:33:14.9830713Z c611f5bb386b: Waiting
+2025-09-21T23:33:14.9830961Z 815e87185931: Waiting
+2025-09-21T23:33:14.9831196Z 2a1093fa362a: Waiting
+2025-09-21T23:33:14.9831670Z 71c11f7c6832: Waiting
+2025-09-21T23:33:14.9831912Z da9989870cf6: Waiting
+2025-09-21T23:33:14.9832155Z 49d30055ceea: Waiting
+2025-09-21T23:33:14.9832389Z 23e08fd9357b: Waiting
+2025-09-21T23:33:14.9832630Z c4187f287d88: Waiting
+2025-09-21T23:33:14.9832866Z 2c6824a05f51: Waiting
+2025-09-21T23:33:14.9833327Z 85c400f91724: Waiting
+2025-09-21T23:33:15.3092726Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:33:15.3093326Z 8fb375ec14f3: Download complete
+2025-09-21T23:33:15.3400189Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:33:15.3401535Z 7d5073558d5a: Download complete
+2025-09-21T23:33:15.5376588Z 815e87185931: Verifying Checksum
+2025-09-21T23:33:15.5378101Z 815e87185931: Download complete
+2025-09-21T23:33:15.7931026Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:33:15.7932546Z ccbbb2080a06: Download complete
+2025-09-21T23:33:15.9787639Z da9989870cf6: Verifying Checksum
+2025-09-21T23:33:15.9788116Z da9989870cf6: Download complete
+2025-09-21T23:33:16.1185377Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:33:16.1186292Z c611f5bb386b: Download complete
+2025-09-21T23:33:16.2327344Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:33:16.2327663Z 71c11f7c6832: Download complete
+2025-09-21T23:33:16.3273965Z 2a1093fa362a: Download complete
+2025-09-21T23:33:16.4501700Z c4187f287d88: Verifying Checksum
+2025-09-21T23:33:16.4502234Z c4187f287d88: Download complete
+2025-09-21T23:33:16.6587090Z 23e08fd9357b: Verifying Checksum
+2025-09-21T23:33:16.6587723Z 23e08fd9357b: Download complete
+2025-09-21T23:33:17.0492237Z 2c6824a05f51: Verifying Checksum
+2025-09-21T23:33:17.0493374Z 2c6824a05f51: Download complete
+2025-09-21T23:33:17.1597738Z 49d30055ceea: Verifying Checksum
+2025-09-21T23:33:17.1599347Z 49d30055ceea: Download complete
+2025-09-21T23:33:17.2136560Z 8fb375ec14f3: Pull complete
+2025-09-21T23:33:17.2615454Z 942132fae369: Verifying Checksum
+2025-09-21T23:33:17.2615982Z 942132fae369: Download complete
+2025-09-21T23:33:19.3433641Z ccbbb2080a06: Pull complete
+2025-09-21T23:33:22.3400107Z 7d5073558d5a: Pull complete
+2025-09-21T23:33:28.0427431Z 85c400f91724: Verifying Checksum
+2025-09-21T23:33:28.0427813Z 85c400f91724: Download complete
+2025-09-21T23:33:30.0747375Z c611f5bb386b: Pull complete
+2025-09-21T23:33:30.3303717Z 815e87185931: Pull complete
+2025-09-21T23:33:31.0322502Z 71c11f7c6832: Pull complete
+2025-09-21T23:33:31.0425404Z da9989870cf6: Pull complete
+2025-09-21T23:33:32.0697779Z c4187f287d88: Pull complete
+2025-09-21T23:33:32.0790402Z 2a1093fa362a: Pull complete
+2025-09-21T23:33:33.5529804Z 49d30055ceea: Pull complete
+2025-09-21T23:33:48.2385834Z 85c400f91724: Pull complete
+2025-09-21T23:33:48.2501962Z 23e08fd9357b: Pull complete
+2025-09-21T23:33:48.2597018Z 2c6824a05f51: Pull complete
+2025-09-21T23:33:48.2682492Z 942132fae369: Pull complete
+2025-09-21T23:33:48.2729460Z Digest: sha256:a37f2fcba8618a13933b7baac6f2c4e553f99b7ef4aaad1d561d4dfed3346749
+2025-09-21T23:33:48.2741846Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-esp32c6
+2025-09-21T23:33:48.9944591Z Building PlatformIO environment: tlora-c6
+2025-09-21T23:33:49.2818535Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:33:49.9628659Z Resolving tlora-c6 dependencies...
+2025-09-21T23:33:49.9911694Z Removing unused dependencies...
+2025-09-21T23:33:49.9993683Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:33:50.1100701Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:33:50.4137291Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:33:54.4097434Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:54.6264278Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:54.7192659Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:33:55.3710149Z Building for tlora-c6 with 
+2025-09-21T23:33:56.1631936Z Processing tlora-c6 (board: esp32-c6-devkitm-1; platform: 
+2025-09-21T23:33:56.1633165Z https://github.com/Jason2866/platform-espressif32/archive/22faa566df8c789000f8136cd8d0aca49617af55.zip; framework: arduino)
+2025-09-21T23:33:56.1634285Z --------------------------------------------------------------------------------
+2025-09-21T23:33:57.3811874Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:33:57.3968591Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32-c6-devkitm-1.html
+2025-09-21T23:33:57.3970172Z PLATFORM: Espressif 32 (2024.9.10) > Espressif ESP32-C6-DevKitM-1
+2025-09-21T23:33:57.3970977Z HARDWARE: ESP32C6 160MHz, 320KB RAM, 4MB Flash
+2025-09-21T23:33:57.3973171Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:33:57.3974815Z PACKAGES: 
+2025-09-21T23:33:57.3975260Z  - framework-arduinoespressif32 @ 3.0.5+sha.124d64e 
+2025-09-21T23:33:57.3975697Z  - tool-esptoolpy @ 4.8.0 
+2025-09-21T23:33:57.3975964Z  - tool-mklittlefs @ 3.2.0 
+2025-09-21T23:33:57.3976253Z  - tool-riscv32-esp-elf-gdb @ 12.1.0+20221002 
+2025-09-21T23:33:57.3976813Z  - tool-xtensa-esp-elf-gdb @ 12.1.0+20221002 
+2025-09-21T23:33:57.3977149Z  - toolchain-riscv32-esp @ 12.2.0+20230208
+2025-09-21T23:33:57.6456208Z Installing Python dependencies
+2025-09-21T23:33:58.0268130Z Collecting wheel>=0.35.1
+2025-09-21T23:33:58.0597419Z   Downloading wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+2025-09-21T23:33:58.1050373Z Collecting zopfli>=0.2.2
+2025-09-21T23:33:58.1087940Z   Downloading zopfli-0.2.3.post1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.9 kB)
+2025-09-21T23:33:58.1845930Z Collecting tasmota-metrics>=0.4.3
+2025-09-21T23:33:58.1881507Z   Downloading tasmota_metrics-0.4.3-py3-none-any.whl.metadata (1.4 kB)
+2025-09-21T23:33:58.1930422Z Requirement already satisfied: pyyaml in /usr/local/lib/python3.13/site-packages (from tasmota-metrics>=0.4.3) (6.0.2)
+2025-09-21T23:33:58.1968087Z Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+2025-09-21T23:33:58.2092758Z Downloading zopfli-0.2.3.post1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (851 kB)
+2025-09-21T23:33:58.2261534Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 851.1/851.1 kB 63.4 MB/s  0:00:00
+2025-09-21T23:33:58.2309675Z Downloading tasmota_metrics-0.4.3-py3-none-any.whl (23 kB)
+2025-09-21T23:33:58.2806528Z Installing collected packages: zopfli, wheel, tasmota-metrics
+2025-09-21T23:33:58.3628651Z 
+2025-09-21T23:33:58.3675150Z Successfully installed tasmota-metrics-0.4.3 wheel-0.45.1 zopfli-0.2.3.post1
+2025-09-21T23:33:58.4164558Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:33:58.4165215Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:33:58.5409138Z [nanopb] No generation needed.
+2025-09-21T23:33:58.9707405Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:01.6008195Z Downloading 0% 10%
+2025-09-21T23:34:01.6056959Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:34:01.6091045Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:34:01.7285901Z [nanopb] No generation needed.
+2025-09-21T23:34:01.8339388Z Found 85 compatible libraries
+2025-09-21T23:34:01.8339809Z Scanning dependencies...
+2025-09-21T23:34:09.8714095Z Dependency Graph
+2025-09-21T23:34:09.8714639Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:34:09.8716232Z |-- OneButton @ 2.6.1
+2025-09-21T23:34:09.8718084Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:34:09.8720866Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:34:09.8721651Z |-- ArduinoThread @ 0.0.0+20250919051450
+2025-09-21T23:34:09.8723130Z |-- Nanopb @ 0.4.91
+2025-09-21T23:34:09.8725881Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:34:09.8726285Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:34:09.8727971Z |-- NTPClient @ 3.2.1
+2025-09-21T23:34:09.8730075Z |-- Syslog @ 2.0.0
+2025-09-21T23:34:09.8732172Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:34:09.8734580Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:34:09.8736838Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:34:09.8738374Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:34:09.8740576Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:34:09.8741852Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:34:09.8743862Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:34:09.8745376Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:34:09.8747164Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:34:09.8748692Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:34:09.8750697Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:34:09.8751861Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:34:09.8753826Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:34:09.8755439Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:34:09.8757223Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:34:09.8758871Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:34:09.8760655Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:34:09.8763259Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:34:09.8765956Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:34:09.8766482Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:34:09.8769109Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:34:09.8769524Z |-- INA226 @ 0.6.4
+2025-09-21T23:34:09.8771108Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:34:09.8773814Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:34:09.8774465Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:34:09.8777454Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:34:09.8778766Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:34:09.8780931Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:34:09.8781917Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:34:09.8784610Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:34:09.8785529Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:34:09.8787496Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:34:09.8789498Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:34:09.8790887Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:34:09.8793645Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:34:09.8795198Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:34:09.8796900Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:09.8798331Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:34:09.8800079Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:34:09.8801612Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:34:09.8803858Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:34:09.8806892Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:34:09.8807309Z |-- RadioLib @ 7.3.0
+2025-09-21T23:34:09.8808938Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:34:09.8811823Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:34:09.8812662Z |-- Crypto @ 0.4.0
+2025-09-21T23:34:09.8815102Z |-- SD @ 3.0.5
+2025-09-21T23:34:09.8816171Z |-- SPI @ 3.0.5
+2025-09-21T23:34:09.8816463Z |-- WiFi @ 3.0.5
+2025-09-21T23:34:09.8816850Z |-- Wire @ 3.0.5
+2025-09-21T23:34:09.8820034Z |-- Preferences @ 3.0.5
+2025-09-21T23:34:09.8820392Z |-- ESPmDNS @ 3.0.5
+2025-09-21T23:34:09.8820692Z |-- LittleFS @ 3.0.5
+2025-09-21T23:34:09.8820990Z |-- ESP32 Async UDP @ 3.0.5
+2025-09-21T23:34:09.8822642Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:34:10.3601111Z Building in release mode
+2025-09-21T23:34:10.5447987Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on tlora-c6
+2025-09-21T23:34:10.5463576Z Using flags:
+2025-09-21T23:34:10.5463992Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:34:10.5464370Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:34:10.5464736Z -DAPP_ENV=tlora-c6
+2025-09-21T23:34:10.5465018Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:10.5465278Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:34:10.5465721Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:34:10.5466290Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:34:10.8224869Z Compiling .pio/build/tlora-c6/src/BluetoothCommon.cpp.o
+2025-09-21T23:34:10.9578899Z Compiling .pio/build/tlora-c6/src/DebugConfiguration.cpp.o
+2025-09-21T23:34:10.9738180Z Compiling .pio/build/tlora-c6/src/DisplayFormatters.cpp.o
+2025-09-21T23:34:11.0022360Z Compiling .pio/build/tlora-c6/src/FSCommon.cpp.o
+2025-09-21T23:34:12.7144619Z Compiling .pio/build/tlora-c6/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:34:12.8045479Z Compiling .pio/build/tlora-c6/src/Fusion/FusionCompass.c.o
+2025-09-21T23:34:12.8830261Z Compiling .pio/build/tlora-c6/src/Fusion/FusionOffset.c.o
+2025-09-21T23:34:12.9483693Z Compiling .pio/build/tlora-c6/src/GpioLogic.cpp.o
+2025-09-21T23:34:13.0853181Z Compiling .pio/build/tlora-c6/src/Led.cpp.o
+2025-09-21T23:34:13.1074093Z Compiling .pio/build/tlora-c6/src/Observer.cpp.o
+2025-09-21T23:34:13.1566075Z Compiling .pio/build/tlora-c6/src/Power.cpp.o
+2025-09-21T23:34:13.7505437Z In file included from src/power.h:8,
+2025-09-21T23:34:13.7509647Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:13.7533495Z                  from src/main.h:8,
+2025-09-21T23:34:13.7537594Z                  from src/Led.cpp:3:
+2025-09-21T23:34:13.7543524Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:13.7548750Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:13.7551803Z       |  ^~~~~~~
+2025-09-21T23:34:13.7911578Z In file included from src/power.h:8,
+2025-09-21T23:34:13.7913968Z                  from src/Power.cpp:13:
+2025-09-21T23:34:13.7917524Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:13.7956461Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:13.7957329Z       |  ^~~~~~~
+2025-09-21T23:34:14.7572450Z Compiling .pio/build/tlora-c6/src/PowerFSM.cpp.o
+2025-09-21T23:34:14.9166454Z Compiling .pio/build/tlora-c6/src/PowerMon.cpp.o
+2025-09-21T23:34:15.4530586Z Compiling .pio/build/tlora-c6/src/RedirectablePrint.cpp.o
+2025-09-21T23:34:15.4637476Z In file included from src/power.h:8,
+2025-09-21T23:34:15.4643863Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:15.4644455Z                  from src/PowerFSM.cpp:17:
+2025-09-21T23:34:15.4646338Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:15.4648689Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:15.4649635Z       |  ^~~~~~~
+2025-09-21T23:34:15.8119977Z Compiling .pio/build/tlora-c6/src/SPILock.cpp.o
+2025-09-21T23:34:16.1549566Z In file included from src/power.h:8,
+2025-09-21T23:34:16.1550434Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:16.1552141Z                  from src/main.h:8,
+2025-09-21T23:34:16.1552668Z                  from src/RedirectablePrint.cpp:6:
+2025-09-21T23:34:16.1554397Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:16.1556653Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:16.1557514Z       |  ^~~~~~~
+2025-09-21T23:34:16.8346644Z Compiling .pio/build/tlora-c6/src/SafeFile.cpp.o
+2025-09-21T23:34:17.3015840Z Compiling .pio/build/tlora-c6/src/SerialConsole.cpp.o
+2025-09-21T23:34:17.6317169Z Compiling .pio/build/tlora-c6/src/airtime.cpp.o
+2025-09-21T23:34:18.0001747Z Compiling .pio/build/tlora-c6/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:34:18.7435285Z Compiling .pio/build/tlora-c6/src/buzz/buzz.cpp.o
+2025-09-21T23:34:19.2566370Z Compiling .pio/build/tlora-c6/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:34:19.6248914Z Compiling .pio/build/tlora-c6/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:34:20.0408034Z Compiling .pio/build/tlora-c6/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:34:20.6862050Z Compiling .pio/build/tlora-c6/src/concurrency/Lock.cpp.o
+2025-09-21T23:34:21.0635988Z Compiling .pio/build/tlora-c6/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:34:21.4310470Z Compiling .pio/build/tlora-c6/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:34:21.8491956Z Compiling .pio/build/tlora-c6/src/concurrency/OSThread.cpp.o
+2025-09-21T23:34:22.1394875Z In file included from src/power.h:8,
+2025-09-21T23:34:22.1397281Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:22.1398093Z                  from src/main.h:8,
+2025-09-21T23:34:22.1398575Z                  from src/concurrency/NotifiedWorkerThread.cpp:3:
+2025-09-21T23:34:22.1400433Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:22.1403018Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:22.1403853Z       |  ^~~~~~~
+2025-09-21T23:34:22.5027868Z Compiling .pio/build/tlora-c6/src/detect/ScanI2C.cpp.o
+2025-09-21T23:34:22.6219469Z Compiling .pio/build/tlora-c6/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:34:22.8874251Z Compiling .pio/build/tlora-c6/src/gps/GPS.cpp.o
+2025-09-21T23:34:23.6067592Z In file included from src/power.h:8,
+2025-09-21T23:34:23.6072696Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:23.6079989Z                  from src/main.h:8,
+2025-09-21T23:34:23.6080401Z                  from src/gps/GPS.cpp:17:
+2025-09-21T23:34:23.6082432Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:23.6084762Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:23.6085647Z       |  ^~~~~~~
+2025-09-21T23:34:23.7049804Z Compiling .pio/build/tlora-c6/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:34:23.8586893Z Compiling .pio/build/tlora-c6/src/gps/GeoCoord.cpp.o
+2025-09-21T23:34:25.0082253Z Compiling .pio/build/tlora-c6/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:34:25.5703714Z Compiling .pio/build/tlora-c6/src/gps/RTC.cpp.o
+2025-09-21T23:34:25.6916963Z In file included from src/power.h:8,
+2025-09-21T23:34:25.6921788Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:25.6923847Z                  from src/main.h:8,
+2025-09-21T23:34:25.6925770Z                  from src/gps/NMEAWPL.h:3,
+2025-09-21T23:34:25.6927932Z                  from src/gps/NMEAWPL.cpp:2:
+2025-09-21T23:34:25.6930976Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:25.6933735Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:25.6934553Z       |  ^~~~~~~
+2025-09-21T23:34:25.7010081Z Compiling .pio/build/tlora-c6/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:34:26.2666995Z In file included from src/power.h:8,
+2025-09-21T23:34:26.2668055Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:26.2668730Z                  from src/main.h:8,
+2025-09-21T23:34:26.2670825Z                  from src/gps/RTC.cpp:4:
+2025-09-21T23:34:26.2672882Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:26.2675631Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:26.2676497Z       |  ^~~~~~~
+2025-09-21T23:34:26.3235793Z Compiling .pio/build/tlora-c6/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:34:27.4663247Z Compiling .pio/build/tlora-c6/src/graphics/Screen.cpp.o
+2025-09-21T23:34:27.4987854Z Compiling .pio/build/tlora-c6/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:34:28.0165259Z Compiling .pio/build/tlora-c6/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:34:28.1448754Z Compiling .pio/build/tlora-c6/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:34:28.1639681Z In file included from src/power.h:8,
+2025-09-21T23:34:28.1642191Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:28.1642661Z                  from src/graphics/Screen.cpp:23:
+2025-09-21T23:34:28.1644446Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:28.1646659Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:28.1647453Z       |  ^~~~~~~
+2025-09-21T23:34:28.7062855Z Compiling .pio/build/tlora-c6/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:34:28.7860914Z Compiling .pio/build/tlora-c6/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:34:28.8304424Z In file included from src/power.h:8,
+2025-09-21T23:34:28.8305288Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:28.8309844Z                  from src/graphics/draw/UIRenderer.h:4,
+2025-09-21T23:34:28.8310667Z                  from src/graphics/SharedUIDisplay.cpp:4:
+2025-09-21T23:34:28.8314439Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:28.8316717Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:28.8317551Z       |  ^~~~~~~
+2025-09-21T23:34:29.3937002Z In file included from src/power.h:8,
+2025-09-21T23:34:29.3937566Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:29.3938294Z                  from src/main.h:8,
+2025-09-21T23:34:29.3955931Z                  from src/graphics/TFTDisplay.cpp:2:
+2025-09-21T23:34:29.3957833Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:29.3960167Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:29.3961050Z       |  ^~~~~~~
+2025-09-21T23:34:29.6848868Z src/graphics/Screen.cpp: In function 'void graphics::drawFavNodeChatFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:29.6850431Z src/graphics/Screen.cpp:568:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:29.6851521Z   568 |     const int h     = display->height();
+2025-09-21T23:34:29.6852130Z       |               ^
+2025-09-21T23:34:29.6935369Z src/graphics/Screen.cpp: In function 'void graphics::drawChannelChatTabFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:29.6936986Z src/graphics/Screen.cpp:701:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:29.6937670Z   701 |     const int h     = display->height();
+2025-09-21T23:34:29.6938107Z       |               ^
+2025-09-21T23:34:29.7235475Z src/graphics/Screen.cpp: In constructor 'graphics::Screen::Screen(ScanI2C::DeviceAddress, meshtastic_Config_DisplayConfig_OledType, OLEDDISPLAY_GEOMETRY)':
+2025-09-21T23:34:29.7237068Z src/graphics/Screen.cpp:1120:24: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:29.7238082Z  1120 |         if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:29.7238645Z       |             ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:29.7240552Z src/graphics/Screen.cpp:1120:45: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:29.7242085Z  1120 |         if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:29.7242625Z       |                                  ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:29.7244057Z src/graphics/Screen.cpp:1120:66: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:29.7245032Z  1120 |         if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:29.7245603Z       |                                                       ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:29.7765681Z src/graphics/Screen.cpp: In member function 'int graphics::Screen::handleInputEvent(const InputEvent*)':
+2025-09-21T23:34:29.7766867Z src/graphics/Screen.cpp:2649:24: warning: unused variable 'shortPressAsDown' [-Wunused-variable]
+2025-09-21T23:34:29.7767666Z  2649 |             const bool shortPressAsDown =
+2025-09-21T23:34:29.7773293Z       |                        ^~~~~~~~~~~~~~~~
+2025-09-21T23:34:30.3468081Z src/graphics/Screen.cpp: In member function 'virtual int32_t graphics::Screen::runOnce()':
+2025-09-21T23:34:30.3470910Z src/graphics/Screen.cpp:1578:47: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2025-09-21T23:34:30.3472011Z  1578 |             NotificationRenderer::pauseBanner = false;
+2025-09-21T23:34:30.3472544Z       |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+2025-09-21T23:34:30.3473029Z src/graphics/Screen.cpp:1579:9: note: here
+2025-09-21T23:34:30.3473741Z  1579 |         case Cmd::STOP_BOOT_SCREEN:
+2025-09-21T23:34:30.3474177Z       |         ^~~~
+2025-09-21T23:34:30.3842330Z src/graphics/Screen.cpp: At global scope:
+2025-09-21T23:34:30.3844390Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:34:30.3864572Z  1061 | static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:34:30.3865689Z       |             ^~~~~~~~~~~~~~~~~
+2025-09-21T23:34:30.3867148Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:30.3869149Z   222 | static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:34:30.3870155Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:30.3893972Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:34:30.3896411Z   166 | static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:34:30.3897985Z       |             ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:30.8240942Z Compiling .pio/build/tlora-c6/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:34:30.8638157Z Compiling .pio/build/tlora-c6/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:34:31.0941755Z Compiling .pio/build/tlora-c6/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:34:31.4973712Z In file included from src/power.h:8,
+2025-09-21T23:34:31.4975304Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:31.4977783Z                  from src/graphics/VirtualKeyboard.cpp:3:
+2025-09-21T23:34:31.4979700Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:31.4982208Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:31.4983062Z       |  ^~~~~~~
+2025-09-21T23:34:31.5618438Z In file included from src/power.h:8,
+2025-09-21T23:34:31.5618996Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:31.5620517Z                  from src/graphics/draw/UIRenderer.h:4,
+2025-09-21T23:34:31.5621187Z                  from src/graphics/draw/ClockRenderer.cpp:5:
+2025-09-21T23:34:31.5623438Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:31.5625688Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:31.5626526Z       |  ^~~~~~~
+2025-09-21T23:34:31.7466370Z In file included from src/power.h:8,
+2025-09-21T23:34:31.7467782Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:31.7469449Z                  from src/graphics/draw/CompassRenderer.h:3,
+2025-09-21T23:34:31.7470031Z                  from src/graphics/draw/CompassRenderer.cpp:1:
+2025-09-21T23:34:31.7472215Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:31.7474625Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:31.7475522Z       |  ^~~~~~~
+2025-09-21T23:34:32.7871598Z src/graphics/VirtualKeyboard.cpp: In member function 'void graphics::VirtualKeyboard::drawInputArea(OLEDDisplay*, int16_t, int16_t, int16_t)':
+2025-09-21T23:34:32.7873241Z src/graphics/VirtualKeyboard.cpp:356:23: warning: unused variable 'innerLeft' [-Wunused-variable]
+2025-09-21T23:34:32.7874115Z   356 |             const int innerLeft = boxX + 1;
+2025-09-21T23:34:32.7874692Z       |                       ^~~~~~~~~
+2025-09-21T23:34:32.7875540Z src/graphics/VirtualKeyboard.cpp:357:23: warning: unused variable 'innerRight' [-Wunused-variable]
+2025-09-21T23:34:32.7876415Z   357 |             const int innerRight = boxX + boxWidth - 2;
+2025-09-21T23:34:32.7877009Z       |                       ^~~~~~~~~~
+2025-09-21T23:34:32.8356176Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawDigitalClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:32.8375216Z src/graphics/draw/ClockRenderer.cpp:195:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:32.8380376Z   195 |     int line = 0;
+2025-09-21T23:34:32.8380746Z       |         ^~~~
+2025-09-21T23:34:32.8387296Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawAnalogClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:32.8389121Z src/graphics/draw/ClockRenderer.cpp:320:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:32.8390144Z   320 |     int line = 0;
+2025-09-21T23:34:32.8398730Z       |         ^~~~
+2025-09-21T23:34:32.8553243Z Compiling .pio/build/tlora-c6/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:34:33.3774631Z Compiling .pio/build/tlora-c6/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:34:33.4086324Z Compiling .pio/build/tlora-c6/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:34:33.5286055Z In file included from src/power.h:8,
+2025-09-21T23:34:33.5286977Z                  from src/graphics/draw/../Screen.h:106,
+2025-09-21T23:34:33.5311983Z                  from src/graphics/draw/DebugRenderer.cpp:3:
+2025-09-21T23:34:33.5314157Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:33.5316788Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:33.5318107Z       |  ^~~~~~~
+2025-09-21T23:34:33.7197836Z Compiling .pio/build/tlora-c6/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:34:34.0491122Z In file included from src/power.h:8,
+2025-09-21T23:34:34.0492596Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:34.0493523Z                  from src/graphics/draw/MenuHandler.cpp:10:
+2025-09-21T23:34:34.0495762Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:34.0499069Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:34.0512232Z       |  ^~~~~~~
+2025-09-21T23:34:34.0980946Z In file included from src/power.h:8,
+2025-09-21T23:34:34.0982043Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:34.0982816Z                  from src/main.h:8,
+2025-09-21T23:34:34.0983594Z                  from src/graphics/draw/MessageRenderer.cpp:35:
+2025-09-21T23:34:34.1013716Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:34.1016007Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:34.1016842Z       |  ^~~~~~~
+2025-09-21T23:34:34.3814079Z In file included from src/power.h:8,
+2025-09-21T23:34:34.3818190Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:34.3818763Z                  from src/graphics/draw/CompassRenderer.h:3,
+2025-09-21T23:34:34.3819259Z                  from src/graphics/draw/NodeListRenderer.cpp:3:
+2025-09-21T23:34:34.3821149Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:34.3823597Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:34.3824457Z       |  ^~~~~~~
+2025-09-21T23:34:35.4186906Z src/graphics/draw/MessageRenderer.cpp: In function 'void graphics::MessageRenderer::drawTextMessageFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:35.4189020Z src/graphics/draw/MessageRenderer.cpp:386:15: warning: unused variable 'page' [-Wunused-variable]
+2025-09-21T23:34:35.4190207Z   386 |         float page = (float)usableScrollHeight * 0.9f;  // 90% page
+2025-09-21T23:34:35.4195029Z       |               ^~~~
+2025-09-21T23:34:35.5353014Z src/graphics/draw/MenuHandler.cpp: In static member function 'static void graphics::menuHandler::wifiConfigMenu()':
+2025-09-21T23:34:35.5354627Z src/graphics/draw/MenuHandler.cpp:1315:22: warning: operation on 'count' may be undefined [-Wsequence-point]
+2025-09-21T23:34:35.5363498Z  1315 |         options[count++] = labels[count];
+2025-09-21T23:34:35.5363975Z       |                 ~~~~~^~
+2025-09-21T23:34:35.5843673Z src/graphics/draw/NodeListRenderer.cpp: In function 'void graphics::NodeListRenderer::drawCompassArrow(OLEDDisplay*, meshtastic_NodeInfoLite*, int16_t, int16_t, int, float, double, double)':
+2025-09-21T23:34:35.5846871Z src/graphics/draw/NodeListRenderer.cpp:359:11: warning: unused variable 'angle' [-Wunused-variable]
+2025-09-21T23:34:35.5847744Z   359 |     float angle = relativeBearing * DEG_TO_RAD;
+2025-09-21T23:34:35.5848204Z       |           ^~~~~
+2025-09-21T23:34:35.7992225Z Compiling .pio/build/tlora-c6/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:34:36.2138497Z Compiling .pio/build/tlora-c6/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:34:36.3648888Z Compiling .pio/build/tlora-c6/src/graphics/emotes.cpp.o
+2025-09-21T23:34:36.4788512Z In file included from src/power.h:8,
+2025-09-21T23:34:36.4790700Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:36.4792120Z                  from src/graphics/draw/NotificationRenderer.h:5,
+2025-09-21T23:34:36.4792667Z                  from src/graphics/draw/NotificationRenderer.cpp:6:
+2025-09-21T23:34:36.4794503Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:36.4796803Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:36.4797629Z       |  ^~~~~~~
+2025-09-21T23:34:36.9152901Z In file included from src/power.h:8,
+2025-09-21T23:34:36.9153427Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:36.9154149Z                  from src/graphics/draw/CompassRenderer.h:3,
+2025-09-21T23:34:36.9156126Z                  from src/graphics/draw/UIRenderer.cpp:3:
+2025-09-21T23:34:36.9162313Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:36.9165737Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:36.9166636Z       |  ^~~~~~~
+2025-09-21T23:34:37.5252270Z Compiling .pio/build/tlora-c6/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:34:37.5811873Z Compiling .pio/build/tlora-c6/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:34:37.6353373Z Compiling .pio/build/tlora-c6/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:34:37.6905175Z Compiling .pio/build/tlora-c6/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:34:37.7460108Z Compiling .pio/build/tlora-c6/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:34:37.7921741Z src/graphics/draw/NotificationRenderer.cpp: In static member function 'static void graphics::NotificationRenderer::drawTextInput(OLEDDisplay*, OLEDDisplayUiState*)':
+2025-09-21T23:34:37.7953577Z src/graphics/draw/NotificationRenderer.cpp:774:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:37.7954859Z   774 |                 extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:37.7955560Z       |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:37.7956629Z src/graphics/draw/NotificationRenderer.cpp:775:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:37.7957750Z   775 |                 extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:37.7958343Z       |                                                ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:37.7961994Z src/graphics/draw/NotificationRenderer.cpp:782:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:37.7963281Z   782 |                 extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:37.7963970Z       |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:37.7965001Z src/graphics/draw/NotificationRenderer.cpp:783:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:37.7966114Z   783 |                 extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:37.7966681Z       |                                                ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:37.8134623Z Compiling .pio/build/tlora-c6/src/graphics/tftSetup.cpp.o
+2025-09-21T23:34:37.8677714Z Compiling .pio/build/tlora-c6/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:34:38.6760689Z Compiling .pio/build/tlora-c6/src/input/ButtonThread.cpp.o
+2025-09-21T23:34:38.7214129Z Compiling .pio/build/tlora-c6/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:34:39.4409669Z In file included from src/power.h:8,
+2025-09-21T23:34:39.4410575Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:39.4411192Z                  from src/main.h:8,
+2025-09-21T23:34:39.4411747Z                  from src/input/ButtonThread.cpp:12:
+2025-09-21T23:34:39.4413542Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:39.4416123Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:39.4417068Z       |  ^~~~~~~
+2025-09-21T23:34:39.6868339Z Compiling .pio/build/tlora-c6/src/input/InputBroker.cpp.o
+2025-09-21T23:34:39.7463917Z Compiling .pio/build/tlora-c6/src/input/LinuxInput.cpp.o
+2025-09-21T23:34:40.4798540Z Compiling .pio/build/tlora-c6/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:34:41.5741937Z Compiling .pio/build/tlora-c6/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:34:41.6282287Z Compiling .pio/build/tlora-c6/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:34:41.6576021Z Compiling .pio/build/tlora-c6/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:34:41.6900360Z Compiling .pio/build/tlora-c6/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:34:42.2069094Z In file included from src/power.h:8,
+2025-09-21T23:34:42.2069593Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:42.2070194Z                  from src/main.h:8,
+2025-09-21T23:34:42.2070637Z                  from src/input/MPR121Keyboard.h:6,
+2025-09-21T23:34:42.2071195Z                  from src/input/MPR121Keyboard.cpp:3:
+2025-09-21T23:34:42.2073257Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:42.2080148Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:42.2080999Z       |  ^~~~~~~
+2025-09-21T23:34:42.2840853Z Compiling .pio/build/tlora-c6/src/input/SeesawRotary.cpp.o
+2025-09-21T23:34:42.3310576Z Compiling .pio/build/tlora-c6/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:34:43.6272036Z Compiling .pio/build/tlora-c6/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:34:43.6595263Z Compiling .pio/build/tlora-c6/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:34:44.0273739Z Compiling .pio/build/tlora-c6/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:34:44.1523762Z Compiling .pio/build/tlora-c6/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:34:44.2002570Z Compiling .pio/build/tlora-c6/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:34:44.2471412Z Compiling .pio/build/tlora-c6/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:34:44.3094368Z In file included from src/power.h:8,
+2025-09-21T23:34:44.3096835Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:44.3098603Z                  from src/main.h:8,
+2025-09-21T23:34:44.3099380Z                  from src/input/SerialKeyboardImpl.h:3,
+2025-09-21T23:34:44.3100235Z                  from src/input/SerialKeyboardImpl.cpp:1:
+2025-09-21T23:34:44.3104059Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:44.3106929Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:44.3108565Z       |  ^~~~~~~
+2025-09-21T23:34:44.9408448Z In file included from src/power.h:8,
+2025-09-21T23:34:44.9412324Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:44.9412822Z                  from src/main.h:8,
+2025-09-21T23:34:44.9413791Z                  from src/input/TouchScreenBase.cpp:2:
+2025-09-21T23:34:44.9417520Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:44.9420412Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:44.9422114Z       |  ^~~~~~~
+2025-09-21T23:34:45.4956549Z Compiling .pio/build/tlora-c6/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:34:45.9977328Z Compiling .pio/build/tlora-c6/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:34:46.0156509Z Compiling .pio/build/tlora-c6/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:34:46.7181653Z Compiling .pio/build/tlora-c6/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:34:47.5234465Z Compiling .pio/build/tlora-c6/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:34:47.8389456Z Compiling .pio/build/tlora-c6/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:34:47.8721677Z Compiling .pio/build/tlora-c6/src/input/i2cButton.cpp.o
+2025-09-21T23:34:48.4749354Z In file included from src/power.h:8,
+2025-09-21T23:34:48.4751910Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:48.4752386Z                  from src/main.h:8,
+2025-09-21T23:34:48.4752826Z                  from src/input/MPR121Keyboard.h:6,
+2025-09-21T23:34:48.4753346Z                  from src/input/kbI2cBase.h:5,
+2025-09-21T23:34:48.4753825Z                  from src/input/cardKbI2cImpl.h:2,
+2025-09-21T23:34:48.4754311Z                  from src/input/cardKbI2cImpl.cpp:1:
+2025-09-21T23:34:48.4756209Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:48.4758593Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:48.4759490Z       |  ^~~~~~~
+2025-09-21T23:34:48.7086589Z Compiling .pio/build/tlora-c6/src/input/kbI2cBase.cpp.o
+2025-09-21T23:34:49.4275643Z In file included from src/power.h:8,
+2025-09-21T23:34:49.4276136Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:49.4276554Z                  from src/main.h:8,
+2025-09-21T23:34:49.4276983Z                  from src/input/MPR121Keyboard.h:6,
+2025-09-21T23:34:49.4279316Z                  from src/input/kbI2cBase.h:5,
+2025-09-21T23:34:49.4279940Z                  from src/input/kbI2cBase.cpp:1:
+2025-09-21T23:34:49.4281893Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:49.4284395Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:49.4285134Z       |  ^~~~~~~
+2025-09-21T23:34:49.4633688Z Compiling .pio/build/tlora-c6/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:34:49.7283385Z Compiling .pio/build/tlora-c6/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:34:50.3740288Z Compiling .pio/build/tlora-c6/src/main.cpp.o
+2025-09-21T23:34:50.4298872Z In file included from src/power.h:8,
+2025-09-21T23:34:50.4299698Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:50.4300307Z                  from src/main.h:8,
+2025-09-21T23:34:50.4300895Z                  from src/input/kbMatrixImpl.h:3,
+2025-09-21T23:34:50.4301698Z                  from src/input/kbMatrixImpl.cpp:1:
+2025-09-21T23:34:50.4303684Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:50.4338430Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:50.4339284Z       |  ^~~~~~~
+2025-09-21T23:34:51.0659516Z In file included from src/power.h:8,
+2025-09-21T23:34:51.0659993Z                  from src/main.cpp:23:
+2025-09-21T23:34:51.0662764Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:51.0668997Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:51.0670035Z       |  ^~~~~~~
+2025-09-21T23:34:51.2871111Z Compiling .pio/build/tlora-c6/src/memGet.cpp.o
+2025-09-21T23:34:51.3566246Z Compiling .pio/build/tlora-c6/src/mesh/Channels.cpp.o
+2025-09-21T23:34:52.0963924Z Compiling .pio/build/tlora-c6/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:34:52.5564846Z src/main.cpp: In function 'void setup()':
+2025-09-21T23:34:52.5565600Z src/main.cpp:981:9: warning: unused variable 'pullup_sense' [-Wunused-variable]
+2025-09-21T23:34:52.5566270Z   981 |     int pullup_sense = 0;
+2025-09-21T23:34:52.5566676Z       |         ^~~~~~~~~~~~
+2025-09-21T23:34:53.1109207Z Compiling .pio/build/tlora-c6/src/mesh/Default.cpp.o
+2025-09-21T23:34:53.4662036Z Compiling .pio/build/tlora-c6/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:34:54.0305193Z Compiling .pio/build/tlora-c6/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:34:54.1569828Z Compiling .pio/build/tlora-c6/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:34:55.0238123Z Compiling .pio/build/tlora-c6/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:34:55.4382711Z Compiling .pio/build/tlora-c6/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:34:56.2142825Z Compiling .pio/build/tlora-c6/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:34:56.7277134Z Compiling .pio/build/tlora-c6/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:34:57.0770810Z Compiling .pio/build/tlora-c6/src/mesh/MeshModule.cpp.o
+2025-09-21T23:34:57.4817988Z Compiling .pio/build/tlora-c6/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:34:58.2784965Z Compiling .pio/build/tlora-c6/src/mesh/MeshService.cpp.o
+2025-09-21T23:34:58.7603582Z Compiling .pio/build/tlora-c6/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:34:58.9698499Z In file included from src/power.h:8,
+2025-09-21T23:34:58.9700924Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:34:58.9701979Z                  from src/main.h:8,
+2025-09-21T23:34:58.9704874Z                  from src/mesh/MeshService.cpp:14:
+2025-09-21T23:34:58.9707378Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:34:58.9709955Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:34:58.9711047Z       |  ^~~~~~~
+2025-09-21T23:34:59.4411874Z Compiling .pio/build/tlora-c6/src/mesh/NodeDB.cpp.o
+2025-09-21T23:34:59.6076985Z Compiling .pio/build/tlora-c6/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:35:00.1035769Z In file included from src/power.h:8,
+2025-09-21T23:35:00.1037930Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:00.1038408Z                  from src/main.h:8,
+2025-09-21T23:35:00.1038828Z                  from src/mesh/NodeDB.cpp:21:
+2025-09-21T23:35:00.1040728Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:00.1043290Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:00.1044180Z       |  ^~~~~~~
+2025-09-21T23:35:01.0392033Z Compiling .pio/build/tlora-c6/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:35:01.1855305Z Compiling .pio/build/tlora-c6/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:35:01.5624168Z Compiling .pio/build/tlora-c6/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:35:01.6858588Z In file included from src/power.h:8,
+2025-09-21T23:35:01.6859355Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:01.6860265Z                  from src/main.h:8,
+2025-09-21T23:35:01.6862150Z                  from src/mesh/PhoneAPI.cpp:18:
+2025-09-21T23:35:01.6863917Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:01.6866126Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:01.6866951Z       |  ^~~~~~~
+2025-09-21T23:35:02.7426931Z Compiling .pio/build/tlora-c6/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:35:03.1289104Z Compiling .pio/build/tlora-c6/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:35:03.4507346Z In file included from src/power.h:8,
+2025-09-21T23:35:03.4512834Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:03.4523141Z                  from src/main.h:8,
+2025-09-21T23:35:03.4523600Z                  from src/mesh/RadioInterface.cpp:9:
+2025-09-21T23:35:03.4525471Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:03.4527681Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:03.4528428Z       |  ^~~~~~~
+2025-09-21T23:35:03.6460178Z Compiling .pio/build/tlora-c6/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:35:03.8779831Z In file included from src/power.h:8,
+2025-09-21T23:35:03.8782405Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:03.8793997Z                  from src/main.h:8,
+2025-09-21T23:35:03.8794490Z                  from src/mesh/RadioLibInterface.cpp:9:
+2025-09-21T23:35:03.8796416Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:03.8799353Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:03.8800212Z       |  ^~~~~~~
+2025-09-21T23:35:04.0083142Z Compiling .pio/build/tlora-c6/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:35:05.5840895Z Compiling .pio/build/tlora-c6/src/mesh/Router.cpp.o
+2025-09-21T23:35:05.6363619Z Compiling .pio/build/tlora-c6/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:35:05.7862979Z Compiling .pio/build/tlora-c6/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:35:06.1233712Z Compiling .pio/build/tlora-c6/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:35:06.2174087Z In file included from src/power.h:8,
+2025-09-21T23:35:06.2175207Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:06.2177138Z                  from src/main.h:8,
+2025-09-21T23:35:06.2177760Z                  from src/mesh/Router.cpp:11:
+2025-09-21T23:35:06.2183279Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:06.2185563Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:06.2186404Z       |  ^~~~~~~
+2025-09-21T23:35:07.4340407Z Compiling .pio/build/tlora-c6/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:35:07.8575898Z Compiling .pio/build/tlora-c6/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:35:08.2462757Z Compiling .pio/build/tlora-c6/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:35:08.2929620Z Compiling .pio/build/tlora-c6/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:35:09.4836874Z Compiling .pio/build/tlora-c6/src/mesh/Throttle.cpp.o
+2025-09-21T23:35:09.9236514Z Compiling .pio/build/tlora-c6/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:35:10.1878934Z Compiling .pio/build/tlora-c6/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:35:10.3112800Z Compiling .pio/build/tlora-c6/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:35:10.3652257Z Compiling .pio/build/tlora-c6/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:35:10.6284869Z Compiling .pio/build/tlora-c6/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:35:11.8183121Z src/mesh/aes-ccm.cpp: In function 'int constant_time_compare(const void*, const void*, size_t)':
+2025-09-21T23:35:11.8185147Z src/mesh/aes-ccm.cpp:24:42: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:35:11.8186402Z    24 |     const volatile uint8_t *volatile a = (const volatile uint8_t *volatile)a_;
+2025-09-21T23:35:11.8187290Z       |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:11.8188491Z src/mesh/aes-ccm.cpp:25:42: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:35:11.8189719Z    25 |     const volatile uint8_t *volatile b = (const volatile uint8_t *volatile)b_;
+2025-09-21T23:35:11.8193596Z       |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:11.8196993Z src/mesh/aes-ccm.cpp:33:11: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+2025-09-21T23:35:11.8197909Z    33 |         d |= (a[i] ^ b[i]);
+2025-09-21T23:35:11.8198312Z       |         ~~^~~~~~~~~~~~~~~~
+2025-09-21T23:35:11.8374314Z Compiling .pio/build/tlora-c6/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:35:12.0780229Z Compiling .pio/build/tlora-c6/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:35:12.1740734Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:35:12.3832638Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:35:12.4688301Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:35:12.5206450Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:35:12.6053636Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:35:12.6455795Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:35:12.7356794Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:35:12.7930965Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:35:12.8887159Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:35:12.9174664Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:35:12.9392606Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:35:13.0509012Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:35:13.0787241Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:35:13.2142219Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:35:13.3467742Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:35:13.3656963Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:35:13.4178602Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:35:13.4887394Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:35:13.5102817Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:35:13.5540060Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:35:13.6179877Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:35:13.6447655Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:35:13.6635197Z Compiling .pio/build/tlora-c6/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:35:13.6954013Z Compiling .pio/build/tlora-c6/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:35:13.7575792Z Compiling .pio/build/tlora-c6/src/mesh/wifi/WiFiAPClient.cpp.o
+2025-09-21T23:35:13.7920884Z Compiling .pio/build/tlora-c6/src/meshUtils.cpp.o
+2025-09-21T23:35:13.8345891Z Compiling .pio/build/tlora-c6/src/modules/AdminModule.cpp.o
+2025-09-21T23:35:14.4013620Z In file included from src/power.h:8,
+2025-09-21T23:35:14.4015038Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:14.4016148Z                  from src/main.h:8,
+2025-09-21T23:35:14.4034233Z                  from src/mesh/wifi/WiFiAPClient.cpp:8:
+2025-09-21T23:35:14.4039279Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:14.4044988Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:14.4045896Z       |  ^~~~~~~
+2025-09-21T23:35:14.4983468Z In file included from src/power.h:8,
+2025-09-21T23:35:14.4985010Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:14.4991699Z                  from src/main.h:8,
+2025-09-21T23:35:14.4997790Z                  from src/modules/AdminModule.cpp:20:
+2025-09-21T23:35:14.5004022Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:14.5015406Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:14.5023327Z       |  ^~~~~~~
+2025-09-21T23:35:15.5547837Z Compiling .pio/build/tlora-c6/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:35:15.6859872Z Compiling .pio/build/tlora-c6/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:35:16.2653941Z In file included from src/power.h:8,
+2025-09-21T23:35:16.2656667Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:16.2657091Z                  from src/main.h:8,
+2025-09-21T23:35:16.2657513Z                  from src/modules/AtakPluginModule.cpp:7:
+2025-09-21T23:35:16.2663463Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:16.2666296Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:16.2672292Z       |  ^~~~~~~
+2025-09-21T23:35:16.2982443Z Compiling .pio/build/tlora-c6/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:35:16.3746771Z In file included from src/power.h:8,
+2025-09-21T23:35:16.3747350Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:16.3750134Z                  from src/modules/CannedMessageModule.cpp:14:
+2025-09-21T23:35:16.3758034Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:16.3763596Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:16.3764442Z       |  ^~~~~~~
+2025-09-21T23:35:16.9301920Z Compiling .pio/build/tlora-c6/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:35:17.6397615Z In file included from src/power.h:8,
+2025-09-21T23:35:17.6400868Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:17.6403019Z                  from src/main.h:8,
+2025-09-21T23:35:17.6405760Z                  from src/modules/DetectionSensorModule.cpp:7:
+2025-09-21T23:35:17.6409546Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:17.6412468Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:17.6413847Z       |  ^~~~~~~
+2025-09-21T23:35:17.8077917Z src/modules/CannedMessageModule.cpp: In member function 'virtual void CannedMessageModule::drawFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:35:17.8079972Z src/modules/CannedMessageModule.cpp:2347:17: warning: unused variable 'textYOffset' [-Wunused-variable]
+2025-09-21T23:35:17.8082808Z  2347 |             int textYOffset = (rowHeight - FONT_HEIGHT_SMALL) / 2;
+2025-09-21T23:35:17.8083362Z       |                 ^~~~~~~~~~~
+2025-09-21T23:35:18.1230872Z Compiling .pio/build/tlora-c6/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:35:18.1267514Z src/modules/ChatHistoryStore.cpp: In static member function 'static chat::ChatEntry chat::ChatEntry::deserialize(const std::string&)':
+2025-09-21T23:35:18.1269501Z src/modules/ChatHistoryStore.cpp:55:12: error: exception handling disabled, use '-fexceptions' to enable
+2025-09-21T23:35:18.1271994Z    55 |   } catch (...) {
+2025-09-21T23:35:18.1272391Z       |            ^~~
+2025-09-21T23:35:18.1833825Z Compiling .pio/build/tlora-c6/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:35:18.2833054Z src/modules/CannedMessageModule.cpp: At global scope:
+2025-09-21T23:35:18.2835069Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:18.2837139Z    76 | static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:35:18.2837604Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:18.4934636Z *** [.pio/build/tlora-c6/src/modules/ChatHistoryStore.cpp.o] Error 1
+2025-09-21T23:35:18.9006137Z In file included from src/power.h:8,
+2025-09-21T23:35:18.9007063Z                  from src/graphics/Screen.h:106,
+2025-09-21T23:35:18.9007998Z                  from src/main.h:8,
+2025-09-21T23:35:18.9009130Z                  from src/modules/ExternalNotificationModule.cpp:23:
+2025-09-21T23:35:18.9012397Z /pio/core/packages/framework-arduinoespressif32/tools/esp32-arduino-libs/esp32c6/include/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+2025-09-21T23:35:18.9015456Z    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+2025-09-21T23:35:18.9016737Z       |  ^~~~~~~
+2025-09-21T23:35:20.5220803Z ========================= [FAILED] Took 84.36 seconds =========================
+2025-09-21T23:35:20.5221195Z 
+2025-09-21T23:35:20.5226829Z Environment    Status    Duration
+2025-09-21T23:35:20.5227325Z -------------  --------  ------------
+2025-09-21T23:35:20.5227790Z tlora-c6       FAILED    00:01:24.359
+2025-09-21T23:35:20.5228342Z ==================== 1 failed, 0 succeeded in 00:01:24.359 ====================
+2025-09-21T23:35:20.6969987Z ##[error]Process completed with exit code 1.
+2025-09-21T23:35:20.7079484Z Post job cleanup.
+2025-09-21T23:35:20.7843662Z [command]/usr/bin/git version
+2025-09-21T23:35:20.7878849Z git version 2.51.0
+2025-09-21T23:35:20.7916206Z Temporarily overriding HOME='/home/runner/work/_temp/285a512f-07f1-48c5-9bc1-d919630f961c' before making global git config changes
+2025-09-21T23:35:20.7917458Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:35:20.7921899Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:35:20.7956225Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:35:20.7986796Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:35:20.8195953Z Entering 'meshtestic'
+2025-09-21T23:35:20.8237612Z Entering 'protobufs'
+2025-09-21T23:35:20.8292636Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:35:20.8313944Z http.https://github.com/.extraheader
+2025-09-21T23:35:20.8324398Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:35:20.8354295Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:35:20.8558260Z Entering 'meshtestic'
+2025-09-21T23:35:20.8581561Z http.https://github.com/.extraheader
+2025-09-21T23:35:20.8613590Z Entering 'protobufs'
+2025-09-21T23:35:20.8636923Z http.https://github.com/.extraheader
+2025-09-21T23:35:20.8800842Z Cleaning up orphan processes

@@ -1,0 +1,554 @@
+﻿2025-09-21T23:35:55.7366973Z Current runner version: '2.328.0'
+2025-09-21T23:35:55.7392234Z ##[group]Runner Image Provisioner
+2025-09-21T23:35:55.7393059Z Hosted Compute Agent
+2025-09-21T23:35:55.7393619Z Version: 20250829.383
+2025-09-21T23:35:55.7394301Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:35:55.7394985Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:35:55.7395578Z ##[endgroup]
+2025-09-21T23:35:55.7396048Z ##[group]Operating System
+2025-09-21T23:35:55.7396709Z Ubuntu
+2025-09-21T23:35:55.7397153Z 24.04.3
+2025-09-21T23:35:55.7397603Z LTS
+2025-09-21T23:35:55.7398434Z ##[endgroup]
+2025-09-21T23:35:55.7399083Z ##[group]Runner Image
+2025-09-21T23:35:55.7399697Z Image: ubuntu-24.04
+2025-09-21T23:35:55.7400450Z Version: 20250907.24.1
+2025-09-21T23:35:55.7401513Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:35:55.7403157Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:35:55.7404142Z ##[endgroup]
+2025-09-21T23:35:55.7406568Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:35:55.7408936Z Actions: read
+2025-09-21T23:35:55.7409530Z Attestations: read
+2025-09-21T23:35:55.7410112Z Checks: read
+2025-09-21T23:35:55.7410642Z Contents: read
+2025-09-21T23:35:55.7411151Z Deployments: read
+2025-09-21T23:35:55.7411723Z Discussions: read
+2025-09-21T23:35:55.7412291Z Issues: read
+2025-09-21T23:35:55.7412773Z Metadata: read
+2025-09-21T23:35:55.7413314Z Models: read
+2025-09-21T23:35:55.7413817Z Packages: read
+2025-09-21T23:35:55.7414348Z Pages: read
+2025-09-21T23:35:55.7414784Z PullRequests: read
+2025-09-21T23:35:55.7415416Z RepositoryProjects: read
+2025-09-21T23:35:55.7415947Z SecurityEvents: read
+2025-09-21T23:35:55.7416557Z Statuses: read
+2025-09-21T23:35:55.7417154Z ##[endgroup]
+2025-09-21T23:35:55.7419529Z Secret source: Actions
+2025-09-21T23:35:55.7420294Z Prepare workflow directory
+2025-09-21T23:35:55.7847041Z Prepare all required actions
+2025-09-21T23:35:55.7902430Z Getting action download info
+2025-09-21T23:35:56.0857169Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:35:56.2881538Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:35:56.5873253Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:35:56.8062480Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:35:56.8067558Z ##[group] Inputs
+2025-09-21T23:35:56.8068382Z   version: 2.7.10.3d51287
+2025-09-21T23:35:56.8068896Z   platform: stm32
+2025-09-21T23:35:56.8069357Z   pio_env: wio-e5
+2025-09-21T23:35:56.8069820Z ##[endgroup]
+2025-09-21T23:35:56.8070351Z Complete job name: build-stm32 (wio-e5) / build-stm32
+2025-09-21T23:35:56.8729615Z ##[group]Run actions/checkout@v5
+2025-09-21T23:35:56.8730536Z with:
+2025-09-21T23:35:56.8730972Z   submodules: recursive
+2025-09-21T23:35:56.8731465Z   ref: develop
+2025-09-21T23:35:56.8731941Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:56.8732704Z   token: ***
+2025-09-21T23:35:56.8733142Z   ssh-strict: true
+2025-09-21T23:35:56.8733567Z   ssh-user: git
+2025-09-21T23:35:56.8734012Z   persist-credentials: true
+2025-09-21T23:35:56.8734515Z   clean: true
+2025-09-21T23:35:56.8734937Z   sparse-checkout-cone-mode: true
+2025-09-21T23:35:56.8735462Z   fetch-depth: 1
+2025-09-21T23:35:56.8735892Z   fetch-tags: false
+2025-09-21T23:35:56.8736324Z   show-progress: true
+2025-09-21T23:35:56.8736770Z   lfs: false
+2025-09-21T23:35:56.8737190Z   set-safe-directory: true
+2025-09-21T23:35:56.8737901Z ##[endgroup]
+2025-09-21T23:35:56.9675788Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:56.9677953Z ##[group]Getting Git version info
+2025-09-21T23:35:56.9678974Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:35:56.9680044Z [command]/usr/bin/git version
+2025-09-21T23:35:56.9715179Z git version 2.51.0
+2025-09-21T23:35:56.9737393Z ##[endgroup]
+2025-09-21T23:35:56.9753302Z Temporarily overriding HOME='/home/runner/work/_temp/91c3bd1c-0469-400c-8a92-75873f1c3640' before making global git config changes
+2025-09-21T23:35:56.9754798Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:35:56.9758750Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:35:56.9797091Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:35:56.9801462Z ##[group]Initializing the repository
+2025-09-21T23:35:56.9806686Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:35:56.9901061Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:35:56.9903033Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:35:56.9904699Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:35:56.9905945Z hint:
+2025-09-21T23:35:56.9906618Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:35:56.9907247Z hint:
+2025-09-21T23:35:56.9907831Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:35:56.9909033Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:35:56.9909767Z hint:
+2025-09-21T23:35:56.9910222Z hint: 	git branch -m <name>
+2025-09-21T23:35:56.9910702Z hint:
+2025-09-21T23:35:56.9911518Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:35:56.9912928Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:35:56.9916803Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:56.9951898Z ##[endgroup]
+2025-09-21T23:35:56.9952692Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:35:56.9956003Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:35:56.9984010Z ##[endgroup]
+2025-09-21T23:35:56.9984837Z ##[group]Setting up auth
+2025-09-21T23:35:56.9991586Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:35:57.0022686Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:35:57.0319687Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:35:57.0355080Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:35:57.0584951Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:35:57.0623442Z ##[endgroup]
+2025-09-21T23:35:57.0624238Z ##[group]Fetching the repository
+2025-09-21T23:35:57.0632510Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:35:57.9689482Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:57.9690915Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:35:57.9721724Z ##[endgroup]
+2025-09-21T23:35:57.9722934Z ##[group]Determining the checkout info
+2025-09-21T23:35:57.9728553Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:35:57.9753010Z   origin/develop
+2025-09-21T23:35:57.9758918Z ##[endgroup]
+2025-09-21T23:35:57.9762591Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:35:57.9801217Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:35:57.9828650Z ##[group]Checking out the ref
+2025-09-21T23:35:57.9832191Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:35:58.0858570Z Switched to a new branch 'develop'
+2025-09-21T23:35:58.0860763Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:35:58.0872087Z ##[endgroup]
+2025-09-21T23:35:58.0873938Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:35:58.0878449Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:35:58.0951760Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:35:58.0981584Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:35:58.1010925Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:35:58.1036468Z ##[endgroup]
+2025-09-21T23:35:58.1038681Z ##[group]Fetching submodules
+2025-09-21T23:35:58.1040285Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:35:58.1268704Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:35:58.1618933Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:35:58.1663553Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:35:58.1691410Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:35:58.4828602Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:35:58.7968449Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:35:58.8081532Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:35:58.8111823Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:35:58.8328351Z Entering 'meshtestic'
+2025-09-21T23:35:58.8365370Z Entering 'protobufs'
+2025-09-21T23:35:58.8411391Z ##[endgroup]
+2025-09-21T23:35:58.8411895Z ##[group]Persisting credentials for submodules
+2025-09-21T23:35:58.8417690Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:35:58.8631253Z Entering 'meshtestic'
+2025-09-21T23:35:58.8674516Z Entering 'protobufs'
+2025-09-21T23:35:58.8727517Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:35:58.8940455Z Entering 'meshtestic'
+2025-09-21T23:35:58.8978806Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:35:58.8997058Z Entering 'protobufs'
+2025-09-21T23:35:58.9036616Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:35:58.9080946Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:35:58.9289317Z Entering 'meshtestic'
+2025-09-21T23:35:58.9326076Z Entering 'protobufs'
+2025-09-21T23:35:58.9375369Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:35:58.9586728Z Entering 'meshtestic'
+2025-09-21T23:35:58.9624012Z Entering 'protobufs'
+2025-09-21T23:35:58.9669890Z ##[endgroup]
+2025-09-21T23:35:58.9710714Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:35:58.9733478Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:35:58.9982990Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:35:58.9983352Z with:
+2025-09-21T23:35:58.9983572Z   pio_platform: stm32
+2025-09-21T23:35:58.9983812Z   pio_env: wio-e5
+2025-09-21T23:35:58.9984034Z   pio_target: build
+2025-09-21T23:35:58.9984296Z ##[endgroup]
+2025-09-21T23:35:59.0075126Z ##[group]Run docker run --rm \
+2025-09-21T23:35:59.0075705Z [36;1mdocker run --rm \[0m
+2025-09-21T23:35:59.0075985Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:35:59.0076273Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:35:59.0076547Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:35:59.0076798Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:35:59.0077068Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:35:59.0077334Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:35:59.0077624Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:35:59.0077924Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:35:59.0078440Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:35:59.0078873Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-stm32[0m
+2025-09-21T23:35:59.0134620Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:35:59.0134991Z env:
+2025-09-21T23:35:59.0135197Z   MT_ENV: wio-e5
+2025-09-21T23:35:59.0135422Z   MT_PLATFORM: stm32
+2025-09-21T23:35:59.0135651Z   MT_TARGET: build
+2025-09-21T23:35:59.0135895Z   MT_OTA_FIRMWARE_SOURCE: 
+2025-09-21T23:35:59.0136147Z   MT_OTA_FIRMWARE_TARGET: 
+2025-09-21T23:35:59.0136418Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:35:59.0136713Z ##[endgroup]
+2025-09-21T23:35:59.1020856Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-stm32' locally
+2025-09-21T23:35:59.4377743Z master-stm32: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:35:59.5241942Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:35:59.5242445Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:35:59.5242733Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:35:59.5243003Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:35:59.5243323Z 815e87185931: Pulling fs layer
+2025-09-21T23:35:59.5243588Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:35:59.5243902Z da9989870cf6: Pulling fs layer
+2025-09-21T23:35:59.5244163Z 6d9e3cf85d64: Pulling fs layer
+2025-09-21T23:35:59.5244431Z e603da9caa71: Pulling fs layer
+2025-09-21T23:35:59.5244697Z 0cf898779951: Pulling fs layer
+2025-09-21T23:35:59.5244957Z 92eb1ffc9835: Pulling fs layer
+2025-09-21T23:35:59.5245207Z b8bc5981af85: Pulling fs layer
+2025-09-21T23:35:59.5245452Z eb4a36b7cfec: Pulling fs layer
+2025-09-21T23:35:59.5245706Z 33d7380c478b: Pulling fs layer
+2025-09-21T23:35:59.5245945Z 6d9e3cf85d64: Waiting
+2025-09-21T23:35:59.5246196Z e603da9caa71: Waiting
+2025-09-21T23:35:59.5246410Z 0cf898779951: Waiting
+2025-09-21T23:35:59.5246626Z 92eb1ffc9835: Waiting
+2025-09-21T23:35:59.5246843Z b8bc5981af85: Waiting
+2025-09-21T23:35:59.5247063Z eb4a36b7cfec: Waiting
+2025-09-21T23:35:59.5247279Z 815e87185931: Waiting
+2025-09-21T23:35:59.5247493Z 33d7380c478b: Waiting
+2025-09-21T23:35:59.5247725Z 71c11f7c6832: Waiting
+2025-09-21T23:35:59.5247936Z da9989870cf6: Waiting
+2025-09-21T23:35:59.5248431Z c611f5bb386b: Waiting
+2025-09-21T23:35:59.8422787Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:35:59.8424939Z 8fb375ec14f3: Download complete
+2025-09-21T23:35:59.8481473Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:35:59.8482619Z ccbbb2080a06: Download complete
+2025-09-21T23:35:59.9071182Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:35:59.9071647Z 7d5073558d5a: Download complete
+2025-09-21T23:35:59.9847565Z 815e87185931: Verifying Checksum
+2025-09-21T23:35:59.9847940Z 815e87185931: Download complete
+2025-09-21T23:36:00.0946220Z da9989870cf6: Verifying Checksum
+2025-09-21T23:36:00.0947255Z da9989870cf6: Download complete
+2025-09-21T23:36:00.3603891Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:36:00.3604610Z 71c11f7c6832: Download complete
+2025-09-21T23:36:00.4038776Z 6d9e3cf85d64: Verifying Checksum
+2025-09-21T23:36:00.4040593Z 6d9e3cf85d64: Download complete
+2025-09-21T23:36:00.4817289Z e603da9caa71: Verifying Checksum
+2025-09-21T23:36:00.4818248Z e603da9caa71: Download complete
+2025-09-21T23:36:00.8328501Z 0cf898779951: Verifying Checksum
+2025-09-21T23:36:00.8329400Z 0cf898779951: Download complete
+2025-09-21T23:36:00.9456128Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:36:00.9456647Z c611f5bb386b: Download complete
+2025-09-21T23:36:00.9523461Z b8bc5981af85: Verifying Checksum
+2025-09-21T23:36:00.9523910Z b8bc5981af85: Download complete
+2025-09-21T23:36:01.0584604Z eb4a36b7cfec: Verifying Checksum
+2025-09-21T23:36:01.0585352Z eb4a36b7cfec: Download complete
+2025-09-21T23:36:01.0821301Z 33d7380c478b: Download complete
+2025-09-21T23:36:02.0177310Z 8fb375ec14f3: Pull complete
+2025-09-21T23:36:04.4431197Z 92eb1ffc9835: Verifying Checksum
+2025-09-21T23:36:04.4431768Z 92eb1ffc9835: Download complete
+2025-09-21T23:36:05.1777091Z ccbbb2080a06: Pull complete
+2025-09-21T23:36:08.0464670Z 7d5073558d5a: Pull complete
+2025-09-21T23:36:14.5552366Z c611f5bb386b: Pull complete
+2025-09-21T23:36:14.8220520Z 815e87185931: Pull complete
+2025-09-21T23:36:15.5462087Z 71c11f7c6832: Pull complete
+2025-09-21T23:36:15.5563338Z da9989870cf6: Pull complete
+2025-09-21T23:36:16.6206332Z 6d9e3cf85d64: Pull complete
+2025-09-21T23:36:16.6294504Z e603da9caa71: Pull complete
+2025-09-21T23:36:18.1504030Z 0cf898779951: Pull complete
+2025-09-21T23:36:33.4346281Z 92eb1ffc9835: Pull complete
+2025-09-21T23:36:33.4431216Z b8bc5981af85: Pull complete
+2025-09-21T23:36:33.4511990Z eb4a36b7cfec: Pull complete
+2025-09-21T23:36:33.4602412Z 33d7380c478b: Pull complete
+2025-09-21T23:36:33.4638344Z Digest: sha256:fbacdeef8c4c75a50878300e01cebad066971af213b0aea2fd6e35917e07a952
+2025-09-21T23:36:33.4648681Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-stm32
+2025-09-21T23:36:33.6199760Z Building PlatformIO environment: wio-e5
+2025-09-21T23:36:33.8873148Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:36:34.5857417Z Resolving wio-e5 dependencies...
+2025-09-21T23:36:34.5985055Z Removing unused dependencies...
+2025-09-21T23:36:34.6006269Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:36:34.7026829Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:36:34.7142567Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:36:37.9933330Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:36:38.2145381Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:36:38.3105233Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:36:38.7484493Z Building for wio-e5 with 
+2025-09-21T23:36:39.5258661Z Processing wio-e5 (board: lora_e5_dev_board; platform: 
+2025-09-21T23:36:39.5261508Z platformio/ststm32@19.3.0; framework: arduino)
+2025-09-21T23:36:39.5262296Z --------------------------------------------------------------------------------
+2025-09-21T23:36:40.4303962Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:36:40.4450898Z CONFIGURATION: https://docs.platformio.org/page/boards/ststm32/lora_e5_dev_board.html
+2025-09-21T23:36:40.4453124Z PLATFORM: ST STM32 (19.3.0) > SeeedStudio LoRa E5 Dev Board
+2025-09-21T23:36:40.4453750Z HARDWARE: STM32WLE5JC 48MHz, 64KB RAM, 228KB Flash
+2025-09-21T23:36:40.4454281Z DEBUG: Current (stlink) External (jlink, stlink)
+2025-09-21T23:36:40.4454739Z PACKAGES: 
+2025-09-21T23:36:40.4455104Z  - framework-arduinoststm32 @ 0.0.0 
+2025-09-21T23:36:40.4455569Z  - framework-cmsis @ 2.50900.0 (5.9.0) 
+2025-09-21T23:36:40.4456053Z  - toolchain-gccarmnoneeabi @ 1.120301.0 (12.3.1)
+2025-09-21T23:36:40.5079155Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:36:40.5081251Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:36:40.5332104Z [nanopb] No generation needed.
+2025-09-21T23:36:40.5997167Z Found 22 compatible libraries
+2025-09-21T23:36:40.5997595Z Scanning dependencies...
+2025-09-21T23:36:42.5040310Z Dependency Graph
+2025-09-21T23:36:42.5041477Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:36:42.5042512Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:36:42.5047499Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:36:42.5047885Z |-- ArduinoThread @ 0.0.0+20250919053135
+2025-09-21T23:36:42.5049923Z |-- Nanopb @ 0.4.91
+2025-09-21T23:36:42.5050642Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:36:42.5051920Z |-- RadioLib @ 7.3.0
+2025-09-21T23:36:42.5053969Z |-- Crypto @ 0.0.0+20250919053136
+2025-09-21T23:36:42.5054751Z |-- SPI @ 1.1.0
+2025-09-21T23:36:42.5058679Z |-- Wire @ 1.0.0
+2025-09-21T23:36:42.6007581Z Building in release mode
+2025-09-21T23:36:42.7012252Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on wio-e5
+2025-09-21T23:36:42.7029414Z Using flags:
+2025-09-21T23:36:42.7030272Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:36:42.7030832Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:36:42.7031070Z -DAPP_ENV=wio-e5
+2025-09-21T23:36:42.7031314Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:42.7032003Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:36:42.7032769Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:36:42.7033360Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:36:42.8709711Z Compiling .pio/build/wio-e5/FrameworkArduinoVariant/PeripheralPins.c.o
+2025-09-21T23:36:42.8811130Z Compiling .pio/build/wio-e5/FrameworkArduinoVariant/PeripheralPins_ELV_BM_TRX1.c.o
+2025-09-21T23:36:42.8897953Z Compiling .pio/build/wio-e5/FrameworkArduinoVariant/PeripheralPins_LORA_E5_MINI.c.o
+2025-09-21T23:36:42.9009218Z Compiling .pio/build/wio-e5/FrameworkArduinoVariant/generic_clock.c.o
+2025-09-21T23:36:42.9180564Z Compiling .pio/build/wio-e5/FrameworkArduinoVariant/variant_ELV_BM_TRX1.cpp.o
+2025-09-21T23:36:42.9343316Z Compiling .pio/build/wio-e5/FrameworkArduinoVariant/variant_LORA_E5_MINI.cpp.o
+2025-09-21T23:36:42.9589839Z Compiling .pio/build/wio-e5/FrameworkArduinoVariant/variant_NUCLEO_WL55JC1.cpp.o
+2025-09-21T23:36:42.9780052Z Compiling .pio/build/wio-e5/FrameworkArduinoVariant/variant_generic.cpp.o
+2025-09-21T23:36:42.9995064Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal.c.o
+2025-09-21T23:36:43.0294206Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_adc.c.o
+2025-09-21T23:36:43.0553510Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_adc_ex.c.o
+2025-09-21T23:36:43.1488931Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_can.c.o
+2025-09-21T23:36:43.1824533Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_ccb.c.o
+2025-09-21T23:36:43.1971203Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_cec.c.o
+2025-09-21T23:36:43.2083603Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_comp.c.o
+2025-09-21T23:36:43.2186371Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_comp_ex.c.o
+2025-09-21T23:36:43.2334345Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_cordic.c.o
+2025-09-21T23:36:43.2475693Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_cortex.c.o
+2025-09-21T23:36:43.2628706Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_crc.c.o
+2025-09-21T23:36:43.2853093Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_crc_ex.c.o
+2025-09-21T23:36:43.3214253Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_cryp.c.o
+2025-09-21T23:36:43.3947150Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_cryp_ex.c.o
+2025-09-21T23:36:43.4095591Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dac.c.o
+2025-09-21T23:36:43.4230190Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dac_ex.c.o
+2025-09-21T23:36:43.4367848Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dcache.c.o
+2025-09-21T23:36:43.4707776Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dcmi.c.o
+2025-09-21T23:36:43.5053597Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dcmi_ex.c.o
+2025-09-21T23:36:43.5199959Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dfsdm.c.o
+2025-09-21T23:36:43.5328422Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dfsdm_ex.c.o
+2025-09-21T23:36:43.5465387Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dma.c.o
+2025-09-21T23:36:43.5559156Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dma2d.c.o
+2025-09-21T23:36:43.5710142Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dma_ex.c.o
+2025-09-21T23:36:43.5795713Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dsi.c.o
+2025-09-21T23:36:43.5931375Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_dts.c.o
+2025-09-21T23:36:43.6123700Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_eth.c.o
+2025-09-21T23:36:43.6260804Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_eth_ex.c.o
+2025-09-21T23:36:43.6495146Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_exti.c.o
+2025-09-21T23:36:43.6655296Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_fdcan.c.o
+2025-09-21T23:36:43.6878729Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_firewall.c.o
+2025-09-21T23:36:43.7035392Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_flash.c.o
+2025-09-21T23:36:43.7212898Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_flash_ex.c.o
+2025-09-21T23:36:43.7401667Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_flash_ramfunc.c.o
+2025-09-21T23:36:43.7603266Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_fmac.c.o
+2025-09-21T23:36:43.7771881Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_fmpi2c.c.o
+2025-09-21T23:36:43.7923533Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_fmpi2c_ex.c.o
+2025-09-21T23:36:43.8076545Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_fmpsmbus.c.o
+2025-09-21T23:36:43.8225117Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_fmpsmbus_ex.c.o
+2025-09-21T23:36:43.8332974Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_gfxmmu.c.o
+2025-09-21T23:36:43.8470133Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_gfxtim.c.o
+2025-09-21T23:36:43.8613125Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_gpio.c.o
+2025-09-21T23:36:43.8736686Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_gpio_ex.c.o
+2025-09-21T23:36:43.8852003Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_gpu2d.c.o
+2025-09-21T23:36:43.8965937Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_gtzc.c.o
+2025-09-21T23:36:43.9108555Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_hash.c.o
+2025-09-21T23:36:43.9250337Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_hash_ex.c.o
+2025-09-21T23:36:43.9452290Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_hcd.c.o
+2025-09-21T23:36:43.9607114Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_hrtim.c.o
+2025-09-21T23:36:43.9808911Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_hsem.c.o
+2025-09-21T23:36:43.9986659Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_i2c.c.o
+2025-09-21T23:36:44.0161283Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_i2c_ex.c.o
+2025-09-21T23:36:44.0322881Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_i2s.c.o
+2025-09-21T23:36:44.1034969Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_i2s_ex.c.o
+2025-09-21T23:36:44.1354466Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_i3c.c.o
+2025-09-21T23:36:44.1513176Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_icache.c.o
+2025-09-21T23:36:44.1702711Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_ipcc.c.o
+2025-09-21T23:36:44.1914209Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_irda.c.o
+2025-09-21T23:36:44.2090408Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_iwdg.c.o
+2025-09-21T23:36:44.2766547Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_jpeg.c.o
+2025-09-21T23:36:44.2917527Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_lcd.c.o
+2025-09-21T23:36:44.3095929Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_lptim.c.o
+2025-09-21T23:36:44.3188530Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_ltdc.c.o
+2025-09-21T23:36:44.3334631Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_ltdc_ex.c.o
+2025-09-21T23:36:44.3426484Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_mdf.c.o
+2025-09-21T23:36:44.3594818Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_mdios.c.o
+2025-09-21T23:36:44.3730834Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_mdma.c.o
+2025-09-21T23:36:44.3866000Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_mmc.c.o
+2025-09-21T23:36:44.3975895Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_mmc_ex.c.o
+2025-09-21T23:36:44.4108380Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_nand.c.o
+2025-09-21T23:36:44.4229460Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_nor.c.o
+2025-09-21T23:36:44.4377391Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_opamp.c.o
+2025-09-21T23:36:44.4486350Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_opamp_ex.c.o
+2025-09-21T23:36:44.4592332Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_ospi.c.o
+2025-09-21T23:36:44.4696293Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_otfdec.c.o
+2025-09-21T23:36:44.4818758Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_pccard.c.o
+2025-09-21T23:36:44.4944209Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_pcd.c.o
+2025-09-21T23:36:44.5070739Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_pcd_ex.c.o
+2025-09-21T23:36:44.5238865Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_pka.c.o
+2025-09-21T23:36:44.5358737Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_pssi.c.o
+2025-09-21T23:36:44.5870900Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_pwr.c.o
+2025-09-21T23:36:44.6001502Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_pwr_ex.c.o
+2025-09-21T23:36:44.6104324Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_qspi.c.o
+2025-09-21T23:36:44.6254601Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_ramcfg.c.o
+2025-09-21T23:36:44.6458822Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_ramecc.c.o
+2025-09-21T23:36:44.6622763Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_rcc.c.o
+2025-09-21T23:36:44.6817283Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_rcc_ex.c.o
+2025-09-21T23:36:44.7160966Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_rng.c.o
+2025-09-21T23:36:44.7488596Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_rng_ex.c.o
+2025-09-21T23:36:44.8357909Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_rtc.c.o
+2025-09-21T23:36:44.8544986Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_rtc_ex.c.o
+2025-09-21T23:36:44.8669381Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_sai.c.o
+2025-09-21T23:36:44.8843545Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_sai_ex.c.o
+2025-09-21T23:36:44.9037606Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_sd.c.o
+2025-09-21T23:36:44.9188726Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_sd_ex.c.o
+2025-09-21T23:36:44.9388540Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_sdadc.c.o
+2025-09-21T23:36:44.9534226Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_sdio.c.o
+2025-09-21T23:36:44.9738684Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_sdram.c.o
+2025-09-21T23:36:44.9912235Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_smartcard.c.o
+2025-09-21T23:36:45.0077056Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_smartcard_ex.c.o
+2025-09-21T23:36:45.0223828Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_smbus.c.o
+2025-09-21T23:36:45.0401575Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_smbus_ex.c.o
+2025-09-21T23:36:45.0983616Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_spdifrx.c.o
+2025-09-21T23:36:45.1258409Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_spi.c.o
+2025-09-21T23:36:45.1379705Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_spi_ex.c.o
+2025-09-21T23:36:45.1548754Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_sram.c.o
+2025-09-21T23:36:45.1669659Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_subghz.c.o
+2025-09-21T23:36:45.1971049Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_swpmi.c.o
+2025-09-21T23:36:45.2366155Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_tim.c.o
+2025-09-21T23:36:45.2552132Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_tim_ex.c.o
+2025-09-21T23:36:45.3221346Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_tsc.c.o
+2025-09-21T23:36:45.3404729Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_uart.c.o
+2025-09-21T23:36:45.3563881Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_uart_ex.c.o
+2025-09-21T23:36:45.4715362Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_usart.c.o
+2025-09-21T23:36:45.5063315Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_usart_ex.c.o
+2025-09-21T23:36:45.5603956Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_wwdg.c.o
+2025-09-21T23:36:45.6042779Z Compiling .pio/build/wio-e5/SrcWrapper/src/HAL/stm32yyxx_hal_xspi.c.o
+2025-09-21T23:36:45.6260941Z Compiling .pio/build/wio-e5/SrcWrapper/src/HardwareTimer.cpp.o
+2025-09-21T23:36:45.6429076Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_adc.c.o
+2025-09-21T23:36:45.6583935Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_bdma.c.o
+2025-09-21T23:36:45.6760832Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_comp.c.o
+2025-09-21T23:36:45.6913802Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_cordic.c.o
+2025-09-21T23:36:45.7292157Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_crc.c.o
+2025-09-21T23:36:45.7921863Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_crs.c.o
+2025-09-21T23:36:45.8120104Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_dac.c.o
+2025-09-21T23:36:45.8301402Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_delayblock.c.o
+2025-09-21T23:36:45.8532097Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_dlyb.c.o
+2025-09-21T23:36:45.8688645Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_dma.c.o
+2025-09-21T23:36:45.8859272Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_dma2d.c.o
+2025-09-21T23:36:45.9222918Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_exti.c.o
+2025-09-21T23:36:45.9495246Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_fmac.c.o
+2025-09-21T23:36:45.9855558Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_fmc.c.o
+2025-09-21T23:36:46.0192656Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_fmpi2c.c.o
+2025-09-21T23:36:46.0348410Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_fsmc.c.o
+2025-09-21T23:36:46.0525329Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_gpio.c.o
+2025-09-21T23:36:46.0674556Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_hrtim.c.o
+2025-09-21T23:36:46.0891500Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_i2c.c.o
+2025-09-21T23:36:46.1079970Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_i3c.c.o
+2025-09-21T23:36:46.1433664Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_icache.c.o
+2025-09-21T23:36:46.1769509Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_lpgpio.c.o
+2025-09-21T23:36:46.1957532Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_lptim.c.o
+2025-09-21T23:36:46.2155638Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_lpuart.c.o
+2025-09-21T23:36:46.2292497Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_mdma.c.o
+2025-09-21T23:36:46.2621721Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_opamp.c.o
+2025-09-21T23:36:46.3033713Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_pka.c.o
+2025-09-21T23:36:46.3332967Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_pwr.c.o
+2025-09-21T23:36:46.3832456Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_rcc.c.o
+2025-09-21T23:36:46.4307846Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_rng.c.o
+2025-09-21T23:36:46.4580809Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_rtc.c.o
+2025-09-21T23:36:46.4764350Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_sdmmc.c.o
+2025-09-21T23:36:46.5121629Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_spi.c.o
+2025-09-21T23:36:46.5361799Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_swpmi.c.o
+2025-09-21T23:36:46.5552306Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_tim.c.o
+2025-09-21T23:36:46.5704147Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_ucpd.c.o
+2025-09-21T23:36:46.6096912Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_usart.c.o
+2025-09-21T23:36:46.6261202Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_usb.c.o
+2025-09-21T23:36:46.6537925Z Compiling .pio/build/wio-e5/SrcWrapper/src/LL/stm32yyxx_ll_utils.c.o
+2025-09-21T23:36:46.6689629Z Compiling .pio/build/wio-e5/SrcWrapper/src/new.cpp.o
+2025-09-21T23:36:46.7201810Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/PortNames.c.o
+2025-09-21T23:36:46.7371854Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/analog.cpp.o
+2025-09-21T23:36:46.7523425Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/bootloader.c.o
+2025-09-21T23:36:46.8075076Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/clock.c.o
+2025-09-21T23:36:46.8434190Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/core_callback.c.o
+2025-09-21T23:36:46.8765225Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/dwt.c.o
+2025-09-21T23:36:46.8932868Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/hw_config.c.o
+2025-09-21T23:36:46.9551258Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/interrupt.cpp.o
+2025-09-21T23:36:47.0183084Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/otp.c.o
+2025-09-21T23:36:47.0373911Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/pinmap.c.o
+2025-09-21T23:36:47.1572311Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/stm32_def.c.o
+2025-09-21T23:36:47.2108623Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/system_stm32yyxx.c.o
+2025-09-21T23:36:47.2900933Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/timer.c.o
+2025-09-21T23:36:47.3151563Z Compiling .pio/build/wio-e5/SrcWrapper/src/stm32/uart.c.o
+2025-09-21T23:36:47.3575779Z Compiling .pio/build/wio-e5/SrcWrapper/src/syscalls.c.o
+2025-09-21T23:36:47.5013525Z Compiling .pio/build/wio-e5/src/BluetoothCommon.cpp.o
+2025-09-21T23:36:47.5606213Z Compiling .pio/build/wio-e5/src/DebugConfiguration.cpp.o
+2025-09-21T23:36:47.5752839Z Compiling .pio/build/wio-e5/src/DisplayFormatters.cpp.o
+2025-09-21T23:36:47.5923705Z Compiling .pio/build/wio-e5/src/FSCommon.cpp.o
+2025-09-21T23:36:48.5222680Z Compiling .pio/build/wio-e5/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:36:48.6100155Z Compiling .pio/build/wio-e5/src/Fusion/FusionCompass.c.o
+2025-09-21T23:36:48.6249337Z Compiling .pio/build/wio-e5/src/Fusion/FusionOffset.c.o
+2025-09-21T23:36:48.6714822Z Compiling .pio/build/wio-e5/src/GpioLogic.cpp.o
+2025-09-21T23:36:48.7232854Z Compiling .pio/build/wio-e5/src/Led.cpp.o
+2025-09-21T23:36:48.7396326Z Compiling .pio/build/wio-e5/src/Observer.cpp.o
+2025-09-21T23:36:48.7677173Z Compiling .pio/build/wio-e5/src/Power.cpp.o
+2025-09-21T23:36:49.7152608Z Compiling .pio/build/wio-e5/src/PowerFSM.cpp.o
+2025-09-21T23:36:49.7971023Z Compiling .pio/build/wio-e5/src/PowerMon.cpp.o
+2025-09-21T23:36:50.1173164Z Compiling .pio/build/wio-e5/src/RedirectablePrint.cpp.o
+2025-09-21T23:36:50.3361862Z Compiling .pio/build/wio-e5/src/SPILock.cpp.o
+2025-09-21T23:36:51.0169992Z Compiling .pio/build/wio-e5/src/SafeFile.cpp.o
+2025-09-21T23:36:51.1656136Z Compiling .pio/build/wio-e5/src/SerialConsole.cpp.o
+2025-09-21T23:36:51.3881542Z Compiling .pio/build/wio-e5/src/airtime.cpp.o
+2025-09-21T23:36:51.5761219Z Compiling .pio/build/wio-e5/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:36:52.0671448Z Compiling .pio/build/wio-e5/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:36:52.4212039Z Compiling .pio/build/wio-e5/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:36:52.6187098Z Compiling .pio/build/wio-e5/src/concurrency/Lock.cpp.o
+2025-09-21T23:36:52.6338583Z Compiling .pio/build/wio-e5/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:36:53.1114851Z Compiling .pio/build/wio-e5/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:36:53.4873188Z Compiling .pio/build/wio-e5/src/concurrency/OSThread.cpp.o
+2025-09-21T23:36:53.6333650Z Compiling .pio/build/wio-e5/src/detect/ScanI2C.cpp.o
+2025-09-21T23:36:53.6469280Z Compiling .pio/build/wio-e5/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:36:53.6958554Z Compiling .pio/build/wio-e5/src/gps/GPS.cpp.o
+2025-09-21T23:36:54.5369747Z Compiling .pio/build/wio-e5/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:36:54.5696379Z Compiling .pio/build/wio-e5/src/gps/GeoCoord.cpp.o
+2025-09-21T23:36:55.0324838Z Compiling .pio/build/wio-e5/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:36:55.2735354Z Compiling .pio/build/wio-e5/src/gps/RTC.cpp.o
+2025-09-21T23:36:55.6139504Z Compiling .pio/build/wio-e5/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:36:55.7677616Z Compiling .pio/build/wio-e5/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:36:56.4921354Z Compiling .pio/build/wio-e5/src/graphics/Screen.cpp.o
+2025-09-21T23:36:56.6669919Z Compiling .pio/build/wio-e5/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:36:56.7152914Z Compiling .pio/build/wio-e5/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:36:56.8351020Z Compiling .pio/build/wio-e5/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:36:57.1038837Z Compiling .pio/build/wio-e5/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:36:57.3024974Z Compiling .pio/build/wio-e5/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:36:57.5406857Z src/graphics/Screen.cpp: In function 'bool shouldWakeOnReceivedMessage()':
+2025-09-21T23:36:57.5407802Z src/graphics/Screen.cpp:2814:10: error: 'IS_ONE_OF' was not declared in this scope
+2025-09-21T23:36:57.5408877Z  2814 |     if (!IS_ONE_OF(config.device.role, meshtastic_Config_DeviceConfig_Role_CLIENT,
+2025-09-21T23:36:57.5409530Z       |          ^~~~~~~~~
+2025-09-21T23:36:57.7052285Z *** [.pio/build/wio-e5/src/graphics/Screen.cpp.o] Error 1
+2025-09-21T23:36:58.5891040Z ========================= [FAILED] Took 19.06 seconds =========================
+2025-09-21T23:36:58.5892355Z 
+2025-09-21T23:36:58.5898924Z Environment    Status    Duration
+2025-09-21T23:36:58.5899682Z -------------  --------  ------------
+2025-09-21T23:36:58.5900111Z wio-e5         FAILED    00:00:19.063
+2025-09-21T23:36:58.5900615Z ==================== 1 failed, 0 succeeded in 00:00:19.063 ====================
+2025-09-21T23:36:58.7457642Z ##[error]Process completed with exit code 1.
+2025-09-21T23:36:58.7571816Z Post job cleanup.
+2025-09-21T23:36:58.8392119Z [command]/usr/bin/git version
+2025-09-21T23:36:58.8431249Z git version 2.51.0
+2025-09-21T23:36:58.8470900Z Temporarily overriding HOME='/home/runner/work/_temp/50fdd511-7af6-4c6e-aa59-037e6acec940' before making global git config changes
+2025-09-21T23:36:58.8472155Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:36:58.8476720Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:36:58.8513850Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:36:58.8549152Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:36:58.8767179Z Entering 'meshtestic'
+2025-09-21T23:36:58.8810274Z Entering 'protobufs'
+2025-09-21T23:36:58.8869780Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:36:58.8893775Z http.https://github.com/.extraheader
+2025-09-21T23:36:58.8904087Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:36:58.8935357Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:36:58.9150512Z Entering 'meshtestic'
+2025-09-21T23:36:58.9174467Z http.https://github.com/.extraheader
+2025-09-21T23:36:58.9208654Z Entering 'protobufs'
+2025-09-21T23:36:58.9233226Z http.https://github.com/.extraheader
+2025-09-21T23:36:58.9403295Z Cleaning up orphan processes

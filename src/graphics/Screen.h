@@ -28,6 +28,9 @@ struct BannerOverlayOptions {
 
 bool shouldWakeOnReceivedMessage();
 
+// Global variable for chat silent mode
+extern bool g_chatSilentMode;
+
 #if !HAS_SCREEN
 #include "power.h"
 namespace graphics
@@ -220,9 +223,15 @@ class Screen : public concurrency::OSThread
 
   public:
     OLEDDisplay *getDisplayDevice() { return dispdev; }
+    OLEDDisplayUi *getUI() { return ui; }
+    bool isShowingNormalScreen() const { return showingNormalScreen; }
     explicit Screen(ScanI2C::DeviceAddress, meshtastic_Config_DisplayConfig_OledType, OLEDDISPLAY_GEOMETRY);
     size_t frameCount = 0; // Total number of active frames
     ~Screen();
+    void openNodeInfoFor(NodeNum nodeNum); // Opens direct the node info screen for a specific node
+#if HAS_WIFI && !defined(ARCH_PORTDUINO)
+    void openMqttInfoScreen();             // Opens direct the MQTT status info screen
+#endif
 
     // Which frame we want to be displayed, after we regen the frameset by calling setFrames
     enum FrameFocus : uint8_t {
@@ -259,7 +268,15 @@ class Screen : public concurrency::OSThread
     void setup();
 
     /// Turns the screen on/off. Optionally, pass a custom screensaver frame for E-Ink
-    void setOn(bool on, FrameCallback einkScreensaver = NULL);
+    void setOn(bool on, FrameCallback einkScreensaver = NULL)
+    {
+        if (!on)
+            // We handle off commands immediately, because they might be called because the CPU is shutting down
+            handleSetOn(false, einkScreensaver);
+        else
+            enqueueCmd(ScreenCmd{.cmd = Cmd::SET_ON});
+    }
+
     /**
      * Prepare the display for the unit going to the lowest power mode possible.  Most screens will just
      * poweroff, but eink screens will show a "I'm sleeping" graphic, possibly with a QR code
@@ -309,6 +326,29 @@ class Screen : public concurrency::OSThread
     void showNumberPicker(const char *message, uint32_t durationMs, uint8_t digits, std::function<void(uint32_t)> bannerCallback);
     void showTextInput(const char *header, const char *initialText, uint32_t durationMs,
                        std::function<void(const std::string &)> textCallback);
+    // to jump to a specific frame
+    void jumpToFrame(uint8_t frame)
+    {
+        if (ui)
+            ui->switchToFrame(frame);
+    }
+
+    // wrapper to show a single frame quickly
+    void showSingleFrame(FrameCallback cb)
+    {
+        FrameCallback tmp[1] = {cb};
+        ui->setFrames(tmp, 1);
+        setFastFramerate();
+        forceDisplay(true);
+    }
+
+    void showCustomFrame(FrameCallback *frames, uint8_t count, FrameFocus focus = FOCUS_DEFAULT)
+    {
+        ui->disableAllIndicators();
+        ui->setFrames(frames, count);
+        setFastFramerate();
+        forceDisplay(true);
+    }
 
     void requestMenu(graphics::menuHandler::screenMenus menuToShow)
     {
@@ -598,6 +638,9 @@ class Screen : public concurrency::OSThread
     void setScreensaverFrames(FrameCallback einkScreensaver = NULL);
 #endif
 
+    /// Check for inactivity timeouts and handle home navigation
+    void checkInactivityTimeouts();
+
   protected:
     /// Updates the UI.
     //
@@ -731,6 +774,9 @@ class Screen : public concurrency::OSThread
     /// UI helper for rendering to frames and switching between them
     OLEDDisplayUi *ui;
 };
+
+// Marquee auto-scroll functions
+void resetScrollToTop(uint32_t nodeIdOrDest, bool isDM);
 
 } // namespace graphics
 

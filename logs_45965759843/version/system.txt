@@ -1,0 +1,4 @@
+2025-09-21T23:11:29.4720000Z Job is about to start running on the runner: fifield-3038-4-c7d0
+2025-09-21T23:11:29.4670000Z Requested labels: ubuntu-latest
+2025-09-21T23:11:29.4670000Z Job defined at: meshtastic/firmware/.github/workflows/main_matrix.yml@refs/heads/develop
+2025-09-21T23:11:29.4670000Z Waiting for a runner to pick up this job...

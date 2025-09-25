@@ -1,0 +1,552 @@
+﻿2025-09-21T23:36:04.0892269Z Current runner version: '2.328.0'
+2025-09-21T23:36:04.0915153Z ##[group]Runner Image Provisioner
+2025-09-21T23:36:04.0915878Z Hosted Compute Agent
+2025-09-21T23:36:04.0916503Z Version: 20250829.383
+2025-09-21T23:36:04.0917063Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:36:04.0917756Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:36:04.0918342Z ##[endgroup]
+2025-09-21T23:36:04.0918912Z ##[group]Operating System
+2025-09-21T23:36:04.0919421Z Ubuntu
+2025-09-21T23:36:04.0919947Z 24.04.3
+2025-09-21T23:36:04.0920422Z LTS
+2025-09-21T23:36:04.0920826Z ##[endgroup]
+2025-09-21T23:36:04.0921338Z ##[group]Runner Image
+2025-09-21T23:36:04.0922276Z Image: ubuntu-24.04
+2025-09-21T23:36:04.0922799Z Version: 20250907.24.1
+2025-09-21T23:36:04.0923768Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:36:04.0925388Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:36:04.0926696Z ##[endgroup]
+2025-09-21T23:36:04.0929038Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:36:04.0931156Z Actions: read
+2025-09-21T23:36:04.0932304Z Attestations: read
+2025-09-21T23:36:04.0932792Z Checks: read
+2025-09-21T23:36:04.0933247Z Contents: read
+2025-09-21T23:36:04.0933771Z Deployments: read
+2025-09-21T23:36:04.0934259Z Discussions: read
+2025-09-21T23:36:04.0934747Z Issues: read
+2025-09-21T23:36:04.0935267Z Metadata: read
+2025-09-21T23:36:04.0935710Z Models: read
+2025-09-21T23:36:04.0936187Z Packages: read
+2025-09-21T23:36:04.0936721Z Pages: read
+2025-09-21T23:36:04.0937165Z PullRequests: read
+2025-09-21T23:36:04.0937721Z RepositoryProjects: read
+2025-09-21T23:36:04.0938261Z SecurityEvents: read
+2025-09-21T23:36:04.0938882Z Statuses: read
+2025-09-21T23:36:04.0939323Z ##[endgroup]
+2025-09-21T23:36:04.0942171Z Secret source: Actions
+2025-09-21T23:36:04.0943266Z Prepare workflow directory
+2025-09-21T23:36:04.1265783Z Prepare all required actions
+2025-09-21T23:36:04.1304549Z Getting action download info
+2025-09-21T23:36:04.5106736Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:36:04.7042824Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:36:05.1081402Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:36:05.3183891Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:36:05.3189509Z ##[group] Inputs
+2025-09-21T23:36:05.3190147Z   version: 2.7.10.3d51287
+2025-09-21T23:36:05.3190771Z   platform: stm32
+2025-09-21T23:36:05.3191297Z   pio_env: rak3172
+2025-09-21T23:36:05.3192005Z ##[endgroup]
+2025-09-21T23:36:05.3192680Z Complete job name: build-stm32 (rak3172) / build-stm32
+2025-09-21T23:36:05.3863819Z ##[group]Run actions/checkout@v5
+2025-09-21T23:36:05.3864828Z with:
+2025-09-21T23:36:05.3865315Z   submodules: recursive
+2025-09-21T23:36:05.3865885Z   ref: develop
+2025-09-21T23:36:05.3866465Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:05.3867497Z   token: ***
+2025-09-21T23:36:05.3867968Z   ssh-strict: true
+2025-09-21T23:36:05.3868461Z   ssh-user: git
+2025-09-21T23:36:05.3868971Z   persist-credentials: true
+2025-09-21T23:36:05.3869568Z   clean: true
+2025-09-21T23:36:05.3870090Z   sparse-checkout-cone-mode: true
+2025-09-21T23:36:05.3870773Z   fetch-depth: 1
+2025-09-21T23:36:05.3871264Z   fetch-tags: false
+2025-09-21T23:36:05.3871954Z   show-progress: true
+2025-09-21T23:36:05.3872470Z   lfs: false
+2025-09-21T23:36:05.3872946Z   set-safe-directory: true
+2025-09-21T23:36:05.3873789Z ##[endgroup]
+2025-09-21T23:36:05.4784351Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:05.4786764Z ##[group]Getting Git version info
+2025-09-21T23:36:05.4787879Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:36:05.4789289Z [command]/usr/bin/git version
+2025-09-21T23:36:05.4849958Z git version 2.51.0
+2025-09-21T23:36:05.4870246Z ##[endgroup]
+2025-09-21T23:36:05.4884904Z Temporarily overriding HOME='/home/runner/work/_temp/5e0a3462-5e9a-4b9c-8048-e9e28dab69a0' before making global git config changes
+2025-09-21T23:36:05.4887423Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:36:05.4889968Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:36:05.4923448Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:36:05.4926495Z ##[group]Initializing the repository
+2025-09-21T23:36:05.4930289Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:36:05.5035530Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:36:05.5037510Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:36:05.5039947Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:36:05.5041847Z hint:
+2025-09-21T23:36:05.5042621Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:36:05.5043475Z hint:
+2025-09-21T23:36:05.5044249Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:36:05.5045693Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:36:05.5047011Z hint:
+2025-09-21T23:36:05.5047716Z hint: 	git branch -m <name>
+2025-09-21T23:36:05.5048310Z hint:
+2025-09-21T23:36:05.5049168Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:36:05.5051243Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:36:05.5054041Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:05.5088659Z ##[endgroup]
+2025-09-21T23:36:05.5090306Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:36:05.5092165Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:36:05.5119808Z ##[endgroup]
+2025-09-21T23:36:05.5121415Z ##[group]Setting up auth
+2025-09-21T23:36:05.5127064Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:36:05.5157831Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:36:05.5482918Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:36:05.5515146Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:36:05.5732312Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:36:05.5766013Z ##[endgroup]
+2025-09-21T23:36:05.5766934Z ##[group]Fetching the repository
+2025-09-21T23:36:05.5779121Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:36:06.3427778Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:06.3429949Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:36:06.3464756Z ##[endgroup]
+2025-09-21T23:36:06.3465964Z ##[group]Determining the checkout info
+2025-09-21T23:36:06.3471229Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:36:06.3494761Z   origin/develop
+2025-09-21T23:36:06.3499718Z ##[endgroup]
+2025-09-21T23:36:06.3503230Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:36:06.3542743Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:36:06.3569893Z ##[group]Checking out the ref
+2025-09-21T23:36:06.3573329Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:36:06.4591069Z Switched to a new branch 'develop'
+2025-09-21T23:36:06.4593366Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:36:06.4603704Z ##[endgroup]
+2025-09-21T23:36:06.4605345Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:36:06.4609992Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:36:06.4683631Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:36:06.4713551Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:36:06.4743660Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:36:06.4770689Z ##[endgroup]
+2025-09-21T23:36:06.4773470Z ##[group]Fetching submodules
+2025-09-21T23:36:06.4775443Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:36:06.5002594Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:36:06.5212861Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:36:06.5218221Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:36:06.5243164Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:36:06.8694037Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:36:07.2513752Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:36:07.2632808Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:36:07.2664008Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:36:07.2876930Z Entering 'meshtestic'
+2025-09-21T23:36:07.2913552Z Entering 'protobufs'
+2025-09-21T23:36:07.2957911Z ##[endgroup]
+2025-09-21T23:36:07.2958497Z ##[group]Persisting credentials for submodules
+2025-09-21T23:36:07.2965367Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:36:07.3173253Z Entering 'meshtestic'
+2025-09-21T23:36:07.3214995Z Entering 'protobufs'
+2025-09-21T23:36:07.3266363Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:36:07.3472234Z Entering 'meshtestic'
+2025-09-21T23:36:07.3508314Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:36:07.3527467Z Entering 'protobufs'
+2025-09-21T23:36:07.3565053Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:36:07.3606072Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:36:07.3808555Z Entering 'meshtestic'
+2025-09-21T23:36:07.3844228Z Entering 'protobufs'
+2025-09-21T23:36:07.3891674Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:36:07.4093894Z Entering 'meshtestic'
+2025-09-21T23:36:07.4129456Z Entering 'protobufs'
+2025-09-21T23:36:07.4175962Z ##[endgroup]
+2025-09-21T23:36:07.4213458Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:36:07.4235829Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:36:07.4468954Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:36:07.4469289Z with:
+2025-09-21T23:36:07.4469485Z   pio_platform: stm32
+2025-09-21T23:36:07.4469710Z   pio_env: rak3172
+2025-09-21T23:36:07.4469903Z   pio_target: build
+2025-09-21T23:36:07.4470114Z ##[endgroup]
+2025-09-21T23:36:07.4557553Z ##[group]Run docker run --rm \
+2025-09-21T23:36:07.4558104Z [36;1mdocker run --rm \[0m
+2025-09-21T23:36:07.4558356Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:36:07.4558605Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:36:07.4558835Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:36:07.4559054Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:36:07.4559284Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:36:07.4559523Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:36:07.4559783Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:36:07.4560051Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:36:07.4560329Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:36:07.4560723Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-stm32[0m
+2025-09-21T23:36:07.4619814Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:36:07.4620157Z env:
+2025-09-21T23:36:07.4620337Z   MT_ENV: rak3172
+2025-09-21T23:36:07.4620538Z   MT_PLATFORM: stm32
+2025-09-21T23:36:07.4620745Z   MT_TARGET: build
+2025-09-21T23:36:07.4620959Z   MT_OTA_FIRMWARE_SOURCE: 
+2025-09-21T23:36:07.4621177Z   MT_OTA_FIRMWARE_TARGET: 
+2025-09-21T23:36:07.4621694Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:36:07.4686650Z ##[endgroup]
+2025-09-21T23:36:07.5626066Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-stm32' locally
+2025-09-21T23:36:08.0108371Z master-stm32: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:36:08.1298259Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:36:08.1298787Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:36:08.1299219Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:36:08.1299656Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:36:08.1300070Z 815e87185931: Pulling fs layer
+2025-09-21T23:36:08.1300449Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:36:08.1300839Z da9989870cf6: Pulling fs layer
+2025-09-21T23:36:08.1301098Z 6d9e3cf85d64: Pulling fs layer
+2025-09-21T23:36:08.1301344Z e603da9caa71: Pulling fs layer
+2025-09-21T23:36:08.1301846Z 0cf898779951: Pulling fs layer
+2025-09-21T23:36:08.1302102Z 92eb1ffc9835: Pulling fs layer
+2025-09-21T23:36:08.1302408Z b8bc5981af85: Pulling fs layer
+2025-09-21T23:36:08.1302647Z eb4a36b7cfec: Pulling fs layer
+2025-09-21T23:36:08.1302888Z 33d7380c478b: Pulling fs layer
+2025-09-21T23:36:08.1303116Z c611f5bb386b: Waiting
+2025-09-21T23:36:08.1303328Z 815e87185931: Waiting
+2025-09-21T23:36:08.1303529Z e603da9caa71: Waiting
+2025-09-21T23:36:08.1303730Z 71c11f7c6832: Waiting
+2025-09-21T23:36:08.1303925Z 0cf898779951: Waiting
+2025-09-21T23:36:08.1304136Z b8bc5981af85: Waiting
+2025-09-21T23:36:08.1304335Z 6d9e3cf85d64: Waiting
+2025-09-21T23:36:08.1304537Z da9989870cf6: Waiting
+2025-09-21T23:36:08.1304745Z eb4a36b7cfec: Waiting
+2025-09-21T23:36:08.1304942Z 33d7380c478b: Waiting
+2025-09-21T23:36:08.1305142Z 92eb1ffc9835: Waiting
+2025-09-21T23:36:08.5538216Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:36:08.5538734Z ccbbb2080a06: Download complete
+2025-09-21T23:36:08.5998119Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:36:08.5998642Z 7d5073558d5a: Download complete
+2025-09-21T23:36:08.6993635Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:36:08.6994494Z 8fb375ec14f3: Download complete
+2025-09-21T23:36:08.8425674Z 815e87185931: Verifying Checksum
+2025-09-21T23:36:08.8426373Z 815e87185931: Download complete
+2025-09-21T23:36:09.0206251Z da9989870cf6: Verifying Checksum
+2025-09-21T23:36:09.0208870Z da9989870cf6: Download complete
+2025-09-21T23:36:09.0278441Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:36:09.0279714Z 71c11f7c6832: Download complete
+2025-09-21T23:36:09.1836737Z e603da9caa71: Verifying Checksum
+2025-09-21T23:36:09.1837786Z e603da9caa71: Download complete
+2025-09-21T23:36:09.2655380Z 6d9e3cf85d64: Verifying Checksum
+2025-09-21T23:36:09.2655942Z 6d9e3cf85d64: Download complete
+2025-09-21T23:36:09.5261000Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:36:09.5261722Z c611f5bb386b: Download complete
+2025-09-21T23:36:09.7061786Z b8bc5981af85: Verifying Checksum
+2025-09-21T23:36:09.7062717Z b8bc5981af85: Download complete
+2025-09-21T23:36:09.7188532Z 0cf898779951: Verifying Checksum
+2025-09-21T23:36:09.7189272Z 0cf898779951: Download complete
+2025-09-21T23:36:09.8453549Z eb4a36b7cfec: Verifying Checksum
+2025-09-21T23:36:09.8454239Z eb4a36b7cfec: Download complete
+2025-09-21T23:36:09.8560267Z 33d7380c478b: Verifying Checksum
+2025-09-21T23:36:09.8562351Z 33d7380c478b: Download complete
+2025-09-21T23:36:10.7792881Z 8fb375ec14f3: Pull complete
+2025-09-21T23:36:11.3083623Z 92eb1ffc9835: Verifying Checksum
+2025-09-21T23:36:11.3085379Z 92eb1ffc9835: Download complete
+2025-09-21T23:36:14.1648845Z ccbbb2080a06: Pull complete
+2025-09-21T23:36:16.4671127Z 7d5073558d5a: Pull complete
+2025-09-21T23:36:22.8863739Z c611f5bb386b: Pull complete
+2025-09-21T23:36:23.1531194Z 815e87185931: Pull complete
+2025-09-21T23:36:23.8582967Z 71c11f7c6832: Pull complete
+2025-09-21T23:36:23.8687560Z da9989870cf6: Pull complete
+2025-09-21T23:36:24.9488892Z 6d9e3cf85d64: Pull complete
+2025-09-21T23:36:24.9619379Z e603da9caa71: Pull complete
+2025-09-21T23:36:26.4696307Z 0cf898779951: Pull complete
+2025-09-21T23:36:41.3601311Z 92eb1ffc9835: Pull complete
+2025-09-21T23:36:41.3734259Z b8bc5981af85: Pull complete
+2025-09-21T23:36:41.3837759Z eb4a36b7cfec: Pull complete
+2025-09-21T23:36:41.3952050Z 33d7380c478b: Pull complete
+2025-09-21T23:36:41.3995409Z Digest: sha256:fbacdeef8c4c75a50878300e01cebad066971af213b0aea2fd6e35917e07a952
+2025-09-21T23:36:41.4012659Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-stm32
+2025-09-21T23:36:41.5814359Z Building PlatformIO environment: rak3172
+2025-09-21T23:36:41.8699449Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:36:42.5630874Z Resolving rak3172 dependencies...
+2025-09-21T23:36:42.5766153Z Removing unused dependencies...
+2025-09-21T23:36:42.5790931Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:36:42.7288034Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:36:42.7407417Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:36:46.2883857Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:36:46.5040562Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:36:46.5978078Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:36:47.2344216Z Building for rak3172 with 
+2025-09-21T23:36:48.0003280Z Processing rak3172 (board: wiscore_rak3172; platform: 
+2025-09-21T23:36:48.0003776Z platformio/ststm32@19.3.0; framework: arduino)
+2025-09-21T23:36:48.0004193Z --------------------------------------------------------------------------------
+2025-09-21T23:36:48.8928414Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:36:48.9071134Z CONFIGURATION: https://docs.platformio.org/page/boards/ststm32/wiscore_rak3172.html
+2025-09-21T23:36:48.9072080Z PLATFORM: ST STM32 (19.3.0) > BB-STM32WL
+2025-09-21T23:36:48.9072424Z HARDWARE: STM32WLE5CCU 48MHz, 64KB RAM, 228KB Flash
+2025-09-21T23:36:48.9072802Z DEBUG: Current (stlink) External (cmsis-dap, stlink)
+2025-09-21T23:36:48.9073134Z PACKAGES: 
+2025-09-21T23:36:48.9073394Z  - framework-arduinoststm32 @ 0.0.0 
+2025-09-21T23:36:48.9073702Z  - framework-cmsis @ 2.50900.0 (5.9.0) 
+2025-09-21T23:36:48.9074022Z  - toolchain-gccarmnoneeabi @ 1.120301.0 (12.3.1)
+2025-09-21T23:36:48.9656684Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:36:48.9657172Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:36:48.9901319Z [nanopb] No generation needed.
+2025-09-21T23:36:49.0544720Z Found 22 compatible libraries
+2025-09-21T23:36:49.0545193Z Scanning dependencies...
+2025-09-21T23:36:50.9032662Z Dependency Graph
+2025-09-21T23:36:50.9036290Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:36:50.9037066Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:36:50.9037526Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:36:50.9039785Z |-- ArduinoThread @ 0.0.0+20250919053116
+2025-09-21T23:36:50.9040343Z |-- Nanopb @ 0.4.91
+2025-09-21T23:36:50.9042174Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:36:50.9044308Z |-- RadioLib @ 7.3.0
+2025-09-21T23:36:50.9045144Z |-- Crypto @ 0.0.0+20250919053124
+2025-09-21T23:36:50.9047436Z |-- SPI @ 1.1.0
+2025-09-21T23:36:50.9047724Z |-- Wire @ 1.0.0
+2025-09-21T23:36:50.9956638Z Building in release mode
+2025-09-21T23:36:51.1062004Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on rak3172
+2025-09-21T23:36:51.1076575Z Using flags:
+2025-09-21T23:36:51.1076911Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:36:51.1077307Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:36:51.1077645Z -DAPP_ENV=rak3172
+2025-09-21T23:36:51.1078011Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:51.1078461Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:36:51.1079105Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:36:51.1079945Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:36:51.2710057Z Compiling .pio/build/rak3172/FrameworkArduinoVariant/PeripheralPins.c.o
+2025-09-21T23:36:51.2794131Z Compiling .pio/build/rak3172/FrameworkArduinoVariant/generic_clock.c.o
+2025-09-21T23:36:51.2894635Z Compiling .pio/build/rak3172/FrameworkArduinoVariant/variant_GENERIC_NODE_SE_TTI.cpp.o
+2025-09-21T23:36:51.3001677Z Compiling .pio/build/rak3172/FrameworkArduinoVariant/variant_RAK3172_MODULE.cpp.o
+2025-09-21T23:36:51.3126760Z Compiling .pio/build/rak3172/FrameworkArduinoVariant/variant_generic.cpp.o
+2025-09-21T23:36:51.3324072Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal.c.o
+2025-09-21T23:36:51.3517125Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_adc.c.o
+2025-09-21T23:36:51.4510103Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_adc_ex.c.o
+2025-09-21T23:36:51.4789988Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_can.c.o
+2025-09-21T23:36:51.5083205Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_ccb.c.o
+2025-09-21T23:36:51.5202577Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_cec.c.o
+2025-09-21T23:36:51.5347199Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_comp.c.o
+2025-09-21T23:36:51.5452318Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_comp_ex.c.o
+2025-09-21T23:36:51.5570042Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_cordic.c.o
+2025-09-21T23:36:51.5783804Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_cortex.c.o
+2025-09-21T23:36:51.5946168Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_crc.c.o
+2025-09-21T23:36:51.6105590Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_crc_ex.c.o
+2025-09-21T23:36:51.6481676Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_cryp.c.o
+2025-09-21T23:36:51.7148295Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_cryp_ex.c.o
+2025-09-21T23:36:51.7272251Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dac.c.o
+2025-09-21T23:36:51.7424618Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dac_ex.c.o
+2025-09-21T23:36:51.7584662Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dcache.c.o
+2025-09-21T23:36:51.7915041Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dcmi.c.o
+2025-09-21T23:36:51.8228094Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dcmi_ex.c.o
+2025-09-21T23:36:51.8361001Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dfsdm.c.o
+2025-09-21T23:36:51.8443780Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dfsdm_ex.c.o
+2025-09-21T23:36:51.8597592Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dma.c.o
+2025-09-21T23:36:51.8680496Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dma2d.c.o
+2025-09-21T23:36:51.8814126Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dma_ex.c.o
+2025-09-21T23:36:51.8945229Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dsi.c.o
+2025-09-21T23:36:51.9045728Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_dts.c.o
+2025-09-21T23:36:51.9252142Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_eth.c.o
+2025-09-21T23:36:51.9359627Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_eth_ex.c.o
+2025-09-21T23:36:51.9585517Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_exti.c.o
+2025-09-21T23:36:51.9722346Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_fdcan.c.o
+2025-09-21T23:36:51.9964151Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_firewall.c.o
+2025-09-21T23:36:52.0090461Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_flash.c.o
+2025-09-21T23:36:52.0227240Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_flash_ex.c.o
+2025-09-21T23:36:52.0373369Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_flash_ramfunc.c.o
+2025-09-21T23:36:52.0615867Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_fmac.c.o
+2025-09-21T23:36:52.0720579Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_fmpi2c.c.o
+2025-09-21T23:36:52.0915215Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_fmpi2c_ex.c.o
+2025-09-21T23:36:52.1035403Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_fmpsmbus.c.o
+2025-09-21T23:36:52.1272845Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_fmpsmbus_ex.c.o
+2025-09-21T23:36:52.1397953Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_gfxmmu.c.o
+2025-09-21T23:36:52.1510048Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_gfxtim.c.o
+2025-09-21T23:36:52.1641046Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_gpio.c.o
+2025-09-21T23:36:52.1718385Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_gpio_ex.c.o
+2025-09-21T23:36:52.1803109Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_gpu2d.c.o
+2025-09-21T23:36:52.1919364Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_gtzc.c.o
+2025-09-21T23:36:52.2047720Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_hash.c.o
+2025-09-21T23:36:52.2195820Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_hash_ex.c.o
+2025-09-21T23:36:52.2379719Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_hcd.c.o
+2025-09-21T23:36:52.2512249Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_hrtim.c.o
+2025-09-21T23:36:52.2717124Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_hsem.c.o
+2025-09-21T23:36:52.2891304Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_i2c.c.o
+2025-09-21T23:36:52.3073866Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_i2c_ex.c.o
+2025-09-21T23:36:52.3213114Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_i2s.c.o
+2025-09-21T23:36:52.3856136Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_i2s_ex.c.o
+2025-09-21T23:36:52.4191221Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_i3c.c.o
+2025-09-21T23:36:52.4326075Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_icache.c.o
+2025-09-21T23:36:52.4531919Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_ipcc.c.o
+2025-09-21T23:36:52.4720045Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_irda.c.o
+2025-09-21T23:36:52.4893785Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_iwdg.c.o
+2025-09-21T23:36:52.5662822Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_jpeg.c.o
+2025-09-21T23:36:52.5728348Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_lcd.c.o
+2025-09-21T23:36:52.5886988Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_lptim.c.o
+2025-09-21T23:36:52.6006943Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_ltdc.c.o
+2025-09-21T23:36:52.6119964Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_ltdc_ex.c.o
+2025-09-21T23:36:52.6243779Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_mdf.c.o
+2025-09-21T23:36:52.6331955Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_mdios.c.o
+2025-09-21T23:36:52.6457527Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_mdma.c.o
+2025-09-21T23:36:52.6595550Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_mmc.c.o
+2025-09-21T23:36:52.6728634Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_mmc_ex.c.o
+2025-09-21T23:36:52.6839856Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_nand.c.o
+2025-09-21T23:36:52.6960846Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_nor.c.o
+2025-09-21T23:36:52.7051667Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_opamp.c.o
+2025-09-21T23:36:52.7152663Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_opamp_ex.c.o
+2025-09-21T23:36:52.7257488Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_ospi.c.o
+2025-09-21T23:36:52.7351402Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_otfdec.c.o
+2025-09-21T23:36:52.7422910Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_pccard.c.o
+2025-09-21T23:36:52.7559856Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_pcd.c.o
+2025-09-21T23:36:52.7654994Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_pcd_ex.c.o
+2025-09-21T23:36:52.7765493Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_pka.c.o
+2025-09-21T23:36:52.7853176Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_pssi.c.o
+2025-09-21T23:36:52.7964683Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_pwr.c.o
+2025-09-21T23:36:52.8083135Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_pwr_ex.c.o
+2025-09-21T23:36:52.8262277Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_qspi.c.o
+2025-09-21T23:36:52.8563243Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_ramcfg.c.o
+2025-09-21T23:36:52.8796304Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_ramecc.c.o
+2025-09-21T23:36:52.8960195Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_rcc.c.o
+2025-09-21T23:36:52.9123815Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_rcc_ex.c.o
+2025-09-21T23:36:52.9306341Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_rng.c.o
+2025-09-21T23:36:52.9707944Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_rng_ex.c.o
+2025-09-21T23:36:53.0605193Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_rtc.c.o
+2025-09-21T23:36:53.0763369Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_rtc_ex.c.o
+2025-09-21T23:36:53.0905630Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_sai.c.o
+2025-09-21T23:36:53.1091044Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_sai_ex.c.o
+2025-09-21T23:36:53.1240050Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_sd.c.o
+2025-09-21T23:36:53.1380803Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_sd_ex.c.o
+2025-09-21T23:36:53.1585661Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_sdadc.c.o
+2025-09-21T23:36:53.1726642Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_sdio.c.o
+2025-09-21T23:36:53.1909471Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_sdram.c.o
+2025-09-21T23:36:53.2068658Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_smartcard.c.o
+2025-09-21T23:36:53.2207199Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_smartcard_ex.c.o
+2025-09-21T23:36:53.2395237Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_smbus.c.o
+2025-09-21T23:36:53.2573907Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_smbus_ex.c.o
+2025-09-21T23:36:53.3081699Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_spdifrx.c.o
+2025-09-21T23:36:53.3390601Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_spi.c.o
+2025-09-21T23:36:53.3518074Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_spi_ex.c.o
+2025-09-21T23:36:53.3633287Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_sram.c.o
+2025-09-21T23:36:53.3807070Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_subghz.c.o
+2025-09-21T23:36:53.3949340Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_swpmi.c.o
+2025-09-21T23:36:53.4346650Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_tim.c.o
+2025-09-21T23:36:53.4719266Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_tim_ex.c.o
+2025-09-21T23:36:53.5382086Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_tsc.c.o
+2025-09-21T23:36:53.5584916Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_uart.c.o
+2025-09-21T23:36:53.5772440Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_uart_ex.c.o
+2025-09-21T23:36:53.6665566Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_usart.c.o
+2025-09-21T23:36:53.7338544Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_usart_ex.c.o
+2025-09-21T23:36:53.7504395Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_wwdg.c.o
+2025-09-21T23:36:53.7884131Z Compiling .pio/build/rak3172/SrcWrapper/src/HAL/stm32yyxx_hal_xspi.c.o
+2025-09-21T23:36:53.8212487Z Compiling .pio/build/rak3172/SrcWrapper/src/HardwareTimer.cpp.o
+2025-09-21T23:36:53.8367344Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_adc.c.o
+2025-09-21T23:36:53.8501818Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_bdma.c.o
+2025-09-21T23:36:53.8885827Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_comp.c.o
+2025-09-21T23:36:53.8994420Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_cordic.c.o
+2025-09-21T23:36:53.9387725Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_crc.c.o
+2025-09-21T23:36:53.9683313Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_crs.c.o
+2025-09-21T23:36:54.0060678Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_dac.c.o
+2025-09-21T23:36:54.0213846Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_delayblock.c.o
+2025-09-21T23:36:54.0466825Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_dlyb.c.o
+2025-09-21T23:36:54.0605508Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_dma.c.o
+2025-09-21T23:36:54.0791365Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_dma2d.c.o
+2025-09-21T23:36:54.1161615Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_exti.c.o
+2025-09-21T23:36:54.1551389Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_fmac.c.o
+2025-09-21T23:36:54.1909694Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_fmc.c.o
+2025-09-21T23:36:54.2054001Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_fmpi2c.c.o
+2025-09-21T23:36:54.2230098Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_fsmc.c.o
+2025-09-21T23:36:54.2438424Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_gpio.c.o
+2025-09-21T23:36:54.2574283Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_hrtim.c.o
+2025-09-21T23:36:54.2732338Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_i2c.c.o
+2025-09-21T23:36:54.2894536Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_i3c.c.o
+2025-09-21T23:36:54.3192570Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_icache.c.o
+2025-09-21T23:36:54.3521298Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_lpgpio.c.o
+2025-09-21T23:36:54.3774710Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_lptim.c.o
+2025-09-21T23:36:54.3913417Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_lpuart.c.o
+2025-09-21T23:36:54.4195983Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_mdma.c.o
+2025-09-21T23:36:54.4541837Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_opamp.c.o
+2025-09-21T23:36:54.4924161Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_pka.c.o
+2025-09-21T23:36:54.5117763Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_pwr.c.o
+2025-09-21T23:36:54.5287544Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_rcc.c.o
+2025-09-21T23:36:54.6243448Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_rng.c.o
+2025-09-21T23:36:54.6398215Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_rtc.c.o
+2025-09-21T23:36:54.6522211Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_sdmmc.c.o
+2025-09-21T23:36:54.6748989Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_spi.c.o
+2025-09-21T23:36:54.6892869Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_swpmi.c.o
+2025-09-21T23:36:54.7271682Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_tim.c.o
+2025-09-21T23:36:54.7463751Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_ucpd.c.o
+2025-09-21T23:36:54.7861754Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_usart.c.o
+2025-09-21T23:36:54.8010718Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_usb.c.o
+2025-09-21T23:36:54.8203008Z Compiling .pio/build/rak3172/SrcWrapper/src/LL/stm32yyxx_ll_utils.c.o
+2025-09-21T23:36:54.8357959Z Compiling .pio/build/rak3172/SrcWrapper/src/new.cpp.o
+2025-09-21T23:36:54.8854511Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/PortNames.c.o
+2025-09-21T23:36:54.9024263Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/analog.cpp.o
+2025-09-21T23:36:54.9204453Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/bootloader.c.o
+2025-09-21T23:36:54.9688103Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/clock.c.o
+2025-09-21T23:36:55.0010755Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/core_callback.c.o
+2025-09-21T23:36:55.0330733Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/dwt.c.o
+2025-09-21T23:36:55.0493056Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/hw_config.c.o
+2025-09-21T23:36:55.1136142Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/interrupt.cpp.o
+2025-09-21T23:36:55.1658026Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/otp.c.o
+2025-09-21T23:36:55.1842464Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/pinmap.c.o
+2025-09-21T23:36:55.2861888Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/stm32_def.c.o
+2025-09-21T23:36:55.3552701Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/system_stm32yyxx.c.o
+2025-09-21T23:36:55.4189540Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/timer.c.o
+2025-09-21T23:36:55.4652008Z Compiling .pio/build/rak3172/SrcWrapper/src/stm32/uart.c.o
+2025-09-21T23:36:55.4828722Z Compiling .pio/build/rak3172/SrcWrapper/src/syscalls.c.o
+2025-09-21T23:36:55.6502189Z Compiling .pio/build/rak3172/src/BluetoothCommon.cpp.o
+2025-09-21T23:36:55.7062876Z Compiling .pio/build/rak3172/src/DebugConfiguration.cpp.o
+2025-09-21T23:36:55.7205942Z Compiling .pio/build/rak3172/src/DisplayFormatters.cpp.o
+2025-09-21T23:36:55.7374878Z Compiling .pio/build/rak3172/src/FSCommon.cpp.o
+2025-09-21T23:36:56.6436212Z Compiling .pio/build/rak3172/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:36:56.7114706Z Compiling .pio/build/rak3172/src/Fusion/FusionCompass.c.o
+2025-09-21T23:36:56.7398694Z Compiling .pio/build/rak3172/src/Fusion/FusionOffset.c.o
+2025-09-21T23:36:56.7704676Z Compiling .pio/build/rak3172/src/GpioLogic.cpp.o
+2025-09-21T23:36:56.8397739Z Compiling .pio/build/rak3172/src/Led.cpp.o
+2025-09-21T23:36:56.8551642Z Compiling .pio/build/rak3172/src/Observer.cpp.o
+2025-09-21T23:36:56.9221899Z Compiling .pio/build/rak3172/src/Power.cpp.o
+2025-09-21T23:36:57.7949844Z Compiling .pio/build/rak3172/src/PowerFSM.cpp.o
+2025-09-21T23:36:57.8705689Z Compiling .pio/build/rak3172/src/PowerMon.cpp.o
+2025-09-21T23:36:58.1576895Z Compiling .pio/build/rak3172/src/RedirectablePrint.cpp.o
+2025-09-21T23:36:58.4277916Z Compiling .pio/build/rak3172/src/SPILock.cpp.o
+2025-09-21T23:36:59.0397100Z Compiling .pio/build/rak3172/src/SafeFile.cpp.o
+2025-09-21T23:36:59.1680480Z Compiling .pio/build/rak3172/src/SerialConsole.cpp.o
+2025-09-21T23:36:59.4501100Z Compiling .pio/build/rak3172/src/airtime.cpp.o
+2025-09-21T23:36:59.5805953Z Compiling .pio/build/rak3172/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:37:00.0606701Z Compiling .pio/build/rak3172/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:37:00.4000639Z Compiling .pio/build/rak3172/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:37:00.5887817Z Compiling .pio/build/rak3172/src/concurrency/Lock.cpp.o
+2025-09-21T23:37:00.6523690Z Compiling .pio/build/rak3172/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:37:01.0869494Z Compiling .pio/build/rak3172/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:37:01.3974373Z Compiling .pio/build/rak3172/src/concurrency/OSThread.cpp.o
+2025-09-21T23:37:01.6205421Z Compiling .pio/build/rak3172/src/detect/ScanI2C.cpp.o
+2025-09-21T23:37:01.6727001Z Compiling .pio/build/rak3172/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:37:01.6961972Z Compiling .pio/build/rak3172/src/gps/GPS.cpp.o
+2025-09-21T23:37:02.4033388Z Compiling .pio/build/rak3172/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:37:02.5183563Z Compiling .pio/build/rak3172/src/gps/GeoCoord.cpp.o
+2025-09-21T23:37:02.6734358Z Compiling .pio/build/rak3172/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:37:02.7197945Z Compiling .pio/build/rak3172/src/gps/RTC.cpp.o
+2025-09-21T23:37:02.7366388Z Compiling .pio/build/rak3172/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:37:03.1967536Z Compiling .pio/build/rak3172/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:37:03.5914246Z Compiling .pio/build/rak3172/src/graphics/Screen.cpp.o
+2025-09-21T23:37:03.7726235Z Compiling .pio/build/rak3172/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:37:04.0538016Z Compiling .pio/build/rak3172/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:37:04.2851018Z Compiling .pio/build/rak3172/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:37:04.4136148Z Compiling .pio/build/rak3172/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:37:04.4429189Z Compiling .pio/build/rak3172/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:37:04.6107454Z src/graphics/Screen.cpp: In function 'bool shouldWakeOnReceivedMessage()':
+2025-09-21T23:37:04.6108543Z src/graphics/Screen.cpp:2814:10: error: 'IS_ONE_OF' was not declared in this scope
+2025-09-21T23:37:04.6109421Z  2814 |     if (!IS_ONE_OF(config.device.role, meshtastic_Config_DeviceConfig_Role_CLIENT,
+2025-09-21T23:37:04.6110083Z       |          ^~~~~~~~~
+2025-09-21T23:37:04.7676529Z *** [.pio/build/rak3172/src/graphics/Screen.cpp.o] Error 1
+2025-09-21T23:37:05.7418938Z ========================= [FAILED] Took 17.74 seconds =========================
+2025-09-21T23:37:05.7419408Z 
+2025-09-21T23:37:05.7424241Z Environment    Status    Duration
+2025-09-21T23:37:05.7424661Z -------------  --------  ------------
+2025-09-21T23:37:05.7424951Z rak3172        FAILED    00:00:17.741
+2025-09-21T23:37:05.7425288Z ==================== 1 failed, 0 succeeded in 00:00:17.741 ====================
+2025-09-21T23:37:05.8829511Z ##[error]Process completed with exit code 1.
+2025-09-21T23:37:05.8939880Z Post job cleanup.
+2025-09-21T23:37:05.9695715Z [command]/usr/bin/git version
+2025-09-21T23:37:05.9730612Z git version 2.51.0
+2025-09-21T23:37:05.9800197Z Temporarily overriding HOME='/home/runner/work/_temp/99356325-c0a5-412d-8844-4186e6b20771' before making global git config changes
+2025-09-21T23:37:05.9801435Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:37:05.9806090Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:37:05.9840220Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:37:05.9872398Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:37:06.0082120Z Entering 'meshtestic'
+2025-09-21T23:37:06.0123852Z Entering 'protobufs'
+2025-09-21T23:37:06.0180866Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:37:06.0203439Z http.https://github.com/.extraheader
+2025-09-21T23:37:06.0213822Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:37:06.0244859Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:37:06.0451067Z Entering 'meshtestic'
+2025-09-21T23:37:06.0475351Z http.https://github.com/.extraheader
+2025-09-21T23:37:06.0508516Z Entering 'protobufs'
+2025-09-21T23:37:06.0533078Z http.https://github.com/.extraheader
+2025-09-21T23:37:06.0689232Z Cleaning up orphan processes

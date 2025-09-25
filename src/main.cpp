@@ -235,14 +235,14 @@ const char *getDeviceName()
 
     getMacAddr(dmac);
 
-    // Meshtastic_ab3c or Shortname_abcd
+    // MeshChatstic_ab3c or Shortname_abcd
     static char name[20];
     snprintf(name, sizeof(name), "%02x%02x", dmac[4], dmac[5]);
     // if the shortname exists and is NOT the new default of ab3c, use it for BLE name.
     if (strcmp(owner.short_name, name) != 0) {
         snprintf(name, sizeof(name), "%s_%02x%02x", owner.short_name, dmac[4], dmac[5]);
     } else {
-        snprintf(name, sizeof(name), "Meshtastic_%02x%02x", dmac[4], dmac[5]);
+        snprintf(name, sizeof(name), "MeshChatstic_%02x%02x", dmac[4], dmac[5]);
     }
     return name;
 }
@@ -369,7 +369,6 @@ void setup()
     digitalWrite(SDCARD_CS, HIGH);
     pinMode(TFT_CS, OUTPUT);
     digitalWrite(TFT_CS, HIGH);
-    pinMode(KB_INT, INPUT_PULLUP);
     // io expander
     io.begin(Wire, XL9555_SLAVE_ADDRESS0, SDA, SCL);
     io.pinMode(EXPANDS_DRV_EN, OUTPUT);

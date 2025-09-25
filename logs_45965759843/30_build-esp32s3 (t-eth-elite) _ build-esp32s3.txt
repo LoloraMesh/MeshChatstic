@@ -1,0 +1,1710 @@
+﻿2025-09-21T23:31:22.4071641Z Current runner version: '2.328.0'
+2025-09-21T23:31:22.4094486Z ##[group]Runner Image Provisioner
+2025-09-21T23:31:22.4095340Z Hosted Compute Agent
+2025-09-21T23:31:22.4095854Z Version: 20250829.383
+2025-09-21T23:31:22.4096935Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:31:22.4097638Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:31:22.4098240Z ##[endgroup]
+2025-09-21T23:31:22.4098801Z ##[group]Operating System
+2025-09-21T23:31:22.4099356Z Ubuntu
+2025-09-21T23:31:22.4099840Z 24.04.3
+2025-09-21T23:31:22.4100258Z LTS
+2025-09-21T23:31:22.4100725Z ##[endgroup]
+2025-09-21T23:31:22.4101272Z ##[group]Runner Image
+2025-09-21T23:31:22.4101857Z Image: ubuntu-24.04
+2025-09-21T23:31:22.4102307Z Version: 20250907.24.1
+2025-09-21T23:31:22.4103359Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:31:22.4104821Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:31:22.4105813Z ##[endgroup]
+2025-09-21T23:31:22.4108204Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:31:22.4110460Z Actions: read
+2025-09-21T23:31:22.4110974Z Attestations: read
+2025-09-21T23:31:22.4111464Z Checks: read
+2025-09-21T23:31:22.4112009Z Contents: read
+2025-09-21T23:31:22.4112510Z Deployments: read
+2025-09-21T23:31:22.4112977Z Discussions: read
+2025-09-21T23:31:22.4113543Z Issues: read
+2025-09-21T23:31:22.4114129Z Metadata: read
+2025-09-21T23:31:22.4114556Z Models: read
+2025-09-21T23:31:22.4115099Z Packages: read
+2025-09-21T23:31:22.4115549Z Pages: read
+2025-09-21T23:31:22.4116150Z PullRequests: read
+2025-09-21T23:31:22.4116754Z RepositoryProjects: read
+2025-09-21T23:31:22.4117308Z SecurityEvents: read
+2025-09-21T23:31:22.4117886Z Statuses: read
+2025-09-21T23:31:22.4118411Z ##[endgroup]
+2025-09-21T23:31:22.4120357Z Secret source: Actions
+2025-09-21T23:31:22.4121418Z Prepare workflow directory
+2025-09-21T23:31:22.4450306Z Prepare all required actions
+2025-09-21T23:31:22.4487229Z Getting action download info
+2025-09-21T23:31:22.7807946Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:31:23.2139341Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:31:23.5342951Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:31:23.7421163Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:31:23.7426748Z ##[group] Inputs
+2025-09-21T23:31:23.7427275Z   version: 2.7.10.3d51287
+2025-09-21T23:31:23.7427757Z   platform: esp32s3
+2025-09-21T23:31:23.7428204Z   pio_env: t-eth-elite
+2025-09-21T23:31:23.7428683Z ##[endgroup]
+2025-09-21T23:31:23.7429228Z Complete job name: build-esp32s3 (t-eth-elite) / build-esp32s3
+2025-09-21T23:31:23.8054559Z ##[group]Run actions/checkout@v5
+2025-09-21T23:31:23.8055428Z with:
+2025-09-21T23:31:23.8055849Z   submodules: recursive
+2025-09-21T23:31:23.8056544Z   ref: develop
+2025-09-21T23:31:23.8057022Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:31:23.8057762Z   token: ***
+2025-09-21T23:31:23.8058166Z   ssh-strict: true
+2025-09-21T23:31:23.8058579Z   ssh-user: git
+2025-09-21T23:31:23.8058992Z   persist-credentials: true
+2025-09-21T23:31:23.8059461Z   clean: true
+2025-09-21T23:31:23.8059881Z   sparse-checkout-cone-mode: true
+2025-09-21T23:31:23.8060390Z   fetch-depth: 1
+2025-09-21T23:31:23.8060829Z   fetch-tags: false
+2025-09-21T23:31:23.8061249Z   show-progress: true
+2025-09-21T23:31:23.8061670Z   lfs: false
+2025-09-21T23:31:23.8062063Z   set-safe-directory: true
+2025-09-21T23:31:23.8062793Z ##[endgroup]
+2025-09-21T23:31:23.8956517Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:31:23.8958474Z ##[group]Getting Git version info
+2025-09-21T23:31:23.8959288Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:31:23.8960435Z [command]/usr/bin/git version
+2025-09-21T23:31:23.9043512Z git version 2.51.0
+2025-09-21T23:31:23.9064478Z ##[endgroup]
+2025-09-21T23:31:23.9078025Z Temporarily overriding HOME='/home/runner/work/_temp/951d14a5-023a-4d91-ada4-a982283ade34' before making global git config changes
+2025-09-21T23:31:23.9082527Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:31:23.9084721Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:31:23.9122022Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:31:23.9126347Z ##[group]Initializing the repository
+2025-09-21T23:31:23.9130805Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:31:23.9223452Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:31:23.9225024Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:31:23.9226814Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:31:23.9227872Z hint:
+2025-09-21T23:31:23.9228853Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:31:23.9230058Z hint:
+2025-09-21T23:31:23.9231223Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:31:23.9233172Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:31:23.9234580Z hint:
+2025-09-21T23:31:23.9235302Z hint: 	git branch -m <name>
+2025-09-21T23:31:23.9236476Z hint:
+2025-09-21T23:31:23.9237780Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:31:23.9239830Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:31:23.9242812Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:31:23.9276329Z ##[endgroup]
+2025-09-21T23:31:23.9277714Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:31:23.9280306Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:31:23.9307202Z ##[endgroup]
+2025-09-21T23:31:23.9307975Z ##[group]Setting up auth
+2025-09-21T23:31:23.9313405Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:31:23.9343932Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:31:23.9651592Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:31:23.9682000Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:31:23.9898274Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:31:23.9931196Z ##[endgroup]
+2025-09-21T23:31:23.9931988Z ##[group]Fetching the repository
+2025-09-21T23:31:23.9940873Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:31:24.6415628Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:31:24.6417754Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:31:24.6447262Z ##[endgroup]
+2025-09-21T23:31:24.6448923Z ##[group]Determining the checkout info
+2025-09-21T23:31:24.6453680Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:31:24.6475864Z   origin/develop
+2025-09-21T23:31:24.6480850Z ##[endgroup]
+2025-09-21T23:31:24.6485652Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:31:24.6524261Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:31:24.6552101Z ##[group]Checking out the ref
+2025-09-21T23:31:24.6555523Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:31:24.7569966Z Switched to a new branch 'develop'
+2025-09-21T23:31:24.7572211Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:31:24.7582944Z ##[endgroup]
+2025-09-21T23:31:24.7585329Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:31:24.7589399Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:31:24.7660077Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:31:24.7690397Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:31:24.7721377Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:31:24.7748602Z ##[endgroup]
+2025-09-21T23:31:24.7751299Z ##[group]Fetching submodules
+2025-09-21T23:31:24.7753386Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:31:24.7975291Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:31:24.8185251Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:31:24.8190314Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:31:24.8215134Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:31:25.1065179Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:31:25.4148980Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:31:25.4267077Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:31:25.4299896Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:31:25.4508695Z Entering 'meshtestic'
+2025-09-21T23:31:25.4544648Z Entering 'protobufs'
+2025-09-21T23:31:25.4587962Z ##[endgroup]
+2025-09-21T23:31:25.4588602Z ##[group]Persisting credentials for submodules
+2025-09-21T23:31:25.4594966Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:31:25.4801580Z Entering 'meshtestic'
+2025-09-21T23:31:25.4843102Z Entering 'protobufs'
+2025-09-21T23:31:25.4894659Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:31:25.5099253Z Entering 'meshtestic'
+2025-09-21T23:31:25.5135485Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:31:25.5154135Z Entering 'protobufs'
+2025-09-21T23:31:25.5191704Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:31:25.5231914Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:31:25.5434210Z Entering 'meshtestic'
+2025-09-21T23:31:25.5470705Z Entering 'protobufs'
+2025-09-21T23:31:25.5519290Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:31:25.5723272Z Entering 'meshtestic'
+2025-09-21T23:31:25.5759222Z Entering 'protobufs'
+2025-09-21T23:31:25.5802680Z ##[endgroup]
+2025-09-21T23:31:25.5837580Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:31:25.5859524Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:31:25.6054140Z ##[group]Run if [ "$PIO_PLATFORM" = "esp32s3" ]; then
+2025-09-21T23:31:25.6054562Z [36;1mif [ "$PIO_PLATFORM" = "esp32s3" ]; then[0m
+2025-09-21T23:31:25.6054898Z [36;1m  echo "src=firmware-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:31:25.6055236Z [36;1m  echo "tgt=release/bleota-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:31:25.6055818Z [36;1melif [ "$PIO_PLATFORM" = "esp32c3" ] || [ "$PIO_PLATFORM" = "esp32c6" ]; then[0m
+2025-09-21T23:31:25.6056469Z [36;1m  echo "src=firmware-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:31:25.6056843Z [36;1m  echo "tgt=release/bleota-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:31:25.6057150Z [36;1melif [ "$PIO_PLATFORM" = "esp32" ]; then[0m
+2025-09-21T23:31:25.6057442Z [36;1m  echo "src=firmware.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:31:25.6057743Z [36;1m  echo "tgt=release/bleota.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:31:25.6058012Z [36;1mfi[0m
+2025-09-21T23:31:25.6110259Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:31:25.6110548Z env:
+2025-09-21T23:31:25.6110728Z   PIO_PLATFORM: esp32s3
+2025-09-21T23:31:25.6110939Z ##[endgroup]
+2025-09-21T23:31:25.6265600Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:31:25.6330873Z with:
+2025-09-21T23:31:25.6331216Z   pio_platform: esp32s3
+2025-09-21T23:31:25.6331652Z   pio_env: t-eth-elite
+2025-09-21T23:31:25.6332079Z   pio_target: build
+2025-09-21T23:31:25.6332478Z   ota_firmware_source: firmware-s3.bin
+2025-09-21T23:31:25.6332967Z   ota_firmware_target: release/bleota-s3.bin
+2025-09-21T23:31:25.6333383Z ##[endgroup]
+2025-09-21T23:31:25.6412072Z ##[group]Run docker run --rm \
+2025-09-21T23:31:25.6412347Z [36;1mdocker run --rm \[0m
+2025-09-21T23:31:25.6412588Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:31:25.6412823Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:31:25.6413048Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:31:25.6413253Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:31:25.6413472Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:31:25.6413697Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:31:25.6413956Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:31:25.6414246Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:31:25.6414513Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:31:25.6414845Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-esp32s3[0m
+2025-09-21T23:31:25.6444904Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:31:25.6445231Z env:
+2025-09-21T23:31:25.6445395Z   MT_ENV: t-eth-elite
+2025-09-21T23:31:25.6445597Z   MT_PLATFORM: esp32s3
+2025-09-21T23:31:25.6445788Z   MT_TARGET: build
+2025-09-21T23:31:25.6446276Z   MT_OTA_FIRMWARE_SOURCE: firmware-s3.bin
+2025-09-21T23:31:25.6446560Z   MT_OTA_FIRMWARE_TARGET: release/bleota-s3.bin
+2025-09-21T23:31:25.6446843Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:31:25.6447100Z ##[endgroup]
+2025-09-21T23:31:25.7400289Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-esp32s3' locally
+2025-09-21T23:31:26.0540823Z master-esp32s3: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:31:26.1493948Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:31:26.1494516Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:31:26.1494887Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:31:26.1495260Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:31:26.1495518Z 815e87185931: Pulling fs layer
+2025-09-21T23:31:26.1496069Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:31:26.1496433Z da9989870cf6: Pulling fs layer
+2025-09-21T23:31:26.1496770Z 5842d1ef8948: Pulling fs layer
+2025-09-21T23:31:26.1497114Z a234b2703096: Pulling fs layer
+2025-09-21T23:31:26.1497497Z 3a39df0b1bf9: Pulling fs layer
+2025-09-21T23:31:26.1497857Z a63a25a82ec9: Pulling fs layer
+2025-09-21T23:31:26.1498205Z 10215da75b3f: Pulling fs layer
+2025-09-21T23:31:26.1498507Z f243992d4a31: Pulling fs layer
+2025-09-21T23:31:26.1498720Z 832340f4ac8c: Pulling fs layer
+2025-09-21T23:31:26.1498915Z 5842d1ef8948: Waiting
+2025-09-21T23:31:26.1499096Z a234b2703096: Waiting
+2025-09-21T23:31:26.1499264Z 3a39df0b1bf9: Waiting
+2025-09-21T23:31:26.1499434Z a63a25a82ec9: Waiting
+2025-09-21T23:31:26.1499605Z 10215da75b3f: Waiting
+2025-09-21T23:31:26.1499777Z 815e87185931: Waiting
+2025-09-21T23:31:26.1499938Z f243992d4a31: Waiting
+2025-09-21T23:31:26.1500104Z 832340f4ac8c: Waiting
+2025-09-21T23:31:26.1500265Z 71c11f7c6832: Waiting
+2025-09-21T23:31:26.1500648Z da9989870cf6: Waiting
+2025-09-21T23:31:26.1500820Z c611f5bb386b: Waiting
+2025-09-21T23:31:26.3333091Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:31:26.3336797Z ccbbb2080a06: Download complete
+2025-09-21T23:31:26.4117237Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:31:26.4118200Z 8fb375ec14f3: Download complete
+2025-09-21T23:31:26.5067091Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:31:26.5068883Z 7d5073558d5a: Download complete
+2025-09-21T23:31:26.5380675Z 815e87185931: Download complete
+2025-09-21T23:31:26.6460966Z da9989870cf6: Verifying Checksum
+2025-09-21T23:31:26.6466888Z da9989870cf6: Download complete
+2025-09-21T23:31:26.7060673Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:31:26.7062696Z 71c11f7c6832: Download complete
+2025-09-21T23:31:26.8050995Z a234b2703096: Verifying Checksum
+2025-09-21T23:31:26.8051527Z a234b2703096: Download complete
+2025-09-21T23:31:26.9313601Z 5842d1ef8948: Verifying Checksum
+2025-09-21T23:31:26.9314070Z 5842d1ef8948: Download complete
+2025-09-21T23:31:27.1142173Z 3a39df0b1bf9: Verifying Checksum
+2025-09-21T23:31:27.1142691Z 3a39df0b1bf9: Download complete
+2025-09-21T23:31:27.2243915Z 10215da75b3f: Verifying Checksum
+2025-09-21T23:31:27.2245824Z 10215da75b3f: Download complete
+2025-09-21T23:31:27.3022780Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:31:27.3026288Z c611f5bb386b: Download complete
+2025-09-21T23:31:27.3316991Z f243992d4a31: Verifying Checksum
+2025-09-21T23:31:27.3319330Z f243992d4a31: Download complete
+2025-09-21T23:31:27.4040159Z 832340f4ac8c: Verifying Checksum
+2025-09-21T23:31:27.4040813Z 832340f4ac8c: Download complete
+2025-09-21T23:31:28.6266254Z 8fb375ec14f3: Pull complete
+2025-09-21T23:31:33.4144306Z ccbbb2080a06: Pull complete
+2025-09-21T23:31:36.1952906Z a63a25a82ec9: Verifying Checksum
+2025-09-21T23:31:36.1953410Z a63a25a82ec9: Download complete
+2025-09-21T23:31:38.9275451Z 7d5073558d5a: Pull complete
+2025-09-21T23:31:45.2863170Z c611f5bb386b: Pull complete
+2025-09-21T23:31:45.5458532Z 815e87185931: Pull complete
+2025-09-21T23:31:46.2661598Z 71c11f7c6832: Pull complete
+2025-09-21T23:31:46.2770760Z da9989870cf6: Pull complete
+2025-09-21T23:31:47.3015507Z 5842d1ef8948: Pull complete
+2025-09-21T23:31:47.3109528Z a234b2703096: Pull complete
+2025-09-21T23:31:48.7910070Z 3a39df0b1bf9: Pull complete
+2025-09-21T23:32:59.2899088Z a63a25a82ec9: Pull complete
+2025-09-21T23:32:59.2984167Z 10215da75b3f: Pull complete
+2025-09-21T23:32:59.3073072Z f243992d4a31: Pull complete
+2025-09-21T23:32:59.3150862Z 832340f4ac8c: Pull complete
+2025-09-21T23:32:59.3203315Z Digest: sha256:7269912521d83174316445d896859f9f0601d0c16d966400e9e0d3e20da1f1bd
+2025-09-21T23:32:59.3213713Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-esp32s3
+2025-09-21T23:32:59.4885422Z Building PlatformIO environment: t-eth-elite
+2025-09-21T23:32:59.7768114Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:33:00.4606108Z Resolving t-eth-elite dependencies...
+2025-09-21T23:33:00.4829535Z Removing unused dependencies...
+2025-09-21T23:33:00.4913393Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:33:00.5964880Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:33:00.9167942Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:33:04.0444316Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:04.2595397Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:04.3518106Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:33:04.8280730Z Building for t-eth-elite with 
+2025-09-21T23:33:05.5946445Z Processing t-eth-elite (board: esp32s3box; platform: 
+2025-09-21T23:33:05.5946968Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:33:05.5947411Z --------------------------------------------------------------------------------
+2025-09-21T23:33:06.8270901Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:33:06.8418722Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32s3box.html
+2025-09-21T23:33:06.8420062Z PLATFORM: Espressif 32 (6.11.0) > Espressif ESP32-S3-Box
+2025-09-21T23:33:06.8420626Z HARDWARE: ESP32S3 240MHz, 320KB RAM, 16MB Flash
+2025-09-21T23:33:06.8422017Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:33:06.8423288Z PACKAGES: 
+2025-09-21T23:33:06.8423741Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:33:06.8424309Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:33:06.8424774Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:33:06.8425285Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:33:06.8723826Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:33:06.8724456Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:33:06.9961834Z [nanopb] No generation needed.
+2025-09-21T23:33:07.4793498Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:33:09.7443633Z Downloading 0% 10%
+2025-09-21T23:33:09.7490505Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:33:09.7524542Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:33:09.8749719Z [nanopb] No generation needed.
+2025-09-21T23:33:10.0079397Z Found 97 compatible libraries
+2025-09-21T23:33:10.0079897Z Scanning dependencies...
+2025-09-21T23:33:20.9381609Z Dependency Graph
+2025-09-21T23:33:20.9382177Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:33:20.9383298Z |-- OneButton @ 2.6.1
+2025-09-21T23:33:20.9387032Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:33:20.9387549Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:33:20.9389002Z |-- ArduinoThread @ 0.0.0+20250919054753
+2025-09-21T23:33:20.9390437Z |-- Nanopb @ 0.4.91
+2025-09-21T23:33:20.9392488Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:33:20.9397807Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:33:20.9398426Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:33:20.9398850Z |-- NTPClient @ 3.2.1
+2025-09-21T23:33:20.9400573Z |-- Syslog @ 2.0.0
+2025-09-21T23:33:20.9401263Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:33:20.9404745Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:33:20.9406428Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:33:20.9406828Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:33:20.9410605Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:33:20.9416652Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:33:20.9420360Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:33:20.9420844Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:33:20.9421264Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:33:20.9421654Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:33:20.9422542Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:33:20.9423370Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:33:20.9423750Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:33:20.9426681Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:33:20.9427355Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:33:20.9427953Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:33:20.9430132Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:33:20.9432317Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:33:20.9434354Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:33:20.9435840Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:33:20.9438796Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:33:20.9439817Z |-- INA226 @ 0.6.4
+2025-09-21T23:33:20.9442389Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:33:20.9443819Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:33:20.9445616Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:33:20.9447462Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:33:20.9449011Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:33:20.9450343Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:33:20.9452061Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:33:20.9453832Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:33:20.9455400Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:33:20.9457304Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:33:20.9464773Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:33:20.9465443Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:33:20.9466199Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:33:20.9467011Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:33:20.9467550Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:33:20.9467928Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:33:20.9469641Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:33:20.9471393Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:33:20.9472891Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:33:20.9475280Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:33:20.9476189Z |-- RadioLib @ 7.3.0
+2025-09-21T23:33:20.9479099Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:33:20.9479805Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:33:20.9482804Z |-- libpax @ 1.1.0
+2025-09-21T23:33:20.9483391Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:33:20.9486623Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:33:20.9487281Z |-- Crypto @ 0.4.0
+2025-09-21T23:33:20.9490063Z |-- ETHClass2 @ 1.0.0
+2025-09-21T23:33:20.9490607Z |-- SD @ 2.0.0
+2025-09-21T23:33:20.9491150Z |-- SPI @ 2.0.0
+2025-09-21T23:33:20.9492663Z |-- WiFi @ 2.0.0
+2025-09-21T23:33:20.9494993Z |-- Wire @ 2.0.0
+2025-09-21T23:33:20.9495332Z |-- Preferences @ 2.0.0
+2025-09-21T23:33:20.9496553Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:33:20.9496949Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:33:20.9498693Z |-- WebServer @ 2.0.0
+2025-09-21T23:33:20.9499387Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:33:20.9499984Z |-- LittleFS @ 2.0.0
+2025-09-21T23:33:20.9500267Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:33:20.9500665Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:33:21.4694010Z Building in release mode
+2025-09-21T23:33:21.6276855Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on t-eth-elite
+2025-09-21T23:33:21.6291049Z Using flags:
+2025-09-21T23:33:21.6291431Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:33:21.6291854Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:33:21.6292233Z -DAPP_ENV=t-eth-elite
+2025-09-21T23:33:21.6292596Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:21.6293031Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:33:21.6293835Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:33:21.6296348Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:33:21.9485275Z Compiling .pio/build/t-eth-elite/src/BluetoothCommon.cpp.o
+2025-09-21T23:33:22.0817357Z Compiling .pio/build/t-eth-elite/src/DebugConfiguration.cpp.o
+2025-09-21T23:33:22.1037619Z Compiling .pio/build/t-eth-elite/src/DisplayFormatters.cpp.o
+2025-09-21T23:33:22.1310812Z Compiling .pio/build/t-eth-elite/src/FSCommon.cpp.o
+2025-09-21T23:33:23.1739237Z Compiling .pio/build/t-eth-elite/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:33:23.2559445Z Compiling .pio/build/t-eth-elite/src/Fusion/FusionCompass.c.o
+2025-09-21T23:33:23.3202952Z Compiling .pio/build/t-eth-elite/src/Fusion/FusionOffset.c.o
+2025-09-21T23:33:23.3484074Z Compiling .pio/build/t-eth-elite/src/GpioLogic.cpp.o
+2025-09-21T23:33:23.4578489Z Compiling .pio/build/t-eth-elite/src/Led.cpp.o
+2025-09-21T23:33:23.4802640Z Compiling .pio/build/t-eth-elite/src/Observer.cpp.o
+2025-09-21T23:33:23.6610319Z Compiling .pio/build/t-eth-elite/src/Power.cpp.o
+2025-09-21T23:33:24.4678092Z Compiling .pio/build/t-eth-elite/src/PowerFSM.cpp.o
+2025-09-21T23:33:24.5969266Z Compiling .pio/build/t-eth-elite/src/PowerMon.cpp.o
+2025-09-21T23:33:25.1514285Z Compiling .pio/build/t-eth-elite/src/RedirectablePrint.cpp.o
+2025-09-21T23:33:25.5219233Z Compiling .pio/build/t-eth-elite/src/SPILock.cpp.o
+2025-09-21T23:33:25.8343289Z Compiling .pio/build/t-eth-elite/src/SafeFile.cpp.o
+2025-09-21T23:33:26.2764160Z Compiling .pio/build/t-eth-elite/src/SerialConsole.cpp.o
+2025-09-21T23:33:26.6484153Z Compiling .pio/build/t-eth-elite/src/airtime.cpp.o
+2025-09-21T23:33:26.9429526Z Compiling .pio/build/t-eth-elite/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:33:27.0194926Z Compiling .pio/build/t-eth-elite/src/buzz/buzz.cpp.o
+2025-09-21T23:33:27.5305177Z Compiling .pio/build/t-eth-elite/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:33:27.9056788Z Compiling .pio/build/t-eth-elite/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:33:28.2374950Z Compiling .pio/build/t-eth-elite/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:33:28.2730779Z Compiling .pio/build/t-eth-elite/src/concurrency/Lock.cpp.o
+2025-09-21T23:33:28.6760974Z Compiling .pio/build/t-eth-elite/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:33:29.0303503Z Compiling .pio/build/t-eth-elite/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:33:29.3621088Z Compiling .pio/build/t-eth-elite/src/concurrency/OSThread.cpp.o
+2025-09-21T23:33:29.4114989Z Compiling .pio/build/t-eth-elite/src/detect/ScanI2C.cpp.o
+2025-09-21T23:33:29.5008865Z Compiling .pio/build/t-eth-elite/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:33:29.8231635Z Compiling .pio/build/t-eth-elite/src/gps/GPS.cpp.o
+2025-09-21T23:33:30.5633175Z Compiling .pio/build/t-eth-elite/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:33:30.7425326Z Compiling .pio/build/t-eth-elite/src/gps/GeoCoord.cpp.o
+2025-09-21T23:33:31.0465197Z Compiling .pio/build/t-eth-elite/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:33:31.4516216Z Compiling .pio/build/t-eth-elite/src/gps/RTC.cpp.o
+2025-09-21T23:33:31.7907797Z Compiling .pio/build/t-eth-elite/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:33:31.9264871Z Compiling .pio/build/t-eth-elite/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:33:32.7822095Z Compiling .pio/build/t-eth-elite/src/graphics/Screen.cpp.o
+2025-09-21T23:33:32.9317817Z Compiling .pio/build/t-eth-elite/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:33:33.0678230Z Compiling .pio/build/t-eth-elite/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:33:33.1601749Z Compiling .pio/build/t-eth-elite/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:33:33.5572965Z Compiling .pio/build/t-eth-elite/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:33:33.6298836Z Compiling .pio/build/t-eth-elite/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:33:34.3098639Z src/graphics/Screen.cpp: In function 'void graphics::drawFavNodeChatFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:33:34.3104029Z src/graphics/Screen.cpp:568:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:33:34.3106422Z      const int h     = display->height();
+2025-09-21T23:33:34.3106859Z                ^
+2025-09-21T23:33:34.3120856Z src/graphics/Screen.cpp: In function 'void graphics::drawChannelChatTabFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:33:34.3122113Z src/graphics/Screen.cpp:701:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:33:34.3122825Z      const int h     = display->height();
+2025-09-21T23:33:34.3123251Z                ^
+2025-09-21T23:33:34.3315274Z src/graphics/Screen.cpp: In constructor 'graphics::Screen::Screen(ScanI2C::DeviceAddress, meshtastic_Config_DisplayConfig_OledType, OLEDDISPLAY_GEOMETRY)':
+2025-09-21T23:33:34.3319213Z src/graphics/Screen.cpp:1120:24: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:33:34.3320206Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:33:34.3326285Z              ~~~~~~~~~~~^~~~~~
+2025-09-21T23:33:34.3327829Z src/graphics/Screen.cpp:1120:45: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:33:34.3333457Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:33:34.3338598Z                                   ~~~~~~~~~~~^~~~~~
+2025-09-21T23:33:34.3344743Z src/graphics/Screen.cpp:1120:66: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:33:34.3349908Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:33:34.3354520Z                                                        ~~~~~~~~~~~^~~~~~
+2025-09-21T23:33:34.3672599Z src/graphics/Screen.cpp: In member function 'int graphics::Screen::handleInputEvent(const InputEvent*)':
+2025-09-21T23:33:34.3674023Z src/graphics/Screen.cpp:2649:24: warning: unused variable 'shortPressAsDown' [-Wunused-variable]
+2025-09-21T23:33:34.3674840Z              const bool shortPressAsDown =
+2025-09-21T23:33:34.3678176Z                         ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:34.7666072Z src/graphics/Screen.cpp: In member function 'virtual int32_t graphics::Screen::runOnce()':
+2025-09-21T23:33:34.7667225Z src/graphics/Screen.cpp:1578:47: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2025-09-21T23:33:34.7668119Z              NotificationRenderer::pauseBanner = false;
+2025-09-21T23:33:34.7669024Z              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+2025-09-21T23:33:34.7669535Z src/graphics/Screen.cpp:1579:9: note: here
+2025-09-21T23:33:34.7671866Z          case Cmd::STOP_BOOT_SCREEN:
+2025-09-21T23:33:34.7672291Z          ^~~~
+2025-09-21T23:33:34.8062802Z src/graphics/Screen.cpp: At global scope:
+2025-09-21T23:33:34.8065326Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:33:34.8066695Z  static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:33:34.8067259Z              ^~~~~~~~~~~~~~~~~
+2025-09-21T23:33:34.8070567Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:33:34.8072920Z  static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:33:34.8073504Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:34.8074805Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:33:34.8076318Z  static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:33:34.8076776Z              ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:34.9060252Z Compiling .pio/build/t-eth-elite/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:33:34.9736216Z Compiling .pio/build/t-eth-elite/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:33:35.3126848Z Compiling .pio/build/t-eth-elite/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:33:36.0028329Z Compiling .pio/build/t-eth-elite/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:33:36.2176101Z src/graphics/VirtualKeyboard.cpp: In member function 'void graphics::VirtualKeyboard::drawInputArea(OLEDDisplay*, int16_t, int16_t, int16_t)':
+2025-09-21T23:33:36.2177576Z src/graphics/VirtualKeyboard.cpp:356:23: warning: unused variable 'innerLeft' [-Wunused-variable]
+2025-09-21T23:33:36.2178666Z              const int innerLeft = boxX + 1;
+2025-09-21T23:33:36.2179157Z                        ^~~~~~~~~
+2025-09-21T23:33:36.2179915Z src/graphics/VirtualKeyboard.cpp:357:23: warning: unused variable 'innerRight' [-Wunused-variable]
+2025-09-21T23:33:36.2181006Z              const int innerRight = boxX + boxWidth - 2;
+2025-09-21T23:33:36.2181643Z                        ^~~~~~~~~~
+2025-09-21T23:33:36.2939910Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawDigitalClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:33:36.2941494Z src/graphics/draw/ClockRenderer.cpp:195:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:33:36.2942259Z      int line = 0;
+2025-09-21T23:33:36.2942564Z          ^~~~
+2025-09-21T23:33:36.2970759Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawAnalogClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:33:36.2972250Z src/graphics/draw/ClockRenderer.cpp:320:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:33:36.2972990Z      int line = 0;
+2025-09-21T23:33:36.2973305Z          ^~~~
+2025-09-21T23:33:36.7174925Z Compiling .pio/build/t-eth-elite/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:33:36.7985119Z Compiling .pio/build/t-eth-elite/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:33:36.8300507Z Compiling .pio/build/t-eth-elite/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:33:37.9717177Z Compiling .pio/build/t-eth-elite/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:33:38.0777062Z src/graphics/draw/NodeListRenderer.cpp: In function 'void graphics::NodeListRenderer::drawCompassArrow(OLEDDisplay*, meshtastic_NodeInfoLite*, int16_t, int16_t, int, float, double, double)':
+2025-09-21T23:33:38.0778987Z src/graphics/draw/NodeListRenderer.cpp:359:11: warning: unused variable 'angle' [-Wunused-variable]
+2025-09-21T23:33:38.0779916Z      float angle = relativeBearing * DEG_TO_RAD;
+2025-09-21T23:33:38.0782295Z            ^~~~~
+2025-09-21T23:33:38.1200814Z src/graphics/draw/MessageRenderer.cpp: In function 'void graphics::MessageRenderer::drawTextMessageFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:33:38.1203197Z src/graphics/draw/MessageRenderer.cpp:386:15: warning: unused variable 'page' [-Wunused-variable]
+2025-09-21T23:33:38.1204743Z          float page = (float)usableScrollHeight * 0.9f;  // 90% page
+2025-09-21T23:33:38.1205742Z                ^~~~
+2025-09-21T23:33:38.1640336Z src/graphics/draw/MenuHandler.cpp: In static member function 'static void graphics::menuHandler::wifiConfigMenu()':
+2025-09-21T23:33:38.1642224Z src/graphics/draw/MenuHandler.cpp:1315:22: warning: operation on 'count' may be undefined [-Wsequence-point]
+2025-09-21T23:33:38.1643568Z          options[count++] = labels[count];
+2025-09-21T23:33:38.1644218Z                  ~~~~~^~
+2025-09-21T23:33:38.4502000Z Compiling .pio/build/t-eth-elite/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:33:38.7462228Z Compiling .pio/build/t-eth-elite/src/graphics/emotes.cpp.o
+2025-09-21T23:33:39.3122492Z src/graphics/draw/NotificationRenderer.cpp: In static member function 'static void graphics::NotificationRenderer::drawTextInput(OLEDDisplay*, OLEDDisplayUiState*)':
+2025-09-21T23:33:39.3124978Z src/graphics/draw/NotificationRenderer.cpp:774:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:33:39.3127275Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:33:39.3131225Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:39.3133685Z src/graphics/draw/NotificationRenderer.cpp:775:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:33:39.3143304Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:33:39.3143848Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:39.3144911Z src/graphics/draw/NotificationRenderer.cpp:782:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:33:39.3152665Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:33:39.3157572Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:39.3158601Z src/graphics/draw/NotificationRenderer.cpp:783:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:33:39.3159722Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:33:39.3160241Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:39.4971212Z Compiling .pio/build/t-eth-elite/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:33:39.5477767Z Compiling .pio/build/t-eth-elite/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:33:39.5989659Z Compiling .pio/build/t-eth-elite/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:33:39.6493213Z Compiling .pio/build/t-eth-elite/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:33:39.6999152Z Compiling .pio/build/t-eth-elite/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:33:39.7575037Z Compiling .pio/build/t-eth-elite/src/graphics/tftSetup.cpp.o
+2025-09-21T23:33:39.7907311Z Compiling .pio/build/t-eth-elite/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:33:39.8206269Z Compiling .pio/build/t-eth-elite/src/input/ButtonThread.cpp.o
+2025-09-21T23:33:39.9155542Z Compiling .pio/build/t-eth-elite/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:33:40.5395324Z Compiling .pio/build/t-eth-elite/src/input/InputBroker.cpp.o
+2025-09-21T23:33:40.9271465Z Compiling .pio/build/t-eth-elite/src/input/LinuxInput.cpp.o
+2025-09-21T23:33:41.0305436Z Compiling .pio/build/t-eth-elite/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:33:41.7821670Z Compiling .pio/build/t-eth-elite/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:33:41.8299752Z Compiling .pio/build/t-eth-elite/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:33:41.8838405Z Compiling .pio/build/t-eth-elite/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:33:42.0585531Z Compiling .pio/build/t-eth-elite/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:33:42.1745615Z Compiling .pio/build/t-eth-elite/src/input/SeesawRotary.cpp.o
+2025-09-21T23:33:42.2229562Z Compiling .pio/build/t-eth-elite/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:33:43.1753305Z Compiling .pio/build/t-eth-elite/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:33:43.3176995Z Compiling .pio/build/t-eth-elite/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:33:43.4130684Z Compiling .pio/build/t-eth-elite/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:33:43.5323685Z Compiling .pio/build/t-eth-elite/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:33:43.5830466Z Compiling .pio/build/t-eth-elite/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:33:43.6323285Z Compiling .pio/build/t-eth-elite/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:33:44.4672501Z Compiling .pio/build/t-eth-elite/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:33:44.5875751Z Compiling .pio/build/t-eth-elite/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:33:44.8215701Z Compiling .pio/build/t-eth-elite/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:33:45.3446835Z Compiling .pio/build/t-eth-elite/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:33:45.7838114Z Compiling .pio/build/t-eth-elite/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:33:45.8804732Z Compiling .pio/build/t-eth-elite/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:33:46.0885014Z Compiling .pio/build/t-eth-elite/src/input/i2cButton.cpp.o
+2025-09-21T23:33:46.6322337Z Compiling .pio/build/t-eth-elite/src/input/kbI2cBase.cpp.o
+2025-09-21T23:33:47.0542233Z Compiling .pio/build/t-eth-elite/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:33:47.2565392Z Compiling .pio/build/t-eth-elite/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:33:47.7436677Z Compiling .pio/build/t-eth-elite/src/main.cpp.o
+2025-09-21T23:33:48.1978735Z Compiling .pio/build/t-eth-elite/src/memGet.cpp.o
+2025-09-21T23:33:48.3943926Z Compiling .pio/build/t-eth-elite/src/mesh/Channels.cpp.o
+2025-09-21T23:33:48.9270761Z Compiling .pio/build/t-eth-elite/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:33:49.3038697Z src/main.cpp: In function 'void setup()':
+2025-09-21T23:33:49.3039551Z src/main.cpp:1243:86: warning: 'new' of type 'RF95Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:33:49.3040524Z          rIf = new RF95Interface(RadioLibHAL, LORA_CS, RF95_IRQ, RF95_RESET, RF95_DIO1);
+2025-09-21T23:33:49.3049586Z                                                                                       ^
+2025-09-21T23:33:49.3051170Z src/main.cpp:1243:86: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:33:49.3052176Z src/main.cpp:1243:86: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:33:49.3053193Z src/main.cpp:1257:104: warning: 'new' of type 'SX1262Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:33:49.3054244Z          auto *sxIf = new SX1262Interface(RadioLibHAL, SX126X_CS, SX126X_DIO1, SX126X_RESET, SX126X_BUSY);
+2025-09-21T23:33:49.3055017Z                                                                                                         ^
+2025-09-21T23:33:49.3056385Z src/main.cpp:1257:104: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:33:49.3057371Z src/main.cpp:1257:104: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:33:49.3058375Z src/main.cpp:1377:118: warning: 'new' of type 'LR1121Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:33:49.3059500Z          rIf = new LR1121Interface(RadioLibHAL, LR1121_SPI_NSS_PIN, LR1121_IRQ_PIN, LR1121_NRESET_PIN, LR1121_BUSY_PIN);
+2025-09-21T23:33:49.3066618Z                                                                                                                       ^
+2025-09-21T23:33:49.3067755Z src/main.cpp:1377:118: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:33:49.3068766Z src/main.cpp:1377:118: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:33:49.3098335Z src/main.cpp:1391:97: warning: 'new' of type 'SX1280Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:33:49.3099778Z          rIf = new SX1280Interface(RadioLibHAL, SX128X_CS, SX128X_DIO1, SX128X_RESET, SX128X_BUSY);
+2025-09-21T23:33:49.3100763Z                                                                                                  ^
+2025-09-21T23:33:49.3101928Z src/main.cpp:1391:97: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:33:49.3102913Z src/main.cpp:1391:97: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:33:49.3539325Z Compiling .pio/build/t-eth-elite/src/mesh/Default.cpp.o
+2025-09-21T23:33:49.8803108Z Compiling .pio/build/t-eth-elite/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:33:50.2175419Z Compiling .pio/build/t-eth-elite/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:33:50.2885801Z Compiling .pio/build/t-eth-elite/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:33:50.5911952Z Compiling .pio/build/t-eth-elite/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:33:51.1595682Z Compiling .pio/build/t-eth-elite/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:33:51.6081225Z Compiling .pio/build/t-eth-elite/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:33:51.8542601Z Compiling .pio/build/t-eth-elite/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:33:51.9280617Z Compiling .pio/build/t-eth-elite/src/mesh/MeshModule.cpp.o
+2025-09-21T23:33:52.4819458Z Compiling .pio/build/t-eth-elite/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:33:52.9435445Z Compiling .pio/build/t-eth-elite/src/mesh/MeshService.cpp.o
+2025-09-21T23:33:53.2050570Z Compiling .pio/build/t-eth-elite/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:33:53.4763916Z Compiling .pio/build/t-eth-elite/src/mesh/NodeDB.cpp.o
+2025-09-21T23:33:53.8556074Z Compiling .pio/build/t-eth-elite/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:33:54.6381926Z Compiling .pio/build/t-eth-elite/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:33:54.9549762Z Compiling .pio/build/t-eth-elite/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:33:55.1500165Z Compiling .pio/build/t-eth-elite/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:33:55.6310450Z Compiling .pio/build/t-eth-elite/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:33:56.2204794Z Compiling .pio/build/t-eth-elite/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:33:56.5092290Z Compiling .pio/build/t-eth-elite/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:33:56.7535745Z Compiling .pio/build/t-eth-elite/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:33:57.5084082Z Compiling .pio/build/t-eth-elite/src/mesh/Router.cpp.o
+2025-09-21T23:33:57.7494182Z Compiling .pio/build/t-eth-elite/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:33:58.0618032Z Compiling .pio/build/t-eth-elite/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:33:58.1027679Z Compiling .pio/build/t-eth-elite/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:33:58.8501805Z Compiling .pio/build/t-eth-elite/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:33:59.3759849Z Compiling .pio/build/t-eth-elite/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:33:59.4490575Z Compiling .pio/build/t-eth-elite/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:33:59.4851843Z Compiling .pio/build/t-eth-elite/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:34:00.1927812Z Compiling .pio/build/t-eth-elite/src/mesh/Throttle.cpp.o
+2025-09-21T23:34:00.6739019Z Compiling .pio/build/t-eth-elite/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:34:00.7051796Z Compiling .pio/build/t-eth-elite/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:34:00.7800551Z Compiling .pio/build/t-eth-elite/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:34:00.8281187Z Compiling .pio/build/t-eth-elite/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:34:00.9181283Z Compiling .pio/build/t-eth-elite/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:34:01.7251726Z src/mesh/aes-ccm.cpp: In function 'int constant_time_compare(const void*, const void*, size_t)':
+2025-09-21T23:34:01.7252771Z src/mesh/aes-ccm.cpp:24:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:01.7253726Z      const volatile uint8_t *volatile a = (const volatile uint8_t *volatile)a_;
+2025-09-21T23:34:01.7254370Z                                                                             ^~
+2025-09-21T23:34:01.7255474Z src/mesh/aes-ccm.cpp:25:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:01.7256808Z      const volatile uint8_t *volatile b = (const volatile uint8_t *volatile)b_;
+2025-09-21T23:34:01.7257604Z                                                                             ^~
+2025-09-21T23:34:01.8527274Z Compiling .pio/build/t-eth-elite/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:34:01.9224815Z Compiling .pio/build/t-eth-elite/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:34:01.9587985Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:34:02.1067127Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:34:02.1412325Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:34:02.1773393Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:34:02.2367606Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:34:02.2707626Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:34:02.2999509Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:34:02.3655153Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:34:02.4139171Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:34:02.4787221Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:34:02.5078066Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:34:02.5676297Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:34:02.6273179Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:34:02.7236959Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:34:02.7990933Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:34:02.8852586Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:34:02.9239303Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:34:02.9507289Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:34:02.9811395Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:34:03.0107078Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:34:03.1027370Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:34:03.1231757Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:34:03.1421468Z Compiling .pio/build/t-eth-elite/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:34:03.2409039Z Compiling .pio/build/t-eth-elite/src/mesh/http/ContentHandler.cpp.o
+2025-09-21T23:34:03.2630532Z Compiling .pio/build/t-eth-elite/src/mesh/http/ContentHelper.cpp.o
+2025-09-21T23:34:03.2975613Z Compiling .pio/build/t-eth-elite/src/mesh/http/WebServer.cpp.o
+2025-09-21T23:34:03.3297094Z Compiling .pio/build/t-eth-elite/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:34:03.9002365Z In file included from /pio/workspace/libdeps/t-eth-elite/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:03.9003728Z                  from /pio/workspace/libdeps/t-eth-elite/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:03.9004446Z                  from src/mesh/http/ContentHandler.cpp:41:
+2025-09-21T23:34:03.9005582Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:03.9006855Z  #define NO_DATA         211
+2025-09-21T23:34:03.9007194Z  
+2025-09-21T23:34:03.9007747Z In file included from /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:03.9008448Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:03.9008926Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:03.9009368Z                  from src/main.h:69,
+2025-09-21T23:34:03.9009813Z                  from src/mesh/http/ContentHandler.cpp:6:
+2025-09-21T23:34:03.9010740Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:03.9011704Z  #define NO_DATA                          -32768
+2025-09-21T23:34:03.9012099Z  
+2025-09-21T23:34:03.9648852Z In file included from /pio/workspace/libdeps/t-eth-elite/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:03.9649966Z                  from /pio/workspace/libdeps/t-eth-elite/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:03.9650804Z Compiling .pio/build/t-eth-elite/src/mesh/wifi/WiFiAPClient.cpp.o
+2025-09-21T23:34:03.9651416Z                  from src/mesh/http/WebServer.cpp:44:
+2025-09-21T23:34:03.9652565Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:03.9653673Z  #define NO_DATA         211
+2025-09-21T23:34:03.9654058Z  
+2025-09-21T23:34:03.9655438Z In file included from /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:03.9656611Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:03.9659366Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:03.9660352Z                  from src/main.h:69,
+2025-09-21T23:34:03.9661016Z                  from src/mesh/http/WebServer.cpp:5:
+2025-09-21T23:34:03.9661922Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:03.9662877Z  #define NO_DATA                          -32768
+2025-09-21T23:34:03.9663312Z  
+2025-09-21T23:34:04.4956206Z Compiling .pio/build/t-eth-elite/src/meshUtils.cpp.o
+2025-09-21T23:34:05.2310240Z Compiling .pio/build/t-eth-elite/src/modules/AdminModule.cpp.o
+2025-09-21T23:34:05.7060896Z Compiling .pio/build/t-eth-elite/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:34:05.7451631Z Compiling .pio/build/t-eth-elite/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:34:05.8194540Z Compiling .pio/build/t-eth-elite/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:34:07.2251976Z src/modules/CannedMessageModule.cpp: In member function 'virtual void CannedMessageModule::drawFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:07.2254007Z src/modules/CannedMessageModule.cpp:2347:17: warning: unused variable 'textYOffset' [-Wunused-variable]
+2025-09-21T23:34:07.2256586Z              int textYOffset = (rowHeight - FONT_HEIGHT_SMALL) / 2;
+2025-09-21T23:34:07.2257081Z                  ^~~~~~~~~~~
+2025-09-21T23:34:07.2986979Z Compiling .pio/build/t-eth-elite/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:34:07.4958658Z src/modules/CannedMessageModule.cpp: At global scope:
+2025-09-21T23:34:07.4961055Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:07.4962328Z  static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:34:07.4967947Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:07.5047113Z Compiling .pio/build/t-eth-elite/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:34:07.5607092Z Compiling .pio/build/t-eth-elite/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:34:07.8634403Z Compiling .pio/build/t-eth-elite/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:34:08.2540030Z Compiling .pio/build/t-eth-elite/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:34:09.1393349Z Compiling .pio/build/t-eth-elite/src/modules/Modules.cpp.o
+2025-09-21T23:34:09.2414936Z Compiling .pio/build/t-eth-elite/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:34:09.3886272Z Compiling .pio/build/t-eth-elite/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:34:10.1035151Z Compiling .pio/build/t-eth-elite/src/modules/PositionModule.cpp.o
+2025-09-21T23:34:10.7846932Z Compiling .pio/build/t-eth-elite/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:34:11.1072294Z Compiling .pio/build/t-eth-elite/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:34:11.2155473Z Compiling .pio/build/t-eth-elite/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:34:12.0198031Z Compiling .pio/build/t-eth-elite/src/modules/ReplyModule.cpp.o
+2025-09-21T23:34:12.5460843Z Compiling .pio/build/t-eth-elite/src/modules/RoutingModule.cpp.o
+2025-09-21T23:34:12.5691337Z Compiling .pio/build/t-eth-elite/src/modules/SerialModule.cpp.o
+2025-09-21T23:34:12.9986191Z Compiling .pio/build/t-eth-elite/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:34:13.7659064Z Compiling .pio/build/t-eth-elite/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:34:14.3038938Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:34:14.3494378Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:34:14.6541639Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:34:15.6120198Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:34:16.1987104Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:34:16.2218854Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:34:16.7549404Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:34:16.7736993Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:34:17.6071935Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:34:18.0200134Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:34:18.0531668Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:34:18.0768543Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:34:18.9302436Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:34:19.2847554Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:34:19.3329851Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:34:19.3681122Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:34:20.2132003Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:34:20.5614068Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:34:20.6166383Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:34:20.6658583Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:34:21.4967261Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:34:21.8271476Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:34:21.9008430Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:34:21.9504436Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:34:22.6177521Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:34:23.1178791Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:34:23.2259776Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:34:23.3570072Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:34:23.7577417Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:34:24.3915468Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:34:24.4871727Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:34:24.6392109Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:34:25.0911546Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:34:25.6569826Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:34:25.7488074Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:34:25.7796650Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:34:26.2018965Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:34:26.9165210Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:34:27.0140858Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:34:27.0682021Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:34:27.4787579Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:34:28.0430883Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:34:28.2718622Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:34:28.3384784Z Compiling .pio/build/t-eth-elite/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:34:28.3979140Z Compiling .pio/build/t-eth-elite/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:34:29.1639486Z Compiling .pio/build/t-eth-elite/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:34:29.3344708Z Compiling .pio/build/t-eth-elite/src/modules/WaypointModule.cpp.o
+2025-09-21T23:34:29.5308756Z Compiling .pio/build/t-eth-elite/src/modules/esp32/AudioModule.cpp.o
+2025-09-21T23:34:30.1328536Z Compiling .pio/build/t-eth-elite/src/modules/esp32/PaxcounterModule.cpp.o
+2025-09-21T23:34:31.0525749Z Compiling .pio/build/t-eth-elite/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:34:31.0908808Z Compiling .pio/build/t-eth-elite/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:34:31.1275397Z Compiling .pio/build/t-eth-elite/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:34:31.5255826Z Compiling .pio/build/t-eth-elite/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:34:32.5602649Z Compiling .pio/build/t-eth-elite/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:34:32.6423682Z Compiling .pio/build/t-eth-elite/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:34:32.6759474Z Compiling .pio/build/t-eth-elite/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:34:33.1512945Z Compiling .pio/build/t-eth-elite/src/motion/MotionSensor.cpp.o
+2025-09-21T23:34:34.0962906Z Compiling .pio/build/t-eth-elite/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:34:34.1822007Z Compiling .pio/build/t-eth-elite/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:34:34.2460641Z Compiling .pio/build/t-eth-elite/src/mqtt/MQTT.cpp.o
+2025-09-21T23:34:34.7176609Z Compiling .pio/build/t-eth-elite/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:34:35.5387510Z Compiling .pio/build/t-eth-elite/src/network-stubs.cpp.o
+2025-09-21T23:34:35.6704513Z Compiling .pio/build/t-eth-elite/src/nimble/NimbleBluetooth.cpp.o
+2025-09-21T23:34:35.6985609Z Compiling .pio/build/t-eth-elite/src/platform/esp32/BleOta.cpp.o
+2025-09-21T23:34:36.4102174Z Compiling .pio/build/t-eth-elite/src/platform/esp32/ESP32CryptoEngine.cpp.o
+2025-09-21T23:34:36.6666311Z Compiling .pio/build/t-eth-elite/src/platform/esp32/SimpleAllocator.cpp.o
+2025-09-21T23:34:36.6899911Z Compiling .pio/build/t-eth-elite/src/platform/esp32/WiFiOTA.cpp.o
+2025-09-21T23:34:37.6298306Z Compiling .pio/build/t-eth-elite/src/platform/esp32/iram-quirk.c.o
+2025-09-21T23:34:37.7705457Z Compiling .pio/build/t-eth-elite/src/platform/esp32/main-esp32.cpp.o
+2025-09-21T23:34:37.8120404Z Compiling .pio/build/t-eth-elite/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:34:37.8437232Z Compiling .pio/build/t-eth-elite/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:34:37.8742617Z Compiling .pio/build/t-eth-elite/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:34:38.9146810Z Compiling .pio/build/t-eth-elite/src/serialization/JSON.cpp.o
+2025-09-21T23:34:38.9738399Z Compiling .pio/build/t-eth-elite/src/serialization/JSONValue.cpp.o
+2025-09-21T23:34:39.0118513Z Compiling .pio/build/t-eth-elite/src/serialization/MeshPacketSerializer.cpp.o
+2025-09-21T23:34:39.4547082Z Compiling .pio/build/t-eth-elite/src/serialization/MeshPacketSerializer_nRF52.cpp.o
+2025-09-21T23:34:39.5041591Z Compiling .pio/build/t-eth-elite/src/serialization/cobs.cpp.o
+2025-09-21T23:34:39.5577599Z Compiling .pio/build/t-eth-elite/src/sleep.cpp.o
+2025-09-21T23:34:40.0522292Z Compiling .pio/build/t-eth-elite/src/xmodem.cpp.o
+2025-09-21T23:34:40.6618523Z Building .pio/build/t-eth-elite/bootloader.bin
+2025-09-21T23:34:40.6705234Z Generating partitions .pio/build/t-eth-elite/partitions.bin
+2025-09-21T23:34:40.7469659Z esptool.py v4.5.1
+2025-09-21T23:34:40.7470073Z Creating esp32s3 image...
+2025-09-21T23:34:40.7473992Z Merged 1 ELF section
+2025-09-21T23:34:40.7475081Z Successfully created esp32s3 image.
+2025-09-21T23:34:40.8345623Z Compiling .pio/build/t-eth-elite/lib062/Wire/Wire.cpp.o
+2025-09-21T23:34:40.9901780Z Compiling .pio/build/t-eth-elite/lib207/SPI/SPI.cpp.o
+2025-09-21T23:34:41.4500991Z Compiling .pio/build/t-eth-elite/libc19/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:34:41.5296666Z Compiling .pio/build/t-eth-elite/libc19/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:34:41.5444751Z Archiving .pio/build/t-eth-elite/lib062/libWire.a
+2025-09-21T23:34:41.5513181Z Indexing .pio/build/t-eth-elite/lib062/libWire.a
+2025-09-21T23:34:41.5712425Z Compiling .pio/build/t-eth-elite/libc19/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:34:41.6374821Z Archiving .pio/build/t-eth-elite/lib207/libSPI.a
+2025-09-21T23:34:41.6435077Z Indexing .pio/build/t-eth-elite/lib207/libSPI.a
+2025-09-21T23:34:41.7990721Z Compiling .pio/build/t-eth-elite/lib259/OneButton/OneButton.cpp.o
+2025-09-21T23:34:42.1879115Z Compiling .pio/build/t-eth-elite/lib259/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:34:42.3935022Z Compiling .pio/build/t-eth-elite/libd12/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:34:42.4077021Z Archiving .pio/build/t-eth-elite/libc19/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:34:42.4146586Z Indexing .pio/build/t-eth-elite/libc19/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:34:42.5188491Z Compiling .pio/build/t-eth-elite/lib4b9/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:34:42.6775093Z Compiling .pio/build/t-eth-elite/lib76b/ArduinoThread/Thread.cpp.o
+2025-09-21T23:34:42.8005571Z Archiving .pio/build/t-eth-elite/lib259/libOneButton.a
+2025-09-21T23:34:42.8076461Z Indexing .pio/build/t-eth-elite/lib259/libOneButton.a
+2025-09-21T23:34:42.8268303Z Compiling .pio/build/t-eth-elite/lib76b/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:34:43.0137842Z Archiving .pio/build/t-eth-elite/libd12/libarduino-fsm.a
+2025-09-21T23:34:43.0207445Z Indexing .pio/build/t-eth-elite/libd12/libarduino-fsm.a
+2025-09-21T23:34:43.0417973Z Compiling .pio/build/t-eth-elite/lib0f8/Nanopb/pb_common.c.o
+2025-09-21T23:34:43.1591733Z Compiling .pio/build/t-eth-elite/lib0f8/Nanopb/pb_decode.c.o
+2025-09-21T23:34:43.1763216Z Archiving .pio/build/t-eth-elite/lib4b9/libTinyGPSPlus.a
+2025-09-21T23:34:43.1817690Z Indexing .pio/build/t-eth-elite/lib4b9/libTinyGPSPlus.a
+2025-09-21T23:34:43.1981159Z Compiling .pio/build/t-eth-elite/lib0f8/Nanopb/pb_encode.c.o
+2025-09-21T23:34:43.3123209Z Compiling .pio/build/t-eth-elite/lib362/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:34:43.4459533Z Compiling .pio/build/t-eth-elite/lib085/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:34:43.4602356Z Archiving .pio/build/t-eth-elite/lib76b/libArduinoThread.a
+2025-09-21T23:34:43.4615025Z Archiving .pio/build/t-eth-elite/lib362/libErriezCRC32.a
+2025-09-21T23:34:43.4641639Z Archiving .pio/build/t-eth-elite/lib0f8/libNanopb.a
+2025-09-21T23:34:43.4663051Z Indexing .pio/build/t-eth-elite/lib76b/libArduinoThread.a
+2025-09-21T23:34:43.4686724Z Indexing .pio/build/t-eth-elite/lib362/libErriezCRC32.a
+2025-09-21T23:34:43.4718357Z Indexing .pio/build/t-eth-elite/lib0f8/libNanopb.a
+2025-09-21T23:34:43.5660953Z Compiling .pio/build/t-eth-elite/libce9/TBPubSubClient/PubSubClient.cpp.o
+2025-09-21T23:34:43.6654356Z Compiling .pio/build/t-eth-elite/lib903/NTPClient/NTPClient.cpp.o
+2025-09-21T23:34:43.8271643Z Compiling .pio/build/t-eth-elite/libf94/Syslog/Syslog.cpp.o
+2025-09-21T23:34:44.0043283Z Archiving .pio/build/t-eth-elite/lib085/libNonBlockingRTTTL.a
+2025-09-21T23:34:44.0111327Z Indexing .pio/build/t-eth-elite/lib085/libNonBlockingRTTTL.a
+2025-09-21T23:34:44.1908771Z Compiling .pio/build/t-eth-elite/lib41c/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:34:44.3023984Z Archiving .pio/build/t-eth-elite/lib903/libNTPClient.a
+2025-09-21T23:34:44.3086687Z Archiving .pio/build/t-eth-elite/libce9/libTBPubSubClient.a
+2025-09-21T23:34:44.3140603Z Indexing .pio/build/t-eth-elite/lib903/libNTPClient.a
+2025-09-21T23:34:44.3147618Z Indexing .pio/build/t-eth-elite/libce9/libTBPubSubClient.a
+2025-09-21T23:34:44.3312998Z Compiling .pio/build/t-eth-elite/lib41c/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:34:44.3542277Z Compiling .pio/build/t-eth-elite/lib41c/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:34:44.4685833Z Archiving .pio/build/t-eth-elite/libf94/libSyslog.a
+2025-09-21T23:34:44.4747638Z Indexing .pio/build/t-eth-elite/libf94/libSyslog.a
+2025-09-21T23:34:44.4908997Z Compiling .pio/build/t-eth-elite/lib41c/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:34:44.9750168Z Compiling .pio/build/t-eth-elite/lib60c/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:34:45.1344816Z Compiling .pio/build/t-eth-elite/lib2fe/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:34:45.1436206Z Archiving .pio/build/t-eth-elite/lib41c/libAdafruit BusIO.a
+2025-09-21T23:34:45.1556575Z Indexing .pio/build/t-eth-elite/lib41c/libAdafruit BusIO.a
+2025-09-21T23:34:45.2452419Z Compiling .pio/build/t-eth-elite/lib20a/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:34:45.4090060Z Compiling .pio/build/t-eth-elite/lib1be/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:34:45.5165095Z Archiving .pio/build/t-eth-elite/lib60c/libAdafruit Unified Sensor.a
+2025-09-21T23:34:45.5232206Z Indexing .pio/build/t-eth-elite/lib60c/libAdafruit Unified Sensor.a
+2025-09-21T23:34:45.7071303Z Compiling .pio/build/t-eth-elite/libd17/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:34:45.8067799Z Archiving .pio/build/t-eth-elite/lib2fe/libAdafruit BMP280 Library.a
+2025-09-21T23:34:45.8127711Z Indexing .pio/build/t-eth-elite/lib2fe/libAdafruit BMP280 Library.a
+2025-09-21T23:34:45.9732969Z Compiling .pio/build/t-eth-elite/libfc4/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:34:45.9954986Z Archiving .pio/build/t-eth-elite/lib20a/libAdafruit BMP085 Library.a
+2025-09-21T23:34:46.0010923Z Indexing .pio/build/t-eth-elite/lib20a/libAdafruit BMP085 Library.a
+2025-09-21T23:34:46.0090171Z Archiving .pio/build/t-eth-elite/lib1be/libAdafruit BME280 Library.a
+2025-09-21T23:34:46.0197432Z Indexing .pio/build/t-eth-elite/lib1be/libAdafruit BME280 Library.a
+2025-09-21T23:34:46.1126637Z Compiling .pio/build/t-eth-elite/libbeb/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:34:46.2695776Z Compiling .pio/build/t-eth-elite/lib819/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:34:46.3589302Z Archiving .pio/build/t-eth-elite/libd17/libAdafruit DPS310.a
+2025-09-21T23:34:46.3660007Z Indexing .pio/build/t-eth-elite/libd17/libAdafruit DPS310.a
+2025-09-21T23:34:46.5508374Z Compiling .pio/build/t-eth-elite/libbd0/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:34:46.6444694Z Archiving .pio/build/t-eth-elite/libfc4/libAdafruit MCP9808 Library.a
+2025-09-21T23:34:46.6508490Z Indexing .pio/build/t-eth-elite/libfc4/libAdafruit MCP9808 Library.a
+2025-09-21T23:34:46.6704973Z Compiling .pio/build/t-eth-elite/libbd0/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:34:46.7479221Z Archiving .pio/build/t-eth-elite/libbeb/libAdafruit INA260 Library.a
+2025-09-21T23:34:46.7546731Z Indexing .pio/build/t-eth-elite/libbeb/libAdafruit INA260 Library.a
+2025-09-21T23:34:46.7731690Z Compiling .pio/build/t-eth-elite/libbd0/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:34:46.9066536Z Archiving .pio/build/t-eth-elite/lib819/libAdafruit INA219.a
+2025-09-21T23:34:46.9126469Z Indexing .pio/build/t-eth-elite/lib819/libAdafruit INA219.a
+2025-09-21T23:34:46.9293222Z Compiling .pio/build/t-eth-elite/libbd0/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:34:47.3238607Z /pio/workspace/libdeps/t-eth-elite/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp: In member function 'virtual bool Adafruit_PM25AQI_I2C::read(PM25_AQI_Data*)':
+2025-09-21T23:34:47.3240499Z /pio/workspace/libdeps/t-eth-elite/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp:50:10: warning: unused variable 'bufLen' [-Wunused-variable]
+2025-09-21T23:34:47.3247095Z    size_t bufLen = sizeof(buffer);
+2025-09-21T23:34:47.3248011Z           ^~~~~~
+2025-09-21T23:34:47.3264303Z Compiling .pio/build/t-eth-elite/libabb/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:34:47.4548266Z Compiling .pio/build/t-eth-elite/lib71e/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:34:47.4835013Z /pio/workspace/libdeps/t-eth-elite/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:34:47.4837015Z /pio/workspace/libdeps/t-eth-elite/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:172:11: warning: unused variable 'csum' [-Wunused-variable]
+2025-09-21T23:34:47.4838050Z    uint8_t csum = 0;
+2025-09-21T23:34:47.4838356Z            ^~~~
+2025-09-21T23:34:47.6220180Z Compiling .pio/build/t-eth-elite/lib517/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:34:47.6356945Z Archiving .pio/build/t-eth-elite/libbd0/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:34:47.6426224Z Indexing .pio/build/t-eth-elite/libbd0/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:34:47.8315184Z Compiling .pio/build/t-eth-elite/lib225/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:34:47.9903151Z Archiving .pio/build/t-eth-elite/libabb/libAdafruit MPU6050.a
+2025-09-21T23:34:47.9976498Z Indexing .pio/build/t-eth-elite/libabb/libAdafruit MPU6050.a
+2025-09-21T23:34:48.0175784Z Compiling .pio/build/t-eth-elite/lib225/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:34:48.1020460Z Archiving .pio/build/t-eth-elite/lib71e/libAdafruit LIS3DH.a
+2025-09-21T23:34:48.1078980Z Indexing .pio/build/t-eth-elite/lib71e/libAdafruit LIS3DH.a
+2025-09-21T23:34:48.1240853Z Compiling .pio/build/t-eth-elite/lib225/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:34:48.2730595Z Archiving .pio/build/t-eth-elite/lib517/libAdafruit AHTX0.a
+2025-09-21T23:34:48.2800148Z Indexing .pio/build/t-eth-elite/lib517/libAdafruit AHTX0.a
+2025-09-21T23:34:48.3000839Z Compiling .pio/build/t-eth-elite/lib225/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:34:48.4918578Z Compiling .pio/build/t-eth-elite/lib225/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:34:48.7294683Z Compiling .pio/build/t-eth-elite/lib225/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:34:48.7717635Z Compiling .pio/build/t-eth-elite/lib225/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:34:48.9412387Z Compiling .pio/build/t-eth-elite/lib225/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:34:49.2865120Z Compiling .pio/build/t-eth-elite/lib18a/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:34:49.4825434Z Compiling .pio/build/t-eth-elite/lib3b8/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:34:49.6441923Z Compiling .pio/build/t-eth-elite/liba75/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:34:49.6603644Z Archiving .pio/build/t-eth-elite/lib225/libAdafruit LSM6DS.a
+2025-09-21T23:34:49.6693409Z Indexing .pio/build/t-eth-elite/lib225/libAdafruit LSM6DS.a
+2025-09-21T23:34:49.8316948Z Compiling .pio/build/t-eth-elite/lib238/INA3221/INA3221.cpp.o
+2025-09-21T23:34:49.9034956Z Archiving .pio/build/t-eth-elite/lib18a/libAdafruit TSL2591 Library.a
+2025-09-21T23:34:49.9092546Z Indexing .pio/build/t-eth-elite/lib18a/libAdafruit TSL2591 Library.a
+2025-09-21T23:34:50.0455454Z /pio/workspace/libdeps/t-eth-elite/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'float MLX90632::getObjectTempF()':
+2025-09-21T23:34:50.0457465Z /pio/workspace/libdeps/t-eth-elite/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:419:9: warning: unused variable 'AMB' [-Wunused-variable]
+2025-09-21T23:34:50.0458575Z    float AMB;
+2025-09-21T23:34:50.0458862Z          ^~~
+2025-09-21T23:34:50.0459798Z /pio/workspace/libdeps/t-eth-elite/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:420:9: warning: unused variable 'Sto' [-Wunused-variable]
+2025-09-21T23:34:50.0460895Z    float Sto;
+2025-09-21T23:34:50.0461170Z          ^~~
+2025-09-21T23:34:50.0512808Z /pio/workspace/libdeps/t-eth-elite/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'void MLX90632::setMeasurementRate(uint8_t)':
+2025-09-21T23:34:50.0514779Z /pio/workspace/libdeps/t-eth-elite/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:775:19: warning: unused variable 'returnError' [-Wunused-variable]
+2025-09-21T23:34:50.0524245Z   MLX90632::status returnError = setMode(MODE_STEP);
+2025-09-21T23:34:50.0528843Z                    ^~~~~~~~~~~
+2025-09-21T23:34:50.0832689Z Compiling .pio/build/t-eth-elite/libf68/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:34:50.1528677Z Archiving .pio/build/t-eth-elite/lib3b8/libEmotiBit MLX90632.a
+2025-09-21T23:34:50.1589542Z Indexing .pio/build/t-eth-elite/lib3b8/libEmotiBit MLX90632.a
+2025-09-21T23:34:50.3400919Z Compiling .pio/build/t-eth-elite/libce5/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:34:50.3518635Z Archiving .pio/build/t-eth-elite/liba75/libAdafruit MLX90614 Library.a
+2025-09-21T23:34:50.3571178Z Indexing .pio/build/t-eth-elite/liba75/libAdafruit MLX90614 Library.a
+2025-09-21T23:34:50.5447742Z Compiling .pio/build/t-eth-elite/lib939/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:34:50.5588027Z Archiving .pio/build/t-eth-elite/lib238/libINA3221.a
+2025-09-21T23:34:50.5646326Z Indexing .pio/build/t-eth-elite/lib238/libINA3221.a
+2025-09-21T23:34:50.7364568Z Compiling .pio/build/t-eth-elite/lib744/INA226/INA226.cpp.o
+2025-09-21T23:34:50.7513385Z Archiving .pio/build/t-eth-elite/libf68/libQMC5883LCompass.a
+2025-09-21T23:34:50.7575239Z Indexing .pio/build/t-eth-elite/libf68/libQMC5883LCompass.a
+2025-09-21T23:34:50.9390934Z Compiling .pio/build/t-eth-elite/lib1ae/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:34:51.0031464Z Archiving .pio/build/t-eth-elite/libce5/libDFRobot_RTU.a
+2025-09-21T23:34:51.0088805Z Indexing .pio/build/t-eth-elite/libce5/libDFRobot_RTU.a
+2025-09-21T23:34:51.0249537Z Compiling .pio/build/t-eth-elite/lib1ae/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:34:51.1677866Z Archiving .pio/build/t-eth-elite/lib939/libDFRobot_RainfallSensor.a
+2025-09-21T23:34:51.1747079Z Indexing .pio/build/t-eth-elite/lib939/libDFRobot_RainfallSensor.a
+2025-09-21T23:34:51.1936935Z Compiling .pio/build/t-eth-elite/lib1ae/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:34:51.2550382Z In file included from /pio/workspace/libdeps/t-eth-elite/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:34:51.2552730Z /pio/workspace/libdeps/t-eth-elite/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:42: warning: "I2C_BUFFER_LENGTH" redefined
+2025-09-21T23:34:51.2566788Z    #define I2C_BUFFER_LENGTH 32
+2025-09-21T23:34:51.2627273Z  
+2025-09-21T23:34:51.2628122Z In file included from /pio/workspace/libdeps/t-eth-elite/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:20,
+2025-09-21T23:34:51.2629526Z                  from /pio/workspace/libdeps/t-eth-elite/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:34:51.2630955Z /pio/core/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h:43: note: this is the location of the previous definition
+2025-09-21T23:34:51.2632263Z      #define I2C_BUFFER_LENGTH 128  // Default size, if none is set using Wire::setBuffersize(size_t)
+2025-09-21T23:34:51.3885526Z  
+2025-09-21T23:34:51.3886178Z Archiving .pio/build/t-eth-elite/lib744/libINA226.a
+2025-09-21T23:34:51.3944148Z Indexing .pio/build/t-eth-elite/lib744/libINA226.a
+2025-09-21T23:34:51.4960413Z /pio/workspace/libdeps/t-eth-elite/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp: In member function 'void MAX30105::enableSlot(uint8_t, uint8_t)':
+2025-09-21T23:34:51.4962545Z /pio/workspace/libdeps/t-eth-elite/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:292:11: warning: unused variable 'originalContents' [-Wunused-variable]
+2025-09-21T23:34:51.4963842Z    uint8_t originalContents;
+2025-09-21T23:34:51.4964310Z            ^~~~~~~~~~~~~~~~
+2025-09-21T23:34:51.5598968Z Compiling .pio/build/t-eth-elite/lib5a7/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:34:51.5791847Z /pio/workspace/libdeps/t-eth-elite/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:34:51.5794099Z /pio/workspace/libdeps/t-eth-elite/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:34:51.5795620Z      if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:34:51.5796401Z          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:34:51.6128865Z Compiling .pio/build/t-eth-elite/lib5a7/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:34:51.7924669Z Compiling .pio/build/t-eth-elite/liba8a/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:34:51.9541505Z Compiling .pio/build/t-eth-elite/lib963/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:34:51.9686212Z Archiving .pio/build/t-eth-elite/lib1ae/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:34:51.9765016Z Indexing .pio/build/t-eth-elite/lib1ae/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:34:52.1611587Z Compiling .pio/build/t-eth-elite/lib29e/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:34:52.2755679Z Archiving .pio/build/t-eth-elite/lib5a7/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:34:52.2829641Z Indexing .pio/build/t-eth-elite/lib5a7/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:34:52.4432936Z Compiling .pio/build/t-eth-elite/lib4a2/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:34:52.4571616Z Archiving .pio/build/t-eth-elite/liba8a/libAdafruit LTR390 Library.a
+2025-09-21T23:34:52.4638212Z Indexing .pio/build/t-eth-elite/liba8a/libAdafruit LTR390 Library.a
+2025-09-21T23:34:52.6217593Z Compiling .pio/build/t-eth-elite/lib34a/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:34:52.6290695Z Archiving .pio/build/t-eth-elite/lib963/libAdafruit PCT2075.a
+2025-09-21T23:34:52.6353389Z Indexing .pio/build/t-eth-elite/lib963/libAdafruit PCT2075.a
+2025-09-21T23:34:52.7230992Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::sensorInit()':
+2025-09-21T23:34:52.7232888Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp:23:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:34:52.7234091Z    int8_t  rslt    = 0;
+2025-09-21T23:34:52.7238789Z            ^~~~
+2025-09-21T23:34:52.7271110Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setMeasurementXYZ(uint8_t, uint8_t, uint8_t)':
+2025-09-21T23:34:52.7273480Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp:263:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:34:52.7274727Z    int8_t  rslt;
+2025-09-21T23:34:52.7275220Z            ^~~~
+2025-09-21T23:34:52.7313934Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setInterruputLatch(uint8_t)':
+2025-09-21T23:34:52.7320504Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp:489:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:34:52.7327300Z    int8_t  rslt;
+2025-09-21T23:34:52.7331145Z            ^~~~
+2025-09-21T23:34:52.7365713Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::normalSelfTest()':
+2025-09-21T23:34:52.7376433Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp:706:10: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:34:52.7377483Z    int8_t rslt;
+2025-09-21T23:34:52.7377766Z           ^~~~
+2025-09-21T23:34:52.7387522Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::advSelfTest()':
+2025-09-21T23:34:52.7401957Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp:776:11: warning: unused variable 'selfTestCurrent' [-Wunused-variable]
+2025-09-21T23:34:52.7402986Z    uint8_t selfTestCurrent;
+2025-09-21T23:34:52.7403338Z            ^~~~~~~~~~~~~~~
+2025-09-21T23:34:52.7410748Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getDataOverrunState()':
+2025-09-21T23:34:52.7414502Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp:853:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:34:52.7426908Z    int8_t  rslt;
+2025-09-21T23:34:52.7427220Z            ^~~~
+2025-09-21T23:34:52.7435808Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setOverflowPin(uint8_t)':
+2025-09-21T23:34:52.7446722Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp:865:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:34:52.7447673Z    int8_t  rslt;
+2025-09-21T23:34:52.7448827Z            ^~~~
+2025-09-21T23:34:52.7450045Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getOverflowState()':
+2025-09-21T23:34:52.7477484Z /pio/workspace/libdeps/t-eth-elite/DFRobot_BMM150/DFRobot_BMM150.cpp:878:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:34:52.7478891Z    int8_t  rslt;
+2025-09-21T23:34:52.7480048Z            ^~~~
+2025-09-21T23:34:52.7919677Z Compiling .pio/build/t-eth-elite/lib34a/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:34:52.8711273Z Archiving .pio/build/t-eth-elite/lib29e/libDFRobot_BMM150.a
+2025-09-21T23:34:52.8784315Z Indexing .pio/build/t-eth-elite/lib29e/libDFRobot_BMM150.a
+2025-09-21T23:34:53.0209117Z /pio/workspace/libdeps/t-eth-elite/Adafruit TSL2561/Adafruit_TSL2561_U.cpp: In member function 'uint32_t Adafruit_TSL2561_Unified::calculateLux(uint16_t, uint16_t)':
+2025-09-21T23:34:53.0210976Z /pio/workspace/libdeps/t-eth-elite/Adafruit TSL2561/Adafruit_TSL2561_U.cpp:421:14: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+2025-09-21T23:34:53.0212545Z    if ((ratio >= 0) && (ratio <= TSL2561_LUX_K1T)) {
+2025-09-21T23:34:53.0213010Z         ~~~~~~^~~~
+2025-09-21T23:34:53.0608446Z Compiling .pio/build/t-eth-elite/lib8c4/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:34:53.2004873Z Compiling .pio/build/t-eth-elite/lib260/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:34:53.2140203Z Archiving .pio/build/t-eth-elite/lib34a/libAdafruit BMP3XX Library.a
+2025-09-21T23:34:53.2163837Z Archiving .pio/build/t-eth-elite/lib4a2/libAdafruit TSL2561.a
+2025-09-21T23:34:53.2202548Z Indexing .pio/build/t-eth-elite/lib34a/libAdafruit BMP3XX Library.a
+2025-09-21T23:34:53.2211668Z Indexing .pio/build/t-eth-elite/lib4a2/libAdafruit TSL2561.a
+2025-09-21T23:34:53.3246058Z Compiling .pio/build/t-eth-elite/libda5/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:34:53.3419407Z Compiling .pio/build/t-eth-elite/libda5/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:34:53.6632283Z Archiving .pio/build/t-eth-elite/lib8c4/libAdafruit MAX1704X.a
+2025-09-21T23:34:53.6704458Z Indexing .pio/build/t-eth-elite/lib8c4/libAdafruit MAX1704X.a
+2025-09-21T23:34:53.6897789Z Compiling .pio/build/t-eth-elite/libda5/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:34:53.8609279Z Archiving .pio/build/t-eth-elite/lib260/libAdafruit SHTC3 Library.a
+2025-09-21T23:34:53.8676766Z Indexing .pio/build/t-eth-elite/lib260/libAdafruit SHTC3 Library.a
+2025-09-21T23:34:54.0108821Z Compiling .pio/build/t-eth-elite/libe42/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:34:54.2043412Z Compiling .pio/build/t-eth-elite/lib1cf/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:34:54.3526661Z Compiling .pio/build/t-eth-elite/lib2bb/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:34:54.3633270Z Archiving .pio/build/t-eth-elite/libda5/libAdafruit LPS2X.a
+2025-09-21T23:34:54.3696722Z Indexing .pio/build/t-eth-elite/libda5/libAdafruit LPS2X.a
+2025-09-21T23:34:54.5280309Z Compiling .pio/build/t-eth-elite/libb26/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:34:54.5415399Z Archiving .pio/build/t-eth-elite/libe42/libAdafruit SHT31 Library.a
+2025-09-21T23:34:54.5469452Z Indexing .pio/build/t-eth-elite/libe42/libAdafruit SHT31 Library.a
+2025-09-21T23:34:54.7040727Z Compiling .pio/build/t-eth-elite/lib69e/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:34:54.8565223Z Archiving .pio/build/t-eth-elite/lib1cf/libAdafruit VEML7700 Library.a
+2025-09-21T23:34:54.8631187Z Indexing .pio/build/t-eth-elite/lib1cf/libAdafruit VEML7700 Library.a
+2025-09-21T23:34:54.8838311Z Compiling .pio/build/t-eth-elite/lib0be/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:34:55.0117134Z Archiving .pio/build/t-eth-elite/lib2bb/libAdafruit SHT4x Library.a
+2025-09-21T23:34:55.0177725Z Indexing .pio/build/t-eth-elite/lib2bb/libAdafruit SHT4x Library.a
+2025-09-21T23:34:55.1280217Z Compiling .pio/build/t-eth-elite/lib0be/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:34:55.2592279Z /pio/workspace/libdeps/t-eth-elite/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp: In member function 'OPT3001_ErrorCode ClosedCube_OPT3001::begin(uint8_t)':
+2025-09-21T23:34:55.2597290Z /pio/workspace/libdeps/t-eth-elite/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp:39:20: warning: unused variable 'error' [-Wunused-variable]
+2025-09-21T23:34:55.2599007Z   OPT3001_ErrorCode error = NO_ERROR;
+2025-09-21T23:34:55.2599774Z                     ^~~~~
+2025-09-21T23:34:55.2960042Z Compiling .pio/build/t-eth-elite/lib4f0/bsec2/bsec2.cpp.o
+2025-09-21T23:34:55.3092031Z Archiving .pio/build/t-eth-elite/libb26/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:34:55.3154774Z Archiving .pio/build/t-eth-elite/lib69e/libClosedCube OPT3001.a
+2025-09-21T23:34:55.3160830Z Indexing .pio/build/t-eth-elite/libb26/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:34:55.3211563Z Indexing .pio/build/t-eth-elite/lib69e/libClosedCube OPT3001.a
+2025-09-21T23:34:55.3310398Z Compiling .pio/build/t-eth-elite/lib4f0/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:34:55.4921207Z Compiling .pio/build/t-eth-elite/lib3f0/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:34:55.7861258Z Archiving .pio/build/t-eth-elite/lib0be/libBME68x Sensor library.a
+2025-09-21T23:34:55.7932344Z Indexing .pio/build/t-eth-elite/lib0be/libBME68x Sensor library.a
+2025-09-21T23:34:55.8129840Z Compiling .pio/build/t-eth-elite/lib808/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:34:55.9149022Z Compiling .pio/build/t-eth-elite/lib808/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:34:56.0793950Z Compiling .pio/build/t-eth-elite/lib808/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:34:56.0931207Z Archiving .pio/build/t-eth-elite/lib4f0/libbsec2.a
+2025-09-21T23:34:56.0977455Z Archiving .pio/build/t-eth-elite/lib3f0/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:34:56.1054121Z Indexing .pio/build/t-eth-elite/lib3f0/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:34:56.1060031Z Indexing .pio/build/t-eth-elite/lib4f0/libbsec2.a
+2025-09-21T23:34:56.1087554Z Compiling .pio/build/t-eth-elite/lib808/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:34:56.1229221Z Compiling .pio/build/t-eth-elite/lib808/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:34:56.1457477Z Compiling .pio/build/t-eth-elite/lib808/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:34:56.2248329Z Compiling .pio/build/t-eth-elite/lib808/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:34:56.8125624Z Compiling .pio/build/t-eth-elite/lib36c/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:34:56.9241487Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/Hal.cpp.o
+2025-09-21T23:34:56.9338662Z Archiving .pio/build/t-eth-elite/lib808/libSensirion Core.a
+2025-09-21T23:34:56.9427106Z Indexing .pio/build/t-eth-elite/lib808/libSensirion Core.a
+2025-09-21T23:34:56.9495674Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/Module.cpp.o
+2025-09-21T23:34:56.9668197Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:34:57.4447094Z Archiving .pio/build/t-eth-elite/lib36c/libSensirion I2C SCD4x.a
+2025-09-21T23:34:57.4497548Z Indexing .pio/build/t-eth-elite/lib36c/libSensirion I2C SCD4x.a
+2025-09-21T23:34:57.5625480Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:34:57.5840488Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:34:57.6040522Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:34:57.6279535Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:34:57.6480796Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:34:57.6888170Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:34:58.2556868Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:34:58.2867299Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:34:58.3115203Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:34:58.3329395Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:34:58.9657765Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:34:59.0179116Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:34:59.0409636Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:34:59.0633449Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:34:59.6308547Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:34:59.6525756Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:34:59.6732775Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:34:59.6979451Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:35:00.2591575Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:35:00.2844851Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:35:00.3190552Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:35:00.3439333Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:35:00.9140537Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:35:00.9807532Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:35:01.0068066Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:35:01.0413982Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:35:01.6182459Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:35:01.6590045Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:35:01.6819017Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:35:01.7045423Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:35:02.2635868Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:35:02.3345109Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:35:02.3586075Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:35:02.4765026Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:35:02.9169682Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:35:02.9770306Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:35:03.0018446Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:35:03.2428669Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:35:03.5325882Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:35:03.5959031Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:35:03.6262178Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:35:03.6499553Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:35:03.8614123Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:35:04.2158379Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:35:04.2457178Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:35:04.2691778Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:35:04.4826107Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:35:04.5819073Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:35:04.6320189Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:35:04.7002663Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:35:04.8317092Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:35:04.8658305Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:35:04.8837055Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:35:04.9048980Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:35:05.4876441Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:35:05.5063319Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:35:05.5244307Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:35:05.5443301Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:35:06.1031076Z Compiling .pio/build/t-eth-elite/lib44e/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:35:06.2766163Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/ConnectionContext.cpp.o
+2025-09-21T23:35:06.3050578Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPConnection.cpp.o
+2025-09-21T23:35:06.3228167Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPHeader.cpp.o
+2025-09-21T23:35:06.6776241Z Archiving .pio/build/t-eth-elite/lib44e/libRadioLib.a
+2025-09-21T23:35:06.7168541Z Indexing .pio/build/t-eth-elite/lib44e/libRadioLib.a
+2025-09-21T23:35:06.7814500Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPHeaders.cpp.o
+2025-09-21T23:35:06.9311655Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPMultipartBodyParser.cpp.o
+2025-09-21T23:35:07.1886249Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPNode.cpp.o
+2025-09-21T23:35:07.4617518Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPRequest.cpp.o
+2025-09-21T23:35:07.5297176Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPResponse.cpp.o
+2025-09-21T23:35:07.8665368Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPSConnection.cpp.o
+2025-09-21T23:35:07.9700568Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPSServer.cpp.o
+2025-09-21T23:35:08.2318331Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPServer.cpp.o
+2025-09-21T23:35:08.3058183Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPURLEncodedBodyParser.cpp.o
+2025-09-21T23:35:08.7540342Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/HTTPValidator.cpp.o
+2025-09-21T23:35:08.8421404Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/ResolvedResource.cpp.o
+2025-09-21T23:35:09.0822554Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/ResourceNode.cpp.o
+2025-09-21T23:35:09.1095314Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/ResourceParameters.cpp.o
+2025-09-21T23:35:09.1328093Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/ResourceResolver.cpp.o
+2025-09-21T23:35:09.5401058Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/SSLCert.cpp.o
+2025-09-21T23:35:09.8060688Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/ValidatorFunctions.cpp.o
+2025-09-21T23:35:09.9153857Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/WebsocketHandler.cpp.o
+2025-09-21T23:35:10.1369132Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/WebsocketInputStreambuf.cpp.o
+2025-09-21T23:35:10.2275873Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/WebsocketNode.cpp.o
+2025-09-21T23:35:10.4868822Z Compiling .pio/build/t-eth-elite/libeec/esp32_https_server/util.cpp.o
+2025-09-21T23:35:10.9659629Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLE2904.cpp.o
+2025-09-21T23:35:10.9898727Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEAddress.cpp.o
+2025-09-21T23:35:11.1001632Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEAdvertisedDevice.cpp.o
+2025-09-21T23:35:11.1327644Z Archiving .pio/build/t-eth-elite/libeec/libesp32_https_server.a
+2025-09-21T23:35:11.1523050Z Indexing .pio/build/t-eth-elite/libeec/libesp32_https_server.a
+2025-09-21T23:35:11.1971576Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEAdvertising.cpp.o
+2025-09-21T23:35:11.5206386Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEBeacon.cpp.o
+2025-09-21T23:35:11.7192487Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLECharacteristic.cpp.o
+2025-09-21T23:35:12.0101106Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEClient.cpp.o
+2025-09-21T23:35:12.1149715Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEDescriptor.cpp.o
+2025-09-21T23:35:12.3719142Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEDevice.cpp.o
+2025-09-21T23:35:12.7770538Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEEddystoneTLM.cpp.o
+2025-09-21T23:35:12.9677450Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEEddystoneURL.cpp.o
+2025-09-21T23:35:13.0996933Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEExtAdvertising.cpp.o
+2025-09-21T23:35:13.1495558Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEHIDDevice.cpp.o
+2025-09-21T23:35:13.2104717Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLERemoteCharacteristic.cpp.o
+2025-09-21T23:35:13.4140094Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLERemoteDescriptor.cpp.o
+2025-09-21T23:35:13.5011959Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLERemoteService.cpp.o
+2025-09-21T23:35:13.9084212Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEScan.cpp.o
+2025-09-21T23:35:14.1074823Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLESecurity.cpp.o
+2025-09-21T23:35:14.2769629Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEServer.cpp.o
+2025-09-21T23:35:14.4911836Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEService.cpp.o
+2025-09-21T23:35:14.8575104Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEUUID.cpp.o
+2025-09-21T23:35:14.9327548Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/NimBLEUtils.cpp.o
+2025-09-21T23:35:15.3997230Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/esp_port/esp-hci/src/esp_nimble_hci.c.o
+2025-09-21T23:35:15.4228148Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/esp_port/port/src/esp_nimble_mem.c.o
+2025-09-21T23:35:15.4458024Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_decrypt.c.o
+2025-09-21T23:35:15.5066521Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_encrypt.c.o
+2025-09-21T23:35:15.5294328Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/cbc_mode.c.o
+2025-09-21T23:35:15.5560383Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/ccm_mode.c.o
+2025-09-21T23:35:15.5760947Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/cmac_mode.c.o
+2025-09-21T23:35:15.5973306Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_mode.c.o
+2025-09-21T23:35:15.6189532Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_prng.c.o
+2025-09-21T23:35:15.6435643Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc.c.o
+2025-09-21T23:35:15.6613358Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dh.c.o
+2025-09-21T23:35:15.6779947Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dsa.c.o
+2025-09-21T23:35:15.7174234Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_platform_specific.c.o
+2025-09-21T23:35:15.7417359Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac.c.o
+2025-09-21T23:35:15.7599584Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac_prng.c.o
+2025-09-21T23:35:15.7792566Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/sha256.c.o
+2025-09-21T23:35:15.7969304Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/ext/tinycrypt/src/utils.c.o
+2025-09-21T23:35:15.8573125Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll.c.o
+2025-09-21T23:35:15.8801347Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_adv.c.o
+2025-09-21T23:35:15.8948809Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn.c.o
+2025-09-21T23:35:15.9086865Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn_hci.c.o
+2025-09-21T23:35:15.9230274Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_ctrl.c.o
+2025-09-21T23:35:15.9375041Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_dtm.c.o
+2025-09-21T23:35:15.9507461Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci.c.o
+2025-09-21T23:35:15.9639474Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci_ev.c.o
+2025-09-21T23:35:15.9775483Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_iso.c.o
+2025-09-21T23:35:15.9939139Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rand.c.o
+2025-09-21T23:35:16.0053123Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_resolv.c.o
+2025-09-21T23:35:16.0197860Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rfmgmt.c.o
+2025-09-21T23:35:16.0354299Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_scan.c.o
+2025-09-21T23:35:16.0488319Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sched.c.o
+2025-09-21T23:35:16.0626578Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_supp_cmd.c.o
+2025-09-21T23:35:16.0787717Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sync.c.o
+2025-09-21T23:35:16.0907896Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_trace.c.o
+2025-09-21T23:35:16.1054777Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_utils.c.o
+2025-09-21T23:35:16.1197989Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_whitelist.c.o
+2025-09-21T23:35:16.1442606Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_hw.c.o
+2025-09-21T23:35:16.1612248Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_phy.c.o
+2025-09-21T23:35:16.1827678Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_hw.c.o
+2025-09-21T23:35:16.2002887Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy.c.o
+2025-09-21T23:35:16.2140137Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy_trace.c.o
+2025-09-21T23:35:16.2663638Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/access.c.o
+2025-09-21T23:35:16.2969875Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/adv.c.o
+2025-09-21T23:35:16.3113361Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/aes-ccm.c.o
+2025-09-21T23:35:16.3249941Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/app_keys.c.o
+2025-09-21T23:35:16.3401558Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/beacon.c.o
+2025-09-21T23:35:16.3555207Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/cdb.c.o
+2025-09-21T23:35:16.3708439Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg.c.o
+2025-09-21T23:35:16.3848710Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_cli.c.o
+2025-09-21T23:35:16.3992987Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_srv.c.o
+2025-09-21T23:35:16.4239161Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/crypto.c.o
+2025-09-21T23:35:16.4412535Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/friend.c.o
+2025-09-21T23:35:16.4534790Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/glue.c.o
+2025-09-21T23:35:16.4727206Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_cli.c.o
+2025-09-21T23:35:16.4881685Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_srv.c.o
+2025-09-21T23:35:16.5082925Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/heartbeat.c.o
+2025-09-21T23:35:16.5234735Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/light_model.c.o
+2025-09-21T23:35:16.5414737Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/lpn.c.o
+2025-09-21T23:35:16.5547853Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/mesh.c.o
+2025-09-21T23:35:16.5731891Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_cli.c.o
+2025-09-21T23:35:16.5885087Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_srv.c.o
+2025-09-21T23:35:16.6029156Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/net.c.o
+2025-09-21T23:35:16.6184463Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/nodes.c.o
+2025-09-21T23:35:16.6341866Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_adv.c.o
+2025-09-21T23:35:16.6485435Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_gatt.c.o
+2025-09-21T23:35:16.6634982Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov.c.o
+2025-09-21T23:35:16.6779057Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov_device.c.o
+2025-09-21T23:35:16.6932080Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/provisioner.c.o
+2025-09-21T23:35:16.7165663Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/proxy.c.o
+2025-09-21T23:35:16.7328180Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/rpl.c.o
+2025-09-21T23:35:16.7449687Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/settings.c.o
+2025-09-21T23:35:16.7638376Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/shell.c.o
+2025-09-21T23:35:16.7782496Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/subnet.c.o
+2025-09-21T23:35:16.7935213Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/mesh/src/transport.c.o
+2025-09-21T23:35:16.8146375Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/services/ans/src/ble_svc_ans.c.o
+2025-09-21T23:35:16.8359519Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/services/bas/src/ble_svc_bas.c.o
+2025-09-21T23:35:16.8547397Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/services/dis/src/ble_svc_dis.c.o
+2025-09-21T23:35:16.8772781Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/services/gap/src/ble_svc_gap.c.o
+2025-09-21T23:35:16.9850891Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/services/gatt/src/ble_svc_gatt.c.o
+2025-09-21T23:35:17.0106292Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/services/ias/src/ble_svc_ias.c.o
+2025-09-21T23:35:17.0358830Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/services/ipss/src/ble_svc_ipss.c.o
+2025-09-21T23:35:17.0650293Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/services/lls/src/ble_svc_lls.c.o
+2025-09-21T23:35:17.1471544Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_att.c.o
+2025-09-21T23:35:17.1768794Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_att_clt.c.o
+2025-09-21T23:35:17.2050967Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_att_cmd.c.o
+2025-09-21T23:35:17.2349002Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_att_svr.c.o
+2025-09-21T23:35:17.3420694Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_eddystone.c.o
+2025-09-21T23:35:17.3925407Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_gap.c.o
+2025-09-21T23:35:17.4138091Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_gattc.c.o
+2025-09-21T23:35:17.4948204Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts.c.o
+2025-09-21T23:35:17.5220074Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts_lcl.c.o
+2025-09-21T23:35:17.7015694Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs.c.o
+2025-09-21T23:35:17.7178787Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_adv.c.o
+2025-09-21T23:35:17.7372603Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_atomic.c.o
+2025-09-21T23:35:17.7585320Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_cfg.c.o
+2025-09-21T23:35:17.9096993Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_conn.c.o
+2025-09-21T23:35:17.9291263Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_flow.c.o
+2025-09-21T23:35:17.9453064Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci.c.o
+2025-09-21T23:35:17.9606269Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_cmd.c.o
+2025-09-21T23:35:18.0972333Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_evt.c.o
+2025-09-21T23:35:18.1144598Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_util.c.o
+2025-09-21T23:35:18.1323260Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_id.c.o
+2025-09-21T23:35:18.1557801Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_log.c.o
+2025-09-21T23:35:18.2890628Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mbuf.c.o
+2025-09-21T23:35:18.3056285Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_misc.c.o
+2025-09-21T23:35:18.3280729Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mqueue.c.o
+2025-09-21T23:35:18.3488360Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_periodic_sync.c.o
+2025-09-21T23:35:18.4564881Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_pvcy.c.o
+2025-09-21T23:35:18.4882197Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_resolv.c.o
+2025-09-21T23:35:18.5050803Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_shutdown.c.o
+2025-09-21T23:35:18.5212572Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_startup.c.o
+2025-09-21T23:35:18.5366646Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_stop.c.o
+2025-09-21T23:35:18.5556309Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_ibeacon.c.o
+2025-09-21T23:35:18.6495248Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap.c.o
+2025-09-21T23:35:18.6968263Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_coc.c.o
+2025-09-21T23:35:18.7179699Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig.c.o
+2025-09-21T23:35:18.7408058Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig_cmd.c.o
+2025-09-21T23:35:18.8488713Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_monitor.c.o
+2025-09-21T23:35:18.8739344Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_sm.c.o
+2025-09-21T23:35:18.9084373Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_alg.c.o
+2025-09-21T23:35:18.9269960Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_cmd.c.o
+2025-09-21T23:35:18.9427822Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_lgcy.c.o
+2025-09-21T23:35:19.0977885Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_sc.c.o
+2025-09-21T23:35:19.1144688Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_store.c.o
+2025-09-21T23:35:19.1302781Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_store_util.c.o
+2025-09-21T23:35:19.1500502Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/src/ble_uuid.c.o
+2025-09-21T23:35:19.3072352Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config.c.o
+2025-09-21T23:35:19.3266371Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config_conf.c.o
+2025-09-21T23:35:19.3432220Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_nvs.c.o
+2025-09-21T23:35:19.3627484Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/host/util/src/addr.c.o
+2025-09-21T23:35:19.3990591Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/nimble/transport/ram/src/ble_hci_ram.c.o
+2025-09-21T23:35:19.4351050Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/endian.c.o
+2025-09-21T23:35:19.4783350Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/hal_timer.c.o
+2025-09-21T23:35:19.5252044Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/hal_uart.c.o
+2025-09-21T23:35:19.5451052Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/mem.c.o
+2025-09-21T23:35:19.5679140Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/nimble_port.c.o
+2025-09-21T23:35:19.5832415Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime.c.o
+2025-09-21T23:35:19.5999419Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime_pwr2.c.o
+2025-09-21T23:35:19.6657054Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/os_mbuf.c.o
+2025-09-21T23:35:19.6834604Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/os_mempool.c.o
+2025-09-21T23:35:19.7058269Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/nimble/src/os_msys_init.c.o
+2025-09-21T23:35:19.7388115Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/npl/freertos/src/nimble_port_freertos.c.o
+2025-09-21T23:35:19.8617443Z Compiling .pio/build/t-eth-elite/lib116/NimBLE-Arduino/nimble/porting/npl/freertos/src/npl_os_freertos.c.o
+2025-09-21T23:35:19.9755326Z Compiling .pio/build/t-eth-elite/libedc/libpax/blescan.cpp.o
+2025-09-21T23:35:19.9867254Z Archiving .pio/build/t-eth-elite/lib116/libNimBLE-Arduino.a
+2025-09-21T23:35:20.0034891Z Compiling .pio/build/t-eth-elite/libedc/libpax/bt_hci_common.c.o
+2025-09-21T23:35:20.0214691Z Compiling .pio/build/t-eth-elite/libedc/libpax/libpax.cpp.o
+2025-09-21T23:35:20.0564977Z Indexing .pio/build/t-eth-elite/lib116/libNimBLE-Arduino.a
+2025-09-21T23:35:20.1218294Z Compiling .pio/build/t-eth-elite/libedc/libpax/libpax_api.cpp.o
+2025-09-21T23:35:20.1614470Z Compiling .pio/build/t-eth-elite/libedc/libpax/wifiscan.cpp.o
+2025-09-21T23:35:20.7476285Z Compiling .pio/build/t-eth-elite/lib423/XPowersLib/XPowersLibInterface.cpp.o
+2025-09-21T23:35:20.7664521Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/ButterworthFilter.cpp.o
+2025-09-21T23:35:20.7817663Z Archiving .pio/build/t-eth-elite/libedc/libpax.a
+2025-09-21T23:35:20.7852542Z Indexing .pio/build/t-eth-elite/libedc/libpax.a
+2025-09-21T23:35:20.7858656Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/SampleFilter.cpp.o
+2025-09-21T23:35:20.8042686Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebook.c.o
+2025-09-21T23:35:20.8307087Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookd.c.o
+2025-09-21T23:35:20.8498837Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookdt.c.o
+2025-09-21T23:35:20.8744292Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookge.c.o
+2025-09-21T23:35:20.8917579Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookjnd.c.o
+2025-09-21T23:35:20.9106984Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookjvm.c.o
+2025-09-21T23:35:20.9348923Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebooklspmelvq.c.o
+2025-09-21T23:35:20.9801659Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookmel.c.o
+2025-09-21T23:35:21.0194454Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookres.c.o
+2025-09-21T23:35:21.0504832Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookvq.c.o
+2025-09-21T23:35:21.0750663Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codebookvqanssi.c.o
+2025-09-21T23:35:21.1027809Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/codec2.c.o
+2025-09-21T23:35:21.1781852Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/dump.c.o
+2025-09-21T23:35:21.2918640Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/fifo.c.o
+2025-09-21T23:35:21.4325077Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/interp.c.o
+2025-09-21T23:35:21.4458111Z Archiving .pio/build/t-eth-elite/lib423/libXPowersLib.a
+2025-09-21T23:35:21.4547188Z Indexing .pio/build/t-eth-elite/lib423/libXPowersLib.a
+2025-09-21T23:35:21.4579683Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/kiss_fft.c.o
+2025-09-21T23:35:21.4715694Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/lpc.c.o
+2025-09-21T23:35:21.5238562Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/lsp.c.o
+2025-09-21T23:35:21.5432861Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/nlp.c.o
+2025-09-21T23:35:21.5635865Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/pack.c.o
+2025-09-21T23:35:21.5873282Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/phase.c.o
+2025-09-21T23:35:21.6334674Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/phaseexp.c.o
+2025-09-21T23:35:21.6691274Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/postfilter.c.o
+2025-09-21T23:35:21.6900578Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/quantise.c.o
+2025-09-21T23:35:21.7106601Z Compiling .pio/build/t-eth-elite/lib60f/ESP32 Codec2/sine.c.o
+2025-09-21T23:35:21.7787756Z Compiling .pio/build/t-eth-elite/libc75/Crypto/AES128.cpp.o
+2025-09-21T23:35:21.8075111Z Compiling .pio/build/t-eth-elite/libc75/Crypto/AES192.cpp.o
+2025-09-21T23:35:21.8406195Z Compiling .pio/build/t-eth-elite/libc75/Crypto/AES256.cpp.o
+2025-09-21T23:35:21.8701197Z Archiving .pio/build/t-eth-elite/lib60f/libESP32 Codec2.a
+2025-09-21T23:35:21.8858560Z Indexing .pio/build/t-eth-elite/lib60f/libESP32 Codec2.a
+2025-09-21T23:35:21.8867276Z Compiling .pio/build/t-eth-elite/libc75/Crypto/AESCommon.cpp.o
+2025-09-21T23:35:21.9075872Z Compiling .pio/build/t-eth-elite/libc75/Crypto/AESEsp32.cpp.o
+2025-09-21T23:35:21.9262627Z Compiling .pio/build/t-eth-elite/libc75/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:35:21.9440202Z Compiling .pio/build/t-eth-elite/libc75/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:35:21.9618122Z Compiling .pio/build/t-eth-elite/libc75/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:35:21.9919207Z Compiling .pio/build/t-eth-elite/libc75/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:35:22.0210813Z Compiling .pio/build/t-eth-elite/libc75/Crypto/BlockCipher.cpp.o
+2025-09-21T23:35:22.0724306Z Compiling .pio/build/t-eth-elite/libc75/Crypto/CTR.cpp.o
+2025-09-21T23:35:22.0997208Z Compiling .pio/build/t-eth-elite/libc75/Crypto/ChaCha.cpp.o
+2025-09-21T23:35:22.1143792Z Compiling .pio/build/t-eth-elite/libc75/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:35:22.1331271Z Compiling .pio/build/t-eth-elite/libc75/Crypto/Cipher.cpp.o
+2025-09-21T23:35:22.1911836Z Compiling .pio/build/t-eth-elite/libc75/Crypto/Crypto.cpp.o
+2025-09-21T23:35:22.2118771Z Compiling .pio/build/t-eth-elite/libc75/Crypto/Curve25519.cpp.o
+2025-09-21T23:35:22.2269106Z Compiling .pio/build/t-eth-elite/libc75/Crypto/EAX.cpp.o
+2025-09-21T23:35:22.2460454Z Compiling .pio/build/t-eth-elite/libc75/Crypto/Ed25519.cpp.o
+2025-09-21T23:35:22.2698810Z Compiling .pio/build/t-eth-elite/libc75/Crypto/GCM.cpp.o
+2025-09-21T23:35:22.3386544Z Compiling .pio/build/t-eth-elite/libc75/Crypto/GF128.cpp.o
+2025-09-21T23:35:22.3612929Z Compiling .pio/build/t-eth-elite/libc75/Crypto/GHASH.cpp.o
+2025-09-21T23:35:22.3917251Z Compiling .pio/build/t-eth-elite/libc75/Crypto/HKDF.cpp.o
+2025-09-21T23:35:22.4186971Z Compiling .pio/build/t-eth-elite/libc75/Crypto/Hash.cpp.o
+2025-09-21T23:35:22.4541078Z Compiling .pio/build/t-eth-elite/libc75/Crypto/KeccakCore.cpp.o
+2025-09-21T23:35:22.4759689Z Compiling .pio/build/t-eth-elite/libc75/Crypto/NoiseSource.cpp.o
+2025-09-21T23:35:22.5024000Z Compiling .pio/build/t-eth-elite/libc75/Crypto/OMAC.cpp.o
+2025-09-21T23:35:22.5231012Z Compiling .pio/build/t-eth-elite/libc75/Crypto/P521.cpp.o
+2025-09-21T23:35:22.5435544Z Compiling .pio/build/t-eth-elite/libc75/Crypto/Poly1305.cpp.o
+2025-09-21T23:35:22.6951433Z Compiling .pio/build/t-eth-elite/libc75/Crypto/RNG.cpp.o
+2025-09-21T23:35:22.7138793Z Compiling .pio/build/t-eth-elite/libc75/Crypto/SHA224.cpp.o
+2025-09-21T23:35:22.7256689Z Compiling .pio/build/t-eth-elite/libc75/Crypto/SHA256.cpp.o
+2025-09-21T23:35:22.7379109Z Compiling .pio/build/t-eth-elite/libc75/Crypto/SHA3.cpp.o
+2025-09-21T23:35:22.7759526Z Compiling .pio/build/t-eth-elite/libc75/Crypto/SHA384.cpp.o
+2025-09-21T23:35:22.8167440Z Compiling .pio/build/t-eth-elite/libc75/Crypto/SHA512.cpp.o
+2025-09-21T23:35:22.8539896Z Compiling .pio/build/t-eth-elite/libc75/Crypto/SHAKE.cpp.o
+2025-09-21T23:35:22.8799574Z Compiling .pio/build/t-eth-elite/libc75/Crypto/XOF.cpp.o
+2025-09-21T23:35:22.9324429Z Compiling .pio/build/t-eth-elite/libc75/Crypto/XTS.cpp.o
+2025-09-21T23:35:23.0790441Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFi.cpp.o
+2025-09-21T23:35:23.0994676Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFiAP.cpp.o
+2025-09-21T23:35:23.1307172Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFiClient.cpp.o
+2025-09-21T23:35:23.2819843Z Archiving .pio/build/t-eth-elite/libc75/libCrypto.a
+2025-09-21T23:35:23.2979420Z Indexing .pio/build/t-eth-elite/libc75/libCrypto.a
+2025-09-21T23:35:23.3283261Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFiGeneric.cpp.o
+2025-09-21T23:35:23.7938910Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFiMulti.cpp.o
+2025-09-21T23:35:23.8709760Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFiSTA.cpp.o
+2025-09-21T23:35:23.9702600Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFiScan.cpp.o
+2025-09-21T23:35:24.2916480Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFiServer.cpp.o
+2025-09-21T23:35:24.5925119Z Compiling .pio/build/t-eth-elite/libabe/WiFi/WiFiUdp.cpp.o
+2025-09-21T23:35:24.8609130Z Compiling .pio/build/t-eth-elite/lib3ef/ETHClass2/ETHClass2.cpp.o
+2025-09-21T23:35:25.0478409Z Compiling .pio/build/t-eth-elite/lib937/FS/FS.cpp.o
+2025-09-21T23:35:25.0732362Z Compiling .pio/build/t-eth-elite/lib937/FS/vfs_api.cpp.o
+2025-09-21T23:35:25.1837525Z Archiving .pio/build/t-eth-elite/libabe/libWiFi.a
+2025-09-21T23:35:25.1943867Z Indexing .pio/build/t-eth-elite/libabe/libWiFi.a
+2025-09-21T23:35:25.3661660Z Compiling .pio/build/t-eth-elite/lib998/SD/SD.cpp.o
+2025-09-21T23:35:25.5013742Z /pio/workspace/libdeps/t-eth-elite/ETHClass2/src/ETHClass2.cpp: In member function 'bool ETHClass2::beginSPI(eth_phy_type_t, uint8_t, int, int, int, int, int, int, spi_host_device_t, uint8_t)':
+2025-09-21T23:35:25.5022177Z /pio/workspace/libdeps/t-eth-elite/ETHClass2/src/ETHClass2.cpp:631:1: warning: label 'err' defined but not used [-Wunused-label]
+2025-09-21T23:35:25.5023173Z  err:
+2025-09-21T23:35:25.5023458Z  ^~~
+2025-09-21T23:35:25.6428166Z Archiving .pio/build/t-eth-elite/lib3ef/libETHClass2.a
+2025-09-21T23:35:25.6502165Z Indexing .pio/build/t-eth-elite/lib3ef/libETHClass2.a
+2025-09-21T23:35:25.6949881Z Compiling .pio/build/t-eth-elite/lib998/SD/sd_diskio.cpp.o
+2025-09-21T23:35:25.7939738Z Compiling .pio/build/t-eth-elite/lib998/SD/sd_diskio_crc.c.o
+2025-09-21T23:35:25.9832127Z Compiling .pio/build/t-eth-elite/lib46d/Preferences/Preferences.cpp.o
+2025-09-21T23:35:25.9981967Z Archiving .pio/build/t-eth-elite/lib937/libFS.a
+2025-09-21T23:35:26.0048847Z Indexing .pio/build/t-eth-elite/lib937/libFS.a
+2025-09-21T23:35:26.1517111Z Compiling .pio/build/t-eth-elite/libfb1/WiFiClientSecure/WiFiClientSecure.cpp.o
+2025-09-21T23:35:26.1718499Z Compiling .pio/build/t-eth-elite/libfb1/WiFiClientSecure/esp_crt_bundle.c.o
+2025-09-21T23:35:26.3366947Z Compiling .pio/build/t-eth-elite/libfb1/WiFiClientSecure/ssl_client.cpp.o
+2025-09-21T23:35:26.4012463Z Archiving .pio/build/t-eth-elite/lib998/libSD.a
+2025-09-21T23:35:26.4101145Z Indexing .pio/build/t-eth-elite/lib998/libSD.a
+2025-09-21T23:35:26.6510054Z Compiling .pio/build/t-eth-elite/lib042/HTTPClient/HTTPClient.cpp.o
+2025-09-21T23:35:26.6759225Z Archiving .pio/build/t-eth-elite/lib46d/libPreferences.a
+2025-09-21T23:35:26.6819025Z Indexing .pio/build/t-eth-elite/lib46d/libPreferences.a
+2025-09-21T23:35:26.8450867Z Compiling .pio/build/t-eth-elite/liba0d/WebServer/Parsing.cpp.o
+2025-09-21T23:35:26.9594669Z Compiling .pio/build/t-eth-elite/liba0d/WebServer/WebServer.cpp.o
+2025-09-21T23:35:27.1949913Z Archiving .pio/build/t-eth-elite/libfb1/libWiFiClientSecure.a
+2025-09-21T23:35:27.2025331Z Indexing .pio/build/t-eth-elite/libfb1/libWiFiClientSecure.a
+2025-09-21T23:35:27.2196670Z Compiling .pio/build/t-eth-elite/liba0d/WebServer/detail/mimetable.cpp.o
+2025-09-21T23:35:27.4221255Z Compiling .pio/build/t-eth-elite/libf52/ESPmDNS/ESPmDNS.cpp.o
+2025-09-21T23:35:27.8541761Z Compiling .pio/build/t-eth-elite/lib917/LittleFS/LittleFS.cpp.o
+2025-09-21T23:35:27.8654866Z Archiving .pio/build/t-eth-elite/lib042/libHTTPClient.a
+2025-09-21T23:35:27.8720574Z Indexing .pio/build/t-eth-elite/lib042/libHTTPClient.a
+2025-09-21T23:35:28.0684178Z Compiling .pio/build/t-eth-elite/lib1cb/AsyncUDP/AsyncUDP.cpp.o
+2025-09-21T23:35:28.0840704Z Archiving .pio/build/t-eth-elite/liba0d/libWebServer.a
+2025-09-21T23:35:28.0916142Z Indexing .pio/build/t-eth-elite/liba0d/libWebServer.a
+2025-09-21T23:35:28.2617561Z Compiling .pio/build/t-eth-elite/libc8f/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:35:28.2775076Z Archiving .pio/build/t-eth-elite/libf52/libESPmDNS.a
+2025-09-21T23:35:28.2830797Z Indexing .pio/build/t-eth-elite/libf52/libESPmDNS.a
+2025-09-21T23:35:28.2989679Z Compiling .pio/build/t-eth-elite/libc8f/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:35:28.3459563Z Compiling .pio/build/t-eth-elite/libc8f/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:35:28.5420255Z Compiling .pio/build/t-eth-elite/libc8f/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:35:28.5907279Z Compiling .pio/build/t-eth-elite/libc8f/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:35:28.6051670Z Archiving .pio/build/t-eth-elite/lib917/libLittleFS.a
+2025-09-21T23:35:28.6118927Z Indexing .pio/build/t-eth-elite/lib917/libLittleFS.a
+2025-09-21T23:35:28.7969369Z Compiling .pio/build/t-eth-elite/FrameworkArduino/Esp.cpp.o
+2025-09-21T23:35:28.8103677Z Archiving .pio/build/t-eth-elite/lib1cb/libAsyncUDP.a
+2025-09-21T23:35:28.8168052Z Indexing .pio/build/t-eth-elite/lib1cb/libAsyncUDP.a
+2025-09-21T23:35:28.8233493Z Compiling .pio/build/t-eth-elite/FrameworkArduino/FirmwareMSC.cpp.o
+2025-09-21T23:35:28.8428568Z Compiling .pio/build/t-eth-elite/FrameworkArduino/FunctionalInterrupt.cpp.o
+2025-09-21T23:35:28.9096108Z Archiving .pio/build/t-eth-elite/libc8f/libAdafruit NeoPixel.a
+2025-09-21T23:35:28.9155655Z Indexing .pio/build/t-eth-elite/libc8f/libAdafruit NeoPixel.a
+2025-09-21T23:35:28.9432680Z Compiling .pio/build/t-eth-elite/FrameworkArduino/HWCDC.cpp.o
+2025-09-21T23:35:29.1251583Z Compiling .pio/build/t-eth-elite/FrameworkArduino/HardwareSerial.cpp.o
+2025-09-21T23:35:29.3385851Z Compiling .pio/build/t-eth-elite/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:35:29.4492899Z Compiling .pio/build/t-eth-elite/FrameworkArduino/IPv6Address.cpp.o
+2025-09-21T23:35:29.5282114Z Compiling .pio/build/t-eth-elite/FrameworkArduino/MD5Builder.cpp.o
+2025-09-21T23:35:29.8279678Z Compiling .pio/build/t-eth-elite/FrameworkArduino/Print.cpp.o
+2025-09-21T23:35:29.9823056Z Compiling .pio/build/t-eth-elite/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:35:30.0918205Z Compiling .pio/build/t-eth-elite/FrameworkArduino/StreamString.cpp.o
+2025-09-21T23:35:30.1600630Z Compiling .pio/build/t-eth-elite/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:35:30.5625014Z Compiling .pio/build/t-eth-elite/FrameworkArduino/USB.cpp.o
+2025-09-21T23:35:30.6316068Z Compiling .pio/build/t-eth-elite/FrameworkArduino/USBCDC.cpp.o
+2025-09-21T23:35:30.7814308Z Compiling .pio/build/t-eth-elite/FrameworkArduino/USBMSC.cpp.o
+2025-09-21T23:35:30.8028694Z Compiling .pio/build/t-eth-elite/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:35:30.9422853Z Compiling .pio/build/t-eth-elite/FrameworkArduino/WString.cpp.o
+2025-09-21T23:35:30.9822039Z Compiling .pio/build/t-eth-elite/FrameworkArduino/base64.cpp.o
+2025-09-21T23:35:31.0048025Z Compiling .pio/build/t-eth-elite/FrameworkArduino/cbuf.cpp.o
+2025-09-21T23:35:31.0636704Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-adc.c.o
+2025-09-21T23:35:31.1252318Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-bt.c.o
+2025-09-21T23:35:31.2556640Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-cpu.c.o
+2025-09-21T23:35:31.2987308Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-dac.c.o
+2025-09-21T23:35:31.4492680Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-gpio.c.o
+2025-09-21T23:35:31.4813484Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-i2c-slave.c.o
+2025-09-21T23:35:31.6286478Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-i2c.c.o
+2025-09-21T23:35:31.6658448Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-ledc.c.o
+2025-09-21T23:35:31.6905740Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-matrix.c.o
+2025-09-21T23:35:31.7165724Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-misc.c.o
+2025-09-21T23:35:31.8227430Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-psram.c.o
+2025-09-21T23:35:31.8493152Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-rgb-led.c.o
+2025-09-21T23:35:31.8748246Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-rmt.c.o
+2025-09-21T23:35:31.9253103Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-sigmadelta.c.o
+2025-09-21T23:35:32.0080901Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-spi.c.o
+2025-09-21T23:35:32.0372020Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-time.c.o
+2025-09-21T23:35:32.0932283Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-timer.c.o
+2025-09-21T23:35:32.1555263Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-tinyusb.c.o
+2025-09-21T23:35:32.2526858Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-touch.c.o
+2025-09-21T23:35:32.2775278Z Compiling .pio/build/t-eth-elite/FrameworkArduino/esp32-hal-uart.c.o
+2025-09-21T23:35:32.2968029Z Compiling .pio/build/t-eth-elite/FrameworkArduino/firmware_msc_fat.c.o
+2025-09-21T23:35:32.4155699Z Compiling .pio/build/t-eth-elite/FrameworkArduino/libb64/cdecode.c.o
+2025-09-21T23:35:32.4367499Z Compiling .pio/build/t-eth-elite/FrameworkArduino/libb64/cencode.c.o
+2025-09-21T23:35:32.4708293Z Compiling .pio/build/t-eth-elite/FrameworkArduino/main.cpp.o
+2025-09-21T23:35:32.4876158Z Compiling .pio/build/t-eth-elite/FrameworkArduino/stdlib_noniso.c.o
+2025-09-21T23:35:32.5029095Z Compiling .pio/build/t-eth-elite/FrameworkArduino/wiring_pulse.c.o
+2025-09-21T23:35:32.5255685Z Compiling .pio/build/t-eth-elite/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:35:32.9271677Z Archiving .pio/build/t-eth-elite/libFrameworkArduino.a
+2025-09-21T23:35:32.9439991Z Indexing .pio/build/t-eth-elite/libFrameworkArduino.a
+2025-09-21T23:35:32.9962628Z Linking .pio/build/t-eth-elite/firmware.elf
+2025-09-21T23:36:01.3324847Z /pio/workspace/libdeps/t-eth-elite/Crypto/AESEsp32.cpp:33:5: warning: type of 'esp_aes_setkey' does not match original declaration [-Wlto-type-mismatch]
+2025-09-21T23:36:01.3325891Z  int esp_aes_setkey(unsigned char *ctx, const unsigned char *key,
+2025-09-21T23:36:01.3326618Z      ^
+2025-09-21T23:36:01.3327538Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: 'esp_aes_setkey' was previously declared here
+2025-09-21T23:36:01.3328582Z  int mbedtls_aes_setkey_dec(mbedtls_aes_context *ctx, const unsigned char *key,
+2025-09-21T23:36:01.3329158Z      ^
+2025-09-21T23:36:01.3330335Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: code may be misoptimized unless -fno-strict-aliasing is used
+2025-09-21T23:36:01.3845674Z Retrieving maximum program size .pio/build/t-eth-elite/firmware.elf
+2025-09-21T23:36:01.3848486Z Checking size .pio/build/t-eth-elite/firmware.elf
+2025-09-21T23:36:01.3912825Z Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+2025-09-21T23:36:01.3913351Z RAM:   [====      ]  39.3% (used 128912 bytes from 327680 bytes)
+2025-09-21T23:36:01.3913669Z Flash: [===       ]  34.2% (used 2241089 bytes from 6553600 bytes)
+2025-09-21T23:36:01.3926513Z Building .pio/build/t-eth-elite/firmware.bin
+2025-09-21T23:36:01.5694413Z esptool.py v4.5.1
+2025-09-21T23:36:01.5694727Z Creating esp32s3 image...
+2025-09-21T23:36:01.5694991Z Merged 3 ELF sections
+2025-09-21T23:36:01.5695239Z Successfully created esp32s3 image.
+2025-09-21T23:36:01.5784330Z esp32_create_combined_bin([".pio/build/t-eth-elite/firmware.bin"], [".pio/build/t-eth-elite/firmware.elf"])
+2025-09-21T23:36:01.5784849Z Generating combined binary for serial flashing
+2025-09-21T23:36:01.5790969Z     Offset | File
+2025-09-21T23:36:01.5791546Z  -  0x0000 | /workspace/.pio/build/t-eth-elite/bootloader.bin
+2025-09-21T23:36:01.5792143Z  -  0x8000 | /workspace/.pio/build/t-eth-elite/partitions.bin
+2025-09-21T23:36:01.5794804Z  -  0xe000 | /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin
+2025-09-21T23:36:01.5795722Z  - 0x10000 | /workspace/.pio/build/t-eth-elite/firmware.bin
+2025-09-21T23:36:01.5798634Z Using esptool.py arguments: --chip esp32s3 merge_bin -o /workspace/.pio/build/t-eth-elite/firmware.factory.bin --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0000 /workspace/.pio/build/t-eth-elite/bootloader.bin 0x8000 /workspace/.pio/build/t-eth-elite/partitions.bin 0xe000 /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin 0x10000 /workspace/.pio/build/t-eth-elite/firmware.bin
+2025-09-21T23:36:01.5837693Z esptool.py v4.5.1
+2025-09-21T23:36:01.5857842Z Wrote 0x2333f0 bytes to file /workspace/.pio/build/t-eth-elite/firmware.factory.bin, ready to flash to offset 0x0
+2025-09-21T23:36:02.2476733Z ======================== [SUCCESS] Took 176.65 seconds ========================
+2025-09-21T23:36:02.2477021Z 
+2025-09-21T23:36:02.2482028Z Environment    Status    Duration
+2025-09-21T23:36:02.2482417Z -------------  --------  ------------
+2025-09-21T23:36:02.2482683Z t-eth-elite    SUCCESS   00:02:56.653
+2025-09-21T23:36:02.2482981Z ========================= 1 succeeded in 00:02:56.653 =========================
+2025-09-21T23:36:02.2929810Z Copying ESP32 bin file
+2025-09-21T23:36:02.2955050Z Copying ESP32 update bin file
+2025-09-21T23:36:02.2982383Z Building Filesystem for ESP32 targets
+2025-09-21T23:36:03.0376743Z Processing t-eth-elite (board: esp32s3box; platform: 
+2025-09-21T23:36:03.0377483Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:36:03.0378159Z --------------------------------------------------------------------------------
+2025-09-21T23:36:04.1033572Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:36:04.1190077Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32s3box.html
+2025-09-21T23:36:04.1190946Z PLATFORM: Espressif 32 (6.11.0) > Espressif ESP32-S3-Box
+2025-09-21T23:36:04.1191516Z HARDWARE: ESP32S3 240MHz, 320KB RAM, 16MB Flash
+2025-09-21T23:36:04.1193263Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:36:04.1194679Z PACKAGES: 
+2025-09-21T23:36:04.1195149Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:36:04.1195743Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:36:04.1196398Z  - tool-mklittlefs @ 1.203.210628 (2.3) 
+2025-09-21T23:36:04.1196888Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:36:04.1197435Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:36:04.1498412Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:36:04.1499362Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:36:04.2766976Z [nanopb] No generation needed.
+2025-09-21T23:36:04.7567007Z Found 97 compatible libraries
+2025-09-21T23:36:04.7567423Z Scanning dependencies...
+2025-09-21T23:36:15.8353782Z Dependency Graph
+2025-09-21T23:36:15.8354382Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:36:15.8356690Z |-- OneButton @ 2.6.1
+2025-09-21T23:36:15.8357788Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:36:15.8359951Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:36:15.8361499Z |-- ArduinoThread @ 0.0.0+20250919054753
+2025-09-21T23:36:15.8363858Z |-- Nanopb @ 0.4.91
+2025-09-21T23:36:15.8366108Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:36:15.8367145Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:36:15.8369591Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:36:15.8371183Z |-- NTPClient @ 3.2.1
+2025-09-21T23:36:15.8374242Z |-- Syslog @ 2.0.0
+2025-09-21T23:36:15.8374804Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:36:15.8377307Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:36:15.8379272Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:36:15.8382548Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:36:15.8383104Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:36:15.8384399Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:36:15.8386627Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:36:15.8388122Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:36:15.8390712Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:36:15.8392210Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:36:15.8394846Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:36:15.8395751Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:36:15.8398479Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:36:15.8399220Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:36:15.8401374Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:36:15.8402965Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:36:15.8404741Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:36:15.8406602Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:36:15.8408091Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:36:15.8410324Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:36:15.8411386Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:36:15.8413059Z |-- INA226 @ 0.6.4
+2025-09-21T23:36:15.8414871Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:36:15.8416146Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:36:15.8417676Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:36:15.8419417Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:36:15.8421018Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:36:15.8422419Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:36:15.8427298Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:36:15.8427787Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:36:15.8428291Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:36:15.8430633Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:36:15.8431195Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:36:15.8433045Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:36:15.8434423Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:36:15.8436356Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:36:15.8438070Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:36:15.8439321Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:36:15.8441423Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:36:15.8442698Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:36:15.8444358Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:36:15.8445665Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:36:15.8447876Z |-- RadioLib @ 7.3.0
+2025-09-21T23:36:15.8449352Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:36:15.8450942Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:36:15.8452315Z |-- libpax @ 1.1.0
+2025-09-21T23:36:15.8454099Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:36:15.8455547Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:36:15.8457661Z |-- Crypto @ 0.4.0
+2025-09-21T23:36:15.8459465Z |-- ETHClass2 @ 1.0.0
+2025-09-21T23:36:15.8460320Z |-- SD @ 2.0.0
+2025-09-21T23:36:15.8461533Z |-- SPI @ 2.0.0
+2025-09-21T23:36:15.8461857Z |-- WiFi @ 2.0.0
+2025-09-21T23:36:15.8463018Z |-- Wire @ 2.0.0
+2025-09-21T23:36:15.8463335Z |-- Preferences @ 2.0.0
+2025-09-21T23:36:15.8464610Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:36:15.8465302Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:36:15.8465695Z |-- WebServer @ 2.0.0
+2025-09-21T23:36:15.8467380Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:36:15.8468335Z |-- LittleFS @ 2.0.0
+2025-09-21T23:36:15.8468685Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:36:15.8469107Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:36:16.3987827Z Building in release mode
+2025-09-21T23:36:16.5241224Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on t-eth-elite
+2025-09-21T23:36:16.5255369Z Using flags:
+2025-09-21T23:36:16.5255838Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:36:16.5256563Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:36:16.5256920Z -DAPP_ENV=t-eth-elite
+2025-09-21T23:36:16.5257276Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:16.5257616Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:36:16.5258065Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:36:16.5258632Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:36:16.5352899Z Building FS image from 'data' directory to .pio/build/t-eth-elite/littlefs.bin
+2025-09-21T23:36:16.5382944Z /static/.gitkeep
+2025-09-21T23:36:16.6861419Z ========================= [SUCCESS] Took 13.65 seconds =========================
+2025-09-21T23:36:16.6862581Z 
+2025-09-21T23:36:16.6867319Z Environment    Status    Duration
+2025-09-21T23:36:16.6867734Z -------------  --------  ------------
+2025-09-21T23:36:16.6868145Z t-eth-elite    SUCCESS   00:00:13.648
+2025-09-21T23:36:16.6868615Z ========================= 1 succeeded in 00:00:13.648 =========================
+2025-09-21T23:36:16.7207129Z Build artifacts are located at: /workspace/.pio/build
+2025-09-21T23:36:16.7207861Z Downloading OTA firmware firmware-s3.bin from https://github.com/meshtastic/firmware-ota
+2025-09-21T23:36:16.7279548Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-09-21T23:36:16.7280157Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-09-21T23:36:16.7280414Z 
+2025-09-21T23:36:16.8726834Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:36:16.8727766Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:36:16.9140428Z 
+2025-09-21T23:36:16.9140865Z 100  494k  100  494k    0     0  2655k      0 --:--:-- --:--:-- --:--:-- 2655k
+2025-09-21T23:36:17.0699143Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:36:17.0699436Z with:
+2025-09-21T23:36:17.0699684Z   name: firmware-esp32s3-t-eth-elite-2.7.10.3d51287.zip
+2025-09-21T23:36:17.0699986Z   overwrite: true
+2025-09-21T23:36:17.0700292Z   path: release/*.bin
+release/*.elf
+release/*.uf2
+release/*.hex
+release/*-ota.zip
+
+2025-09-21T23:36:17.0700657Z   if-no-files-found: warn
+2025-09-21T23:36:17.0700864Z   compression-level: 6
+2025-09-21T23:36:17.0701072Z   include-hidden-files: false
+2025-09-21T23:36:17.0701282Z ##[endgroup]
+2025-09-21T23:36:17.2854132Z With the provided path, there will be 5 files uploaded
+2025-09-21T23:36:17.4184133Z Artifact name is valid!
+2025-09-21T23:36:17.4185276Z Root directory input is valid!
+2025-09-21T23:36:17.4818359Z Beginning upload of artifact content to blob storage
+2025-09-21T23:36:18.4935572Z Uploaded bytes 8388608
+2025-09-21T23:36:18.6199599Z Uploaded bytes 11324217
+2025-09-21T23:36:18.6660604Z Finished uploading artifact content to blob storage!
+2025-09-21T23:36:18.6663816Z SHA256 digest of uploaded artifact zip is b6788885b67b34d12384d9702a2996d61306f6cf3245fb8e5679e246c80ef5eb
+2025-09-21T23:36:18.6664409Z Finalizing artifact upload
+2025-09-21T23:36:18.7537647Z Artifact firmware-esp32s3-t-eth-elite-2.7.10.3d51287.zip.zip successfully finalized. Artifact ID 4067352565
+2025-09-21T23:36:18.7538808Z Artifact firmware-esp32s3-t-eth-elite-2.7.10.3d51287.zip has been successfully uploaded! Final size is 11324217 bytes. Artifact ID is 4067352565
+2025-09-21T23:36:18.7544517Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067352565
+2025-09-21T23:36:18.7712010Z Post job cleanup.
+2025-09-21T23:36:18.8482288Z [command]/usr/bin/git version
+2025-09-21T23:36:18.8518717Z git version 2.51.0
+2025-09-21T23:36:18.8555368Z Temporarily overriding HOME='/home/runner/work/_temp/a5d5dbcc-2ac8-4691-88e7-fc6c8a769649' before making global git config changes
+2025-09-21T23:36:18.8556873Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:36:18.8561103Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:36:18.8598063Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:36:18.8630483Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:36:18.8839739Z Entering 'meshtestic'
+2025-09-21T23:36:18.8881995Z Entering 'protobufs'
+2025-09-21T23:36:18.8937539Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:36:18.8960854Z http.https://github.com/.extraheader
+2025-09-21T23:36:18.8971259Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:36:18.9002753Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:36:18.9217338Z Entering 'meshtestic'
+2025-09-21T23:36:18.9240584Z http.https://github.com/.extraheader
+2025-09-21T23:36:18.9272990Z Entering 'protobufs'
+2025-09-21T23:36:18.9297035Z http.https://github.com/.extraheader
+2025-09-21T23:36:18.9453649Z Cleaning up orphan processes

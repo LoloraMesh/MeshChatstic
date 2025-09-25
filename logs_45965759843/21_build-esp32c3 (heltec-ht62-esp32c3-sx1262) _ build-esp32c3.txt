@@ -1,0 +1,2270 @@
+﻿2025-09-21T23:32:35.4618837Z Current runner version: '2.328.0'
+2025-09-21T23:32:35.4642305Z ##[group]Runner Image Provisioner
+2025-09-21T23:32:35.4643106Z Hosted Compute Agent
+2025-09-21T23:32:35.4643779Z Version: 20250829.383
+2025-09-21T23:32:35.4644369Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:32:35.4645105Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:32:35.4645748Z ##[endgroup]
+2025-09-21T23:32:35.4646257Z ##[group]Operating System
+2025-09-21T23:32:35.4646818Z Ubuntu
+2025-09-21T23:32:35.4647242Z 24.04.3
+2025-09-21T23:32:35.4647779Z LTS
+2025-09-21T23:32:35.4648231Z ##[endgroup]
+2025-09-21T23:32:35.4648705Z ##[group]Runner Image
+2025-09-21T23:32:35.4649279Z Image: ubuntu-24.04
+2025-09-21T23:32:35.4649783Z Version: 20250907.24.1
+2025-09-21T23:32:35.4650972Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:32:35.4652565Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:32:35.4653524Z ##[endgroup]
+2025-09-21T23:32:35.4655875Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:32:35.4657734Z Actions: read
+2025-09-21T23:32:35.4658358Z Attestations: read
+2025-09-21T23:32:35.4658871Z Checks: read
+2025-09-21T23:32:35.4659357Z Contents: read
+2025-09-21T23:32:35.4659858Z Deployments: read
+2025-09-21T23:32:35.4660602Z Discussions: read
+2025-09-21T23:32:35.4661104Z Issues: read
+2025-09-21T23:32:35.4661578Z Metadata: read
+2025-09-21T23:32:35.4662116Z Models: read
+2025-09-21T23:32:35.4662559Z Packages: read
+2025-09-21T23:32:35.4663085Z Pages: read
+2025-09-21T23:32:35.4663548Z PullRequests: read
+2025-09-21T23:32:35.4664071Z RepositoryProjects: read
+2025-09-21T23:32:35.4664582Z SecurityEvents: read
+2025-09-21T23:32:35.4665284Z Statuses: read
+2025-09-21T23:32:35.4665769Z ##[endgroup]
+2025-09-21T23:32:35.4667778Z Secret source: Actions
+2025-09-21T23:32:35.4668594Z Prepare workflow directory
+2025-09-21T23:32:35.5015170Z Prepare all required actions
+2025-09-21T23:32:35.5053577Z Getting action download info
+2025-09-21T23:32:35.9304134Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:32:36.1211130Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:32:36.6153064Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:32:36.8256955Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:32:36.8262324Z ##[group] Inputs
+2025-09-21T23:32:36.8262878Z   version: 2.7.10.3d51287
+2025-09-21T23:32:36.8263405Z   platform: esp32c3
+2025-09-21T23:32:36.8263919Z   pio_env: heltec-ht62-esp32c3-sx1262
+2025-09-21T23:32:36.8264504Z ##[endgroup]
+2025-09-21T23:32:36.8265162Z Complete job name: build-esp32c3 (heltec-ht62-esp32c3-sx1262) / build-esp32c3
+2025-09-21T23:32:36.8917418Z ##[group]Run actions/checkout@v5
+2025-09-21T23:32:36.8918509Z with:
+2025-09-21T23:32:36.8918997Z   submodules: recursive
+2025-09-21T23:32:36.8919488Z   ref: develop
+2025-09-21T23:32:36.8919992Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:36.8921188Z   token: ***
+2025-09-21T23:32:36.8921666Z   ssh-strict: true
+2025-09-21T23:32:36.8922115Z   ssh-user: git
+2025-09-21T23:32:36.8922572Z   persist-credentials: true
+2025-09-21T23:32:36.8923077Z   clean: true
+2025-09-21T23:32:36.8923535Z   sparse-checkout-cone-mode: true
+2025-09-21T23:32:36.8924074Z   fetch-depth: 1
+2025-09-21T23:32:36.8924529Z   fetch-tags: false
+2025-09-21T23:32:36.8924994Z   show-progress: true
+2025-09-21T23:32:36.8925465Z   lfs: false
+2025-09-21T23:32:36.8925907Z   set-safe-directory: true
+2025-09-21T23:32:36.8926805Z ##[endgroup]
+2025-09-21T23:32:36.9839632Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:36.9841813Z ##[group]Getting Git version info
+2025-09-21T23:32:36.9842671Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:36.9843705Z [command]/usr/bin/git version
+2025-09-21T23:32:36.9928840Z git version 2.51.0
+2025-09-21T23:32:36.9949538Z ##[endgroup]
+2025-09-21T23:32:36.9963454Z Temporarily overriding HOME='/home/runner/work/_temp/e008718a-3390-4ae0-8fa7-fbdd24d73990' before making global git config changes
+2025-09-21T23:32:36.9964924Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:32:36.9968271Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:32:37.0007597Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:37.0011234Z ##[group]Initializing the repository
+2025-09-21T23:32:37.0015610Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:32:37.0155183Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:32:37.0156657Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:32:37.0157870Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:32:37.0158787Z hint:
+2025-09-21T23:32:37.0159426Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:32:37.0160418Z hint:
+2025-09-21T23:32:37.0161107Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:32:37.0162211Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:32:37.0163357Z hint:
+2025-09-21T23:32:37.0164158Z hint: 	git branch -m <name>
+2025-09-21T23:32:37.0165099Z hint:
+2025-09-21T23:32:37.0166395Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:32:37.0168426Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:32:37.0177936Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:37.0217110Z ##[endgroup]
+2025-09-21T23:32:37.0217944Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:32:37.0220478Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:32:37.0247996Z ##[endgroup]
+2025-09-21T23:32:37.0248788Z ##[group]Setting up auth
+2025-09-21T23:32:37.0254600Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:32:37.0283740Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:32:37.0644856Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:32:37.0677090Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:32:37.0899524Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:37.0935597Z ##[endgroup]
+2025-09-21T23:32:37.0937359Z ##[group]Fetching the repository
+2025-09-21T23:32:37.0946370Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:32:38.2472534Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:38.2474431Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:32:38.2508277Z ##[endgroup]
+2025-09-21T23:32:38.2509494Z ##[group]Determining the checkout info
+2025-09-21T23:32:38.2514799Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:32:38.2538384Z   origin/develop
+2025-09-21T23:32:38.2544128Z ##[endgroup]
+2025-09-21T23:32:38.2547975Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:32:38.2597155Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:32:38.2625660Z ##[group]Checking out the ref
+2025-09-21T23:32:38.2629675Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:32:38.3644732Z Switched to a new branch 'develop'
+2025-09-21T23:32:38.3646899Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:32:38.3656632Z ##[endgroup]
+2025-09-21T23:32:38.3658181Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:32:38.3663965Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:38.3707604Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:32:38.3736826Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:32:38.3766903Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:32:38.3791636Z ##[endgroup]
+2025-09-21T23:32:38.3793488Z ##[group]Fetching submodules
+2025-09-21T23:32:38.3795081Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:32:38.4013728Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:32:38.4225225Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:32:38.4231839Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:32:38.4256506Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:32:38.9997799Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:32:39.6122193Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:32:39.6231862Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:32:39.6261466Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:32:39.6469158Z Entering 'meshtestic'
+2025-09-21T23:32:39.6505249Z Entering 'protobufs'
+2025-09-21T23:32:39.6549258Z ##[endgroup]
+2025-09-21T23:32:39.6549705Z ##[group]Persisting credentials for submodules
+2025-09-21T23:32:39.6555633Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:32:39.6766477Z Entering 'meshtestic'
+2025-09-21T23:32:39.6808313Z Entering 'protobufs'
+2025-09-21T23:32:39.6862821Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:32:39.7068578Z Entering 'meshtestic'
+2025-09-21T23:32:39.7105090Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:32:39.7123402Z Entering 'protobufs'
+2025-09-21T23:32:39.7161995Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:32:39.7205942Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:32:39.7417933Z Entering 'meshtestic'
+2025-09-21T23:32:39.7454980Z Entering 'protobufs'
+2025-09-21T23:32:39.7504946Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:32:39.7715876Z Entering 'meshtestic'
+2025-09-21T23:32:39.7752233Z Entering 'protobufs'
+2025-09-21T23:32:39.7798970Z ##[endgroup]
+2025-09-21T23:32:39.7836163Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:32:39.7857820Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:32:39.8057277Z ##[group]Run if [ "$PIO_PLATFORM" = "esp32s3" ]; then
+2025-09-21T23:32:39.8057701Z [36;1mif [ "$PIO_PLATFORM" = "esp32s3" ]; then[0m
+2025-09-21T23:32:39.8058026Z [36;1m  echo "src=firmware-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:39.8058366Z [36;1m  echo "tgt=release/bleota-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:39.8058967Z [36;1melif [ "$PIO_PLATFORM" = "esp32c3" ] || [ "$PIO_PLATFORM" = "esp32c6" ]; then[0m
+2025-09-21T23:32:39.8059375Z [36;1m  echo "src=firmware-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:39.8059686Z [36;1m  echo "tgt=release/bleota-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:39.8059992Z [36;1melif [ "$PIO_PLATFORM" = "esp32" ]; then[0m
+2025-09-21T23:32:39.8060504Z [36;1m  echo "src=firmware.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:39.8060800Z [36;1m  echo "tgt=release/bleota.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:39.8061061Z [36;1mfi[0m
+2025-09-21T23:32:39.8128498Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:32:39.8128798Z env:
+2025-09-21T23:32:39.8128980Z   PIO_PLATFORM: esp32c3
+2025-09-21T23:32:39.8129187Z ##[endgroup]
+2025-09-21T23:32:39.8297293Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:32:39.8364408Z with:
+2025-09-21T23:32:39.8364668Z   pio_platform: esp32c3
+2025-09-21T23:32:39.8364921Z   pio_env: heltec-ht62-esp32c3-sx1262
+2025-09-21T23:32:39.8365204Z   pio_target: build
+2025-09-21T23:32:39.8365446Z   ota_firmware_source: firmware-c3.bin
+2025-09-21T23:32:39.8365751Z   ota_firmware_target: release/bleota-c3.bin
+2025-09-21T23:32:39.8366049Z ##[endgroup]
+2025-09-21T23:32:39.8446593Z ##[group]Run docker run --rm \
+2025-09-21T23:32:39.8446881Z [36;1mdocker run --rm \[0m
+2025-09-21T23:32:39.8447112Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:32:39.8447344Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:32:39.8447566Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:32:39.8447769Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:32:39.8447991Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:32:39.8448219Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:32:39.8448520Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:32:39.8448774Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:32:39.8449044Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:32:39.8449366Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-esp32c3[0m
+2025-09-21T23:32:39.8482007Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:32:39.8482327Z env:
+2025-09-21T23:32:39.8482509Z   MT_ENV: heltec-ht62-esp32c3-sx1262
+2025-09-21T23:32:39.8482765Z   MT_PLATFORM: esp32c3
+2025-09-21T23:32:39.8482952Z   MT_TARGET: build
+2025-09-21T23:32:39.8483157Z   MT_OTA_FIRMWARE_SOURCE: firmware-c3.bin
+2025-09-21T23:32:39.8483430Z   MT_OTA_FIRMWARE_TARGET: release/bleota-c3.bin
+2025-09-21T23:32:39.8483712Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:32:39.8483963Z ##[endgroup]
+2025-09-21T23:32:39.9911114Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-esp32c3' locally
+2025-09-21T23:32:40.7023621Z master-esp32c3: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:32:40.8976073Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:32:40.8976542Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:32:40.8976873Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:32:40.8977230Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:32:40.8977615Z 815e87185931: Pulling fs layer
+2025-09-21T23:32:40.8977954Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:32:40.8978298Z da9989870cf6: Pulling fs layer
+2025-09-21T23:32:40.8978645Z 689388696616: Pulling fs layer
+2025-09-21T23:32:40.8978980Z 92734ed55f7d: Pulling fs layer
+2025-09-21T23:32:40.8979339Z 57721be6c802: Pulling fs layer
+2025-09-21T23:32:40.8979665Z f57696862cf8: Pulling fs layer
+2025-09-21T23:32:40.8980247Z 716733182311: Pulling fs layer
+2025-09-21T23:32:40.8980620Z 2ae4cf2c625b: Pulling fs layer
+2025-09-21T23:32:40.8980886Z d491eddc7249: Pulling fs layer
+2025-09-21T23:32:40.8981144Z da9989870cf6: Waiting
+2025-09-21T23:32:40.8981364Z 689388696616: Waiting
+2025-09-21T23:32:40.8981583Z 92734ed55f7d: Waiting
+2025-09-21T23:32:40.8981809Z 57721be6c802: Waiting
+2025-09-21T23:32:40.8982031Z f57696862cf8: Waiting
+2025-09-21T23:32:40.8982247Z 2ae4cf2c625b: Waiting
+2025-09-21T23:32:40.8982471Z d491eddc7249: Waiting
+2025-09-21T23:32:40.8982698Z 716733182311: Waiting
+2025-09-21T23:32:40.8983149Z c611f5bb386b: Waiting
+2025-09-21T23:32:41.4142405Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:32:41.4142842Z ccbbb2080a06: Download complete
+2025-09-21T23:32:41.5243237Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:32:41.5243677Z 7d5073558d5a: Download complete
+2025-09-21T23:32:41.8380679Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:32:41.8381717Z 8fb375ec14f3: Download complete
+2025-09-21T23:32:41.8775120Z 815e87185931: Verifying Checksum
+2025-09-21T23:32:41.8777666Z 815e87185931: Download complete
+2025-09-21T23:32:42.1069852Z da9989870cf6: Download complete
+2025-09-21T23:32:42.3019762Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:32:42.3020479Z 71c11f7c6832: Download complete
+2025-09-21T23:32:42.5864616Z 92734ed55f7d: Verifying Checksum
+2025-09-21T23:32:42.5865539Z 92734ed55f7d: Download complete
+2025-09-21T23:32:42.6269404Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:32:42.6270387Z c611f5bb386b: Download complete
+2025-09-21T23:32:42.6481759Z 689388696616: Verifying Checksum
+2025-09-21T23:32:42.6484343Z 689388696616: Download complete
+2025-09-21T23:32:42.9233780Z 716733182311: Verifying Checksum
+2025-09-21T23:32:42.9234461Z 716733182311: Download complete
+2025-09-21T23:32:43.2027756Z 2ae4cf2c625b: Verifying Checksum
+2025-09-21T23:32:43.2028253Z 2ae4cf2c625b: Download complete
+2025-09-21T23:32:43.4156209Z 57721be6c802: Verifying Checksum
+2025-09-21T23:32:43.4156673Z 57721be6c802: Download complete
+2025-09-21T23:32:43.4732216Z d491eddc7249: Verifying Checksum
+2025-09-21T23:32:43.4732652Z d491eddc7249: Download complete
+2025-09-21T23:32:43.7523249Z 8fb375ec14f3: Pull complete
+2025-09-21T23:32:47.5801936Z ccbbb2080a06: Pull complete
+2025-09-21T23:32:48.6898779Z f57696862cf8: Verifying Checksum
+2025-09-21T23:32:48.6899347Z f57696862cf8: Download complete
+2025-09-21T23:32:50.9334885Z 7d5073558d5a: Pull complete
+2025-09-21T23:32:57.3879665Z c611f5bb386b: Pull complete
+2025-09-21T23:32:57.6726855Z 815e87185931: Pull complete
+2025-09-21T23:32:58.3810747Z 71c11f7c6832: Pull complete
+2025-09-21T23:32:58.3973605Z da9989870cf6: Pull complete
+2025-09-21T23:32:59.4819953Z 689388696616: Pull complete
+2025-09-21T23:32:59.4983760Z 92734ed55f7d: Pull complete
+2025-09-21T23:33:01.0515656Z 57721be6c802: Pull complete
+2025-09-21T23:33:18.3887295Z f57696862cf8: Pull complete
+2025-09-21T23:33:18.4043716Z 716733182311: Pull complete
+2025-09-21T23:33:18.4221529Z 2ae4cf2c625b: Pull complete
+2025-09-21T23:33:18.4391246Z d491eddc7249: Pull complete
+2025-09-21T23:33:18.4473852Z Digest: sha256:ac441c6cf1a3498750577fbdc5dd47898d85d9b563d870060d32a448dbf6cb05
+2025-09-21T23:33:18.4492674Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-esp32c3
+2025-09-21T23:33:18.6594135Z Building PlatformIO environment: heltec-ht62-esp32c3-sx1262
+2025-09-21T23:33:18.9467451Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:33:19.6396548Z Resolving heltec-ht62-esp32c3-sx1262 dependencies...
+2025-09-21T23:33:19.6599033Z Removing unused dependencies...
+2025-09-21T23:33:19.6690664Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:33:19.8433104Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:33:20.1581777Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:33:23.5741704Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:23.7902820Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:23.8824233Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:33:24.5551147Z Building for heltec-ht62-esp32c3-sx1262 with 
+2025-09-21T23:33:25.3383805Z Processing heltec-ht62-esp32c3-sx1262 (board: esp32-c3-devkitm-1; platform: 
+2025-09-21T23:33:25.3384596Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:33:25.3385217Z --------------------------------------------------------------------------------
+2025-09-21T23:33:26.5914038Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:33:26.6055661Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32-c3-devkitm-1.html
+2025-09-21T23:33:26.6057245Z PLATFORM: Espressif 32 (6.11.0) > Espressif ESP32-C3-DevKitM-1
+2025-09-21T23:33:26.6057983Z HARDWARE: ESP32C3 160MHz, 320KB RAM, 4MB Flash
+2025-09-21T23:33:26.6059689Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:33:26.6061639Z PACKAGES: 
+2025-09-21T23:33:26.6062167Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:33:26.6062843Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:33:26.6063450Z  - tool-openocd-esp32 @ 2.1100.20220706 (11.0) 
+2025-09-21T23:33:26.6063862Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5
+2025-09-21T23:33:26.6352753Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:33:26.6353885Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:33:26.7560470Z [nanopb] No generation needed.
+2025-09-21T23:33:27.2314498Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:33:29.6377865Z Downloading 0% 10%
+2025-09-21T23:33:29.6426446Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:33:29.6460309Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:33:29.7675793Z [nanopb] No generation needed.
+2025-09-21T23:33:29.8983502Z Found 96 compatible libraries
+2025-09-21T23:33:29.8984001Z Scanning dependencies...
+2025-09-21T23:33:40.7277014Z Dependency Graph
+2025-09-21T23:33:40.7277929Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:33:40.7278510Z |-- OneButton @ 2.6.1
+2025-09-21T23:33:40.7283610Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:33:40.7283992Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:33:40.7284540Z |-- ArduinoThread @ 0.0.0+20250919052832
+2025-09-21T23:33:40.7285105Z |-- Nanopb @ 0.4.91
+2025-09-21T23:33:40.7286543Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:33:40.7289746Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:33:40.7290339Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:33:40.7291471Z |-- NTPClient @ 3.2.1
+2025-09-21T23:33:40.7294308Z |-- Syslog @ 2.0.0
+2025-09-21T23:33:40.7295379Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:33:40.7298746Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:33:40.7299303Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:33:40.7300700Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:33:40.7302613Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:33:40.7304773Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:33:40.7307009Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:33:40.7308480Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:33:40.7310310Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:33:40.7312137Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:33:40.7314357Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:33:40.7315861Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:33:40.7317738Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:33:40.7320439Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:33:40.7321587Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:33:40.7323912Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:33:40.7324929Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:33:40.7327108Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:33:40.7328965Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:33:40.7331431Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:33:40.7334611Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:33:40.7336962Z |-- INA226 @ 0.6.4
+2025-09-21T23:33:40.7337443Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:33:40.7338928Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:33:40.7341579Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:33:40.7342230Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:33:40.7344370Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:33:40.7346638Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:33:40.7348495Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:33:40.7350763Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:33:40.7353553Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:33:40.7354968Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:33:40.7356772Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:33:40.7358326Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:33:40.7359199Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:33:40.7362058Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:33:40.7363557Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:33:40.7365712Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:33:40.7366819Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:33:40.7368726Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:33:40.7370927Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:33:40.7373120Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:33:40.7374829Z |-- RadioLib @ 7.3.0
+2025-09-21T23:33:40.7376759Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:33:40.7378759Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:33:40.7379907Z |-- libpax @ 1.1.0
+2025-09-21T23:33:40.7382541Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:33:40.7384056Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:33:40.7386643Z |-- Crypto @ 0.4.0
+2025-09-21T23:33:40.7386961Z |-- SD @ 2.0.0
+2025-09-21T23:33:40.7389124Z |-- SPI @ 2.0.0
+2025-09-21T23:33:40.7389949Z |-- WiFi @ 2.0.0
+2025-09-21T23:33:40.7391852Z |-- Wire @ 2.0.0
+2025-09-21T23:33:40.7392471Z |-- Preferences @ 2.0.0
+2025-09-21T23:33:40.7393042Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:33:40.7395594Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:33:40.7396119Z |-- WebServer @ 2.0.0
+2025-09-21T23:33:40.7397332Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:33:40.7397776Z |-- LittleFS @ 2.0.0
+2025-09-21T23:33:40.7398150Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:33:40.7398509Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:33:41.2521559Z Building in release mode
+2025-09-21T23:33:41.4129260Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on heltec-ht62-esp32c3-sx1262
+2025-09-21T23:33:41.4145800Z Using flags:
+2025-09-21T23:33:41.4146252Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:33:41.4146648Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:33:41.4147042Z -DAPP_ENV=heltec-ht62-esp32c3-sx1262
+2025-09-21T23:33:41.4147489Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:41.4148578Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:33:41.4149348Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:33:41.4150606Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:33:41.7076384Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/BluetoothCommon.cpp.o
+2025-09-21T23:33:41.8433411Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/DebugConfiguration.cpp.o
+2025-09-21T23:33:41.8608773Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/DisplayFormatters.cpp.o
+2025-09-21T23:33:41.8883715Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/FSCommon.cpp.o
+2025-09-21T23:33:42.9074645Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:33:43.0027402Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/Fusion/FusionCompass.c.o
+2025-09-21T23:33:43.0563392Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/Fusion/FusionOffset.c.o
+2025-09-21T23:33:43.0867295Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/GpioLogic.cpp.o
+2025-09-21T23:33:43.2087405Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/Led.cpp.o
+2025-09-21T23:33:43.2379966Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/Observer.cpp.o
+2025-09-21T23:33:43.4355159Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/Power.cpp.o
+2025-09-21T23:33:44.2373403Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/PowerFSM.cpp.o
+2025-09-21T23:33:44.4130541Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/PowerMon.cpp.o
+2025-09-21T23:33:44.7881995Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/RedirectablePrint.cpp.o
+2025-09-21T23:33:45.1609829Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/SPILock.cpp.o
+2025-09-21T23:33:45.6965116Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/SafeFile.cpp.o
+2025-09-21T23:33:45.8652454Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/SerialConsole.cpp.o
+2025-09-21T23:33:46.3000901Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/airtime.cpp.o
+2025-09-21T23:33:46.4042405Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:33:46.8601788Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/buzz/buzz.cpp.o
+2025-09-21T23:33:47.1093090Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:33:47.5337720Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:33:47.6821516Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:33:48.0817135Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/concurrency/Lock.cpp.o
+2025-09-21T23:33:48.2377895Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:33:48.6414406Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:33:48.7985387Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/concurrency/OSThread.cpp.o
+2025-09-21T23:33:49.2214075Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/detect/ScanI2C.cpp.o
+2025-09-21T23:33:49.3078593Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:33:49.3769498Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/gps/GPS.cpp.o
+2025-09-21T23:33:49.9117677Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:33:50.1395432Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/gps/GeoCoord.cpp.o
+2025-09-21T23:33:50.7565471Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:33:50.8808879Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/gps/RTC.cpp.o
+2025-09-21T23:33:51.2245096Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:33:51.3774429Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:33:52.3142120Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/Screen.cpp.o
+2025-09-21T23:33:52.3764723Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:33:52.4100821Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:33:52.5425443Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:33:52.9026460Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:33:53.0991251Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:33:53.6341879Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:33:54.2163518Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:33:54.3363652Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:33:54.4579397Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:33:54.8925665Z src/graphics/VirtualKeyboard.cpp: In member function 'void graphics::VirtualKeyboard::drawInputArea(OLEDDisplay*, int16_t, int16_t, int16_t)':
+2025-09-21T23:33:54.8927667Z src/graphics/VirtualKeyboard.cpp:356:23: warning: unused variable 'innerLeft' [-Wunused-variable]
+2025-09-21T23:33:54.8928970Z              const int innerLeft = boxX + 1;
+2025-09-21T23:33:54.8929616Z                        ^~~~~~~~~
+2025-09-21T23:33:54.8963024Z src/graphics/VirtualKeyboard.cpp:357:23: warning: unused variable 'innerRight' [-Wunused-variable]
+2025-09-21T23:33:54.8964986Z              const int innerRight = boxX + boxWidth - 2;
+2025-09-21T23:33:54.8965440Z                        ^~~~~~~~~~
+2025-09-21T23:33:55.3573563Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:33:55.3956612Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:33:55.5902262Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:33:55.7203078Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:33:56.5163130Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:33:56.6859482Z src/graphics/draw/MenuHandler.cpp:52:8: error: 'CannedMessageModule' does not name a type
+2025-09-21T23:33:56.6860444Z  extern CannedMessageModule *cannedMessageModule;
+2025-09-21T23:33:56.6860938Z         ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.6893299Z src/graphics/draw/MenuHandler.cpp:66:1: error: 'menuHandler' does not name a type; did you mean 'udpHandler'?
+2025-09-21T23:33:56.6894480Z  menuHandler::screenMenus menuHandler::menuQueue = menu_none;
+2025-09-21T23:33:56.6895194Z  ^~~~~~~~~~~
+2025-09-21T23:33:56.6897365Z  udpHandler
+2025-09-21T23:33:56.6900681Z src/graphics/draw/MenuHandler.cpp:73:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.6901371Z  void menuHandler::loraMenu()
+2025-09-21T23:33:56.6901738Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.6906582Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.6907927Z src/graphics/draw/MenuHandler.cpp:86:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.6909007Z              menuHandler::menuQueue = menuHandler::lora_picker;
+2025-09-21T23:33:56.6909633Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.6910352Z src/graphics/draw/MenuHandler.cpp:86:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.6913842Z              menuHandler::menuQueue = menuHandler::lora_picker;
+2025-09-21T23:33:56.6915420Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.6918717Z src/graphics/draw/MenuHandler.cpp:88:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.6920673Z              menuHandler::menuQueue = menuHandler::device_role_picker;
+2025-09-21T23:33:56.6923070Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.6925345Z src/graphics/draw/MenuHandler.cpp:88:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.6927391Z              menuHandler::menuQueue = menuHandler::device_role_picker;
+2025-09-21T23:33:56.6930608Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.6948266Z src/graphics/draw/MenuHandler.cpp:98:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.6949706Z              menuHandler::menuQueue           = menuHandler::wifi_config_menu;
+2025-09-21T23:33:56.6950936Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.6951712Z src/graphics/draw/MenuHandler.cpp:98:48: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.6952517Z              menuHandler::menuQueue           = menuHandler::wifi_config_menu;
+2025-09-21T23:33:56.6953024Z                                                 ^~~~~~~~~~~
+2025-09-21T23:33:56.6953669Z src/graphics/draw/MenuHandler.cpp:103:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:56.6954373Z              menuQueue = mqtt_base_menu;
+2025-09-21T23:33:56.6954768Z              ^~~~~~~~~
+2025-09-21T23:33:56.7021467Z src/graphics/draw/MenuHandler.cpp:103:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:56.7022498Z              menuQueue = mqtt_base_menu;
+2025-09-21T23:33:56.7023137Z              ^~~~~~~~~
+2025-09-21T23:33:56.7023642Z              TypedQueue
+2025-09-21T23:33:56.7031694Z src/graphics/draw/MenuHandler.cpp:103:25: error: 'mqtt_base_menu' was not declared in this scope
+2025-09-21T23:33:56.7032422Z              menuQueue = mqtt_base_menu;
+2025-09-21T23:33:56.7032809Z                          ^~~~~~~~~~~~~~
+2025-09-21T23:33:56.7136925Z src/graphics/draw/MenuHandler.cpp:104:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7138143Z              screen->runNow();
+2025-09-21T23:33:56.7139417Z                      ^~~~~~
+2025-09-21T23:33:56.7154043Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.7156224Z src/graphics/draw/MenuHandler.cpp:129:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7171787Z  void menuHandler::OnboardMessage()
+2025-09-21T23:33:56.7173739Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7175414Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.7177766Z src/graphics/draw/MenuHandler.cpp:144:9: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7179165Z          menuHandler::menuQueue = menuHandler::no_timeout_lora_picker;
+2025-09-21T23:33:56.7181351Z          ^~~~~~~~~~~
+2025-09-21T23:33:56.7182940Z src/graphics/draw/MenuHandler.cpp:144:34: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7184912Z          menuHandler::menuQueue = menuHandler::no_timeout_lora_picker;
+2025-09-21T23:33:56.7187076Z                                   ^~~~~~~~~~~
+2025-09-21T23:33:56.7188296Z src/graphics/draw/MenuHandler.cpp:145:17: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7189648Z          screen->runNow();
+2025-09-21T23:33:56.7191203Z                  ^~~~~~
+2025-09-21T23:33:56.7192937Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.7194941Z src/graphics/draw/MenuHandler.cpp:150:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7196600Z  void menuHandler::LoraRegionPicker(uint32_t duration)
+2025-09-21T23:33:56.7198188Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7203252Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.7205190Z src/graphics/draw/MenuHandler.cpp:219:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:56.7213086Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:56.7213757Z              ^~~~~~~
+2025-09-21T23:33:56.7255140Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.7256340Z src/graphics/draw/MenuHandler.cpp:226:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7257442Z  void menuHandler::DeviceRolePicker()
+2025-09-21T23:33:56.7258713Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7260208Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.7265697Z src/graphics/draw/MenuHandler.cpp:242:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7266493Z              menuHandler::menuQueue = menuHandler::lora_Menu;
+2025-09-21T23:33:56.7266938Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.7267441Z src/graphics/draw/MenuHandler.cpp:242:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7284129Z              menuHandler::menuQueue = menuHandler::lora_Menu;
+2025-09-21T23:33:56.7301196Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.7301970Z src/graphics/draw/MenuHandler.cpp:243:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7302718Z              screen->runNow();
+2025-09-21T23:33:56.7303045Z                      ^~~~~~
+2025-09-21T23:33:56.7303637Z src/graphics/draw/MenuHandler.cpp:254:9: error: 'service' was not declared in this scope
+2025-09-21T23:33:56.7304333Z          service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:56.7304727Z          ^~~~~~~
+2025-09-21T23:33:56.7319518Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.7320832Z src/graphics/draw/MenuHandler.cpp:260:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7323131Z  void menuHandler::TwelveHourPicker()
+2025-09-21T23:33:56.7323767Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7329434Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.7332118Z src/graphics/draw/MenuHandler.cpp:270:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7333276Z              menuHandler::menuQueue = menuHandler::clock_menu;
+2025-09-21T23:33:56.7335754Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.7337681Z src/graphics/draw/MenuHandler.cpp:270:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7342805Z              menuHandler::menuQueue = menuHandler::clock_menu;
+2025-09-21T23:33:56.7343746Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.7344496Z src/graphics/draw/MenuHandler.cpp:271:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7345227Z              screen->runNow();
+2025-09-21T23:33:56.7345519Z                      ^~~~~~
+2025-09-21T23:33:56.7346066Z src/graphics/draw/MenuHandler.cpp:277:9: error: 'service' was not declared in this scope
+2025-09-21T23:33:56.7347420Z          service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:56.7348740Z          ^~~~~~~
+2025-09-21T23:33:56.7380970Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.7382013Z src/graphics/draw/MenuHandler.cpp:283:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7385111Z  void menuHandler::showConfirmationBanner(const char *message, std::function<void()> onConfirm)
+2025-09-21T23:33:56.7385910Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7394950Z src/graphics/draw/MenuHandler.cpp:298:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7397317Z  void menuHandler::ClockFacePicker()
+2025-09-21T23:33:56.7397749Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7402850Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.7403901Z src/graphics/draw/MenuHandler.cpp:308:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7406041Z              menuHandler::menuQueue = menuHandler::clock_menu;
+2025-09-21T23:33:56.7406701Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.7432803Z src/graphics/draw/MenuHandler.cpp:308:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7434020Z              menuHandler::menuQueue = menuHandler::clock_menu;
+2025-09-21T23:33:56.7436836Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.7438922Z src/graphics/draw/MenuHandler.cpp:309:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7440333Z              screen->runNow();
+2025-09-21T23:33:56.7440868Z                      ^~~~~~
+2025-09-21T23:33:56.7441738Z src/graphics/draw/MenuHandler.cpp:312:13: error: 'saveUIConfig' was not declared in this scope
+2025-09-21T23:33:56.7442746Z              saveUIConfig();
+2025-09-21T23:33:56.7444289Z              ^~~~~~~~~~~~
+2025-09-21T23:33:56.7477200Z src/graphics/draw/MenuHandler.cpp:312:13: note: suggested alternative: 'moduleConfig'
+2025-09-21T23:33:56.7478594Z              saveUIConfig();
+2025-09-21T23:33:56.7481853Z              ^~~~~~~~~~~~
+2025-09-21T23:33:56.7482232Z              moduleConfig
+2025-09-21T23:33:56.7483588Z src/graphics/draw/MenuHandler.cpp:316:13: error: 'saveUIConfig' was not declared in this scope
+2025-09-21T23:33:56.7486157Z              saveUIConfig();
+2025-09-21T23:33:56.7486734Z              ^~~~~~~~~~~~
+2025-09-21T23:33:56.7529463Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/emotes.cpp.o
+2025-09-21T23:33:56.7550357Z src/graphics/draw/MenuHandler.cpp:316:13: note: suggested alternative: 'moduleConfig'
+2025-09-21T23:33:56.7552341Z              saveUIConfig();
+2025-09-21T23:33:56.7554426Z              ^~~~~~~~~~~~
+2025-09-21T23:33:56.7555634Z              moduleConfig
+2025-09-21T23:33:56.7567585Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.7571038Z src/graphics/draw/MenuHandler.cpp:324:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7577968Z  void menuHandler::TZPicker()
+2025-09-21T23:33:56.7578373Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7578796Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.7580818Z src/graphics/draw/MenuHandler.cpp:352:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7583052Z              menuHandler::menuQueue = menuHandler::clock_menu;
+2025-09-21T23:33:56.7584608Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.7586352Z src/graphics/draw/MenuHandler.cpp:352:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7587230Z              menuHandler::menuQueue = menuHandler::clock_menu;
+2025-09-21T23:33:56.7587760Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.7591141Z src/graphics/draw/MenuHandler.cpp:353:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7591920Z              screen->runNow();
+2025-09-21T23:33:56.7592290Z                      ^~~~~~
+2025-09-21T23:33:56.7600924Z src/graphics/draw/MenuHandler.cpp:393:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:56.7603806Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:56.7604210Z              ^~~~~~~
+2025-09-21T23:33:56.7641054Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.7642428Z src/graphics/draw/MenuHandler.cpp:399:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7643826Z  void menuHandler::clockMenu()
+2025-09-21T23:33:56.7645514Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7650328Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.7652178Z src/graphics/draw/MenuHandler.cpp:413:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7653860Z              menuHandler::menuQueue = menuHandler::clock_face_picker;
+2025-09-21T23:33:56.7654828Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.7657788Z src/graphics/draw/MenuHandler.cpp:413:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7659497Z              menuHandler::menuQueue = menuHandler::clock_face_picker;
+2025-09-21T23:33:56.7660554Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.7664723Z src/graphics/draw/MenuHandler.cpp:414:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7670525Z              screen->runNow();
+2025-09-21T23:33:56.7670949Z                      ^~~~~~
+2025-09-21T23:33:56.7671581Z src/graphics/draw/MenuHandler.cpp:416:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7683782Z              menuHandler::menuQueue = menuHandler::twelve_hour_picker;
+2025-09-21T23:33:56.7687257Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.7689675Z src/graphics/draw/MenuHandler.cpp:416:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7690722Z              menuHandler::menuQueue = menuHandler::twelve_hour_picker;
+2025-09-21T23:33:56.7696229Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.7699272Z src/graphics/draw/MenuHandler.cpp:417:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7702733Z              screen->runNow();
+2025-09-21T23:33:56.7703525Z                      ^~~~~~
+2025-09-21T23:33:56.7707968Z src/graphics/draw/MenuHandler.cpp:419:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7708720Z              menuHandler::menuQueue = menuHandler::TZ_picker;
+2025-09-21T23:33:56.7709146Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.7709655Z src/graphics/draw/MenuHandler.cpp:419:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7710505Z              menuHandler::menuQueue = menuHandler::TZ_picker;
+2025-09-21T23:33:56.7710971Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.7711696Z src/graphics/draw/MenuHandler.cpp:420:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.7712436Z              screen->runNow();
+2025-09-21T23:33:56.7712763Z                      ^~~~~~
+2025-09-21T23:33:56.7713149Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.7713846Z src/graphics/draw/MenuHandler.cpp:426:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.7714517Z  void menuHandler::messageResponseMenu()
+2025-09-21T23:33:56.7714904Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.7715283Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.7716161Z src/graphics/draw/MenuHandler.cpp:457:21: error: 'class graphics::Screen' has no member named 'hideCurrentFrame'
+2025-09-21T23:33:56.7716973Z              screen->hideCurrentFrame();
+2025-09-21T23:33:56.7717352Z                      ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.7718055Z src/graphics/draw/MenuHandler.cpp:460:17: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.7732035Z                  cannedMessageModule->LaunchWithDestination(NODENUM_BROADCAST, devicestate.rx_text_message.channel);
+2025-09-21T23:33:56.7733621Z                  ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.7933298Z src/graphics/draw/MenuHandler.cpp:462:17: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.7937371Z                  cannedMessageModule->LaunchWithDestination(devicestate.rx_text_message.from);
+2025-09-21T23:33:56.7937956Z                  ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.8191168Z src/graphics/draw/MenuHandler.cpp:466:17: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.8195492Z                  cannedMessageModule->LaunchFreetextWithDestination(NODENUM_BROADCAST, devicestate.rx_text_message.channel);
+2025-09-21T23:33:56.8196656Z                  ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.8388975Z src/graphics/draw/MenuHandler.cpp:468:17: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.8390902Z                  cannedMessageModule->LaunchFreetextWithDestination(devicestate.rx_text_message.from);
+2025-09-21T23:33:56.8410597Z                  ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.8491267Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:33:56.8618913Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.8619714Z src/graphics/draw/MenuHandler.cpp:483:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.8620566Z  void menuHandler::homeBaseMenu()
+2025-09-21T23:33:56.8626439Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.8628464Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.8632414Z src/graphics/draw/MenuHandler.cpp:546:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.8633237Z              menuHandler::menuQueue = menuHandler::sleep_menu;
+2025-09-21T23:33:56.8633719Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.8636898Z src/graphics/draw/MenuHandler.cpp:546:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.8637855Z              menuHandler::menuQueue = menuHandler::sleep_menu;
+2025-09-21T23:33:56.8638336Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.8639078Z src/graphics/draw/MenuHandler.cpp:547:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.8639809Z              screen->runNow();
+2025-09-21T23:33:56.8640284Z                      ^~~~~~
+2025-09-21T23:33:56.8640967Z src/graphics/draw/MenuHandler.cpp:552:13: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.8641867Z              cannedMessageModule->LaunchWithDestination(NODENUM_BROADCAST);
+2025-09-21T23:33:56.8642422Z              ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.8859358Z src/graphics/draw/MenuHandler.cpp:554:13: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.8860555Z              cannedMessageModule->LaunchFreetextWithDestination(NODENUM_BROADCAST);
+2025-09-21T23:33:56.8861174Z              ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.9094604Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:33:56.9097693Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.9099774Z src/graphics/draw/MenuHandler.cpp:562:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9100648Z  void menuHandler::textMessageBaseMenu()
+2025-09-21T23:33:56.9101054Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.9104677Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.9107606Z src/graphics/draw/MenuHandler.cpp:583:13: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.9109447Z              cannedMessageModule->LaunchWithDestination(NODENUM_BROADCAST);
+2025-09-21T23:33:56.9110259Z              ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.9346014Z src/graphics/draw/MenuHandler.cpp:585:13: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.9348403Z              cannedMessageModule->LaunchFreetextWithDestination(NODENUM_BROADCAST);
+2025-09-21T23:33:56.9349358Z              ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.9574564Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.9575700Z src/graphics/draw/MenuHandler.cpp:591:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9577537Z  void menuHandler::systemBaseMenu()
+2025-09-21T23:33:56.9577926Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.9579559Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.9584400Z src/graphics/draw/MenuHandler.cpp:643:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9586278Z              menuHandler::menuQueue = menuHandler::system_base_menu;
+2025-09-21T23:33:56.9588545Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.9591506Z src/graphics/draw/MenuHandler.cpp:643:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9593598Z              menuHandler::menuQueue = menuHandler::system_base_menu;
+2025-09-21T23:33:56.9595288Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.9596736Z src/graphics/draw/MenuHandler.cpp:644:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.9598531Z              screen->runNow();
+2025-09-21T23:33:56.9598874Z                      ^~~~~~
+2025-09-21T23:33:56.9599451Z src/graphics/draw/MenuHandler.cpp:646:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9600971Z              menuHandler::menuQueue = menuHandler::notifications_menu;
+2025-09-21T23:33:56.9601461Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.9602018Z src/graphics/draw/MenuHandler.cpp:646:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9602797Z              menuHandler::menuQueue = menuHandler::notifications_menu;
+2025-09-21T23:33:56.9603317Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.9625362Z src/graphics/draw/MenuHandler.cpp:647:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.9627546Z              screen->runNow();
+2025-09-21T23:33:56.9629825Z                      ^~~~~~
+2025-09-21T23:33:56.9631723Z src/graphics/draw/MenuHandler.cpp:649:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9634601Z              menuHandler::menuQueue = menuHandler::screen_options_menu;
+2025-09-21T23:33:56.9635147Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.9635703Z src/graphics/draw/MenuHandler.cpp:649:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9636466Z              menuHandler::menuQueue = menuHandler::screen_options_menu;
+2025-09-21T23:33:56.9636986Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.9637689Z src/graphics/draw/MenuHandler.cpp:650:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.9638431Z              screen->runNow();
+2025-09-21T23:33:56.9638760Z                      ^~~~~~
+2025-09-21T23:33:56.9639323Z src/graphics/draw/MenuHandler.cpp:652:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9640276Z              menuHandler::menuQueue = menuHandler::power_menu;
+2025-09-21T23:33:56.9640728Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.9641282Z src/graphics/draw/MenuHandler.cpp:652:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9641977Z              menuHandler::menuQueue = menuHandler::power_menu;
+2025-09-21T23:33:56.9664053Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.9666969Z src/graphics/draw/MenuHandler.cpp:653:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.9667704Z              screen->runNow();
+2025-09-21T23:33:56.9669156Z                      ^~~~~~
+2025-09-21T23:33:56.9670628Z src/graphics/draw/MenuHandler.cpp:655:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9674067Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:56.9676488Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.9710659Z src/graphics/draw/MenuHandler.cpp:655:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9711776Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:56.9712259Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.9712976Z src/graphics/draw/MenuHandler.cpp:656:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.9713703Z              screen->runNow();
+2025-09-21T23:33:56.9714034Z                      ^~~~~~
+2025-09-21T23:33:56.9714597Z src/graphics/draw/MenuHandler.cpp:658:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9715293Z              menuHandler::menuQueue = menuHandler::test_menu;
+2025-09-21T23:33:56.9715733Z              ^~~~~~~~~~~
+2025-09-21T23:33:56.9716466Z src/graphics/draw/MenuHandler.cpp:658:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9717168Z              menuHandler::menuQueue = menuHandler::test_menu;
+2025-09-21T23:33:56.9717629Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:56.9718351Z src/graphics/draw/MenuHandler.cpp:659:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.9719073Z              screen->runNow();
+2025-09-21T23:33:56.9719399Z                      ^~~~~~
+2025-09-21T23:33:56.9719992Z src/graphics/draw/MenuHandler.cpp:661:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:56.9721425Z              menuQueue = bluetooth_toggle_menu;
+2025-09-21T23:33:56.9721805Z              ^~~~~~~~~
+2025-09-21T23:33:56.9722350Z src/graphics/draw/MenuHandler.cpp:661:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:56.9722994Z              menuQueue = bluetooth_toggle_menu;
+2025-09-21T23:33:56.9723384Z              ^~~~~~~~~
+2025-09-21T23:33:56.9723668Z              TypedQueue
+2025-09-21T23:33:56.9724323Z src/graphics/draw/MenuHandler.cpp:661:25: error: 'bluetooth_toggle_menu' was not declared in this scope
+2025-09-21T23:33:56.9725060Z              menuQueue = bluetooth_toggle_menu;
+2025-09-21T23:33:56.9725476Z                          ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:56.9731690Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:33:56.9960776Z src/graphics/draw/MenuHandler.cpp:662:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:56.9967526Z              screen->runNow();
+2025-09-21T23:33:56.9967924Z                      ^~~~~~
+2025-09-21T23:33:56.9968331Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:56.9969051Z src/graphics/draw/MenuHandler.cpp:673:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:56.9969717Z  void menuHandler::favoriteBaseMenu()
+2025-09-21T23:33:56.9970466Z       ^~~~~~~~~~~
+2025-09-21T23:33:56.9970851Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:56.9971696Z src/graphics/draw/MenuHandler.cpp:706:13: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:56.9972762Z              cannedMessageModule->LaunchWithDestination(graphics::UIRenderer::currentFavoriteNodeNum);
+2025-09-21T23:33:56.9975444Z              ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.0194331Z src/graphics/draw/MenuHandler.cpp:706:66: error: 'graphics::UIRenderer' has not been declared
+2025-09-21T23:33:57.0223101Z              cannedMessageModule->LaunchWithDestination(graphics::UIRenderer::currentFavoriteNodeNum);
+2025-09-21T23:33:57.0224812Z                                                                   ^~~~~~~~~~
+2025-09-21T23:33:57.0226713Z src/graphics/draw/MenuHandler.cpp:708:13: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:57.0228022Z              cannedMessageModule->LaunchFreetextWithDestination(graphics::UIRenderer::currentFavoriteNodeNum);
+2025-09-21T23:33:57.0228796Z              ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.0311005Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:33:57.0419101Z src/graphics/draw/MenuHandler.cpp:708:74: error: 'graphics::UIRenderer' has not been declared
+2025-09-21T23:33:57.0420773Z              cannedMessageModule->LaunchFreetextWithDestination(graphics::UIRenderer::currentFavoriteNodeNum);
+2025-09-21T23:33:57.0421788Z                                                                           ^~~~~~~~~~
+2025-09-21T23:33:57.0445156Z src/graphics/draw/MenuHandler.cpp:710:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.0447337Z              menuHandler::menuQueue = menuHandler::remove_favorite;
+2025-09-21T23:33:57.0447841Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.0448418Z src/graphics/draw/MenuHandler.cpp:710:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.0449212Z              menuHandler::menuQueue = menuHandler::remove_favorite;
+2025-09-21T23:33:57.0449752Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.0451047Z src/graphics/draw/MenuHandler.cpp:711:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.0451869Z              screen->runNow();
+2025-09-21T23:33:57.0452258Z                      ^~~~~~
+2025-09-21T23:33:57.0453218Z src/graphics/draw/MenuHandler.cpp:714:52: error: 'graphics::UIRenderer' has not been declared
+2025-09-21T23:33:57.0454198Z                  traceRouteModule->launch(graphics::UIRenderer::currentFavoriteNodeNum);
+2025-09-21T23:33:57.0454883Z                                                     ^~~~~~~~~~
+2025-09-21T23:33:57.0455447Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.0457460Z src/graphics/draw/MenuHandler.cpp:721:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.0458183Z  void menuHandler::positionBaseMenu()
+2025-09-21T23:33:57.0458603Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.0463089Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.0464798Z src/graphics/draw/MenuHandler.cpp:741:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.0465818Z              menuQueue = gps_toggle_menu;
+2025-09-21T23:33:57.0494858Z              ^~~~~~~~~
+2025-09-21T23:33:57.0510777Z src/graphics/draw/MenuHandler.cpp:741:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.0514746Z              menuQueue = gps_toggle_menu;
+2025-09-21T23:33:57.0517083Z              ^~~~~~~~~
+2025-09-21T23:33:57.0519300Z              TypedQueue
+2025-09-21T23:33:57.0522055Z src/graphics/draw/MenuHandler.cpp:741:25: error: 'gps_toggle_menu' was not declared in this scope
+2025-09-21T23:33:57.0524753Z              menuQueue = gps_toggle_menu;
+2025-09-21T23:33:57.0527090Z                          ^~~~~~~~~~~~~~~
+2025-09-21T23:33:57.0649467Z src/graphics/draw/MenuHandler.cpp:742:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.0656255Z              screen->runNow();
+2025-09-21T23:33:57.0656620Z                      ^~~~~~
+2025-09-21T23:33:57.0657256Z src/graphics/draw/MenuHandler.cpp:744:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.0657936Z              menuQueue = gps_format_menu;
+2025-09-21T23:33:57.0658315Z              ^~~~~~~~~
+2025-09-21T23:33:57.0694695Z src/graphics/draw/MenuHandler.cpp:744:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.0699605Z              menuQueue = gps_format_menu;
+2025-09-21T23:33:57.0700015Z              ^~~~~~~~~
+2025-09-21T23:33:57.0700447Z              TypedQueue
+2025-09-21T23:33:57.0701095Z src/graphics/draw/MenuHandler.cpp:744:25: error: 'gps_format_menu' was not declared in this scope
+2025-09-21T23:33:57.0701816Z              menuQueue = gps_format_menu;
+2025-09-21T23:33:57.0702212Z                          ^~~~~~~~~~~~~~~
+2025-09-21T23:33:57.0810338Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:33:57.0833183Z src/graphics/draw/MenuHandler.cpp:745:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.0862635Z              screen->runNow();
+2025-09-21T23:33:57.0863855Z                      ^~~~~~
+2025-09-21T23:33:57.0865326Z src/graphics/draw/MenuHandler.cpp:747:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.0866613Z              menuQueue = compass_point_north_menu;
+2025-09-21T23:33:57.0868090Z              ^~~~~~~~~
+2025-09-21T23:33:57.0876973Z src/graphics/draw/MenuHandler.cpp:747:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.0878026Z              menuQueue = compass_point_north_menu;
+2025-09-21T23:33:57.0878795Z              ^~~~~~~~~
+2025-09-21T23:33:57.0880829Z              TypedQueue
+2025-09-21T23:33:57.0881582Z src/graphics/draw/MenuHandler.cpp:747:25: error: 'compass_point_north_menu' was not declared in this scope
+2025-09-21T23:33:57.0882870Z              menuQueue = compass_point_north_menu;
+2025-09-21T23:33:57.0883536Z                          ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.1214528Z src/graphics/draw/MenuHandler.cpp:748:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.1215660Z              screen->runNow();
+2025-09-21T23:33:57.1216136Z                      ^~~~~~
+2025-09-21T23:33:57.1226242Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.1227294Z src/graphics/draw/MenuHandler.cpp:756:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.1228718Z  void menuHandler::nodeListMenu()
+2025-09-21T23:33:57.1229563Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.1232559Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.1233869Z src/graphics/draw/MenuHandler.cpp:774:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.1234761Z              menuQueue = add_favorite;
+2025-09-21T23:33:57.1235578Z              ^~~~~~~~~
+2025-09-21T23:33:57.1278523Z src/graphics/draw/MenuHandler.cpp:774:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.1279514Z              menuQueue = add_favorite;
+2025-09-21T23:33:57.1280292Z              ^~~~~~~~~
+2025-09-21T23:33:57.1281625Z              TypedQueue
+2025-09-21T23:33:57.1283522Z src/graphics/draw/MenuHandler.cpp:774:25: error: 'add_favorite' was not declared in this scope
+2025-09-21T23:33:57.1284197Z              menuQueue = add_favorite;
+2025-09-21T23:33:57.1284581Z                          ^~~~~~~~~~~~
+2025-09-21T23:33:57.1334914Z src/graphics/draw/MenuHandler.cpp:774:25: note: suggested alternative: 'Favorite'
+2025-09-21T23:33:57.1336191Z              menuQueue = add_favorite;
+2025-09-21T23:33:57.1337189Z                          ^~~~~~~~~~~~
+2025-09-21T23:33:57.1338185Z                          Favorite
+2025-09-21T23:33:57.1339314Z src/graphics/draw/MenuHandler.cpp:775:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.1340404Z              screen->runNow();
+2025-09-21T23:33:57.1341367Z                      ^~~~~~
+2025-09-21T23:33:57.1342212Z src/graphics/draw/MenuHandler.cpp:777:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.1343338Z              menuQueue = key_verification_init;
+2025-09-21T23:33:57.1344008Z              ^~~~~~~~~
+2025-09-21T23:33:57.1377525Z src/graphics/draw/MenuHandler.cpp:777:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.1378557Z              menuQueue = key_verification_init;
+2025-09-21T23:33:57.1379259Z              ^~~~~~~~~
+2025-09-21T23:33:57.1380928Z              TypedQueue
+2025-09-21T23:33:57.1381624Z src/graphics/draw/MenuHandler.cpp:777:25: error: 'key_verification_init' was not declared in this scope
+2025-09-21T23:33:57.1382608Z              menuQueue = key_verification_init;
+2025-09-21T23:33:57.1383133Z                          ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.1492822Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/tftSetup.cpp.o
+2025-09-21T23:33:57.1639480Z src/graphics/draw/MenuHandler.cpp:778:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.1640459Z              screen->runNow();
+2025-09-21T23:33:57.1640887Z                      ^~~~~~
+2025-09-21T23:33:57.1642455Z src/graphics/draw/MenuHandler.cpp:780:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.1643251Z              menuQueue = reset_node_db_menu;
+2025-09-21T23:33:57.1645239Z              ^~~~~~~~~
+2025-09-21T23:33:57.1687089Z src/graphics/draw/MenuHandler.cpp:780:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.1688132Z              menuQueue = reset_node_db_menu;
+2025-09-21T23:33:57.1690381Z              ^~~~~~~~~
+2025-09-21T23:33:57.1691398Z              TypedQueue
+2025-09-21T23:33:57.1694146Z src/graphics/draw/MenuHandler.cpp:780:25: error: 'reset_node_db_menu' was not declared in this scope
+2025-09-21T23:33:57.1720893Z              menuQueue = reset_node_db_menu;
+2025-09-21T23:33:57.1721532Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.1902021Z src/graphics/draw/MenuHandler.cpp:781:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.1903625Z              screen->runNow();
+2025-09-21T23:33:57.1904989Z                      ^~~~~~
+2025-09-21T23:33:57.1905679Z src/graphics/draw/MenuHandler.cpp:783:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.1907610Z              menuQueue = trace_route_menu;
+2025-09-21T23:33:57.1909509Z              ^~~~~~~~~
+2025-09-21T23:33:57.1973246Z src/graphics/draw/MenuHandler.cpp:783:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.1974255Z              menuQueue = trace_route_menu;
+2025-09-21T23:33:57.1974852Z              ^~~~~~~~~
+2025-09-21T23:33:57.1976516Z              TypedQueue
+2025-09-21T23:33:57.1977213Z src/graphics/draw/MenuHandler.cpp:783:25: error: 'trace_route_menu' was not declared in this scope
+2025-09-21T23:33:57.1980957Z              menuQueue = trace_route_menu;
+2025-09-21T23:33:57.1981560Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.2088592Z src/graphics/draw/MenuHandler.cpp:783:25: note: suggested alternative: 'TraceRoute'
+2025-09-21T23:33:57.2089611Z              menuQueue = trace_route_menu;
+2025-09-21T23:33:57.2093290Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:33:57.2094687Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.2095654Z                          TraceRoute
+2025-09-21T23:33:57.2096367Z src/graphics/draw/MenuHandler.cpp:784:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.2097107Z              screen->runNow();
+2025-09-21T23:33:57.2097465Z                      ^~~~~~
+2025-09-21T23:33:57.2107545Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.2110820Z src/graphics/draw/MenuHandler.cpp:790:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.2111557Z  void menuHandler::resetNodeDBMenu()
+2025-09-21T23:33:57.2111976Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.2132729Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.2134125Z src/graphics/draw/MenuHandler.cpp:799:13: error: 'disableBluetooth' was not declared in this scope
+2025-09-21T23:33:57.2135088Z              disableBluetooth();
+2025-09-21T23:33:57.2135580Z              ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.2173757Z src/graphics/draw/MenuHandler.cpp:799:13: note: suggested alternative: 'nimbleBluetooth'
+2025-09-21T23:33:57.2174731Z              disableBluetooth();
+2025-09-21T23:33:57.2175258Z              ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.2176801Z              nimbleBluetooth
+2025-09-21T23:33:57.2187011Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.2188054Z src/graphics/draw/MenuHandler.cpp:808:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.2189165Z  void menuHandler::compassNorthMenu()
+2025-09-21T23:33:57.2190867Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.2194103Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.2195228Z src/graphics/draw/MenuHandler.cpp:821:17: error: 'saveUIConfig' was not declared in this scope
+2025-09-21T23:33:57.2196571Z                  saveUIConfig();
+2025-09-21T23:33:57.2198885Z                  ^~~~~~~~~~~~
+2025-09-21T23:33:57.2260213Z src/graphics/draw/MenuHandler.cpp:821:17: note: suggested alternative: 'moduleConfig'
+2025-09-21T23:33:57.2261575Z                  saveUIConfig();
+2025-09-21T23:33:57.2262135Z                  ^~~~~~~~~~~~
+2025-09-21T23:33:57.2263802Z                  moduleConfig
+2025-09-21T23:33:57.2266382Z src/graphics/draw/MenuHandler.cpp:827:17: error: 'saveUIConfig' was not declared in this scope
+2025-09-21T23:33:57.2267695Z                  saveUIConfig();
+2025-09-21T23:33:57.2268360Z                  ^~~~~~~~~~~~
+2025-09-21T23:33:57.2330315Z src/graphics/draw/MenuHandler.cpp:827:17: note: suggested alternative: 'moduleConfig'
+2025-09-21T23:33:57.2331364Z                  saveUIConfig();
+2025-09-21T23:33:57.2333764Z                  ^~~~~~~~~~~~
+2025-09-21T23:33:57.2334662Z                  moduleConfig
+2025-09-21T23:33:57.2338291Z src/graphics/draw/MenuHandler.cpp:833:17: error: 'saveUIConfig' was not declared in this scope
+2025-09-21T23:33:57.2340344Z                  saveUIConfig();
+2025-09-21T23:33:57.2341254Z                  ^~~~~~~~~~~~
+2025-09-21T23:33:57.2405335Z src/graphics/draw/MenuHandler.cpp:833:17: note: suggested alternative: 'moduleConfig'
+2025-09-21T23:33:57.2408828Z                  saveUIConfig();
+2025-09-21T23:33:57.2409682Z                  ^~~~~~~~~~~~
+2025-09-21T23:33:57.2422111Z                  moduleConfig
+2025-09-21T23:33:57.2424406Z src/graphics/draw/MenuHandler.cpp:837:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.2425781Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.2426709Z              ^~~~~~~~~
+2025-09-21T23:33:57.2455134Z src/graphics/draw/MenuHandler.cpp:837:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.2456899Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.2457876Z              ^~~~~~~~~
+2025-09-21T23:33:57.2459761Z              TypedQueue
+2025-09-21T23:33:57.2463935Z src/graphics/draw/MenuHandler.cpp:837:25: error: 'position_base_menu' was not declared in this scope
+2025-09-21T23:33:57.2465007Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.2465565Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.2560344Z src/graphics/draw/MenuHandler.cpp:837:25: note: suggested alternative: 'positionBaseMenu'
+2025-09-21T23:33:57.2564304Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.2565542Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.2566273Z                          positionBaseMenu
+2025-09-21T23:33:57.2567161Z src/graphics/draw/MenuHandler.cpp:838:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.2568111Z              screen->runNow();
+2025-09-21T23:33:57.2569445Z                      ^~~~~~
+2025-09-21T23:33:57.2582407Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.2584663Z src/graphics/draw/MenuHandler.cpp:845:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.2586872Z  void menuHandler::GPSToggleMenu()
+2025-09-21T23:33:57.2587732Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.2588390Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.2589250Z src/graphics/draw/MenuHandler.cpp:856:13: error: 'playGPSEnableBeep' was not declared in this scope
+2025-09-21T23:33:57.2590280Z              playGPSEnableBeep();
+2025-09-21T23:33:57.2590678Z              ^~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.2764742Z src/graphics/draw/MenuHandler.cpp:857:13: error: 'gps' was not declared in this scope
+2025-09-21T23:33:57.2790763Z              gps->enable();
+2025-09-21T23:33:57.2791417Z              ^~~
+2025-09-21T23:33:57.2793460Z src/graphics/draw/MenuHandler.cpp:857:13: note: suggested alternative: 'gpm8'
+2025-09-21T23:33:57.2794132Z              gps->enable();
+2025-09-21T23:33:57.2794486Z              ^~~
+2025-09-21T23:33:57.2795015Z              gpm8
+2025-09-21T23:33:57.2795734Z src/graphics/draw/MenuHandler.cpp:858:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.2797569Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.2798246Z              ^~~~~~~
+2025-09-21T23:33:57.2816507Z src/graphics/draw/MenuHandler.cpp:861:13: error: 'playGPSDisableBeep' was not declared in this scope
+2025-09-21T23:33:57.2817876Z              playGPSDisableBeep();
+2025-09-21T23:33:57.2818364Z              ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.3019151Z src/graphics/draw/MenuHandler.cpp:862:13: error: 'gps' was not declared in this scope
+2025-09-21T23:33:57.3020393Z              gps->disable();
+2025-09-21T23:33:57.3020850Z              ^~~
+2025-09-21T23:33:57.3043409Z src/graphics/draw/MenuHandler.cpp:862:13: note: suggested alternative: 'gpm8'
+2025-09-21T23:33:57.3045144Z              gps->disable();
+2025-09-21T23:33:57.3046662Z              ^~~
+2025-09-21T23:33:57.3048062Z              gpm8
+2025-09-21T23:33:57.3050449Z src/graphics/draw/MenuHandler.cpp:863:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3072707Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3073412Z              ^~~~~~~
+2025-09-21T23:33:57.3079910Z src/graphics/draw/MenuHandler.cpp:865:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.3081113Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.3081638Z              ^~~~~~~~~
+2025-09-21T23:33:57.3120433Z src/graphics/draw/MenuHandler.cpp:865:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.3121444Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.3122024Z              ^~~~~~~~~
+2025-09-21T23:33:57.3124425Z              TypedQueue
+2025-09-21T23:33:57.3125143Z src/graphics/draw/MenuHandler.cpp:865:25: error: 'position_base_menu' was not declared in this scope
+2025-09-21T23:33:57.3127977Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.3128395Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.3219977Z src/graphics/draw/MenuHandler.cpp:865:25: note: suggested alternative: 'positionBaseMenu'
+2025-09-21T23:33:57.3221184Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.3221808Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.3223477Z                          positionBaseMenu
+2025-09-21T23:33:57.3224767Z src/graphics/draw/MenuHandler.cpp:866:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.3225735Z              screen->runNow();
+2025-09-21T23:33:57.3226375Z                      ^~~~~~
+2025-09-21T23:33:57.3237812Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.3238861Z src/graphics/draw/MenuHandler.cpp:872:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.3240391Z  void menuHandler::GPSFormatMenu()
+2025-09-21T23:33:57.3241085Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.3245520Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.3246579Z src/graphics/draw/MenuHandler.cpp:890:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3247871Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3248523Z              ^~~~~~~
+2025-09-21T23:33:57.3276948Z src/graphics/draw/MenuHandler.cpp:893:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3278003Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3278503Z              ^~~~~~~
+2025-09-21T23:33:57.3305637Z src/graphics/draw/MenuHandler.cpp:896:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3306706Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3307268Z              ^~~~~~~
+2025-09-21T23:33:57.3334322Z src/graphics/draw/MenuHandler.cpp:899:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3335365Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3335923Z              ^~~~~~~
+2025-09-21T23:33:57.3363173Z src/graphics/draw/MenuHandler.cpp:902:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3365264Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3365958Z              ^~~~~~~
+2025-09-21T23:33:57.3412890Z src/graphics/draw/MenuHandler.cpp:905:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3413927Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3415857Z              ^~~~~~~
+2025-09-21T23:33:57.3417893Z src/graphics/draw/MenuHandler.cpp:908:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3419038Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3430627Z              ^~~~~~~
+2025-09-21T23:33:57.3445666Z src/graphics/draw/MenuHandler.cpp:910:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.3446684Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.3447172Z              ^~~~~~~~~
+2025-09-21T23:33:57.3483413Z src/graphics/draw/MenuHandler.cpp:910:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.3484440Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.3485109Z              ^~~~~~~~~
+2025-09-21T23:33:57.3487138Z              TypedQueue
+2025-09-21T23:33:57.3488802Z src/graphics/draw/MenuHandler.cpp:910:25: error: 'position_base_menu' was not declared in this scope
+2025-09-21T23:33:57.3489505Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.3490565Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.3580016Z src/graphics/draw/MenuHandler.cpp:910:25: note: suggested alternative: 'positionBaseMenu'
+2025-09-21T23:33:57.3582858Z              menuQueue = position_base_menu;
+2025-09-21T23:33:57.3583320Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.3583743Z                          positionBaseMenu
+2025-09-21T23:33:57.3586083Z src/graphics/draw/MenuHandler.cpp:911:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.3586806Z              screen->runNow();
+2025-09-21T23:33:57.3593098Z                      ^~~~~~
+2025-09-21T23:33:57.3598908Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.3599920Z src/graphics/draw/MenuHandler.cpp:919:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.3601137Z  void menuHandler::BluetoothToggleMenu()
+2025-09-21T23:33:57.3602524Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.3622512Z src/graphics/draw/MenuHandler.cpp:940:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.3623382Z  void menuHandler::BuzzerModeMenu()
+2025-09-21T23:33:57.3623876Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.3625378Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.3626152Z src/graphics/draw/MenuHandler.cpp:949:9: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3626860Z          service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3627268Z          ^~~~~~~
+2025-09-21T23:33:57.3657137Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.3659775Z src/graphics/draw/MenuHandler.cpp:955:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.3661080Z  void menuHandler::BrightnessPickerMenu()
+2025-09-21T23:33:57.3662876Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.3663974Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.3664813Z src/graphics/draw/MenuHandler.cpp:994:13: error: 'saveUIConfig' was not declared in this scope
+2025-09-21T23:33:57.3666588Z              saveUIConfig();
+2025-09-21T23:33:57.3666908Z              ^~~~~~~~~~~~
+2025-09-21T23:33:57.3727014Z src/graphics/draw/MenuHandler.cpp:994:13: note: suggested alternative: 'moduleConfig'
+2025-09-21T23:33:57.3728476Z              saveUIConfig();
+2025-09-21T23:33:57.3729549Z              ^~~~~~~~~~~~
+2025-09-21T23:33:57.3730425Z              moduleConfig
+2025-09-21T23:33:57.3752444Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.3753506Z src/graphics/draw/MenuHandler.cpp:1003:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.3754589Z  void menuHandler::switchToMUIMenu()
+2025-09-21T23:33:57.3756307Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.3757654Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.3758474Z src/graphics/draw/MenuHandler.cpp:1014:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.3759192Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.3759888Z              ^~~~~~~
+2025-09-21T23:33:57.3781713Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.3784256Z src/graphics/draw/MenuHandler.cpp:1021:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.3785106Z  void menuHandler::TFTColorPickerMenu(OLEDDisplay *display)
+2025-09-21T23:33:57.3785629Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.3795581Z src/graphics/draw/MenuHandler.cpp:1115:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.3797034Z  void menuHandler::rebootMenu()
+2025-09-21T23:33:57.3797822Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.3799808Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.3800999Z src/graphics/draw/MenuHandler.cpp:1132:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.3802625Z              menuQueue = power_menu;
+2025-09-21T23:33:57.3803282Z              ^~~~~~~~~
+2025-09-21T23:33:57.3837801Z src/graphics/draw/MenuHandler.cpp:1132:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.3838824Z              menuQueue = power_menu;
+2025-09-21T23:33:57.3839378Z              ^~~~~~~~~
+2025-09-21T23:33:57.3841412Z              TypedQueue
+2025-09-21T23:33:57.3842828Z src/graphics/draw/MenuHandler.cpp:1132:25: error: 'power_menu' was not declared in this scope
+2025-09-21T23:33:57.3843890Z              menuQueue = power_menu;
+2025-09-21T23:33:57.3844541Z                          ^~~~~~~~~~
+2025-09-21T23:33:57.3884983Z src/graphics/draw/MenuHandler.cpp:1132:25: note: suggested alternative: 'loraMenu'
+2025-09-21T23:33:57.3902254Z              menuQueue = power_menu;
+2025-09-21T23:33:57.3902929Z                          ^~~~~~~~~~
+2025-09-21T23:33:57.3904210Z                          loraMenu
+2025-09-21T23:33:57.3905260Z src/graphics/draw/MenuHandler.cpp:1133:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.3906291Z              screen->runNow();
+2025-09-21T23:33:57.3908429Z                      ^~~~~~
+2025-09-21T23:33:57.3908907Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.3909675Z src/graphics/draw/MenuHandler.cpp:1139:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.3910514Z  void menuHandler::shutdownMenu()
+2025-09-21T23:33:57.3910881Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.3911277Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.3912057Z src/graphics/draw/MenuHandler.cpp:1155:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.3913126Z              menuQueue = power_menu;
+2025-09-21T23:33:57.3913595Z              ^~~~~~~~~
+2025-09-21T23:33:57.3963949Z src/graphics/draw/MenuHandler.cpp:1155:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.3967244Z              menuQueue = power_menu;
+2025-09-21T23:33:57.3967662Z              ^~~~~~~~~
+2025-09-21T23:33:57.3967966Z              TypedQueue
+2025-09-21T23:33:57.3968583Z src/graphics/draw/MenuHandler.cpp:1155:25: error: 'power_menu' was not declared in this scope
+2025-09-21T23:33:57.3969303Z              menuQueue = power_menu;
+2025-09-21T23:33:57.3969664Z                          ^~~~~~~~~~
+2025-09-21T23:33:57.3991485Z src/graphics/draw/MenuHandler.cpp:1155:25: note: suggested alternative: 'loraMenu'
+2025-09-21T23:33:57.3992875Z              menuQueue = power_menu;
+2025-09-21T23:33:57.3994113Z                          ^~~~~~~~~~
+2025-09-21T23:33:57.3994786Z                          loraMenu
+2025-09-21T23:33:57.3996514Z src/graphics/draw/MenuHandler.cpp:1156:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.3997518Z              screen->runNow();
+2025-09-21T23:33:57.3998452Z                      ^~~~~~
+2025-09-21T23:33:57.4008657Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4010022Z src/graphics/draw/MenuHandler.cpp:1162:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4011249Z  void menuHandler::addFavoriteMenu()
+2025-09-21T23:33:57.4012991Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4014681Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::addFavoriteMenu()':
+2025-09-21T23:33:57.4016551Z src/graphics/draw/MenuHandler.cpp:1167:13: error: 'class graphics::Screen' has no member named 'showNodePicker'
+2025-09-21T23:33:57.4018784Z      screen->showNodePicker("Node To Favorite", 30000, [](uint32_t nodenum) -> void {
+2025-09-21T23:33:57.4019436Z              ^~~~~~~~~~~~~~
+2025-09-21T23:33:57.4020472Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4021590Z src/graphics/draw/MenuHandler.cpp:1176:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4023039Z  void menuHandler::removeFavoriteMenu()
+2025-09-21T23:33:57.4023662Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4026777Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::removeFavoriteMenu()':
+2025-09-21T23:33:57.4028464Z src/graphics/draw/MenuHandler.cpp:1182:47: error: 'graphics::UIRenderer' has not been declared
+2025-09-21T23:33:57.4029467Z      auto node = nodeDB->getMeshNode(graphics::UIRenderer::currentFavoriteNodeNum);
+2025-09-21T23:33:57.4031452Z                                                ^~~~~~~~~~
+2025-09-21T23:33:57.4032366Z In file included from src/configuration.h:473,
+2025-09-21T23:33:57.4036322Z                  from src/graphics/draw/MenuHandler.cpp:1:
+2025-09-21T23:33:57.4036929Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4037720Z src/graphics/draw/MenuHandler.cpp:1191:64: error: 'graphics::UIRenderer' has not been declared
+2025-09-21T23:33:57.4038738Z              LOG_INFO("Removing %x as favorite node", graphics::UIRenderer::currentFavoriteNodeNum);
+2025-09-21T23:33:57.4039444Z                                                                 ^~~~~~~~~~
+2025-09-21T23:33:57.4040290Z src/DebugConfiguration.h:57:65: note: in definition of macro 'LOG_INFO'
+2025-09-21T23:33:57.4041035Z  #define LOG_INFO(...) DEBUG_PORT.log(MESHTASTIC_LOG_LEVEL_INFO, __VA_ARGS__)
+2025-09-21T23:33:57.4041648Z                                                                  ^~~~~~~~~~~
+2025-09-21T23:33:57.4065472Z src/graphics/draw/MenuHandler.cpp:1192:51: error: 'graphics::UIRenderer' has not been declared
+2025-09-21T23:33:57.4066492Z              nodeDB->set_favorite(false, graphics::UIRenderer::currentFavoriteNodeNum);
+2025-09-21T23:33:57.4067181Z                                                    ^~~~~~~~~~
+2025-09-21T23:33:57.4067735Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4068437Z src/graphics/draw/MenuHandler.cpp:1199:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4069170Z  void menuHandler::traceRouteMenu()
+2025-09-21T23:33:57.4069579Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4070330Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::traceRouteMenu()':
+2025-09-21T23:33:57.4071471Z src/graphics/draw/MenuHandler.cpp:1201:13: error: 'class graphics::Screen' has no member named 'showNodePicker'
+2025-09-21T23:33:57.4072544Z      screen->showNodePicker("Node to Trace", 30000, [](uint32_t nodenum) -> void {
+2025-09-21T23:33:57.4073203Z              ^~~~~~~~~~~~~~
+2025-09-21T23:33:57.4073658Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4074370Z src/graphics/draw/MenuHandler.cpp:1209:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4075071Z  void menuHandler::testMenu()
+2025-09-21T23:33:57.4075486Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4076040Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::testMenu()':
+2025-09-21T23:33:57.4078627Z src/graphics/draw/MenuHandler.cpp:1220:37: error: 'class graphics::Screen' has no member named 'isFrameHidden'
+2025-09-21T23:33:57.4079791Z      optionsArray[options] = screen->isFrameHidden("chirpy") ? "Show Chirpy" : "Hide Chirpy";
+2025-09-21T23:33:57.4080684Z                                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.4081241Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4082057Z src/graphics/draw/MenuHandler.cpp:1230:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.4083116Z              menuQueue = number_test;
+2025-09-21T23:33:57.4083500Z              ^~~~~~~~~
+2025-09-21T23:33:57.4132881Z src/graphics/draw/MenuHandler.cpp:1230:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.4135488Z              menuQueue = number_test;
+2025-09-21T23:33:57.4136097Z              ^~~~~~~~~
+2025-09-21T23:33:57.4136869Z              TypedQueue
+2025-09-21T23:33:57.4137746Z src/graphics/draw/MenuHandler.cpp:1230:25: error: 'number_test' was not declared in this scope
+2025-09-21T23:33:57.4138520Z              menuQueue = number_test;
+2025-09-21T23:33:57.4138941Z                          ^~~~~~~~~~~
+2025-09-21T23:33:57.4166369Z src/graphics/draw/MenuHandler.cpp:1230:25: note: suggested alternative: 'number_picker'
+2025-09-21T23:33:57.4169378Z              menuQueue = number_test;
+2025-09-21T23:33:57.4169794Z                          ^~~~~~~~~~~
+2025-09-21T23:33:57.4170287Z                          number_picker
+2025-09-21T23:33:57.4171526Z src/graphics/draw/MenuHandler.cpp:1231:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.4174172Z              screen->runNow();
+2025-09-21T23:33:57.4174516Z                      ^~~~~~
+2025-09-21T23:33:57.4179223Z src/graphics/draw/MenuHandler.cpp:1233:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.4180343Z              screen->toggleFrameVisibility("chirpy");
+2025-09-21T23:33:57.4180832Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.4184008Z src/graphics/draw/MenuHandler.cpp:1237:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.4184768Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4185186Z              ^~~~~~~~~
+2025-09-21T23:33:57.4224928Z src/graphics/draw/MenuHandler.cpp:1237:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.4225690Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4226095Z              ^~~~~~~~~
+2025-09-21T23:33:57.4226412Z              TypedQueue
+2025-09-21T23:33:57.4227088Z src/graphics/draw/MenuHandler.cpp:1237:25: error: 'system_base_menu' was not declared in this scope
+2025-09-21T23:33:57.4227840Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4228258Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.4294930Z src/graphics/draw/MenuHandler.cpp:1237:25: note: suggested alternative: 'systemBaseMenu'
+2025-09-21T23:33:57.4297005Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4298006Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.4298471Z                          systemBaseMenu
+2025-09-21T23:33:57.4331423Z src/graphics/draw/MenuHandler.cpp:1238:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.4332223Z              screen->runNow();
+2025-09-21T23:33:57.4332605Z                      ^~~~~~
+2025-09-21T23:33:57.4335931Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4336739Z src/graphics/draw/MenuHandler.cpp:1244:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4337487Z  void menuHandler::numberTest()
+2025-09-21T23:33:57.4337858Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4338428Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::numberTest()':
+2025-09-21T23:33:57.4339505Z src/graphics/draw/MenuHandler.cpp:1246:13: error: 'class graphics::Screen' has no member named 'showNumberPicker'
+2025-09-21T23:33:57.4340640Z      screen->showNumberPicker("Pick a number\n ", 30000, 4,
+2025-09-21T23:33:57.4341158Z              ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.4341611Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4342370Z src/graphics/draw/MenuHandler.cpp:1250:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4343089Z  void menuHandler::wifiBaseMenu()
+2025-09-21T23:33:57.4343480Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4343874Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4344619Z src/graphics/draw/MenuHandler.cpp:1261:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.4345609Z              menuQueue = wifi_toggle_menu;
+2025-09-21T23:33:57.4346024Z              ^~~~~~~~~
+2025-09-21T23:33:57.4364742Z src/graphics/draw/MenuHandler.cpp:1261:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.4365739Z              menuQueue = wifi_toggle_menu;
+2025-09-21T23:33:57.4366298Z              ^~~~~~~~~
+2025-09-21T23:33:57.4368071Z              TypedQueue
+2025-09-21T23:33:57.4369926Z src/graphics/draw/MenuHandler.cpp:1261:25: error: 'wifi_toggle_menu' was not declared in this scope
+2025-09-21T23:33:57.4370779Z              menuQueue = wifi_toggle_menu;
+2025-09-21T23:33:57.4371171Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.4474459Z src/graphics/draw/MenuHandler.cpp:1261:25: note: suggested alternative: 'Wifi_toggle'
+2025-09-21T23:33:57.4476232Z              menuQueue = wifi_toggle_menu;
+2025-09-21T23:33:57.4477427Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.4480931Z                          Wifi_toggle
+2025-09-21T23:33:57.4483522Z src/graphics/draw/MenuHandler.cpp:1262:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.4484331Z              screen->runNow();
+2025-09-21T23:33:57.4484655Z                      ^~~~~~
+2025-09-21T23:33:57.4513495Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4516338Z src/graphics/draw/MenuHandler.cpp:1268:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4517108Z  void menuHandler::wifiConfigMenu()
+2025-09-21T23:33:57.4517508Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4551831Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::wifiConfigMenu()':
+2025-09-21T23:33:57.4552846Z src/graphics/draw/MenuHandler.cpp:1315:22: warning: operation on 'count' may be undefined [-Wsequence-point]
+2025-09-21T23:33:57.4553629Z          options[count++] = labels[count];
+2025-09-21T23:33:57.4553993Z                  ~~~~~^~
+2025-09-21T23:33:57.4582764Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4583538Z src/graphics/draw/MenuHandler.cpp:1339:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4584276Z              menuHandler::menuQueue = menuHandler::wifi_config_menu;
+2025-09-21T23:33:57.4584725Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.4585275Z src/graphics/draw/MenuHandler.cpp:1339:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4585966Z              menuHandler::menuQueue = menuHandler::wifi_config_menu;
+2025-09-21T23:33:57.4586433Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.4587018Z src/graphics/draw/MenuHandler.cpp:1355:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4587870Z              menuHandler::showConfirmationBanner("Open network. Connect?", [ssidSel]() {
+2025-09-21T23:33:57.4588481Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.4588877Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4589615Z src/graphics/draw/MenuHandler.cpp:1359:17: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.4590483Z                  service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.4590903Z                  ^~~~~~~
+2025-09-21T23:33:57.4614905Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4615969Z src/graphics/draw/MenuHandler.cpp:1378:9: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4617696Z          menuHandler::menuQueue = graphics::menuHandler::wifi_password_prompt;
+2025-09-21T23:33:57.4618608Z          ^~~~~~~~~~~
+2025-09-21T23:33:57.4619485Z src/graphics/draw/MenuHandler.cpp:1378:44: error: 'graphics::menuHandler' has not been declared
+2025-09-21T23:33:57.4620848Z          menuHandler::menuQueue = graphics::menuHandler::wifi_password_prompt;
+2025-09-21T23:33:57.4621719Z                                             ^~~~~~~~~~~
+2025-09-21T23:33:57.4645427Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4647374Z src/graphics/draw/MenuHandler.cpp:1389:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4648830Z  void menuHandler::wifiToggleMenu()
+2025-09-21T23:33:57.4649543Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4653502Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4654329Z src/graphics/draw/MenuHandler.cpp:1402:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.4655605Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.4672145Z              ^~~~~~~
+2025-09-21T23:33:57.4712787Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4713847Z src/graphics/draw/MenuHandler.cpp:1409:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4715675Z  void menuHandler::notificationsMenu()
+2025-09-21T23:33:57.4716104Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4718015Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4719144Z src/graphics/draw/MenuHandler.cpp:1423:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4721267Z              menuHandler::menuQueue = menuHandler::buzzermodemenupicker;
+2025-09-21T23:33:57.4721882Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.4722507Z src/graphics/draw/MenuHandler.cpp:1423:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4723347Z              menuHandler::menuQueue = menuHandler::buzzermodemenupicker;
+2025-09-21T23:33:57.4732608Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.4735287Z src/graphics/draw/MenuHandler.cpp:1424:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.4736028Z              screen->runNow();
+2025-09-21T23:33:57.4736352Z                      ^~~~~~
+2025-09-21T23:33:57.4736954Z src/graphics/draw/MenuHandler.cpp:1426:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.4737651Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4738020Z              ^~~~~~~~~
+2025-09-21T23:33:57.4757929Z src/graphics/draw/MenuHandler.cpp:1426:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.4762439Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4762874Z              ^~~~~~~~~
+2025-09-21T23:33:57.4763209Z              TypedQueue
+2025-09-21T23:33:57.4763897Z src/graphics/draw/MenuHandler.cpp:1426:25: error: 'system_base_menu' was not declared in this scope
+2025-09-21T23:33:57.4764533Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4764907Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.4839506Z src/graphics/draw/MenuHandler.cpp:1426:25: note: suggested alternative: 'systemBaseMenu'
+2025-09-21T23:33:57.4843278Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4846426Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.4847232Z                          systemBaseMenu
+2025-09-21T23:33:57.4848312Z src/graphics/draw/MenuHandler.cpp:1427:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.4849464Z              screen->runNow();
+2025-09-21T23:33:57.4854801Z                      ^~~~~~
+2025-09-21T23:33:57.4857317Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.4860289Z src/graphics/draw/MenuHandler.cpp:1433:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4862223Z  void menuHandler::screenOptionsMenu()
+2025-09-21T23:33:57.4910750Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.4911464Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.4913193Z src/graphics/draw/MenuHandler.cpp:1470:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4914405Z              menuHandler::menuQueue = menuHandler::brightness_picker;
+2025-09-21T23:33:57.4915142Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.4916692Z src/graphics/draw/MenuHandler.cpp:1470:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4917449Z              menuHandler::menuQueue = menuHandler::brightness_picker;
+2025-09-21T23:33:57.4917933Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.4918628Z src/graphics/draw/MenuHandler.cpp:1471:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.4919621Z              screen->runNow();
+2025-09-21T23:33:57.4919936Z                      ^~~~~~
+2025-09-21T23:33:57.4920638Z src/graphics/draw/MenuHandler.cpp:1473:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4921375Z              menuHandler::menuQueue = menuHandler::tftcolormenupicker;
+2025-09-21T23:33:57.4921844Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.4922386Z src/graphics/draw/MenuHandler.cpp:1473:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.4923108Z              menuHandler::menuQueue = menuHandler::tftcolormenupicker;
+2025-09-21T23:33:57.4923595Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.4924481Z src/graphics/draw/MenuHandler.cpp:1474:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.4925190Z              screen->runNow();
+2025-09-21T23:33:57.4925509Z                      ^~~~~~
+2025-09-21T23:33:57.4926085Z src/graphics/draw/MenuHandler.cpp:1476:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.4926758Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4927111Z              ^~~~~~~~~
+2025-09-21T23:33:57.4940759Z src/graphics/draw/MenuHandler.cpp:1476:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.4962410Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4962815Z              ^~~~~~~~~
+2025-09-21T23:33:57.4963161Z              TypedQueue
+2025-09-21T23:33:57.4963805Z src/graphics/draw/MenuHandler.cpp:1476:25: error: 'system_base_menu' was not declared in this scope
+2025-09-21T23:33:57.4964540Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.4964920Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5023474Z src/graphics/draw/MenuHandler.cpp:1476:25: note: suggested alternative: 'systemBaseMenu'
+2025-09-21T23:33:57.5026291Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.5026758Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5027193Z                          systemBaseMenu
+2025-09-21T23:33:57.5027945Z src/graphics/draw/MenuHandler.cpp:1477:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5028725Z              screen->runNow();
+2025-09-21T23:33:57.5029097Z                      ^~~~~~
+2025-09-21T23:33:57.5033699Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.5036797Z src/graphics/draw/MenuHandler.cpp:1483:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5037539Z  void menuHandler::powerMenu()
+2025-09-21T23:33:57.5037956Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.5039184Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.5040801Z src/graphics/draw/MenuHandler.cpp:1513:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5041979Z              menuHandler::menuQueue = menuHandler::reboot_menu;
+2025-09-21T23:33:57.5042524Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5072394Z src/graphics/draw/MenuHandler.cpp:1513:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5074935Z              menuHandler::menuQueue = menuHandler::reboot_menu;
+2025-09-21T23:33:57.5075707Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5077508Z src/graphics/draw/MenuHandler.cpp:1514:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5078605Z              screen->runNow();
+2025-09-21T23:33:57.5079169Z                      ^~~~~~
+2025-09-21T23:33:57.5080010Z src/graphics/draw/MenuHandler.cpp:1516:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5081211Z              menuHandler::menuQueue = menuHandler::shutdown_menu;
+2025-09-21T23:33:57.5082924Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5084707Z src/graphics/draw/MenuHandler.cpp:1516:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5085520Z              menuHandler::menuQueue = menuHandler::shutdown_menu;
+2025-09-21T23:33:57.5086037Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5087176Z src/graphics/draw/MenuHandler.cpp:1517:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5088017Z              screen->runNow();
+2025-09-21T23:33:57.5089100Z                      ^~~~~~
+2025-09-21T23:33:57.5090450Z src/graphics/draw/MenuHandler.cpp:1519:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5091521Z              menuHandler::menuQueue = menuHandler::mui_picker;
+2025-09-21T23:33:57.5092522Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5095608Z src/graphics/draw/MenuHandler.cpp:1519:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5097365Z              menuHandler::menuQueue = menuHandler::mui_picker;
+2025-09-21T23:33:57.5097823Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5098791Z src/graphics/draw/MenuHandler.cpp:1520:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5099522Z              screen->runNow();
+2025-09-21T23:33:57.5099845Z                      ^~~~~~
+2025-09-21T23:33:57.5100590Z src/graphics/draw/MenuHandler.cpp:1522:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.5101262Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.5101626Z              ^~~~~~~~~
+2025-09-21T23:33:57.5111646Z src/graphics/draw/MenuHandler.cpp:1522:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.5112697Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.5113250Z              ^~~~~~~~~
+2025-09-21T23:33:57.5113734Z              TypedQueue
+2025-09-21T23:33:57.5115491Z src/graphics/draw/MenuHandler.cpp:1522:25: error: 'system_base_menu' was not declared in this scope
+2025-09-21T23:33:57.5116551Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.5142540Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5191904Z src/graphics/draw/MenuHandler.cpp:1522:25: note: suggested alternative: 'systemBaseMenu'
+2025-09-21T23:33:57.5195732Z              menuQueue = system_base_menu;
+2025-09-21T23:33:57.5196199Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5196638Z                          systemBaseMenu
+2025-09-21T23:33:57.5198016Z src/graphics/draw/MenuHandler.cpp:1523:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5200600Z              screen->runNow();
+2025-09-21T23:33:57.5200980Z                      ^~~~~~
+2025-09-21T23:33:57.5213397Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.5214225Z src/graphics/draw/MenuHandler.cpp:1529:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5215001Z  void menuHandler::keyVerificationInitMenu()
+2025-09-21T23:33:57.5215448Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.5216095Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::keyVerificationInitMenu()':
+2025-09-21T23:33:57.5217229Z src/graphics/draw/MenuHandler.cpp:1531:13: error: 'class graphics::Screen' has no member named 'showNodePicker'
+2025-09-21T23:33:57.5218145Z      screen->showNodePicker("Node to Verify", 30000,
+2025-09-21T23:33:57.5218640Z              ^~~~~~~~~~~~~~
+2025-09-21T23:33:57.5219101Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.5219994Z src/graphics/draw/MenuHandler.cpp:1532:60: error: 'keyVerificationModule' was not declared in this scope
+2025-09-21T23:33:57.5221238Z                             [](uint32_t selected) -> void { keyVerificationModule->sendInitialRequest(selected); });
+2025-09-21T23:33:57.5250632Z                                                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5420997Z src/graphics/draw/MenuHandler.cpp:1532:60: note: suggested alternative: 'keyVerificationInitMenu'
+2025-09-21T23:33:57.5443133Z                             [](uint32_t selected) -> void { keyVerificationModule->sendInitialRequest(selected); });
+2025-09-21T23:33:57.5443854Z                                                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5444324Z                                                             keyVerificationInitMenu
+2025-09-21T23:33:57.5445119Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.5445825Z src/graphics/draw/MenuHandler.cpp:1535:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5446537Z  void menuHandler::keyVerificationFinalPrompt()
+2025-09-21T23:33:57.5446959Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.5447554Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::keyVerificationFinalPrompt()':
+2025-09-21T23:33:57.5448620Z src/graphics/draw/MenuHandler.cpp:1540:5: error: 'keyVerificationModule' was not declared in this scope
+2025-09-21T23:33:57.5449670Z      keyVerificationModule->generateVerificationCode(message + 15); // send the toPhone packet
+2025-09-21T23:33:57.5450528Z      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5595769Z src/graphics/draw/MenuHandler.cpp:1540:5: note: suggested alternative: 'keyVerificationInitMenu'
+2025-09-21T23:33:57.5597416Z      keyVerificationModule->generateVerificationCode(message + 15); // send the toPhone packet
+2025-09-21T23:33:57.5604842Z      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5605545Z      keyVerificationInitMenu
+2025-09-21T23:33:57.5606937Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.5608151Z src/graphics/draw/MenuHandler.cpp:1560:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5611325Z  void menuHandler::FrameToggles_menu()
+2025-09-21T23:33:57.5611740Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.5632909Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::FrameToggles_menu()':
+2025-09-21T23:33:57.5634364Z src/graphics/draw/MenuHandler.cpp:1583:37: error: 'class graphics::Screen' has no member named 'isFrameHidden'
+2025-09-21T23:33:57.5636823Z      optionsArray[options] = screen->isFrameHidden("nodelist") ? "Show Node List" : "Hide Node List";
+2025-09-21T23:33:57.5637612Z                                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.5638449Z src/graphics/draw/MenuHandler.cpp:1602:37: error: 'class graphics::Screen' has no member named 'isFrameHidden'
+2025-09-21T23:33:57.5666925Z      optionsArray[options] = screen->isFrameHidden("lora") ? "Show LoRa" : "Hide LoRa";
+2025-09-21T23:33:57.5669315Z                                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.5670251Z src/graphics/draw/MenuHandler.cpp:1605:37: error: 'class graphics::Screen' has no member named 'isFrameHidden'
+2025-09-21T23:33:57.5671251Z      optionsArray[options] = screen->isFrameHidden("clock") ? "Show Clock" : "Hide Clock";
+2025-09-21T23:33:57.5671853Z                                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.5672596Z src/graphics/draw/MenuHandler.cpp:1608:37: error: 'class graphics::Screen' has no member named 'isFrameHidden'
+2025-09-21T23:33:57.5673697Z      optionsArray[options] = screen->isFrameHidden("show_favorites") ? "Show Favorites" : "Hide Favorites";
+2025-09-21T23:33:57.5674437Z                                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.5674912Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.5675828Z src/graphics/draw/MenuHandler.cpp:1630:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5676668Z              screen->toggleFrameVisibility("nodelist");
+2025-09-21T23:33:57.5677083Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5677698Z src/graphics/draw/MenuHandler.cpp:1631:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5678428Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5678865Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5679385Z src/graphics/draw/MenuHandler.cpp:1631:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5681085Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5681557Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5682259Z src/graphics/draw/MenuHandler.cpp:1632:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5682951Z              screen->runNow();
+2025-09-21T23:33:57.5683537Z                      ^~~~~~
+2025-09-21T23:33:57.5684253Z src/graphics/draw/MenuHandler.cpp:1634:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5685114Z              screen->toggleFrameVisibility("nodelist_lastheard");
+2025-09-21T23:33:57.5685570Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5686153Z src/graphics/draw/MenuHandler.cpp:1635:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5686839Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5687263Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5687794Z src/graphics/draw/MenuHandler.cpp:1635:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5688648Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5689101Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5689798Z src/graphics/draw/MenuHandler.cpp:1636:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5703051Z              screen->runNow();
+2025-09-21T23:33:57.5703439Z                      ^~~~~~
+2025-09-21T23:33:57.5704261Z src/graphics/draw/MenuHandler.cpp:1638:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5705255Z              screen->toggleFrameVisibility("nodelist_hopsignal");
+2025-09-21T23:33:57.5705786Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5706464Z src/graphics/draw/MenuHandler.cpp:1639:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5707228Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5707686Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5708261Z src/graphics/draw/MenuHandler.cpp:1639:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5708967Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5709435Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5710286Z src/graphics/draw/MenuHandler.cpp:1640:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5710979Z              screen->runNow();
+2025-09-21T23:33:57.5711294Z                      ^~~~~~
+2025-09-21T23:33:57.5712002Z src/graphics/draw/MenuHandler.cpp:1642:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5712870Z              screen->toggleFrameVisibility("nodelist_distance");
+2025-09-21T23:33:57.5713318Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5713919Z src/graphics/draw/MenuHandler.cpp:1643:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5714616Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5715047Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5715591Z src/graphics/draw/MenuHandler.cpp:1643:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5716278Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5716744Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5717436Z src/graphics/draw/MenuHandler.cpp:1644:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5718140Z              screen->runNow();
+2025-09-21T23:33:57.5718460Z                      ^~~~~~
+2025-09-21T23:33:57.5719182Z src/graphics/draw/MenuHandler.cpp:1646:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5731605Z              screen->toggleFrameVisibility("nodelist_bearings");
+2025-09-21T23:33:57.5732118Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5732753Z src/graphics/draw/MenuHandler.cpp:1647:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5733500Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5733944Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5734464Z src/graphics/draw/MenuHandler.cpp:1647:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5735406Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5735864Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5736598Z src/graphics/draw/MenuHandler.cpp:1648:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5737341Z              screen->runNow();
+2025-09-21T23:33:57.5737665Z                      ^~~~~~
+2025-09-21T23:33:57.5738409Z src/graphics/draw/MenuHandler.cpp:1650:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5739258Z              screen->toggleFrameVisibility("gps");
+2025-09-21T23:33:57.5739674Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5740633Z src/graphics/draw/MenuHandler.cpp:1651:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5741321Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5741763Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5742285Z src/graphics/draw/MenuHandler.cpp:1651:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5742979Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5743430Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5744140Z src/graphics/draw/MenuHandler.cpp:1652:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5744851Z              screen->runNow();
+2025-09-21T23:33:57.5745161Z                      ^~~~~~
+2025-09-21T23:33:57.5745895Z src/graphics/draw/MenuHandler.cpp:1654:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5746730Z              screen->toggleFrameVisibility("lora");
+2025-09-21T23:33:57.5747140Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5747740Z src/graphics/draw/MenuHandler.cpp:1655:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5748436Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5748881Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5749409Z src/graphics/draw/MenuHandler.cpp:1655:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5750235Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5750690Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5751391Z src/graphics/draw/MenuHandler.cpp:1656:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5752101Z              screen->runNow();
+2025-09-21T23:33:57.5752413Z                      ^~~~~~
+2025-09-21T23:33:57.5753134Z src/graphics/draw/MenuHandler.cpp:1658:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5753983Z              screen->toggleFrameVisibility("clock");
+2025-09-21T23:33:57.5754397Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5754996Z src/graphics/draw/MenuHandler.cpp:1659:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5755699Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5756133Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5756667Z src/graphics/draw/MenuHandler.cpp:1659:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5757364Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5757804Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5758513Z src/graphics/draw/MenuHandler.cpp:1660:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5759226Z              screen->runNow();
+2025-09-21T23:33:57.5759542Z                      ^~~~~~
+2025-09-21T23:33:57.5760413Z src/graphics/draw/MenuHandler.cpp:1662:21: error: 'class graphics::Screen' has no member named 'toggleFrameVisibility'
+2025-09-21T23:33:57.5761277Z              screen->toggleFrameVisibility("show_favorites");
+2025-09-21T23:33:57.5761728Z                      ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5762322Z src/graphics/draw/MenuHandler.cpp:1663:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5763312Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5763807Z              ^~~~~~~~~~~
+2025-09-21T23:33:57.5764407Z src/graphics/draw/MenuHandler.cpp:1663:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5794001Z              menuHandler::menuQueue = menuHandler::FrameToggles;
+2025-09-21T23:33:57.5794621Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:57.5795456Z src/graphics/draw/MenuHandler.cpp:1664:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:57.5796405Z              screen->runNow();
+2025-09-21T23:33:57.5796850Z                      ^~~~~~
+2025-09-21T23:33:57.5797507Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:57.5798477Z src/graphics/draw/MenuHandler.cpp:1670:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:57.5799408Z  void menuHandler::handleMenuSwitch(OLEDDisplay *display)
+2025-09-21T23:33:57.5824619Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.5825545Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::handleMenuSwitch(OLEDDisplay*)':
+2025-09-21T23:33:57.5826584Z src/graphics/draw/MenuHandler.cpp:1672:9: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.5904623Z      if (menuQueue != menu_none)
+2025-09-21T23:33:57.5904981Z          ^~~~~~~~~
+2025-09-21T23:33:57.5905534Z src/graphics/draw/MenuHandler.cpp:1672:9: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.5906194Z      if (menuQueue != menu_none)
+2025-09-21T23:33:57.5906527Z          ^~~~~~~~~
+2025-09-21T23:33:57.5906800Z          TypedQueue
+2025-09-21T23:33:57.5907379Z src/graphics/draw/MenuHandler.cpp:1672:22: error: 'menu_none' was not declared in this scope
+2025-09-21T23:33:57.5908089Z      if (menuQueue != menu_none)
+2025-09-21T23:33:57.5908427Z                       ^~~~~~~~~
+2025-09-21T23:33:57.5909092Z src/graphics/draw/MenuHandler.cpp:1674:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:57.5909793Z      switch (menuQueue) {
+2025-09-21T23:33:57.5910292Z              ^~~~~~~~~
+2025-09-21T23:33:57.5910858Z src/graphics/draw/MenuHandler.cpp:1674:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:57.5911496Z      switch (menuQueue) {
+2025-09-21T23:33:57.5911798Z              ^~~~~~~~~
+2025-09-21T23:33:57.5912075Z              TypedQueue
+2025-09-21T23:33:57.5912662Z src/graphics/draw/MenuHandler.cpp:1675:10: error: 'menu_none' was not declared in this scope
+2025-09-21T23:33:57.5913326Z      case menu_none:
+2025-09-21T23:33:57.5913606Z           ^~~~~~~~~
+2025-09-21T23:33:57.5956868Z src/graphics/draw/MenuHandler.cpp:1677:10: error: 'lora_Menu' was not declared in this scope
+2025-09-21T23:33:57.5965898Z      case lora_Menu:
+2025-09-21T23:33:57.5966213Z           ^~~~~~~~~
+2025-09-21T23:33:57.5966759Z src/graphics/draw/MenuHandler.cpp:1677:10: note: suggested alternative: 'loraMenu'
+2025-09-21T23:33:57.5967401Z      case lora_Menu:
+2025-09-21T23:33:57.5967683Z           ^~~~~~~~~
+2025-09-21T23:33:57.5967950Z           loraMenu
+2025-09-21T23:33:57.5968528Z src/graphics/draw/MenuHandler.cpp:1680:10: error: 'lora_picker' was not declared in this scope
+2025-09-21T23:33:57.5969216Z      case lora_picker:
+2025-09-21T23:33:57.5969510Z           ^~~~~~~~~~~
+2025-09-21T23:33:57.5970184Z src/graphics/draw/MenuHandler.cpp:1680:10: note: suggested alternative: 'node_picker'
+2025-09-21T23:33:57.5970829Z      case lora_picker:
+2025-09-21T23:33:57.5971109Z           ^~~~~~~~~~~
+2025-09-21T23:33:57.5971390Z           node_picker
+2025-09-21T23:33:57.5972156Z src/graphics/draw/MenuHandler.cpp:1681:26: error: too few arguments to function 'void graphics::LoraRegionPicker(uint32_t)'
+2025-09-21T23:33:57.5973023Z          LoraRegionPicker();
+2025-09-21T23:33:57.5973355Z                           ^
+2025-09-21T23:33:57.5973800Z src/graphics/draw/MenuHandler.cpp:150:6: note: declared here
+2025-09-21T23:33:57.5974398Z  void menuHandler::LoraRegionPicker(uint32_t duration)
+2025-09-21T23:33:57.5975125Z       ^~~~~~~~~~~
+2025-09-21T23:33:57.5975753Z src/graphics/draw/MenuHandler.cpp:1683:10: error: 'device_role_picker' was not declared in this scope
+2025-09-21T23:33:57.5976484Z      case device_role_picker:
+2025-09-21T23:33:57.5976825Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.5985740Z src/graphics/draw/MenuHandler.cpp:1683:10: note: suggested alternative: 'DeviceRolePicker'
+2025-09-21T23:33:57.5987017Z      case device_role_picker:
+2025-09-21T23:33:57.5988957Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6002757Z           DeviceRolePicker
+2025-09-21T23:33:57.6005374Z src/graphics/draw/MenuHandler.cpp:1686:10: error: 'no_timeout_lora_picker' was not declared in this scope
+2025-09-21T23:33:57.6006144Z      case no_timeout_lora_picker:
+2025-09-21T23:33:57.6007824Z           ^~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6058747Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/input/ButtonThread.cpp.o
+2025-09-21T23:33:57.6214817Z src/graphics/draw/MenuHandler.cpp:1689:10: error: 'TZ_picker' was not declared in this scope
+2025-09-21T23:33:57.6217295Z      case TZ_picker:
+2025-09-21T23:33:57.6217567Z           ^~~~~~~~~
+2025-09-21T23:33:57.6251137Z src/graphics/draw/MenuHandler.cpp:1689:10: note: suggested alternative: 'TZPicker'
+2025-09-21T23:33:57.6252000Z      case TZ_picker:
+2025-09-21T23:33:57.6252387Z           ^~~~~~~~~
+2025-09-21T23:33:57.6253476Z           TZPicker
+2025-09-21T23:33:57.6254123Z src/graphics/draw/MenuHandler.cpp:1692:10: error: 'twelve_hour_picker' was not declared in this scope
+2025-09-21T23:33:57.6254860Z      case twelve_hour_picker:
+2025-09-21T23:33:57.6255199Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6338824Z src/graphics/draw/MenuHandler.cpp:1692:10: note: suggested alternative: 'TwelveHourPicker'
+2025-09-21T23:33:57.6340368Z      case twelve_hour_picker:
+2025-09-21T23:33:57.6342672Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6343350Z           TwelveHourPicker
+2025-09-21T23:33:57.6344164Z src/graphics/draw/MenuHandler.cpp:1695:10: error: 'clock_face_picker' was not declared in this scope
+2025-09-21T23:33:57.6344985Z      case clock_face_picker:
+2025-09-21T23:33:57.6346828Z           ^~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6426548Z src/graphics/draw/MenuHandler.cpp:1695:10: note: suggested alternative: 'ClockFacePicker'
+2025-09-21T23:33:57.6427313Z      case clock_face_picker:
+2025-09-21T23:33:57.6429609Z           ^~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6432276Z           ClockFacePicker
+2025-09-21T23:33:57.6433034Z src/graphics/draw/MenuHandler.cpp:1698:10: error: 'clock_menu' was not declared in this scope
+2025-09-21T23:33:57.6462985Z      case clock_menu:
+2025-09-21T23:33:57.6463686Z           ^~~~~~~~~~
+2025-09-21T23:33:57.6465056Z src/graphics/draw/MenuHandler.cpp:1698:10: note: suggested alternative: 'clockMenu'
+2025-09-21T23:33:57.6465803Z      case clock_menu:
+2025-09-21T23:33:57.6466130Z           ^~~~~~~~~~
+2025-09-21T23:33:57.6466469Z           clockMenu
+2025-09-21T23:33:57.6467219Z src/graphics/draw/MenuHandler.cpp:1701:10: error: 'system_base_menu' was not declared in this scope
+2025-09-21T23:33:57.6467976Z      case system_base_menu:
+2025-09-21T23:33:57.6481714Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6513037Z src/graphics/draw/MenuHandler.cpp:1701:10: note: suggested alternative: 'systemBaseMenu'
+2025-09-21T23:33:57.6516220Z      case system_base_menu:
+2025-09-21T23:33:57.6516623Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6516991Z           systemBaseMenu
+2025-09-21T23:33:57.6517839Z src/graphics/draw/MenuHandler.cpp:1704:10: error: 'silent_mode_toggle' was not declared in this scope
+2025-09-21T23:33:57.6519009Z      case silent_mode_toggle:
+2025-09-21T23:33:57.6520411Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6679014Z src/graphics/draw/MenuHandler.cpp:1705:9: error: 'silentModeToggle' was not declared in this scope
+2025-09-21T23:33:57.6692476Z          silentModeToggle();
+2025-09-21T23:33:57.6693102Z          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6818702Z src/graphics/draw/MenuHandler.cpp:1705:9: note: suggested alternative: 'bitToggle'
+2025-09-21T23:33:57.6820365Z          silentModeToggle();
+2025-09-21T23:33:57.6820813Z          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6822215Z          bitToggle
+2025-09-21T23:33:57.6822772Z src/graphics/draw/MenuHandler.cpp:1707:10: error: 'position_base_menu' was not declared in this scope
+2025-09-21T23:33:57.6823419Z      case position_base_menu:
+2025-09-21T23:33:57.6823754Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6898878Z src/graphics/draw/MenuHandler.cpp:1707:10: note: suggested alternative: 'positionBaseMenu'
+2025-09-21T23:33:57.6904342Z      case position_base_menu:
+2025-09-21T23:33:57.6904689Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6905100Z           positionBaseMenu
+2025-09-21T23:33:57.6906002Z src/graphics/draw/MenuHandler.cpp:1710:10: error: 'wifi_config_menu' was not declared in this scope
+2025-09-21T23:33:57.6906716Z      case wifi_config_menu:
+2025-09-21T23:33:57.6907036Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6961320Z src/graphics/draw/MenuHandler.cpp:1710:10: note: suggested alternative: 'wifiConfigMenu'
+2025-09-21T23:33:57.6965555Z      case wifi_config_menu:
+2025-09-21T23:33:57.6966437Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.6967059Z           wifiConfigMenu
+2025-09-21T23:33:57.6967920Z src/graphics/draw/MenuHandler.cpp:1714:10: error: 'node_info_menu' was not declared in this scope
+2025-09-21T23:33:57.6968813Z      case node_info_menu:
+2025-09-21T23:33:57.6969869Z           ^~~~~~~~~~~~~~
+2025-09-21T23:33:57.7027456Z src/graphics/draw/MenuHandler.cpp:1714:10: note: suggested alternative: 'nodeListMenu'
+2025-09-21T23:33:57.7032977Z      case node_info_menu:
+2025-09-21T23:33:57.7034332Z           ^~~~~~~~~~~~~~
+2025-09-21T23:33:57.7034661Z           nodeListMenu
+2025-09-21T23:33:57.7035358Z src/graphics/draw/MenuHandler.cpp:1716:10: error: 'wifi_password_prompt' was not declared in this scope
+2025-09-21T23:33:57.7036139Z      case wifi_password_prompt: {
+2025-09-21T23:33:57.7036499Z           ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.7163318Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:33:57.7213948Z src/graphics/draw/MenuHandler.cpp:1716:10: note: suggested alternative: 'wifi_power_t'
+2025-09-21T23:33:57.7215027Z      case wifi_password_prompt: {
+2025-09-21T23:33:57.7215512Z           ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.7215939Z           wifi_power_t
+2025-09-21T23:33:57.7217851Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.7218637Z src/graphics/draw/MenuHandler.cpp:1728:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.7219389Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:57.7219806Z              ^~~~~~~
+2025-09-21T23:33:57.7241635Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::handleMenuSwitch(OLEDDisplay*)':
+2025-09-21T23:33:57.7243442Z src/graphics/draw/MenuHandler.cpp:1739:25: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:57.7245281Z          if (kb_found && cannedMessageModule) {
+2025-09-21T23:33:57.7245731Z                          ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.7409113Z src/graphics/draw/MenuHandler.cpp:1749:21: error: 'class graphics::Screen' has no member named 'showTextInput'
+2025-09-21T23:33:57.7432967Z              screen->showTextInput(hdr, "", 0, wifiPasswordCallback);
+2025-09-21T23:33:57.7433630Z                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.7435883Z src/graphics/draw/MenuHandler.cpp:1755:10: error: 'mqtt_server_prompt' was not declared in this scope
+2025-09-21T23:33:57.7437092Z      case mqtt_server_prompt: {
+2025-09-21T23:33:57.7438654Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.7584707Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.7586181Z src/graphics/draw/MenuHandler.cpp:1760:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.7587533Z              service->reloadConfig(SEGMENT_MODULECONFIG);
+2025-09-21T23:33:57.7588958Z              ^~~~~~~
+2025-09-21T23:33:57.7617072Z src/graphics/draw/MenuHandler.cpp:1760:13: note: suggested alternative: 'server'
+2025-09-21T23:33:57.7618317Z              service->reloadConfig(SEGMENT_MODULECONFIG);
+2025-09-21T23:33:57.7619616Z              ^~~~~~~
+2025-09-21T23:33:57.7621309Z              server
+2025-09-21T23:33:57.7626326Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::handleMenuSwitch(OLEDDisplay*)':
+2025-09-21T23:33:57.7628581Z src/graphics/draw/MenuHandler.cpp:1764:25: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:57.7630679Z          if (kb_found && cannedMessageModule) {
+2025-09-21T23:33:57.7631392Z                          ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.7802529Z src/graphics/draw/MenuHandler.cpp:1773:21: error: 'class graphics::Screen' has no member named 'showTextInput'
+2025-09-21T23:33:57.7804035Z              screen->showTextInput(hdr, moduleConfig.mqtt.address, 0, serverCallback);
+2025-09-21T23:33:57.7804782Z                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.7808349Z src/graphics/draw/MenuHandler.cpp:1778:10: error: 'mqtt_username_prompt' was not declared in this scope
+2025-09-21T23:33:57.7809893Z      case mqtt_username_prompt: {
+2025-09-21T23:33:57.7811493Z           ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.8012318Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.8014905Z src/graphics/draw/MenuHandler.cpp:1783:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.8015896Z              service->reloadConfig(SEGMENT_MODULECONFIG);
+2025-09-21T23:33:57.8017038Z              ^~~~~~~
+2025-09-21T23:33:57.8047840Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::handleMenuSwitch(OLEDDisplay*)':
+2025-09-21T23:33:57.8049187Z src/graphics/draw/MenuHandler.cpp:1787:25: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:57.8050740Z          if (kb_found && cannedMessageModule) {
+2025-09-21T23:33:57.8052289Z                          ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.8221229Z src/graphics/draw/MenuHandler.cpp:1790:21: error: 'class graphics::Screen' has no member named 'showTextInput'
+2025-09-21T23:33:57.8222990Z              screen->showTextInput(hdr, moduleConfig.mqtt.username, 0, usernameCallback);
+2025-09-21T23:33:57.8223767Z                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.8226025Z src/graphics/draw/MenuHandler.cpp:1795:10: error: 'mqtt_password_prompt' was not declared in this scope
+2025-09-21T23:33:57.8227061Z      case mqtt_password_prompt: {
+2025-09-21T23:33:57.8229294Z           ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.8455161Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.8455965Z src/graphics/draw/MenuHandler.cpp:1800:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.8457771Z              service->reloadConfig(SEGMENT_MODULECONFIG);
+2025-09-21T23:33:57.8458435Z              ^~~~~~~
+2025-09-21T23:33:57.8469326Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::handleMenuSwitch(OLEDDisplay*)':
+2025-09-21T23:33:57.8472224Z src/graphics/draw/MenuHandler.cpp:1804:25: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:57.8473088Z          if (kb_found && cannedMessageModule) {
+2025-09-21T23:33:57.8473529Z                          ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.8640735Z src/graphics/draw/MenuHandler.cpp:1807:21: error: 'class graphics::Screen' has no member named 'showTextInput'
+2025-09-21T23:33:57.8644130Z              screen->showTextInput(hdr, "", 0, passwordCallback);
+2025-09-21T23:33:57.8644668Z                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.8645410Z src/graphics/draw/MenuHandler.cpp:1812:10: error: 'mqtt_root_prompt' was not declared in this scope
+2025-09-21T23:33:57.8646184Z      case mqtt_root_prompt: {
+2025-09-21T23:33:57.8646567Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.8779341Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:57.8782307Z src/graphics/draw/MenuHandler.cpp:1817:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:57.8784025Z              service->reloadConfig(SEGMENT_MODULECONFIG);
+2025-09-21T23:33:57.8785742Z              ^~~~~~~
+2025-09-21T23:33:57.8813201Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::handleMenuSwitch(OLEDDisplay*)':
+2025-09-21T23:33:57.8814875Z src/graphics/draw/MenuHandler.cpp:1821:25: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:57.8816504Z          if (kb_found && cannedMessageModule) {
+2025-09-21T23:33:57.8817329Z                          ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.8977656Z src/graphics/draw/MenuHandler.cpp:1824:21: error: 'class graphics::Screen' has no member named 'showTextInput'
+2025-09-21T23:33:57.8979050Z              screen->showTextInput(hdr, moduleConfig.mqtt.root, 0, rootCallback);
+2025-09-21T23:33:57.8981474Z                      ^~~~~~~~~~~~~
+2025-09-21T23:33:57.8982248Z src/graphics/draw/MenuHandler.cpp:1831:10: error: 'gps_toggle_menu' was not declared in this scope
+2025-09-21T23:33:57.8983013Z      case gps_toggle_menu:
+2025-09-21T23:33:57.8983378Z           ^~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9066846Z src/graphics/draw/MenuHandler.cpp:1831:10: note: suggested alternative: 'FrameToggles_menu'
+2025-09-21T23:33:57.9069484Z      case gps_toggle_menu:
+2025-09-21T23:33:57.9069865Z           ^~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9070382Z           FrameToggles_menu
+2025-09-21T23:33:57.9071086Z src/graphics/draw/MenuHandler.cpp:1834:10: error: 'gps_format_menu' was not declared in this scope
+2025-09-21T23:33:57.9071776Z      case gps_format_menu:
+2025-09-21T23:33:57.9072104Z           ^~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9154872Z src/graphics/draw/MenuHandler.cpp:1834:10: note: suggested alternative: 'GPSFormatMenu'
+2025-09-21T23:33:57.9157965Z      case gps_format_menu:
+2025-09-21T23:33:57.9158369Z           ^~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9158780Z           GPSFormatMenu
+2025-09-21T23:33:57.9182306Z src/graphics/draw/MenuHandler.cpp:1838:10: error: 'compass_point_north_menu' was not declared in this scope
+2025-09-21T23:33:57.9183529Z      case compass_point_north_menu:
+2025-09-21T23:33:57.9184127Z           ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9370537Z src/graphics/draw/MenuHandler.cpp:1838:10: note: suggested alternative: 'compassNorthMenu'
+2025-09-21T23:33:57.9371608Z      case compass_point_north_menu:
+2025-09-21T23:33:57.9372173Z           ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9373439Z           compassNorthMenu
+2025-09-21T23:33:57.9374566Z src/graphics/draw/MenuHandler.cpp:1841:10: error: 'reset_node_db_menu' was not declared in this scope
+2025-09-21T23:33:57.9376213Z      case reset_node_db_menu:
+2025-09-21T23:33:57.9376944Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9497691Z src/graphics/draw/MenuHandler.cpp:1841:10: note: suggested alternative: 'resetNodeDBMenu'
+2025-09-21T23:33:57.9498775Z      case reset_node_db_menu:
+2025-09-21T23:33:57.9499316Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9501172Z           resetNodeDBMenu
+2025-09-21T23:33:57.9502390Z src/graphics/draw/MenuHandler.cpp:1844:10: error: 'buzzermodemenupicker' was not declared in this scope
+2025-09-21T23:33:57.9503441Z      case buzzermodemenupicker:
+2025-09-21T23:33:57.9504069Z           ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9672004Z src/graphics/draw/MenuHandler.cpp:1844:10: note: suggested alternative: 'BuzzerModeMenu'
+2025-09-21T23:33:57.9673113Z      case buzzermodemenupicker:
+2025-09-21T23:33:57.9673649Z           ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9675482Z           BuzzerModeMenu
+2025-09-21T23:33:57.9676887Z src/graphics/draw/MenuHandler.cpp:1847:10: error: 'mui_picker' was not declared in this scope
+2025-09-21T23:33:57.9677633Z      case mui_picker:
+2025-09-21T23:33:57.9678711Z           ^~~~~~~~~~
+2025-09-21T23:33:57.9709759Z src/graphics/draw/MenuHandler.cpp:1847:10: note: suggested alternative: 'node_picker'
+2025-09-21T23:33:57.9710931Z      case mui_picker:
+2025-09-21T23:33:57.9713448Z           ^~~~~~~~~~
+2025-09-21T23:33:57.9714201Z           node_picker
+2025-09-21T23:33:57.9716460Z src/graphics/draw/MenuHandler.cpp:1850:10: error: 'tftcolormenupicker' was not declared in this scope
+2025-09-21T23:33:57.9740858Z      case tftcolormenupicker:
+2025-09-21T23:33:57.9741547Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9873995Z src/graphics/draw/MenuHandler.cpp:1853:10: error: 'brightness_picker' was not declared in this scope
+2025-09-21T23:33:57.9875049Z      case brightness_picker:
+2025-09-21T23:33:57.9875578Z           ^~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9981448Z src/graphics/draw/MenuHandler.cpp:1853:10: note: suggested alternative: 'BrightnessPickerMenu'
+2025-09-21T23:33:57.9982497Z      case brightness_picker:
+2025-09-21T23:33:57.9983046Z           ^~~~~~~~~~~~~~~~~
+2025-09-21T23:33:57.9985040Z           BrightnessPickerMenu
+2025-09-21T23:33:57.9988022Z src/graphics/draw/MenuHandler.cpp:1856:10: error: 'reboot_menu' was not declared in this scope
+2025-09-21T23:33:57.9988730Z      case reboot_menu:
+2025-09-21T23:33:57.9989023Z           ^~~~~~~~~~~
+2025-09-21T23:33:58.0008988Z src/graphics/draw/MenuHandler.cpp:1856:10: note: suggested alternative: 'rebootMenu'
+2025-09-21T23:33:58.0010522Z      case reboot_menu:
+2025-09-21T23:33:58.0011344Z           ^~~~~~~~~~~
+2025-09-21T23:33:58.0011949Z           rebootMenu
+2025-09-21T23:33:58.0012852Z src/graphics/draw/MenuHandler.cpp:1859:10: error: 'shutdown_menu' was not declared in this scope
+2025-09-21T23:33:58.0014258Z      case shutdown_menu:
+2025-09-21T23:33:58.0015235Z           ^~~~~~~~~~~~~
+2025-09-21T23:33:58.0034694Z src/graphics/draw/MenuHandler.cpp:1859:10: note: suggested alternative: 'shutdownMenu'
+2025-09-21T23:33:58.0036603Z      case shutdown_menu:
+2025-09-21T23:33:58.0038023Z           ^~~~~~~~~~~~~
+2025-09-21T23:33:58.0039172Z           shutdownMenu
+2025-09-21T23:33:58.0040027Z src/graphics/draw/MenuHandler.cpp:1862:10: error: 'add_favorite' was not declared in this scope
+2025-09-21T23:33:58.0041141Z      case add_favorite:
+2025-09-21T23:33:58.0042138Z           ^~~~~~~~~~~~
+2025-09-21T23:33:58.0084448Z src/graphics/draw/MenuHandler.cpp:1862:10: note: suggested alternative: 'addFavoriteMenu'
+2025-09-21T23:33:58.0085772Z      case add_favorite:
+2025-09-21T23:33:58.0087750Z           ^~~~~~~~~~~~
+2025-09-21T23:33:58.0088879Z           addFavoriteMenu
+2025-09-21T23:33:58.0089614Z src/graphics/draw/MenuHandler.cpp:1865:10: error: 'remove_favorite' was not declared in this scope
+2025-09-21T23:33:58.0090890Z      case remove_favorite:
+2025-09-21T23:33:58.0091434Z           ^~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0159720Z src/graphics/draw/MenuHandler.cpp:1865:10: note: suggested alternative: 'removeFavoriteMenu'
+2025-09-21T23:33:58.0160887Z      case remove_favorite:
+2025-09-21T23:33:58.0161401Z           ^~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0162417Z           removeFavoriteMenu
+2025-09-21T23:33:58.0163424Z src/graphics/draw/MenuHandler.cpp:1868:10: error: 'trace_route_menu' was not declared in this scope
+2025-09-21T23:33:58.0164570Z      case trace_route_menu:
+2025-09-21T23:33:58.0166749Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0217891Z src/graphics/draw/MenuHandler.cpp:1868:10: note: suggested alternative: 'traceRouteMenu'
+2025-09-21T23:33:58.0218978Z      case trace_route_menu:
+2025-09-21T23:33:58.0219963Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0221878Z           traceRouteMenu
+2025-09-21T23:33:58.0222592Z src/graphics/draw/MenuHandler.cpp:1871:10: error: 'test_menu' was not declared in this scope
+2025-09-21T23:33:58.0223676Z      case test_menu:
+2025-09-21T23:33:58.0224179Z           ^~~~~~~~~
+2025-09-21T23:33:58.0242725Z src/graphics/draw/MenuHandler.cpp:1871:10: note: suggested alternative: 'testMenu'
+2025-09-21T23:33:58.0243678Z      case test_menu:
+2025-09-21T23:33:58.0245965Z           ^~~~~~~~~
+2025-09-21T23:33:58.0246699Z           testMenu
+2025-09-21T23:33:58.0248230Z src/graphics/draw/MenuHandler.cpp:1874:10: error: 'number_test' was not declared in this scope
+2025-09-21T23:33:58.0250553Z      case number_test:
+2025-09-21T23:33:58.0251044Z           ^~~~~~~~~~~
+2025-09-21T23:33:58.0292361Z src/graphics/draw/MenuHandler.cpp:1874:10: note: suggested alternative: 'numberTest'
+2025-09-21T23:33:58.0310700Z      case number_test:
+2025-09-21T23:33:58.0311212Z           ^~~~~~~~~~~
+2025-09-21T23:33:58.0312332Z           numberTest
+2025-09-21T23:33:58.0313293Z src/graphics/draw/MenuHandler.cpp:1877:10: error: 'wifi_toggle_menu' was not declared in this scope
+2025-09-21T23:33:58.0314452Z      case wifi_toggle_menu:
+2025-09-21T23:33:58.0316418Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0326674Z src/graphics/draw/MenuHandler.cpp:1877:10: note: suggested alternative: 'wifiToggleMenu'
+2025-09-21T23:33:58.0327678Z      case wifi_toggle_menu:
+2025-09-21T23:33:58.0328193Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0330271Z           wifiToggleMenu
+2025-09-21T23:33:58.0331290Z src/graphics/draw/MenuHandler.cpp:1880:10: error: 'mqtt_base_menu' was not declared in this scope
+2025-09-21T23:33:58.0332266Z      case mqtt_base_menu:
+2025-09-21T23:33:58.0333176Z           ^~~~~~~~~~~~~~
+2025-09-21T23:33:58.0417780Z src/graphics/draw/MenuHandler.cpp:1881:9: error: 'mqttBaseMenu' was not declared in this scope
+2025-09-21T23:33:58.0418856Z          mqttBaseMenu();
+2025-09-21T23:33:58.0421467Z          ^~~~~~~~~~~~
+2025-09-21T23:33:58.0452216Z src/graphics/draw/MenuHandler.cpp:1881:9: note: suggested alternative: 'wifiBaseMenu'
+2025-09-21T23:33:58.0453252Z          mqttBaseMenu();
+2025-09-21T23:33:58.0455658Z          ^~~~~~~~~~~~
+2025-09-21T23:33:58.0456271Z          wifiBaseMenu
+2025-09-21T23:33:58.0458907Z src/graphics/draw/MenuHandler.cpp:1883:10: error: 'mqtt_toggle_menu' was not declared in this scope
+2025-09-21T23:33:58.0460609Z      case mqtt_toggle_menu:
+2025-09-21T23:33:58.0482212Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0554215Z src/graphics/draw/MenuHandler.cpp:1883:10: note: suggested alternative: 'FrameToggles_menu'
+2025-09-21T23:33:58.0557155Z      case mqtt_toggle_menu:
+2025-09-21T23:33:58.0557917Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0558564Z           FrameToggles_menu
+2025-09-21T23:33:58.0559481Z src/graphics/draw/MenuHandler.cpp:1884:9: error: 'mqttToggleMenu' was not declared in this scope
+2025-09-21T23:33:58.0561563Z          mqttToggleMenu();
+2025-09-21T23:33:58.0563979Z          ^~~~~~~~~~~~~~
+2025-09-21T23:33:58.0601634Z src/graphics/draw/MenuHandler.cpp:1884:9: note: suggested alternative: 'wifiToggleMenu'
+2025-09-21T23:33:58.0604088Z          mqttToggleMenu();
+2025-09-21T23:33:58.0604861Z          ^~~~~~~~~~~~~~
+2025-09-21T23:33:58.0620834Z          wifiToggleMenu
+2025-09-21T23:33:58.0621722Z src/graphics/draw/MenuHandler.cpp:1886:10: error: 'mqtt_server_config' was not declared in this scope
+2025-09-21T23:33:58.0622466Z      case mqtt_server_config:
+2025-09-21T23:33:58.0622800Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0755704Z src/graphics/draw/MenuHandler.cpp:1886:10: note: suggested alternative: 'esp_netif_config'
+2025-09-21T23:33:58.0756690Z      case mqtt_server_config:
+2025-09-21T23:33:58.0758356Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0759714Z           esp_netif_config
+2025-09-21T23:33:58.0762979Z src/graphics/draw/MenuHandler.cpp:1887:9: error: 'mqttServerConfig' was not declared in this scope
+2025-09-21T23:33:58.0763670Z          mqttServerConfig();
+2025-09-21T23:33:58.0763981Z          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0857790Z src/graphics/draw/MenuHandler.cpp:1887:9: note: suggested alternative: 'timerGetConfig'
+2025-09-21T23:33:58.0858540Z          mqttServerConfig();
+2025-09-21T23:33:58.0859004Z          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.0861545Z          timerGetConfig
+2025-09-21T23:33:58.0864406Z src/graphics/draw/MenuHandler.cpp:1889:10: error: 'mqtt_credentials_config' was not declared in this scope
+2025-09-21T23:33:58.0865124Z      case mqtt_credentials_config:
+2025-09-21T23:33:58.0865448Z           ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1100280Z src/graphics/draw/MenuHandler.cpp:1890:9: error: 'mqttCredentialsConfig' was not declared in this scope
+2025-09-21T23:33:58.1101166Z          mqttCredentialsConfig();
+2025-09-21T23:33:58.1101596Z          ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1307371Z src/graphics/draw/MenuHandler.cpp:1892:10: error: 'key_verification_init' was not declared in this scope
+2025-09-21T23:33:58.1308470Z      case key_verification_init:
+2025-09-21T23:33:58.1308780Z           ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1472748Z src/graphics/draw/MenuHandler.cpp:1892:10: note: suggested alternative: 'keyVerificationInitMenu'
+2025-09-21T23:33:58.1474148Z      case key_verification_init:
+2025-09-21T23:33:58.1475747Z           ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1478388Z           keyVerificationInitMenu
+2025-09-21T23:33:58.1481325Z src/graphics/draw/MenuHandler.cpp:1895:10: error: 'key_verification_final_prompt' was not declared in this scope
+2025-09-21T23:33:58.1482610Z      case key_verification_final_prompt:
+2025-09-21T23:33:58.1485014Z           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1624712Z src/graphics/draw/MenuHandler.cpp:1895:10: note: suggested alternative: 'keyVerificationFinalPrompt'
+2025-09-21T23:33:58.1626244Z      case key_verification_final_prompt:
+2025-09-21T23:33:58.1628778Z           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1631407Z           keyVerificationFinalPrompt
+2025-09-21T23:33:58.1654210Z src/graphics/draw/MenuHandler.cpp:1898:10: error: 'bluetooth_toggle_menu' was not declared in this scope
+2025-09-21T23:33:58.1655001Z      case bluetooth_toggle_menu:
+2025-09-21T23:33:58.1655352Z           ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1762127Z src/graphics/draw/MenuHandler.cpp:1898:10: note: suggested alternative: 'BluetoothToggleMenu'
+2025-09-21T23:33:58.1762933Z      case bluetooth_toggle_menu:
+2025-09-21T23:33:58.1780611Z           ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1781005Z           BluetoothToggleMenu
+2025-09-21T23:33:58.1781740Z src/graphics/draw/MenuHandler.cpp:1901:10: error: 'notifications_menu' was not declared in this scope
+2025-09-21T23:33:58.1782496Z      case notifications_menu:
+2025-09-21T23:33:58.1782828Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1816592Z src/graphics/draw/MenuHandler.cpp:1901:10: note: suggested alternative: 'notificationsMenu'
+2025-09-21T23:33:58.1819312Z      case notifications_menu:
+2025-09-21T23:33:58.1819724Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1820350Z           notificationsMenu
+2025-09-21T23:33:58.1822547Z src/graphics/draw/MenuHandler.cpp:1904:10: error: 'screen_options_menu' was not declared in this scope
+2025-09-21T23:33:58.1825129Z      case screen_options_menu:
+2025-09-21T23:33:58.1825489Z           ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1909615Z src/graphics/draw/MenuHandler.cpp:1904:10: note: suggested alternative: 'screenOptionsMenu'
+2025-09-21T23:33:58.1911565Z      case screen_options_menu:
+2025-09-21T23:33:58.1931519Z           ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.1931916Z           screenOptionsMenu
+2025-09-21T23:33:58.1932555Z src/graphics/draw/MenuHandler.cpp:1907:10: error: 'power_menu' was not declared in this scope
+2025-09-21T23:33:58.1933271Z      case power_menu:
+2025-09-21T23:33:58.1933588Z           ^~~~~~~~~~
+2025-09-21T23:33:58.1944693Z src/graphics/draw/MenuHandler.cpp:1907:10: note: suggested alternative: 'powerMenu'
+2025-09-21T23:33:58.1947012Z      case power_menu:
+2025-09-21T23:33:58.1947360Z           ^~~~~~~~~~
+2025-09-21T23:33:58.1948577Z           powerMenu
+2025-09-21T23:33:58.1951246Z src/graphics/draw/MenuHandler.cpp:1910:10: error: 'FrameToggles' was not declared in this scope
+2025-09-21T23:33:58.1953294Z      case FrameToggles:
+2025-09-21T23:33:58.1971072Z           ^~~~~~~~~~~~
+2025-09-21T23:33:58.1993401Z src/graphics/draw/MenuHandler.cpp:1910:10: note: suggested alternative: 'FrameToggles_menu'
+2025-09-21T23:33:58.1994533Z      case FrameToggles:
+2025-09-21T23:33:58.1997065Z           ^~~~~~~~~~~~
+2025-09-21T23:33:58.1998120Z           FrameToggles_menu
+2025-09-21T23:33:58.2012576Z src/graphics/draw/MenuHandler.cpp:1913:10: error: 'sleep_menu' was not declared in this scope
+2025-09-21T23:33:58.2013823Z      case sleep_menu:
+2025-09-21T23:33:58.2015828Z           ^~~~~~~~~~
+2025-09-21T23:33:58.2035572Z src/graphics/draw/MenuHandler.cpp:1913:10: note: suggested alternative: 'sleep'
+2025-09-21T23:33:58.2037055Z      case sleep_menu:
+2025-09-21T23:33:58.2038907Z           ^~~~~~~~~~
+2025-09-21T23:33:58.2039997Z           sleep
+2025-09-21T23:33:58.2042658Z src/graphics/draw/MenuHandler.cpp:1914:9: error: 'sleepMenu' was not declared in this scope
+2025-09-21T23:33:58.2044119Z          sleepMenu();
+2025-09-21T23:33:58.2045840Z          ^~~~~~~~~
+2025-09-21T23:33:58.2070481Z src/graphics/draw/MenuHandler.cpp:1914:9: note: suggested alternative: 'powerMenu'
+2025-09-21T23:33:58.2072279Z          sleepMenu();
+2025-09-21T23:33:58.2074435Z          ^~~~~~~~~
+2025-09-21T23:33:58.2075129Z          powerMenu
+2025-09-21T23:33:58.2077782Z src/graphics/draw/MenuHandler.cpp:1916:10: error: 'sleep_timer_config' was not declared in this scope
+2025-09-21T23:33:58.2079945Z      case sleep_timer_config:
+2025-09-21T23:33:58.2081746Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2221044Z src/graphics/draw/MenuHandler.cpp:1916:10: note: suggested alternative: 'esp_timer_init'
+2025-09-21T23:33:58.2222241Z      case sleep_timer_config:
+2025-09-21T23:33:58.2222842Z           ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2223214Z           esp_timer_init
+2025-09-21T23:33:58.2223880Z src/graphics/draw/MenuHandler.cpp:1917:9: error: 'sleepTimerConfig' was not declared in this scope
+2025-09-21T23:33:58.2224631Z          sleepTimerConfig();
+2025-09-21T23:33:58.2224960Z          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2323766Z src/graphics/draw/MenuHandler.cpp:1917:9: note: suggested alternative: 'SerialConfig'
+2025-09-21T23:33:58.2325752Z          sleepTimerConfig();
+2025-09-21T23:33:58.2332763Z          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2334625Z          SerialConfig
+2025-09-21T23:33:58.2336800Z src/graphics/draw/MenuHandler.cpp:1919:10: error: 'throttle_message' was not declared in this scope
+2025-09-21T23:33:58.2337890Z      case throttle_message:
+2025-09-21T23:33:58.2339710Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2446373Z src/graphics/draw/MenuHandler.cpp:1919:10: note: suggested alternative: 'ProcessMessage'
+2025-09-21T23:33:58.2447399Z      case throttle_message:
+2025-09-21T23:33:58.2449499Z           ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2452004Z           ProcessMessage
+2025-09-21T23:33:58.2455745Z src/graphics/draw/MenuHandler.cpp:1923:5: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.2458049Z      menuQueue = menu_none;
+2025-09-21T23:33:58.2460572Z      ^~~~~~~~~
+2025-09-21T23:33:58.2493759Z src/graphics/draw/MenuHandler.cpp:1923:5: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.2496017Z      menuQueue = menu_none;
+2025-09-21T23:33:58.2498641Z      ^~~~~~~~~
+2025-09-21T23:33:58.2501433Z      TypedQueue
+2025-09-21T23:33:58.2504526Z src/graphics/draw/MenuHandler.cpp:1923:17: error: 'menu_none' was not declared in this scope
+2025-09-21T23:33:58.2520711Z      menuQueue = menu_none;
+2025-09-21T23:33:58.2521362Z                  ^~~~~~~~~
+2025-09-21T23:33:58.2538403Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:58.2541195Z src/graphics/draw/MenuHandler.cpp:1926:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.2543941Z  void menuHandler::mqttBaseMenu()
+2025-09-21T23:33:58.2552725Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.2554580Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:58.2556276Z src/graphics/draw/MenuHandler.cpp:1937:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.2558272Z              menuQueue = mqtt_toggle_menu;
+2025-09-21T23:33:58.2559506Z              ^~~~~~~~~
+2025-09-21T23:33:58.2590865Z src/graphics/draw/MenuHandler.cpp:1937:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.2592980Z              menuQueue = mqtt_toggle_menu;
+2025-09-21T23:33:58.2594460Z              ^~~~~~~~~
+2025-09-21T23:33:58.2595581Z              TypedQueue
+2025-09-21T23:33:58.2598208Z src/graphics/draw/MenuHandler.cpp:1937:25: error: 'mqtt_toggle_menu' was not declared in this scope
+2025-09-21T23:33:58.2600373Z              menuQueue = mqtt_toggle_menu;
+2025-09-21T23:33:58.2601959Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2721522Z src/graphics/draw/MenuHandler.cpp:1937:25: note: suggested alternative: 'FrameToggles_menu'
+2025-09-21T23:33:58.2743425Z              menuQueue = mqtt_toggle_menu;
+2025-09-21T23:33:58.2745139Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2747249Z                          FrameToggles_menu
+2025-09-21T23:33:58.2749563Z src/graphics/draw/MenuHandler.cpp:1938:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.2751143Z              screen->runNow();
+2025-09-21T23:33:58.2753026Z                      ^~~~~~
+2025-09-21T23:33:58.2755048Z src/graphics/draw/MenuHandler.cpp:1940:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.2756591Z              menuQueue = mqtt_server_config;
+2025-09-21T23:33:58.2758287Z              ^~~~~~~~~
+2025-09-21T23:33:58.2778134Z src/graphics/draw/MenuHandler.cpp:1940:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.2779941Z              menuQueue = mqtt_server_config;
+2025-09-21T23:33:58.2781986Z              ^~~~~~~~~
+2025-09-21T23:33:58.2783654Z              TypedQueue
+2025-09-21T23:33:58.2786173Z src/graphics/draw/MenuHandler.cpp:1940:25: error: 'mqtt_server_config' was not declared in this scope
+2025-09-21T23:33:58.2787499Z              menuQueue = mqtt_server_config;
+2025-09-21T23:33:58.2789254Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2961762Z src/graphics/draw/MenuHandler.cpp:1940:25: note: suggested alternative: 'ServerConfig'
+2025-09-21T23:33:58.2990894Z              menuQueue = mqtt_server_config;
+2025-09-21T23:33:58.2991570Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.2991957Z                          ServerConfig
+2025-09-21T23:33:58.2992787Z src/graphics/draw/MenuHandler.cpp:1941:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.2993562Z              screen->runNow();
+2025-09-21T23:33:58.2993904Z                      ^~~~~~
+2025-09-21T23:33:58.2994546Z src/graphics/draw/MenuHandler.cpp:1943:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.2995344Z              menuQueue = mqtt_credentials_config;
+2025-09-21T23:33:58.2995789Z              ^~~~~~~~~
+2025-09-21T23:33:58.3022885Z src/graphics/draw/MenuHandler.cpp:1943:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.3027913Z              menuQueue = mqtt_credentials_config;
+2025-09-21T23:33:58.3028363Z              ^~~~~~~~~
+2025-09-21T23:33:58.3028723Z              TypedQueue
+2025-09-21T23:33:58.3029464Z src/graphics/draw/MenuHandler.cpp:1943:25: error: 'mqtt_credentials_config' was not declared in this scope
+2025-09-21T23:33:58.3030608Z              menuQueue = mqtt_credentials_config;
+2025-09-21T23:33:58.3031229Z                          ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.3327954Z src/graphics/draw/MenuHandler.cpp:1944:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.3354130Z              screen->runNow();
+2025-09-21T23:33:58.3356124Z                      ^~~~~~
+2025-09-21T23:33:58.3356975Z src/graphics/draw/MenuHandler.cpp:1948:21: error: 'class graphics::Screen' has no member named 'openMqttInfoScreen'
+2025-09-21T23:33:58.3358197Z              screen->openMqttInfoScreen();
+2025-09-21T23:33:58.3359187Z                      ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.3359949Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:58.3361128Z src/graphics/draw/MenuHandler.cpp:1955:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.3362143Z  void menuHandler::mqttServerConfig()
+2025-09-21T23:33:58.3362583Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.3362979Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:58.3363742Z src/graphics/draw/MenuHandler.cpp:1966:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.3367333Z              menuQueue = mqtt_server_prompt;
+2025-09-21T23:33:58.3367755Z              ^~~~~~~~~
+2025-09-21T23:33:58.3403136Z src/graphics/draw/MenuHandler.cpp:1966:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.3404206Z              menuQueue = mqtt_server_prompt;
+2025-09-21T23:33:58.3404918Z              ^~~~~~~~~
+2025-09-21T23:33:58.3405716Z              TypedQueue
+2025-09-21T23:33:58.3407149Z src/graphics/draw/MenuHandler.cpp:1966:25: error: 'mqtt_server_prompt' was not declared in this scope
+2025-09-21T23:33:58.3407956Z              menuQueue = mqtt_server_prompt;
+2025-09-21T23:33:58.3408384Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.3605364Z src/graphics/draw/MenuHandler.cpp:1966:25: note: suggested alternative: 'mqttServerConfig'
+2025-09-21T23:33:58.3606573Z              menuQueue = mqtt_server_prompt;
+2025-09-21T23:33:58.3607285Z                          ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.3609814Z                          mqttServerConfig
+2025-09-21T23:33:58.3610887Z src/graphics/draw/MenuHandler.cpp:1967:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.3614212Z              screen->runNow();
+2025-09-21T23:33:58.3614767Z                      ^~~~~~
+2025-09-21T23:33:58.3615352Z src/graphics/draw/MenuHandler.cpp:1970:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:58.3616037Z              service->reloadConfig(SEGMENT_MODULECONFIG);
+2025-09-21T23:33:58.3616427Z              ^~~~~~~
+2025-09-21T23:33:58.3653099Z src/graphics/draw/MenuHandler.cpp:1974:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:58.3654109Z              service->reloadConfig(SEGMENT_MODULECONFIG);
+2025-09-21T23:33:58.3654551Z              ^~~~~~~
+2025-09-21T23:33:58.3698545Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:58.3700474Z src/graphics/draw/MenuHandler.cpp:1981:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.3703066Z  void menuHandler::mqttCredentialsConfig()
+2025-09-21T23:33:58.3703482Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.3705785Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:58.3706884Z src/graphics/draw/MenuHandler.cpp:1992:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.3732945Z              menuQueue = mqtt_username_prompt;
+2025-09-21T23:33:58.3733730Z              ^~~~~~~~~
+2025-09-21T23:33:58.3751825Z src/graphics/draw/MenuHandler.cpp:1992:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.3752989Z              menuQueue = mqtt_username_prompt;
+2025-09-21T23:33:58.3753741Z              ^~~~~~~~~
+2025-09-21T23:33:58.3755234Z              TypedQueue
+2025-09-21T23:33:58.3757224Z src/graphics/draw/MenuHandler.cpp:1992:25: error: 'mqtt_username_prompt' was not declared in this scope
+2025-09-21T23:33:58.3758044Z              menuQueue = mqtt_username_prompt;
+2025-09-21T23:33:58.3758479Z                          ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.4013928Z src/graphics/draw/MenuHandler.cpp:1993:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.4015304Z              screen->runNow();
+2025-09-21T23:33:58.4016214Z                      ^~~~~~
+2025-09-21T23:33:58.4017121Z src/graphics/draw/MenuHandler.cpp:1995:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.4017807Z              menuQueue = mqtt_password_prompt;
+2025-09-21T23:33:58.4019640Z              ^~~~~~~~~
+2025-09-21T23:33:58.4066349Z src/graphics/draw/MenuHandler.cpp:1995:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.4068132Z              menuQueue = mqtt_password_prompt;
+2025-09-21T23:33:58.4068583Z              ^~~~~~~~~
+2025-09-21T23:33:58.4069183Z              TypedQueue
+2025-09-21T23:33:58.4069898Z src/graphics/draw/MenuHandler.cpp:1995:25: error: 'mqtt_password_prompt' was not declared in this scope
+2025-09-21T23:33:58.4092091Z              menuQueue = mqtt_password_prompt;
+2025-09-21T23:33:58.4092783Z                          ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.4334936Z src/graphics/draw/MenuHandler.cpp:1996:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.4336403Z              screen->runNow();
+2025-09-21T23:33:58.4338740Z                      ^~~~~~
+2025-09-21T23:33:58.4341548Z src/graphics/draw/MenuHandler.cpp:1998:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.4343909Z              menuQueue = mqtt_root_prompt;
+2025-09-21T23:33:58.4345852Z              ^~~~~~~~~
+2025-09-21T23:33:58.4393956Z src/graphics/draw/MenuHandler.cpp:1998:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.4421650Z              menuQueue = mqtt_root_prompt;
+2025-09-21T23:33:58.4422105Z              ^~~~~~~~~
+2025-09-21T23:33:58.4422429Z              TypedQueue
+2025-09-21T23:33:58.4423106Z src/graphics/draw/MenuHandler.cpp:1998:25: error: 'mqtt_root_prompt' was not declared in this scope
+2025-09-21T23:33:58.4424183Z              menuQueue = mqtt_root_prompt;
+2025-09-21T23:33:58.4424626Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.4472525Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/input/InputBroker.cpp.o
+2025-09-21T23:33:58.4583935Z src/graphics/draw/MenuHandler.cpp:1999:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.4584742Z              screen->runNow();
+2025-09-21T23:33:58.4585198Z                      ^~~~~~
+2025-09-21T23:33:58.4596337Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:58.4598715Z src/graphics/draw/MenuHandler.cpp:2005:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.4599740Z  void menuHandler::mqttToggleMenu()
+2025-09-21T23:33:58.4601575Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.4602495Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:58.4604715Z src/graphics/draw/MenuHandler.cpp:2013:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:58.4616954Z              service->reloadConfig(SEGMENT_MODULECONFIG);
+2025-09-21T23:33:58.4617786Z              ^~~~~~~
+2025-09-21T23:33:58.4646238Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:58.4648340Z src/graphics/draw/MenuHandler.cpp:2019:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.4649480Z  void menuHandler::saveUIConfig()
+2025-09-21T23:33:58.4650296Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.4663150Z src/graphics/draw/MenuHandler.cpp:2024:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.4664367Z  void menuHandler::silentModeToggle()
+2025-09-21T23:33:58.4665129Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.4667750Z src/graphics/draw/MenuHandler.cpp:2035:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.4668974Z  void menuHandler::sleepMenu()
+2025-09-21T23:33:58.4670896Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.4675872Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:58.4677789Z src/graphics/draw/MenuHandler.cpp:2050:13: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.4678968Z              menuHandler::menuQueue = menuHandler::sleep_timer_config;
+2025-09-21T23:33:58.4679700Z              ^~~~~~~~~~~
+2025-09-21T23:33:58.4680547Z src/graphics/draw/MenuHandler.cpp:2050:38: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.4682928Z              menuHandler::menuQueue = menuHandler::sleep_timer_config;
+2025-09-21T23:33:58.4683524Z                                       ^~~~~~~~~~~
+2025-09-21T23:33:58.4684682Z src/graphics/draw/MenuHandler.cpp:2051:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.4686068Z              screen->runNow();
+2025-09-21T23:33:58.4686422Z                      ^~~~~~
+2025-09-21T23:33:58.4687101Z src/graphics/draw/MenuHandler.cpp:2053:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.4687901Z              menuQueue = system_base_menu;
+2025-09-21T23:33:58.4688299Z              ^~~~~~~~~
+2025-09-21T23:33:58.4734142Z src/graphics/draw/MenuHandler.cpp:2053:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.4735347Z              menuQueue = system_base_menu;
+2025-09-21T23:33:58.4760687Z              ^~~~~~~~~
+2025-09-21T23:33:58.4761026Z              TypedQueue
+2025-09-21T23:33:58.4761990Z src/graphics/draw/MenuHandler.cpp:2053:25: error: 'system_base_menu' was not declared in this scope
+2025-09-21T23:33:58.4762737Z              menuQueue = system_base_menu;
+2025-09-21T23:33:58.4763119Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.4822768Z src/graphics/draw/MenuHandler.cpp:2053:25: note: suggested alternative: 'systemBaseMenu'
+2025-09-21T23:33:58.4823721Z              menuQueue = system_base_menu;
+2025-09-21T23:33:58.4825822Z                          ^~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.4827687Z                          systemBaseMenu
+2025-09-21T23:33:58.4830592Z src/graphics/draw/MenuHandler.cpp:2054:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.4832037Z              screen->runNow();
+2025-09-21T23:33:58.4833376Z                      ^~~~~~
+2025-09-21T23:33:58.4846010Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:58.4849201Z src/graphics/draw/MenuHandler.cpp:2060:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.4851304Z  void menuHandler::sleepTimerConfig()
+2025-09-21T23:33:58.4851693Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.4858171Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:58.4860929Z src/graphics/draw/MenuHandler.cpp:2092:13: error: 'service' was not declared in this scope
+2025-09-21T23:33:58.4863043Z              service->reloadConfig(SEGMENT_CONFIG);
+2025-09-21T23:33:58.4863791Z              ^~~~~~~
+2025-09-21T23:33:58.4898949Z src/graphics/draw/MenuHandler.cpp:2095:13: error: 'menuQueue' was not declared in this scope
+2025-09-21T23:33:58.4901252Z              menuQueue = sleep_menu;
+2025-09-21T23:33:58.4902754Z              ^~~~~~~~~
+2025-09-21T23:33:58.4963254Z src/graphics/draw/MenuHandler.cpp:2095:13: note: suggested alternative: 'TypedQueue'
+2025-09-21T23:33:58.4971307Z              menuQueue = sleep_menu;
+2025-09-21T23:33:58.4971782Z              ^~~~~~~~~
+2025-09-21T23:33:58.4972100Z              TypedQueue
+2025-09-21T23:33:58.4972738Z src/graphics/draw/MenuHandler.cpp:2095:25: error: 'sleep_menu' was not declared in this scope
+2025-09-21T23:33:58.4973444Z              menuQueue = sleep_menu;
+2025-09-21T23:33:58.4973812Z                          ^~~~~~~~~~
+2025-09-21T23:33:58.4977015Z src/graphics/draw/MenuHandler.cpp:2095:25: note: suggested alternative: 'sleepMenu'
+2025-09-21T23:33:58.4979236Z              menuQueue = sleep_menu;
+2025-09-21T23:33:58.4991919Z                          ^~~~~~~~~~
+2025-09-21T23:33:58.4992539Z                          sleepMenu
+2025-09-21T23:33:58.4993271Z src/graphics/draw/MenuHandler.cpp:2096:21: error: 'class graphics::Screen' has no member named 'runNow'
+2025-09-21T23:33:58.4994004Z              screen->runNow();
+2025-09-21T23:33:58.4994334Z                      ^~~~~~
+2025-09-21T23:33:58.5005744Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:58.5006493Z src/graphics/draw/MenuHandler.cpp:2102:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.5007262Z  void menuHandler::openChatActionsForNode(uint32_t nodeId)
+2025-09-21T23:33:58.5007745Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.5008405Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::openChatActionsForNode(uint32_t)':
+2025-09-21T23:33:58.5010437Z src/graphics/draw/MenuHandler.cpp:2125:22: error: 'rotaryEncoderInterruptImpl1' was not declared in this scope
+2025-09-21T23:33:58.5015179Z      if (!kb_found && rotaryEncoderInterruptImpl1 == nullptr) {
+2025-09-21T23:33:58.5015710Z                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.5327744Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:58.5328677Z src/graphics/draw/MenuHandler.cpp:2179:17: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:58.5329996Z              if (cannedMessageModule) cannedMessageModule->LaunchWithDestination(nodeId);
+2025-09-21T23:33:58.5332258Z                  ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.5562998Z src/graphics/draw/MenuHandler.cpp:2183:17: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:58.5564475Z              if (cannedMessageModule) cannedMessageModule->LaunchFreetextWithDestination(nodeId);
+2025-09-21T23:33:58.5565154Z                  ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.5782609Z src/graphics/draw/MenuHandler.cpp:2188:13: error: 'chat' has not been declared
+2025-09-21T23:33:58.5785721Z              chat::ChatHistoryStore::instance().clearDM(nodeId);
+2025-09-21T23:33:58.5788439Z              ^~~~
+2025-09-21T23:33:58.5794497Z src/graphics/draw/MenuHandler.cpp:2192:17: error: 'FSCom' was not declared in this scope
+2025-09-21T23:33:58.5797997Z                  FSCom.remove(filename.c_str());
+2025-09-21T23:33:58.5800222Z                  ^~~~~
+2025-09-21T23:33:58.5835405Z src/graphics/draw/MenuHandler.cpp:2207:17: error: 'chat' has not been declared
+2025-09-21T23:33:58.5860996Z                  chat::ChatHistoryStore::instance().clearDM(nodeId);
+2025-09-21T23:33:58.5861503Z                  ^~~~
+2025-09-21T23:33:58.5862097Z src/graphics/draw/MenuHandler.cpp:2210:17: error: 'FSCom' was not declared in this scope
+2025-09-21T23:33:58.5862794Z                  FSCom.remove(filename.c_str());
+2025-09-21T23:33:58.5863186Z                  ^~~~~
+2025-09-21T23:33:58.5871873Z src/graphics/draw/MenuHandler.cpp:2218:13: error: 'chat' has not been declared
+2025-09-21T23:33:58.5872639Z              chat::ChatHistoryStore::instance().markAsReadDM(nodeId);
+2025-09-21T23:33:58.5873121Z              ^~~~
+2025-09-21T23:33:58.5945353Z src/graphics/draw/MenuHandler.cpp:2230:27: error: 'graphics::UIRenderer' has not been declared
+2025-09-21T23:33:58.5947197Z                  graphics::UIRenderer::currentFavoriteNodeNum = nodeId;
+2025-09-21T23:33:58.5949541Z                            ^~~~~~~~~~
+2025-09-21T23:33:58.5973283Z src/graphics/draw/MenuHandler.cpp:2231:25: error: 'class graphics::Screen' has no member named 'openNodeInfoFor'
+2025-09-21T23:33:58.5974145Z                  screen->openNodeInfoFor(nodeId);
+2025-09-21T23:33:58.5975299Z                          ^~~~~~~~~~~~~~~
+2025-09-21T23:33:58.6002999Z src/graphics/draw/MenuHandler.cpp: At global scope:
+2025-09-21T23:33:58.6003767Z src/graphics/draw/MenuHandler.cpp:2255:6: error: 'menuHandler' has not been declared
+2025-09-21T23:33:58.6004532Z  void menuHandler::openChatActionsForChannel(uint8_t ch)
+2025-09-21T23:33:58.6005000Z       ^~~~~~~~~~~
+2025-09-21T23:33:58.6005634Z src/graphics/draw/MenuHandler.cpp: In function 'void graphics::openChatActionsForChannel(uint8_t)':
+2025-09-21T23:33:58.6006762Z src/graphics/draw/MenuHandler.cpp:2286:22: error: 'rotaryEncoderInterruptImpl1' was not declared in this scope
+2025-09-21T23:33:58.6007642Z      if (!kb_found && rotaryEncoderInterruptImpl1 == nullptr) {
+2025-09-21T23:33:58.6008118Z                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.6358376Z src/graphics/draw/MenuHandler.cpp: In lambda function:
+2025-09-21T23:33:58.6382950Z src/graphics/draw/MenuHandler.cpp:2337:17: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:58.6384051Z              if (cannedMessageModule) cannedMessageModule->LaunchWithDestination(NODENUM_BROADCAST, ch);
+2025-09-21T23:33:58.6384781Z                  ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.6597005Z src/graphics/draw/MenuHandler.cpp:2340:17: error: 'cannedMessageModule' was not declared in this scope
+2025-09-21T23:33:58.6598191Z              if (cannedMessageModule) cannedMessageModule->LaunchFreetextWithDestination(NODENUM_BROADCAST, ch);
+2025-09-21T23:33:58.6598969Z                  ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:33:58.6830762Z src/graphics/draw/MenuHandler.cpp:2344:13: error: 'chat' has not been declared
+2025-09-21T23:33:58.6837350Z              chat::ChatHistoryStore::instance().clearCHAN(ch);
+2025-09-21T23:33:58.6837851Z              ^~~~
+2025-09-21T23:33:58.6838567Z src/graphics/draw/MenuHandler.cpp:2348:17: error: 'FSCom' was not declared in this scope
+2025-09-21T23:33:58.6839293Z                  FSCom.remove(filename.c_str());
+2025-09-21T23:33:58.6839689Z                  ^~~~~
+2025-09-21T23:33:58.6873625Z src/graphics/draw/MenuHandler.cpp:2354:13: error: 'chat' has not been declared
+2025-09-21T23:33:58.6893487Z              chat::ChatHistoryStore::instance().markAsReadCHAN(ch);
+2025-09-21T23:33:58.6893996Z              ^~~~
+2025-09-21T23:33:58.9377933Z Compiling .pio/build/heltec-ht62-esp32c3-sx1262/src/input/LinuxInput.cpp.o
+2025-09-21T23:33:59.0730745Z *** [.pio/build/heltec-ht62-esp32c3-sx1262/src/graphics/draw/MenuHandler.cpp.o] Error 1
+2025-09-21T23:34:00.0143974Z ========================= [FAILED] Took 34.68 seconds =========================
+2025-09-21T23:34:00.0144382Z 
+2025-09-21T23:34:00.0150358Z Environment                 Status    Duration
+2025-09-21T23:34:00.0151112Z --------------------------  --------  ------------
+2025-09-21T23:34:00.0152221Z heltec-ht62-esp32c3-sx1262  FAILED    00:00:34.676
+2025-09-21T23:34:00.0153338Z ==================== 1 failed, 0 succeeded in 00:00:34.676 ====================
+2025-09-21T23:34:00.1811463Z ##[error]Process completed with exit code 1.
+2025-09-21T23:34:00.1934114Z Post job cleanup.
+2025-09-21T23:34:00.2736383Z [command]/usr/bin/git version
+2025-09-21T23:34:00.2772150Z git version 2.51.0
+2025-09-21T23:34:00.2810541Z Temporarily overriding HOME='/home/runner/work/_temp/a94c8bcd-8adc-4f68-b00e-5c186ed8a90b' before making global git config changes
+2025-09-21T23:34:00.2811829Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:34:00.2816199Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:34:00.2850999Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:34:00.2882253Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:34:00.3089552Z Entering 'meshtestic'
+2025-09-21T23:34:00.3132645Z Entering 'protobufs'
+2025-09-21T23:34:00.3189510Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:34:00.3213308Z http.https://github.com/.extraheader
+2025-09-21T23:34:00.3223783Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:34:00.3255247Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:34:00.3463282Z Entering 'meshtestic'
+2025-09-21T23:34:00.3486693Z http.https://github.com/.extraheader
+2025-09-21T23:34:00.3519458Z Entering 'protobufs'
+2025-09-21T23:34:00.3543463Z http.https://github.com/.extraheader
+2025-09-21T23:34:00.3707541Z Cleaning up orphan processes

@@ -1,0 +1,8 @@
+2025-09-21T23:17:03.4750000Z Requested labels: ubuntu-24.04
+2025-09-21T23:17:03.4750000Z Job defined at: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop
+2025-09-21T23:17:03.4750000Z Reusable workflow chain:
+2025-09-21T23:17:03.4750000Z meshtastic/firmware/.github/workflows/main_matrix.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:17:03.4750000Z -> meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:17:03.4750000Z Waiting for a runner to pick up this job...
+2025-09-21T23:34:56.2110000Z Job is waiting for a hosted runner to come online.
+2025-09-21T23:34:56.2110000Z Job is about to start running on the hosted runner: GitHub Actions 1000387812

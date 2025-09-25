@@ -1,0 +1,1439 @@
+﻿2025-09-21T23:33:54.2180473Z Current runner version: '2.328.0'
+2025-09-21T23:33:54.2213341Z ##[group]Runner Image Provisioner
+2025-09-21T23:33:54.2214497Z Hosted Compute Agent
+2025-09-21T23:33:54.2215508Z Version: 20250829.383
+2025-09-21T23:33:54.2216469Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:33:54.2217650Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:33:54.2218633Z ##[endgroup]
+2025-09-21T23:33:54.2219550Z ##[group]Operating System
+2025-09-21T23:33:54.2220463Z Ubuntu
+2025-09-21T23:33:54.2221347Z 24.04.3
+2025-09-21T23:33:54.2222057Z LTS
+2025-09-21T23:33:54.2222766Z ##[endgroup]
+2025-09-21T23:33:54.2223894Z ##[group]Runner Image
+2025-09-21T23:33:54.2224856Z Image: ubuntu-24.04
+2025-09-21T23:33:54.2225771Z Version: 20250907.24.1
+2025-09-21T23:33:54.2227510Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:33:54.2230199Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:33:54.2231997Z ##[endgroup]
+2025-09-21T23:33:54.2236520Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:33:54.2239226Z Actions: read
+2025-09-21T23:33:54.2240114Z Attestations: read
+2025-09-21T23:33:54.2241039Z Checks: read
+2025-09-21T23:33:54.2241800Z Contents: read
+2025-09-21T23:33:54.2242579Z Deployments: read
+2025-09-21T23:33:54.2243723Z Discussions: read
+2025-09-21T23:33:54.2244492Z Issues: read
+2025-09-21T23:33:54.2245280Z Metadata: read
+2025-09-21T23:33:54.2246038Z Models: read
+2025-09-21T23:33:54.2246792Z Packages: read
+2025-09-21T23:33:54.2247541Z Pages: read
+2025-09-21T23:33:54.2248420Z PullRequests: read
+2025-09-21T23:33:54.2249269Z RepositoryProjects: read
+2025-09-21T23:33:54.2250099Z SecurityEvents: read
+2025-09-21T23:33:54.2251145Z Statuses: read
+2025-09-21T23:33:54.2251871Z ##[endgroup]
+2025-09-21T23:33:54.2255373Z Secret source: Actions
+2025-09-21T23:33:54.2256851Z Prepare workflow directory
+2025-09-21T23:33:54.2731975Z Prepare all required actions
+2025-09-21T23:33:54.2788969Z Getting action download info
+2025-09-21T23:33:54.5171815Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:33:54.6108066Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:33:54.8441164Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:33:55.0524085Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:33:55.0528846Z ##[group] Inputs
+2025-09-21T23:33:55.0529321Z   version: 2.7.10.3d51287
+2025-09-21T23:33:55.0529785Z   platform: nrf52840
+2025-09-21T23:33:55.0530233Z   pio_env: heltec-mesh-node-t114
+2025-09-21T23:33:55.0530712Z ##[endgroup]
+2025-09-21T23:33:55.0531286Z Complete job name: build-nrf52840 (heltec-mesh-node-t114) / build-nrf52840
+2025-09-21T23:33:55.1152184Z ##[group]Run actions/checkout@v5
+2025-09-21T23:33:55.1153206Z with:
+2025-09-21T23:33:55.1153618Z   submodules: recursive
+2025-09-21T23:33:55.1154035Z   ref: develop
+2025-09-21T23:33:55.1154465Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:55.1155167Z   token: ***
+2025-09-21T23:33:55.1155551Z   ssh-strict: true
+2025-09-21T23:33:55.1155934Z   ssh-user: git
+2025-09-21T23:33:55.1156339Z   persist-credentials: true
+2025-09-21T23:33:55.1156781Z   clean: true
+2025-09-21T23:33:55.1157172Z   sparse-checkout-cone-mode: true
+2025-09-21T23:33:55.1157651Z   fetch-depth: 1
+2025-09-21T23:33:55.1158020Z   fetch-tags: false
+2025-09-21T23:33:55.1158414Z   show-progress: true
+2025-09-21T23:33:55.1158807Z   lfs: false
+2025-09-21T23:33:55.1159180Z   set-safe-directory: true
+2025-09-21T23:33:55.1159844Z ##[endgroup]
+2025-09-21T23:33:55.2073993Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:55.2076316Z ##[group]Getting Git version info
+2025-09-21T23:33:55.2077104Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:55.2078124Z [command]/usr/bin/git version
+2025-09-21T23:33:55.2149388Z git version 2.51.0
+2025-09-21T23:33:55.2180545Z ##[endgroup]
+2025-09-21T23:33:55.2199539Z Temporarily overriding HOME='/home/runner/work/_temp/c59528cb-9b03-4e7b-93f5-0236cd6261ec' before making global git config changes
+2025-09-21T23:33:55.2201620Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:33:55.2206399Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:33:55.2247616Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:55.2251640Z ##[group]Initializing the repository
+2025-09-21T23:33:55.2257816Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:33:55.2339106Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:33:55.2340362Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:33:55.2341305Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:33:55.2342073Z hint:
+2025-09-21T23:33:55.2342583Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:33:55.2343792Z hint:
+2025-09-21T23:33:55.2344842Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:33:55.2346543Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:33:55.2347852Z hint:
+2025-09-21T23:33:55.2348566Z hint: 	git branch -m <name>
+2025-09-21T23:33:55.2349381Z hint:
+2025-09-21T23:33:55.2350470Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:33:55.2352514Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:33:55.2356394Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:55.2397117Z ##[endgroup]
+2025-09-21T23:33:55.2400014Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:33:55.2401165Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:33:55.2430093Z ##[endgroup]
+2025-09-21T23:33:55.2431424Z ##[group]Setting up auth
+2025-09-21T23:33:55.2437377Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:33:55.2469169Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:33:55.2757409Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:33:55.2787552Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:33:55.3024408Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:55.3059035Z ##[endgroup]
+2025-09-21T23:33:55.3060260Z ##[group]Fetching the repository
+2025-09-21T23:33:55.3069421Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:33:55.9112571Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:55.9114346Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:33:55.9145536Z ##[endgroup]
+2025-09-21T23:33:55.9146791Z ##[group]Determining the checkout info
+2025-09-21T23:33:55.9151577Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:33:55.9175713Z   origin/develop
+2025-09-21T23:33:55.9181370Z ##[endgroup]
+2025-09-21T23:33:55.9186575Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:33:55.9224441Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:33:55.9251162Z ##[group]Checking out the ref
+2025-09-21T23:33:55.9258115Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:33:56.0276973Z Switched to a new branch 'develop'
+2025-09-21T23:33:56.0278579Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:33:56.0287913Z ##[endgroup]
+2025-09-21T23:33:56.0289594Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:33:56.0294053Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:56.0365532Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:33:56.0395433Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:33:56.0426047Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:33:56.0453062Z ##[endgroup]
+2025-09-21T23:33:56.0455144Z ##[group]Fetching submodules
+2025-09-21T23:33:56.0456790Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:33:56.0694178Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:33:56.0948510Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:33:56.0954406Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:33:56.0978658Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:33:56.3331576Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:33:56.5713371Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:33:56.5829443Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:33:56.5861314Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:33:56.6091758Z Entering 'meshtestic'
+2025-09-21T23:33:56.6129423Z Entering 'protobufs'
+2025-09-21T23:33:56.6174478Z ##[endgroup]
+2025-09-21T23:33:56.6175288Z ##[group]Persisting credentials for submodules
+2025-09-21T23:33:56.6181515Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:33:56.6388535Z Entering 'meshtestic'
+2025-09-21T23:33:56.6429725Z Entering 'protobufs'
+2025-09-21T23:33:56.6482648Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:33:56.6690132Z Entering 'meshtestic'
+2025-09-21T23:33:56.6726665Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:33:56.6745746Z Entering 'protobufs'
+2025-09-21T23:33:56.6783836Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:33:56.6826187Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:33:56.7037556Z Entering 'meshtestic'
+2025-09-21T23:33:56.7074405Z Entering 'protobufs'
+2025-09-21T23:33:56.7123822Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:33:56.7329225Z Entering 'meshtestic'
+2025-09-21T23:33:56.7366614Z Entering 'protobufs'
+2025-09-21T23:33:56.7411215Z ##[endgroup]
+2025-09-21T23:33:56.7447180Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:33:56.7469721Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:33:56.7704494Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:33:56.7704871Z with:
+2025-09-21T23:33:56.7705104Z   pio_platform: nrf52840
+2025-09-21T23:33:56.7705386Z   pio_env: heltec-mesh-node-t114
+2025-09-21T23:33:56.7705649Z   pio_target: build
+2025-09-21T23:33:56.7705878Z ##[endgroup]
+2025-09-21T23:33:56.7792771Z ##[group]Run docker run --rm \
+2025-09-21T23:33:56.7793332Z [36;1mdocker run --rm \[0m
+2025-09-21T23:33:56.7793630Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:33:56.7793932Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:33:56.7794223Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:33:56.7794487Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:33:56.7794757Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:33:56.7795028Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:33:56.7795322Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:33:56.7795615Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:33:56.7795964Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:33:56.7796358Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-nrf52840[0m
+2025-09-21T23:33:56.7845403Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:33:56.7845782Z env:
+2025-09-21T23:33:56.7845999Z   MT_ENV: heltec-mesh-node-t114
+2025-09-21T23:33:56.7846291Z   MT_PLATFORM: nrf52840
+2025-09-21T23:33:56.7846523Z   MT_TARGET: build
+2025-09-21T23:33:56.7846751Z   MT_OTA_FIRMWARE_SOURCE: 
+2025-09-21T23:33:56.7846999Z   MT_OTA_FIRMWARE_TARGET: 
+2025-09-21T23:33:56.7847265Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:33:56.7847565Z ##[endgroup]
+2025-09-21T23:33:56.8320558Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-nrf52840' locally
+2025-09-21T23:33:57.0325908Z master-nrf52840: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:33:57.0885455Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:33:57.0885932Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:33:57.0886329Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:33:57.0886679Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:33:57.0886954Z 815e87185931: Pulling fs layer
+2025-09-21T23:33:57.0887219Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:33:57.0887481Z da9989870cf6: Pulling fs layer
+2025-09-21T23:33:57.0887757Z 9900591a02d8: Pulling fs layer
+2025-09-21T23:33:57.0888019Z d47368ccdb52: Pulling fs layer
+2025-09-21T23:33:57.0888299Z 0b0a90cba924: Pulling fs layer
+2025-09-21T23:33:57.0888562Z f1d53622d37c: Pulling fs layer
+2025-09-21T23:33:57.0888827Z b4174266f6e9: Pulling fs layer
+2025-09-21T23:33:57.0889029Z b789b525833f: Pulling fs layer
+2025-09-21T23:33:57.0889239Z d9b2841dabc1: Pulling fs layer
+2025-09-21T23:33:57.0889439Z c611f5bb386b: Waiting
+2025-09-21T23:33:57.0889625Z 815e87185931: Waiting
+2025-09-21T23:33:57.0889802Z 71c11f7c6832: Waiting
+2025-09-21T23:33:57.0889977Z da9989870cf6: Waiting
+2025-09-21T23:33:57.0890152Z 9900591a02d8: Waiting
+2025-09-21T23:33:57.0890319Z d47368ccdb52: Waiting
+2025-09-21T23:33:57.0890494Z 0b0a90cba924: Waiting
+2025-09-21T23:33:57.0890679Z f1d53622d37c: Waiting
+2025-09-21T23:33:57.0890857Z b4174266f6e9: Waiting
+2025-09-21T23:33:57.0891024Z b789b525833f: Waiting
+2025-09-21T23:33:57.0891206Z d9b2841dabc1: Waiting
+2025-09-21T23:33:57.2806156Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:33:57.2806643Z ccbbb2080a06: Download complete
+2025-09-21T23:33:57.3874470Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:33:57.3876246Z 7d5073558d5a: Download complete
+2025-09-21T23:33:57.4214431Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:33:57.4215175Z 8fb375ec14f3: Download complete
+2025-09-21T23:33:57.5042411Z 815e87185931: Verifying Checksum
+2025-09-21T23:33:57.5044233Z 815e87185931: Download complete
+2025-09-21T23:33:57.5703059Z da9989870cf6: Verifying Checksum
+2025-09-21T23:33:57.5703805Z da9989870cf6: Download complete
+2025-09-21T23:33:57.6310811Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:33:57.6311829Z 71c11f7c6832: Download complete
+2025-09-21T23:33:57.6994907Z d47368ccdb52: Verifying Checksum
+2025-09-21T23:33:57.6997589Z d47368ccdb52: Download complete
+2025-09-21T23:33:57.7323786Z 9900591a02d8: Verifying Checksum
+2025-09-21T23:33:57.7326897Z 9900591a02d8: Download complete
+2025-09-21T23:33:58.0042514Z 0b0a90cba924: Verifying Checksum
+2025-09-21T23:33:58.0058744Z 0b0a90cba924: Download complete
+2025-09-21T23:33:58.0755287Z b4174266f6e9: Verifying Checksum
+2025-09-21T23:33:58.0763449Z b4174266f6e9: Download complete
+2025-09-21T23:33:58.1378511Z c611f5bb386b: Download complete
+2025-09-21T23:33:58.1436232Z b789b525833f: Verifying Checksum
+2025-09-21T23:33:58.1436799Z b789b525833f: Download complete
+2025-09-21T23:33:58.2209254Z d9b2841dabc1: Verifying Checksum
+2025-09-21T23:33:58.2209763Z d9b2841dabc1: Download complete
+2025-09-21T23:33:59.6533748Z f1d53622d37c: Verifying Checksum
+2025-09-21T23:33:59.6534116Z f1d53622d37c: Download complete
+2025-09-21T23:33:59.7026548Z 8fb375ec14f3: Pull complete
+2025-09-21T23:34:02.7278018Z ccbbb2080a06: Pull complete
+2025-09-21T23:34:05.0351445Z 7d5073558d5a: Pull complete
+2025-09-21T23:34:11.4403726Z c611f5bb386b: Pull complete
+2025-09-21T23:34:11.7049931Z 815e87185931: Pull complete
+2025-09-21T23:34:12.4124785Z 71c11f7c6832: Pull complete
+2025-09-21T23:34:12.4232653Z da9989870cf6: Pull complete
+2025-09-21T23:34:13.4708759Z 9900591a02d8: Pull complete
+2025-09-21T23:34:13.4833529Z d47368ccdb52: Pull complete
+2025-09-21T23:34:14.9891349Z 0b0a90cba924: Pull complete
+2025-09-21T23:34:43.9243138Z f1d53622d37c: Pull complete
+2025-09-21T23:34:43.9369704Z b4174266f6e9: Pull complete
+2025-09-21T23:34:43.9521705Z b789b525833f: Pull complete
+2025-09-21T23:34:43.9665725Z d9b2841dabc1: Pull complete
+2025-09-21T23:34:43.9725621Z Digest: sha256:ffa8225c3c4384645d1d6147f70390b55eb3616694869ddf1aca034ab72430a9
+2025-09-21T23:34:43.9756594Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-nrf52840
+2025-09-21T23:34:44.1443365Z Building PlatformIO environment: heltec-mesh-node-t114
+2025-09-21T23:34:44.2690660Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:34:44.9598604Z Resolving heltec-mesh-node-t114 dependencies...
+2025-09-21T23:34:44.9841262Z Removing unused dependencies...
+2025-09-21T23:34:44.9922205Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:34:45.1271413Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:34:45.1782722Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:34:48.1056194Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:34:48.3211640Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:34:48.4143654Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:34:49.2950556Z Building for heltec-mesh-node-t114 with 
+2025-09-21T23:34:50.0571478Z Processing heltec-mesh-node-t114 (board: heltec_mesh_node_t114; platform: 
+2025-09-21T23:34:50.0572159Z platformio/nordicnrf52@^10.8.0; framework: arduino)
+2025-09-21T23:34:50.0573089Z --------------------------------------------------------------------------------
+2025-09-21T23:34:51.2362478Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:34:51.2509116Z CONFIGURATION: https://docs.platformio.org/page/boards/nordicnrf52/heltec_mesh_node_t114.html
+2025-09-21T23:34:51.2509761Z PLATFORM: Nordic nRF52 (10.9.0) > Heltec nrf (Adafruit BSP)
+2025-09-21T23:34:51.2510242Z HARDWARE: NRF52840 64MHz, 243KB RAM, 796KB Flash
+2025-09-21T23:34:51.2510607Z DEBUG: Current (jlink) On-board (jlink) External (stlink)
+2025-09-21T23:34:51.2511031Z PACKAGES: 
+2025-09-21T23:34:51.2511305Z  - framework-arduinoadafruitnrf52 @ 1.10601.0+sha.e13f5820 
+2025-09-21T23:34:51.2511760Z  - framework-cmsis @ 2.50700.210515 (5.7.0) 
+2025-09-21T23:34:51.2512053Z  - tool-adafruit-nrfutil @ 1.503.0 (5.3) 
+2025-09-21T23:34:51.2512331Z  - tool-sreccat @ 1.164.0 (1.64) 
+2025-09-21T23:34:51.2512713Z  - toolchain-gccarmnoneeabi @ 1.90301.200702 (9.3.1)
+2025-09-21T23:34:51.2791580Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:34:51.2792434Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:34:51.3553382Z [nanopb] No generation needed.
+2025-09-21T23:34:51.6887634Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:53.8593265Z Downloading 0% 10%
+2025-09-21T23:34:53.8643769Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:34:53.8677375Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:34:53.9411373Z [nanopb] No generation needed.
+2025-09-21T23:34:53.9923835Z Found 72 compatible libraries
+2025-09-21T23:34:53.9924276Z Scanning dependencies...
+2025-09-21T23:35:02.8596433Z Dependency Graph
+2025-09-21T23:35:02.8597176Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:35:02.8600743Z |-- OneButton @ 2.6.1
+2025-09-21T23:35:02.8601130Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:35:02.8602071Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:35:02.8605354Z |-- ArduinoThread @ 0.0.0+20250919051636
+2025-09-21T23:35:02.8605796Z |-- Nanopb @ 0.4.91
+2025-09-21T23:35:02.8607336Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:35:02.8609086Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:35:02.8612581Z |-- RadioLib @ 7.3.0
+2025-09-21T23:35:02.8613208Z |-- Crypto @ 0.4.0
+2025-09-21T23:35:02.8615894Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:35:02.8616979Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:35:02.8619404Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:35:02.8620001Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:35:02.8620936Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:35:02.8623317Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:35:02.8624562Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:35:02.8626133Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:35:02.8627674Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:35:02.8629305Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:35:02.8630834Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:35:02.8632582Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:35:02.8634303Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:35:02.8636022Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:35:02.8637365Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:35:02.8639018Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:35:02.8640738Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:35:02.8642149Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:35:02.8644182Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:35:02.8645612Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:35:02.8647430Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:35:02.8647884Z |-- INA226 @ 0.6.4
+2025-09-21T23:35:02.8651190Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:35:02.8651928Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:35:02.8653359Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:35:02.8654977Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:35:02.8657077Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:35:02.8658725Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:35:02.8660243Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:35:02.8661663Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:35:02.8663515Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:35:02.8664811Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:35:02.8667572Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:35:02.8668294Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:35:02.8670690Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:35:02.8671986Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:35:02.8673436Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:35:02.8681337Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:35:02.8681789Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:35:02.8682218Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:35:02.8683014Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:35:02.8683394Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:35:02.8683915Z |-- Adafruit nRFCrypto @ 0.0.5
+2025-09-21T23:35:02.8684778Z |-- PCF8563_Library @ 1.0.1
+2025-09-21T23:35:02.8687374Z |-- ESP8266 and ESP32 TFT driver for st7789 displays @ 0.0.3
+2025-09-21T23:35:02.8687894Z |-- SPI @ 1.0
+2025-09-21T23:35:02.8688950Z |-- Wire @ 1.0
+2025-09-21T23:35:02.8689568Z |-- Rotary Encoder @ 0.8.0
+2025-09-21T23:35:02.8690048Z |-- Adafruit Bluefruit nRF52 Libraries @ 0.21.0
+2025-09-21T23:35:02.8690531Z |-- Adafruit TinyUSB Library
+2025-09-21T23:35:02.8691436Z |-- Adafruit Internal File System on Bluefruit nRF52 @ 0.11.0
+2025-09-21T23:35:02.8692606Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:35:03.1216643Z Building in debug mode
+2025-09-21T23:35:03.1524821Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on heltec-mesh-node-t114
+2025-09-21T23:35:03.1538853Z Using flags:
+2025-09-21T23:35:03.1539341Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:35:03.1539723Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:35:03.1540107Z -DAPP_ENV=heltec-mesh-node-t114
+2025-09-21T23:35:03.1540509Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:03.1540918Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:35:03.1541416Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:35:03.1542016Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:35:03.3120430Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_TinyUSB_API.cpp.o
+2025-09-21T23:35:03.3211436Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_CDC.cpp.o
+2025-09-21T23:35:03.3291079Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Device.cpp.o
+2025-09-21T23:35:03.3408247Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Interface.cpp.o
+2025-09-21T23:35:03.4974320Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBH_Host.cpp.o
+2025-09-21T23:35:03.6028380Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/cdc/Adafruit_USBH_CDC.cpp.o
+2025-09-21T23:35:03.6428310Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/hid/Adafruit_USBD_HID.cpp.o
+2025-09-21T23:35:03.6564673Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/midi/Adafruit_USBD_MIDI.cpp.o
+2025-09-21T23:35:03.7945128Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBD_MSC.cpp.o
+2025-09-21T23:35:03.8087301Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBH_MSC.cpp.o
+2025-09-21T23:35:03.8684523Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/esp32/Adafruit_TinyUSB_esp32.cpp.o
+2025-09-21T23:35:03.8899530Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/nrf/Adafruit_TinyUSB_nrf.cpp.o
+2025-09-21T23:35:03.9500603Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp.o
+2025-09-21T23:35:03.9628660Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/samd/Adafruit_TinyUSB_samd.cpp.o
+2025-09-21T23:35:03.9955598Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/video/Adafruit_USBD_Video.cpp.o
+2025-09-21T23:35:04.0223074Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/arduino/webusb/Adafruit_USBD_WebUSB.cpp.o
+2025-09-21T23:35:04.0382978Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/audio/audio_device.c.o
+2025-09-21T23:35:04.0958372Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/bth/bth_device.c.o
+2025-09-21T23:35:04.1567061Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/cdc/cdc_device.c.o
+2025-09-21T23:35:04.1767567Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/cdc/cdc_host.c.o
+2025-09-21T23:35:04.1988562Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/dfu/dfu_device.c.o
+2025-09-21T23:35:04.2606138Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/dfu/dfu_rt_device.c.o
+2025-09-21T23:35:04.3229012Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/hid/hid_device.c.o
+2025-09-21T23:35:04.3338539Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/hid/hid_host.c.o
+2025-09-21T23:35:04.3443499Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/midi/midi_device.c.o
+2025-09-21T23:35:04.4888764Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/msc/msc_device.c.o
+2025-09-21T23:35:04.5204519Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/msc/msc_host.c.o
+2025-09-21T23:35:04.5518126Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/net/ecm_rndis_device.c.o
+2025-09-21T23:35:04.5650673Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/net/ncm_device.c.o
+2025-09-21T23:35:04.6111734Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/usbtmc/usbtmc_device.c.o
+2025-09-21T23:35:04.6237592Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/vendor/vendor_device.c.o
+2025-09-21T23:35:04.6706056Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/class/video/video_device.c.o
+2025-09-21T23:35:04.6830011Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/common/tusb_fifo.c.o
+2025-09-21T23:35:04.7087711Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/device/usbd.c.o
+2025-09-21T23:35:04.7761503Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/device/usbd_control.c.o
+2025-09-21T23:35:04.8986326Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/host/hub.c.o
+2025-09-21T23:35:04.9159540Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/host/usbh.c.o
+2025-09-21T23:35:04.9814363Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/analog/max3421/hcd_max3421.c.o
+2025-09-21T23:35:04.9915219Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/microchip/samd/dcd_samd.c.o
+2025-09-21T23:35:05.0606208Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/nordic/nrf5x/dcd_nrf5x.c.o
+2025-09-21T23:35:05.0775363Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/pio_usb/dcd_pio_usb.c.o
+2025-09-21T23:35:05.1334646Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/pio_usb/hcd_pio_usb.c.o
+2025-09-21T23:35:05.1927408Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+2025-09-21T23:35:05.2145179Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/hcd_rp2040.c.o
+2025-09-21T23:35:05.2507092Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/rp2040_usb.c.o
+2025-09-21T23:35:05.2750976Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/portable/synopsys/dwc2/dcd_dwc2.c.o
+2025-09-21T23:35:05.2866991Z Compiling .pio/build/heltec-mesh-node-t114/lib62c/Adafruit_TinyUSB_Arduino/tusb.c.o
+2025-09-21T23:35:05.3357275Z Compiling .pio/build/heltec-mesh-node-t114/libbc8/Adafruit nRFCrypto/Adafruit_nRFCrypto.cpp.o
+2025-09-21T23:35:05.3511206Z Compiling .pio/build/heltec-mesh-node-t114/libbc8/Adafruit nRFCrypto/ecc/nRFCrypto_ECC.cpp.o
+2025-09-21T23:35:05.3646948Z Compiling .pio/build/heltec-mesh-node-t114/libbc8/Adafruit nRFCrypto/ecc/nRFCrypto_ECC_PrivateKey.cpp.o
+2025-09-21T23:35:05.4437194Z Compiling .pio/build/heltec-mesh-node-t114/libbc8/Adafruit nRFCrypto/ecc/nRFCrypto_ECC_PublicKey.cpp.o
+2025-09-21T23:35:05.5207183Z Compiling .pio/build/heltec-mesh-node-t114/libbc8/Adafruit nRFCrypto/nRFCrypto_AES.cpp.o
+2025-09-21T23:35:05.5356170Z Compiling .pio/build/heltec-mesh-node-t114/libbc8/Adafruit nRFCrypto/nRFCrypto_Chacha.cpp.o
+2025-09-21T23:35:05.6112126Z Compiling .pio/build/heltec-mesh-node-t114/libbc8/Adafruit nRFCrypto/nRFCrypto_Hash.cpp.o
+2025-09-21T23:35:05.6221463Z Compiling .pio/build/heltec-mesh-node-t114/libbc8/Adafruit nRFCrypto/nRFCrypto_Random.cpp.o
+2025-09-21T23:35:05.6547059Z Compiling .pio/build/heltec-mesh-node-t114/variants/nrf52840/heltec_mesh_node_t114/variant.cpp.o
+2025-09-21T23:35:05.7349462Z /pio/workspace/libdeps/heltec-mesh-node-t114/Adafruit nRFCrypto/src/nRFCrypto_Chacha.cpp: In member function 'CRYSError_t nRFCrypto_Chacha::Process(uint8_t*, uint32_t, uint8_t*, CRYS_CHACHA_EncryptMode_t)':
+2025-09-21T23:35:05.7351712Z /pio/workspace/libdeps/heltec-mesh-node-t114/Adafruit nRFCrypto/src/nRFCrypto_Chacha.cpp:59:39: warning: 'initialCounter' is used uninitialized in this function [-Wuninitialized]
+2025-09-21T23:35:05.7353534Z    59 |   CRYSError_t error = CRYS_CHACHA_Init(&pContextID, pNonce, (CRYS_CHACHA_NonceSize_t) 1, myKey, initialCounter++, mode);
+2025-09-21T23:35:05.7354490Z       |                       ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:05.8168809Z Compiling .pio/build/heltec-mesh-node-t114/src/BluetoothCommon.cpp.o
+2025-09-21T23:35:05.8888989Z Compiling .pio/build/heltec-mesh-node-t114/src/DebugConfiguration.cpp.o
+2025-09-21T23:35:05.9009794Z Compiling .pio/build/heltec-mesh-node-t114/src/DisplayFormatters.cpp.o
+2025-09-21T23:35:05.9178264Z Compiling .pio/build/heltec-mesh-node-t114/src/FSCommon.cpp.o
+2025-09-21T23:35:06.5526780Z Compiling .pio/build/heltec-mesh-node-t114/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:35:06.6392445Z Compiling .pio/build/heltec-mesh-node-t114/src/Fusion/FusionCompass.c.o
+2025-09-21T23:35:06.7793038Z Compiling .pio/build/heltec-mesh-node-t114/src/Fusion/FusionOffset.c.o
+2025-09-21T23:35:06.7957486Z Compiling .pio/build/heltec-mesh-node-t114/src/GpioLogic.cpp.o
+2025-09-21T23:35:06.8606356Z Compiling .pio/build/heltec-mesh-node-t114/src/Led.cpp.o
+2025-09-21T23:35:06.8749316Z Compiling .pio/build/heltec-mesh-node-t114/src/Observer.cpp.o
+2025-09-21T23:35:06.9038655Z Compiling .pio/build/heltec-mesh-node-t114/src/Power.cpp.o
+2025-09-21T23:35:07.5901131Z Compiling .pio/build/heltec-mesh-node-t114/src/PowerFSM.cpp.o
+2025-09-21T23:35:07.6094368Z Compiling .pio/build/heltec-mesh-node-t114/src/PowerMon.cpp.o
+2025-09-21T23:35:08.2846345Z Compiling .pio/build/heltec-mesh-node-t114/src/RedirectablePrint.cpp.o
+2025-09-21T23:35:08.4940229Z Compiling .pio/build/heltec-mesh-node-t114/src/SPILock.cpp.o
+2025-09-21T23:35:08.5539367Z Compiling .pio/build/heltec-mesh-node-t114/src/SafeFile.cpp.o
+2025-09-21T23:35:09.0951166Z Compiling .pio/build/heltec-mesh-node-t114/src/SerialConsole.cpp.o
+2025-09-21T23:35:09.2374901Z Compiling .pio/build/heltec-mesh-node-t114/src/airtime.cpp.o
+2025-09-21T23:35:09.3381420Z Compiling .pio/build/heltec-mesh-node-t114/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:35:09.8137929Z Compiling .pio/build/heltec-mesh-node-t114/src/buzz/buzz.cpp.o
+2025-09-21T23:35:10.0723360Z Compiling .pio/build/heltec-mesh-node-t114/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:35:10.2097460Z Compiling .pio/build/heltec-mesh-node-t114/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:35:10.3814127Z Compiling .pio/build/heltec-mesh-node-t114/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:35:10.7810388Z Compiling .pio/build/heltec-mesh-node-t114/src/concurrency/Lock.cpp.o
+2025-09-21T23:35:10.8523443Z Compiling .pio/build/heltec-mesh-node-t114/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:35:10.9527916Z Compiling .pio/build/heltec-mesh-node-t114/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:35:11.1544231Z Compiling .pio/build/heltec-mesh-node-t114/src/concurrency/OSThread.cpp.o
+2025-09-21T23:35:11.5394653Z Compiling .pio/build/heltec-mesh-node-t114/src/detect/ScanI2C.cpp.o
+2025-09-21T23:35:11.6064091Z Compiling .pio/build/heltec-mesh-node-t114/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:35:11.6705107Z Compiling .pio/build/heltec-mesh-node-t114/src/gps/GPS.cpp.o
+2025-09-21T23:35:11.9567181Z Compiling .pio/build/heltec-mesh-node-t114/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:35:12.3283525Z Compiling .pio/build/heltec-mesh-node-t114/src/gps/GeoCoord.cpp.o
+2025-09-21T23:35:12.7737342Z Compiling .pio/build/heltec-mesh-node-t114/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:35:12.8851977Z Compiling .pio/build/heltec-mesh-node-t114/src/gps/RTC.cpp.o
+2025-09-21T23:35:13.0366577Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:35:13.7143155Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:35:13.7835751Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/Screen.cpp.o
+2025-09-21T23:35:14.2144567Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:35:14.3168717Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:35:14.4596891Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:35:14.6709779Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:35:14.8048208Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:35:15.4994833Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:35:15.4996142Z  1061 | static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:35:15.4996765Z       |             ^~~~~~~~~~~~~~~~~
+2025-09-21T23:35:15.4997703Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:15.4998803Z   222 | static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:35:15.4999398Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:15.5004353Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:35:15.5005591Z   166 | static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:35:15.5006015Z       |             ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:15.7616606Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:35:16.0356292Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:35:16.0699360Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:35:17.3323627Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:35:17.4969686Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:35:17.5614569Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:35:17.9309938Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:35:18.9527150Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:35:19.3245087Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:35:19.3634155Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/emotes.cpp.o
+2025-09-21T23:35:19.6487007Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:35:19.7481099Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:35:19.8429427Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:35:19.9388522Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:35:20.0435402Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:35:20.1408271Z Compiling .pio/build/heltec-mesh-node-t114/src/graphics/tftSetup.cpp.o
+2025-09-21T23:35:20.2307645Z Compiling .pio/build/heltec-mesh-node-t114/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:35:20.6837626Z Compiling .pio/build/heltec-mesh-node-t114/src/input/ButtonThread.cpp.o
+2025-09-21T23:35:20.7106445Z Compiling .pio/build/heltec-mesh-node-t114/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:35:20.9662598Z Compiling .pio/build/heltec-mesh-node-t114/src/input/InputBroker.cpp.o
+2025-09-21T23:35:21.4528474Z Compiling .pio/build/heltec-mesh-node-t114/src/input/LinuxInput.cpp.o
+2025-09-21T23:35:21.4716588Z Compiling .pio/build/heltec-mesh-node-t114/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:35:21.8088244Z Compiling .pio/build/heltec-mesh-node-t114/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:35:22.2116470Z Compiling .pio/build/heltec-mesh-node-t114/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:35:22.2272231Z Compiling .pio/build/heltec-mesh-node-t114/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:35:22.2447202Z Compiling .pio/build/heltec-mesh-node-t114/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:35:22.3148922Z Compiling .pio/build/heltec-mesh-node-t114/src/input/SeesawRotary.cpp.o
+2025-09-21T23:35:22.4137681Z Compiling .pio/build/heltec-mesh-node-t114/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:35:23.2044369Z Compiling .pio/build/heltec-mesh-node-t114/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:35:23.2169954Z Compiling .pio/build/heltec-mesh-node-t114/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:35:23.2363913Z Compiling .pio/build/heltec-mesh-node-t114/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:35:23.2584109Z Compiling .pio/build/heltec-mesh-node-t114/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:35:23.3522786Z Compiling .pio/build/heltec-mesh-node-t114/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:35:23.4411074Z Compiling .pio/build/heltec-mesh-node-t114/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:35:23.9919014Z Compiling .pio/build/heltec-mesh-node-t114/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:35:24.0387948Z Compiling .pio/build/heltec-mesh-node-t114/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:35:24.5834443Z Compiling .pio/build/heltec-mesh-node-t114/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:35:24.8809888Z Compiling .pio/build/heltec-mesh-node-t114/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:35:25.0368307Z Compiling .pio/build/heltec-mesh-node-t114/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:35:25.0567071Z Compiling .pio/build/heltec-mesh-node-t114/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:35:25.5795652Z Compiling .pio/build/heltec-mesh-node-t114/src/input/i2cButton.cpp.o
+2025-09-21T23:35:25.8626074Z Compiling .pio/build/heltec-mesh-node-t114/src/input/kbI2cBase.cpp.o
+2025-09-21T23:35:26.0310990Z Compiling .pio/build/heltec-mesh-node-t114/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:35:26.3949765Z Compiling .pio/build/heltec-mesh-node-t114/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:35:26.5927402Z Compiling .pio/build/heltec-mesh-node-t114/src/main.cpp.o
+2025-09-21T23:35:26.8093873Z Compiling .pio/build/heltec-mesh-node-t114/src/memGet.cpp.o
+2025-09-21T23:35:27.3294334Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/Channels.cpp.o
+2025-09-21T23:35:27.5942653Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:35:27.7727155Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/Default.cpp.o
+2025-09-21T23:35:28.4025529Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:35:28.5952993Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:35:28.7321351Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:35:28.8226812Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:35:29.3625851Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:35:29.7684890Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:35:29.8429518Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:35:30.1461432Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/MeshModule.cpp.o
+2025-09-21T23:35:30.3797040Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:35:30.8000501Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/MeshService.cpp.o
+2025-09-21T23:35:30.8984394Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:35:31.4685809Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/NodeDB.cpp.o
+2025-09-21T23:35:31.4924425Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:35:32.0804663Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:35:32.4655692Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:35:32.5138135Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:35:33.4658148Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:35:33.5766456Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:35:33.6333400Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:35:33.8446428Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:35:34.4397165Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/Router.cpp.o
+2025-09-21T23:35:34.9279789Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:35:35.1581591Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:35:35.1800734Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:35:35.6690528Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:35:36.0250478Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:35:36.1825734Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:35:36.2131740Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:35:36.7288091Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/Throttle.cpp.o
+2025-09-21T23:35:37.0101245Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:35:37.0267883Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:35:37.0593741Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:35:37.2211760Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:35:37.3824980Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:35:37.4854712Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:35:37.5304644Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:35:37.5909569Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:35:37.6258271Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:35:37.6917791Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:35:37.7424177Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:35:37.8199011Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:35:37.8413351Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:35:37.8547465Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:35:37.9299040Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:35:37.9435896Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:35:37.9605704Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:35:38.0557303Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:35:38.0901218Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:35:38.1078203Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:35:38.1576204Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:35:38.1744242Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:35:38.1898643Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:35:38.2086405Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:35:38.2506555Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:35:38.2673620Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:35:38.2858735Z Compiling .pio/build/heltec-mesh-node-t114/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:35:38.3135884Z Compiling .pio/build/heltec-mesh-node-t114/src/meshUtils.cpp.o
+2025-09-21T23:35:38.3681729Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/AdminModule.cpp.o
+2025-09-21T23:35:38.4033888Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:35:39.0550444Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:35:39.1403607Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:35:39.8873909Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:35:40.1999010Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:35:40.3035631Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:35:40.5382964Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:40.5385523Z    76 | static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:35:40.5386081Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:41.3467792Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:35:41.3818721Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:35:41.7938786Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Modules.cpp.o
+2025-09-21T23:35:41.9134079Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:35:42.3410181Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:35:42.9359576Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/PositionModule.cpp.o
+2025-09-21T23:35:43.1856106Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:35:43.3719945Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:35:43.8107459Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:35:44.4754886Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/ReplyModule.cpp.o
+2025-09-21T23:35:44.5844922Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/RoutingModule.cpp.o
+2025-09-21T23:35:44.6250293Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/SerialModule.cpp.o
+2025-09-21T23:35:45.3130217Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:35:45.9118481Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:35:46.0372238Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:35:46.1600569Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:35:46.6841415Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:35:47.4180209Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:35:47.6285539Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:35:47.8720015Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:35:48.1494386Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:35:48.5529066Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:35:48.7088357Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:35:49.1526191Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:35:49.4117573Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:35:49.5206474Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:35:49.7350050Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:35:50.1268150Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:35:50.4039880Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:35:50.5060489Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:35:50.7014007Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:35:51.1071405Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:35:51.3967700Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:35:51.4784868Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:35:51.6755514Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:35:52.0900566Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:35:52.3869470Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:35:52.4261137Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:35:52.4495186Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:35:53.0761602Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:35:53.1882405Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:35:53.3789721Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:35:53.5402147Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:35:54.0904687Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:35:54.1498546Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:35:54.3577346Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:35:54.5616523Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:35:55.0759804Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:35:55.1049394Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:35:55.1246887Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:35:55.3087505Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:35:56.0477174Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:35:56.0660564Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:35:56.0924385Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:35:56.2766123Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:35:56.7911603Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:35:57.0184405Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:35:57.0421831Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:35:57.1496519Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:35:57.6394024Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:35:57.7822261Z Compiling .pio/build/heltec-mesh-node-t114/src/modules/WaypointModule.cpp.o
+2025-09-21T23:35:57.9809099Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:35:58.5346962Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:35:59.2141728Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:35:59.2428986Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:35:59.3195500Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:35:59.7812579Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:36:00.4583003Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:36:00.5766926Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/MotionSensor.cpp.o
+2025-09-21T23:36:00.5989347Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:36:01.0360118Z Compiling .pio/build/heltec-mesh-node-t114/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:36:01.7079178Z Compiling .pio/build/heltec-mesh-node-t114/src/mqtt/MQTT.cpp.o
+2025-09-21T23:36:01.8238191Z Compiling .pio/build/heltec-mesh-node-t114/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:36:01.8442707Z Compiling .pio/build/heltec-mesh-node-t114/src/network-stubs.cpp.o
+2025-09-21T23:36:02.0617133Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:36:02.2683166Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:36:02.5802027Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:36:02.8310379Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/AsyncUDP.cpp.o
+2025-09-21T23:36:03.0148690Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/BLEDfuScure.cpp.o
+2025-09-21T23:36:03.3434644Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/NRF52Bluetooth.cpp.o
+2025-09-21T23:36:03.4141278Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/NRF52CryptoEngine.cpp.o
+2025-09-21T23:36:03.5585645Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/aes-256/tiny-aes.cpp.o
+2025-09-21T23:36:03.5789483Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/alloc.cpp.o
+2025-09-21T23:36:03.6900033Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/hardfault.cpp.o
+2025-09-21T23:36:04.1834276Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/main-bare.cpp.o
+2025-09-21T23:36:04.3438233Z Compiling .pio/build/heltec-mesh-node-t114/src/platform/nrf52/main-nrf52.cpp.o
+2025-09-21T23:36:04.4600699Z Compiling .pio/build/heltec-mesh-node-t114/src/sleep.cpp.o
+2025-09-21T23:36:04.5323334Z Compiling .pio/build/heltec-mesh-node-t114/src/xmodem.cpp.o
+2025-09-21T23:36:05.3006679Z Compiling .pio/build/heltec-mesh-node-t114/lib1c0/Wire/Wire_nRF52.cpp.o
+2025-09-21T23:36:05.3482457Z Compiling .pio/build/heltec-mesh-node-t114/libc79/SPI/SPI.cpp.o
+2025-09-21T23:36:05.6457706Z Archiving .pio/build/heltec-mesh-node-t114/lib1c0/libWire.a
+2025-09-21T23:36:05.6499382Z Indexing .pio/build/heltec-mesh-node-t114/lib1c0/libWire.a
+2025-09-21T23:36:05.6616716Z Compiling .pio/build/heltec-mesh-node-t114/libc79/SPI/SPI_nrf52832.cpp.o
+2025-09-21T23:36:05.6928086Z Compiling .pio/build/heltec-mesh-node-t114/lib67a/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:36:05.7311518Z Archiving .pio/build/heltec-mesh-node-t114/libc79/libSPI.a
+2025-09-21T23:36:05.7356681Z Indexing .pio/build/heltec-mesh-node-t114/libc79/libSPI.a
+2025-09-21T23:36:05.7471835Z Compiling .pio/build/heltec-mesh-node-t114/lib67a/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:36:05.8433354Z Compiling .pio/build/heltec-mesh-node-t114/lib67a/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:36:05.9086461Z Compiling .pio/build/heltec-mesh-node-t114/lib64b/OneButton/OneButton.cpp.o
+2025-09-21T23:36:06.0493950Z Compiling .pio/build/heltec-mesh-node-t114/lib64b/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:36:06.2230934Z Compiling .pio/build/heltec-mesh-node-t114/libea2/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:36:06.2503540Z Compiling .pio/build/heltec-mesh-node-t114/lib576/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:36:06.2924988Z Archiving .pio/build/heltec-mesh-node-t114/lib64b/libOneButton.a
+2025-09-21T23:36:06.2969014Z Indexing .pio/build/heltec-mesh-node-t114/lib64b/libOneButton.a
+2025-09-21T23:36:06.3206743Z Compiling .pio/build/heltec-mesh-node-t114/lib10f/ArduinoThread/Thread.cpp.o
+2025-09-21T23:36:06.4957871Z Archiving .pio/build/heltec-mesh-node-t114/libea2/libarduino-fsm.a
+2025-09-21T23:36:06.5004220Z Archiving .pio/build/heltec-mesh-node-t114/lib67a/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:36:06.5020880Z Indexing .pio/build/heltec-mesh-node-t114/libea2/libarduino-fsm.a
+2025-09-21T23:36:06.5045860Z Indexing .pio/build/heltec-mesh-node-t114/lib67a/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:36:06.5126871Z Compiling .pio/build/heltec-mesh-node-t114/lib10f/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:36:06.5246591Z Compiling .pio/build/heltec-mesh-node-t114/liba60/Nanopb/pb_common.c.o
+2025-09-21T23:36:06.5767004Z Compiling .pio/build/heltec-mesh-node-t114/liba60/Nanopb/pb_decode.c.o
+2025-09-21T23:36:06.6206018Z Compiling .pio/build/heltec-mesh-node-t114/liba60/Nanopb/pb_encode.c.o
+2025-09-21T23:36:06.6388969Z Archiving .pio/build/heltec-mesh-node-t114/lib576/libTinyGPSPlus.a
+2025-09-21T23:36:06.6437477Z Indexing .pio/build/heltec-mesh-node-t114/lib576/libTinyGPSPlus.a
+2025-09-21T23:36:06.6548876Z Compiling .pio/build/heltec-mesh-node-t114/lib335/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:36:06.7169426Z Archiving .pio/build/heltec-mesh-node-t114/lib335/libErriezCRC32.a
+2025-09-21T23:36:06.7215444Z Indexing .pio/build/heltec-mesh-node-t114/lib335/libErriezCRC32.a
+2025-09-21T23:36:06.7461203Z Compiling .pio/build/heltec-mesh-node-t114/lib27f/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:36:06.7783392Z Archiving .pio/build/heltec-mesh-node-t114/lib10f/libArduinoThread.a
+2025-09-21T23:36:06.7827562Z Indexing .pio/build/heltec-mesh-node-t114/lib10f/libArduinoThread.a
+2025-09-21T23:36:06.8065414Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/Hal.cpp.o
+2025-09-21T23:36:06.8177847Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/Module.cpp.o
+2025-09-21T23:36:06.8323086Z Archiving .pio/build/heltec-mesh-node-t114/liba60/libNanopb.a
+2025-09-21T23:36:06.8383477Z Indexing .pio/build/heltec-mesh-node-t114/liba60/libNanopb.a
+2025-09-21T23:36:06.8549506Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:36:07.0017327Z Archiving .pio/build/heltec-mesh-node-t114/lib27f/libNonBlockingRTTTL.a
+2025-09-21T23:36:07.0065719Z Indexing .pio/build/heltec-mesh-node-t114/lib27f/libNonBlockingRTTTL.a
+2025-09-21T23:36:07.0399545Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:36:07.0556886Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:36:07.1161578Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:36:07.1392430Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:36:07.1527005Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:36:07.1852642Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:36:07.4208981Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:36:07.4349640Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:36:07.4488481Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:36:07.4595563Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:36:07.7579825Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:36:07.9131355Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:36:07.9287984Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:36:08.0342218Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:36:08.0866486Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:36:08.1540592Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:36:08.1676155Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:36:08.2637690Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:36:08.3203039Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:36:08.3948006Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:36:08.4398900Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:36:08.5596070Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:36:08.6128555Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:36:08.7738622Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:36:08.8823584Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:36:08.9276369Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:36:09.0150123Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:36:09.1559288Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:36:09.1747912Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:36:09.2075064Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:36:09.3180880Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:36:09.4545086Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:36:09.5549341Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:36:09.6121518Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:36:09.7157962Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:36:09.8194354Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:36:09.8494585Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:36:09.9620698Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:36:10.0533072Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:36:10.0825974Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:36:10.1261012Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:36:10.2044561Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:36:10.2318995Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:36:10.3144880Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:36:10.3623972Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:36:10.4441439Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:36:10.4779775Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:36:10.5535910Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:36:10.5868347Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:36:10.6008890Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:36:10.6351771Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:36:10.6564909Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:36:10.6775085Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:36:10.6937935Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:36:10.9160715Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:36:10.9324409Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:36:10.9704073Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:36:11.0029229Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:36:11.1539125Z Compiling .pio/build/heltec-mesh-node-t114/lib6d7/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:36:11.1878321Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/AES128.cpp.o
+2025-09-21T23:36:11.2913361Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/AES192.cpp.o
+2025-09-21T23:36:11.3272557Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/AES256.cpp.o
+2025-09-21T23:36:11.3397169Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/AESCommon.cpp.o
+2025-09-21T23:36:11.3790848Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/AESEsp32.cpp.o
+2025-09-21T23:36:11.3905350Z Archiving .pio/build/heltec-mesh-node-t114/lib6d7/libRadioLib.a
+2025-09-21T23:36:11.4301308Z Indexing .pio/build/heltec-mesh-node-t114/lib6d7/libRadioLib.a
+2025-09-21T23:36:11.4544672Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:36:11.4766859Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:36:11.4883963Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:36:11.5041741Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:36:11.5290176Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/BlockCipher.cpp.o
+2025-09-21T23:36:11.6085020Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/CTR.cpp.o
+2025-09-21T23:36:11.6302742Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/ChaCha.cpp.o
+2025-09-21T23:36:11.6445106Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:36:11.6551477Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/Cipher.cpp.o
+2025-09-21T23:36:11.7031109Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/Crypto.cpp.o
+2025-09-21T23:36:11.7354360Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/Curve25519.cpp.o
+2025-09-21T23:36:11.7502208Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/EAX.cpp.o
+2025-09-21T23:36:11.7625201Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/Ed25519.cpp.o
+2025-09-21T23:36:11.7867543Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/GCM.cpp.o
+2025-09-21T23:36:11.8697653Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/GF128.cpp.o
+2025-09-21T23:36:11.9092066Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/GHASH.cpp.o
+2025-09-21T23:36:11.9205215Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/HKDF.cpp.o
+2025-09-21T23:36:11.9313622Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/Hash.cpp.o
+2025-09-21T23:36:11.9680298Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/KeccakCore.cpp.o
+2025-09-21T23:36:12.0003900Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/NoiseSource.cpp.o
+2025-09-21T23:36:12.0168967Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/OMAC.cpp.o
+2025-09-21T23:36:12.0260767Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/P521.cpp.o
+2025-09-21T23:36:12.0833705Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/Poly1305.cpp.o
+2025-09-21T23:36:12.1140452Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/RNG.cpp.o
+2025-09-21T23:36:12.1264452Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/SHA224.cpp.o
+2025-09-21T23:36:12.1974570Z /pio/workspace/libdeps/heltec-mesh-node-t114/Crypto/RNG.cpp:63:2: warning: #warning "no hardware random number source detected for this platform" [-Wcpp]
+2025-09-21T23:36:12.1986232Z    63 | #warning "no hardware random number source detected for this platform"
+2025-09-21T23:36:12.1988151Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/SHA256.cpp.o
+2025-09-21T23:36:12.1993771Z       |  ^~~~~~~
+2025-09-21T23:36:12.2115334Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/SHA3.cpp.o
+2025-09-21T23:36:12.2830160Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/SHA384.cpp.o
+2025-09-21T23:36:12.3234955Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/SHA512.cpp.o
+2025-09-21T23:36:12.3361084Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/SHAKE.cpp.o
+2025-09-21T23:36:12.3695958Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/XOF.cpp.o
+2025-09-21T23:36:12.3926673Z Compiling .pio/build/heltec-mesh-node-t114/libcc1/Crypto/XTS.cpp.o
+2025-09-21T23:36:12.4518093Z Compiling .pio/build/heltec-mesh-node-t114/lib2b1/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:36:12.4649567Z Compiling .pio/build/heltec-mesh-node-t114/lib2b1/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:36:12.4765129Z Compiling .pio/build/heltec-mesh-node-t114/lib2b1/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:36:12.5073355Z Archiving .pio/build/heltec-mesh-node-t114/libcc1/libCrypto.a
+2025-09-21T23:36:12.5258602Z Indexing .pio/build/heltec-mesh-node-t114/libcc1/libCrypto.a
+2025-09-21T23:36:12.5484871Z Compiling .pio/build/heltec-mesh-node-t114/lib2b1/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:36:12.7131238Z Compiling .pio/build/heltec-mesh-node-t114/libceb/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:36:12.7539178Z Compiling .pio/build/heltec-mesh-node-t114/lib688/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:36:12.7828945Z Compiling .pio/build/heltec-mesh-node-t114/lib12c/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:36:12.8506309Z Archiving .pio/build/heltec-mesh-node-t114/lib2b1/libAdafruit BusIO.a
+2025-09-21T23:36:12.8546173Z Indexing .pio/build/heltec-mesh-node-t114/lib2b1/libAdafruit BusIO.a
+2025-09-21T23:36:12.8865125Z Compiling .pio/build/heltec-mesh-node-t114/liba21/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:36:12.9506717Z Archiving .pio/build/heltec-mesh-node-t114/libceb/libAdafruit Unified Sensor.a
+2025-09-21T23:36:12.9551759Z Indexing .pio/build/heltec-mesh-node-t114/libceb/libAdafruit Unified Sensor.a
+2025-09-21T23:36:12.9854162Z Compiling .pio/build/heltec-mesh-node-t114/lib015/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:36:13.0586769Z Archiving .pio/build/heltec-mesh-node-t114/lib12c/libAdafruit BMP085 Library.a
+2025-09-21T23:36:13.0609737Z Indexing .pio/build/heltec-mesh-node-t114/lib12c/libAdafruit BMP085 Library.a
+2025-09-21T23:36:13.0881394Z Compiling .pio/build/heltec-mesh-node-t114/lib177/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:36:13.1031229Z Archiving .pio/build/heltec-mesh-node-t114/lib688/libAdafruit BMP280 Library.a
+2025-09-21T23:36:13.1073667Z Indexing .pio/build/heltec-mesh-node-t114/lib688/libAdafruit BMP280 Library.a
+2025-09-21T23:36:13.1343506Z Compiling .pio/build/heltec-mesh-node-t114/lib1ee/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:36:13.2562654Z Archiving .pio/build/heltec-mesh-node-t114/liba21/libAdafruit BME280 Library.a
+2025-09-21T23:36:13.2607069Z Indexing .pio/build/heltec-mesh-node-t114/liba21/libAdafruit BME280 Library.a
+2025-09-21T23:36:13.2900543Z Compiling .pio/build/heltec-mesh-node-t114/lib8cb/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:36:13.3295137Z Archiving .pio/build/heltec-mesh-node-t114/lib015/libAdafruit DPS310.a
+2025-09-21T23:36:13.3343075Z Indexing .pio/build/heltec-mesh-node-t114/lib015/libAdafruit DPS310.a
+2025-09-21T23:36:13.3613244Z Compiling .pio/build/heltec-mesh-node-t114/lib01e/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:36:13.3825073Z Archiving .pio/build/heltec-mesh-node-t114/lib177/libAdafruit MCP9808 Library.a
+2025-09-21T23:36:13.3859422Z Indexing .pio/build/heltec-mesh-node-t114/lib177/libAdafruit MCP9808 Library.a
+2025-09-21T23:36:13.3976548Z Compiling .pio/build/heltec-mesh-node-t114/lib01e/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:36:13.4196813Z Archiving .pio/build/heltec-mesh-node-t114/lib1ee/libAdafruit INA260 Library.a
+2025-09-21T23:36:13.4234997Z Indexing .pio/build/heltec-mesh-node-t114/lib1ee/libAdafruit INA260 Library.a
+2025-09-21T23:36:13.4353022Z Compiling .pio/build/heltec-mesh-node-t114/lib01e/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:36:13.5709450Z Archiving .pio/build/heltec-mesh-node-t114/lib8cb/libAdafruit INA219.a
+2025-09-21T23:36:13.5776416Z Indexing .pio/build/heltec-mesh-node-t114/lib8cb/libAdafruit INA219.a
+2025-09-21T23:36:13.5898277Z Compiling .pio/build/heltec-mesh-node-t114/lib01e/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:36:13.6517032Z Compiling .pio/build/heltec-mesh-node-t114/lib9cd/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:36:13.6794534Z Compiling .pio/build/heltec-mesh-node-t114/lib87f/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:36:13.7123022Z Compiling .pio/build/heltec-mesh-node-t114/libe95/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:36:13.7864319Z /pio/workspace/libdeps/heltec-mesh-node-t114/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In static member function 'static bool UARTDevice::uart_read(void*, uint8_t*, size_t)':
+2025-09-21T23:36:13.7870009Z /pio/workspace/libdeps/heltec-mesh-node-t114/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:120:40: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:36:13.7872127Z   120 |   while (dev->_serial_dev->available() < len && timeout--) {
+2025-09-21T23:36:13.7872733Z       |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+2025-09-21T23:36:13.7874231Z /pio/workspace/libdeps/heltec-mesh-node-t114/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:36:13.7879448Z /pio/workspace/libdeps/heltec-mesh-node-t114/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:198:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:36:13.7881067Z   198 |   if (_uart_dev->available() < bufLen)
+2025-09-21T23:36:13.7881529Z       |       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2025-09-21T23:36:13.7883272Z /pio/workspace/libdeps/heltec-mesh-node-t114/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM1006(PM25_AQI_Data*)':
+2025-09-21T23:36:13.7885588Z /pio/workspace/libdeps/heltec-mesh-node-t114/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:271:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:36:13.7887136Z   271 |   if (_uart_dev->available() < bufLen) {
+2025-09-21T23:36:13.7887590Z       |       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2025-09-21T23:36:13.8683820Z Archiving .pio/build/heltec-mesh-node-t114/lib01e/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:36:13.8742141Z Indexing .pio/build/heltec-mesh-node-t114/lib01e/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:36:13.9065761Z Compiling .pio/build/heltec-mesh-node-t114/lib5ee/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:36:14.0041697Z Archiving .pio/build/heltec-mesh-node-t114/libe95/libAdafruit AHTX0.a
+2025-09-21T23:36:14.0089760Z Indexing .pio/build/heltec-mesh-node-t114/libe95/libAdafruit AHTX0.a
+2025-09-21T23:36:14.0146171Z Archiving .pio/build/heltec-mesh-node-t114/lib87f/libAdafruit LIS3DH.a
+2025-09-21T23:36:14.0198708Z Indexing .pio/build/heltec-mesh-node-t114/lib87f/libAdafruit LIS3DH.a
+2025-09-21T23:36:14.0248074Z Compiling .pio/build/heltec-mesh-node-t114/lib5ee/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:36:14.0322957Z Archiving .pio/build/heltec-mesh-node-t114/lib9cd/libAdafruit MPU6050.a
+2025-09-21T23:36:14.0383594Z Indexing .pio/build/heltec-mesh-node-t114/lib9cd/libAdafruit MPU6050.a
+2025-09-21T23:36:14.0395279Z Compiling .pio/build/heltec-mesh-node-t114/lib5ee/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:36:14.0506331Z Compiling .pio/build/heltec-mesh-node-t114/lib5ee/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:36:14.1669258Z Compiling .pio/build/heltec-mesh-node-t114/lib5ee/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:36:14.2994682Z Compiling .pio/build/heltec-mesh-node-t114/lib5ee/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:36:14.3114450Z Compiling .pio/build/heltec-mesh-node-t114/lib5ee/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:36:14.4249782Z Compiling .pio/build/heltec-mesh-node-t114/lib5ee/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:36:14.4569103Z Compiling .pio/build/heltec-mesh-node-t114/lib8cb/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:36:14.5756089Z Compiling .pio/build/heltec-mesh-node-t114/libf34/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:36:14.6072657Z Compiling .pio/build/heltec-mesh-node-t114/libb1c/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:36:14.6980407Z Archiving .pio/build/heltec-mesh-node-t114/lib5ee/libAdafruit LSM6DS.a
+2025-09-21T23:36:14.7068390Z Indexing .pio/build/heltec-mesh-node-t114/lib5ee/libAdafruit LSM6DS.a
+2025-09-21T23:36:14.7353628Z Compiling .pio/build/heltec-mesh-node-t114/lib209/INA3221/INA3221.cpp.o
+2025-09-21T23:36:14.7488066Z Archiving .pio/build/heltec-mesh-node-t114/lib8cb/libAdafruit TSL2591 Library.a
+2025-09-21T23:36:14.7527220Z Indexing .pio/build/heltec-mesh-node-t114/lib8cb/libAdafruit TSL2591 Library.a
+2025-09-21T23:36:14.7765367Z Compiling .pio/build/heltec-mesh-node-t114/lib093/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:36:14.8748182Z Archiving .pio/build/heltec-mesh-node-t114/libb1c/libAdafruit MLX90614 Library.a
+2025-09-21T23:36:14.8807841Z Indexing .pio/build/heltec-mesh-node-t114/libb1c/libAdafruit MLX90614 Library.a
+2025-09-21T23:36:14.9031707Z Compiling .pio/build/heltec-mesh-node-t114/lib7d0/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:36:14.9404602Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::reset()':
+2025-09-21T23:36:14.9438077Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:88:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9443956Z    88 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9445055Z       |                                                  ^
+2025-09-21T23:36:14.9471589Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9475417Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9477515Z   101 |     typedef struct {
+2025-09-21T23:36:14.9478394Z       |                    ^
+2025-09-21T23:36:14.9504491Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:90:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9512754Z    90 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9513528Z       |                                                   ^
+2025-09-21T23:36:14.9514283Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9547180Z Archiving .pio/build/heltec-mesh-node-t114/libf34/libEmotiBit MLX90632.a
+2025-09-21T23:36:14.9561139Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9567342Z   101 |     typedef struct {
+2025-09-21T23:36:14.9568089Z       |                    ^
+2025-09-21T23:36:14.9569006Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModePowerDown()':
+2025-09-21T23:36:14.9571073Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:96:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9573553Z    96 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9573978Z       |                                                  ^
+2025-09-21T23:36:14.9574618Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9575590Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9578107Z   101 |     typedef struct {
+2025-09-21T23:36:14.9581227Z       |                    ^
+2025-09-21T23:36:14.9588397Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:99:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9620805Z    99 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9621619Z Indexing .pio/build/heltec-mesh-node-t114/libf34/libEmotiBit MLX90632.a
+2025-09-21T23:36:14.9622417Z       |                                                   ^
+2025-09-21T23:36:14.9623932Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9625676Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9626399Z   101 |     typedef struct {
+2025-09-21T23:36:14.9626742Z       |                    ^
+2025-09-21T23:36:14.9627582Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeContinious()':
+2025-09-21T23:36:14.9629960Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:105:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9631778Z   105 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9632288Z       |                                                  ^
+2025-09-21T23:36:14.9633221Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9634297Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9635026Z   101 |     typedef struct {
+2025-09-21T23:36:14.9635369Z       |                    ^
+2025-09-21T23:36:14.9636952Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:107:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9638712Z   107 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9639198Z       |                                                   ^
+2025-09-21T23:36:14.9639928Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9640969Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9641693Z   101 |     typedef struct {
+2025-09-21T23:36:14.9642041Z       |                    ^
+2025-09-21T23:36:14.9643146Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeTriggered()':
+2025-09-21T23:36:14.9645306Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:113:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9647016Z   113 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9647467Z       |                                                  ^
+2025-09-21T23:36:14.9648158Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9649158Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9649857Z   101 |     typedef struct {
+2025-09-21T23:36:14.9650206Z       |                    ^
+2025-09-21T23:36:14.9651786Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:115:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9654256Z   115 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9654740Z       |                                                   ^
+2025-09-21T23:36:14.9656147Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9657322Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9658037Z   101 |     typedef struct {
+2025-09-21T23:36:14.9658371Z       |                    ^
+2025-09-21T23:36:14.9659439Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasEnable()':
+2025-09-21T23:36:14.9661606Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:121:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9663730Z   121 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9664196Z       |                                                  ^
+2025-09-21T23:36:14.9666055Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9667091Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9668867Z   101 |     typedef struct {
+2025-09-21T23:36:14.9671352Z       |                    ^
+2025-09-21T23:36:14.9677500Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:123:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9679301Z   123 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9679774Z       |                                                   ^
+2025-09-21T23:36:14.9680520Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9681529Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9682242Z   101 |     typedef struct {
+2025-09-21T23:36:14.9682653Z       |                    ^
+2025-09-21T23:36:14.9683675Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasDisable()':
+2025-09-21T23:36:14.9685850Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:129:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9687627Z   129 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9688104Z       |                                                  ^
+2025-09-21T23:36:14.9688821Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9689811Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9690536Z   101 |     typedef struct {
+2025-09-21T23:36:14.9690878Z       |                    ^
+2025-09-21T23:36:14.9692494Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:131:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9719672Z   131 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9720166Z       |                                                   ^
+2025-09-21T23:36:14.9721643Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9723386Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9724128Z   101 |     typedef struct {
+2025-09-21T23:36:14.9724480Z       |                    ^
+2025-09-21T23:36:14.9725700Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasEnable()':
+2025-09-21T23:36:14.9727949Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:137:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9729969Z   137 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9730456Z       |                                                  ^
+2025-09-21T23:36:14.9731179Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9732200Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9733263Z   101 |     typedef struct {
+2025-09-21T23:36:14.9733593Z       |                    ^
+2025-09-21T23:36:14.9735040Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:139:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9736661Z   139 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9737111Z       |                                                   ^
+2025-09-21T23:36:14.9737764Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9738731Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9739460Z   101 |     typedef struct {
+2025-09-21T23:36:14.9739800Z       |                    ^
+2025-09-21T23:36:14.9740657Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasDisable()':
+2025-09-21T23:36:14.9773182Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:145:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9775039Z   145 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9775518Z       |                                                  ^
+2025-09-21T23:36:14.9776265Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9777283Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9778011Z   101 |     typedef struct {
+2025-09-21T23:36:14.9778354Z       |                    ^
+2025-09-21T23:36:14.9780043Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:147:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9781806Z   147 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9782288Z       |                                                   ^
+2025-09-21T23:36:14.9783207Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9784229Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9784936Z   101 |     typedef struct {
+2025-09-21T23:36:14.9785269Z       |                    ^
+2025-09-21T23:36:14.9786197Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setAveragingMode(ina3221_avg_mode_t)':
+2025-09-21T23:36:14.9788390Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:153:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9790020Z   153 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9790496Z       |                                                  ^
+2025-09-21T23:36:14.9791245Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9792606Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9793618Z   101 |     typedef struct {
+2025-09-21T23:36:14.9793978Z       |                    ^
+2025-09-21T23:36:14.9825735Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:155:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9827782Z   155 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9828288Z       |                                                   ^
+2025-09-21T23:36:14.9829021Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9830087Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9830823Z   101 |     typedef struct {
+2025-09-21T23:36:14.9831165Z       |                    ^
+2025-09-21T23:36:14.9832139Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:36:14.9864793Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:161:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9866647Z   161 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9867136Z       |                                                  ^
+2025-09-21T23:36:14.9867858Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9868922Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9869704Z   101 |     typedef struct {
+2025-09-21T23:36:14.9870060Z       |                    ^
+2025-09-21T23:36:14.9871712Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:163:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9873663Z   163 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9874155Z       |                                                   ^
+2025-09-21T23:36:14.9874894Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9875926Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9876655Z   101 |     typedef struct {
+2025-09-21T23:36:14.9876998Z       |                    ^
+2025-09-21T23:36:14.9878012Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:36:14.9880343Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:169:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9882043Z   169 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9882534Z       |                                                  ^
+2025-09-21T23:36:14.9883371Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9884293Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9884970Z   101 |     typedef struct {
+2025-09-21T23:36:14.9885297Z       |                    ^
+2025-09-21T23:36:14.9887228Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:171:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9888939Z   171 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:14.9889396Z       |                                                   ^
+2025-09-21T23:36:14.9890302Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9891272Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:14.9891973Z   101 |     typedef struct {
+2025-09-21T23:36:14.9892300Z       |                    ^
+2025-09-21T23:36:14.9923508Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchEnable()':
+2025-09-21T23:36:14.9925691Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:197:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9927388Z   197 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:14.9927883Z       |                                                           ^
+2025-09-21T23:36:14.9928565Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9929525Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:14.9930260Z   115 |     typedef struct {
+2025-09-21T23:36:14.9930620Z       |                    ^
+2025-09-21T23:36:14.9932172Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:199:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9934002Z   199 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:14.9934476Z       |                                                            ^
+2025-09-21T23:36:14.9935110Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9936024Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:14.9936679Z   115 |     typedef struct {
+2025-09-21T23:36:14.9936999Z       |                    ^
+2025-09-21T23:36:14.9937875Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchDisable()':
+2025-09-21T23:36:14.9939996Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:206:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9941637Z   206 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:14.9942114Z       |                                                           ^
+2025-09-21T23:36:14.9942962Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9943953Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:14.9944620Z   115 |     typedef struct {
+2025-09-21T23:36:14.9944940Z       |                    ^
+2025-09-21T23:36:14.9946463Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:208:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9948139Z   208 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:14.9948967Z       |                                                            ^
+2025-09-21T23:36:14.9949652Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9950606Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:14.9951437Z   115 |     typedef struct {
+2025-09-21T23:36:14.9951763Z       |                    ^
+2025-09-21T23:36:14.9952618Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchEnable()':
+2025-09-21T23:36:14.9985089Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:215:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9986872Z   215 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:14.9987390Z       |                                                           ^
+2025-09-21T23:36:14.9988060Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9989052Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:14.9989779Z   115 |     typedef struct {
+2025-09-21T23:36:14.9990119Z       |                    ^
+2025-09-21T23:36:14.9991730Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:217:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:14.9993677Z   217 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:14.9994208Z       |                                                            ^
+2025-09-21T23:36:14.9994922Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:14.9996000Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:14.9996717Z   115 |     typedef struct {
+2025-09-21T23:36:14.9997039Z       |                    ^
+2025-09-21T23:36:14.9997934Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchDisable()':
+2025-09-21T23:36:15.0000156Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:224:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0001910Z   224 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:15.0002386Z       |                                                           ^
+2025-09-21T23:36:15.0003267Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0004277Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:15.0004982Z   115 |     typedef struct {
+2025-09-21T23:36:15.0005322Z       |                    ^
+2025-09-21T23:36:15.0006946Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:226:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0008712Z   226 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:15.0009223Z       |                                                            ^
+2025-09-21T23:36:15.0009924Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0011160Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:15.0011895Z   115 |     typedef struct {
+2025-09-21T23:36:15.0012229Z       |                    ^
+2025-09-21T23:36:15.0013277Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelEnable(ina3221_ch_t)':
+2025-09-21T23:36:15.0015664Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:265:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0017369Z   265 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:15.0017824Z       |                                                  ^
+2025-09-21T23:36:15.0018526Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0019606Z Compiling .pio/build/heltec-mesh-node-t114/libda4/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:36:15.0020737Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:15.0021454Z   101 |     typedef struct {
+2025-09-21T23:36:15.0021783Z       |                    ^
+2025-09-21T23:36:15.0023559Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:279:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0025266Z   279 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:15.0025720Z       |                                                   ^
+2025-09-21T23:36:15.0026417Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0027408Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:15.0028121Z   101 |     typedef struct {
+2025-09-21T23:36:15.0028443Z       |                    ^
+2025-09-21T23:36:15.0029348Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelDisable(ina3221_ch_t)':
+2025-09-21T23:36:15.0031509Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:285:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0033395Z   285 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:15.0033844Z       |                                                  ^
+2025-09-21T23:36:15.0034509Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0035471Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:15.0036154Z   101 |     typedef struct {
+2025-09-21T23:36:15.0036471Z       |                    ^
+2025-09-21T23:36:15.0038009Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:299:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0039644Z   299 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:15.0040099Z       |                                                   ^
+2025-09-21T23:36:15.0040774Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0041727Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:15.0042421Z   101 |     typedef struct {
+2025-09-21T23:36:15.0042739Z       |                    ^
+2025-09-21T23:36:15.0074210Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumEnable(ina3221_ch_t)':
+2025-09-21T23:36:15.0076464Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:359:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0078491Z   359 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:15.0078997Z       |                                                           ^
+2025-09-21T23:36:15.0079685Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0080655Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:15.0081339Z   115 |     typedef struct {
+2025-09-21T23:36:15.0081663Z       |                    ^
+2025-09-21T23:36:15.0083417Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:373:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0085117Z   373 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:15.0085630Z       |                                                            ^
+2025-09-21T23:36:15.0086320Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0087272Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:15.0087951Z   115 |     typedef struct {
+2025-09-21T23:36:15.0088266Z       |                    ^
+2025-09-21T23:36:15.0089151Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumDisable(ina3221_ch_t)':
+2025-09-21T23:36:15.0091339Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:380:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0093276Z   380 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:15.0093779Z       |                                                           ^
+2025-09-21T23:36:15.0094465Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0095432Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:15.0096112Z   115 |     typedef struct {
+2025-09-21T23:36:15.0096432Z       |                    ^
+2025-09-21T23:36:15.0097997Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:394:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:15.0099684Z   394 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:15.0100178Z       |                                                            ^
+2025-09-21T23:36:15.0100854Z In file included from /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:15.0101810Z /pio/workspace/libdeps/heltec-mesh-node-t114/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:15.0102481Z   115 |     typedef struct {
+2025-09-21T23:36:15.0133069Z       |                    ^
+2025-09-21T23:36:15.1006782Z Archiving .pio/build/heltec-mesh-node-t114/lib093/libQMC5883LCompass.a
+2025-09-21T23:36:15.1049923Z Indexing .pio/build/heltec-mesh-node-t114/lib093/libQMC5883LCompass.a
+2025-09-21T23:36:15.1106732Z Archiving .pio/build/heltec-mesh-node-t114/lib209/libINA3221.a
+2025-09-21T23:36:15.1198537Z Indexing .pio/build/heltec-mesh-node-t114/lib209/libINA3221.a
+2025-09-21T23:36:15.1281115Z Compiling .pio/build/heltec-mesh-node-t114/lib4fe/INA226/INA226.cpp.o
+2025-09-21T23:36:15.1527271Z Compiling .pio/build/heltec-mesh-node-t114/liba3e/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:36:15.2875346Z Archiving .pio/build/heltec-mesh-node-t114/libda4/libDFRobot_RainfallSensor.a
+2025-09-21T23:36:15.2883389Z Indexing .pio/build/heltec-mesh-node-t114/libda4/libDFRobot_RainfallSensor.a
+2025-09-21T23:36:15.2893744Z Archiving .pio/build/heltec-mesh-node-t114/lib7d0/libDFRobot_RTU.a
+2025-09-21T23:36:15.2975027Z Indexing .pio/build/heltec-mesh-node-t114/lib7d0/libDFRobot_RTU.a
+2025-09-21T23:36:15.3009804Z Compiling .pio/build/heltec-mesh-node-t114/liba3e/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:36:15.3095462Z Compiling .pio/build/heltec-mesh-node-t114/liba3e/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:36:15.4400117Z Archiving .pio/build/heltec-mesh-node-t114/lib4fe/libINA226.a
+2025-09-21T23:36:15.4441609Z Indexing .pio/build/heltec-mesh-node-t114/lib4fe/libINA226.a
+2025-09-21T23:36:15.4700576Z Compiling .pio/build/heltec-mesh-node-t114/lib773/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:36:15.4946027Z Compiling .pio/build/heltec-mesh-node-t114/lib773/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:36:15.4977514Z /pio/workspace/libdeps/heltec-mesh-node-t114/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:36:15.4979673Z /pio/workspace/libdeps/heltec-mesh-node-t114/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:36:15.4997006Z   108 |     if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:36:15.5000199Z       |         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:36:15.5683516Z Compiling .pio/build/heltec-mesh-node-t114/lib14f/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:36:15.5943366Z Archiving .pio/build/heltec-mesh-node-t114/liba3e/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:36:15.5995051Z Indexing .pio/build/heltec-mesh-node-t114/liba3e/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:36:15.6273889Z Compiling .pio/build/heltec-mesh-node-t114/libf03/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:36:15.8710064Z Compiling .pio/build/heltec-mesh-node-t114/libf54/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:36:15.8825635Z Archiving .pio/build/heltec-mesh-node-t114/lib14f/libAdafruit LTR390 Library.a
+2025-09-21T23:36:15.8831397Z Indexing .pio/build/heltec-mesh-node-t114/lib14f/libAdafruit LTR390 Library.a
+2025-09-21T23:36:15.9013079Z Compiling .pio/build/heltec-mesh-node-t114/lib5d6/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:36:15.9080594Z Archiving .pio/build/heltec-mesh-node-t114/libf03/libAdafruit PCT2075.a
+2025-09-21T23:36:15.9120033Z Indexing .pio/build/heltec-mesh-node-t114/libf03/libAdafruit PCT2075.a
+2025-09-21T23:36:15.9415333Z Compiling .pio/build/heltec-mesh-node-t114/lib2d4/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:36:16.0343113Z Archiving .pio/build/heltec-mesh-node-t114/lib773/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:36:16.0407720Z Indexing .pio/build/heltec-mesh-node-t114/lib773/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:36:16.0565760Z Compiling .pio/build/heltec-mesh-node-t114/lib2d4/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:36:16.1425142Z /pio/workspace/libdeps/heltec-mesh-node-t114/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'uint8_t DFRobot_BMM150::getRate()':
+2025-09-21T23:36:16.1427410Z /pio/workspace/libdeps/heltec-mesh-node-t114/DFRobot_BMM150/DFRobot_BMM150.cpp:161:10: warning: 'result' may be used uninitialized in this function [-Wmaybe-uninitialized]
+2025-09-21T23:36:16.1428623Z   161 |   return result;
+2025-09-21T23:36:16.1428956Z       |          ^~~~~~
+2025-09-21T23:36:16.1907911Z Archiving .pio/build/heltec-mesh-node-t114/lib5d6/libAdafruit TSL2561.a
+2025-09-21T23:36:16.1958976Z Indexing .pio/build/heltec-mesh-node-t114/lib5d6/libAdafruit TSL2561.a
+2025-09-21T23:36:16.2211528Z Compiling .pio/build/heltec-mesh-node-t114/libb19/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:36:16.2702587Z Compiling .pio/build/heltec-mesh-node-t114/lib933/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:36:16.2853365Z Archiving .pio/build/heltec-mesh-node-t114/libf54/libDFRobot_BMM150.a
+2025-09-21T23:36:16.2894646Z Indexing .pio/build/heltec-mesh-node-t114/libf54/libDFRobot_BMM150.a
+2025-09-21T23:36:16.3155080Z Compiling .pio/build/heltec-mesh-node-t114/libe4f/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:36:16.3245911Z Archiving .pio/build/heltec-mesh-node-t114/lib2d4/libAdafruit BMP3XX Library.a
+2025-09-21T23:36:16.3280914Z Indexing .pio/build/heltec-mesh-node-t114/lib2d4/libAdafruit BMP3XX Library.a
+2025-09-21T23:36:16.3394086Z Compiling .pio/build/heltec-mesh-node-t114/libe4f/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:36:16.5431690Z Archiving .pio/build/heltec-mesh-node-t114/libb19/libAdafruit MAX1704X.a
+2025-09-21T23:36:16.5472337Z Indexing .pio/build/heltec-mesh-node-t114/libb19/libAdafruit MAX1704X.a
+2025-09-21T23:36:16.5585572Z Compiling .pio/build/heltec-mesh-node-t114/libe4f/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:36:16.5673590Z Archiving .pio/build/heltec-mesh-node-t114/lib933/libAdafruit SHTC3 Library.a
+2025-09-21T23:36:16.5717528Z Indexing .pio/build/heltec-mesh-node-t114/lib933/libAdafruit SHTC3 Library.a
+2025-09-21T23:36:16.5965267Z Compiling .pio/build/heltec-mesh-node-t114/lib4b6/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:36:16.6238841Z Compiling .pio/build/heltec-mesh-node-t114/lib26b/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:36:16.6534204Z Compiling .pio/build/heltec-mesh-node-t114/lib117/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:36:16.8457853Z Archiving .pio/build/heltec-mesh-node-t114/libe4f/libAdafruit LPS2X.a
+2025-09-21T23:36:16.8492646Z Indexing .pio/build/heltec-mesh-node-t114/libe4f/libAdafruit LPS2X.a
+2025-09-21T23:36:16.8777861Z Compiling .pio/build/heltec-mesh-node-t114/lib7d2/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:36:16.8856624Z Archiving .pio/build/heltec-mesh-node-t114/lib4b6/libAdafruit SHT31 Library.a
+2025-09-21T23:36:16.8892777Z Indexing .pio/build/heltec-mesh-node-t114/lib4b6/libAdafruit SHT31 Library.a
+2025-09-21T23:36:16.9128261Z Compiling .pio/build/heltec-mesh-node-t114/lib9bb/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:36:16.9196587Z Archiving .pio/build/heltec-mesh-node-t114/lib26b/libAdafruit VEML7700 Library.a
+2025-09-21T23:36:16.9231525Z Indexing .pio/build/heltec-mesh-node-t114/lib26b/libAdafruit VEML7700 Library.a
+2025-09-21T23:36:16.9343875Z Compiling .pio/build/heltec-mesh-node-t114/lib37c/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:36:16.9681096Z Archiving .pio/build/heltec-mesh-node-t114/lib117/libAdafruit SHT4x Library.a
+2025-09-21T23:36:16.9756534Z Indexing .pio/build/heltec-mesh-node-t114/lib117/libAdafruit SHT4x Library.a
+2025-09-21T23:36:17.0013692Z Compiling .pio/build/heltec-mesh-node-t114/lib37c/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:36:17.1779657Z Archiving .pio/build/heltec-mesh-node-t114/lib9bb/libClosedCube OPT3001.a
+2025-09-21T23:36:17.1818875Z Indexing .pio/build/heltec-mesh-node-t114/lib9bb/libClosedCube OPT3001.a
+2025-09-21T23:36:17.1976189Z Compiling .pio/build/heltec-mesh-node-t114/lib6c6/bsec2/bsec2.cpp.o
+2025-09-21T23:36:17.2052035Z Archiving .pio/build/heltec-mesh-node-t114/lib7d2/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:36:17.2147022Z Compiling .pio/build/heltec-mesh-node-t114/lib6c6/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:36:17.2176239Z Indexing .pio/build/heltec-mesh-node-t114/lib7d2/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:36:17.2532746Z Compiling .pio/build/heltec-mesh-node-t114/libd09/SoftwareSerial/SoftwareSerial.cpp.o
+2025-09-21T23:36:17.3273474Z Archiving .pio/build/heltec-mesh-node-t114/lib37c/libBME68x Sensor library.a
+2025-09-21T23:36:17.3326165Z Indexing .pio/build/heltec-mesh-node-t114/lib37c/libBME68x Sensor library.a
+2025-09-21T23:36:17.3592975Z Compiling .pio/build/heltec-mesh-node-t114/libab6/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:36:17.4791393Z Compiling .pio/build/heltec-mesh-node-t114/lib54c/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:36:17.5046785Z Archiving .pio/build/heltec-mesh-node-t114/lib6c6/libbsec2.a
+2025-09-21T23:36:17.5091830Z Indexing .pio/build/heltec-mesh-node-t114/lib6c6/libbsec2.a
+2025-09-21T23:36:17.5192941Z Compiling .pio/build/heltec-mesh-node-t114/lib54c/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:36:17.5781055Z Compiling .pio/build/heltec-mesh-node-t114/lib54c/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:36:17.5878449Z Archiving .pio/build/heltec-mesh-node-t114/libd09/libSoftwareSerial.a
+2025-09-21T23:36:17.5920458Z Indexing .pio/build/heltec-mesh-node-t114/libd09/libSoftwareSerial.a
+2025-09-21T23:36:17.6035528Z Compiling .pio/build/heltec-mesh-node-t114/lib54c/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:36:17.6154812Z Compiling .pio/build/heltec-mesh-node-t114/lib54c/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:36:17.6948852Z Archiving .pio/build/heltec-mesh-node-t114/libab6/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:36:17.6996481Z Indexing .pio/build/heltec-mesh-node-t114/libab6/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:36:17.7134586Z Compiling .pio/build/heltec-mesh-node-t114/lib54c/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:36:17.7297626Z Compiling .pio/build/heltec-mesh-node-t114/lib54c/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:36:17.8449198Z Compiling .pio/build/heltec-mesh-node-t114/lib4b7/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:36:17.8952424Z Compiling .pio/build/heltec-mesh-node-t114/lib7c6/PCF8563_Library/pcf8563.cpp.o
+2025-09-21T23:36:18.0164930Z Compiling .pio/build/heltec-mesh-node-t114/lib947/RotaryEncoder/RotaryEncoder.cpp.o
+2025-09-21T23:36:18.0251242Z Archiving .pio/build/heltec-mesh-node-t114/lib54c/libSensirion Core.a
+2025-09-21T23:36:18.0328346Z Indexing .pio/build/heltec-mesh-node-t114/lib54c/libSensirion Core.a
+2025-09-21T23:36:18.0475597Z Compiling .pio/build/heltec-mesh-node-t114/lib947/RotaryEncoder/SwRotaryEncoder.cpp.o
+2025-09-21T23:36:18.2259698Z Archiving .pio/build/heltec-mesh-node-t114/lib4b7/libSensirion I2C SCD4x.a
+2025-09-21T23:36:18.2314151Z Indexing .pio/build/heltec-mesh-node-t114/lib4b7/libSensirion I2C SCD4x.a
+2025-09-21T23:36:18.2698031Z Compiling .pio/build/heltec-mesh-node-t114/libf88/Adafruit_LittleFS/Adafruit_LittleFS.cpp.o
+2025-09-21T23:36:18.2808033Z Archiving .pio/build/heltec-mesh-node-t114/lib7c6/libPCF8563_Library.a
+2025-09-21T23:36:18.2844288Z Indexing .pio/build/heltec-mesh-node-t114/lib7c6/libPCF8563_Library.a
+2025-09-21T23:36:18.2952239Z Compiling .pio/build/heltec-mesh-node-t114/libf88/Adafruit_LittleFS/Adafruit_LittleFS_File.cpp.o
+2025-09-21T23:36:18.3067597Z Compiling .pio/build/heltec-mesh-node-t114/libf88/Adafruit_LittleFS/littlefs/lfs.c.o
+2025-09-21T23:36:18.3216388Z Archiving .pio/build/heltec-mesh-node-t114/lib947/libRotaryEncoder.a
+2025-09-21T23:36:18.3262378Z Indexing .pio/build/heltec-mesh-node-t114/lib947/libRotaryEncoder.a
+2025-09-21T23:36:18.3363744Z Compiling .pio/build/heltec-mesh-node-t114/libf88/Adafruit_LittleFS/littlefs/lfs_util.c.o
+2025-09-21T23:36:18.4138654Z Compiling .pio/build/heltec-mesh-node-t114/liba05/InternalFileSytem/InternalFileSystem.cpp.o
+2025-09-21T23:36:18.6064038Z Compiling .pio/build/heltec-mesh-node-t114/liba05/InternalFileSytem/flash/flash_cache.c.o
+2025-09-21T23:36:18.6217944Z Compiling .pio/build/heltec-mesh-node-t114/liba05/InternalFileSytem/flash/flash_nrf5x.c.o
+2025-09-21T23:36:18.6657364Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEAdvertising.cpp.o
+2025-09-21T23:36:18.7196381Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLECentral.cpp.o
+2025-09-21T23:36:18.7320758Z Archiving .pio/build/heltec-mesh-node-t114/libf88/libAdafruit_LittleFS.a
+2025-09-21T23:36:18.7379206Z Indexing .pio/build/heltec-mesh-node-t114/libf88/libAdafruit_LittleFS.a
+2025-09-21T23:36:18.7457769Z Archiving .pio/build/heltec-mesh-node-t114/liba05/libInternalFileSytem.a
+2025-09-21T23:36:18.7550346Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLECharacteristic.cpp.o
+2025-09-21T23:36:18.7598693Z Indexing .pio/build/heltec-mesh-node-t114/liba05/libInternalFileSytem.a
+2025-09-21T23:36:18.7714702Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEClientCharacteristic.cpp.o
+2025-09-21T23:36:19.0768149Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEClientService.cpp.o
+2025-09-21T23:36:19.0923422Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEConnection.cpp.o
+2025-09-21T23:36:19.2068275Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEDiscovery.cpp.o
+2025-09-21T23:36:19.2553991Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEGatt.cpp.o
+2025-09-21T23:36:19.4245039Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEPeriph.cpp.o
+2025-09-21T23:36:19.5082972Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEScanner.cpp.o
+2025-09-21T23:36:19.5826665Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLESecurity.cpp.o
+2025-09-21T23:36:19.6388751Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEService.cpp.o
+2025-09-21T23:36:19.7871896Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/BLEUuid.cpp.o
+2025-09-21T23:36:19.9243057Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/bluefruit.cpp.o
+2025-09-21T23:36:19.9845291Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/clients/BLEAncs.cpp.o
+2025-09-21T23:36:20.0000201Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/clients/BLEClientBas.cpp.o
+2025-09-21T23:36:20.0919422Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/clients/BLEClientCts.cpp.o
+2025-09-21T23:36:20.3612091Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/clients/BLEClientDis.cpp.o
+2025-09-21T23:36:20.3891219Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/clients/BLEClientHidAdafruit.cpp.o
+2025-09-21T23:36:20.4137826Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/clients/BLEClientIas.cpp.o
+2025-09-21T23:36:20.4584821Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/clients/BLEClientUart.cpp.o
+2025-09-21T23:36:20.7170605Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEBas.cpp.o
+2025-09-21T23:36:20.7616298Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEBeacon.cpp.o
+2025-09-21T23:36:20.7768470Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEDfu.cpp.o
+2025-09-21T23:36:20.8293965Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEDis.cpp.o
+2025-09-21T23:36:21.0651239Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEHidAdafruit.cpp.o
+2025-09-21T23:36:21.1144895Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEHidGamepad.cpp.o
+2025-09-21T23:36:21.1445000Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEHidGeneric.cpp.o
+2025-09-21T23:36:21.1927435Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEIas.cpp.o
+2025-09-21T23:36:21.4618375Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEMidi.cpp.o
+2025-09-21T23:36:21.4766478Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/BLEUart.cpp.o
+2025-09-21T23:36:21.5327619Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/services/EddyStone.cpp.o
+2025-09-21T23:36:21.5431853Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/utility/AdaMsg.cpp.o
+2025-09-21T23:36:21.8018319Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/utility/bonding.cpp.o
+2025-09-21T23:36:21.8456498Z Compiling .pio/build/heltec-mesh-node-t114/lib982/Bluefruit52Lib/utility/bootloader_util.c.o
+2025-09-21T23:36:21.8932451Z Compiling .pio/build/heltec-mesh-node-t114/lib99e/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:36:21.9061934Z Compiling .pio/build/heltec-mesh-node-t114/lib99e/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:36:21.9217030Z Compiling .pio/build/heltec-mesh-node-t114/lib99e/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:36:21.9739925Z Compiling .pio/build/heltec-mesh-node-t114/lib99e/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:36:21.9932428Z Compiling .pio/build/heltec-mesh-node-t114/lib99e/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:36:22.0279596Z Archiving .pio/build/heltec-mesh-node-t114/libFrameworkArduinoVariant.a
+2025-09-21T23:36:22.0307198Z Indexing .pio/build/heltec-mesh-node-t114/libFrameworkArduinoVariant.a
+2025-09-21T23:36:22.0604326Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/HardwarePWM.cpp.o
+2025-09-21T23:36:22.0745994Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:36:22.1855337Z Archiving .pio/build/heltec-mesh-node-t114/lib982/libBluefruit52Lib.a
+2025-09-21T23:36:22.2153296Z Indexing .pio/build/heltec-mesh-node-t114/lib982/libBluefruit52Lib.a
+2025-09-21T23:36:22.2550884Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/Print.cpp.o
+2025-09-21T23:36:22.2695279Z Archiving .pio/build/heltec-mesh-node-t114/lib99e/libAdafruit NeoPixel.a
+2025-09-21T23:36:22.2749235Z Indexing .pio/build/heltec-mesh-node-t114/lib99e/libAdafruit NeoPixel.a
+2025-09-21T23:36:22.2862712Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/RingBuffer.cpp.o
+2025-09-21T23:36:22.3292144Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:36:22.3627789Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:36:22.3786007Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/Uart.cpp.o
+2025-09-21T23:36:22.5547036Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/WInterrupts.c.o
+2025-09-21T23:36:22.6204280Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:36:22.6394777Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/WString.cpp.o
+2025-09-21T23:36:22.6639725Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/abi.cpp.o
+2025-09-21T23:36:22.6821526Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/avr/dtostrf.c.o
+2025-09-21T23:36:22.7039423Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/delay.c.o
+2025-09-21T23:36:22.7428276Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/Source/croutine.c.o
+2025-09-21T23:36:22.7605848Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/Source/event_groups.c.o
+2025-09-21T23:36:22.8084236Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/Source/list.c.o
+2025-09-21T23:36:22.8395196Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/Source/portable/MemMang/heap_3.c.o
+2025-09-21T23:36:22.8864662Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/Source/queue.c.o
+2025-09-21T23:36:22.9002239Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/Source/stream_buffer.c.o
+2025-09-21T23:36:22.9175556Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/Source/tasks.c.o
+2025-09-21T23:36:22.9409210Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/Source/timers.c.o
+2025-09-21T23:36:23.0583501Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis.c.o
+2025-09-21T23:36:23.0903687Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis_systick.c.o
+2025-09-21T23:36:23.1085133Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/freertos/portable/GCC/nrf52/port.c.o
+2025-09-21T23:36:23.1538885Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/hooks.c.o
+2025-09-21T23:36:23.1953723Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/itoa.c.o
+2025-09-21T23:36:23.2126888Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/linker/gcc_startup_nrf52.S.o
+2025-09-21T23:36:23.2252497Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/linker/gcc_startup_nrf52833.S.o
+2025-09-21T23:36:23.2337011Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/linker/gcc_startup_nrf52840.S.o
+2025-09-21T23:36:23.2470477Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/main.cpp.o
+2025-09-21T23:36:23.2576944Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/new.cpp.o
+2025-09-21T23:36:23.2733785Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_gpiote.c.o
+2025-09-21T23:36:23.2868305Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_power.c.o
+2025-09-21T23:36:23.3590323Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_pwm.c.o
+2025-09-21T23:36:23.4215344Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_qspi.c.o
+2025-09-21T23:36:23.4358403Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spim.c.o
+2025-09-21T23:36:23.4510184Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spis.c.o
+2025-09-21T23:36:23.4872067Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_temp.c.o
+2025-09-21T23:36:23.5371373Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_timer.c.o
+2025-09-21T23:36:23.5770344Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/mdk/system_nrf52.c.o
+2025-09-21T23:36:23.5911545Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/mdk/system_nrf52833.c.o
+2025-09-21T23:36:23.6018638Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/nordic/nrfx/mdk/system_nrf52840.c.o
+2025-09-21T23:36:23.6213133Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/pulse.c.o
+2025-09-21T23:36:23.6328274Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/pulse_asm.S.o
+2025-09-21T23:36:23.6452425Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/rtos.cpp.o
+2025-09-21T23:36:23.6597532Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/sysview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c.o
+2025-09-21T23:36:23.7238536Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/sysview/SEGGER/SEGGER_RTT.c.o
+2025-09-21T23:36:23.7359880Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S.o
+2025-09-21T23:36:23.7517845Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_printf.c.o
+2025-09-21T23:36:23.7680333Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/sysview/SEGGER/SEGGER_SYSVIEW.c.o
+2025-09-21T23:36:23.8524256Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/sysview/SEGGER_SYSVIEW_FreeRTOS.c.o
+2025-09-21T23:36:23.9031070Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/utility/AdaCallback.c.o
+2025-09-21T23:36:23.9167757Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/utility/SoftwareTimer.cpp.o
+2025-09-21T23:36:23.9315458Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/utility/adafruit_fifo.cpp.o
+2025-09-21T23:36:24.0305350Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/utility/debug.cpp.o
+2025-09-21T23:36:24.1223662Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/utility/utilities.c.o
+2025-09-21T23:36:24.1819429Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/wiring.c.o
+2025-09-21T23:36:24.2031779Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/wiring_analog.cpp.o
+2025-09-21T23:36:24.2377638Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/wiring_analog_nRF52.c.o
+2025-09-21T23:36:24.3066487Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/wiring_digital.c.o
+2025-09-21T23:36:24.3223973Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/wiring_private.c.o
+2025-09-21T23:36:24.3638354Z Compiling .pio/build/heltec-mesh-node-t114/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:36:24.4406282Z Archiving .pio/build/heltec-mesh-node-t114/libFrameworkArduino.a
+2025-09-21T23:36:24.4628268Z Indexing .pio/build/heltec-mesh-node-t114/libFrameworkArduino.a
+2025-09-21T23:36:24.5068487Z Linking .pio/build/heltec-mesh-node-t114/firmware.elf
+2025-09-21T23:36:25.3966335Z /pio/core/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/bin/ld: .pio/build/heltec-mesh-node-t114/firmware.elf section `.text' will not fit in region `FLASH'
+2025-09-21T23:36:25.3967559Z /pio/core/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/bin/ld: region `FLASH' overflowed by 92240 bytes
+2025-09-21T23:36:25.3968170Z collect2: error: ld returned 1 exit status
+2025-09-21T23:36:25.3973642Z *** [.pio/build/heltec-mesh-node-t114/firmware.elf] Error 1
+2025-09-21T23:36:25.7989373Z ========================= [FAILED] Took 95.74 seconds =========================
+2025-09-21T23:36:25.7990187Z 
+2025-09-21T23:36:25.7995824Z Environment            Status    Duration
+2025-09-21T23:36:25.7996424Z ---------------------  --------  ------------
+2025-09-21T23:36:25.7996879Z heltec-mesh-node-t114  FAILED    00:01:35.742
+2025-09-21T23:36:25.7997389Z ==================== 1 failed, 0 succeeded in 00:01:35.742 ====================
+2025-09-21T23:36:25.9608373Z ##[error]Process completed with exit code 1.
+2025-09-21T23:36:25.9782073Z Post job cleanup.
+2025-09-21T23:36:26.0543568Z [command]/usr/bin/git version
+2025-09-21T23:36:26.0579791Z git version 2.51.0
+2025-09-21T23:36:26.0616048Z Temporarily overriding HOME='/home/runner/work/_temp/0d9456e8-e545-42cf-a77d-d7875c5761b5' before making global git config changes
+2025-09-21T23:36:26.0617304Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:36:26.0621476Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:36:26.0657069Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:36:26.0691082Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:36:26.0899597Z Entering 'meshtestic'
+2025-09-21T23:36:26.0941262Z Entering 'protobufs'
+2025-09-21T23:36:26.0997790Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:36:26.1020993Z http.https://github.com/.extraheader
+2025-09-21T23:36:26.1031305Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:36:26.1062061Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:36:26.1267001Z Entering 'meshtestic'
+2025-09-21T23:36:26.1290696Z http.https://github.com/.extraheader
+2025-09-21T23:36:26.1324203Z Entering 'protobufs'
+2025-09-21T23:36:26.1348543Z http.https://github.com/.extraheader
+2025-09-21T23:36:26.1511983Z Cleaning up orphan processes

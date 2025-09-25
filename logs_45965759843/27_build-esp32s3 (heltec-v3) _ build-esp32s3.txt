@@ -1,0 +1,1685 @@
+﻿2025-09-21T23:32:01.5375588Z Current runner version: '2.328.0'
+2025-09-21T23:32:01.5400856Z ##[group]Runner Image Provisioner
+2025-09-21T23:32:01.5401666Z Hosted Compute Agent
+2025-09-21T23:32:01.5402330Z Version: 20250829.383
+2025-09-21T23:32:01.5402931Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:32:01.5403611Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:32:01.5404263Z ##[endgroup]
+2025-09-21T23:32:01.5404748Z ##[group]Operating System
+2025-09-21T23:32:01.5405328Z Ubuntu
+2025-09-21T23:32:01.5405820Z 24.04.3
+2025-09-21T23:32:01.5406294Z LTS
+2025-09-21T23:32:01.5406741Z ##[endgroup]
+2025-09-21T23:32:01.5407273Z ##[group]Runner Image
+2025-09-21T23:32:01.5407832Z Image: ubuntu-24.04
+2025-09-21T23:32:01.5408294Z Version: 20250907.24.1
+2025-09-21T23:32:01.5409753Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:32:01.5411329Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:32:01.5412325Z ##[endgroup]
+2025-09-21T23:32:01.5414677Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:32:01.5416648Z Actions: read
+2025-09-21T23:32:01.5417338Z Attestations: read
+2025-09-21T23:32:01.5417855Z Checks: read
+2025-09-21T23:32:01.5418312Z Contents: read
+2025-09-21T23:32:01.5419089Z Deployments: read
+2025-09-21T23:32:01.5419589Z Discussions: read
+2025-09-21T23:32:01.5420067Z Issues: read
+2025-09-21T23:32:01.5420587Z Metadata: read
+2025-09-21T23:32:01.5421105Z Models: read
+2025-09-21T23:32:01.5421553Z Packages: read
+2025-09-21T23:32:01.5422108Z Pages: read
+2025-09-21T23:32:01.5422556Z PullRequests: read
+2025-09-21T23:32:01.5423080Z RepositoryProjects: read
+2025-09-21T23:32:01.5423694Z SecurityEvents: read
+2025-09-21T23:32:01.5424325Z Statuses: read
+2025-09-21T23:32:01.5424825Z ##[endgroup]
+2025-09-21T23:32:01.5427049Z Secret source: Actions
+2025-09-21T23:32:01.5427797Z Prepare workflow directory
+2025-09-21T23:32:01.5773359Z Prepare all required actions
+2025-09-21T23:32:01.5812938Z Getting action download info
+2025-09-21T23:32:01.9839998Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:32:02.4927581Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:32:02.9530191Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:32:03.2235755Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:32:03.2240743Z ##[group] Inputs
+2025-09-21T23:32:03.2241224Z   version: 2.7.10.3d51287
+2025-09-21T23:32:03.2241681Z   platform: esp32s3
+2025-09-21T23:32:03.2242092Z   pio_env: heltec-v3
+2025-09-21T23:32:03.2242512Z ##[endgroup]
+2025-09-21T23:32:03.2243015Z Complete job name: build-esp32s3 (heltec-v3) / build-esp32s3
+2025-09-21T23:32:03.2871328Z ##[group]Run actions/checkout@v5
+2025-09-21T23:32:03.2872492Z with:
+2025-09-21T23:32:03.2872887Z   submodules: recursive
+2025-09-21T23:32:03.2873350Z   ref: develop
+2025-09-21T23:32:03.2873804Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:03.2874507Z   token: ***
+2025-09-21T23:32:03.2874891Z   ssh-strict: true
+2025-09-21T23:32:03.2875279Z   ssh-user: git
+2025-09-21T23:32:03.2875674Z   persist-credentials: true
+2025-09-21T23:32:03.2876121Z   clean: true
+2025-09-21T23:32:03.2876522Z   sparse-checkout-cone-mode: true
+2025-09-21T23:32:03.2876995Z   fetch-depth: 1
+2025-09-21T23:32:03.2877378Z   fetch-tags: false
+2025-09-21T23:32:03.2877773Z   show-progress: true
+2025-09-21T23:32:03.2878168Z   lfs: false
+2025-09-21T23:32:03.2878541Z   set-safe-directory: true
+2025-09-21T23:32:03.2879740Z ##[endgroup]
+2025-09-21T23:32:03.3857782Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:03.3860077Z ##[group]Getting Git version info
+2025-09-21T23:32:03.3860868Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:03.3861918Z [command]/usr/bin/git version
+2025-09-21T23:32:03.4855493Z git version 2.51.0
+2025-09-21T23:32:03.4877879Z ##[endgroup]
+2025-09-21T23:32:03.4894666Z Temporarily overriding HOME='/home/runner/work/_temp/3bcfb3fa-1c55-4b77-b536-2ccb785b51eb' before making global git config changes
+2025-09-21T23:32:03.4897009Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:32:03.4901030Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:32:03.4979888Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:03.4983996Z ##[group]Initializing the repository
+2025-09-21T23:32:03.4988710Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:32:03.5893971Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:32:03.5895274Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:32:03.5940666Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:32:03.5942285Z hint:
+2025-09-21T23:32:03.5943433Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:32:03.5944648Z hint:
+2025-09-21T23:32:03.5945712Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:32:03.5947352Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:32:03.5948623Z hint:
+2025-09-21T23:32:03.5949802Z hint: 	git branch -m <name>
+2025-09-21T23:32:03.5950740Z hint:
+2025-09-21T23:32:03.5951995Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:32:03.5953973Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:32:03.5957753Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:03.6087479Z ##[endgroup]
+2025-09-21T23:32:03.6090178Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:32:03.6091907Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:32:03.6125888Z ##[endgroup]
+2025-09-21T23:32:03.6127186Z ##[group]Setting up auth
+2025-09-21T23:32:03.6133856Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:32:03.6171284Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:32:03.7905711Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:32:03.7938156Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:32:03.8169522Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:03.8207825Z ##[endgroup]
+2025-09-21T23:32:03.8218387Z ##[group]Fetching the repository
+2025-09-21T23:32:03.8221131Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:32:04.9316849Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:04.9318473Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:32:04.9397497Z ##[endgroup]
+2025-09-21T23:32:04.9398733Z ##[group]Determining the checkout info
+2025-09-21T23:32:04.9404528Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:32:04.9429111Z   origin/develop
+2025-09-21T23:32:04.9434513Z ##[endgroup]
+2025-09-21T23:32:04.9438272Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:32:04.9526233Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:32:04.9555662Z ##[group]Checking out the ref
+2025-09-21T23:32:04.9559934Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:32:05.0638116Z Switched to a new branch 'develop'
+2025-09-21T23:32:05.0640211Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:32:05.0651596Z ##[endgroup]
+2025-09-21T23:32:05.0653125Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:32:05.0657625Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:05.0704309Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:32:05.0735582Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:32:05.0766858Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:32:05.0793199Z ##[endgroup]
+2025-09-21T23:32:05.0795373Z ##[group]Fetching submodules
+2025-09-21T23:32:05.0797507Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:32:05.1069931Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:32:05.1288078Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:32:05.1292629Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:32:05.1317061Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:32:05.6793371Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:32:06.2761175Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:32:06.2919479Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:32:06.2954292Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:32:06.3194857Z Entering 'meshtestic'
+2025-09-21T23:32:06.3234635Z Entering 'protobufs'
+2025-09-21T23:32:06.3284850Z ##[endgroup]
+2025-09-21T23:32:06.3285404Z ##[group]Persisting credentials for submodules
+2025-09-21T23:32:06.3293361Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:32:06.3513821Z Entering 'meshtestic'
+2025-09-21T23:32:06.3562725Z Entering 'protobufs'
+2025-09-21T23:32:06.3650418Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:32:06.3883107Z Entering 'meshtestic'
+2025-09-21T23:32:06.3920044Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:32:06.3939344Z Entering 'protobufs'
+2025-09-21T23:32:06.3979171Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:32:06.4022055Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:32:06.4230667Z Entering 'meshtestic'
+2025-09-21T23:32:06.4268030Z Entering 'protobufs'
+2025-09-21T23:32:06.4319180Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:32:06.4528575Z Entering 'meshtestic'
+2025-09-21T23:32:06.4565772Z Entering 'protobufs'
+2025-09-21T23:32:06.4611775Z ##[endgroup]
+2025-09-21T23:32:06.4649951Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:32:06.4672583Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:32:06.4874076Z ##[group]Run if [ "$PIO_PLATFORM" = "esp32s3" ]; then
+2025-09-21T23:32:06.4874472Z [36;1mif [ "$PIO_PLATFORM" = "esp32s3" ]; then[0m
+2025-09-21T23:32:06.4874786Z [36;1m  echo "src=firmware-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:06.4875129Z [36;1m  echo "tgt=release/bleota-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:06.4875704Z [36;1melif [ "$PIO_PLATFORM" = "esp32c3" ] || [ "$PIO_PLATFORM" = "esp32c6" ]; then[0m
+2025-09-21T23:32:06.4876103Z [36;1m  echo "src=firmware-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:06.4876422Z [36;1m  echo "tgt=release/bleota-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:06.4876723Z [36;1melif [ "$PIO_PLATFORM" = "esp32" ]; then[0m
+2025-09-21T23:32:06.4877012Z [36;1m  echo "src=firmware.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:06.4877305Z [36;1m  echo "tgt=release/bleota.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:06.4877567Z [36;1mfi[0m
+2025-09-21T23:32:06.5133012Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:32:06.5133337Z env:
+2025-09-21T23:32:06.5133534Z   PIO_PLATFORM: esp32s3
+2025-09-21T23:32:06.5133768Z ##[endgroup]
+2025-09-21T23:32:06.5304901Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:32:06.5370636Z with:
+2025-09-21T23:32:06.5370931Z   pio_platform: esp32s3
+2025-09-21T23:32:06.5371265Z   pio_env: heltec-v3
+2025-09-21T23:32:06.5371717Z   pio_target: build
+2025-09-21T23:32:06.5372174Z   ota_firmware_source: firmware-s3.bin
+2025-09-21T23:32:06.5372711Z   ota_firmware_target: release/bleota-s3.bin
+2025-09-21T23:32:06.5373190Z ##[endgroup]
+2025-09-21T23:32:06.5458312Z ##[group]Run docker run --rm \
+2025-09-21T23:32:06.5458578Z [36;1mdocker run --rm \[0m
+2025-09-21T23:32:06.5458808Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:32:06.5459328Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:32:06.5459556Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:32:06.5459761Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:32:06.5459980Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:32:06.5460208Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:32:06.5460457Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:32:06.5460752Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:32:06.5461018Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:32:06.5461351Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-esp32s3[0m
+2025-09-21T23:32:06.5494320Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:32:06.5494633Z env:
+2025-09-21T23:32:06.5494863Z   MT_ENV: heltec-v3
+2025-09-21T23:32:06.5495050Z   MT_PLATFORM: esp32s3
+2025-09-21T23:32:06.5495243Z   MT_TARGET: build
+2025-09-21T23:32:06.5495432Z   MT_OTA_FIRMWARE_SOURCE: firmware-s3.bin
+2025-09-21T23:32:06.5495718Z   MT_OTA_FIRMWARE_TARGET: release/bleota-s3.bin
+2025-09-21T23:32:06.5495997Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:32:06.5496244Z ##[endgroup]
+2025-09-21T23:32:07.6322979Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-esp32s3' locally
+2025-09-21T23:32:08.4141332Z master-esp32s3: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:32:08.6089598Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:32:08.6090067Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:32:08.6090451Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:32:08.6090779Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:32:08.6091028Z 815e87185931: Pulling fs layer
+2025-09-21T23:32:08.6091277Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:32:08.6091533Z da9989870cf6: Pulling fs layer
+2025-09-21T23:32:08.6091904Z 5842d1ef8948: Pulling fs layer
+2025-09-21T23:32:08.6092296Z a234b2703096: Pulling fs layer
+2025-09-21T23:32:08.6092578Z 3a39df0b1bf9: Pulling fs layer
+2025-09-21T23:32:08.6092826Z a63a25a82ec9: Pulling fs layer
+2025-09-21T23:32:08.6093066Z 10215da75b3f: Pulling fs layer
+2025-09-21T23:32:08.6093315Z f243992d4a31: Pulling fs layer
+2025-09-21T23:32:08.6093558Z 832340f4ac8c: Pulling fs layer
+2025-09-21T23:32:08.6093789Z c611f5bb386b: Waiting
+2025-09-21T23:32:08.6093996Z 815e87185931: Waiting
+2025-09-21T23:32:08.6094192Z a234b2703096: Waiting
+2025-09-21T23:32:08.6094390Z 71c11f7c6832: Waiting
+2025-09-21T23:32:08.6094591Z da9989870cf6: Waiting
+2025-09-21T23:32:08.6094792Z 5842d1ef8948: Waiting
+2025-09-21T23:32:08.6094989Z 3a39df0b1bf9: Waiting
+2025-09-21T23:32:08.6095194Z a63a25a82ec9: Waiting
+2025-09-21T23:32:08.6095392Z f243992d4a31: Waiting
+2025-09-21T23:32:08.6095845Z 832340f4ac8c: Waiting
+2025-09-21T23:32:08.6096039Z 10215da75b3f: Waiting
+2025-09-21T23:32:09.0328602Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:32:09.0329296Z ccbbb2080a06: Download complete
+2025-09-21T23:32:09.1749573Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:32:09.1750109Z 8fb375ec14f3: Download complete
+2025-09-21T23:32:09.2052382Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:32:09.2053064Z 7d5073558d5a: Download complete
+2025-09-21T23:32:09.5181946Z 815e87185931: Download complete
+2025-09-21T23:32:09.6684646Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:32:09.6690500Z 71c11f7c6832: Download complete
+2025-09-21T23:32:09.7495276Z da9989870cf6: Verifying Checksum
+2025-09-21T23:32:09.7495815Z da9989870cf6: Download complete
+2025-09-21T23:32:10.0146806Z a234b2703096: Verifying Checksum
+2025-09-21T23:32:10.0150672Z a234b2703096: Download complete
+2025-09-21T23:32:10.0952682Z 5842d1ef8948: Verifying Checksum
+2025-09-21T23:32:10.0956073Z 5842d1ef8948: Download complete
+2025-09-21T23:32:10.2398515Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:32:10.2399215Z c611f5bb386b: Download complete
+2025-09-21T23:32:10.4909346Z 10215da75b3f: Verifying Checksum
+2025-09-21T23:32:10.4910310Z 10215da75b3f: Download complete
+2025-09-21T23:32:10.6396680Z 3a39df0b1bf9: Verifying Checksum
+2025-09-21T23:32:10.6397267Z 3a39df0b1bf9: Download complete
+2025-09-21T23:32:10.7454108Z f243992d4a31: Verifying Checksum
+2025-09-21T23:32:10.8866054Z 832340f4ac8c: Verifying Checksum
+2025-09-21T23:32:10.8866706Z 832340f4ac8c: Download complete
+2025-09-21T23:32:11.1968634Z 8fb375ec14f3: Pull complete
+2025-09-21T23:32:13.6571510Z ccbbb2080a06: Pull complete
+2025-09-21T23:32:17.8712478Z 7d5073558d5a: Pull complete
+2025-09-21T23:32:25.5814889Z a63a25a82ec9: Verifying Checksum
+2025-09-21T23:32:25.5815330Z a63a25a82ec9: Download complete
+2025-09-21T23:32:28.0702968Z c611f5bb386b: Pull complete
+2025-09-21T23:32:28.3342871Z 815e87185931: Pull complete
+2025-09-21T23:32:29.0698629Z 71c11f7c6832: Pull complete
+2025-09-21T23:32:29.0811286Z da9989870cf6: Pull complete
+2025-09-21T23:32:30.1597930Z 5842d1ef8948: Pull complete
+2025-09-21T23:32:30.1692590Z a234b2703096: Pull complete
+2025-09-21T23:32:31.6986828Z 3a39df0b1bf9: Pull complete
+2025-09-21T23:33:44.1465728Z a63a25a82ec9: Pull complete
+2025-09-21T23:33:44.1550396Z 10215da75b3f: Pull complete
+2025-09-21T23:33:44.1644779Z f243992d4a31: Pull complete
+2025-09-21T23:33:44.1720772Z 832340f4ac8c: Pull complete
+2025-09-21T23:33:44.1759088Z Digest: sha256:7269912521d83174316445d896859f9f0601d0c16d966400e9e0d3e20da1f1bd
+2025-09-21T23:33:44.1768151Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-esp32s3
+2025-09-21T23:33:44.9880700Z Building PlatformIO environment: heltec-v3
+2025-09-21T23:33:45.2019389Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:33:45.8992027Z Resolving heltec-v3 dependencies...
+2025-09-21T23:33:45.9237065Z Removing unused dependencies...
+2025-09-21T23:33:45.9323133Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:33:46.0391061Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:33:46.3572578Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:33:50.1747377Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:50.3915266Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:50.4870114Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:33:51.1616684Z Building for heltec-v3 with 
+2025-09-21T23:33:51.9354410Z Processing heltec-v3 (board: heltec_wifi_lora_32_V3; platform: 
+2025-09-21T23:33:51.9355178Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:33:51.9355961Z --------------------------------------------------------------------------------
+2025-09-21T23:33:53.1968701Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:33:53.2124048Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/heltec_wifi_lora_32_V3.html
+2025-09-21T23:33:53.2124996Z PLATFORM: Espressif 32 (6.11.0) > Heltec WiFi LoRa 32 (V3)
+2025-09-21T23:33:53.2125926Z HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+2025-09-21T23:33:53.2127293Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:33:53.2128646Z PACKAGES: 
+2025-09-21T23:33:53.2129402Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:33:53.2129982Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:33:53.2130455Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:33:53.2130971Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:33:53.2436488Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:33:53.2437770Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:33:53.3762193Z [nanopb] No generation needed.
+2025-09-21T23:33:53.8720039Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:33:56.2568597Z Downloading 0% 10%
+2025-09-21T23:33:56.2624205Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:33:56.2658659Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:33:56.3959637Z [nanopb] No generation needed.
+2025-09-21T23:33:56.5376720Z Found 96 compatible libraries
+2025-09-21T23:33:56.5377126Z Scanning dependencies...
+2025-09-21T23:34:07.5033931Z Dependency Graph
+2025-09-21T23:34:07.5034876Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:34:07.5038141Z |-- OneButton @ 2.6.1
+2025-09-21T23:34:07.5039849Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:34:07.5040258Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:34:07.5040718Z |-- ArduinoThread @ 0.0.0+20250919055017
+2025-09-21T23:34:07.5042108Z |-- Nanopb @ 0.4.91
+2025-09-21T23:34:07.5042544Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:34:07.5044630Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:34:07.5045731Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:34:07.5047870Z |-- NTPClient @ 3.2.1
+2025-09-21T23:34:07.5049676Z |-- Syslog @ 2.0.0
+2025-09-21T23:34:07.5051818Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:34:07.5055375Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:34:07.5057479Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:34:07.5057929Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:34:07.5061293Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:34:07.5061742Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:34:07.5064431Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:34:07.5064957Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:34:07.5067004Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:34:07.5069114Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:34:07.5071340Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:34:07.5073087Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:34:07.5075092Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:34:07.5077461Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:34:07.5080406Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:34:07.5081970Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:34:07.5084066Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:34:07.5086447Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:34:07.5087994Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:34:07.5090729Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:34:07.5091561Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:34:07.5093591Z |-- INA226 @ 0.6.4
+2025-09-21T23:34:07.5096401Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:34:07.5097704Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:34:07.5098747Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:34:07.5100722Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:34:07.5104250Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:34:07.5104668Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:34:07.5111979Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:34:07.5112710Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:34:07.5117265Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:34:07.5117706Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:34:07.5118421Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:34:07.5119071Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:34:07.5119514Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:34:07.5125286Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:34:07.5127140Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:07.5129332Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:34:07.5129711Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:34:07.5130146Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:34:07.5130585Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:34:07.5130962Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:34:07.5136390Z |-- RadioLib @ 7.3.0
+2025-09-21T23:34:07.5137417Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:34:07.5138070Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:34:07.5138442Z |-- libpax @ 1.1.0
+2025-09-21T23:34:07.5138637Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:34:07.5140121Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:34:07.5143110Z |-- Crypto @ 0.4.0
+2025-09-21T23:34:07.5144171Z |-- SD @ 2.0.0
+2025-09-21T23:34:07.5145021Z |-- SPI @ 2.0.0
+2025-09-21T23:34:07.5145331Z |-- WiFi @ 2.0.0
+2025-09-21T23:34:07.5145629Z |-- Wire @ 2.0.0
+2025-09-21T23:34:07.5145966Z |-- Preferences @ 2.0.0
+2025-09-21T23:34:07.5146410Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:34:07.5149478Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:34:07.5150110Z |-- WebServer @ 2.0.0
+2025-09-21T23:34:07.5150429Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:34:07.5150717Z |-- LittleFS @ 2.0.0
+2025-09-21T23:34:07.5151045Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:34:07.5152979Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:34:08.0691446Z Building in release mode
+2025-09-21T23:34:08.1924487Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on heltec-v3
+2025-09-21T23:34:08.1943371Z Using flags:
+2025-09-21T23:34:08.1943735Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:34:08.1944135Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:34:08.1944485Z -DAPP_ENV=heltec-v3
+2025-09-21T23:34:08.1944851Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:08.1945273Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:34:08.1946017Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:34:08.1947019Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:34:08.5192976Z Compiling .pio/build/heltec-v3/src/BluetoothCommon.cpp.o
+2025-09-21T23:34:08.6605457Z Compiling .pio/build/heltec-v3/src/DebugConfiguration.cpp.o
+2025-09-21T23:34:08.6859404Z Compiling .pio/build/heltec-v3/src/DisplayFormatters.cpp.o
+2025-09-21T23:34:08.7133617Z Compiling .pio/build/heltec-v3/src/FSCommon.cpp.o
+2025-09-21T23:34:09.7834659Z Compiling .pio/build/heltec-v3/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:34:09.8743809Z Compiling .pio/build/heltec-v3/src/Fusion/FusionCompass.c.o
+2025-09-21T23:34:09.9343975Z Compiling .pio/build/heltec-v3/src/Fusion/FusionOffset.c.o
+2025-09-21T23:34:09.9597154Z Compiling .pio/build/heltec-v3/src/GpioLogic.cpp.o
+2025-09-21T23:34:10.0756854Z Compiling .pio/build/heltec-v3/src/Led.cpp.o
+2025-09-21T23:34:10.1000615Z Compiling .pio/build/heltec-v3/src/Observer.cpp.o
+2025-09-21T23:34:10.2896362Z Compiling .pio/build/heltec-v3/src/Power.cpp.o
+2025-09-21T23:34:11.1156387Z Compiling .pio/build/heltec-v3/src/PowerFSM.cpp.o
+2025-09-21T23:34:11.2534011Z Compiling .pio/build/heltec-v3/src/PowerMon.cpp.o
+2025-09-21T23:34:11.8672883Z Compiling .pio/build/heltec-v3/src/RedirectablePrint.cpp.o
+2025-09-21T23:34:12.3069606Z Compiling .pio/build/heltec-v3/src/SPILock.cpp.o
+2025-09-21T23:34:12.5899534Z Compiling .pio/build/heltec-v3/src/SafeFile.cpp.o
+2025-09-21T23:34:13.0224022Z Compiling .pio/build/heltec-v3/src/SerialConsole.cpp.o
+2025-09-21T23:34:13.4502849Z Compiling .pio/build/heltec-v3/src/airtime.cpp.o
+2025-09-21T23:34:13.6859678Z Compiling .pio/build/heltec-v3/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:34:13.8675035Z Compiling .pio/build/heltec-v3/src/buzz/buzz.cpp.o
+2025-09-21T23:34:14.3450560Z Compiling .pio/build/heltec-v3/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:34:14.7154865Z Compiling .pio/build/heltec-v3/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:34:15.0060485Z Compiling .pio/build/heltec-v3/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:34:15.1601538Z Compiling .pio/build/heltec-v3/src/concurrency/Lock.cpp.o
+2025-09-21T23:34:15.5529313Z Compiling .pio/build/heltec-v3/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:34:15.9316940Z Compiling .pio/build/heltec-v3/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:34:16.1533996Z Compiling .pio/build/heltec-v3/src/concurrency/OSThread.cpp.o
+2025-09-21T23:34:16.3179806Z Compiling .pio/build/heltec-v3/src/detect/ScanI2C.cpp.o
+2025-09-21T23:34:16.4008569Z Compiling .pio/build/heltec-v3/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:34:16.7529579Z Compiling .pio/build/heltec-v3/src/gps/GPS.cpp.o
+2025-09-21T23:34:17.3525673Z Compiling .pio/build/heltec-v3/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:34:17.6870869Z Compiling .pio/build/heltec-v3/src/gps/GeoCoord.cpp.o
+2025-09-21T23:34:17.9324398Z Compiling .pio/build/heltec-v3/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:34:18.4370821Z Compiling .pio/build/heltec-v3/src/gps/RTC.cpp.o
+2025-09-21T23:34:18.6043498Z Compiling .pio/build/heltec-v3/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:34:18.9869909Z Compiling .pio/build/heltec-v3/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:34:19.7580125Z Compiling .pio/build/heltec-v3/src/graphics/Screen.cpp.o
+2025-09-21T23:34:19.7960486Z Compiling .pio/build/heltec-v3/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:34:20.1499181Z Compiling .pio/build/heltec-v3/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:34:20.2056014Z Compiling .pio/build/heltec-v3/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:34:20.5735156Z Compiling .pio/build/heltec-v3/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:34:20.6724894Z Compiling .pio/build/heltec-v3/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:34:21.3512826Z src/graphics/Screen.cpp: In function 'void graphics::drawFavNodeChatFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:21.3514153Z src/graphics/Screen.cpp:568:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:21.3514800Z      const int h     = display->height();
+2025-09-21T23:34:21.3515186Z                ^
+2025-09-21T23:34:21.3516055Z src/graphics/Screen.cpp: In function 'void graphics::drawChannelChatTabFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:21.3517221Z src/graphics/Screen.cpp:701:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:21.3517871Z      const int h     = display->height();
+2025-09-21T23:34:21.3518263Z                ^
+2025-09-21T23:34:21.3706528Z src/graphics/Screen.cpp: In constructor 'graphics::Screen::Screen(ScanI2C::DeviceAddress, meshtastic_Config_DisplayConfig_OledType, OLEDDISPLAY_GEOMETRY)':
+2025-09-21T23:34:21.3708176Z src/graphics/Screen.cpp:1120:24: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:21.3709329Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:21.3709830Z              ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:21.3710600Z src/graphics/Screen.cpp:1120:45: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:21.3711503Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:21.3712010Z                                   ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:21.3712809Z src/graphics/Screen.cpp:1120:66: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:21.3713685Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:21.3714199Z                                                        ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:21.4033719Z src/graphics/Screen.cpp: In member function 'int graphics::Screen::handleInputEvent(const InputEvent*)':
+2025-09-21T23:34:21.4041207Z src/graphics/Screen.cpp:2649:24: warning: unused variable 'shortPressAsDown' [-Wunused-variable]
+2025-09-21T23:34:21.4042468Z              const bool shortPressAsDown =
+2025-09-21T23:34:21.4042920Z                         ^~~~~~~~~~~~~~~~
+2025-09-21T23:34:21.8069547Z src/graphics/Screen.cpp: In member function 'virtual int32_t graphics::Screen::runOnce()':
+2025-09-21T23:34:21.8072732Z src/graphics/Screen.cpp:1578:47: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2025-09-21T23:34:21.8073621Z              NotificationRenderer::pauseBanner = false;
+2025-09-21T23:34:21.8104381Z              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+2025-09-21T23:34:21.8104823Z src/graphics/Screen.cpp:1579:9: note: here
+2025-09-21T23:34:21.8105549Z          case Cmd::STOP_BOOT_SCREEN:
+2025-09-21T23:34:21.8106400Z          ^~~~
+2025-09-21T23:34:21.8421360Z src/graphics/Screen.cpp: At global scope:
+2025-09-21T23:34:21.8424278Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:34:21.8433154Z  static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:34:21.8435240Z              ^~~~~~~~~~~~~~~~~
+2025-09-21T23:34:21.8438142Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:21.8439491Z  static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:34:21.8440060Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:21.8441676Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:34:21.8443277Z  static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:34:21.8444103Z              ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:21.9479199Z Compiling .pio/build/heltec-v3/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:34:22.1402300Z Compiling .pio/build/heltec-v3/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:34:22.3152911Z Compiling .pio/build/heltec-v3/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:34:23.0762307Z Compiling .pio/build/heltec-v3/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:34:23.2722723Z src/graphics/VirtualKeyboard.cpp: In member function 'void graphics::VirtualKeyboard::drawInputArea(OLEDDisplay*, int16_t, int16_t, int16_t)':
+2025-09-21T23:34:23.2724889Z src/graphics/VirtualKeyboard.cpp:356:23: warning: unused variable 'innerLeft' [-Wunused-variable]
+2025-09-21T23:34:23.2726439Z              const int innerLeft = boxX + 1;
+2025-09-21T23:34:23.2728403Z                        ^~~~~~~~~
+2025-09-21T23:34:23.2740717Z src/graphics/VirtualKeyboard.cpp:357:23: warning: unused variable 'innerRight' [-Wunused-variable]
+2025-09-21T23:34:23.2742149Z              const int innerRight = boxX + boxWidth - 2;
+2025-09-21T23:34:23.2743463Z                        ^~~~~~~~~~
+2025-09-21T23:34:23.5235519Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawDigitalClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:23.5244264Z src/graphics/draw/ClockRenderer.cpp:195:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:23.5245963Z      int line = 0;
+2025-09-21T23:34:23.5247041Z          ^~~~
+2025-09-21T23:34:23.5260192Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawAnalogClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:23.5280365Z src/graphics/draw/ClockRenderer.cpp:320:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:23.5281486Z      int line = 0;
+2025-09-21T23:34:23.5282652Z          ^~~~
+2025-09-21T23:34:23.8826421Z Compiling .pio/build/heltec-v3/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:34:23.9252560Z Compiling .pio/build/heltec-v3/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:34:23.9607996Z Compiling .pio/build/heltec-v3/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:34:25.1225580Z Compiling .pio/build/heltec-v3/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:34:25.2535771Z src/graphics/draw/NodeListRenderer.cpp: In function 'void graphics::NodeListRenderer::drawCompassArrow(OLEDDisplay*, meshtastic_NodeInfoLite*, int16_t, int16_t, int, float, double, double)':
+2025-09-21T23:34:25.2540345Z src/graphics/draw/NodeListRenderer.cpp:359:11: warning: unused variable 'angle' [-Wunused-variable]
+2025-09-21T23:34:25.2550885Z      float angle = relativeBearing * DEG_TO_RAD;
+2025-09-21T23:34:25.2558683Z            ^~~~~
+2025-09-21T23:34:25.2811528Z src/graphics/draw/MessageRenderer.cpp: In function 'void graphics::MessageRenderer::drawTextMessageFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:25.2814806Z src/graphics/draw/MessageRenderer.cpp:386:15: warning: unused variable 'page' [-Wunused-variable]
+2025-09-21T23:34:25.2815723Z          float page = (float)usableScrollHeight * 0.9f;  // 90% page
+2025-09-21T23:34:25.2816263Z                ^~~~
+2025-09-21T23:34:25.3748039Z src/graphics/draw/MenuHandler.cpp: In static member function 'static void graphics::menuHandler::wifiConfigMenu()':
+2025-09-21T23:34:25.3751326Z src/graphics/draw/MenuHandler.cpp:1315:22: warning: operation on 'count' may be undefined [-Wsequence-point]
+2025-09-21T23:34:25.3752232Z          options[count++] = labels[count];
+2025-09-21T23:34:25.3752655Z                  ~~~~~^~
+2025-09-21T23:34:25.6694913Z Compiling .pio/build/heltec-v3/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:34:25.9178351Z Compiling .pio/build/heltec-v3/src/graphics/emotes.cpp.o
+2025-09-21T23:34:26.5732199Z src/graphics/draw/NotificationRenderer.cpp: In static member function 'static void graphics::NotificationRenderer::drawTextInput(OLEDDisplay*, OLEDDisplayUiState*)':
+2025-09-21T23:34:26.5738614Z src/graphics/draw/NotificationRenderer.cpp:774:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:26.5741790Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:26.5772070Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:26.5773476Z src/graphics/draw/NotificationRenderer.cpp:775:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:26.5778211Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:26.5783020Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:26.5784276Z src/graphics/draw/NotificationRenderer.cpp:782:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:26.5788759Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:26.5794538Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:26.5795879Z src/graphics/draw/NotificationRenderer.cpp:783:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:26.5797366Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:26.5803513Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:26.6938264Z Compiling .pio/build/heltec-v3/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:34:26.7610706Z Compiling .pio/build/heltec-v3/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:34:26.8124841Z Compiling .pio/build/heltec-v3/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:34:26.8640916Z Compiling .pio/build/heltec-v3/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:34:26.9191087Z Compiling .pio/build/heltec-v3/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:34:26.9754769Z Compiling .pio/build/heltec-v3/src/graphics/tftSetup.cpp.o
+2025-09-21T23:34:27.0234039Z Compiling .pio/build/heltec-v3/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:34:27.0767508Z Compiling .pio/build/heltec-v3/src/input/ButtonThread.cpp.o
+2025-09-21T23:34:27.2131714Z Compiling .pio/build/heltec-v3/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:34:27.8235983Z Compiling .pio/build/heltec-v3/src/input/InputBroker.cpp.o
+2025-09-21T23:34:28.1945387Z Compiling .pio/build/heltec-v3/src/input/LinuxInput.cpp.o
+2025-09-21T23:34:28.3650233Z Compiling .pio/build/heltec-v3/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:34:29.0861222Z Compiling .pio/build/heltec-v3/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:34:29.1704327Z Compiling .pio/build/heltec-v3/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:34:29.2281370Z Compiling .pio/build/heltec-v3/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:34:29.3776171Z Compiling .pio/build/heltec-v3/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:34:29.5569643Z Compiling .pio/build/heltec-v3/src/input/SeesawRotary.cpp.o
+2025-09-21T23:34:29.6102549Z Compiling .pio/build/heltec-v3/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:34:30.5641199Z Compiling .pio/build/heltec-v3/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:34:30.6688550Z Compiling .pio/build/heltec-v3/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:34:30.8324801Z Compiling .pio/build/heltec-v3/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:34:30.9028748Z Compiling .pio/build/heltec-v3/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:34:30.9576162Z Compiling .pio/build/heltec-v3/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:34:31.0087115Z Compiling .pio/build/heltec-v3/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:34:31.8414215Z Compiling .pio/build/heltec-v3/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:34:32.0436071Z Compiling .pio/build/heltec-v3/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:34:32.2760218Z Compiling .pio/build/heltec-v3/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:34:32.7973581Z Compiling .pio/build/heltec-v3/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:34:33.2146792Z Compiling .pio/build/heltec-v3/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:34:33.3822657Z Compiling .pio/build/heltec-v3/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:34:33.5915248Z Compiling .pio/build/heltec-v3/src/input/i2cButton.cpp.o
+2025-09-21T23:34:34.1370505Z Compiling .pio/build/heltec-v3/src/input/kbI2cBase.cpp.o
+2025-09-21T23:34:34.5153529Z Compiling .pio/build/heltec-v3/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:34:34.7793174Z Compiling .pio/build/heltec-v3/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:34:35.3239231Z Compiling .pio/build/heltec-v3/src/main.cpp.o
+2025-09-21T23:34:35.7067642Z Compiling .pio/build/heltec-v3/src/memGet.cpp.o
+2025-09-21T23:34:35.9703999Z Compiling .pio/build/heltec-v3/src/mesh/Channels.cpp.o
+2025-09-21T23:34:36.5270797Z Compiling .pio/build/heltec-v3/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:34:36.8948042Z Compiling .pio/build/heltec-v3/src/mesh/Default.cpp.o
+2025-09-21T23:34:36.9346478Z src/main.cpp: In function 'void setup()':
+2025-09-21T23:34:36.9347374Z src/main.cpp:1257:104: warning: 'new' of type 'SX1262Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:34:36.9351655Z          auto *sxIf = new SX1262Interface(RadioLibHAL, SX126X_CS, SX126X_DIO1, SX126X_RESET, SX126X_BUSY);
+2025-09-21T23:34:36.9354913Z                                                                                                         ^
+2025-09-21T23:34:36.9355751Z src/main.cpp:1257:104: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:34:36.9356706Z src/main.cpp:1257:104: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:34:37.4996587Z Compiling .pio/build/heltec-v3/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:34:37.8618193Z Compiling .pio/build/heltec-v3/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:34:37.9455153Z Compiling .pio/build/heltec-v3/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:34:38.1767190Z Compiling .pio/build/heltec-v3/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:34:38.8061979Z Compiling .pio/build/heltec-v3/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:34:39.3072840Z Compiling .pio/build/heltec-v3/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:34:39.5502914Z Compiling .pio/build/heltec-v3/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:34:39.5760938Z Compiling .pio/build/heltec-v3/src/mesh/MeshModule.cpp.o
+2025-09-21T23:34:40.1765455Z Compiling .pio/build/heltec-v3/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:34:40.6860934Z Compiling .pio/build/heltec-v3/src/mesh/MeshService.cpp.o
+2025-09-21T23:34:40.9068442Z Compiling .pio/build/heltec-v3/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:34:41.1573118Z Compiling .pio/build/heltec-v3/src/mesh/NodeDB.cpp.o
+2025-09-21T23:34:41.5764038Z Compiling .pio/build/heltec-v3/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:34:42.3987770Z Compiling .pio/build/heltec-v3/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:34:42.7487081Z Compiling .pio/build/heltec-v3/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:34:42.9073554Z Compiling .pio/build/heltec-v3/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:34:43.3860410Z Compiling .pio/build/heltec-v3/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:34:44.0392527Z Compiling .pio/build/heltec-v3/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:34:44.2931130Z Compiling .pio/build/heltec-v3/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:34:44.6042286Z Compiling .pio/build/heltec-v3/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:34:45.3614164Z Compiling .pio/build/heltec-v3/src/mesh/Router.cpp.o
+2025-09-21T23:34:45.5985168Z Compiling .pio/build/heltec-v3/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:34:45.9632567Z Compiling .pio/build/heltec-v3/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:34:46.0222865Z Compiling .pio/build/heltec-v3/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:34:46.7367265Z Compiling .pio/build/heltec-v3/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:34:47.3299709Z Compiling .pio/build/heltec-v3/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:34:47.4143340Z Compiling .pio/build/heltec-v3/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:34:47.4363501Z Compiling .pio/build/heltec-v3/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:34:48.1466010Z Compiling .pio/build/heltec-v3/src/mesh/Throttle.cpp.o
+2025-09-21T23:34:48.6292055Z Compiling .pio/build/heltec-v3/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:34:48.7111668Z Compiling .pio/build/heltec-v3/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:34:48.7771861Z Compiling .pio/build/heltec-v3/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:34:48.8270648Z Compiling .pio/build/heltec-v3/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:34:48.9120140Z Compiling .pio/build/heltec-v3/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:34:49.7627536Z src/mesh/aes-ccm.cpp: In function 'int constant_time_compare(const void*, const void*, size_t)':
+2025-09-21T23:34:49.7628690Z src/mesh/aes-ccm.cpp:24:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:49.7632865Z      const volatile uint8_t *volatile a = (const volatile uint8_t *volatile)a_;
+2025-09-21T23:34:49.7633697Z                                                                             ^~
+2025-09-21T23:34:49.7634535Z src/mesh/aes-ccm.cpp:25:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:49.7635547Z      const volatile uint8_t *volatile b = (const volatile uint8_t *volatile)b_;
+2025-09-21T23:34:49.7636193Z                                                                             ^~
+2025-09-21T23:34:49.8890013Z Compiling .pio/build/heltec-v3/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:34:49.9273825Z Compiling .pio/build/heltec-v3/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:34:49.9846840Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:34:50.1052582Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:34:50.1691094Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:34:50.1985950Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:34:50.2302263Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:34:50.3066748Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:34:50.3345109Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:34:50.3585231Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:34:50.4639961Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:34:50.4952284Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:34:50.5203275Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:34:50.6210737Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:34:50.6503901Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:34:50.7824500Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:34:50.8143323Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:34:50.9084080Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:34:50.9686904Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:34:50.9972573Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:34:51.0182098Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:34:51.0421131Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:34:51.1072226Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:34:51.1340127Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:34:51.1556519Z Compiling .pio/build/heltec-v3/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:34:51.2969836Z Compiling .pio/build/heltec-v3/src/mesh/http/ContentHandler.cpp.o
+2025-09-21T23:34:51.3200826Z Compiling .pio/build/heltec-v3/src/mesh/http/ContentHelper.cpp.o
+2025-09-21T23:34:51.3459639Z Compiling .pio/build/heltec-v3/src/mesh/http/WebServer.cpp.o
+2025-09-21T23:34:51.3723336Z Compiling .pio/build/heltec-v3/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:34:51.9964012Z In file included from /pio/workspace/libdeps/heltec-v3/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:51.9970369Z                  from /pio/workspace/libdeps/heltec-v3/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:51.9971209Z                  from src/mesh/http/WebServer.cpp:44:
+2025-09-21T23:34:51.9972471Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:51.9973664Z  #define NO_DATA         211
+2025-09-21T23:34:51.9974102Z  
+2025-09-21T23:34:51.9974738Z In file included from /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:51.9975564Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:51.9976149Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:51.9976698Z                  from src/main.h:69,
+2025-09-21T23:34:51.9977207Z                  from src/mesh/http/WebServer.cpp:5:
+2025-09-21T23:34:51.9978181Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:51.9979318Z  #define NO_DATA                          -32768
+2025-09-21T23:34:51.9979846Z  
+2025-09-21T23:34:52.0055647Z In file included from /pio/workspace/libdeps/heltec-v3/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:52.0061894Z                  from /pio/workspace/libdeps/heltec-v3/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:52.0062620Z                  from src/mesh/http/ContentHandler.cpp:41:
+2025-09-21T23:34:52.0063760Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:52.0065172Z  #define NO_DATA         211
+2025-09-21T23:34:52.0065507Z  
+2025-09-21T23:34:52.0066027Z In file included from /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:52.0066799Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:52.0067277Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:52.0067717Z                  from src/main.h:69,
+2025-09-21T23:34:52.0068126Z                  from src/mesh/http/ContentHandler.cpp:6:
+2025-09-21T23:34:52.0069172Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:52.0070264Z  #define NO_DATA                          -32768
+2025-09-21T23:34:52.0070678Z  
+2025-09-21T23:34:52.0679430Z Compiling .pio/build/heltec-v3/src/mesh/wifi/WiFiAPClient.cpp.o
+2025-09-21T23:34:52.5707234Z Compiling .pio/build/heltec-v3/src/meshUtils.cpp.o
+2025-09-21T23:34:53.3305135Z Compiling .pio/build/heltec-v3/src/modules/AdminModule.cpp.o
+2025-09-21T23:34:53.8378332Z Compiling .pio/build/heltec-v3/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:34:53.9223502Z Compiling .pio/build/heltec-v3/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:34:53.9804807Z Compiling .pio/build/heltec-v3/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:34:55.4712087Z src/modules/CannedMessageModule.cpp: In member function 'virtual void CannedMessageModule::drawFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:55.4716222Z src/modules/CannedMessageModule.cpp:2347:17: warning: unused variable 'textYOffset' [-Wunused-variable]
+2025-09-21T23:34:55.4718163Z              int textYOffset = (rowHeight - FONT_HEIGHT_SMALL) / 2;
+2025-09-21T23:34:55.4718680Z                  ^~~~~~~~~~~
+2025-09-21T23:34:55.4980015Z Compiling .pio/build/heltec-v3/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:34:55.7187053Z Compiling .pio/build/heltec-v3/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:34:55.7586547Z src/modules/CannedMessageModule.cpp: At global scope:
+2025-09-21T23:34:55.7588279Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:55.7589907Z  static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:34:55.7590534Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:55.7799667Z Compiling .pio/build/heltec-v3/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:34:56.0430863Z Compiling .pio/build/heltec-v3/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:34:56.5615228Z Compiling .pio/build/heltec-v3/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:34:57.4370805Z Compiling .pio/build/heltec-v3/src/modules/Modules.cpp.o
+2025-09-21T23:34:57.4799986Z Compiling .pio/build/heltec-v3/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:34:57.6840070Z Compiling .pio/build/heltec-v3/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:34:58.5024539Z Compiling .pio/build/heltec-v3/src/modules/PositionModule.cpp.o
+2025-09-21T23:34:59.0803243Z Compiling .pio/build/heltec-v3/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:34:59.4299877Z Compiling .pio/build/heltec-v3/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:34:59.5450170Z Compiling .pio/build/heltec-v3/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:35:00.4770926Z Compiling .pio/build/heltec-v3/src/modules/ReplyModule.cpp.o
+2025-09-21T23:35:00.9056030Z Compiling .pio/build/heltec-v3/src/modules/RoutingModule.cpp.o
+2025-09-21T23:35:00.9294823Z Compiling .pio/build/heltec-v3/src/modules/SerialModule.cpp.o
+2025-09-21T23:35:01.4096866Z Compiling .pio/build/heltec-v3/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:35:02.3199223Z Compiling .pio/build/heltec-v3/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:35:02.7777508Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:35:02.8171830Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:35:03.1523384Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:35:04.3016355Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:35:04.7445548Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:35:04.7842644Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:35:05.3557587Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:35:05.4964939Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:35:06.2106856Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:35:06.6910143Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:35:06.7221393Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:35:06.8418205Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:35:07.5936693Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:35:08.0322826Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:35:08.0709229Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:35:08.1856753Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:35:08.9513803Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:35:09.3665332Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:35:09.4172019Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:35:09.5120472Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:35:10.2846411Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:35:10.6934082Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:35:10.7491300Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:35:10.8352191Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:35:11.4402897Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:35:12.0176034Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:35:12.1791309Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:35:12.2642658Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:35:12.6079050Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:35:13.3635373Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:35:13.4931136Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:35:13.5818545Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:35:13.9909978Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:35:14.6770771Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:35:14.7459985Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:35:14.8185606Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:35:15.1621382Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:35:16.0238311Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:35:16.0575964Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:35:16.1392315Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:35:16.4950580Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:35:17.1724581Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:35:17.3886828Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:35:17.4794999Z Compiling .pio/build/heltec-v3/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:35:17.5351062Z Compiling .pio/build/heltec-v3/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:35:18.2761304Z Compiling .pio/build/heltec-v3/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:35:18.5394883Z Compiling .pio/build/heltec-v3/src/modules/WaypointModule.cpp.o
+2025-09-21T23:35:18.6818343Z Compiling .pio/build/heltec-v3/src/modules/esp32/AudioModule.cpp.o
+2025-09-21T23:35:19.2850910Z Compiling .pio/build/heltec-v3/src/modules/esp32/PaxcounterModule.cpp.o
+2025-09-21T23:35:19.8271840Z Compiling .pio/build/heltec-v3/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:35:20.1398374Z Compiling .pio/build/heltec-v3/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:35:20.3642257Z Compiling .pio/build/heltec-v3/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:35:20.7529912Z Compiling .pio/build/heltec-v3/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:35:21.4004100Z Compiling .pio/build/heltec-v3/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:35:21.7584922Z Compiling .pio/build/heltec-v3/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:35:21.9492151Z Compiling .pio/build/heltec-v3/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:35:22.4800601Z Compiling .pio/build/heltec-v3/src/motion/MotionSensor.cpp.o
+2025-09-21T23:35:23.0154966Z Compiling .pio/build/heltec-v3/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:35:23.3514009Z Compiling .pio/build/heltec-v3/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:35:23.5545499Z Compiling .pio/build/heltec-v3/src/mqtt/MQTT.cpp.o
+2025-09-21T23:35:24.1099694Z Compiling .pio/build/heltec-v3/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:35:24.5926299Z Compiling .pio/build/heltec-v3/src/network-stubs.cpp.o
+2025-09-21T23:35:25.0075863Z Compiling .pio/build/heltec-v3/src/nimble/NimbleBluetooth.cpp.o
+2025-09-21T23:35:25.0442150Z Compiling .pio/build/heltec-v3/src/platform/esp32/BleOta.cpp.o
+2025-09-21T23:35:25.7246511Z Compiling .pio/build/heltec-v3/src/platform/esp32/ESP32CryptoEngine.cpp.o
+2025-09-21T23:35:25.8244434Z Compiling .pio/build/heltec-v3/src/platform/esp32/SimpleAllocator.cpp.o
+2025-09-21T23:35:26.1813074Z Compiling .pio/build/heltec-v3/src/platform/esp32/WiFiOTA.cpp.o
+2025-09-21T23:35:26.9411761Z Compiling .pio/build/heltec-v3/src/platform/esp32/iram-quirk.c.o
+2025-09-21T23:35:27.0245116Z Compiling .pio/build/heltec-v3/src/platform/esp32/main-esp32.cpp.o
+2025-09-21T23:35:27.0797700Z Compiling .pio/build/heltec-v3/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:35:27.3157203Z Compiling .pio/build/heltec-v3/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:35:27.3870002Z Compiling .pio/build/heltec-v3/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:35:28.2377442Z Compiling .pio/build/heltec-v3/src/serialization/JSON.cpp.o
+2025-09-21T23:35:28.4678362Z Compiling .pio/build/heltec-v3/src/serialization/JSONValue.cpp.o
+2025-09-21T23:35:28.5493082Z Compiling .pio/build/heltec-v3/src/serialization/MeshPacketSerializer.cpp.o
+2025-09-21T23:35:28.8205419Z Compiling .pio/build/heltec-v3/src/serialization/MeshPacketSerializer_nRF52.cpp.o
+2025-09-21T23:35:28.8657194Z Compiling .pio/build/heltec-v3/src/serialization/cobs.cpp.o
+2025-09-21T23:35:28.9089328Z Compiling .pio/build/heltec-v3/src/sleep.cpp.o
+2025-09-21T23:35:29.6165471Z Compiling .pio/build/heltec-v3/src/xmodem.cpp.o
+2025-09-21T23:35:29.9948367Z Building .pio/build/heltec-v3/bootloader.bin
+2025-09-21T23:35:30.0927927Z esptool.py v4.5.1
+2025-09-21T23:35:30.0930251Z Creating esp32s3 image...
+2025-09-21T23:35:30.0932833Z Merged 1 ELF section
+2025-09-21T23:35:30.0935742Z Successfully created esp32s3 image.
+2025-09-21T23:35:30.1097385Z Generating partitions .pio/build/heltec-v3/partitions.bin
+2025-09-21T23:35:30.3424309Z Compiling .pio/build/heltec-v3/lib062/Wire/Wire.cpp.o
+2025-09-21T23:35:30.5355775Z Compiling .pio/build/heltec-v3/lib207/SPI/SPI.cpp.o
+2025-09-21T23:35:30.9994926Z Compiling .pio/build/heltec-v3/lib0e0/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:35:31.0284637Z Compiling .pio/build/heltec-v3/lib0e0/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:35:31.0440850Z Archiving .pio/build/heltec-v3/lib062/libWire.a
+2025-09-21T23:35:31.0496950Z Indexing .pio/build/heltec-v3/lib062/libWire.a
+2025-09-21T23:35:31.0690774Z Compiling .pio/build/heltec-v3/lib0e0/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:35:31.2156317Z Archiving .pio/build/heltec-v3/lib207/libSPI.a
+2025-09-21T23:35:31.2215946Z Indexing .pio/build/heltec-v3/lib207/libSPI.a
+2025-09-21T23:35:31.3789862Z Compiling .pio/build/heltec-v3/lib434/OneButton/OneButton.cpp.o
+2025-09-21T23:35:31.7561570Z Compiling .pio/build/heltec-v3/lib434/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:35:31.8981657Z Compiling .pio/build/heltec-v3/lib327/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:35:31.9102521Z Archiving .pio/build/heltec-v3/lib0e0/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:31.9179196Z Indexing .pio/build/heltec-v3/lib0e0/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:32.0905294Z Compiling .pio/build/heltec-v3/lib926/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:35:32.2541844Z Compiling .pio/build/heltec-v3/lib6e2/ArduinoThread/Thread.cpp.o
+2025-09-21T23:35:32.3683041Z Archiving .pio/build/heltec-v3/lib434/libOneButton.a
+2025-09-21T23:35:32.3743650Z Indexing .pio/build/heltec-v3/lib434/libOneButton.a
+2025-09-21T23:35:32.3914554Z Compiling .pio/build/heltec-v3/lib6e2/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:35:32.5445576Z Archiving .pio/build/heltec-v3/lib327/libarduino-fsm.a
+2025-09-21T23:35:32.5507702Z Indexing .pio/build/heltec-v3/lib327/libarduino-fsm.a
+2025-09-21T23:35:32.5699233Z Compiling .pio/build/heltec-v3/lib27d/Nanopb/pb_common.c.o
+2025-09-21T23:35:32.6847348Z Compiling .pio/build/heltec-v3/lib27d/Nanopb/pb_decode.c.o
+2025-09-21T23:35:32.7990497Z Archiving .pio/build/heltec-v3/lib926/libTinyGPSPlus.a
+2025-09-21T23:35:32.8067813Z Indexing .pio/build/heltec-v3/lib926/libTinyGPSPlus.a
+2025-09-21T23:35:32.8256464Z Compiling .pio/build/heltec-v3/lib27d/Nanopb/pb_encode.c.o
+2025-09-21T23:35:32.8766687Z Compiling .pio/build/heltec-v3/lib638/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:35:33.0204723Z Compiling .pio/build/heltec-v3/lib02b/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:35:33.0349834Z Archiving .pio/build/heltec-v3/lib6e2/libArduinoThread.a
+2025-09-21T23:35:33.0362921Z Archiving .pio/build/heltec-v3/lib638/libErriezCRC32.a
+2025-09-21T23:35:33.0380794Z Archiving .pio/build/heltec-v3/lib27d/libNanopb.a
+2025-09-21T23:35:33.0417484Z Indexing .pio/build/heltec-v3/lib6e2/libArduinoThread.a
+2025-09-21T23:35:33.0431192Z Indexing .pio/build/heltec-v3/lib638/libErriezCRC32.a
+2025-09-21T23:35:33.0446161Z Indexing .pio/build/heltec-v3/lib27d/libNanopb.a
+2025-09-21T23:35:33.1429656Z Compiling .pio/build/heltec-v3/lib97a/TBPubSubClient/PubSubClient.cpp.o
+2025-09-21T23:35:33.2444649Z Compiling .pio/build/heltec-v3/libdbb/NTPClient/NTPClient.cpp.o
+2025-09-21T23:35:33.4051439Z Compiling .pio/build/heltec-v3/lib1b0/Syslog/Syslog.cpp.o
+2025-09-21T23:35:33.6020326Z Archiving .pio/build/heltec-v3/lib02b/libNonBlockingRTTTL.a
+2025-09-21T23:35:33.6091124Z Indexing .pio/build/heltec-v3/lib02b/libNonBlockingRTTTL.a
+2025-09-21T23:35:33.7934384Z Compiling .pio/build/heltec-v3/libaf8/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:35:33.9092769Z Archiving .pio/build/heltec-v3/lib97a/libTBPubSubClient.a
+2025-09-21T23:35:33.9159378Z Indexing .pio/build/heltec-v3/lib97a/libTBPubSubClient.a
+2025-09-21T23:35:33.9177626Z Archiving .pio/build/heltec-v3/libdbb/libNTPClient.a
+2025-09-21T23:35:33.9280430Z Indexing .pio/build/heltec-v3/libdbb/libNTPClient.a
+2025-09-21T23:35:33.9340936Z Compiling .pio/build/heltec-v3/libaf8/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:35:33.9632680Z Compiling .pio/build/heltec-v3/libaf8/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:35:34.0806890Z Archiving .pio/build/heltec-v3/lib1b0/libSyslog.a
+2025-09-21T23:35:34.0879986Z Indexing .pio/build/heltec-v3/lib1b0/libSyslog.a
+2025-09-21T23:35:34.1064829Z Compiling .pio/build/heltec-v3/libaf8/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:35:34.6051002Z Compiling .pio/build/heltec-v3/lib8bd/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:35:34.7175737Z Compiling .pio/build/heltec-v3/lib547/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:35:34.8786915Z Compiling .pio/build/heltec-v3/lib255/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:35:34.8947282Z Archiving .pio/build/heltec-v3/libaf8/libAdafruit BusIO.a
+2025-09-21T23:35:34.9038547Z Indexing .pio/build/heltec-v3/libaf8/libAdafruit BusIO.a
+2025-09-21T23:35:35.0963656Z Compiling .pio/build/heltec-v3/lib3be/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:35:35.2022272Z Archiving .pio/build/heltec-v3/lib8bd/libAdafruit Unified Sensor.a
+2025-09-21T23:35:35.2084223Z Indexing .pio/build/heltec-v3/lib8bd/libAdafruit Unified Sensor.a
+2025-09-21T23:35:35.3750371Z Compiling .pio/build/heltec-v3/libe82/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:35:35.4164161Z Archiving .pio/build/heltec-v3/lib547/libAdafruit BMP280 Library.a
+2025-09-21T23:35:35.4215067Z Indexing .pio/build/heltec-v3/lib547/libAdafruit BMP280 Library.a
+2025-09-21T23:35:35.5724070Z Compiling .pio/build/heltec-v3/lib08c/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:35:35.5839210Z Archiving .pio/build/heltec-v3/lib255/libAdafruit BMP085 Library.a
+2025-09-21T23:35:35.5903678Z Indexing .pio/build/heltec-v3/lib255/libAdafruit BMP085 Library.a
+2025-09-21T23:35:35.7554588Z Compiling .pio/build/heltec-v3/libdc0/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:35:35.7866908Z Archiving .pio/build/heltec-v3/lib3be/libAdafruit BME280 Library.a
+2025-09-21T23:35:35.7945237Z Indexing .pio/build/heltec-v3/lib3be/libAdafruit BME280 Library.a
+2025-09-21T23:35:35.9843644Z Compiling .pio/build/heltec-v3/lib568/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:35:36.0841163Z Archiving .pio/build/heltec-v3/libe82/libAdafruit DPS310.a
+2025-09-21T23:35:36.0911314Z Indexing .pio/build/heltec-v3/libe82/libAdafruit DPS310.a
+2025-09-21T23:35:36.2516409Z Compiling .pio/build/heltec-v3/libc35/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:35:36.2677538Z Archiving .pio/build/heltec-v3/lib08c/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:36.2746544Z Indexing .pio/build/heltec-v3/lib08c/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:36.3011366Z Compiling .pio/build/heltec-v3/libc35/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:35:36.4115608Z Archiving .pio/build/heltec-v3/libdc0/libAdafruit INA260 Library.a
+2025-09-21T23:35:36.4177491Z Indexing .pio/build/heltec-v3/libdc0/libAdafruit INA260 Library.a
+2025-09-21T23:35:36.4353412Z Compiling .pio/build/heltec-v3/libc35/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:35:36.6486426Z Archiving .pio/build/heltec-v3/lib568/libAdafruit INA219.a
+2025-09-21T23:35:36.6562398Z Indexing .pio/build/heltec-v3/lib568/libAdafruit INA219.a
+2025-09-21T23:35:36.6770481Z Compiling .pio/build/heltec-v3/libc35/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:35:36.9869305Z /pio/workspace/libdeps/heltec-v3/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp: In member function 'virtual bool Adafruit_PM25AQI_I2C::read(PM25_AQI_Data*)':
+2025-09-21T23:35:36.9877822Z /pio/workspace/libdeps/heltec-v3/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp:50:10: warning: unused variable 'bufLen' [-Wunused-variable]
+2025-09-21T23:35:36.9885690Z    size_t bufLen = sizeof(buffer);
+2025-09-21T23:35:36.9891527Z           ^~~~~~
+2025-09-21T23:35:37.0606658Z Compiling .pio/build/heltec-v3/liba95/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:35:37.2104686Z /pio/workspace/libdeps/heltec-v3/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:35:37.2113074Z /pio/workspace/libdeps/heltec-v3/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:172:11: warning: unused variable 'csum' [-Wunused-variable]
+2025-09-21T23:35:37.2114595Z    uint8_t csum = 0;
+2025-09-21T23:35:37.2120366Z            ^~~~
+2025-09-21T23:35:37.2360443Z Compiling .pio/build/heltec-v3/libb34/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:35:37.3547621Z Compiling .pio/build/heltec-v3/libbb9/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:35:37.3665383Z Archiving .pio/build/heltec-v3/libc35/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:37.3735425Z Indexing .pio/build/heltec-v3/libc35/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:37.5417886Z Compiling .pio/build/heltec-v3/lib0ef/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:35:37.7714145Z Archiving .pio/build/heltec-v3/liba95/libAdafruit MPU6050.a
+2025-09-21T23:35:37.7783118Z Indexing .pio/build/heltec-v3/liba95/libAdafruit MPU6050.a
+2025-09-21T23:35:37.8010476Z Compiling .pio/build/heltec-v3/lib0ef/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:35:37.9368361Z Archiving .pio/build/heltec-v3/libb34/libAdafruit LIS3DH.a
+2025-09-21T23:35:37.9440552Z Indexing .pio/build/heltec-v3/libb34/libAdafruit LIS3DH.a
+2025-09-21T23:35:37.9629033Z Compiling .pio/build/heltec-v3/lib0ef/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:35:38.0247480Z Archiving .pio/build/heltec-v3/libbb9/libAdafruit AHTX0.a
+2025-09-21T23:35:38.0327158Z Indexing .pio/build/heltec-v3/libbb9/libAdafruit AHTX0.a
+2025-09-21T23:35:38.0533065Z Compiling .pio/build/heltec-v3/lib0ef/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:35:38.2196591Z Compiling .pio/build/heltec-v3/lib0ef/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:35:38.5370099Z Compiling .pio/build/heltec-v3/lib0ef/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:35:38.6411508Z Compiling .pio/build/heltec-v3/lib0ef/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:35:38.7230988Z Compiling .pio/build/heltec-v3/lib0ef/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:35:39.0305357Z Compiling .pio/build/heltec-v3/lib414/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:35:39.3353197Z Compiling .pio/build/heltec-v3/liba54/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:35:39.5007792Z Compiling .pio/build/heltec-v3/lib86b/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:35:39.5171853Z Archiving .pio/build/heltec-v3/lib0ef/libAdafruit LSM6DS.a
+2025-09-21T23:35:39.5281391Z Indexing .pio/build/heltec-v3/lib0ef/libAdafruit LSM6DS.a
+2025-09-21T23:35:39.6701253Z Compiling .pio/build/heltec-v3/lib3c0/INA3221/INA3221.cpp.o
+2025-09-21T23:35:39.6818174Z Archiving .pio/build/heltec-v3/lib414/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:39.6870531Z Indexing .pio/build/heltec-v3/lib414/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:39.8515179Z Compiling .pio/build/heltec-v3/libdaa/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:35:39.9081515Z /pio/workspace/libdeps/heltec-v3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'float MLX90632::getObjectTempF()':
+2025-09-21T23:35:39.9083658Z /pio/workspace/libdeps/heltec-v3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:419:9: warning: unused variable 'AMB' [-Wunused-variable]
+2025-09-21T23:35:39.9085032Z    float AMB;
+2025-09-21T23:35:39.9085506Z          ^~~
+2025-09-21T23:35:39.9086690Z /pio/workspace/libdeps/heltec-v3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:420:9: warning: unused variable 'Sto' [-Wunused-variable]
+2025-09-21T23:35:39.9088035Z    float Sto;
+2025-09-21T23:35:39.9088487Z          ^~~
+2025-09-21T23:35:39.9125191Z /pio/workspace/libdeps/heltec-v3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'void MLX90632::setMeasurementRate(uint8_t)':
+2025-09-21T23:35:39.9131871Z /pio/workspace/libdeps/heltec-v3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:775:19: warning: unused variable 'returnError' [-Wunused-variable]
+2025-09-21T23:35:39.9133142Z   MLX90632::status returnError = setMode(MODE_STEP);
+2025-09-21T23:35:39.9133646Z                    ^~~~~~~~~~~
+2025-09-21T23:35:40.0309520Z Archiving .pio/build/heltec-v3/liba54/libEmotiBit MLX90632.a
+2025-09-21T23:35:40.0382024Z Indexing .pio/build/heltec-v3/liba54/libEmotiBit MLX90632.a
+2025-09-21T23:35:40.1904266Z Compiling .pio/build/heltec-v3/lib500/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:35:40.1996948Z Archiving .pio/build/heltec-v3/lib86b/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:40.2053623Z Indexing .pio/build/heltec-v3/lib86b/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:40.3681992Z Compiling .pio/build/heltec-v3/libaa6/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:35:40.3826466Z Archiving .pio/build/heltec-v3/lib3c0/libINA3221.a
+2025-09-21T23:35:40.3893514Z Indexing .pio/build/heltec-v3/lib3c0/libINA3221.a
+2025-09-21T23:35:40.5361762Z Compiling .pio/build/heltec-v3/libc15/INA226/INA226.cpp.o
+2025-09-21T23:35:40.5478186Z Archiving .pio/build/heltec-v3/libdaa/libQMC5883LCompass.a
+2025-09-21T23:35:40.5539207Z Indexing .pio/build/heltec-v3/libdaa/libQMC5883LCompass.a
+2025-09-21T23:35:40.7230092Z Compiling .pio/build/heltec-v3/lib9fa/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:35:40.8756680Z Archiving .pio/build/heltec-v3/lib500/libDFRobot_RTU.a
+2025-09-21T23:35:40.8860568Z Indexing .pio/build/heltec-v3/lib500/libDFRobot_RTU.a
+2025-09-21T23:35:40.9034086Z Compiling .pio/build/heltec-v3/lib9fa/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:35:41.0472281Z Archiving .pio/build/heltec-v3/libaa6/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:41.0538572Z Indexing .pio/build/heltec-v3/libaa6/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:41.0579528Z In file included from /pio/workspace/libdeps/heltec-v3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:41.0590006Z /pio/workspace/libdeps/heltec-v3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:42: warning: "I2C_BUFFER_LENGTH" redefined
+2025-09-21T23:35:41.0591124Z    #define I2C_BUFFER_LENGTH 32
+2025-09-21T23:35:41.0591491Z  
+2025-09-21T23:35:41.0592247Z In file included from /pio/workspace/libdeps/heltec-v3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:20,
+2025-09-21T23:35:41.0593566Z                  from /pio/workspace/libdeps/heltec-v3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:41.0595054Z /pio/core/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h:43: note: this is the location of the previous definition
+2025-09-21T23:35:41.0596348Z      #define I2C_BUFFER_LENGTH 128  // Default size, if none is set using Wire::setBuffersize(size_t)
+2025-09-21T23:35:41.0597005Z  
+2025-09-21T23:35:41.0740470Z Compiling .pio/build/heltec-v3/lib9fa/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:35:41.2028786Z Archiving .pio/build/heltec-v3/libc15/libINA226.a
+2025-09-21T23:35:41.2101329Z Indexing .pio/build/heltec-v3/libc15/libINA226.a
+2025-09-21T23:35:41.3056260Z /pio/workspace/libdeps/heltec-v3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp: In member function 'void MAX30105::enableSlot(uint8_t, uint8_t)':
+2025-09-21T23:35:41.3066121Z /pio/workspace/libdeps/heltec-v3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:292:11: warning: unused variable 'originalContents' [-Wunused-variable]
+2025-09-21T23:35:41.3073619Z    uint8_t originalContents;
+2025-09-21T23:35:41.3074486Z            ^~~~~~~~~~~~~~~~
+2025-09-21T23:35:41.3957056Z Compiling .pio/build/heltec-v3/lib8f7/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:35:41.4204185Z Compiling .pio/build/heltec-v3/lib8f7/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:35:41.4566993Z /pio/workspace/libdeps/heltec-v3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:35:41.4569344Z /pio/workspace/libdeps/heltec-v3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:35:41.4574345Z      if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:35:41.4576424Z          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:35:41.7040982Z Compiling .pio/build/heltec-v3/libcba/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:35:41.8715654Z Compiling .pio/build/heltec-v3/lib6d3/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:35:41.8878779Z Archiving .pio/build/heltec-v3/lib9fa/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:41.8962214Z Indexing .pio/build/heltec-v3/lib9fa/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:42.0663005Z Compiling .pio/build/heltec-v3/lib744/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:35:42.0789331Z Archiving .pio/build/heltec-v3/lib8f7/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:42.0875152Z Indexing .pio/build/heltec-v3/lib8f7/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:42.2774660Z Compiling .pio/build/heltec-v3/lib57a/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:35:42.3655663Z Archiving .pio/build/heltec-v3/libcba/libAdafruit LTR390 Library.a
+2025-09-21T23:35:42.3724644Z Indexing .pio/build/heltec-v3/libcba/libAdafruit LTR390 Library.a
+2025-09-21T23:35:42.5393710Z Compiling .pio/build/heltec-v3/lib84c/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:35:42.5547100Z Archiving .pio/build/heltec-v3/lib6d3/libAdafruit PCT2075.a
+2025-09-21T23:35:42.5630037Z Indexing .pio/build/heltec-v3/lib6d3/libAdafruit PCT2075.a
+2025-09-21T23:35:42.5804061Z Compiling .pio/build/heltec-v3/lib84c/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:35:42.6250770Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::sensorInit()':
+2025-09-21T23:35:42.6252928Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp:23:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:42.6255706Z    int8_t  rslt    = 0;
+2025-09-21T23:35:42.6256063Z            ^~~~
+2025-09-21T23:35:42.6273921Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setMeasurementXYZ(uint8_t, uint8_t, uint8_t)':
+2025-09-21T23:35:42.6276632Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp:263:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:42.6279388Z    int8_t  rslt;
+2025-09-21T23:35:42.6279726Z            ^~~~
+2025-09-21T23:35:42.6313804Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setInterruputLatch(uint8_t)':
+2025-09-21T23:35:42.6315458Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp:489:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:42.6316402Z    int8_t  rslt;
+2025-09-21T23:35:42.6316701Z            ^~~~
+2025-09-21T23:35:42.6352364Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::normalSelfTest()':
+2025-09-21T23:35:42.6353881Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp:706:10: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:42.6354813Z    int8_t rslt;
+2025-09-21T23:35:42.6355108Z           ^~~~
+2025-09-21T23:35:42.6358664Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::advSelfTest()':
+2025-09-21T23:35:42.6362020Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp:776:11: warning: unused variable 'selfTestCurrent' [-Wunused-variable]
+2025-09-21T23:35:42.6363460Z    uint8_t selfTestCurrent;
+2025-09-21T23:35:42.6382727Z            ^~~~~~~~~~~~~~~
+2025-09-21T23:35:42.6385114Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getDataOverrunState()':
+2025-09-21T23:35:42.6420648Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp:853:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:42.6422220Z    int8_t  rslt;
+2025-09-21T23:35:42.6422906Z            ^~~~
+2025-09-21T23:35:42.6424137Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setOverflowPin(uint8_t)':
+2025-09-21T23:35:42.6431304Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp:865:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:42.6432869Z    int8_t  rslt;
+2025-09-21T23:35:42.6433903Z            ^~~~
+2025-09-21T23:35:42.6435156Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getOverflowState()':
+2025-09-21T23:35:42.6436712Z /pio/workspace/libdeps/heltec-v3/DFRobot_BMM150/DFRobot_BMM150.cpp:878:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:42.6437657Z    int8_t  rslt;
+2025-09-21T23:35:42.6437974Z            ^~~~
+2025-09-21T23:35:42.8586070Z /pio/workspace/libdeps/heltec-v3/Adafruit TSL2561/Adafruit_TSL2561_U.cpp: In member function 'uint32_t Adafruit_TSL2561_Unified::calculateLux(uint16_t, uint16_t)':
+2025-09-21T23:35:42.8587972Z /pio/workspace/libdeps/heltec-v3/Adafruit TSL2561/Adafruit_TSL2561_U.cpp:421:14: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+2025-09-21T23:35:42.8589334Z    if ((ratio >= 0) && (ratio <= TSL2561_LUX_K1T)) {
+2025-09-21T23:35:42.8589829Z         ~~~~~~^~~~
+2025-09-21T23:35:42.9006063Z Compiling .pio/build/heltec-v3/lib1d0/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:35:42.9272446Z Archiving .pio/build/heltec-v3/lib744/libDFRobot_BMM150.a
+2025-09-21T23:35:42.9356135Z Indexing .pio/build/heltec-v3/lib744/libDFRobot_BMM150.a
+2025-09-21T23:35:42.9385438Z Archiving .pio/build/heltec-v3/lib57a/libAdafruit TSL2561.a
+2025-09-21T23:35:42.9449487Z Indexing .pio/build/heltec-v3/lib57a/libAdafruit TSL2561.a
+2025-09-21T23:35:43.1013045Z Compiling .pio/build/heltec-v3/lib0ee/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:35:43.2281226Z Archiving .pio/build/heltec-v3/lib84c/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:43.2420078Z Indexing .pio/build/heltec-v3/lib84c/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:43.3881534Z Compiling .pio/build/heltec-v3/lib605/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:35:43.4132017Z Compiling .pio/build/heltec-v3/lib605/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:35:43.4745729Z Archiving .pio/build/heltec-v3/lib1d0/libAdafruit MAX1704X.a
+2025-09-21T23:35:43.4811496Z Indexing .pio/build/heltec-v3/lib1d0/libAdafruit MAX1704X.a
+2025-09-21T23:35:43.4987810Z Compiling .pio/build/heltec-v3/lib605/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:35:43.8701751Z Archiving .pio/build/heltec-v3/lib0ee/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:43.8778069Z Indexing .pio/build/heltec-v3/lib0ee/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:44.0639308Z Compiling .pio/build/heltec-v3/lib73f/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:35:44.1936650Z Compiling .pio/build/heltec-v3/libdb5/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:35:44.2079311Z Archiving .pio/build/heltec-v3/lib605/libAdafruit LPS2X.a
+2025-09-21T23:35:44.2244700Z Indexing .pio/build/heltec-v3/lib605/libAdafruit LPS2X.a
+2025-09-21T23:35:44.3191207Z Compiling .pio/build/heltec-v3/libc92/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:35:44.4800860Z Compiling .pio/build/heltec-v3/lib8a6/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:35:44.6805869Z Archiving .pio/build/heltec-v3/lib73f/libAdafruit SHT31 Library.a
+2025-09-21T23:35:44.6880672Z Indexing .pio/build/heltec-v3/lib73f/libAdafruit SHT31 Library.a
+2025-09-21T23:35:44.8642634Z Compiling .pio/build/heltec-v3/libd85/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:35:44.8739879Z Archiving .pio/build/heltec-v3/libdb5/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:44.8797859Z Indexing .pio/build/heltec-v3/libdb5/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:44.8993496Z Compiling .pio/build/heltec-v3/lib4a0/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:35:44.9936361Z Archiving .pio/build/heltec-v3/libc92/libAdafruit SHT4x Library.a
+2025-09-21T23:35:45.0013164Z Indexing .pio/build/heltec-v3/libc92/libAdafruit SHT4x Library.a
+2025-09-21T23:35:45.1599612Z Compiling .pio/build/heltec-v3/lib4a0/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:35:45.1765117Z Archiving .pio/build/heltec-v3/lib8a6/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:45.1951241Z Indexing .pio/build/heltec-v3/lib8a6/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:45.3185859Z /pio/workspace/libdeps/heltec-v3/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp: In member function 'OPT3001_ErrorCode ClosedCube_OPT3001::begin(uint8_t)':
+2025-09-21T23:35:45.3190197Z /pio/workspace/libdeps/heltec-v3/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp:39:20: warning: unused variable 'error' [-Wunused-variable]
+2025-09-21T23:35:45.3192035Z   OPT3001_ErrorCode error = NO_ERROR;
+2025-09-21T23:35:45.3193730Z                     ^~~~~
+2025-09-21T23:35:45.3483924Z Compiling .pio/build/heltec-v3/lib9c1/bsec2/bsec2.cpp.o
+2025-09-21T23:35:45.3722191Z Compiling .pio/build/heltec-v3/lib9c1/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:35:45.3828065Z Archiving .pio/build/heltec-v3/libd85/libClosedCube OPT3001.a
+2025-09-21T23:35:45.3888734Z Indexing .pio/build/heltec-v3/libd85/libClosedCube OPT3001.a
+2025-09-21T23:35:45.5530757Z Compiling .pio/build/heltec-v3/libfa4/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:35:45.8247960Z Archiving .pio/build/heltec-v3/lib4a0/libBME68x Sensor library.a
+2025-09-21T23:35:45.8334463Z Indexing .pio/build/heltec-v3/lib4a0/libBME68x Sensor library.a
+2025-09-21T23:35:45.8552875Z Compiling .pio/build/heltec-v3/lib631/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:35:45.9611786Z Compiling .pio/build/heltec-v3/lib631/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:35:46.1461962Z Compiling .pio/build/heltec-v3/lib631/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:35:46.1600309Z Archiving .pio/build/heltec-v3/lib9c1/libbsec2.a
+2025-09-21T23:35:46.1689947Z Indexing .pio/build/heltec-v3/lib9c1/libbsec2.a
+2025-09-21T23:35:46.1722405Z Compiling .pio/build/heltec-v3/lib631/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:35:46.1889653Z Compiling .pio/build/heltec-v3/lib631/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:35:46.2112920Z Archiving .pio/build/heltec-v3/libfa4/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:46.2173014Z Indexing .pio/build/heltec-v3/libfa4/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:46.2350141Z Compiling .pio/build/heltec-v3/lib631/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:35:46.2962953Z Compiling .pio/build/heltec-v3/lib631/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:35:46.9289995Z Compiling .pio/build/heltec-v3/lib2c4/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:35:46.9443433Z Archiving .pio/build/heltec-v3/lib631/libSensirion Core.a
+2025-09-21T23:35:46.9626627Z Indexing .pio/build/heltec-v3/lib631/libSensirion Core.a
+2025-09-21T23:35:47.0615245Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/Hal.cpp.o
+2025-09-21T23:35:47.0839552Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/Module.cpp.o
+2025-09-21T23:35:47.1050838Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:35:47.5863342Z Archiving .pio/build/heltec-v3/lib2c4/libSensirion I2C SCD4x.a
+2025-09-21T23:35:47.5943412Z Indexing .pio/build/heltec-v3/lib2c4/libSensirion I2C SCD4x.a
+2025-09-21T23:35:47.7276471Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:35:47.7572736Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:35:47.7770588Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:35:47.8027350Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:35:47.8251045Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:35:47.8758193Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:35:48.4567014Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:35:48.5127023Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:35:48.5342616Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:35:48.5548794Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:35:49.2353633Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:35:49.2651559Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:35:49.2853507Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:35:49.3096702Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:35:49.9005763Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:35:49.9280814Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:35:49.9476305Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:35:49.9699369Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:35:50.5435052Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:35:50.5677909Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:35:50.6341865Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:35:50.6531266Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:35:51.2327943Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:35:51.3219818Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:35:51.3452222Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:35:51.3719763Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:35:51.9437543Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:35:52.0351896Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:35:52.0553731Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:35:52.0780454Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:35:52.6166647Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:35:52.7424908Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:35:52.7660357Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:35:52.8725431Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:35:53.2868697Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:35:53.4015800Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:35:53.4385034Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:35:53.6965454Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:35:53.9253545Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:35:54.0366975Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:35:54.0623441Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:35:54.0903256Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:35:54.3471836Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:35:54.6795538Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:35:54.7026422Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:35:54.7310739Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:35:55.0212967Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:35:55.1293569Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:35:55.1853098Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:35:55.2532187Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:35:55.3302133Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:35:55.3490343Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:35:55.3840261Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:35:55.4021604Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:35:55.9887910Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:35:56.0201449Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:35:56.0438994Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:35:56.0682795Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:35:56.6289761Z Compiling .pio/build/heltec-v3/lib3f6/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:35:56.8286094Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/ConnectionContext.cpp.o
+2025-09-21T23:35:56.8688612Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPConnection.cpp.o
+2025-09-21T23:35:56.8887000Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPHeader.cpp.o
+2025-09-21T23:35:57.2291388Z Archiving .pio/build/heltec-v3/lib3f6/libRadioLib.a
+2025-09-21T23:35:57.2694109Z Indexing .pio/build/heltec-v3/lib3f6/libRadioLib.a
+2025-09-21T23:35:57.3337200Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPHeaders.cpp.o
+2025-09-21T23:35:57.4871487Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPMultipartBodyParser.cpp.o
+2025-09-21T23:35:57.7794736Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPNode.cpp.o
+2025-09-21T23:35:58.1235223Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPRequest.cpp.o
+2025-09-21T23:35:58.1806374Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPResponse.cpp.o
+2025-09-21T23:35:58.4701469Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPSConnection.cpp.o
+2025-09-21T23:35:58.6202637Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPSServer.cpp.o
+2025-09-21T23:35:58.9250170Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPServer.cpp.o
+2025-09-21T23:35:58.9980627Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPURLEncodedBodyParser.cpp.o
+2025-09-21T23:35:59.3771841Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/HTTPValidator.cpp.o
+2025-09-21T23:35:59.5296324Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/ResolvedResource.cpp.o
+2025-09-21T23:35:59.7520155Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/ResourceNode.cpp.o
+2025-09-21T23:35:59.7920719Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/ResourceParameters.cpp.o
+2025-09-21T23:35:59.8235454Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/ResourceResolver.cpp.o
+2025-09-21T23:36:00.2614001Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/SSLCert.cpp.o
+2025-09-21T23:36:00.5169047Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/ValidatorFunctions.cpp.o
+2025-09-21T23:36:00.6409428Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/WebsocketHandler.cpp.o
+2025-09-21T23:36:00.8831359Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/WebsocketInputStreambuf.cpp.o
+2025-09-21T23:36:00.9744198Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/WebsocketNode.cpp.o
+2025-09-21T23:36:01.2245796Z Compiling .pio/build/heltec-v3/lib55f/esp32_https_server/util.cpp.o
+2025-09-21T23:36:01.7235346Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLE2904.cpp.o
+2025-09-21T23:36:01.7618120Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEAddress.cpp.o
+2025-09-21T23:36:01.8707796Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEAdvertisedDevice.cpp.o
+2025-09-21T23:36:01.9208257Z Archiving .pio/build/heltec-v3/lib55f/libesp32_https_server.a
+2025-09-21T23:36:01.9402267Z Indexing .pio/build/heltec-v3/lib55f/libesp32_https_server.a
+2025-09-21T23:36:01.9876377Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEAdvertising.cpp.o
+2025-09-21T23:36:02.3136028Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEBeacon.cpp.o
+2025-09-21T23:36:02.5133811Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLECharacteristic.cpp.o
+2025-09-21T23:36:02.7946497Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEClient.cpp.o
+2025-09-21T23:36:02.9253813Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEDescriptor.cpp.o
+2025-09-21T23:36:03.2123242Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEDevice.cpp.o
+2025-09-21T23:36:03.6125840Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEEddystoneTLM.cpp.o
+2025-09-21T23:36:03.7670243Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEEddystoneURL.cpp.o
+2025-09-21T23:36:03.9684374Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEExtAdvertising.cpp.o
+2025-09-21T23:36:04.0204061Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEHIDDevice.cpp.o
+2025-09-21T23:36:04.0630169Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLERemoteCharacteristic.cpp.o
+2025-09-21T23:36:04.2309152Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLERemoteDescriptor.cpp.o
+2025-09-21T23:36:04.3838742Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLERemoteService.cpp.o
+2025-09-21T23:36:04.8268959Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEScan.cpp.o
+2025-09-21T23:36:05.0261958Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLESecurity.cpp.o
+2025-09-21T23:36:05.0772947Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEServer.cpp.o
+2025-09-21T23:36:05.3694901Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEService.cpp.o
+2025-09-21T23:36:05.8287377Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEUUID.cpp.o
+2025-09-21T23:36:05.9146015Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/NimBLEUtils.cpp.o
+2025-09-21T23:36:06.2246722Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/esp_port/esp-hci/src/esp_nimble_hci.c.o
+2025-09-21T23:36:06.3942383Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/esp_port/port/src/esp_nimble_mem.c.o
+2025-09-21T23:36:06.4174308Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_decrypt.c.o
+2025-09-21T23:36:06.4353252Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_encrypt.c.o
+2025-09-21T23:36:06.4544651Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/cbc_mode.c.o
+2025-09-21T23:36:06.4915013Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/ccm_mode.c.o
+2025-09-21T23:36:06.5079094Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/cmac_mode.c.o
+2025-09-21T23:36:06.5261472Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_mode.c.o
+2025-09-21T23:36:06.5426219Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_prng.c.o
+2025-09-21T23:36:06.5733392Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc.c.o
+2025-09-21T23:36:06.5966317Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dh.c.o
+2025-09-21T23:36:06.6194309Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dsa.c.o
+2025-09-21T23:36:06.6391984Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_platform_specific.c.o
+2025-09-21T23:36:06.6777846Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac.c.o
+2025-09-21T23:36:06.6967913Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac_prng.c.o
+2025-09-21T23:36:06.7105454Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/sha256.c.o
+2025-09-21T23:36:06.7304836Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/ext/tinycrypt/src/utils.c.o
+2025-09-21T23:36:06.7894264Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll.c.o
+2025-09-21T23:36:06.8127287Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_adv.c.o
+2025-09-21T23:36:06.8283635Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn.c.o
+2025-09-21T23:36:06.8400064Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn_hci.c.o
+2025-09-21T23:36:06.8577029Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_ctrl.c.o
+2025-09-21T23:36:06.8747635Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_dtm.c.o
+2025-09-21T23:36:06.8915613Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci.c.o
+2025-09-21T23:36:06.9080070Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci_ev.c.o
+2025-09-21T23:36:06.9195954Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_iso.c.o
+2025-09-21T23:36:06.9354282Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rand.c.o
+2025-09-21T23:36:06.9525633Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_resolv.c.o
+2025-09-21T23:36:06.9665490Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rfmgmt.c.o
+2025-09-21T23:36:06.9786944Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_scan.c.o
+2025-09-21T23:36:06.9952613Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sched.c.o
+2025-09-21T23:36:07.0098232Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_supp_cmd.c.o
+2025-09-21T23:36:07.0265674Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sync.c.o
+2025-09-21T23:36:07.0452099Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_trace.c.o
+2025-09-21T23:36:07.0573816Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_utils.c.o
+2025-09-21T23:36:07.0733861Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_whitelist.c.o
+2025-09-21T23:36:07.0975020Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_hw.c.o
+2025-09-21T23:36:07.1179727Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_phy.c.o
+2025-09-21T23:36:07.1416444Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_hw.c.o
+2025-09-21T23:36:07.1609089Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy.c.o
+2025-09-21T23:36:07.1731191Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy_trace.c.o
+2025-09-21T23:36:07.2318055Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/access.c.o
+2025-09-21T23:36:07.2636995Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/adv.c.o
+2025-09-21T23:36:07.2783282Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/aes-ccm.c.o
+2025-09-21T23:36:07.2929838Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/app_keys.c.o
+2025-09-21T23:36:07.3094172Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/beacon.c.o
+2025-09-21T23:36:07.3245225Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/cdb.c.o
+2025-09-21T23:36:07.3414118Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg.c.o
+2025-09-21T23:36:07.3579674Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_cli.c.o
+2025-09-21T23:36:07.3744018Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_srv.c.o
+2025-09-21T23:36:07.3960664Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/crypto.c.o
+2025-09-21T23:36:07.4138178Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/friend.c.o
+2025-09-21T23:36:07.4292047Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/glue.c.o
+2025-09-21T23:36:07.4435867Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_cli.c.o
+2025-09-21T23:36:07.4633995Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_srv.c.o
+2025-09-21T23:36:07.4810092Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/heartbeat.c.o
+2025-09-21T23:36:07.4975551Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/light_model.c.o
+2025-09-21T23:36:07.5123806Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/lpn.c.o
+2025-09-21T23:36:07.5292805Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/mesh.c.o
+2025-09-21T23:36:07.5438001Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_cli.c.o
+2025-09-21T23:36:07.5612748Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_srv.c.o
+2025-09-21T23:36:07.5765650Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/net.c.o
+2025-09-21T23:36:07.5970271Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/nodes.c.o
+2025-09-21T23:36:07.6150235Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_adv.c.o
+2025-09-21T23:36:07.6301704Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_gatt.c.o
+2025-09-21T23:36:07.6466172Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov.c.o
+2025-09-21T23:36:07.6621768Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov_device.c.o
+2025-09-21T23:36:07.6786108Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/provisioner.c.o
+2025-09-21T23:36:07.7048497Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/proxy.c.o
+2025-09-21T23:36:07.7219448Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/rpl.c.o
+2025-09-21T23:36:07.7359783Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/settings.c.o
+2025-09-21T23:36:07.7577678Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/shell.c.o
+2025-09-21T23:36:07.7741615Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/subnet.c.o
+2025-09-21T23:36:07.7897226Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/mesh/src/transport.c.o
+2025-09-21T23:36:07.8121670Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/services/ans/src/ble_svc_ans.c.o
+2025-09-21T23:36:07.8325966Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/services/bas/src/ble_svc_bas.c.o
+2025-09-21T23:36:07.8582204Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/services/dis/src/ble_svc_dis.c.o
+2025-09-21T23:36:07.8883561Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/services/gap/src/ble_svc_gap.c.o
+2025-09-21T23:36:07.9866105Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/services/gatt/src/ble_svc_gatt.c.o
+2025-09-21T23:36:08.0159097Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/services/ias/src/ble_svc_ias.c.o
+2025-09-21T23:36:08.0433154Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/services/ipss/src/ble_svc_ipss.c.o
+2025-09-21T23:36:08.0733147Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/services/lls/src/ble_svc_lls.c.o
+2025-09-21T23:36:08.1666363Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_att.c.o
+2025-09-21T23:36:08.1941144Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_att_clt.c.o
+2025-09-21T23:36:08.2256383Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_att_cmd.c.o
+2025-09-21T23:36:08.2502054Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_att_svr.c.o
+2025-09-21T23:36:08.3786663Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_eddystone.c.o
+2025-09-21T23:36:08.4156661Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_gap.c.o
+2025-09-21T23:36:08.4425168Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_gattc.c.o
+2025-09-21T23:36:08.5191085Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts.c.o
+2025-09-21T23:36:08.5639646Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts_lcl.c.o
+2025-09-21T23:36:08.7450041Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs.c.o
+2025-09-21T23:36:08.7628770Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_adv.c.o
+2025-09-21T23:36:08.7813459Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_atomic.c.o
+2025-09-21T23:36:08.7984155Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_cfg.c.o
+2025-09-21T23:36:08.9511100Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_conn.c.o
+2025-09-21T23:36:08.9708807Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_flow.c.o
+2025-09-21T23:36:08.9880550Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci.c.o
+2025-09-21T23:36:09.0099959Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_cmd.c.o
+2025-09-21T23:36:09.1469561Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_evt.c.o
+2025-09-21T23:36:09.1723990Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_util.c.o
+2025-09-21T23:36:09.1916660Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_id.c.o
+2025-09-21T23:36:09.2190702Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_log.c.o
+2025-09-21T23:36:09.3413384Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mbuf.c.o
+2025-09-21T23:36:09.3653298Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_misc.c.o
+2025-09-21T23:36:09.3847821Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mqueue.c.o
+2025-09-21T23:36:09.4067781Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_periodic_sync.c.o
+2025-09-21T23:36:09.5258996Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_pvcy.c.o
+2025-09-21T23:36:09.5578188Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_resolv.c.o
+2025-09-21T23:36:09.5761740Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_shutdown.c.o
+2025-09-21T23:36:09.5919801Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_startup.c.o
+2025-09-21T23:36:09.6121768Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_stop.c.o
+2025-09-21T23:36:09.6382769Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_ibeacon.c.o
+2025-09-21T23:36:09.7032996Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap.c.o
+2025-09-21T23:36:09.7759631Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_coc.c.o
+2025-09-21T23:36:09.8020366Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig.c.o
+2025-09-21T23:36:09.8259735Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig_cmd.c.o
+2025-09-21T23:36:09.9123457Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_monitor.c.o
+2025-09-21T23:36:09.9481991Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_sm.c.o
+2025-09-21T23:36:09.9835504Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_alg.c.o
+2025-09-21T23:36:10.0084725Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_cmd.c.o
+2025-09-21T23:36:10.0297356Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_lgcy.c.o
+2025-09-21T23:36:10.1726852Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_sc.c.o
+2025-09-21T23:36:10.1971785Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_store.c.o
+2025-09-21T23:36:10.2222946Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_store_util.c.o
+2025-09-21T23:36:10.2455794Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/src/ble_uuid.c.o
+2025-09-21T23:36:10.3917214Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config.c.o
+2025-09-21T23:36:10.4205877Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config_conf.c.o
+2025-09-21T23:36:10.4395269Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_nvs.c.o
+2025-09-21T23:36:10.4607271Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/host/util/src/addr.c.o
+2025-09-21T23:36:10.4923893Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/nimble/transport/ram/src/ble_hci_ram.c.o
+2025-09-21T23:36:10.5297612Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/endian.c.o
+2025-09-21T23:36:10.5854642Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/hal_timer.c.o
+2025-09-21T23:36:10.6254673Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/hal_uart.c.o
+2025-09-21T23:36:10.6481087Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/mem.c.o
+2025-09-21T23:36:10.6718301Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/nimble_port.c.o
+2025-09-21T23:36:10.6848259Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime.c.o
+2025-09-21T23:36:10.7004010Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime_pwr2.c.o
+2025-09-21T23:36:10.7651424Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/os_mbuf.c.o
+2025-09-21T23:36:10.7884699Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/os_mempool.c.o
+2025-09-21T23:36:10.8120561Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/nimble/src/os_msys_init.c.o
+2025-09-21T23:36:10.8557385Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/npl/freertos/src/nimble_port_freertos.c.o
+2025-09-21T23:36:10.9658064Z Compiling .pio/build/heltec-v3/libf11/NimBLE-Arduino/nimble/porting/npl/freertos/src/npl_os_freertos.c.o
+2025-09-21T23:36:11.0830446Z Compiling .pio/build/heltec-v3/lib663/libpax/blescan.cpp.o
+2025-09-21T23:36:11.0970930Z Compiling .pio/build/heltec-v3/lib663/libpax/bt_hci_common.c.o
+2025-09-21T23:36:11.1131059Z Archiving .pio/build/heltec-v3/libf11/libNimBLE-Arduino.a
+2025-09-21T23:36:11.1385519Z Compiling .pio/build/heltec-v3/lib663/libpax/libpax.cpp.o
+2025-09-21T23:36:11.2093178Z Indexing .pio/build/heltec-v3/libf11/libNimBLE-Arduino.a
+2025-09-21T23:36:11.2101994Z Compiling .pio/build/heltec-v3/lib663/libpax/libpax_api.cpp.o
+2025-09-21T23:36:11.3135558Z Compiling .pio/build/heltec-v3/lib663/libpax/wifiscan.cpp.o
+2025-09-21T23:36:11.9135701Z Compiling .pio/build/heltec-v3/lib60d/XPowersLib/XPowersLibInterface.cpp.o
+2025-09-21T23:36:11.9433410Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/ButterworthFilter.cpp.o
+2025-09-21T23:36:11.9640566Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/SampleFilter.cpp.o
+2025-09-21T23:36:11.9920093Z Archiving .pio/build/heltec-v3/lib663/libpax.a
+2025-09-21T23:36:12.0008363Z Indexing .pio/build/heltec-v3/lib663/libpax.a
+2025-09-21T23:36:12.0045559Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebook.c.o
+2025-09-21T23:36:12.0228609Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookd.c.o
+2025-09-21T23:36:12.0490222Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookdt.c.o
+2025-09-21T23:36:12.0666069Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookge.c.o
+2025-09-21T23:36:12.0812192Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookjnd.c.o
+2025-09-21T23:36:12.1029284Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookjvm.c.o
+2025-09-21T23:36:12.1291854Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebooklspmelvq.c.o
+2025-09-21T23:36:12.1758376Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookmel.c.o
+2025-09-21T23:36:12.2187447Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookres.c.o
+2025-09-21T23:36:12.2426889Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookvq.c.o
+2025-09-21T23:36:12.2625015Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codebookvqanssi.c.o
+2025-09-21T23:36:12.2945554Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/codec2.c.o
+2025-09-21T23:36:12.3569952Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/dump.c.o
+2025-09-21T23:36:12.4646185Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/fifo.c.o
+2025-09-21T23:36:12.5250671Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/interp.c.o
+2025-09-21T23:36:12.5437143Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/kiss_fft.c.o
+2025-09-21T23:36:12.5594690Z Archiving .pio/build/heltec-v3/lib60d/libXPowersLib.a
+2025-09-21T23:36:12.5660957Z Indexing .pio/build/heltec-v3/lib60d/libXPowersLib.a
+2025-09-21T23:36:12.5695036Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/lpc.c.o
+2025-09-21T23:36:12.5906701Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/lsp.c.o
+2025-09-21T23:36:12.6458252Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/nlp.c.o
+2025-09-21T23:36:12.8014880Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/pack.c.o
+2025-09-21T23:36:12.8199969Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/phase.c.o
+2025-09-21T23:36:12.8321652Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/phaseexp.c.o
+2025-09-21T23:36:12.8504056Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/postfilter.c.o
+2025-09-21T23:36:12.9010579Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/quantise.c.o
+2025-09-21T23:36:12.9335680Z Compiling .pio/build/heltec-v3/lib21b/ESP32 Codec2/sine.c.o
+2025-09-21T23:36:12.9692950Z Compiling .pio/build/heltec-v3/libb26/Crypto/AES128.cpp.o
+2025-09-21T23:36:13.0075202Z Compiling .pio/build/heltec-v3/libb26/Crypto/AES192.cpp.o
+2025-09-21T23:36:13.0666085Z Compiling .pio/build/heltec-v3/libb26/Crypto/AES256.cpp.o
+2025-09-21T23:36:13.0872301Z Compiling .pio/build/heltec-v3/libb26/Crypto/AESCommon.cpp.o
+2025-09-21T23:36:13.1022056Z Archiving .pio/build/heltec-v3/lib21b/libESP32 Codec2.a
+2025-09-21T23:36:13.1169001Z Compiling .pio/build/heltec-v3/libb26/Crypto/AESEsp32.cpp.o
+2025-09-21T23:36:13.1258014Z Indexing .pio/build/heltec-v3/lib21b/libESP32 Codec2.a
+2025-09-21T23:36:13.1515519Z Compiling .pio/build/heltec-v3/libb26/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:36:13.1703048Z Compiling .pio/build/heltec-v3/libb26/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:36:13.1872670Z Compiling .pio/build/heltec-v3/libb26/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:36:13.2190399Z Compiling .pio/build/heltec-v3/libb26/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:36:13.2384248Z Compiling .pio/build/heltec-v3/libb26/Crypto/BlockCipher.cpp.o
+2025-09-21T23:36:13.3013227Z Compiling .pio/build/heltec-v3/libb26/Crypto/CTR.cpp.o
+2025-09-21T23:36:13.3225103Z Compiling .pio/build/heltec-v3/libb26/Crypto/ChaCha.cpp.o
+2025-09-21T23:36:13.3404518Z Compiling .pio/build/heltec-v3/libb26/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:36:13.3630746Z Compiling .pio/build/heltec-v3/libb26/Crypto/Cipher.cpp.o
+2025-09-21T23:36:13.4056014Z Compiling .pio/build/heltec-v3/libb26/Crypto/Crypto.cpp.o
+2025-09-21T23:36:13.4365905Z Compiling .pio/build/heltec-v3/libb26/Crypto/Curve25519.cpp.o
+2025-09-21T23:36:13.4565921Z Compiling .pio/build/heltec-v3/libb26/Crypto/EAX.cpp.o
+2025-09-21T23:36:13.4719243Z Compiling .pio/build/heltec-v3/libb26/Crypto/Ed25519.cpp.o
+2025-09-21T23:36:13.4895725Z Compiling .pio/build/heltec-v3/libb26/Crypto/GCM.cpp.o
+2025-09-21T23:36:13.5710990Z Compiling .pio/build/heltec-v3/libb26/Crypto/GF128.cpp.o
+2025-09-21T23:36:13.5920345Z Compiling .pio/build/heltec-v3/libb26/Crypto/GHASH.cpp.o
+2025-09-21T23:36:13.6121161Z Compiling .pio/build/heltec-v3/libb26/Crypto/HKDF.cpp.o
+2025-09-21T23:36:13.6309164Z Compiling .pio/build/heltec-v3/libb26/Crypto/Hash.cpp.o
+2025-09-21T23:36:13.6820023Z Compiling .pio/build/heltec-v3/libb26/Crypto/KeccakCore.cpp.o
+2025-09-21T23:36:13.7019621Z Compiling .pio/build/heltec-v3/libb26/Crypto/NoiseSource.cpp.o
+2025-09-21T23:36:13.7229183Z Compiling .pio/build/heltec-v3/libb26/Crypto/OMAC.cpp.o
+2025-09-21T23:36:13.7427077Z Compiling .pio/build/heltec-v3/libb26/Crypto/P521.cpp.o
+2025-09-21T23:36:13.7690605Z Compiling .pio/build/heltec-v3/libb26/Crypto/Poly1305.cpp.o
+2025-09-21T23:36:13.9284527Z Compiling .pio/build/heltec-v3/libb26/Crypto/RNG.cpp.o
+2025-09-21T23:36:13.9477350Z Compiling .pio/build/heltec-v3/libb26/Crypto/SHA224.cpp.o
+2025-09-21T23:36:13.9599630Z Compiling .pio/build/heltec-v3/libb26/Crypto/SHA256.cpp.o
+2025-09-21T23:36:13.9757259Z Compiling .pio/build/heltec-v3/libb26/Crypto/SHA3.cpp.o
+2025-09-21T23:36:14.0103621Z Compiling .pio/build/heltec-v3/libb26/Crypto/SHA384.cpp.o
+2025-09-21T23:36:14.0519014Z Compiling .pio/build/heltec-v3/libb26/Crypto/SHA512.cpp.o
+2025-09-21T23:36:14.0951345Z Compiling .pio/build/heltec-v3/libb26/Crypto/SHAKE.cpp.o
+2025-09-21T23:36:14.1179604Z Compiling .pio/build/heltec-v3/libb26/Crypto/XOF.cpp.o
+2025-09-21T23:36:14.1717788Z Compiling .pio/build/heltec-v3/libb26/Crypto/XTS.cpp.o
+2025-09-21T23:36:14.3237328Z Compiling .pio/build/heltec-v3/lib937/FS/FS.cpp.o
+2025-09-21T23:36:14.3494666Z Compiling .pio/build/heltec-v3/lib937/FS/vfs_api.cpp.o
+2025-09-21T23:36:14.5303155Z Compiling .pio/build/heltec-v3/lib998/SD/SD.cpp.o
+2025-09-21T23:36:14.5410940Z Archiving .pio/build/heltec-v3/libb26/libCrypto.a
+2025-09-21T23:36:14.5575137Z Indexing .pio/build/heltec-v3/libb26/libCrypto.a
+2025-09-21T23:36:14.6235348Z Compiling .pio/build/heltec-v3/lib998/SD/sd_diskio.cpp.o
+2025-09-21T23:36:15.0893633Z Compiling .pio/build/heltec-v3/lib998/SD/sd_diskio_crc.c.o
+2025-09-21T23:36:15.2974028Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFi.cpp.o
+2025-09-21T23:36:15.3090198Z Archiving .pio/build/heltec-v3/lib937/libFS.a
+2025-09-21T23:36:15.3208121Z Indexing .pio/build/heltec-v3/lib937/libFS.a
+2025-09-21T23:36:15.3262407Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFiAP.cpp.o
+2025-09-21T23:36:15.3579517Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFiClient.cpp.o
+2025-09-21T23:36:15.3721809Z Archiving .pio/build/heltec-v3/lib998/libSD.a
+2025-09-21T23:36:15.3789440Z Indexing .pio/build/heltec-v3/lib998/libSD.a
+2025-09-21T23:36:15.4011223Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFiGeneric.cpp.o
+2025-09-21T23:36:16.0507436Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFiMulti.cpp.o
+2025-09-21T23:36:16.1118355Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFiSTA.cpp.o
+2025-09-21T23:36:16.2504280Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFiScan.cpp.o
+2025-09-21T23:36:16.3915615Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFiServer.cpp.o
+2025-09-21T23:36:16.8971025Z Compiling .pio/build/heltec-v3/libabe/WiFi/WiFiUdp.cpp.o
+2025-09-21T23:36:17.0545631Z Compiling .pio/build/heltec-v3/lib46d/Preferences/Preferences.cpp.o
+2025-09-21T23:36:17.2839257Z Compiling .pio/build/heltec-v3/libfb1/WiFiClientSecure/WiFiClientSecure.cpp.o
+2025-09-21T23:36:17.3089890Z Compiling .pio/build/heltec-v3/libfb1/WiFiClientSecure/esp_crt_bundle.c.o
+2025-09-21T23:36:17.5035341Z Compiling .pio/build/heltec-v3/libfb1/WiFiClientSecure/ssl_client.cpp.o
+2025-09-21T23:36:17.5244294Z Archiving .pio/build/heltec-v3/libabe/libWiFi.a
+2025-09-21T23:36:17.5359437Z Indexing .pio/build/heltec-v3/libabe/libWiFi.a
+2025-09-21T23:36:17.7631635Z Compiling .pio/build/heltec-v3/lib042/HTTPClient/HTTPClient.cpp.o
+2025-09-21T23:36:17.7787479Z Archiving .pio/build/heltec-v3/lib46d/libPreferences.a
+2025-09-21T23:36:17.7860853Z Indexing .pio/build/heltec-v3/lib46d/libPreferences.a
+2025-09-21T23:36:17.9784897Z Compiling .pio/build/heltec-v3/liba0d/WebServer/Parsing.cpp.o
+2025-09-21T23:36:18.1242512Z Compiling .pio/build/heltec-v3/liba0d/WebServer/WebServer.cpp.o
+2025-09-21T23:36:18.3718055Z Archiving .pio/build/heltec-v3/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:18.3810583Z Indexing .pio/build/heltec-v3/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:18.4022431Z Compiling .pio/build/heltec-v3/liba0d/WebServer/detail/mimetable.cpp.o
+2025-09-21T23:36:18.6272564Z Compiling .pio/build/heltec-v3/libf52/ESPmDNS/ESPmDNS.cpp.o
+2025-09-21T23:36:18.9229353Z Archiving .pio/build/heltec-v3/lib042/libHTTPClient.a
+2025-09-21T23:36:18.9302046Z Indexing .pio/build/heltec-v3/lib042/libHTTPClient.a
+2025-09-21T23:36:19.1015638Z Compiling .pio/build/heltec-v3/lib917/LittleFS/LittleFS.cpp.o
+2025-09-21T23:36:19.3108039Z Compiling .pio/build/heltec-v3/lib1cb/AsyncUDP/AsyncUDP.cpp.o
+2025-09-21T23:36:19.3214530Z Archiving .pio/build/heltec-v3/liba0d/libWebServer.a
+2025-09-21T23:36:19.3277167Z Archiving .pio/build/heltec-v3/libf52/libESPmDNS.a
+2025-09-21T23:36:19.3293760Z Indexing .pio/build/heltec-v3/liba0d/libWebServer.a
+2025-09-21T23:36:19.3340157Z Indexing .pio/build/heltec-v3/libf52/libESPmDNS.a
+2025-09-21T23:36:19.4364614Z Compiling .pio/build/heltec-v3/lib471/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:36:19.4581809Z Compiling .pio/build/heltec-v3/lib471/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:36:19.5031385Z Compiling .pio/build/heltec-v3/lib471/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:36:19.6925916Z Compiling .pio/build/heltec-v3/lib471/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:36:19.7358451Z Compiling .pio/build/heltec-v3/lib471/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:36:19.9658687Z Compiling .pio/build/heltec-v3/FrameworkArduino/Esp.cpp.o
+2025-09-21T23:36:19.9818465Z Archiving .pio/build/heltec-v3/lib917/libLittleFS.a
+2025-09-21T23:36:19.9884865Z Indexing .pio/build/heltec-v3/lib917/libLittleFS.a
+2025-09-21T23:36:20.0100839Z Compiling .pio/build/heltec-v3/FrameworkArduino/FirmwareMSC.cpp.o
+2025-09-21T23:36:20.1004560Z Archiving .pio/build/heltec-v3/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:20.1081792Z Indexing .pio/build/heltec-v3/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:20.1095261Z Archiving .pio/build/heltec-v3/lib471/libAdafruit NeoPixel.a
+2025-09-21T23:36:20.1168712Z Indexing .pio/build/heltec-v3/lib471/libAdafruit NeoPixel.a
+2025-09-21T23:36:20.1303855Z Compiling .pio/build/heltec-v3/FrameworkArduino/FunctionalInterrupt.cpp.o
+2025-09-21T23:36:20.1605661Z Compiling .pio/build/heltec-v3/FrameworkArduino/HWCDC.cpp.o
+2025-09-21T23:36:20.3291955Z Compiling .pio/build/heltec-v3/FrameworkArduino/HardwareSerial.cpp.o
+2025-09-21T23:36:20.5599386Z Compiling .pio/build/heltec-v3/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:36:20.7475545Z Compiling .pio/build/heltec-v3/FrameworkArduino/IPv6Address.cpp.o
+2025-09-21T23:36:20.7973744Z Compiling .pio/build/heltec-v3/FrameworkArduino/MD5Builder.cpp.o
+2025-09-21T23:36:21.0383777Z Compiling .pio/build/heltec-v3/FrameworkArduino/Print.cpp.o
+2025-09-21T23:36:21.1937951Z Compiling .pio/build/heltec-v3/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:36:21.4090474Z Compiling .pio/build/heltec-v3/FrameworkArduino/StreamString.cpp.o
+2025-09-21T23:36:21.4697953Z Compiling .pio/build/heltec-v3/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:36:21.7876515Z Compiling .pio/build/heltec-v3/FrameworkArduino/USB.cpp.o
+2025-09-21T23:36:21.8643149Z Compiling .pio/build/heltec-v3/FrameworkArduino/USBCDC.cpp.o
+2025-09-21T23:36:22.0599183Z Compiling .pio/build/heltec-v3/FrameworkArduino/USBMSC.cpp.o
+2025-09-21T23:36:22.1187322Z Compiling .pio/build/heltec-v3/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:36:22.1661668Z Compiling .pio/build/heltec-v3/FrameworkArduino/WString.cpp.o
+2025-09-21T23:36:22.2540508Z Compiling .pio/build/heltec-v3/FrameworkArduino/base64.cpp.o
+2025-09-21T23:36:22.2834396Z Compiling .pio/build/heltec-v3/FrameworkArduino/cbuf.cpp.o
+2025-09-21T23:36:22.3259770Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-adc.c.o
+2025-09-21T23:36:22.4045568Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-bt.c.o
+2025-09-21T23:36:22.5302954Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-cpu.c.o
+2025-09-21T23:36:22.5886791Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-dac.c.o
+2025-09-21T23:36:22.7390534Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-gpio.c.o
+2025-09-21T23:36:22.7737280Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-i2c-slave.c.o
+2025-09-21T23:36:22.9212195Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-i2c.c.o
+2025-09-21T23:36:22.9481078Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-ledc.c.o
+2025-09-21T23:36:22.9730225Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-matrix.c.o
+2025-09-21T23:36:22.9994349Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-misc.c.o
+2025-09-21T23:36:23.1260032Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-psram.c.o
+2025-09-21T23:36:23.1445299Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-rgb-led.c.o
+2025-09-21T23:36:23.1613214Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-rmt.c.o
+2025-09-21T23:36:23.2103047Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-sigmadelta.c.o
+2025-09-21T23:36:23.3083162Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-spi.c.o
+2025-09-21T23:36:23.3393521Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-time.c.o
+2025-09-21T23:36:23.3706236Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-timer.c.o
+2025-09-21T23:36:23.4344339Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-tinyusb.c.o
+2025-09-21T23:36:23.5517046Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-touch.c.o
+2025-09-21T23:36:23.5745765Z Compiling .pio/build/heltec-v3/FrameworkArduino/esp32-hal-uart.c.o
+2025-09-21T23:36:23.5991594Z Compiling .pio/build/heltec-v3/FrameworkArduino/firmware_msc_fat.c.o
+2025-09-21T23:36:23.7283757Z Compiling .pio/build/heltec-v3/FrameworkArduino/libb64/cdecode.c.o
+2025-09-21T23:36:23.7497117Z Compiling .pio/build/heltec-v3/FrameworkArduino/libb64/cencode.c.o
+2025-09-21T23:36:23.7730288Z Compiling .pio/build/heltec-v3/FrameworkArduino/main.cpp.o
+2025-09-21T23:36:23.7919275Z Compiling .pio/build/heltec-v3/FrameworkArduino/stdlib_noniso.c.o
+2025-09-21T23:36:23.8160515Z Compiling .pio/build/heltec-v3/FrameworkArduino/wiring_pulse.c.o
+2025-09-21T23:36:23.8372552Z Compiling .pio/build/heltec-v3/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:36:24.2372337Z Archiving .pio/build/heltec-v3/libFrameworkArduino.a
+2025-09-21T23:36:24.2550207Z Indexing .pio/build/heltec-v3/libFrameworkArduino.a
+2025-09-21T23:36:24.3090009Z Linking .pio/build/heltec-v3/firmware.elf
+2025-09-21T23:36:51.6211765Z /pio/workspace/libdeps/heltec-v3/Crypto/AESEsp32.cpp:33:5: warning: type of 'esp_aes_setkey' does not match original declaration [-Wlto-type-mismatch]
+2025-09-21T23:36:51.6213306Z  int esp_aes_setkey(unsigned char *ctx, const unsigned char *key,
+2025-09-21T23:36:51.6213841Z      ^
+2025-09-21T23:36:51.6214967Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: 'esp_aes_setkey' was previously declared here
+2025-09-21T23:36:51.6216414Z  int mbedtls_aes_setkey_dec(mbedtls_aes_context *ctx, const unsigned char *key,
+2025-09-21T23:36:51.6217238Z      ^
+2025-09-21T23:36:51.6218474Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: code may be misoptimized unless -fno-strict-aliasing is used
+2025-09-21T23:36:51.6724114Z Retrieving maximum program size .pio/build/heltec-v3/firmware.elf
+2025-09-21T23:36:51.6725723Z Checking size .pio/build/heltec-v3/firmware.elf
+2025-09-21T23:36:51.6792604Z Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+2025-09-21T23:36:51.6793318Z RAM:   [====      ]  38.9% (used 127548 bytes from 327680 bytes)
+2025-09-21T23:36:51.6793873Z Flash: [======    ]  61.0% (used 2039333 bytes from 3342336 bytes)
+2025-09-21T23:36:51.6807358Z Building .pio/build/heltec-v3/firmware.bin
+2025-09-21T23:36:51.8439404Z esptool.py v4.5.1
+2025-09-21T23:36:51.8439765Z Creating esp32s3 image...
+2025-09-21T23:36:51.8440090Z Merged 3 ELF sections
+2025-09-21T23:36:51.8440400Z Successfully created esp32s3 image.
+2025-09-21T23:36:51.8532007Z esp32_create_combined_bin([".pio/build/heltec-v3/firmware.bin"], [".pio/build/heltec-v3/firmware.elf"])
+2025-09-21T23:36:51.8532891Z Generating combined binary for serial flashing
+2025-09-21T23:36:51.8539620Z     Offset | File
+2025-09-21T23:36:51.8540310Z  -  0x0000 | /workspace/.pio/build/heltec-v3/bootloader.bin
+2025-09-21T23:36:51.8540877Z  -  0x8000 | /workspace/.pio/build/heltec-v3/partitions.bin
+2025-09-21T23:36:51.8541445Z  -  0xe000 | /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin
+2025-09-21T23:36:51.8541994Z  - 0x10000 | /workspace/.pio/build/heltec-v3/firmware.bin
+2025-09-21T23:36:51.8543781Z Using esptool.py arguments: --chip esp32s3 merge_bin -o /workspace/.pio/build/heltec-v3/firmware.factory.bin --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0000 /workspace/.pio/build/heltec-v3/bootloader.bin 0x8000 /workspace/.pio/build/heltec-v3/partitions.bin 0xe000 /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin 0x10000 /workspace/.pio/build/heltec-v3/firmware.bin
+2025-09-21T23:36:51.8585065Z esptool.py v4.5.1
+2025-09-21T23:36:51.8612593Z Wrote 0x201fd0 bytes to file /workspace/.pio/build/heltec-v3/firmware.factory.bin, ready to flash to offset 0x0
+2025-09-21T23:36:52.6480458Z ======================== [SUCCESS] Took 180.71 seconds ========================
+2025-09-21T23:36:52.6480881Z 
+2025-09-21T23:36:52.6485397Z Environment    Status    Duration
+2025-09-21T23:36:52.6485868Z -------------  --------  ------------
+2025-09-21T23:36:52.6486311Z heltec-v3      SUCCESS   00:03:00.712
+2025-09-21T23:36:52.6486812Z ========================= 1 succeeded in 00:03:00.712 =========================
+2025-09-21T23:36:52.7012890Z Copying ESP32 bin file
+2025-09-21T23:36:52.7042119Z Copying ESP32 update bin file
+2025-09-21T23:36:52.7067884Z Building Filesystem for ESP32 targets
+2025-09-21T23:36:53.4843007Z Processing heltec-v3 (board: heltec_wifi_lora_32_V3; platform: 
+2025-09-21T23:36:53.4843788Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:36:53.4844247Z --------------------------------------------------------------------------------
+2025-09-21T23:36:54.5628095Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:36:54.5795031Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/heltec_wifi_lora_32_V3.html
+2025-09-21T23:36:54.5796758Z PLATFORM: Espressif 32 (6.11.0) > Heltec WiFi LoRa 32 (V3)
+2025-09-21T23:36:54.5797385Z HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+2025-09-21T23:36:54.5798539Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:36:54.5800967Z PACKAGES: 
+2025-09-21T23:36:54.5801342Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:36:54.5802282Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:36:54.5802834Z  - tool-mklittlefs @ 1.203.210628 (2.3) 
+2025-09-21T23:36:54.5803715Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:36:54.5804184Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:36:54.6114466Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:36:54.6115006Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:36:54.7487940Z [nanopb] No generation needed.
+2025-09-21T23:36:55.2274156Z Found 96 compatible libraries
+2025-09-21T23:36:55.2274592Z Scanning dependencies...
+2025-09-21T23:37:06.0959165Z Dependency Graph
+2025-09-21T23:37:06.0959792Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:37:06.0960679Z |-- OneButton @ 2.6.1
+2025-09-21T23:37:06.0963709Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:37:06.0964240Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:37:06.0966019Z |-- ArduinoThread @ 0.0.0+20250919055017
+2025-09-21T23:37:06.0968328Z |-- Nanopb @ 0.4.91
+2025-09-21T23:37:06.0969498Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:37:06.0971664Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:37:06.0972831Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:37:06.0977948Z |-- NTPClient @ 3.2.1
+2025-09-21T23:37:06.0978542Z |-- Syslog @ 2.0.0
+2025-09-21T23:37:06.0979104Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:37:06.0980281Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:37:06.0982396Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:37:06.0983398Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:37:06.0985030Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:37:06.0986824Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:37:06.0989176Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:37:06.0990311Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:37:06.0991775Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:37:06.0993947Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:37:06.0994593Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:37:06.0996869Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:37:06.0998683Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:37:06.1001522Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:37:06.1002760Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:37:06.1004879Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:37:06.1007246Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:37:06.1009716Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:37:06.1011784Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:37:06.1012348Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:37:06.1015134Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:37:06.1016507Z |-- INA226 @ 0.6.4
+2025-09-21T23:37:06.1019117Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:37:06.1020789Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:37:06.1021915Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:37:06.1027064Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:37:06.1027489Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:37:06.1027988Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:37:06.1028413Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:37:06.1031575Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:37:06.1032017Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:37:06.1036847Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:37:06.1037289Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:37:06.1037869Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:37:06.1042777Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:37:06.1043760Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:37:06.1044279Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:37:06.1047242Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:37:06.1047617Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:37:06.1050799Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:37:06.1051304Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:37:06.1055947Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:37:06.1056350Z |-- RadioLib @ 7.3.0
+2025-09-21T23:37:06.1056701Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:37:06.1059332Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:37:06.1059782Z |-- libpax @ 1.1.0
+2025-09-21T23:37:06.1062156Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:37:06.1064276Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:37:06.1066919Z |-- Crypto @ 0.4.0
+2025-09-21T23:37:06.1067852Z |-- SD @ 2.0.0
+2025-09-21T23:37:06.1068368Z |-- SPI @ 2.0.0
+2025-09-21T23:37:06.1070112Z |-- WiFi @ 2.0.0
+2025-09-21T23:37:06.1070447Z |-- Wire @ 2.0.0
+2025-09-21T23:37:06.1072861Z |-- Preferences @ 2.0.0
+2025-09-21T23:37:06.1073234Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:37:06.1073588Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:37:06.1074553Z |-- WebServer @ 2.0.0
+2025-09-21T23:37:06.1077735Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:37:06.1078428Z |-- LittleFS @ 2.0.0
+2025-09-21T23:37:06.1078809Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:37:06.1079249Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:37:06.6891866Z Building in release mode
+2025-09-21T23:37:06.7724678Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on heltec-v3
+2025-09-21T23:37:06.7741743Z Using flags:
+2025-09-21T23:37:06.7742463Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:37:06.7742996Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:37:06.7743345Z -DAPP_ENV=heltec-v3
+2025-09-21T23:37:06.7743743Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:37:06.7744184Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:37:06.7744932Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:37:06.7745860Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:37:06.7836463Z Building FS image from 'data' directory to .pio/build/heltec-v3/littlefs.bin
+2025-09-21T23:37:06.7865774Z /static/.gitkeep
+2025-09-21T23:37:07.0083045Z ========================= [SUCCESS] Took 13.52 seconds =========================
+2025-09-21T23:37:07.0084177Z 
+2025-09-21T23:37:07.0088663Z Environment    Status    Duration
+2025-09-21T23:37:07.0089363Z -------------  --------  ------------
+2025-09-21T23:37:07.0089685Z heltec-v3      SUCCESS   00:00:13.524
+2025-09-21T23:37:07.0090039Z ========================= 1 succeeded in 00:00:13.524 =========================
+2025-09-21T23:37:07.0444242Z Build artifacts are located at: /workspace/.pio/build
+2025-09-21T23:37:07.0445096Z Downloading OTA firmware firmware-s3.bin from https://github.com/meshtastic/firmware-ota
+2025-09-21T23:37:07.0520630Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-09-21T23:37:07.0521252Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-09-21T23:37:07.0521522Z 
+2025-09-21T23:37:07.1358735Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:07.1359849Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:07.2569752Z 
+2025-09-21T23:37:07.2572187Z 100  494k  100  494k    0     0  2412k      0 --:--:-- --:--:-- --:--:-- 2412k
+2025-09-21T23:37:07.4110901Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:37:07.4111181Z with:
+2025-09-21T23:37:07.4111420Z   name: firmware-esp32s3-heltec-v3-2.7.10.3d51287.zip
+2025-09-21T23:37:07.4111706Z   overwrite: true
+2025-09-21T23:37:07.4112008Z   path: release/*.bin
+release/*.elf
+release/*.uf2
+release/*.hex
+release/*-ota.zip
+
+2025-09-21T23:37:07.4112377Z   if-no-files-found: warn
+2025-09-21T23:37:07.4112578Z   compression-level: 6
+2025-09-21T23:37:07.4112776Z   include-hidden-files: false
+2025-09-21T23:37:07.4113169Z ##[endgroup]
+2025-09-21T23:37:07.6579626Z With the provided path, there will be 5 files uploaded
+2025-09-21T23:37:07.9273784Z Artifact name is valid!
+2025-09-21T23:37:07.9275221Z Root directory input is valid!
+2025-09-21T23:37:08.0081152Z Beginning upload of artifact content to blob storage
+2025-09-21T23:37:09.2114245Z Uploaded bytes 8388608
+2025-09-21T23:37:09.3419689Z Uploaded bytes 10653481
+2025-09-21T23:37:09.3950077Z Finished uploading artifact content to blob storage!
+2025-09-21T23:37:09.3953496Z SHA256 digest of uploaded artifact zip is 9d53f3e673f8b7c1894f7a93dbaa59c77a920f72b9d2cf3921240bc96a479ff7
+2025-09-21T23:37:09.3954519Z Finalizing artifact upload
+2025-09-21T23:37:09.5115515Z Artifact firmware-esp32s3-heltec-v3-2.7.10.3d51287.zip.zip successfully finalized. Artifact ID 4067354647
+2025-09-21T23:37:09.5117536Z Artifact firmware-esp32s3-heltec-v3-2.7.10.3d51287.zip has been successfully uploaded! Final size is 10653481 bytes. Artifact ID is 4067354647
+2025-09-21T23:37:09.5123978Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067354647
+2025-09-21T23:37:09.5298269Z Post job cleanup.
+2025-09-21T23:37:09.6072327Z [command]/usr/bin/git version
+2025-09-21T23:37:09.6141106Z git version 2.51.0
+2025-09-21T23:37:09.6177643Z Temporarily overriding HOME='/home/runner/work/_temp/34fea1b5-b3ef-494e-a6fe-b3a21522d5a1' before making global git config changes
+2025-09-21T23:37:09.6178760Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:37:09.6183528Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:37:09.6220388Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:37:09.6253964Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:37:09.6468559Z Entering 'meshtestic'
+2025-09-21T23:37:09.6511096Z Entering 'protobufs'
+2025-09-21T23:37:09.6569858Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:37:09.6594721Z http.https://github.com/.extraheader
+2025-09-21T23:37:09.6605626Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:37:09.6639588Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:37:09.6855336Z Entering 'meshtestic'
+2025-09-21T23:37:09.6879438Z http.https://github.com/.extraheader
+2025-09-21T23:37:09.6913472Z Entering 'protobufs'
+2025-09-21T23:37:09.6942519Z http.https://github.com/.extraheader
+2025-09-21T23:37:09.7115277Z Cleaning up orphan processes

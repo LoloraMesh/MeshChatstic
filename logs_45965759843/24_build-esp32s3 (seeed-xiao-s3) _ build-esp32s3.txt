@@ -1,0 +1,1686 @@
+﻿2025-09-21T23:32:15.6426130Z Current runner version: '2.328.0'
+2025-09-21T23:32:15.6448856Z ##[group]Runner Image Provisioner
+2025-09-21T23:32:15.6449764Z Hosted Compute Agent
+2025-09-21T23:32:15.6450309Z Version: 20250829.383
+2025-09-21T23:32:15.6450926Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:32:15.6451610Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:32:15.6452500Z ##[endgroup]
+2025-09-21T23:32:15.6453001Z ##[group]Operating System
+2025-09-21T23:32:15.6453555Z Ubuntu
+2025-09-21T23:32:15.6454115Z 24.04.3
+2025-09-21T23:32:15.6454566Z LTS
+2025-09-21T23:32:15.6455037Z ##[endgroup]
+2025-09-21T23:32:15.6455569Z ##[group]Runner Image
+2025-09-21T23:32:15.6456118Z Image: ubuntu-24.04
+2025-09-21T23:32:15.6456591Z Version: 20250907.24.1
+2025-09-21T23:32:15.6457670Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:32:15.6459187Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:32:15.6460264Z ##[endgroup]
+2025-09-21T23:32:15.6462836Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:32:15.6464873Z Actions: read
+2025-09-21T23:32:15.6465397Z Attestations: read
+2025-09-21T23:32:15.6465947Z Checks: read
+2025-09-21T23:32:15.6466469Z Contents: read
+2025-09-21T23:32:15.6467061Z Deployments: read
+2025-09-21T23:32:15.6467541Z Discussions: read
+2025-09-21T23:32:15.6468106Z Issues: read
+2025-09-21T23:32:15.6468566Z Metadata: read
+2025-09-21T23:32:15.6469092Z Models: read
+2025-09-21T23:32:15.6469627Z Packages: read
+2025-09-21T23:32:15.6470105Z Pages: read
+2025-09-21T23:32:15.6470588Z PullRequests: read
+2025-09-21T23:32:15.6471074Z RepositoryProjects: read
+2025-09-21T23:32:15.6472087Z SecurityEvents: read
+2025-09-21T23:32:15.6472724Z Statuses: read
+2025-09-21T23:32:15.6473207Z ##[endgroup]
+2025-09-21T23:32:15.6475257Z Secret source: Actions
+2025-09-21T23:32:15.6475929Z Prepare workflow directory
+2025-09-21T23:32:15.6795659Z Prepare all required actions
+2025-09-21T23:32:15.6834072Z Getting action download info
+2025-09-21T23:32:16.1126465Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:32:16.3460733Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:32:16.8386453Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:32:17.0906206Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:32:17.0910802Z ##[group] Inputs
+2025-09-21T23:32:17.0911263Z   version: 2.7.10.3d51287
+2025-09-21T23:32:17.0911882Z   platform: esp32s3
+2025-09-21T23:32:17.0912302Z   pio_env: seeed-xiao-s3
+2025-09-21T23:32:17.0912738Z ##[endgroup]
+2025-09-21T23:32:17.0913278Z Complete job name: build-esp32s3 (seeed-xiao-s3) / build-esp32s3
+2025-09-21T23:32:17.1515780Z ##[group]Run actions/checkout@v5
+2025-09-21T23:32:17.1516646Z with:
+2025-09-21T23:32:17.1517041Z   submodules: recursive
+2025-09-21T23:32:17.1517503Z   ref: develop
+2025-09-21T23:32:17.1517968Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:17.1518650Z   token: ***
+2025-09-21T23:32:17.1519022Z   ssh-strict: true
+2025-09-21T23:32:17.1519400Z   ssh-user: git
+2025-09-21T23:32:17.1519791Z   persist-credentials: true
+2025-09-21T23:32:17.1520225Z   clean: true
+2025-09-21T23:32:17.1520626Z   sparse-checkout-cone-mode: true
+2025-09-21T23:32:17.1521146Z   fetch-depth: 1
+2025-09-21T23:32:17.1521571Z   fetch-tags: false
+2025-09-21T23:32:17.1522178Z   show-progress: true
+2025-09-21T23:32:17.1522578Z   lfs: false
+2025-09-21T23:32:17.1522951Z   set-safe-directory: true
+2025-09-21T23:32:17.1523617Z ##[endgroup]
+2025-09-21T23:32:17.2412318Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:17.2414119Z ##[group]Getting Git version info
+2025-09-21T23:32:17.2414869Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:17.2415962Z [command]/usr/bin/git version
+2025-09-21T23:32:17.2481384Z git version 2.51.0
+2025-09-21T23:32:17.2502233Z ##[endgroup]
+2025-09-21T23:32:17.2518218Z Temporarily overriding HOME='/home/runner/work/_temp/c6d4308d-e28c-4ee1-aa58-eaa8765ccdb2' before making global git config changes
+2025-09-21T23:32:17.2520517Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:32:17.2524150Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:32:17.2561873Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:32:17.2566094Z ##[group]Initializing the repository
+2025-09-21T23:32:17.2570511Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:32:17.2692711Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:32:17.2693919Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:32:17.2694789Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:32:17.2695831Z hint:
+2025-09-21T23:32:17.2696512Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:32:17.2697095Z hint:
+2025-09-21T23:32:17.2697862Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:32:17.2699426Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:32:17.2700671Z hint:
+2025-09-21T23:32:17.2701348Z hint: 	git branch -m <name>
+2025-09-21T23:32:17.2702292Z hint:
+2025-09-21T23:32:17.2703312Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:32:17.2704985Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:32:17.2709909Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:17.2752006Z ##[endgroup]
+2025-09-21T23:32:17.2753273Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:32:17.2756194Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:32:17.2784260Z ##[endgroup]
+2025-09-21T23:32:17.2785490Z ##[group]Setting up auth
+2025-09-21T23:32:17.2791127Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:32:17.2821903Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:32:17.3156638Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:32:17.3188833Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:32:17.3409462Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:17.3444242Z ##[endgroup]
+2025-09-21T23:32:17.3445476Z ##[group]Fetching the repository
+2025-09-21T23:32:17.3454663Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:32:18.4478993Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:32:18.4481424Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:32:18.4508117Z ##[endgroup]
+2025-09-21T23:32:18.4509120Z ##[group]Determining the checkout info
+2025-09-21T23:32:18.4514593Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:32:18.4537260Z   origin/develop
+2025-09-21T23:32:18.4543348Z ##[endgroup]
+2025-09-21T23:32:18.4546468Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:32:18.4588002Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:32:18.4614313Z ##[group]Checking out the ref
+2025-09-21T23:32:18.4617020Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:32:18.5645170Z Switched to a new branch 'develop'
+2025-09-21T23:32:18.5646943Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:32:18.5656804Z ##[endgroup]
+2025-09-21T23:32:18.5658065Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:32:18.5663023Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:32:18.5734063Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:32:18.5762748Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:32:18.5794161Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:32:18.5821400Z ##[endgroup]
+2025-09-21T23:32:18.5824363Z ##[group]Fetching submodules
+2025-09-21T23:32:18.5826411Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:32:18.6052803Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:32:18.6265840Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:32:18.6270669Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:32:18.6296326Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:32:19.1407912Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:32:19.6389064Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:32:19.6499268Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:32:19.6529258Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:32:19.6749874Z Entering 'meshtestic'
+2025-09-21T23:32:19.6789742Z Entering 'protobufs'
+2025-09-21T23:32:19.6835522Z ##[endgroup]
+2025-09-21T23:32:19.6836405Z ##[group]Persisting credentials for submodules
+2025-09-21T23:32:19.6842632Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:32:19.7051291Z Entering 'meshtestic'
+2025-09-21T23:32:19.7093478Z Entering 'protobufs'
+2025-09-21T23:32:19.7146756Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:32:19.7351608Z Entering 'meshtestic'
+2025-09-21T23:32:19.7388809Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:32:19.7407424Z Entering 'protobufs'
+2025-09-21T23:32:19.7445848Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:32:19.7486223Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:32:19.7690957Z Entering 'meshtestic'
+2025-09-21T23:32:19.7727114Z Entering 'protobufs'
+2025-09-21T23:32:19.7778272Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:32:19.7984747Z Entering 'meshtestic'
+2025-09-21T23:32:19.8021137Z Entering 'protobufs'
+2025-09-21T23:32:19.8065956Z ##[endgroup]
+2025-09-21T23:32:19.8103086Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:32:19.8125306Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:32:19.8318296Z ##[group]Run if [ "$PIO_PLATFORM" = "esp32s3" ]; then
+2025-09-21T23:32:19.8318770Z [36;1mif [ "$PIO_PLATFORM" = "esp32s3" ]; then[0m
+2025-09-21T23:32:19.8319144Z [36;1m  echo "src=firmware-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:19.8319521Z [36;1m  echo "tgt=release/bleota-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:19.8320161Z [36;1melif [ "$PIO_PLATFORM" = "esp32c3" ] || [ "$PIO_PLATFORM" = "esp32c6" ]; then[0m
+2025-09-21T23:32:19.8320603Z [36;1m  echo "src=firmware-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:19.8320964Z [36;1m  echo "tgt=release/bleota-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:19.8321316Z [36;1melif [ "$PIO_PLATFORM" = "esp32" ]; then[0m
+2025-09-21T23:32:19.8321860Z [36;1m  echo "src=firmware.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:19.8322251Z [36;1m  echo "tgt=release/bleota.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:32:19.8322557Z [36;1mfi[0m
+2025-09-21T23:32:19.8378520Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:32:19.8378863Z env:
+2025-09-21T23:32:19.8379077Z   PIO_PLATFORM: esp32s3
+2025-09-21T23:32:19.8379316Z ##[endgroup]
+2025-09-21T23:32:19.8608978Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:32:19.8609457Z with:
+2025-09-21T23:32:19.8609715Z   pio_platform: esp32s3
+2025-09-21T23:32:19.8610017Z   pio_env: seeed-xiao-s3
+2025-09-21T23:32:19.8610287Z   pio_target: build
+2025-09-21T23:32:19.8610534Z   ota_firmware_source: firmware-s3.bin
+2025-09-21T23:32:19.8610850Z   ota_firmware_target: release/bleota-s3.bin
+2025-09-21T23:32:19.8611133Z ##[endgroup]
+2025-09-21T23:32:19.8687444Z ##[group]Run docker run --rm \
+2025-09-21T23:32:19.8687758Z [36;1mdocker run --rm \[0m
+2025-09-21T23:32:19.8688054Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:32:19.8688330Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:32:19.8688597Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:32:19.8688844Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:32:19.8689103Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:32:19.8689364Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:32:19.8689703Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:32:19.8690016Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:32:19.8690331Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:32:19.8690697Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-esp32s3[0m
+2025-09-21T23:32:19.8722915Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:32:19.8723273Z env:
+2025-09-21T23:32:19.8723477Z   MT_ENV: seeed-xiao-s3
+2025-09-21T23:32:19.8723715Z   MT_PLATFORM: esp32s3
+2025-09-21T23:32:19.8723946Z   MT_TARGET: build
+2025-09-21T23:32:19.8724189Z   MT_OTA_FIRMWARE_SOURCE: firmware-s3.bin
+2025-09-21T23:32:19.8724499Z   MT_OTA_FIRMWARE_TARGET: release/bleota-s3.bin
+2025-09-21T23:32:19.8724821Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:32:19.8725113Z ##[endgroup]
+2025-09-21T23:32:19.9658783Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-esp32s3' locally
+2025-09-21T23:32:20.8749513Z master-esp32s3: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:32:21.0641440Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:32:21.0642095Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:32:21.0642469Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:32:21.0642859Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:32:21.0643119Z 815e87185931: Pulling fs layer
+2025-09-21T23:32:21.0643520Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:32:21.0643961Z da9989870cf6: Pulling fs layer
+2025-09-21T23:32:21.0644376Z 5842d1ef8948: Pulling fs layer
+2025-09-21T23:32:21.0644792Z a234b2703096: Pulling fs layer
+2025-09-21T23:32:21.0645080Z 3a39df0b1bf9: Pulling fs layer
+2025-09-21T23:32:21.0645348Z a63a25a82ec9: Pulling fs layer
+2025-09-21T23:32:21.0645609Z 10215da75b3f: Pulling fs layer
+2025-09-21T23:32:21.0645870Z f243992d4a31: Pulling fs layer
+2025-09-21T23:32:21.0646125Z 832340f4ac8c: Pulling fs layer
+2025-09-21T23:32:21.0646375Z 815e87185931: Waiting
+2025-09-21T23:32:21.0646603Z 71c11f7c6832: Waiting
+2025-09-21T23:32:21.0646829Z da9989870cf6: Waiting
+2025-09-21T23:32:21.0647053Z 5842d1ef8948: Waiting
+2025-09-21T23:32:21.0647282Z a234b2703096: Waiting
+2025-09-21T23:32:21.0647501Z 3a39df0b1bf9: Waiting
+2025-09-21T23:32:21.0647720Z a63a25a82ec9: Waiting
+2025-09-21T23:32:21.0647939Z 10215da75b3f: Waiting
+2025-09-21T23:32:21.0648152Z f243992d4a31: Waiting
+2025-09-21T23:32:21.0648665Z 832340f4ac8c: Waiting
+2025-09-21T23:32:21.0648832Z c611f5bb386b: Waiting
+2025-09-21T23:32:21.4035017Z ccbbb2080a06: Download complete
+2025-09-21T23:32:21.4756176Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:32:21.4759515Z 8fb375ec14f3: Download complete
+2025-09-21T23:32:21.5097261Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:32:21.5097734Z 7d5073558d5a: Download complete
+2025-09-21T23:32:21.7553863Z 815e87185931: Verifying Checksum
+2025-09-21T23:32:21.7554308Z 815e87185931: Download complete
+2025-09-21T23:32:21.9734310Z da9989870cf6: Verifying Checksum
+2025-09-21T23:32:21.9737078Z da9989870cf6: Download complete
+2025-09-21T23:32:22.0556853Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:32:22.0557974Z 71c11f7c6832: Download complete
+2025-09-21T23:32:22.2654279Z a234b2703096: Verifying Checksum
+2025-09-21T23:32:22.2655467Z a234b2703096: Download complete
+2025-09-21T23:32:22.2953932Z 5842d1ef8948: Verifying Checksum
+2025-09-21T23:32:22.2954438Z 5842d1ef8948: Download complete
+2025-09-21T23:32:22.3743252Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:32:22.3744445Z c611f5bb386b: Download complete
+2025-09-21T23:32:22.5883899Z 10215da75b3f: Download complete
+2025-09-21T23:32:22.6784206Z 3a39df0b1bf9: Verifying Checksum
+2025-09-21T23:32:22.6785055Z 3a39df0b1bf9: Download complete
+2025-09-21T23:32:22.8157010Z f243992d4a31: Download complete
+2025-09-21T23:32:22.8972470Z 832340f4ac8c: Verifying Checksum
+2025-09-21T23:32:22.8972995Z 832340f4ac8c: Download complete
+2025-09-21T23:32:23.4891774Z 8fb375ec14f3: Pull complete
+2025-09-21T23:32:27.1053152Z ccbbb2080a06: Pull complete
+2025-09-21T23:32:31.9703023Z 7d5073558d5a: Pull complete
+2025-09-21T23:32:35.8981566Z a63a25a82ec9: Verifying Checksum
+2025-09-21T23:32:35.8982848Z a63a25a82ec9: Download complete
+2025-09-21T23:32:39.5975791Z c611f5bb386b: Pull complete
+2025-09-21T23:32:39.8585258Z 815e87185931: Pull complete
+2025-09-21T23:32:40.5615879Z 71c11f7c6832: Pull complete
+2025-09-21T23:32:40.5721197Z da9989870cf6: Pull complete
+2025-09-21T23:32:41.6155496Z 5842d1ef8948: Pull complete
+2025-09-21T23:32:41.6280143Z a234b2703096: Pull complete
+2025-09-21T23:32:43.1255020Z 3a39df0b1bf9: Pull complete
+2025-09-21T23:33:53.1814734Z a63a25a82ec9: Pull complete
+2025-09-21T23:33:53.1929965Z 10215da75b3f: Pull complete
+2025-09-21T23:33:53.2036605Z f243992d4a31: Pull complete
+2025-09-21T23:33:53.2132865Z 832340f4ac8c: Pull complete
+2025-09-21T23:33:53.2183215Z Digest: sha256:7269912521d83174316445d896859f9f0601d0c16d966400e9e0d3e20da1f1bd
+2025-09-21T23:33:53.2194619Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-esp32s3
+2025-09-21T23:33:53.4112061Z Building PlatformIO environment: seeed-xiao-s3
+2025-09-21T23:33:53.7030497Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:33:54.3945856Z Resolving seeed-xiao-s3 dependencies...
+2025-09-21T23:33:54.4203412Z Removing unused dependencies...
+2025-09-21T23:33:54.4288347Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:33:54.5567264Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:33:54.8697101Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:33:58.6529128Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:58.8699178Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:33:58.9650923Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:33:59.6377399Z Building for seeed-xiao-s3 with 
+2025-09-21T23:34:00.4088785Z Processing seeed-xiao-s3 (board: seeed-xiao-s3; platform: 
+2025-09-21T23:34:00.4089477Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:34:00.4090087Z --------------------------------------------------------------------------------
+2025-09-21T23:34:01.6736745Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:34:01.6891144Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/seeed-xiao-s3.html
+2025-09-21T23:34:01.6892519Z PLATFORM: Espressif 32 (6.11.0) > seeed-xiao-s3
+2025-09-21T23:34:01.6893127Z HARDWARE: ESP32S3 240MHz, 8MB RAM, 8MB Flash
+2025-09-21T23:34:01.6895090Z DEBUG: Current (esp-builtin) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:34:01.6896627Z PACKAGES: 
+2025-09-21T23:34:01.6896893Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:34:01.6897226Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:34:01.6897474Z  - tool-openocd-esp32 @ 2.1100.20220706 (11.0) 
+2025-09-21T23:34:01.6897760Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:34:01.6898048Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:34:01.7204332Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:34:01.7205061Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:34:01.8441139Z [nanopb] No generation needed.
+2025-09-21T23:34:02.3220421Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:04.7913155Z Downloading 0% 10%
+2025-09-21T23:34:04.7964390Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:34:04.7999310Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:34:04.9219792Z [nanopb] No generation needed.
+2025-09-21T23:34:05.0567691Z Found 96 compatible libraries
+2025-09-21T23:34:05.0568234Z Scanning dependencies...
+2025-09-21T23:34:16.0212992Z Dependency Graph
+2025-09-21T23:34:16.0213610Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:34:16.0214234Z |-- OneButton @ 2.6.1
+2025-09-21T23:34:16.0217585Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:34:16.0218240Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:34:16.0220258Z |-- ArduinoThread @ 0.0.0+20250919060206
+2025-09-21T23:34:16.0222160Z |-- Nanopb @ 0.4.91
+2025-09-21T23:34:16.0224702Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:34:16.0226004Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:34:16.0227957Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:34:16.0230059Z |-- NTPClient @ 3.2.1
+2025-09-21T23:34:16.0233049Z |-- Syslog @ 2.0.0
+2025-09-21T23:34:16.0233865Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:34:16.0236158Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:34:16.0238222Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:34:16.0240261Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:34:16.0242313Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:34:16.0244975Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:34:16.0246904Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:34:16.0250369Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:34:16.0252562Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:34:16.0253705Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:34:16.0256937Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:34:16.0258750Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:34:16.0259566Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:34:16.0260573Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:34:16.0264059Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:34:16.0266365Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:34:16.0266966Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:34:16.0268917Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:34:16.0269496Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:34:16.0272008Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:34:16.0273704Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:34:16.0277434Z |-- INA226 @ 0.6.4
+2025-09-21T23:34:16.0278135Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:34:16.0282811Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:34:16.0283406Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:34:16.0284140Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:34:16.0285168Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:34:16.0287852Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:34:16.0290352Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:34:16.0290871Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:34:16.0292414Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:34:16.0295936Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:34:16.0296628Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:34:16.0298305Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:34:16.0300191Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:34:16.0301302Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:34:16.0303849Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:16.0306376Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:34:16.0307152Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:34:16.0313240Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:34:16.0313695Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:34:16.0314066Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:34:16.0315062Z |-- RadioLib @ 7.3.0
+2025-09-21T23:34:16.0317529Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:34:16.0319760Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:34:16.0320430Z |-- libpax @ 1.1.0
+2025-09-21T23:34:16.0324666Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:34:16.0325019Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:34:16.0325492Z |-- Crypto @ 0.4.0
+2025-09-21T23:34:16.0328414Z |-- SD @ 2.0.0
+2025-09-21T23:34:16.0329612Z |-- SPI @ 2.0.0
+2025-09-21T23:34:16.0330170Z |-- WiFi @ 2.0.0
+2025-09-21T23:34:16.0330614Z |-- Wire @ 2.0.0
+2025-09-21T23:34:16.0330988Z |-- Preferences @ 2.0.0
+2025-09-21T23:34:16.0332579Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:34:16.0333057Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:34:16.0333316Z |-- WebServer @ 2.0.0
+2025-09-21T23:34:16.0336399Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:34:16.0337084Z |-- LittleFS @ 2.0.0
+2025-09-21T23:34:16.0337572Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:34:16.0337886Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:34:16.5755073Z Building in release mode
+2025-09-21T23:34:16.7344253Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on seeed-xiao-s3
+2025-09-21T23:34:16.7358414Z Using flags:
+2025-09-21T23:34:16.7359122Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:34:16.7359550Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:34:16.7359922Z -DAPP_ENV=seeed-xiao-s3
+2025-09-21T23:34:16.7360301Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:16.7360749Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:34:16.7361350Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:34:16.7362136Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:34:17.0596591Z Compiling .pio/build/seeed-xiao-s3/src/BluetoothCommon.cpp.o
+2025-09-21T23:34:17.1967097Z Compiling .pio/build/seeed-xiao-s3/src/DebugConfiguration.cpp.o
+2025-09-21T23:34:17.2136515Z Compiling .pio/build/seeed-xiao-s3/src/DisplayFormatters.cpp.o
+2025-09-21T23:34:17.2465678Z Compiling .pio/build/seeed-xiao-s3/src/FSCommon.cpp.o
+2025-09-21T23:34:18.2796601Z Compiling .pio/build/seeed-xiao-s3/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:34:18.3664027Z Compiling .pio/build/seeed-xiao-s3/src/Fusion/FusionCompass.c.o
+2025-09-21T23:34:18.4367383Z Compiling .pio/build/seeed-xiao-s3/src/Fusion/FusionOffset.c.o
+2025-09-21T23:34:18.4620413Z Compiling .pio/build/seeed-xiao-s3/src/GpioLogic.cpp.o
+2025-09-21T23:34:18.5835251Z Compiling .pio/build/seeed-xiao-s3/src/Led.cpp.o
+2025-09-21T23:34:18.6043843Z Compiling .pio/build/seeed-xiao-s3/src/Observer.cpp.o
+2025-09-21T23:34:18.7886093Z Compiling .pio/build/seeed-xiao-s3/src/Power.cpp.o
+2025-09-21T23:34:19.5921457Z Compiling .pio/build/seeed-xiao-s3/src/PowerFSM.cpp.o
+2025-09-21T23:34:19.7362889Z Compiling .pio/build/seeed-xiao-s3/src/PowerMon.cpp.o
+2025-09-21T23:34:20.3182549Z Compiling .pio/build/seeed-xiao-s3/src/RedirectablePrint.cpp.o
+2025-09-21T23:34:20.6702814Z Compiling .pio/build/seeed-xiao-s3/src/SPILock.cpp.o
+2025-09-21T23:34:20.9849396Z Compiling .pio/build/seeed-xiao-s3/src/SafeFile.cpp.o
+2025-09-21T23:34:21.4197673Z Compiling .pio/build/seeed-xiao-s3/src/SerialConsole.cpp.o
+2025-09-21T23:34:21.8100193Z Compiling .pio/build/seeed-xiao-s3/src/airtime.cpp.o
+2025-09-21T23:34:22.1733817Z Compiling .pio/build/seeed-xiao-s3/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:34:22.2044659Z Compiling .pio/build/seeed-xiao-s3/src/buzz/buzz.cpp.o
+2025-09-21T23:34:22.6865829Z Compiling .pio/build/seeed-xiao-s3/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:34:23.0795004Z Compiling .pio/build/seeed-xiao-s3/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:34:23.4582562Z Compiling .pio/build/seeed-xiao-s3/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:34:23.4994351Z Compiling .pio/build/seeed-xiao-s3/src/concurrency/Lock.cpp.o
+2025-09-21T23:34:23.8391499Z Compiling .pio/build/seeed-xiao-s3/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:34:24.2020099Z Compiling .pio/build/seeed-xiao-s3/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:34:24.6121070Z Compiling .pio/build/seeed-xiao-s3/src/concurrency/OSThread.cpp.o
+2025-09-21T23:34:24.6426151Z Compiling .pio/build/seeed-xiao-s3/src/detect/ScanI2C.cpp.o
+2025-09-21T23:34:24.7234032Z Compiling .pio/build/seeed-xiao-s3/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:34:24.9916033Z Compiling .pio/build/seeed-xiao-s3/src/gps/GPS.cpp.o
+2025-09-21T23:34:25.7971474Z Compiling .pio/build/seeed-xiao-s3/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:34:25.9435354Z Compiling .pio/build/seeed-xiao-s3/src/gps/GeoCoord.cpp.o
+2025-09-21T23:34:26.1706278Z Compiling .pio/build/seeed-xiao-s3/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:34:26.6429033Z Compiling .pio/build/seeed-xiao-s3/src/gps/RTC.cpp.o
+2025-09-21T23:34:27.1084268Z Compiling .pio/build/seeed-xiao-s3/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:34:27.1372689Z Compiling .pio/build/seeed-xiao-s3/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:34:27.9377874Z Compiling .pio/build/seeed-xiao-s3/src/graphics/Screen.cpp.o
+2025-09-21T23:34:28.2397694Z Compiling .pio/build/seeed-xiao-s3/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:34:28.2610390Z Compiling .pio/build/seeed-xiao-s3/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:34:28.3958762Z Compiling .pio/build/seeed-xiao-s3/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:34:28.7636857Z Compiling .pio/build/seeed-xiao-s3/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:34:28.9674776Z Compiling .pio/build/seeed-xiao-s3/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:34:29.4864450Z src/graphics/Screen.cpp: In function 'void graphics::drawFavNodeChatFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:29.4865666Z src/graphics/Screen.cpp:568:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:29.4866299Z      const int h     = display->height();
+2025-09-21T23:34:29.4866687Z                ^
+2025-09-21T23:34:29.4906180Z src/graphics/Screen.cpp: In function 'void graphics::drawChannelChatTabFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:29.4907371Z src/graphics/Screen.cpp:701:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:29.4908032Z      const int h     = display->height();
+2025-09-21T23:34:29.4908611Z                ^
+2025-09-21T23:34:29.5083535Z src/graphics/Screen.cpp: In constructor 'graphics::Screen::Screen(ScanI2C::DeviceAddress, meshtastic_Config_DisplayConfig_OledType, OLEDDISPLAY_GEOMETRY)':
+2025-09-21T23:34:29.5085168Z src/graphics/Screen.cpp:1120:24: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:29.5086208Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:29.5086755Z              ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:29.5087537Z src/graphics/Screen.cpp:1120:45: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:29.5088435Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:29.5088921Z                                   ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:29.5089924Z src/graphics/Screen.cpp:1120:66: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:29.5090935Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:29.5115061Z                                                        ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:29.5419328Z src/graphics/Screen.cpp: In member function 'int graphics::Screen::handleInputEvent(const InputEvent*)':
+2025-09-21T23:34:29.5420606Z src/graphics/Screen.cpp:2649:24: warning: unused variable 'shortPressAsDown' [-Wunused-variable]
+2025-09-21T23:34:29.5421423Z              const bool shortPressAsDown =
+2025-09-21T23:34:29.5422077Z                         ^~~~~~~~~~~~~~~~
+2025-09-21T23:34:29.9346547Z src/graphics/Screen.cpp: In member function 'virtual int32_t graphics::Screen::runOnce()':
+2025-09-21T23:34:29.9350536Z src/graphics/Screen.cpp:1578:47: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2025-09-21T23:34:29.9364683Z              NotificationRenderer::pauseBanner = false;
+2025-09-21T23:34:29.9366170Z              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+2025-09-21T23:34:29.9368029Z src/graphics/Screen.cpp:1579:9: note: here
+2025-09-21T23:34:29.9368915Z          case Cmd::STOP_BOOT_SCREEN:
+2025-09-21T23:34:29.9412379Z          ^~~~
+2025-09-21T23:34:29.9733044Z src/graphics/Screen.cpp: At global scope:
+2025-09-21T23:34:29.9734830Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:34:29.9736489Z  static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:34:29.9754159Z              ^~~~~~~~~~~~~~~~~
+2025-09-21T23:34:29.9755616Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:29.9757120Z  static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:34:29.9757955Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:29.9759541Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:34:29.9761229Z  static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:34:29.9762373Z              ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:30.2401963Z Compiling .pio/build/seeed-xiao-s3/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:34:30.2871061Z Compiling .pio/build/seeed-xiao-s3/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:34:30.5076579Z Compiling .pio/build/seeed-xiao-s3/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:34:31.1800250Z Compiling .pio/build/seeed-xiao-s3/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:34:31.5713282Z src/graphics/VirtualKeyboard.cpp: In member function 'void graphics::VirtualKeyboard::drawInputArea(OLEDDisplay*, int16_t, int16_t, int16_t)':
+2025-09-21T23:34:31.5715934Z src/graphics/VirtualKeyboard.cpp:356:23: warning: unused variable 'innerLeft' [-Wunused-variable]
+2025-09-21T23:34:31.5719440Z              const int innerLeft = boxX + 1;
+2025-09-21T23:34:31.5719854Z                        ^~~~~~~~~
+2025-09-21T23:34:31.5720554Z src/graphics/VirtualKeyboard.cpp:357:23: warning: unused variable 'innerRight' [-Wunused-variable]
+2025-09-21T23:34:31.5721395Z              const int innerRight = boxX + boxWidth - 2;
+2025-09-21T23:34:31.5721980Z                        ^~~~~~~~~~
+2025-09-21T23:34:31.5996594Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawDigitalClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:31.6000845Z src/graphics/draw/ClockRenderer.cpp:195:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:31.6001531Z      int line = 0;
+2025-09-21T23:34:31.6024469Z          ^~~~
+2025-09-21T23:34:31.6025838Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawAnalogClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:31.6031140Z src/graphics/draw/ClockRenderer.cpp:320:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:31.6032364Z      int line = 0;
+2025-09-21T23:34:31.6036075Z          ^~~~
+2025-09-21T23:34:32.0335540Z Compiling .pio/build/seeed-xiao-s3/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:34:32.0908207Z Compiling .pio/build/seeed-xiao-s3/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:34:32.1662842Z Compiling .pio/build/seeed-xiao-s3/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:34:33.1339457Z Compiling .pio/build/seeed-xiao-s3/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:34:33.4076778Z src/graphics/draw/NodeListRenderer.cpp: In function 'void graphics::NodeListRenderer::drawCompassArrow(OLEDDisplay*, meshtastic_NodeInfoLite*, int16_t, int16_t, int, float, double, double)':
+2025-09-21T23:34:33.4080139Z src/graphics/draw/NodeListRenderer.cpp:359:11: warning: unused variable 'angle' [-Wunused-variable]
+2025-09-21T23:34:33.4081287Z      float angle = relativeBearing * DEG_TO_RAD;
+2025-09-21T23:34:33.4081882Z            ^~~~~
+2025-09-21T23:34:33.4461612Z src/graphics/draw/MessageRenderer.cpp: In function 'void graphics::MessageRenderer::drawTextMessageFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:33.4464695Z src/graphics/draw/MessageRenderer.cpp:386:15: warning: unused variable 'page' [-Wunused-variable]
+2025-09-21T23:34:33.4465560Z          float page = (float)usableScrollHeight * 0.9f;  // 90% page
+2025-09-21T23:34:33.4466063Z                ^~~~
+2025-09-21T23:34:33.5316142Z src/graphics/draw/MenuHandler.cpp: In static member function 'static void graphics::menuHandler::wifiConfigMenu()':
+2025-09-21T23:34:33.5317931Z src/graphics/draw/MenuHandler.cpp:1315:22: warning: operation on 'count' may be undefined [-Wsequence-point]
+2025-09-21T23:34:33.5319688Z          options[count++] = labels[count];
+2025-09-21T23:34:33.5320105Z                  ~~~~~^~
+2025-09-21T23:34:33.8051241Z Compiling .pio/build/seeed-xiao-s3/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:34:34.0517734Z Compiling .pio/build/seeed-xiao-s3/src/graphics/emotes.cpp.o
+2025-09-21T23:34:34.5735660Z src/graphics/draw/NotificationRenderer.cpp: In static member function 'static void graphics::NotificationRenderer::drawTextInput(OLEDDisplay*, OLEDDisplayUiState*)':
+2025-09-21T23:34:34.5737795Z src/graphics/draw/NotificationRenderer.cpp:774:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:34.5739148Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:34.5739838Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:34.5740812Z src/graphics/draw/NotificationRenderer.cpp:775:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:34.5741981Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:34.5742495Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:34.5743605Z src/graphics/draw/NotificationRenderer.cpp:782:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:34.5744803Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:34.5745596Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:34.5772948Z src/graphics/draw/NotificationRenderer.cpp:783:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:34.5773970Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:34.5774468Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:34.7964781Z Compiling .pio/build/seeed-xiao-s3/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:34:34.8536602Z Compiling .pio/build/seeed-xiao-s3/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:34:34.9117584Z Compiling .pio/build/seeed-xiao-s3/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:34:34.9718561Z Compiling .pio/build/seeed-xiao-s3/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:34:35.0285986Z Compiling .pio/build/seeed-xiao-s3/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:34:35.0956835Z Compiling .pio/build/seeed-xiao-s3/src/graphics/tftSetup.cpp.o
+2025-09-21T23:34:35.1484803Z Compiling .pio/build/seeed-xiao-s3/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:34:35.1856409Z Compiling .pio/build/seeed-xiao-s3/src/input/ButtonThread.cpp.o
+2025-09-21T23:34:35.2473462Z Compiling .pio/build/seeed-xiao-s3/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:34:35.8497086Z Compiling .pio/build/seeed-xiao-s3/src/input/InputBroker.cpp.o
+2025-09-21T23:34:36.3233417Z Compiling .pio/build/seeed-xiao-s3/src/input/LinuxInput.cpp.o
+2025-09-21T23:34:36.4003958Z Compiling .pio/build/seeed-xiao-s3/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:34:37.1207513Z Compiling .pio/build/seeed-xiao-s3/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:34:37.2431955Z Compiling .pio/build/seeed-xiao-s3/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:34:37.2929746Z Compiling .pio/build/seeed-xiao-s3/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:34:37.4547142Z Compiling .pio/build/seeed-xiao-s3/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:34:37.5226478Z Compiling .pio/build/seeed-xiao-s3/src/input/SeesawRotary.cpp.o
+2025-09-21T23:34:37.5715536Z Compiling .pio/build/seeed-xiao-s3/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:34:38.6262718Z Compiling .pio/build/seeed-xiao-s3/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:34:38.7252156Z Compiling .pio/build/seeed-xiao-s3/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:34:38.7521482Z Compiling .pio/build/seeed-xiao-s3/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:34:38.8564388Z Compiling .pio/build/seeed-xiao-s3/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:34:38.9075332Z Compiling .pio/build/seeed-xiao-s3/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:34:38.9579767Z Compiling .pio/build/seeed-xiao-s3/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:34:39.8697681Z Compiling .pio/build/seeed-xiao-s3/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:34:39.9375535Z Compiling .pio/build/seeed-xiao-s3/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:34:40.3402572Z Compiling .pio/build/seeed-xiao-s3/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:34:40.7036402Z Compiling .pio/build/seeed-xiao-s3/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:34:41.1791101Z Compiling .pio/build/seeed-xiao-s3/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:34:41.2390563Z Compiling .pio/build/seeed-xiao-s3/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:34:41.6123400Z Compiling .pio/build/seeed-xiao-s3/src/input/i2cButton.cpp.o
+2025-09-21T23:34:42.0106528Z Compiling .pio/build/seeed-xiao-s3/src/input/kbI2cBase.cpp.o
+2025-09-21T23:34:42.4597406Z Compiling .pio/build/seeed-xiao-s3/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:34:42.7648061Z Compiling .pio/build/seeed-xiao-s3/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:34:43.1222231Z Compiling .pio/build/seeed-xiao-s3/src/main.cpp.o
+2025-09-21T23:34:43.6097855Z Compiling .pio/build/seeed-xiao-s3/src/memGet.cpp.o
+2025-09-21T23:34:43.7997079Z Compiling .pio/build/seeed-xiao-s3/src/mesh/Channels.cpp.o
+2025-09-21T23:34:44.4685211Z Compiling .pio/build/seeed-xiao-s3/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:34:44.7120645Z src/main.cpp: In function 'void setup()':
+2025-09-21T23:34:44.7121913Z src/main.cpp:1257:104: warning: 'new' of type 'SX1262Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:34:44.7122980Z          auto *sxIf = new SX1262Interface(RadioLibHAL, SX126X_CS, SX126X_DIO1, SX126X_RESET, SX126X_BUSY);
+2025-09-21T23:34:44.7123735Z                                                                                                         ^
+2025-09-21T23:34:44.7127393Z src/main.cpp:1257:104: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:34:44.7128811Z src/main.cpp:1257:104: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:34:44.7922586Z Compiling .pio/build/seeed-xiao-s3/src/mesh/Default.cpp.o
+2025-09-21T23:34:45.2485152Z Compiling .pio/build/seeed-xiao-s3/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:34:45.6908926Z Compiling .pio/build/seeed-xiao-s3/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:34:45.7792185Z Compiling .pio/build/seeed-xiao-s3/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:34:46.0079173Z Compiling .pio/build/seeed-xiao-s3/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:34:46.5590811Z Compiling .pio/build/seeed-xiao-s3/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:34:47.1148078Z Compiling .pio/build/seeed-xiao-s3/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:34:47.3432853Z Compiling .pio/build/seeed-xiao-s3/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:34:47.3652217Z Compiling .pio/build/seeed-xiao-s3/src/mesh/MeshModule.cpp.o
+2025-09-21T23:34:47.8879463Z Compiling .pio/build/seeed-xiao-s3/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:34:48.4608559Z Compiling .pio/build/seeed-xiao-s3/src/mesh/MeshService.cpp.o
+2025-09-21T23:34:48.6847906Z Compiling .pio/build/seeed-xiao-s3/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:34:48.9090503Z Compiling .pio/build/seeed-xiao-s3/src/mesh/NodeDB.cpp.o
+2025-09-21T23:34:49.2566311Z Compiling .pio/build/seeed-xiao-s3/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:34:50.1365057Z Compiling .pio/build/seeed-xiao-s3/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:34:50.4869933Z Compiling .pio/build/seeed-xiao-s3/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:34:50.5675295Z Compiling .pio/build/seeed-xiao-s3/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:34:51.0585589Z Compiling .pio/build/seeed-xiao-s3/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:34:51.7590373Z Compiling .pio/build/seeed-xiao-s3/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:34:51.9163592Z Compiling .pio/build/seeed-xiao-s3/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:34:52.3033846Z Compiling .pio/build/seeed-xiao-s3/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:34:52.9855438Z Compiling .pio/build/seeed-xiao-s3/src/mesh/Router.cpp.o
+2025-09-21T23:34:53.1509372Z Compiling .pio/build/seeed-xiao-s3/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:34:53.6128658Z Compiling .pio/build/seeed-xiao-s3/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:34:53.6624279Z Compiling .pio/build/seeed-xiao-s3/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:34:54.2796341Z Compiling .pio/build/seeed-xiao-s3/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:34:54.9705808Z Compiling .pio/build/seeed-xiao-s3/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:34:54.9955036Z Compiling .pio/build/seeed-xiao-s3/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:34:55.0270490Z Compiling .pio/build/seeed-xiao-s3/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:34:55.6267852Z Compiling .pio/build/seeed-xiao-s3/src/mesh/Throttle.cpp.o
+2025-09-21T23:34:56.2467520Z Compiling .pio/build/seeed-xiao-s3/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:34:56.2768788Z Compiling .pio/build/seeed-xiao-s3/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:34:56.3495490Z Compiling .pio/build/seeed-xiao-s3/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:34:56.3766472Z Compiling .pio/build/seeed-xiao-s3/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:34:56.4030118Z Compiling .pio/build/seeed-xiao-s3/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:34:57.3103797Z src/mesh/aes-ccm.cpp: In function 'int constant_time_compare(const void*, const void*, size_t)':
+2025-09-21T23:34:57.3107102Z src/mesh/aes-ccm.cpp:24:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:57.3108280Z      const volatile uint8_t *volatile a = (const volatile uint8_t *volatile)a_;
+2025-09-21T23:34:57.3109216Z                                                                             ^~
+2025-09-21T23:34:57.3110114Z src/mesh/aes-ccm.cpp:25:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:57.3111004Z      const volatile uint8_t *volatile b = (const volatile uint8_t *volatile)b_;
+2025-09-21T23:34:57.3111612Z                                                                             ^~
+2025-09-21T23:34:57.4271372Z Compiling .pio/build/seeed-xiao-s3/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:34:57.4728005Z Compiling .pio/build/seeed-xiao-s3/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:34:57.5039797Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:34:57.5687440Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:34:57.6947853Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:34:57.7137187Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:34:57.7321451Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:34:57.8298106Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:34:57.8525681Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:34:57.8761210Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:34:57.9880059Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:34:58.0144895Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:34:58.0433257Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:34:58.1275377Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:34:58.1846790Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:34:58.2774501Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:34:58.3332361Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:34:58.4570287Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:34:58.4834311Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:34:58.5845040Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:34:58.6069327Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:34:58.6236065Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:34:58.6416279Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:34:58.6922140Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:34:58.7256674Z Compiling .pio/build/seeed-xiao-s3/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:34:58.7883732Z Compiling .pio/build/seeed-xiao-s3/src/mesh/http/ContentHandler.cpp.o
+2025-09-21T23:34:58.8136893Z Compiling .pio/build/seeed-xiao-s3/src/mesh/http/ContentHelper.cpp.o
+2025-09-21T23:34:58.8604486Z Compiling .pio/build/seeed-xiao-s3/src/mesh/http/WebServer.cpp.o
+2025-09-21T23:34:58.8844798Z Compiling .pio/build/seeed-xiao-s3/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:34:59.4809037Z In file included from /pio/workspace/libdeps/seeed-xiao-s3/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:59.4833394Z                  from /pio/workspace/libdeps/seeed-xiao-s3/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:59.4834572Z                  from src/mesh/http/ContentHandler.cpp:41:
+2025-09-21T23:34:59.4836107Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:59.4837439Z  #define NO_DATA         211
+2025-09-21T23:34:59.4838019Z  
+2025-09-21T23:34:59.4838808Z In file included from /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:59.4863716Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:59.4864246Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:59.4864716Z                  from src/main.h:69,
+2025-09-21T23:34:59.4865140Z                  from src/mesh/http/ContentHandler.cpp:6:
+2025-09-21T23:34:59.4866065Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:59.4867284Z  #define NO_DATA                          -32768
+2025-09-21T23:34:59.4867685Z  
+2025-09-21T23:34:59.5000007Z In file included from /pio/workspace/libdeps/seeed-xiao-s3/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:34:59.5002745Z                  from /pio/workspace/libdeps/seeed-xiao-s3/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:34:59.5003983Z                  from src/mesh/http/WebServer.cpp:44:
+2025-09-21T23:34:59.5005286Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:34:59.5006372Z  #define NO_DATA         211
+2025-09-21T23:34:59.5007003Z  
+2025-09-21T23:34:59.5015215Z In file included from /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:34:59.5019420Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:34:59.5019922Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:34:59.5020365Z                  from src/main.h:69,
+2025-09-21T23:34:59.5020774Z                  from src/mesh/http/WebServer.cpp:5:
+2025-09-21T23:34:59.5021835Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:34:59.5022781Z  #define NO_DATA                          -32768
+2025-09-21T23:34:59.5023180Z  
+2025-09-21T23:34:59.5275834Z Compiling .pio/build/seeed-xiao-s3/src/mesh/wifi/WiFiAPClient.cpp.o
+2025-09-21T23:35:00.0580339Z Compiling .pio/build/seeed-xiao-s3/src/meshUtils.cpp.o
+2025-09-21T23:35:00.7828472Z Compiling .pio/build/seeed-xiao-s3/src/modules/AdminModule.cpp.o
+2025-09-21T23:35:01.2625437Z Compiling .pio/build/seeed-xiao-s3/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:35:01.3620801Z Compiling .pio/build/seeed-xiao-s3/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:35:01.4436917Z Compiling .pio/build/seeed-xiao-s3/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:35:02.8562754Z src/modules/CannedMessageModule.cpp: In member function 'virtual void CannedMessageModule::drawFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:35:02.8564427Z src/modules/CannedMessageModule.cpp:2347:17: warning: unused variable 'textYOffset' [-Wunused-variable]
+2025-09-21T23:35:02.8593946Z              int textYOffset = (rowHeight - FONT_HEIGHT_SMALL) / 2;
+2025-09-21T23:35:02.8594537Z                  ^~~~~~~~~~~
+2025-09-21T23:35:02.8857186Z Compiling .pio/build/seeed-xiao-s3/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:35:03.0885806Z Compiling .pio/build/seeed-xiao-s3/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:35:03.1450363Z Compiling .pio/build/seeed-xiao-s3/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:35:03.1659412Z src/modules/CannedMessageModule.cpp: At global scope:
+2025-09-21T23:35:03.1684900Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:03.1686707Z  static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:35:03.1687745Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:03.5137094Z Compiling .pio/build/seeed-xiao-s3/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:35:03.9374979Z Compiling .pio/build/seeed-xiao-s3/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:35:04.7435690Z Compiling .pio/build/seeed-xiao-s3/src/modules/Modules.cpp.o
+2025-09-21T23:35:04.8713813Z Compiling .pio/build/seeed-xiao-s3/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:35:04.9996234Z Compiling .pio/build/seeed-xiao-s3/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:35:05.8102310Z Compiling .pio/build/seeed-xiao-s3/src/modules/PositionModule.cpp.o
+2025-09-21T23:35:06.4068093Z Compiling .pio/build/seeed-xiao-s3/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:35:06.6791404Z Compiling .pio/build/seeed-xiao-s3/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:35:06.8036658Z Compiling .pio/build/seeed-xiao-s3/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:35:07.7636268Z Compiling .pio/build/seeed-xiao-s3/src/modules/ReplyModule.cpp.o
+2025-09-21T23:35:08.1184880Z Compiling .pio/build/seeed-xiao-s3/src/modules/RoutingModule.cpp.o
+2025-09-21T23:35:08.2381786Z Compiling .pio/build/seeed-xiao-s3/src/modules/SerialModule.cpp.o
+2025-09-21T23:35:08.5802161Z Compiling .pio/build/seeed-xiao-s3/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:35:09.5446074Z Compiling .pio/build/seeed-xiao-s3/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:35:09.9142005Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:35:10.0982442Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:35:10.2586607Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:35:11.4431016Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:35:11.8453861Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:35:12.0482465Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:35:12.3532338Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:35:12.5713948Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:35:13.2414826Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:35:13.6505788Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:35:13.9076144Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:35:13.9399429Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:35:14.5829822Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:35:14.9436966Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:35:15.1923624Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:35:15.2232410Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:35:15.8624639Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:35:16.2755289Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:35:16.4842532Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:35:16.5159035Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:35:17.1565944Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:35:17.5800466Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:35:17.7828900Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:35:17.8035659Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:35:18.2886098Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:35:18.9194016Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:35:19.1080102Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:35:19.2230082Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:35:19.4405988Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:35:20.2119386Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:35:20.3869689Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:35:20.5077221Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:35:20.7665812Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:35:21.4989069Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:35:21.6473151Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:35:21.6759992Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:35:21.9011587Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:35:22.7934405Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:35:22.9219909Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:35:22.9570870Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:35:23.1885042Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:35:23.9216818Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:35:24.2072308Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:35:24.2425728Z Compiling .pio/build/seeed-xiao-s3/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:35:24.2954013Z Compiling .pio/build/seeed-xiao-s3/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:35:24.9050228Z Compiling .pio/build/seeed-xiao-s3/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:35:25.2530387Z Compiling .pio/build/seeed-xiao-s3/src/modules/WaypointModule.cpp.o
+2025-09-21T23:35:25.4724148Z Compiling .pio/build/seeed-xiao-s3/src/modules/esp32/AudioModule.cpp.o
+2025-09-21T23:35:26.0170764Z Compiling .pio/build/seeed-xiao-s3/src/modules/esp32/PaxcounterModule.cpp.o
+2025-09-21T23:35:26.5895501Z Compiling .pio/build/seeed-xiao-s3/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:35:26.7513774Z Compiling .pio/build/seeed-xiao-s3/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:35:27.0553610Z Compiling .pio/build/seeed-xiao-s3/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:35:27.4404880Z Compiling .pio/build/seeed-xiao-s3/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:35:28.1337564Z Compiling .pio/build/seeed-xiao-s3/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:35:28.3376057Z Compiling .pio/build/seeed-xiao-s3/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:35:28.5911146Z Compiling .pio/build/seeed-xiao-s3/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:35:29.1030808Z Compiling .pio/build/seeed-xiao-s3/src/motion/MotionSensor.cpp.o
+2025-09-21T23:35:29.6997618Z Compiling .pio/build/seeed-xiao-s3/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:35:29.9034419Z Compiling .pio/build/seeed-xiao-s3/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:35:30.1718355Z Compiling .pio/build/seeed-xiao-s3/src/mqtt/MQTT.cpp.o
+2025-09-21T23:35:30.6877832Z Compiling .pio/build/seeed-xiao-s3/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:35:31.2521932Z Compiling .pio/build/seeed-xiao-s3/src/network-stubs.cpp.o
+2025-09-21T23:35:31.5070109Z Compiling .pio/build/seeed-xiao-s3/src/nimble/NimbleBluetooth.cpp.o
+2025-09-21T23:35:31.5427049Z Compiling .pio/build/seeed-xiao-s3/src/platform/esp32/BleOta.cpp.o
+2025-09-21T23:35:32.3062461Z Compiling .pio/build/seeed-xiao-s3/src/platform/esp32/ESP32CryptoEngine.cpp.o
+2025-09-21T23:35:32.3834705Z Compiling .pio/build/seeed-xiao-s3/src/platform/esp32/SimpleAllocator.cpp.o
+2025-09-21T23:35:32.6280404Z Compiling .pio/build/seeed-xiao-s3/src/platform/esp32/WiFiOTA.cpp.o
+2025-09-21T23:35:33.4934527Z Compiling .pio/build/seeed-xiao-s3/src/platform/esp32/iram-quirk.c.o
+2025-09-21T23:35:33.5602085Z Compiling .pio/build/seeed-xiao-s3/src/platform/esp32/main-esp32.cpp.o
+2025-09-21T23:35:33.6313977Z Compiling .pio/build/seeed-xiao-s3/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:35:33.7520600Z Compiling .pio/build/seeed-xiao-s3/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:35:33.8206442Z Compiling .pio/build/seeed-xiao-s3/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:35:34.7665119Z Compiling .pio/build/seeed-xiao-s3/src/serialization/JSON.cpp.o
+2025-09-21T23:35:34.8788064Z Compiling .pio/build/seeed-xiao-s3/src/serialization/JSONValue.cpp.o
+2025-09-21T23:35:34.9615338Z Compiling .pio/build/seeed-xiao-s3/src/serialization/MeshPacketSerializer.cpp.o
+2025-09-21T23:35:35.3409463Z Compiling .pio/build/seeed-xiao-s3/src/serialization/MeshPacketSerializer_nRF52.cpp.o
+2025-09-21T23:35:35.3733755Z Compiling .pio/build/seeed-xiao-s3/src/serialization/cobs.cpp.o
+2025-09-21T23:35:35.4187226Z Compiling .pio/build/seeed-xiao-s3/src/sleep.cpp.o
+2025-09-21T23:35:35.9913070Z Compiling .pio/build/seeed-xiao-s3/src/xmodem.cpp.o
+2025-09-21T23:35:36.4781094Z Building .pio/build/seeed-xiao-s3/bootloader.bin
+2025-09-21T23:35:36.5708427Z esptool.py v4.5.1
+2025-09-21T23:35:36.5711274Z Creating esp32s3 image...
+2025-09-21T23:35:36.5713234Z Merged 1 ELF section
+2025-09-21T23:35:36.5715392Z Successfully created esp32s3 image.
+2025-09-21T23:35:36.5867367Z Generating partitions .pio/build/seeed-xiao-s3/partitions.bin
+2025-09-21T23:35:36.8005639Z Compiling .pio/build/seeed-xiao-s3/lib062/Wire/Wire.cpp.o
+2025-09-21T23:35:36.9853196Z Compiling .pio/build/seeed-xiao-s3/lib207/SPI/SPI.cpp.o
+2025-09-21T23:35:37.3945934Z Compiling .pio/build/seeed-xiao-s3/libcfa/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:35:37.4227673Z Compiling .pio/build/seeed-xiao-s3/libcfa/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:35:37.5005015Z Archiving .pio/build/seeed-xiao-s3/lib062/libWire.a
+2025-09-21T23:35:37.5066245Z Indexing .pio/build/seeed-xiao-s3/lib062/libWire.a
+2025-09-21T23:35:37.5233784Z Compiling .pio/build/seeed-xiao-s3/libcfa/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:35:37.5669346Z Archiving .pio/build/seeed-xiao-s3/lib207/libSPI.a
+2025-09-21T23:35:37.5733260Z Indexing .pio/build/seeed-xiao-s3/lib207/libSPI.a
+2025-09-21T23:35:37.7302998Z Compiling .pio/build/seeed-xiao-s3/libbaf/OneButton/OneButton.cpp.o
+2025-09-21T23:35:38.1404444Z Compiling .pio/build/seeed-xiao-s3/libbaf/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:35:38.3247948Z Compiling .pio/build/seeed-xiao-s3/libd33/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:35:38.3385136Z Archiving .pio/build/seeed-xiao-s3/libcfa/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:38.3456073Z Indexing .pio/build/seeed-xiao-s3/libcfa/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:38.5106917Z Compiling .pio/build/seeed-xiao-s3/lib4b7/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:35:38.6907284Z Compiling .pio/build/seeed-xiao-s3/lib8ff/ArduinoThread/Thread.cpp.o
+2025-09-21T23:35:38.7482521Z Archiving .pio/build/seeed-xiao-s3/libbaf/libOneButton.a
+2025-09-21T23:35:38.7542870Z Indexing .pio/build/seeed-xiao-s3/libbaf/libOneButton.a
+2025-09-21T23:35:38.7708455Z Compiling .pio/build/seeed-xiao-s3/lib8ff/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:35:38.8941809Z Archiving .pio/build/seeed-xiao-s3/libd33/libarduino-fsm.a
+2025-09-21T23:35:38.9010734Z Indexing .pio/build/seeed-xiao-s3/libd33/libarduino-fsm.a
+2025-09-21T23:35:38.9189610Z Compiling .pio/build/seeed-xiao-s3/liba5a/Nanopb/pb_common.c.o
+2025-09-21T23:35:39.0204725Z Compiling .pio/build/seeed-xiao-s3/liba5a/Nanopb/pb_decode.c.o
+2025-09-21T23:35:39.1932292Z Archiving .pio/build/seeed-xiao-s3/lib4b7/libTinyGPSPlus.a
+2025-09-21T23:35:39.2029257Z Indexing .pio/build/seeed-xiao-s3/lib4b7/libTinyGPSPlus.a
+2025-09-21T23:35:39.2096670Z Compiling .pio/build/seeed-xiao-s3/liba5a/Nanopb/pb_encode.c.o
+2025-09-21T23:35:39.2337731Z Compiling .pio/build/seeed-xiao-s3/lib425/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:35:39.3159895Z Archiving .pio/build/seeed-xiao-s3/lib425/libErriezCRC32.a
+2025-09-21T23:35:39.3297670Z Indexing .pio/build/seeed-xiao-s3/lib425/libErriezCRC32.a
+2025-09-21T23:35:39.4275146Z Compiling .pio/build/seeed-xiao-s3/libcca/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:35:39.4398323Z Archiving .pio/build/seeed-xiao-s3/lib8ff/libArduinoThread.a
+2025-09-21T23:35:39.4412932Z Archiving .pio/build/seeed-xiao-s3/liba5a/libNanopb.a
+2025-09-21T23:35:39.4547168Z Indexing .pio/build/seeed-xiao-s3/lib8ff/libArduinoThread.a
+2025-09-21T23:35:39.4555947Z Indexing .pio/build/seeed-xiao-s3/liba5a/libNanopb.a
+2025-09-21T23:35:39.5400547Z Compiling .pio/build/seeed-xiao-s3/lib5f6/TBPubSubClient/PubSubClient.cpp.o
+2025-09-21T23:35:39.6403881Z Compiling .pio/build/seeed-xiao-s3/lib0c7/NTPClient/NTPClient.cpp.o
+2025-09-21T23:35:39.8023806Z Compiling .pio/build/seeed-xiao-s3/lib7de/Syslog/Syslog.cpp.o
+2025-09-21T23:35:39.9938519Z Archiving .pio/build/seeed-xiao-s3/libcca/libNonBlockingRTTTL.a
+2025-09-21T23:35:40.0003107Z Indexing .pio/build/seeed-xiao-s3/libcca/libNonBlockingRTTTL.a
+2025-09-21T23:35:40.1794957Z Compiling .pio/build/seeed-xiao-s3/lib9ab/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:35:40.2845204Z Archiving .pio/build/seeed-xiao-s3/lib0c7/libNTPClient.a
+2025-09-21T23:35:40.2920791Z Indexing .pio/build/seeed-xiao-s3/lib0c7/libNTPClient.a
+2025-09-21T23:35:40.2923961Z Archiving .pio/build/seeed-xiao-s3/lib5f6/libTBPubSubClient.a
+2025-09-21T23:35:40.2976719Z Indexing .pio/build/seeed-xiao-s3/lib5f6/libTBPubSubClient.a
+2025-09-21T23:35:40.3108136Z Compiling .pio/build/seeed-xiao-s3/lib9ab/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:35:40.3325603Z Compiling .pio/build/seeed-xiao-s3/lib9ab/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:35:40.4617339Z Archiving .pio/build/seeed-xiao-s3/lib7de/libSyslog.a
+2025-09-21T23:35:40.4680763Z Indexing .pio/build/seeed-xiao-s3/lib7de/libSyslog.a
+2025-09-21T23:35:40.4844744Z Compiling .pio/build/seeed-xiao-s3/lib9ab/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:35:40.9676371Z Compiling .pio/build/seeed-xiao-s3/lib764/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:35:41.0745828Z Compiling .pio/build/seeed-xiao-s3/lib0e9/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:35:41.2382436Z Compiling .pio/build/seeed-xiao-s3/lib3ba/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:35:41.2539408Z Archiving .pio/build/seeed-xiao-s3/lib9ab/libAdafruit BusIO.a
+2025-09-21T23:35:41.2620444Z Indexing .pio/build/seeed-xiao-s3/lib9ab/libAdafruit BusIO.a
+2025-09-21T23:35:41.4557272Z Compiling .pio/build/seeed-xiao-s3/libe2c/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:35:41.5374747Z Archiving .pio/build/seeed-xiao-s3/lib764/libAdafruit Unified Sensor.a
+2025-09-21T23:35:41.5442360Z Indexing .pio/build/seeed-xiao-s3/lib764/libAdafruit Unified Sensor.a
+2025-09-21T23:35:41.7221253Z Compiling .pio/build/seeed-xiao-s3/lib592/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:35:41.7405429Z Archiving .pio/build/seeed-xiao-s3/lib0e9/libAdafruit BMP280 Library.a
+2025-09-21T23:35:41.7459605Z Indexing .pio/build/seeed-xiao-s3/lib0e9/libAdafruit BMP280 Library.a
+2025-09-21T23:35:41.9084528Z Compiling .pio/build/seeed-xiao-s3/libe17/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:35:41.9548265Z Archiving .pio/build/seeed-xiao-s3/lib3ba/libAdafruit BMP085 Library.a
+2025-09-21T23:35:41.9608755Z Indexing .pio/build/seeed-xiao-s3/lib3ba/libAdafruit BMP085 Library.a
+2025-09-21T23:35:42.1238012Z Compiling .pio/build/seeed-xiao-s3/lib150/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:35:42.1530071Z Archiving .pio/build/seeed-xiao-s3/libe2c/libAdafruit BME280 Library.a
+2025-09-21T23:35:42.1598645Z Indexing .pio/build/seeed-xiao-s3/libe2c/libAdafruit BME280 Library.a
+2025-09-21T23:35:42.3437807Z Compiling .pio/build/seeed-xiao-s3/lib2a2/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:35:42.4084676Z Archiving .pio/build/seeed-xiao-s3/lib592/libAdafruit DPS310.a
+2025-09-21T23:35:42.4138121Z Indexing .pio/build/seeed-xiao-s3/lib592/libAdafruit DPS310.a
+2025-09-21T23:35:42.5766728Z Compiling .pio/build/seeed-xiao-s3/lib7eb/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:35:42.5888255Z Archiving .pio/build/seeed-xiao-s3/libe17/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:42.5952946Z Indexing .pio/build/seeed-xiao-s3/libe17/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:42.6168716Z Compiling .pio/build/seeed-xiao-s3/lib7eb/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:35:42.7566110Z Archiving .pio/build/seeed-xiao-s3/lib150/libAdafruit INA260 Library.a
+2025-09-21T23:35:42.7653410Z Indexing .pio/build/seeed-xiao-s3/lib150/libAdafruit INA260 Library.a
+2025-09-21T23:35:42.7795515Z Compiling .pio/build/seeed-xiao-s3/lib7eb/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:35:42.9869129Z Archiving .pio/build/seeed-xiao-s3/lib2a2/libAdafruit INA219.a
+2025-09-21T23:35:42.9939979Z Indexing .pio/build/seeed-xiao-s3/lib2a2/libAdafruit INA219.a
+2025-09-21T23:35:43.0135469Z Compiling .pio/build/seeed-xiao-s3/lib7eb/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:35:43.3074883Z /pio/workspace/libdeps/seeed-xiao-s3/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp: In member function 'virtual bool Adafruit_PM25AQI_I2C::read(PM25_AQI_Data*)':
+2025-09-21T23:35:43.3077372Z /pio/workspace/libdeps/seeed-xiao-s3/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp:50:10: warning: unused variable 'bufLen' [-Wunused-variable]
+2025-09-21T23:35:43.3079769Z    size_t bufLen = sizeof(buffer);
+2025-09-21T23:35:43.3080148Z           ^~~~~~
+2025-09-21T23:35:43.3729615Z Compiling .pio/build/seeed-xiao-s3/libaec/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:35:43.4842960Z Compiling .pio/build/seeed-xiao-s3/libfd5/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:35:43.5407189Z /pio/workspace/libdeps/seeed-xiao-s3/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:35:43.5409014Z /pio/workspace/libdeps/seeed-xiao-s3/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:172:11: warning: unused variable 'csum' [-Wunused-variable]
+2025-09-21T23:35:43.5410035Z    uint8_t csum = 0;
+2025-09-21T23:35:43.5410340Z            ^~~~
+2025-09-21T23:35:43.6457099Z Compiling .pio/build/seeed-xiao-s3/lib466/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:35:43.6600180Z Archiving .pio/build/seeed-xiao-s3/lib7eb/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:43.6665749Z Indexing .pio/build/seeed-xiao-s3/lib7eb/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:43.8556729Z Compiling .pio/build/seeed-xiao-s3/lib5bb/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:35:44.0528435Z Archiving .pio/build/seeed-xiao-s3/libaec/libAdafruit MPU6050.a
+2025-09-21T23:35:44.0588798Z Indexing .pio/build/seeed-xiao-s3/libaec/libAdafruit MPU6050.a
+2025-09-21T23:35:44.0766855Z Compiling .pio/build/seeed-xiao-s3/lib5bb/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:35:44.1495995Z Archiving .pio/build/seeed-xiao-s3/libfd5/libAdafruit LIS3DH.a
+2025-09-21T23:35:44.1561046Z Indexing .pio/build/seeed-xiao-s3/libfd5/libAdafruit LIS3DH.a
+2025-09-21T23:35:44.1727307Z Compiling .pio/build/seeed-xiao-s3/lib5bb/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:35:44.3071930Z Archiving .pio/build/seeed-xiao-s3/lib466/libAdafruit AHTX0.a
+2025-09-21T23:35:44.3124888Z Indexing .pio/build/seeed-xiao-s3/lib466/libAdafruit AHTX0.a
+2025-09-21T23:35:44.3286938Z Compiling .pio/build/seeed-xiao-s3/lib5bb/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:35:44.5100891Z Compiling .pio/build/seeed-xiao-s3/lib5bb/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:35:44.7599865Z Compiling .pio/build/seeed-xiao-s3/lib5bb/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:35:44.8260691Z Compiling .pio/build/seeed-xiao-s3/lib5bb/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:35:44.9840390Z Compiling .pio/build/seeed-xiao-s3/lib5bb/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:35:45.3328418Z Compiling .pio/build/seeed-xiao-s3/lib1a1/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:35:45.5851282Z Compiling .pio/build/seeed-xiao-s3/lib5c7/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:35:45.7719554Z Compiling .pio/build/seeed-xiao-s3/libf56/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:35:45.7863325Z Archiving .pio/build/seeed-xiao-s3/lib5bb/libAdafruit LSM6DS.a
+2025-09-21T23:35:45.7951980Z Indexing .pio/build/seeed-xiao-s3/lib5bb/libAdafruit LSM6DS.a
+2025-09-21T23:35:45.9759626Z Compiling .pio/build/seeed-xiao-s3/lib9e4/INA3221/INA3221.cpp.o
+2025-09-21T23:35:45.9912128Z Archiving .pio/build/seeed-xiao-s3/lib1a1/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:45.9976506Z Indexing .pio/build/seeed-xiao-s3/lib1a1/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:46.0980917Z /pio/workspace/libdeps/seeed-xiao-s3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'float MLX90632::getObjectTempF()':
+2025-09-21T23:35:46.0983549Z /pio/workspace/libdeps/seeed-xiao-s3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:419:9: warning: unused variable 'AMB' [-Wunused-variable]
+2025-09-21T23:35:46.0984881Z    float AMB;
+2025-09-21T23:35:46.0985326Z          ^~~
+2025-09-21T23:35:46.0986485Z /pio/workspace/libdeps/seeed-xiao-s3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:420:9: warning: unused variable 'Sto' [-Wunused-variable]
+2025-09-21T23:35:46.0987821Z    float Sto;
+2025-09-21T23:35:46.0988260Z          ^~~
+2025-09-21T23:35:46.1029589Z /pio/workspace/libdeps/seeed-xiao-s3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'void MLX90632::setMeasurementRate(uint8_t)':
+2025-09-21T23:35:46.1031584Z /pio/workspace/libdeps/seeed-xiao-s3/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:775:19: warning: unused variable 'returnError' [-Wunused-variable]
+2025-09-21T23:35:46.1033031Z   MLX90632::status returnError = setMode(MODE_STEP);
+2025-09-21T23:35:46.1033533Z                    ^~~~~~~~~~~
+2025-09-21T23:35:46.1754403Z Compiling .pio/build/seeed-xiao-s3/libd51/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:35:46.2083840Z Archiving .pio/build/seeed-xiao-s3/lib5c7/libEmotiBit MLX90632.a
+2025-09-21T23:35:46.2133543Z Indexing .pio/build/seeed-xiao-s3/lib5c7/libEmotiBit MLX90632.a
+2025-09-21T23:35:46.3690999Z Compiling .pio/build/seeed-xiao-s3/lib668/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:35:46.3829540Z Archiving .pio/build/seeed-xiao-s3/libf56/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:46.3889044Z Indexing .pio/build/seeed-xiao-s3/libf56/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:46.5731818Z Compiling .pio/build/seeed-xiao-s3/libacc/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:35:46.6497241Z Archiving .pio/build/seeed-xiao-s3/lib9e4/libINA3221.a
+2025-09-21T23:35:46.6558017Z Indexing .pio/build/seeed-xiao-s3/lib9e4/libINA3221.a
+2025-09-21T23:35:46.8162860Z Compiling .pio/build/seeed-xiao-s3/lib52f/INA226/INA226.cpp.o
+2025-09-21T23:35:46.8303303Z Archiving .pio/build/seeed-xiao-s3/libd51/libQMC5883LCompass.a
+2025-09-21T23:35:46.8370478Z Indexing .pio/build/seeed-xiao-s3/libd51/libQMC5883LCompass.a
+2025-09-21T23:35:47.0151855Z Compiling .pio/build/seeed-xiao-s3/lib449/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:35:47.0486045Z Archiving .pio/build/seeed-xiao-s3/lib668/libDFRobot_RTU.a
+2025-09-21T23:35:47.0542194Z Indexing .pio/build/seeed-xiao-s3/lib668/libDFRobot_RTU.a
+2025-09-21T23:35:47.0712749Z Compiling .pio/build/seeed-xiao-s3/lib449/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:35:47.2244564Z Archiving .pio/build/seeed-xiao-s3/libacc/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:47.2316037Z Indexing .pio/build/seeed-xiao-s3/libacc/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:47.2503993Z Compiling .pio/build/seeed-xiao-s3/lib449/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:35:47.3466471Z In file included from /pio/workspace/libdeps/seeed-xiao-s3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:47.3475484Z /pio/workspace/libdeps/seeed-xiao-s3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:42: warning: "I2C_BUFFER_LENGTH" redefined
+2025-09-21T23:35:47.3481275Z    #define I2C_BUFFER_LENGTH 32
+2025-09-21T23:35:47.3487867Z  
+2025-09-21T23:35:47.3495098Z In file included from /pio/workspace/libdeps/seeed-xiao-s3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:20,
+2025-09-21T23:35:47.3503061Z                  from /pio/workspace/libdeps/seeed-xiao-s3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:47.3510164Z /pio/core/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h:43: note: this is the location of the previous definition
+2025-09-21T23:35:47.3516257Z      #define I2C_BUFFER_LENGTH 128  // Default size, if none is set using Wire::setBuffersize(size_t)
+2025-09-21T23:35:47.3521574Z  
+2025-09-21T23:35:47.4974065Z Archiving .pio/build/seeed-xiao-s3/lib52f/libINA226.a
+2025-09-21T23:35:47.5047434Z Indexing .pio/build/seeed-xiao-s3/lib52f/libINA226.a
+2025-09-21T23:35:47.5934408Z /pio/workspace/libdeps/seeed-xiao-s3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp: In member function 'void MAX30105::enableSlot(uint8_t, uint8_t)':
+2025-09-21T23:35:47.5936485Z /pio/workspace/libdeps/seeed-xiao-s3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:292:11: warning: unused variable 'originalContents' [-Wunused-variable]
+2025-09-21T23:35:47.5937733Z    uint8_t originalContents;
+2025-09-21T23:35:47.5938124Z            ^~~~~~~~~~~~~~~~
+2025-09-21T23:35:47.6118418Z /pio/workspace/libdeps/seeed-xiao-s3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:35:47.6121121Z /pio/workspace/libdeps/seeed-xiao-s3/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:35:47.6133303Z      if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:35:47.6133867Z          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:35:47.6890591Z Compiling .pio/build/seeed-xiao-s3/lib3fe/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:35:47.7109935Z Compiling .pio/build/seeed-xiao-s3/lib3fe/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:35:47.8808307Z Compiling .pio/build/seeed-xiao-s3/lib30b/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:35:48.0476774Z Compiling .pio/build/seeed-xiao-s3/lib46a/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:35:48.0627343Z Archiving .pio/build/seeed-xiao-s3/lib449/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:48.0704233Z Indexing .pio/build/seeed-xiao-s3/lib449/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:48.2536996Z Compiling .pio/build/seeed-xiao-s3/lib32e/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:35:48.3834116Z Archiving .pio/build/seeed-xiao-s3/lib3fe/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:48.3906088Z Indexing .pio/build/seeed-xiao-s3/lib3fe/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:48.5512631Z Compiling .pio/build/seeed-xiao-s3/libe13/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:35:48.5655920Z Archiving .pio/build/seeed-xiao-s3/lib30b/libAdafruit LTR390 Library.a
+2025-09-21T23:35:48.5713605Z Indexing .pio/build/seeed-xiao-s3/lib30b/libAdafruit LTR390 Library.a
+2025-09-21T23:35:48.7677075Z Compiling .pio/build/seeed-xiao-s3/libba7/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:35:48.7793248Z Archiving .pio/build/seeed-xiao-s3/lib46a/libAdafruit PCT2075.a
+2025-09-21T23:35:48.7852965Z Indexing .pio/build/seeed-xiao-s3/lib46a/libAdafruit PCT2075.a
+2025-09-21T23:35:48.8245509Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::sensorInit()':
+2025-09-21T23:35:48.8246987Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp:23:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:48.8272190Z    int8_t  rslt    = 0;
+2025-09-21T23:35:48.8272652Z            ^~~~
+2025-09-21T23:35:48.8296326Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setMeasurementXYZ(uint8_t, uint8_t, uint8_t)':
+2025-09-21T23:35:48.8298075Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp:263:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:48.8299081Z    int8_t  rslt;
+2025-09-21T23:35:48.8299403Z            ^~~~
+2025-09-21T23:35:48.8300771Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setInterruputLatch(uint8_t)':
+2025-09-21T23:35:48.8302820Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp:489:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:48.8303846Z    int8_t  rslt;
+2025-09-21T23:35:48.8304251Z            ^~~~
+2025-09-21T23:35:48.8330398Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::normalSelfTest()':
+2025-09-21T23:35:48.8332202Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp:706:10: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:48.8333217Z    int8_t rslt;
+2025-09-21T23:35:48.8333599Z           ^~~~
+2025-09-21T23:35:48.8341051Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::advSelfTest()':
+2025-09-21T23:35:48.8342725Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp:776:11: warning: unused variable 'selfTestCurrent' [-Wunused-variable]
+2025-09-21T23:35:48.8343756Z    uint8_t selfTestCurrent;
+2025-09-21T23:35:48.8346561Z            ^~~~~~~~~~~~~~~
+2025-09-21T23:35:48.8347495Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getDataOverrunState()':
+2025-09-21T23:35:48.8348961Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp:853:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:48.8349858Z    int8_t  rslt;
+2025-09-21T23:35:48.8373703Z            ^~~~
+2025-09-21T23:35:48.8376415Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setOverflowPin(uint8_t)':
+2025-09-21T23:35:48.8377889Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp:865:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:48.8393356Z    int8_t  rslt;
+2025-09-21T23:35:48.8394117Z            ^~~~
+2025-09-21T23:35:48.8394964Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getOverflowState()':
+2025-09-21T23:35:48.8396380Z /pio/workspace/libdeps/seeed-xiao-s3/DFRobot_BMM150/DFRobot_BMM150.cpp:878:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:48.8397264Z    int8_t  rslt;
+2025-09-21T23:35:48.8397539Z            ^~~~
+2025-09-21T23:35:48.9412473Z Compiling .pio/build/seeed-xiao-s3/libba7/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:35:48.9504885Z Archiving .pio/build/seeed-xiao-s3/lib32e/libDFRobot_BMM150.a
+2025-09-21T23:35:48.9557298Z Indexing .pio/build/seeed-xiao-s3/lib32e/libDFRobot_BMM150.a
+2025-09-21T23:35:49.0683164Z /pio/workspace/libdeps/seeed-xiao-s3/Adafruit TSL2561/Adafruit_TSL2561_U.cpp: In member function 'uint32_t Adafruit_TSL2561_Unified::calculateLux(uint16_t, uint16_t)':
+2025-09-21T23:35:49.0686545Z /pio/workspace/libdeps/seeed-xiao-s3/Adafruit TSL2561/Adafruit_TSL2561_U.cpp:421:14: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+2025-09-21T23:35:49.0687686Z    if ((ratio >= 0) && (ratio <= TSL2561_LUX_K1T)) {
+2025-09-21T23:35:49.0688364Z         ~~~~~~^~~~
+2025-09-21T23:35:49.1008483Z Compiling .pio/build/seeed-xiao-s3/libcb8/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:35:49.2639375Z Compiling .pio/build/seeed-xiao-s3/libbba/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:35:49.2800580Z Archiving .pio/build/seeed-xiao-s3/libe13/libAdafruit TSL2561.a
+2025-09-21T23:35:49.2863706Z Indexing .pio/build/seeed-xiao-s3/libe13/libAdafruit TSL2561.a
+2025-09-21T23:35:49.4268082Z Compiling .pio/build/seeed-xiao-s3/libbfa/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:35:49.4340748Z Archiving .pio/build/seeed-xiao-s3/libba7/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:49.4409120Z Indexing .pio/build/seeed-xiao-s3/libba7/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:49.4586475Z Compiling .pio/build/seeed-xiao-s3/libbfa/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:35:49.7512048Z Archiving .pio/build/seeed-xiao-s3/libcb8/libAdafruit MAX1704X.a
+2025-09-21T23:35:49.7589603Z Indexing .pio/build/seeed-xiao-s3/libcb8/libAdafruit MAX1704X.a
+2025-09-21T23:35:49.7784657Z Compiling .pio/build/seeed-xiao-s3/libbfa/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:35:49.9152237Z Archiving .pio/build/seeed-xiao-s3/libbba/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:49.9220806Z Indexing .pio/build/seeed-xiao-s3/libbba/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:50.0819651Z Compiling .pio/build/seeed-xiao-s3/lib7d5/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:35:50.1889265Z Compiling .pio/build/seeed-xiao-s3/libc61/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:35:50.3536891Z Compiling .pio/build/seeed-xiao-s3/lib6bc/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:35:50.4206446Z Archiving .pio/build/seeed-xiao-s3/libbfa/libAdafruit LPS2X.a
+2025-09-21T23:35:50.4278169Z Indexing .pio/build/seeed-xiao-s3/libbfa/libAdafruit LPS2X.a
+2025-09-21T23:35:50.6126285Z Compiling .pio/build/seeed-xiao-s3/lib0bc/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:35:50.7489536Z Archiving .pio/build/seeed-xiao-s3/lib7d5/libAdafruit SHT31 Library.a
+2025-09-21T23:35:50.7561954Z Indexing .pio/build/seeed-xiao-s3/lib7d5/libAdafruit SHT31 Library.a
+2025-09-21T23:35:50.9264068Z Compiling .pio/build/seeed-xiao-s3/libdab/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:35:50.9408331Z Archiving .pio/build/seeed-xiao-s3/libc61/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:50.9460598Z Indexing .pio/build/seeed-xiao-s3/libc61/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:50.9618100Z Compiling .pio/build/seeed-xiao-s3/lib9d1/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:35:50.9715219Z Archiving .pio/build/seeed-xiao-s3/lib6bc/libAdafruit SHT4x Library.a
+2025-09-21T23:35:50.9764897Z Indexing .pio/build/seeed-xiao-s3/lib6bc/libAdafruit SHT4x Library.a
+2025-09-21T23:35:51.1353667Z Compiling .pio/build/seeed-xiao-s3/lib9d1/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:35:51.3042788Z Compiling .pio/build/seeed-xiao-s3/libdb8/bsec2/bsec2.cpp.o
+2025-09-21T23:35:51.3204308Z Archiving .pio/build/seeed-xiao-s3/lib0bc/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:51.3252861Z Indexing .pio/build/seeed-xiao-s3/lib0bc/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:51.3429488Z Compiling .pio/build/seeed-xiao-s3/libdb8/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:35:51.4729059Z /pio/workspace/libdeps/seeed-xiao-s3/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp: In member function 'OPT3001_ErrorCode ClosedCube_OPT3001::begin(uint8_t)':
+2025-09-21T23:35:51.4735475Z /pio/workspace/libdeps/seeed-xiao-s3/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp:39:20: warning: unused variable 'error' [-Wunused-variable]
+2025-09-21T23:35:51.4736516Z   OPT3001_ErrorCode error = NO_ERROR;
+2025-09-21T23:35:51.4736903Z                     ^~~~~
+2025-09-21T23:35:51.5467783Z Archiving .pio/build/seeed-xiao-s3/libdab/libClosedCube OPT3001.a
+2025-09-21T23:35:51.5535534Z Indexing .pio/build/seeed-xiao-s3/libdab/libClosedCube OPT3001.a
+2025-09-21T23:35:51.7229251Z Compiling .pio/build/seeed-xiao-s3/lib8b7/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:35:51.7934825Z Archiving .pio/build/seeed-xiao-s3/lib9d1/libBME68x Sensor library.a
+2025-09-21T23:35:51.8013588Z Indexing .pio/build/seeed-xiao-s3/lib9d1/libBME68x Sensor library.a
+2025-09-21T23:35:51.8230831Z Compiling .pio/build/seeed-xiao-s3/libdee/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:35:51.9284930Z Compiling .pio/build/seeed-xiao-s3/libdee/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:35:52.1030253Z Compiling .pio/build/seeed-xiao-s3/libdee/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:35:52.1160220Z Archiving .pio/build/seeed-xiao-s3/libdb8/libbsec2.a
+2025-09-21T23:35:52.1234836Z Compiling .pio/build/seeed-xiao-s3/libdee/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:35:52.1308714Z Indexing .pio/build/seeed-xiao-s3/libdb8/libbsec2.a
+2025-09-21T23:35:52.1466752Z Compiling .pio/build/seeed-xiao-s3/libdee/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:35:52.2516417Z Compiling .pio/build/seeed-xiao-s3/libdee/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:35:52.3592869Z Archiving .pio/build/seeed-xiao-s3/lib8b7/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:52.3650257Z Indexing .pio/build/seeed-xiao-s3/lib8b7/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:52.3815161Z Compiling .pio/build/seeed-xiao-s3/libdee/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:35:52.8863204Z Compiling .pio/build/seeed-xiao-s3/lib83b/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:35:53.0006221Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/Hal.cpp.o
+2025-09-21T23:35:53.0104457Z Archiving .pio/build/seeed-xiao-s3/libdee/libSensirion Core.a
+2025-09-21T23:35:53.0199402Z Indexing .pio/build/seeed-xiao-s3/libdee/libSensirion Core.a
+2025-09-21T23:35:53.0271411Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/Module.cpp.o
+2025-09-21T23:35:53.0463279Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:35:53.5672608Z Archiving .pio/build/seeed-xiao-s3/lib83b/libSensirion I2C SCD4x.a
+2025-09-21T23:35:53.5743873Z Indexing .pio/build/seeed-xiao-s3/lib83b/libSensirion I2C SCD4x.a
+2025-09-21T23:35:53.6752304Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:35:53.6905139Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:35:53.7092214Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:35:53.7283789Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:35:53.7467849Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:35:53.7940113Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:35:54.3587958Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:35:54.3891910Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:35:54.4204980Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:35:54.4477274Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:35:55.0901409Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:35:55.1191297Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:35:55.1606126Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:35:55.1826594Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:35:55.7303217Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:35:55.7612340Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:35:55.7924449Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:35:55.8173776Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:35:56.3568638Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:35:56.3849823Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:35:56.4523148Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:35:56.4752657Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:35:57.0164759Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:35:57.1258267Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:35:57.1470145Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:35:57.1687021Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:35:57.7122991Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:35:57.8113243Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:35:57.8300608Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:35:57.8483078Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:35:58.3642658Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:35:58.4782169Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:35:58.5036296Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:35:58.6253342Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:35:59.0252068Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:35:59.1170450Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:35:59.1489967Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:35:59.4005205Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:35:59.6577295Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:35:59.7371929Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:35:59.7643775Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:35:59.7831937Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:36:00.0247501Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:36:00.3670990Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:36:00.3948744Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:36:00.4207894Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:36:00.6547909Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:36:00.7546728Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:36:00.8043357Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:36:00.8729787Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:36:01.0087316Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:36:01.0332727Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:36:01.0478936Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:36:01.0733308Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:36:01.6525876Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:36:01.6778466Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:36:01.6976485Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:36:01.7252870Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:36:02.2761769Z Compiling .pio/build/seeed-xiao-s3/lib297/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:36:02.4525470Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/ConnectionContext.cpp.o
+2025-09-21T23:36:02.4920295Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPConnection.cpp.o
+2025-09-21T23:36:02.5155481Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPHeader.cpp.o
+2025-09-21T23:36:02.8347343Z Archiving .pio/build/seeed-xiao-s3/lib297/libRadioLib.a
+2025-09-21T23:36:02.8684186Z Indexing .pio/build/seeed-xiao-s3/lib297/libRadioLib.a
+2025-09-21T23:36:02.9316951Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPHeaders.cpp.o
+2025-09-21T23:36:03.0819535Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPMultipartBodyParser.cpp.o
+2025-09-21T23:36:03.3749869Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPNode.cpp.o
+2025-09-21T23:36:03.7173702Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPRequest.cpp.o
+2025-09-21T23:36:03.7388388Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPResponse.cpp.o
+2025-09-21T23:36:04.0259817Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPSConnection.cpp.o
+2025-09-21T23:36:04.1808267Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPSServer.cpp.o
+2025-09-21T23:36:04.4850271Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPServer.cpp.o
+2025-09-21T23:36:04.5171112Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPURLEncodedBodyParser.cpp.o
+2025-09-21T23:36:04.9067096Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/HTTPValidator.cpp.o
+2025-09-21T23:36:05.0578082Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/ResolvedResource.cpp.o
+2025-09-21T23:36:05.2738474Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/ResourceNode.cpp.o
+2025-09-21T23:36:05.2955923Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/ResourceParameters.cpp.o
+2025-09-21T23:36:05.3657589Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/ResourceResolver.cpp.o
+2025-09-21T23:36:05.7589115Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/SSLCert.cpp.o
+2025-09-21T23:36:06.0200731Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/ValidatorFunctions.cpp.o
+2025-09-21T23:36:06.1254187Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/WebsocketHandler.cpp.o
+2025-09-21T23:36:06.3914780Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/WebsocketInputStreambuf.cpp.o
+2025-09-21T23:36:06.4466898Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/WebsocketNode.cpp.o
+2025-09-21T23:36:06.7109376Z Compiling .pio/build/seeed-xiao-s3/lib5b4/esp32_https_server/util.cpp.o
+2025-09-21T23:36:07.1835294Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLE2904.cpp.o
+2025-09-21T23:36:07.2087361Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEAddress.cpp.o
+2025-09-21T23:36:07.3153369Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEAdvertisedDevice.cpp.o
+2025-09-21T23:36:07.3806954Z Archiving .pio/build/seeed-xiao-s3/lib5b4/libesp32_https_server.a
+2025-09-21T23:36:07.4018951Z Indexing .pio/build/seeed-xiao-s3/lib5b4/libesp32_https_server.a
+2025-09-21T23:36:07.4489320Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEAdvertising.cpp.o
+2025-09-21T23:36:07.7640107Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEBeacon.cpp.o
+2025-09-21T23:36:07.9632688Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLECharacteristic.cpp.o
+2025-09-21T23:36:08.2355673Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEClient.cpp.o
+2025-09-21T23:36:08.3302419Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEDescriptor.cpp.o
+2025-09-21T23:36:08.6585255Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEDevice.cpp.o
+2025-09-21T23:36:09.0313822Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEEddystoneTLM.cpp.o
+2025-09-21T23:36:09.1423443Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEEddystoneURL.cpp.o
+2025-09-21T23:36:09.3648616Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEExtAdvertising.cpp.o
+2025-09-21T23:36:09.4166051Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEHIDDevice.cpp.o
+2025-09-21T23:36:09.4683073Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLERemoteCharacteristic.cpp.o
+2025-09-21T23:36:09.6002362Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLERemoteDescriptor.cpp.o
+2025-09-21T23:36:09.7940790Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLERemoteService.cpp.o
+2025-09-21T23:36:10.2054665Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEScan.cpp.o
+2025-09-21T23:36:10.4077296Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLESecurity.cpp.o
+2025-09-21T23:36:10.4343008Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEServer.cpp.o
+2025-09-21T23:36:10.7486310Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEService.cpp.o
+2025-09-21T23:36:11.1826101Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEUUID.cpp.o
+2025-09-21T23:36:11.2764564Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/NimBLEUtils.cpp.o
+2025-09-21T23:36:11.5585426Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/esp_port/esp-hci/src/esp_nimble_hci.c.o
+2025-09-21T23:36:11.7342621Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/esp_port/port/src/esp_nimble_mem.c.o
+2025-09-21T23:36:11.7588378Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_decrypt.c.o
+2025-09-21T23:36:11.7732093Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_encrypt.c.o
+2025-09-21T23:36:11.7946054Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/cbc_mode.c.o
+2025-09-21T23:36:11.8247245Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/ccm_mode.c.o
+2025-09-21T23:36:11.8452275Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/cmac_mode.c.o
+2025-09-21T23:36:11.8601835Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_mode.c.o
+2025-09-21T23:36:11.8775732Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_prng.c.o
+2025-09-21T23:36:11.9082964Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc.c.o
+2025-09-21T23:36:11.9302431Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dh.c.o
+2025-09-21T23:36:11.9500291Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dsa.c.o
+2025-09-21T23:36:11.9694365Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_platform_specific.c.o
+2025-09-21T23:36:12.0126213Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac.c.o
+2025-09-21T23:36:12.0297757Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac_prng.c.o
+2025-09-21T23:36:12.0528020Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/sha256.c.o
+2025-09-21T23:36:12.0676943Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/ext/tinycrypt/src/utils.c.o
+2025-09-21T23:36:12.1173577Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll.c.o
+2025-09-21T23:36:12.1394771Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_adv.c.o
+2025-09-21T23:36:12.1565394Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn.c.o
+2025-09-21T23:36:12.1686472Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn_hci.c.o
+2025-09-21T23:36:12.1843948Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_ctrl.c.o
+2025-09-21T23:36:12.1996224Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_dtm.c.o
+2025-09-21T23:36:12.2177390Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci.c.o
+2025-09-21T23:36:12.2316317Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci_ev.c.o
+2025-09-21T23:36:12.2428238Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_iso.c.o
+2025-09-21T23:36:12.2585681Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rand.c.o
+2025-09-21T23:36:12.2724191Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_resolv.c.o
+2025-09-21T23:36:12.2895480Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rfmgmt.c.o
+2025-09-21T23:36:12.3020791Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_scan.c.o
+2025-09-21T23:36:12.3162493Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sched.c.o
+2025-09-21T23:36:12.3299832Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_supp_cmd.c.o
+2025-09-21T23:36:12.3445943Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sync.c.o
+2025-09-21T23:36:12.3611537Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_trace.c.o
+2025-09-21T23:36:12.3724574Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_utils.c.o
+2025-09-21T23:36:12.3885798Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_whitelist.c.o
+2025-09-21T23:36:12.4135444Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_hw.c.o
+2025-09-21T23:36:12.4300372Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_phy.c.o
+2025-09-21T23:36:12.4491081Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_hw.c.o
+2025-09-21T23:36:12.4668480Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy.c.o
+2025-09-21T23:36:12.4830219Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy_trace.c.o
+2025-09-21T23:36:12.5346232Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/access.c.o
+2025-09-21T23:36:12.5652556Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/adv.c.o
+2025-09-21T23:36:12.5798574Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/aes-ccm.c.o
+2025-09-21T23:36:12.5943186Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/app_keys.c.o
+2025-09-21T23:36:12.6093583Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/beacon.c.o
+2025-09-21T23:36:12.6240834Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/cdb.c.o
+2025-09-21T23:36:12.6438872Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg.c.o
+2025-09-21T23:36:12.6592091Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_cli.c.o
+2025-09-21T23:36:12.6765662Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_srv.c.o
+2025-09-21T23:36:12.6989178Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/crypto.c.o
+2025-09-21T23:36:12.7139392Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/friend.c.o
+2025-09-21T23:36:12.7291048Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/glue.c.o
+2025-09-21T23:36:12.7453388Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_cli.c.o
+2025-09-21T23:36:12.7598590Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_srv.c.o
+2025-09-21T23:36:12.7753359Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/heartbeat.c.o
+2025-09-21T23:36:12.7917378Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/light_model.c.o
+2025-09-21T23:36:12.8066753Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/lpn.c.o
+2025-09-21T23:36:12.8238087Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/mesh.c.o
+2025-09-21T23:36:12.8380028Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_cli.c.o
+2025-09-21T23:36:12.8544746Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_srv.c.o
+2025-09-21T23:36:12.8692062Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/net.c.o
+2025-09-21T23:36:12.8846981Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/nodes.c.o
+2025-09-21T23:36:12.9011484Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_adv.c.o
+2025-09-21T23:36:12.9159115Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_gatt.c.o
+2025-09-21T23:36:12.9312356Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov.c.o
+2025-09-21T23:36:12.9464736Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov_device.c.o
+2025-09-21T23:36:12.9620297Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/provisioner.c.o
+2025-09-21T23:36:12.9864869Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/proxy.c.o
+2025-09-21T23:36:13.0034248Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/rpl.c.o
+2025-09-21T23:36:13.0150507Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/settings.c.o
+2025-09-21T23:36:13.0375889Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/shell.c.o
+2025-09-21T23:36:13.0536956Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/subnet.c.o
+2025-09-21T23:36:13.0722277Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/mesh/src/transport.c.o
+2025-09-21T23:36:13.0909737Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/services/ans/src/ble_svc_ans.c.o
+2025-09-21T23:36:13.1124111Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/services/bas/src/ble_svc_bas.c.o
+2025-09-21T23:36:13.1316686Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/services/dis/src/ble_svc_dis.c.o
+2025-09-21T23:36:13.1582830Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/services/gap/src/ble_svc_gap.c.o
+2025-09-21T23:36:13.2630393Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/services/gatt/src/ble_svc_gatt.c.o
+2025-09-21T23:36:13.2889454Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/services/ias/src/ble_svc_ias.c.o
+2025-09-21T23:36:13.3150442Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/services/ipss/src/ble_svc_ipss.c.o
+2025-09-21T23:36:13.3433697Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/services/lls/src/ble_svc_lls.c.o
+2025-09-21T23:36:13.4328723Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_att.c.o
+2025-09-21T23:36:13.4673223Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_att_clt.c.o
+2025-09-21T23:36:13.4953063Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_att_cmd.c.o
+2025-09-21T23:36:13.5199713Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_att_svr.c.o
+2025-09-21T23:36:13.6276132Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_eddystone.c.o
+2025-09-21T23:36:13.6799649Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_gap.c.o
+2025-09-21T23:36:13.7069537Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_gattc.c.o
+2025-09-21T23:36:13.7775459Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts.c.o
+2025-09-21T23:36:13.8053204Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts_lcl.c.o
+2025-09-21T23:36:13.9974548Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs.c.o
+2025-09-21T23:36:14.0161970Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_adv.c.o
+2025-09-21T23:36:14.0351567Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_atomic.c.o
+2025-09-21T23:36:14.0515896Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_cfg.c.o
+2025-09-21T23:36:14.2058744Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_conn.c.o
+2025-09-21T23:36:14.2250759Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_flow.c.o
+2025-09-21T23:36:14.2444582Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci.c.o
+2025-09-21T23:36:14.2675035Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_cmd.c.o
+2025-09-21T23:36:14.3940614Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_evt.c.o
+2025-09-21T23:36:14.4187096Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_util.c.o
+2025-09-21T23:36:14.4368813Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_id.c.o
+2025-09-21T23:36:14.4539208Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_log.c.o
+2025-09-21T23:36:14.5947812Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mbuf.c.o
+2025-09-21T23:36:14.6109049Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_misc.c.o
+2025-09-21T23:36:14.6292752Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mqueue.c.o
+2025-09-21T23:36:14.6474777Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_periodic_sync.c.o
+2025-09-21T23:36:14.7628486Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_pvcy.c.o
+2025-09-21T23:36:14.7936693Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_resolv.c.o
+2025-09-21T23:36:14.8188713Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_shutdown.c.o
+2025-09-21T23:36:14.8342298Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_startup.c.o
+2025-09-21T23:36:14.8531361Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_stop.c.o
+2025-09-21T23:36:14.8745783Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_ibeacon.c.o
+2025-09-21T23:36:14.9274666Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap.c.o
+2025-09-21T23:36:15.0168915Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_coc.c.o
+2025-09-21T23:36:15.0397329Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig.c.o
+2025-09-21T23:36:15.0637634Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig_cmd.c.o
+2025-09-21T23:36:15.1185460Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_monitor.c.o
+2025-09-21T23:36:15.1664150Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_sm.c.o
+2025-09-21T23:36:15.2022623Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_alg.c.o
+2025-09-21T23:36:15.2436972Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_cmd.c.o
+2025-09-21T23:36:15.2655871Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_lgcy.c.o
+2025-09-21T23:36:15.3946067Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_sc.c.o
+2025-09-21T23:36:15.4255599Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_store.c.o
+2025-09-21T23:36:15.4418044Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_store_util.c.o
+2025-09-21T23:36:15.4615554Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/src/ble_uuid.c.o
+2025-09-21T23:36:15.6041000Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config.c.o
+2025-09-21T23:36:15.6276482Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config_conf.c.o
+2025-09-21T23:36:15.6446534Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_nvs.c.o
+2025-09-21T23:36:15.6632510Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/host/util/src/addr.c.o
+2025-09-21T23:36:15.6991175Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/nimble/transport/ram/src/ble_hci_ram.c.o
+2025-09-21T23:36:15.7405018Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/endian.c.o
+2025-09-21T23:36:15.7765793Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/hal_timer.c.o
+2025-09-21T23:36:15.8272341Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/hal_uart.c.o
+2025-09-21T23:36:15.8470245Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/mem.c.o
+2025-09-21T23:36:15.8697511Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/nimble_port.c.o
+2025-09-21T23:36:15.8850365Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime.c.o
+2025-09-21T23:36:15.9025983Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime_pwr2.c.o
+2025-09-21T23:36:15.9708324Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/os_mbuf.c.o
+2025-09-21T23:36:15.9894855Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/os_mempool.c.o
+2025-09-21T23:36:16.0119327Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/nimble/src/os_msys_init.c.o
+2025-09-21T23:36:16.0344029Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/npl/freertos/src/nimble_port_freertos.c.o
+2025-09-21T23:36:16.1656596Z Compiling .pio/build/seeed-xiao-s3/libc96/NimBLE-Arduino/nimble/porting/npl/freertos/src/npl_os_freertos.c.o
+2025-09-21T23:36:16.2800623Z Compiling .pio/build/seeed-xiao-s3/lib929/libpax/blescan.cpp.o
+2025-09-21T23:36:16.2915097Z Archiving .pio/build/seeed-xiao-s3/libc96/libNimBLE-Arduino.a
+2025-09-21T23:36:16.3083614Z Compiling .pio/build/seeed-xiao-s3/lib929/libpax/bt_hci_common.c.o
+2025-09-21T23:36:16.3293646Z Compiling .pio/build/seeed-xiao-s3/lib929/libpax/libpax.cpp.o
+2025-09-21T23:36:16.3578394Z Indexing .pio/build/seeed-xiao-s3/libc96/libNimBLE-Arduino.a
+2025-09-21T23:36:16.4278295Z Compiling .pio/build/seeed-xiao-s3/lib929/libpax/libpax_api.cpp.o
+2025-09-21T23:36:16.4733748Z Compiling .pio/build/seeed-xiao-s3/lib929/libpax/wifiscan.cpp.o
+2025-09-21T23:36:17.0689819Z Compiling .pio/build/seeed-xiao-s3/lib329/XPowersLib/XPowersLibInterface.cpp.o
+2025-09-21T23:36:17.0871888Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/ButterworthFilter.cpp.o
+2025-09-21T23:36:17.0980755Z Archiving .pio/build/seeed-xiao-s3/lib929/libpax.a
+2025-09-21T23:36:17.1078616Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/SampleFilter.cpp.o
+2025-09-21T23:36:17.1137783Z Indexing .pio/build/seeed-xiao-s3/lib929/libpax.a
+2025-09-21T23:36:17.1323862Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebook.c.o
+2025-09-21T23:36:17.1553852Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookd.c.o
+2025-09-21T23:36:17.1784635Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookdt.c.o
+2025-09-21T23:36:17.2002473Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookge.c.o
+2025-09-21T23:36:17.2191005Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookjnd.c.o
+2025-09-21T23:36:17.2387726Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookjvm.c.o
+2025-09-21T23:36:17.2587001Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebooklspmelvq.c.o
+2025-09-21T23:36:17.3108959Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookmel.c.o
+2025-09-21T23:36:17.3513297Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookres.c.o
+2025-09-21T23:36:17.3773453Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookvq.c.o
+2025-09-21T23:36:17.3980252Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codebookvqanssi.c.o
+2025-09-21T23:36:17.4132951Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/codec2.c.o
+2025-09-21T23:36:17.5772768Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/dump.c.o
+2025-09-21T23:36:17.6852275Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/fifo.c.o
+2025-09-21T23:36:17.7040957Z Archiving .pio/build/seeed-xiao-s3/lib329/libXPowersLib.a
+2025-09-21T23:36:17.7161210Z Indexing .pio/build/seeed-xiao-s3/lib329/libXPowersLib.a
+2025-09-21T23:36:17.7162502Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/interp.c.o
+2025-09-21T23:36:17.7351541Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/kiss_fft.c.o
+2025-09-21T23:36:17.7547097Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/lpc.c.o
+2025-09-21T23:36:17.7982719Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/lsp.c.o
+2025-09-21T23:36:17.8359901Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/nlp.c.o
+2025-09-21T23:36:17.8559020Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/pack.c.o
+2025-09-21T23:36:17.8756245Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/phase.c.o
+2025-09-21T23:36:17.9117855Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/phaseexp.c.o
+2025-09-21T23:36:17.9629353Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/postfilter.c.o
+2025-09-21T23:36:17.9839198Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/quantise.c.o
+2025-09-21T23:36:18.0104217Z Compiling .pio/build/seeed-xiao-s3/lib844/ESP32 Codec2/sine.c.o
+2025-09-21T23:36:18.0735947Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/AES128.cpp.o
+2025-09-21T23:36:18.0957387Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/AES192.cpp.o
+2025-09-21T23:36:18.1397374Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/AES256.cpp.o
+2025-09-21T23:36:18.1634049Z Archiving .pio/build/seeed-xiao-s3/lib844/libESP32 Codec2.a
+2025-09-21T23:36:18.1790788Z Indexing .pio/build/seeed-xiao-s3/lib844/libESP32 Codec2.a
+2025-09-21T23:36:18.1822731Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/AESCommon.cpp.o
+2025-09-21T23:36:18.1997825Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/AESEsp32.cpp.o
+2025-09-21T23:36:18.2190819Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:36:18.2442693Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:36:18.2639780Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:36:18.2843515Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:36:18.3117399Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/BlockCipher.cpp.o
+2025-09-21T23:36:18.3723632Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/CTR.cpp.o
+2025-09-21T23:36:18.3925906Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/ChaCha.cpp.o
+2025-09-21T23:36:18.4105302Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:36:18.4262521Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/Cipher.cpp.o
+2025-09-21T23:36:18.4855075Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/Crypto.cpp.o
+2025-09-21T23:36:18.5038725Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/Curve25519.cpp.o
+2025-09-21T23:36:18.5219147Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/EAX.cpp.o
+2025-09-21T23:36:18.5456109Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/Ed25519.cpp.o
+2025-09-21T23:36:18.5773758Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/GCM.cpp.o
+2025-09-21T23:36:18.6335111Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/GF128.cpp.o
+2025-09-21T23:36:18.6594651Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/GHASH.cpp.o
+2025-09-21T23:36:18.6854008Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/HKDF.cpp.o
+2025-09-21T23:36:18.7084387Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/Hash.cpp.o
+2025-09-21T23:36:18.7519449Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/KeccakCore.cpp.o
+2025-09-21T23:36:18.7731281Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/NoiseSource.cpp.o
+2025-09-21T23:36:18.7932038Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/OMAC.cpp.o
+2025-09-21T23:36:18.8137141Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/P521.cpp.o
+2025-09-21T23:36:18.8402554Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/Poly1305.cpp.o
+2025-09-21T23:36:19.0024345Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/RNG.cpp.o
+2025-09-21T23:36:19.0204002Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/SHA224.cpp.o
+2025-09-21T23:36:19.0339285Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/SHA256.cpp.o
+2025-09-21T23:36:19.0535384Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/SHA3.cpp.o
+2025-09-21T23:36:19.0786787Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/SHA384.cpp.o
+2025-09-21T23:36:19.1302016Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/SHA512.cpp.o
+2025-09-21T23:36:19.1641937Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/SHAKE.cpp.o
+2025-09-21T23:36:19.1875094Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/XOF.cpp.o
+2025-09-21T23:36:19.2387726Z Compiling .pio/build/seeed-xiao-s3/libb03/Crypto/XTS.cpp.o
+2025-09-21T23:36:19.3473729Z Compiling .pio/build/seeed-xiao-s3/lib937/FS/FS.cpp.o
+2025-09-21T23:36:19.3649232Z Compiling .pio/build/seeed-xiao-s3/lib937/FS/vfs_api.cpp.o
+2025-09-21T23:36:19.5297452Z Compiling .pio/build/seeed-xiao-s3/lib998/SD/SD.cpp.o
+2025-09-21T23:36:19.6085713Z Archiving .pio/build/seeed-xiao-s3/libb03/libCrypto.a
+2025-09-21T23:36:19.6241883Z Indexing .pio/build/seeed-xiao-s3/libb03/libCrypto.a
+2025-09-21T23:36:19.6866747Z Compiling .pio/build/seeed-xiao-s3/lib998/SD/sd_diskio.cpp.o
+2025-09-21T23:36:20.1266126Z Compiling .pio/build/seeed-xiao-s3/lib998/SD/sd_diskio_crc.c.o
+2025-09-21T23:36:20.2715806Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFi.cpp.o
+2025-09-21T23:36:20.2875594Z Archiving .pio/build/seeed-xiao-s3/lib937/libFS.a
+2025-09-21T23:36:20.2952726Z Indexing .pio/build/seeed-xiao-s3/lib937/libFS.a
+2025-09-21T23:36:20.2964467Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFiAP.cpp.o
+2025-09-21T23:36:20.3282849Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFiClient.cpp.o
+2025-09-21T23:36:20.3987664Z Archiving .pio/build/seeed-xiao-s3/lib998/libSD.a
+2025-09-21T23:36:20.4058465Z Indexing .pio/build/seeed-xiao-s3/lib998/libSD.a
+2025-09-21T23:36:20.4274876Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFiGeneric.cpp.o
+2025-09-21T23:36:20.9985967Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFiMulti.cpp.o
+2025-09-21T23:36:21.0560350Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFiSTA.cpp.o
+2025-09-21T23:36:21.1935842Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFiScan.cpp.o
+2025-09-21T23:36:21.3957947Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFiServer.cpp.o
+2025-09-21T23:36:21.8167619Z Compiling .pio/build/seeed-xiao-s3/libabe/WiFi/WiFiUdp.cpp.o
+2025-09-21T23:36:21.9673680Z Compiling .pio/build/seeed-xiao-s3/lib46d/Preferences/Preferences.cpp.o
+2025-09-21T23:36:22.1922336Z Compiling .pio/build/seeed-xiao-s3/libfb1/WiFiClientSecure/WiFiClientSecure.cpp.o
+2025-09-21T23:36:22.2172819Z Compiling .pio/build/seeed-xiao-s3/libfb1/WiFiClientSecure/esp_crt_bundle.c.o
+2025-09-21T23:36:22.4017833Z Compiling .pio/build/seeed-xiao-s3/libfb1/WiFiClientSecure/ssl_client.cpp.o
+2025-09-21T23:36:22.4670329Z Archiving .pio/build/seeed-xiao-s3/libabe/libWiFi.a
+2025-09-21T23:36:22.4800781Z Indexing .pio/build/seeed-xiao-s3/libabe/libWiFi.a
+2025-09-21T23:36:22.7007708Z Compiling .pio/build/seeed-xiao-s3/lib042/HTTPClient/HTTPClient.cpp.o
+2025-09-21T23:36:22.7162584Z Archiving .pio/build/seeed-xiao-s3/lib46d/libPreferences.a
+2025-09-21T23:36:22.7218678Z Indexing .pio/build/seeed-xiao-s3/lib46d/libPreferences.a
+2025-09-21T23:36:22.9047003Z Compiling .pio/build/seeed-xiao-s3/liba0d/WebServer/Parsing.cpp.o
+2025-09-21T23:36:22.9968991Z Compiling .pio/build/seeed-xiao-s3/liba0d/WebServer/WebServer.cpp.o
+2025-09-21T23:36:23.2559936Z Archiving .pio/build/seeed-xiao-s3/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:23.2630499Z Indexing .pio/build/seeed-xiao-s3/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:23.2798785Z Compiling .pio/build/seeed-xiao-s3/liba0d/WebServer/detail/mimetable.cpp.o
+2025-09-21T23:36:23.4829589Z Compiling .pio/build/seeed-xiao-s3/libf52/ESPmDNS/ESPmDNS.cpp.o
+2025-09-21T23:36:23.9261804Z Compiling .pio/build/seeed-xiao-s3/lib917/LittleFS/LittleFS.cpp.o
+2025-09-21T23:36:23.9380328Z Archiving .pio/build/seeed-xiao-s3/lib042/libHTTPClient.a
+2025-09-21T23:36:23.9444594Z Indexing .pio/build/seeed-xiao-s3/lib042/libHTTPClient.a
+2025-09-21T23:36:24.1428544Z Compiling .pio/build/seeed-xiao-s3/lib1cb/AsyncUDP/AsyncUDP.cpp.o
+2025-09-21T23:36:24.1583653Z Archiving .pio/build/seeed-xiao-s3/liba0d/libWebServer.a
+2025-09-21T23:36:24.1666066Z Indexing .pio/build/seeed-xiao-s3/liba0d/libWebServer.a
+2025-09-21T23:36:24.2885925Z Compiling .pio/build/seeed-xiao-s3/lib1b9/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:36:24.3006455Z Archiving .pio/build/seeed-xiao-s3/libf52/libESPmDNS.a
+2025-09-21T23:36:24.3063465Z Indexing .pio/build/seeed-xiao-s3/libf52/libESPmDNS.a
+2025-09-21T23:36:24.3253220Z Compiling .pio/build/seeed-xiao-s3/lib1b9/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:36:24.3702664Z Compiling .pio/build/seeed-xiao-s3/lib1b9/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:36:24.5462642Z Compiling .pio/build/seeed-xiao-s3/lib1b9/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:36:24.5889213Z Compiling .pio/build/seeed-xiao-s3/lib1b9/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:36:24.8118317Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/Esp.cpp.o
+2025-09-21T23:36:24.8276101Z Archiving .pio/build/seeed-xiao-s3/lib917/libLittleFS.a
+2025-09-21T23:36:24.8338361Z Indexing .pio/build/seeed-xiao-s3/lib917/libLittleFS.a
+2025-09-21T23:36:24.8524837Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/FirmwareMSC.cpp.o
+2025-09-21T23:36:24.9011122Z Archiving .pio/build/seeed-xiao-s3/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:24.9081404Z Indexing .pio/build/seeed-xiao-s3/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:24.9262536Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/FunctionalInterrupt.cpp.o
+2025-09-21T23:36:24.9402487Z Archiving .pio/build/seeed-xiao-s3/lib1b9/libAdafruit NeoPixel.a
+2025-09-21T23:36:24.9464517Z Indexing .pio/build/seeed-xiao-s3/lib1b9/libAdafruit NeoPixel.a
+2025-09-21T23:36:24.9751847Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/HWCDC.cpp.o
+2025-09-21T23:36:25.1622448Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/HardwareSerial.cpp.o
+2025-09-21T23:36:25.3699609Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:36:25.5743917Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/IPv6Address.cpp.o
+2025-09-21T23:36:25.5928379Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/MD5Builder.cpp.o
+2025-09-21T23:36:25.8600178Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/Print.cpp.o
+2025-09-21T23:36:26.0238851Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:36:26.2061871Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/StreamString.cpp.o
+2025-09-21T23:36:26.2328611Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:36:26.5927394Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/USB.cpp.o
+2025-09-21T23:36:26.6802405Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/USBCDC.cpp.o
+2025-09-21T23:36:26.8391068Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/USBMSC.cpp.o
+2025-09-21T23:36:26.8616039Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:36:26.9667133Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/WString.cpp.o
+2025-09-21T23:36:26.9934470Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/base64.cpp.o
+2025-09-21T23:36:27.0525220Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/cbuf.cpp.o
+2025-09-21T23:36:27.1119612Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-adc.c.o
+2025-09-21T23:36:27.1683268Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-bt.c.o
+2025-09-21T23:36:27.3057892Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-cpu.c.o
+2025-09-21T23:36:27.3402659Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-dac.c.o
+2025-09-21T23:36:27.5274728Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-gpio.c.o
+2025-09-21T23:36:27.5643939Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-i2c-slave.c.o
+2025-09-21T23:36:27.6235130Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-i2c.c.o
+2025-09-21T23:36:27.6869863Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-ledc.c.o
+2025-09-21T23:36:27.7520348Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-matrix.c.o
+2025-09-21T23:36:27.8002376Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-misc.c.o
+2025-09-21T23:36:27.8354282Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-psram.c.o
+2025-09-21T23:36:27.8740465Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-rgb-led.c.o
+2025-09-21T23:36:27.9191148Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-rmt.c.o
+2025-09-21T23:36:28.0077680Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-sigmadelta.c.o
+2025-09-21T23:36:28.0473179Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-spi.c.o
+2025-09-21T23:36:28.0787409Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-time.c.o
+2025-09-21T23:36:28.1139162Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-timer.c.o
+2025-09-21T23:36:28.2237646Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-tinyusb.c.o
+2025-09-21T23:36:28.2920674Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-touch.c.o
+2025-09-21T23:36:28.3170324Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/esp32-hal-uart.c.o
+2025-09-21T23:36:28.3425521Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/firmware_msc_fat.c.o
+2025-09-21T23:36:28.4642012Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/libb64/cdecode.c.o
+2025-09-21T23:36:28.4874321Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/libb64/cencode.c.o
+2025-09-21T23:36:28.5223173Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/main.cpp.o
+2025-09-21T23:36:28.5397337Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/stdlib_noniso.c.o
+2025-09-21T23:36:28.5567291Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/wiring_pulse.c.o
+2025-09-21T23:36:28.5775047Z Compiling .pio/build/seeed-xiao-s3/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:36:28.9724276Z Archiving .pio/build/seeed-xiao-s3/libFrameworkArduino.a
+2025-09-21T23:36:28.9887763Z Indexing .pio/build/seeed-xiao-s3/libFrameworkArduino.a
+2025-09-21T23:36:29.0413036Z Linking .pio/build/seeed-xiao-s3/firmware.elf
+2025-09-21T23:36:55.9554811Z /pio/workspace/libdeps/seeed-xiao-s3/Crypto/AESEsp32.cpp:33:5: warning: type of 'esp_aes_setkey' does not match original declaration [-Wlto-type-mismatch]
+2025-09-21T23:36:55.9556381Z  int esp_aes_setkey(unsigned char *ctx, const unsigned char *key,
+2025-09-21T23:36:55.9556782Z      ^
+2025-09-21T23:36:55.9557655Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: 'esp_aes_setkey' was previously declared here
+2025-09-21T23:36:55.9558796Z  int mbedtls_aes_setkey_dec(mbedtls_aes_context *ctx, const unsigned char *key,
+2025-09-21T23:36:55.9559134Z      ^
+2025-09-21T23:36:55.9559840Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: code may be misoptimized unless -fno-strict-aliasing is used
+2025-09-21T23:36:56.0077000Z Retrieving maximum program size .pio/build/seeed-xiao-s3/firmware.elf
+2025-09-21T23:36:56.0080094Z Checking size .pio/build/seeed-xiao-s3/firmware.elf
+2025-09-21T23:36:56.0146133Z Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+2025-09-21T23:36:56.0146562Z RAM:   [          ]   1.7% (used 139720 bytes from 8388608 bytes)
+2025-09-21T23:36:56.0146882Z Flash: [======    ]  62.1% (used 2074117 bytes from 3342336 bytes)
+2025-09-21T23:36:56.0159658Z Building .pio/build/seeed-xiao-s3/firmware.bin
+2025-09-21T23:36:56.1779006Z esptool.py v4.5.1
+2025-09-21T23:36:56.1779359Z Creating esp32s3 image...
+2025-09-21T23:36:56.1779681Z Merged 3 ELF sections
+2025-09-21T23:36:56.1779999Z Successfully created esp32s3 image.
+2025-09-21T23:36:56.1867417Z esp32_create_combined_bin([".pio/build/seeed-xiao-s3/firmware.bin"], [".pio/build/seeed-xiao-s3/firmware.elf"])
+2025-09-21T23:36:56.1868335Z Generating combined binary for serial flashing
+2025-09-21T23:36:56.1874084Z     Offset | File
+2025-09-21T23:36:56.1875098Z  -  0x0000 | /workspace/.pio/build/seeed-xiao-s3/bootloader.bin
+2025-09-21T23:36:56.1875793Z  -  0x8000 | /workspace/.pio/build/seeed-xiao-s3/partitions.bin
+2025-09-21T23:36:56.1876584Z  -  0xe000 | /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin
+2025-09-21T23:36:56.1877475Z  - 0x10000 | /workspace/.pio/build/seeed-xiao-s3/firmware.bin
+2025-09-21T23:36:56.1880286Z Using esptool.py arguments: --chip esp32s3 merge_bin -o /workspace/.pio/build/seeed-xiao-s3/firmware.factory.bin --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0000 /workspace/.pio/build/seeed-xiao-s3/bootloader.bin 0x8000 /workspace/.pio/build/seeed-xiao-s3/partitions.bin 0xe000 /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin 0x10000 /workspace/.pio/build/seeed-xiao-s3/firmware.bin
+2025-09-21T23:36:56.1921068Z esptool.py v4.5.1
+2025-09-21T23:36:56.1941543Z Wrote 0x20a7b0 bytes to file /workspace/.pio/build/seeed-xiao-s3/firmware.factory.bin, ready to flash to offset 0x0
+2025-09-21T23:36:56.8990966Z ======================== [SUCCESS] Took 176.49 seconds ========================
+2025-09-21T23:36:56.8991453Z 
+2025-09-21T23:36:56.8996634Z Environment    Status    Duration
+2025-09-21T23:36:56.8997121Z -------------  --------  ------------
+2025-09-21T23:36:56.8997391Z seeed-xiao-s3  SUCCESS   00:02:56.490
+2025-09-21T23:36:56.8997693Z ========================= 1 succeeded in 00:02:56.490 =========================
+2025-09-21T23:36:56.9421895Z Copying ESP32 bin file
+2025-09-21T23:36:56.9448574Z Copying ESP32 update bin file
+2025-09-21T23:36:56.9473953Z Building Filesystem for ESP32 targets
+2025-09-21T23:36:57.7022383Z Processing seeed-xiao-s3 (board: seeed-xiao-s3; platform: 
+2025-09-21T23:36:57.7022878Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:36:57.7023287Z --------------------------------------------------------------------------------
+2025-09-21T23:36:58.7630043Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:36:58.7789756Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/seeed-xiao-s3.html
+2025-09-21T23:36:58.7791113Z PLATFORM: Espressif 32 (6.11.0) > seeed-xiao-s3
+2025-09-21T23:36:58.7792247Z HARDWARE: ESP32S3 240MHz, 8MB RAM, 8MB Flash
+2025-09-21T23:36:58.7793676Z DEBUG: Current (esp-builtin) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:36:58.7795420Z PACKAGES: 
+2025-09-21T23:36:58.7795867Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:36:58.7796451Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:36:58.7796889Z  - tool-mklittlefs @ 1.203.210628 (2.3) 
+2025-09-21T23:36:58.7797353Z  - tool-openocd-esp32 @ 2.1100.20220706 (11.0) 
+2025-09-21T23:36:58.7797850Z  - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+2025-09-21T23:36:58.7798367Z  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+2025-09-21T23:36:58.8104180Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:36:58.8105114Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:36:58.9413579Z [nanopb] No generation needed.
+2025-09-21T23:36:59.4144788Z Found 96 compatible libraries
+2025-09-21T23:36:59.4145107Z Scanning dependencies...
+2025-09-21T23:37:10.2652823Z Dependency Graph
+2025-09-21T23:37:10.2653463Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:37:10.2654130Z |-- OneButton @ 2.6.1
+2025-09-21T23:37:10.2657321Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:37:10.2658097Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:37:10.2660355Z |-- ArduinoThread @ 0.0.0+20250919060206
+2025-09-21T23:37:10.2662605Z |-- Nanopb @ 0.4.91
+2025-09-21T23:37:10.2664837Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:37:10.2666290Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:37:10.2668771Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:37:10.2671420Z |-- NTPClient @ 3.2.1
+2025-09-21T23:37:10.2673571Z |-- Syslog @ 2.0.0
+2025-09-21T23:37:10.2674487Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:37:10.2677411Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:37:10.2678924Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:37:10.2682874Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:37:10.2683323Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:37:10.2683959Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:37:10.2686375Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:37:10.2688999Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:37:10.2689712Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:37:10.2692155Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:37:10.2693713Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:37:10.2695259Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:37:10.2697040Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:37:10.2698616Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:37:10.2700248Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:37:10.2702067Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:37:10.2703592Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:37:10.2705159Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:37:10.2706714Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:37:10.2708197Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:37:10.2709851Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:37:10.2711322Z |-- INA226 @ 0.6.4
+2025-09-21T23:37:10.2713579Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:37:10.2715189Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:37:10.2717293Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:37:10.2718810Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:37:10.2720364Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:37:10.2721941Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:37:10.2723729Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:37:10.2725050Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:37:10.2726782Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:37:10.2728289Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:37:10.2730035Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:37:10.2731462Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:37:10.2733421Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:37:10.2735139Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:37:10.2736881Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:37:10.2738100Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:37:10.2739787Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:37:10.2741548Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:37:10.2743292Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:37:10.2744869Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:37:10.2746955Z |-- RadioLib @ 7.3.0
+2025-09-21T23:37:10.2748333Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:37:10.2749883Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:37:10.2751376Z |-- libpax @ 1.1.0
+2025-09-21T23:37:10.2753195Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:37:10.2755180Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:37:10.2757437Z |-- Crypto @ 0.4.0
+2025-09-21T23:37:10.2761938Z |-- SD @ 2.0.0
+2025-09-21T23:37:10.2763156Z |-- SPI @ 2.0.0
+2025-09-21T23:37:10.2763495Z |-- WiFi @ 2.0.0
+2025-09-21T23:37:10.2764130Z |-- Wire @ 2.0.0
+2025-09-21T23:37:10.2764478Z |-- Preferences @ 2.0.0
+2025-09-21T23:37:10.2764827Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:37:10.2765174Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:37:10.2765776Z |-- WebServer @ 2.0.0
+2025-09-21T23:37:10.2766345Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:37:10.2766663Z |-- LittleFS @ 2.0.0
+2025-09-21T23:37:10.2766991Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:37:10.2768089Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:37:10.8717379Z Building in release mode
+2025-09-21T23:37:10.9921215Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on seeed-xiao-s3
+2025-09-21T23:37:10.9936801Z Using flags:
+2025-09-21T23:37:10.9937121Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:37:10.9937484Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:37:10.9937838Z -DAPP_ENV=seeed-xiao-s3
+2025-09-21T23:37:10.9938215Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:37:10.9938621Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:37:10.9939169Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:37:10.9939734Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:37:11.0027175Z Building FS image from 'data' directory to .pio/build/seeed-xiao-s3/littlefs.bin
+2025-09-21T23:37:11.0056666Z /static/.gitkeep
+2025-09-21T23:37:11.1587603Z ========================= [SUCCESS] Took 13.46 seconds =========================
+2025-09-21T23:37:11.1588045Z 
+2025-09-21T23:37:11.1593344Z Environment    Status    Duration
+2025-09-21T23:37:11.1593763Z -------------  --------  ------------
+2025-09-21T23:37:11.1594165Z seeed-xiao-s3  SUCCESS   00:00:13.456
+2025-09-21T23:37:11.1594630Z ========================= 1 succeeded in 00:00:13.456 =========================
+2025-09-21T23:37:11.1907199Z Build artifacts are located at: /workspace/.pio/build
+2025-09-21T23:37:11.1908021Z Downloading OTA firmware firmware-s3.bin from https://github.com/meshtastic/firmware-ota
+2025-09-21T23:37:11.1980266Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-09-21T23:37:11.1980917Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-09-21T23:37:11.1981251Z 
+2025-09-21T23:37:11.4271119Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:11.4271981Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:11.5557772Z 
+2025-09-21T23:37:11.7199914Z 100  494k  100  494k    0     0  1382k      0 --:--:-- --:--:-- --:--:-- 1382k
+2025-09-21T23:37:11.7280490Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:37:11.7280776Z with:
+2025-09-21T23:37:11.7281030Z   name: firmware-esp32s3-seeed-xiao-s3-2.7.10.3d51287.zip
+2025-09-21T23:37:11.7281337Z   overwrite: true
+2025-09-21T23:37:11.7281838Z   path: release/*.bin
+release/*.elf
+release/*.uf2
+release/*.hex
+release/*-ota.zip
+
+2025-09-21T23:37:11.7282237Z   if-no-files-found: warn
+2025-09-21T23:37:11.7282440Z   compression-level: 6
+2025-09-21T23:37:11.7282645Z   include-hidden-files: false
+2025-09-21T23:37:11.7282848Z ##[endgroup]
+2025-09-21T23:37:11.9437833Z With the provided path, there will be 5 files uploaded
+2025-09-21T23:37:12.2069884Z Artifact name is valid!
+2025-09-21T23:37:12.2071224Z Root directory input is valid!
+2025-09-21T23:37:12.2929724Z Beginning upload of artifact content to blob storage
+2025-09-21T23:37:14.1694392Z Uploaded bytes 8388608
+2025-09-21T23:37:14.3904311Z Uploaded bytes 10918917
+2025-09-21T23:37:14.5519286Z Finished uploading artifact content to blob storage!
+2025-09-21T23:37:14.5521629Z SHA256 digest of uploaded artifact zip is bf28e5e738b397233d0e6099dee089b629b2ead5a2316cc519906709e2527843
+2025-09-21T23:37:14.5522595Z Finalizing artifact upload
+2025-09-21T23:37:14.6941424Z Artifact firmware-esp32s3-seeed-xiao-s3-2.7.10.3d51287.zip.zip successfully finalized. Artifact ID 4067354869
+2025-09-21T23:37:14.6943098Z Artifact firmware-esp32s3-seeed-xiao-s3-2.7.10.3d51287.zip has been successfully uploaded! Final size is 10918917 bytes. Artifact ID is 4067354869
+2025-09-21T23:37:14.6949348Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067354869
+2025-09-21T23:37:14.7098418Z Post job cleanup.
+2025-09-21T23:37:14.7851869Z [command]/usr/bin/git version
+2025-09-21T23:37:14.7887408Z git version 2.51.0
+2025-09-21T23:37:14.7954738Z Temporarily overriding HOME='/home/runner/work/_temp/8cc750ea-10b5-4786-8572-db96df4d7cdc' before making global git config changes
+2025-09-21T23:37:14.7955928Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:37:14.7960121Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:37:14.7994939Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:37:14.8027157Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:37:14.8236054Z Entering 'meshtestic'
+2025-09-21T23:37:14.8277904Z Entering 'protobufs'
+2025-09-21T23:37:14.8332744Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:37:14.8353722Z http.https://github.com/.extraheader
+2025-09-21T23:37:14.8364446Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:37:14.8393885Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:37:14.8598013Z Entering 'meshtestic'
+2025-09-21T23:37:14.8621252Z http.https://github.com/.extraheader
+2025-09-21T23:37:14.8653612Z Entering 'protobufs'
+2025-09-21T23:37:14.8677152Z http.https://github.com/.extraheader
+2025-09-21T23:37:14.8833555Z Cleaning up orphan processes

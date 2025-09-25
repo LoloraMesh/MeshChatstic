@@ -1,0 +1,1695 @@
+﻿2025-09-21T23:33:03.4626835Z Current runner version: '2.328.0'
+2025-09-21T23:33:03.4651373Z ##[group]Runner Image Provisioner
+2025-09-21T23:33:03.4652221Z Hosted Compute Agent
+2025-09-21T23:33:03.4652796Z Version: 20250829.383
+2025-09-21T23:33:03.4653361Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:33:03.4654178Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:33:03.4654755Z ##[endgroup]
+2025-09-21T23:33:03.4655312Z ##[group]Operating System
+2025-09-21T23:33:03.4655819Z Ubuntu
+2025-09-21T23:33:03.4656740Z 24.04.3
+2025-09-21T23:33:03.4657217Z LTS
+2025-09-21T23:33:03.4657676Z ##[endgroup]
+2025-09-21T23:33:03.4658216Z ##[group]Runner Image
+2025-09-21T23:33:03.4658825Z Image: ubuntu-24.04
+2025-09-21T23:33:03.4659361Z Version: 20250907.24.1
+2025-09-21T23:33:03.4660409Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:33:03.4662017Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:33:03.4663035Z ##[endgroup]
+2025-09-21T23:33:03.4665368Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:33:03.4667882Z Actions: read
+2025-09-21T23:33:03.4668435Z Attestations: read
+2025-09-21T23:33:03.4668909Z Checks: read
+2025-09-21T23:33:03.4669441Z Contents: read
+2025-09-21T23:33:03.4669901Z Deployments: read
+2025-09-21T23:33:03.4670491Z Discussions: read
+2025-09-21T23:33:03.4671004Z Issues: read
+2025-09-21T23:33:03.4671491Z Metadata: read
+2025-09-21T23:33:03.4671935Z Models: read
+2025-09-21T23:33:03.4672453Z Packages: read
+2025-09-21T23:33:03.4672925Z Pages: read
+2025-09-21T23:33:03.4673446Z PullRequests: read
+2025-09-21T23:33:03.4674038Z RepositoryProjects: read
+2025-09-21T23:33:03.4674567Z SecurityEvents: read
+2025-09-21T23:33:03.4675193Z Statuses: read
+2025-09-21T23:33:03.4675685Z ##[endgroup]
+2025-09-21T23:33:03.4677900Z Secret source: Actions
+2025-09-21T23:33:03.4678851Z Prepare workflow directory
+2025-09-21T23:33:03.4996549Z Prepare all required actions
+2025-09-21T23:33:03.5033540Z Getting action download info
+2025-09-21T23:33:03.8023968Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:33:04.0127220Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:33:04.1877824Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:33:04.3962193Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:33:04.3967314Z ##[group] Inputs
+2025-09-21T23:33:04.3967856Z   version: 2.7.10.3d51287
+2025-09-21T23:33:04.3968357Z   platform: esp32
+2025-09-21T23:33:04.3968798Z   pio_env: tbeam
+2025-09-21T23:33:04.3969231Z ##[endgroup]
+2025-09-21T23:33:04.3969728Z Complete job name: build-esp32 (tbeam) / build-esp32
+2025-09-21T23:33:04.4615628Z ##[group]Run actions/checkout@v5
+2025-09-21T23:33:04.4616715Z with:
+2025-09-21T23:33:04.4617135Z   submodules: recursive
+2025-09-21T23:33:04.4617621Z   ref: develop
+2025-09-21T23:33:04.4618120Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:04.4618864Z   token: ***
+2025-09-21T23:33:04.4619283Z   ssh-strict: true
+2025-09-21T23:33:04.4619716Z   ssh-user: git
+2025-09-21T23:33:04.4620170Z   persist-credentials: true
+2025-09-21T23:33:04.4620647Z   clean: true
+2025-09-21T23:33:04.4621087Z   sparse-checkout-cone-mode: true
+2025-09-21T23:33:04.4621601Z   fetch-depth: 1
+2025-09-21T23:33:04.4622023Z   fetch-tags: false
+2025-09-21T23:33:04.4622447Z   show-progress: true
+2025-09-21T23:33:04.4622883Z   lfs: false
+2025-09-21T23:33:04.4623290Z   set-safe-directory: true
+2025-09-21T23:33:04.4624026Z ##[endgroup]
+2025-09-21T23:33:04.5669019Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:04.5670886Z ##[group]Getting Git version info
+2025-09-21T23:33:04.5671724Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:04.5672748Z [command]/usr/bin/git version
+2025-09-21T23:33:04.5768710Z git version 2.51.0
+2025-09-21T23:33:04.5789869Z ##[endgroup]
+2025-09-21T23:33:04.5803277Z Temporarily overriding HOME='/home/runner/work/_temp/159839e1-7017-441a-9fbb-8ab0f59edb92' before making global git config changes
+2025-09-21T23:33:04.5804763Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:33:04.5808363Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:33:04.5852046Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:04.5855549Z ##[group]Initializing the repository
+2025-09-21T23:33:04.5860073Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:33:04.5988312Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:33:04.5989618Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:33:04.5990640Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:33:04.5991407Z hint:
+2025-09-21T23:33:04.5991957Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:33:04.5992629Z hint:
+2025-09-21T23:33:04.5993594Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:33:04.5994910Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:33:04.5996425Z hint:
+2025-09-21T23:33:04.5996911Z hint: 	git branch -m <name>
+2025-09-21T23:33:04.5997428Z hint:
+2025-09-21T23:33:04.5998125Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:33:04.6000056Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:33:04.6004643Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:04.6044561Z ##[endgroup]
+2025-09-21T23:33:04.6045363Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:33:04.6048059Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:33:04.6074377Z ##[endgroup]
+2025-09-21T23:33:04.6075114Z ##[group]Setting up auth
+2025-09-21T23:33:04.6080891Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:33:04.6110775Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:33:04.6462043Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:33:04.6492969Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:33:04.6708559Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:04.6741370Z ##[endgroup]
+2025-09-21T23:33:04.6742342Z ##[group]Fetching the repository
+2025-09-21T23:33:04.6750372Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:33:05.2559635Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:05.2562906Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:33:05.2590565Z ##[endgroup]
+2025-09-21T23:33:05.2591785Z ##[group]Determining the checkout info
+2025-09-21T23:33:05.2598097Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:33:05.2620252Z   origin/develop
+2025-09-21T23:33:05.2625524Z ##[endgroup]
+2025-09-21T23:33:05.2629589Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:33:05.2672185Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:33:05.2699028Z ##[group]Checking out the ref
+2025-09-21T23:33:05.2701593Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:33:05.3720864Z Switched to a new branch 'develop'
+2025-09-21T23:33:05.3722542Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:33:05.3733241Z ##[endgroup]
+2025-09-21T23:33:05.3734898Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:33:05.3738869Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:05.3781997Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:33:05.3810323Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:33:05.3838720Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:33:05.3864332Z ##[endgroup]
+2025-09-21T23:33:05.3866154Z ##[group]Fetching submodules
+2025-09-21T23:33:05.3868203Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:33:05.4093494Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:33:05.4302416Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:33:05.4306987Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:33:05.4332128Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:33:05.6501837Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:33:05.8740325Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:33:05.8855593Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:33:05.8886839Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:33:05.9110756Z Entering 'meshtestic'
+2025-09-21T23:33:05.9148468Z Entering 'protobufs'
+2025-09-21T23:33:05.9192972Z ##[endgroup]
+2025-09-21T23:33:05.9193585Z ##[group]Persisting credentials for submodules
+2025-09-21T23:33:05.9200434Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:33:05.9407361Z Entering 'meshtestic'
+2025-09-21T23:33:05.9449184Z Entering 'protobufs'
+2025-09-21T23:33:05.9502793Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:33:05.9707894Z Entering 'meshtestic'
+2025-09-21T23:33:05.9745116Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:33:05.9764511Z Entering 'protobufs'
+2025-09-21T23:33:05.9802340Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:33:05.9843269Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:33:06.0048582Z Entering 'meshtestic'
+2025-09-21T23:33:06.0085293Z Entering 'protobufs'
+2025-09-21T23:33:06.0133945Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:33:06.0338119Z Entering 'meshtestic'
+2025-09-21T23:33:06.0373972Z Entering 'protobufs'
+2025-09-21T23:33:06.0418364Z ##[endgroup]
+2025-09-21T23:33:06.0452598Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:33:06.0474249Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:33:06.0672339Z ##[group]Run if [ "$PIO_PLATFORM" = "esp32s3" ]; then
+2025-09-21T23:33:06.0672778Z [36;1mif [ "$PIO_PLATFORM" = "esp32s3" ]; then[0m
+2025-09-21T23:33:06.0673105Z [36;1m  echo "src=firmware-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:06.0673445Z [36;1m  echo "tgt=release/bleota-s3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:06.0674028Z [36;1melif [ "$PIO_PLATFORM" = "esp32c3" ] || [ "$PIO_PLATFORM" = "esp32c6" ]; then[0m
+2025-09-21T23:33:06.0674445Z [36;1m  echo "src=firmware-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:06.0674788Z [36;1m  echo "tgt=release/bleota-c3.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:06.0675087Z [36;1melif [ "$PIO_PLATFORM" = "esp32" ]; then[0m
+2025-09-21T23:33:06.0675378Z [36;1m  echo "src=firmware.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:06.0675675Z [36;1m  echo "tgt=release/bleota.bin" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:33:06.0675940Z [36;1mfi[0m
+2025-09-21T23:33:06.0731523Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:33:06.0731813Z env:
+2025-09-21T23:33:06.0731984Z   PIO_PLATFORM: esp32
+2025-09-21T23:33:06.0732186Z ##[endgroup]
+2025-09-21T23:33:06.0894192Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:33:06.0894503Z with:
+2025-09-21T23:33:06.0894671Z   pio_platform: esp32
+2025-09-21T23:33:06.0894869Z   pio_env: tbeam
+2025-09-21T23:33:06.0895042Z   pio_target: build
+2025-09-21T23:33:06.0959880Z   ota_firmware_source: firmware.bin
+2025-09-21T23:33:06.0960180Z   ota_firmware_target: release/bleota.bin
+2025-09-21T23:33:06.0960437Z ##[endgroup]
+2025-09-21T23:33:06.1037886Z ##[group]Run docker run --rm \
+2025-09-21T23:33:06.1038159Z [36;1mdocker run --rm \[0m
+2025-09-21T23:33:06.1038387Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:33:06.1038619Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:33:06.1038840Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:33:06.1039046Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:33:06.1039269Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:33:06.1039500Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:33:06.1039757Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:33:06.1040048Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:33:06.1040314Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:33:06.1040640Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-esp32[0m
+2025-09-21T23:33:06.1072081Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:33:06.1072404Z env:
+2025-09-21T23:33:06.1072564Z   MT_ENV: tbeam
+2025-09-21T23:33:06.1072751Z   MT_PLATFORM: esp32
+2025-09-21T23:33:06.1072936Z   MT_TARGET: build
+2025-09-21T23:33:06.1073133Z   MT_OTA_FIRMWARE_SOURCE: firmware.bin
+2025-09-21T23:33:06.1073390Z   MT_OTA_FIRMWARE_TARGET: release/bleota.bin
+2025-09-21T23:33:06.1073663Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:33:06.1073917Z ##[endgroup]
+2025-09-21T23:33:06.2162930Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-esp32' locally
+2025-09-21T23:33:06.4003527Z master-esp32: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:33:06.4475396Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:33:06.4475860Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:33:06.4476463Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:33:06.4476868Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:33:06.4477238Z 815e87185931: Pulling fs layer
+2025-09-21T23:33:06.4477594Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:33:06.4477974Z da9989870cf6: Pulling fs layer
+2025-09-21T23:33:06.4478337Z 2de4a5cf588d: Pulling fs layer
+2025-09-21T23:33:06.4478696Z 9422c8acedef: Pulling fs layer
+2025-09-21T23:33:06.4479063Z 544889656aa3: Pulling fs layer
+2025-09-21T23:33:06.4479433Z c6792c88c479: Pulling fs layer
+2025-09-21T23:33:06.4479802Z 81412819ce24: Pulling fs layer
+2025-09-21T23:33:06.4480156Z 91652e612f1d: Pulling fs layer
+2025-09-21T23:33:06.4480523Z b24a2a95e56b: Pulling fs layer
+2025-09-21T23:33:06.4480873Z 2de4a5cf588d: Waiting
+2025-09-21T23:33:06.4481231Z 9422c8acedef: Waiting
+2025-09-21T23:33:06.4481540Z 81412819ce24: Waiting
+2025-09-21T23:33:06.4481838Z 544889656aa3: Waiting
+2025-09-21T23:33:06.4482144Z c6792c88c479: Waiting
+2025-09-21T23:33:06.4482447Z 91652e612f1d: Waiting
+2025-09-21T23:33:06.4482732Z b24a2a95e56b: Waiting
+2025-09-21T23:33:06.4483024Z c611f5bb386b: Waiting
+2025-09-21T23:33:06.4483333Z 815e87185931: Waiting
+2025-09-21T23:33:06.4483636Z 71c11f7c6832: Waiting
+2025-09-21T23:33:06.4484287Z da9989870cf6: Waiting
+2025-09-21T23:33:06.5926862Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:33:06.5927810Z ccbbb2080a06: Download complete
+2025-09-21T23:33:06.6968943Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:33:06.6972038Z 7d5073558d5a: Download complete
+2025-09-21T23:33:06.7177435Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:33:06.7178061Z 8fb375ec14f3: Download complete
+2025-09-21T23:33:06.7711588Z 815e87185931: Verifying Checksum
+2025-09-21T23:33:06.7712269Z 815e87185931: Download complete
+2025-09-21T23:33:06.8329300Z da9989870cf6: Verifying Checksum
+2025-09-21T23:33:06.8329852Z da9989870cf6: Download complete
+2025-09-21T23:33:06.8673192Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:33:06.8675324Z 71c11f7c6832: Download complete
+2025-09-21T23:33:06.9164125Z 9422c8acedef: Verifying Checksum
+2025-09-21T23:33:06.9164595Z 9422c8acedef: Download complete
+2025-09-21T23:33:07.0434296Z 2de4a5cf588d: Verifying Checksum
+2025-09-21T23:33:07.0436594Z 2de4a5cf588d: Download complete
+2025-09-21T23:33:07.3733709Z 544889656aa3: Verifying Checksum
+2025-09-21T23:33:07.3736111Z 544889656aa3: Download complete
+2025-09-21T23:33:07.4415879Z 81412819ce24: Verifying Checksum
+2025-09-21T23:33:07.4416816Z 81412819ce24: Download complete
+2025-09-21T23:33:07.4518117Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:33:07.4518584Z c611f5bb386b: Download complete
+2025-09-21T23:33:07.4980011Z b24a2a95e56b: Verifying Checksum
+2025-09-21T23:33:07.4981981Z b24a2a95e56b: Download complete
+2025-09-21T23:33:07.4993773Z 91652e612f1d: Verifying Checksum
+2025-09-21T23:33:07.4994187Z 91652e612f1d: Download complete
+2025-09-21T23:33:08.9460309Z 8fb375ec14f3: Pull complete
+2025-09-21T23:33:09.5765777Z c6792c88c479: Verifying Checksum
+2025-09-21T23:33:09.5766482Z c6792c88c479: Download complete
+2025-09-21T23:33:12.7165146Z ccbbb2080a06: Pull complete
+2025-09-21T23:33:15.0292348Z 7d5073558d5a: Pull complete
+2025-09-21T23:33:21.4347946Z c611f5bb386b: Pull complete
+2025-09-21T23:33:21.7012666Z 815e87185931: Pull complete
+2025-09-21T23:33:22.4120756Z 71c11f7c6832: Pull complete
+2025-09-21T23:33:22.4241646Z da9989870cf6: Pull complete
+2025-09-21T23:33:23.4746004Z 2de4a5cf588d: Pull complete
+2025-09-21T23:33:23.4855253Z 9422c8acedef: Pull complete
+2025-09-21T23:33:25.0001849Z 544889656aa3: Pull complete
+2025-09-21T23:33:55.9714040Z c6792c88c479: Pull complete
+2025-09-21T23:33:55.9827252Z 81412819ce24: Pull complete
+2025-09-21T23:33:55.9922003Z 91652e612f1d: Pull complete
+2025-09-21T23:33:56.0019229Z b24a2a95e56b: Pull complete
+2025-09-21T23:33:56.0062293Z Digest: sha256:040544a54177bbbd72e5729d191f379d24205ed7e13a83966e388cb4e88856a3
+2025-09-21T23:33:56.0077131Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-esp32
+2025-09-21T23:33:56.2168347Z Building PlatformIO environment: tbeam
+2025-09-21T23:33:56.5041803Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:33:57.1945960Z Resolving tbeam dependencies...
+2025-09-21T23:33:57.2142412Z Removing unused dependencies...
+2025-09-21T23:33:57.2225087Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:33:57.3801088Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:33:57.6949661Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:34:00.9519186Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:34:01.1680449Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:34:01.2621880Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:34:01.7337603Z Building for tbeam with 
+2025-09-21T23:34:02.5061979Z Processing tbeam (board: ttgo-t-beam; platform: 
+2025-09-21T23:34:02.5062625Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:34:02.5063352Z --------------------------------------------------------------------------------
+2025-09-21T23:34:03.7469997Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:34:03.7613266Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/ttgo-t-beam.html
+2025-09-21T23:34:03.7614454Z PLATFORM: Espressif 32 (6.11.0) > TTGO T-Beam
+2025-09-21T23:34:03.7615030Z HARDWARE: ESP32 240MHz, 1.25MB RAM, 4MB Flash
+2025-09-21T23:34:03.7616921Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:34:03.7618421Z PACKAGES: 
+2025-09-21T23:34:03.7618931Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:34:03.7619600Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:34:03.7620131Z  - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+2025-09-21T23:34:03.7913427Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:34:03.7914528Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:34:03.9094046Z [nanopb] No generation needed.
+2025-09-21T23:34:04.3834775Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:06.5433740Z Downloading 0% 10%
+2025-09-21T23:34:06.5484270Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:34:06.5518425Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:34:06.6675520Z [nanopb] No generation needed.
+2025-09-21T23:34:06.7944955Z Found 96 compatible libraries
+2025-09-21T23:34:06.7945483Z Scanning dependencies...
+2025-09-21T23:34:17.5627162Z Dependency Graph
+2025-09-21T23:34:17.5627803Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:34:17.5628439Z |-- OneButton @ 2.6.1
+2025-09-21T23:34:17.5631526Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:34:17.5633645Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:34:17.5634741Z |-- ArduinoThread @ 0.0.0+20250919052328
+2025-09-21T23:34:17.5637048Z |-- Nanopb @ 0.4.91
+2025-09-21T23:34:17.5638809Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:34:17.5640534Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:34:17.5643493Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:34:17.5644099Z |-- NTPClient @ 3.2.1
+2025-09-21T23:34:17.5646676Z |-- Syslog @ 2.0.0
+2025-09-21T23:34:17.5647225Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:34:17.5653011Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:34:17.5653738Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:34:17.5655120Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:34:17.5655874Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:34:17.5656675Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:34:17.5662576Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:34:17.5663383Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:34:17.5664894Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:34:17.5665341Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:34:17.5670326Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:34:17.5670784Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:34:17.5671185Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:34:17.5671579Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:34:17.5673085Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:34:17.5674903Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:34:17.5678749Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:34:17.5679226Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:34:17.5679634Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:34:17.5681434Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:34:17.5683996Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:34:17.5684400Z |-- INA226 @ 0.6.4
+2025-09-21T23:34:17.5690740Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:34:17.5692542Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:34:17.5693169Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:34:17.5693602Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:34:17.5693981Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:34:17.5694592Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:34:17.5696957Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:34:17.5697923Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:34:17.5704023Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:34:17.5704868Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:34:17.5705228Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:34:17.5705808Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:34:17.5707488Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:34:17.5707952Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:34:17.5710059Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:17.5710645Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:34:17.5713023Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:34:17.5715028Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:34:17.5716590Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:34:17.5718122Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:34:17.5719803Z |-- RadioLib @ 7.3.0
+2025-09-21T23:34:17.5721406Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:34:17.5723141Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:34:17.5724624Z |-- libpax @ 1.1.0
+2025-09-21T23:34:17.5726732Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:34:17.5728001Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:34:17.5729338Z |-- Crypto @ 0.4.0
+2025-09-21T23:34:17.5731223Z |-- SD @ 2.0.0
+2025-09-21T23:34:17.5732080Z |-- SPI @ 2.0.0
+2025-09-21T23:34:17.5732393Z |-- WiFi @ 2.0.0
+2025-09-21T23:34:17.5733801Z |-- Wire @ 2.0.0
+2025-09-21T23:34:17.5734161Z |-- Preferences @ 2.0.0
+2025-09-21T23:34:17.5734593Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:34:17.5735356Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:34:17.5735728Z |-- WebServer @ 2.0.0
+2025-09-21T23:34:17.5737398Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:34:17.5737737Z |-- LittleFS @ 2.0.0
+2025-09-21T23:34:17.5739219Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:34:17.5740653Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:34:18.0808953Z Building in release mode
+2025-09-21T23:34:18.2401587Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on tbeam
+2025-09-21T23:34:18.2415306Z Using flags:
+2025-09-21T23:34:18.2415856Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:34:18.2416518Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:34:18.2416866Z -DAPP_ENV=tbeam
+2025-09-21T23:34:18.2417198Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:18.2417641Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:34:18.2418397Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:34:18.2419422Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:34:18.5579534Z Compiling .pio/build/tbeam/src/BluetoothCommon.cpp.o
+2025-09-21T23:34:18.6928040Z Compiling .pio/build/tbeam/src/DebugConfiguration.cpp.o
+2025-09-21T23:34:18.7091578Z Compiling .pio/build/tbeam/src/DisplayFormatters.cpp.o
+2025-09-21T23:34:18.7387760Z Compiling .pio/build/tbeam/src/FSCommon.cpp.o
+2025-09-21T23:34:19.7509381Z Compiling .pio/build/tbeam/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:34:19.8509261Z Compiling .pio/build/tbeam/src/Fusion/FusionCompass.c.o
+2025-09-21T23:34:19.9007834Z Compiling .pio/build/tbeam/src/Fusion/FusionOffset.c.o
+2025-09-21T23:34:19.9341644Z Compiling .pio/build/tbeam/src/GpioLogic.cpp.o
+2025-09-21T23:34:20.0547198Z Compiling .pio/build/tbeam/src/Led.cpp.o
+2025-09-21T23:34:20.0767839Z Compiling .pio/build/tbeam/src/Observer.cpp.o
+2025-09-21T23:34:20.2580575Z Compiling .pio/build/tbeam/src/Power.cpp.o
+2025-09-21T23:34:21.0379318Z Compiling .pio/build/tbeam/src/PowerFSM.cpp.o
+2025-09-21T23:34:21.1869999Z Compiling .pio/build/tbeam/src/PowerMon.cpp.o
+2025-09-21T23:34:21.8670918Z Compiling .pio/build/tbeam/src/RedirectablePrint.cpp.o
+2025-09-21T23:34:22.4488700Z Compiling .pio/build/tbeam/src/SPILock.cpp.o
+2025-09-21T23:34:22.4737444Z Compiling .pio/build/tbeam/src/SafeFile.cpp.o
+2025-09-21T23:34:22.9277492Z Compiling .pio/build/tbeam/src/SerialConsole.cpp.o
+2025-09-21T23:34:23.5747574Z Compiling .pio/build/tbeam/src/airtime.cpp.o
+2025-09-21T23:34:23.6410816Z Compiling .pio/build/tbeam/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:34:23.7485357Z Compiling .pio/build/tbeam/src/buzz/buzz.cpp.o
+2025-09-21T23:34:24.1829780Z Compiling .pio/build/tbeam/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:34:24.8326956Z Compiling .pio/build/tbeam/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:34:24.9261974Z Compiling .pio/build/tbeam/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:34:24.9893038Z Compiling .pio/build/tbeam/src/concurrency/Lock.cpp.o
+2025-09-21T23:34:25.3065256Z Compiling .pio/build/tbeam/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:34:25.9576721Z Compiling .pio/build/tbeam/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:34:26.0401991Z Compiling .pio/build/tbeam/src/concurrency/OSThread.cpp.o
+2025-09-21T23:34:26.1267081Z Compiling .pio/build/tbeam/src/detect/ScanI2C.cpp.o
+2025-09-21T23:34:26.2133237Z Compiling .pio/build/tbeam/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:34:26.4374958Z Compiling .pio/build/tbeam/src/gps/GPS.cpp.o
+2025-09-21T23:34:27.2068340Z Compiling .pio/build/tbeam/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:34:27.6391638Z Compiling .pio/build/tbeam/src/gps/GeoCoord.cpp.o
+2025-09-21T23:34:27.7256538Z Compiling .pio/build/tbeam/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:34:28.3802106Z Compiling .pio/build/tbeam/src/gps/RTC.cpp.o
+2025-09-21T23:34:28.4373990Z Compiling .pio/build/tbeam/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:34:28.6879578Z Compiling .pio/build/tbeam/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:34:29.5690100Z Compiling .pio/build/tbeam/src/graphics/Screen.cpp.o
+2025-09-21T23:34:29.5976856Z Compiling .pio/build/tbeam/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:34:29.8426135Z Compiling .pio/build/tbeam/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:34:30.1824433Z Compiling .pio/build/tbeam/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:34:30.3078904Z Compiling .pio/build/tbeam/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:34:30.3395781Z Compiling .pio/build/tbeam/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:34:31.1608521Z src/graphics/Screen.cpp: In function 'void graphics::drawFavNodeChatFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:31.1612358Z src/graphics/Screen.cpp:568:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:31.1613024Z      const int h     = display->height();
+2025-09-21T23:34:31.1613427Z                ^
+2025-09-21T23:34:31.1625964Z src/graphics/Screen.cpp: In function 'void graphics::drawChannelChatTabFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:31.1627547Z src/graphics/Screen.cpp:701:15: warning: unused variable 'h' [-Wunused-variable]
+2025-09-21T23:34:31.1628315Z      const int h     = display->height();
+2025-09-21T23:34:31.1628834Z                ^
+2025-09-21T23:34:31.1800713Z src/graphics/Screen.cpp: In constructor 'graphics::Screen::Screen(ScanI2C::DeviceAddress, meshtastic_Config_DisplayConfig_OledType, OLEDDISPLAY_GEOMETRY)':
+2025-09-21T23:34:31.1802622Z src/graphics/Screen.cpp:1120:24: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:31.1804398Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:31.1804892Z              ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:31.1805689Z src/graphics/Screen.cpp:1120:45: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:31.1806758Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:31.1807294Z                                   ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:31.1811929Z src/graphics/Screen.cpp:1120:66: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+2025-09-21T23:34:31.1812845Z          if (TFT_MESH_r <= 255 && TFT_MESH_g <= 255 && TFT_MESH_b <= 255) {
+2025-09-21T23:34:31.1839395Z                                                        ~~~~~~~~~~~^~~~~~
+2025-09-21T23:34:31.2137422Z src/graphics/Screen.cpp: In member function 'int graphics::Screen::handleInputEvent(const InputEvent*)':
+2025-09-21T23:34:31.2139036Z src/graphics/Screen.cpp:2649:24: warning: unused variable 'shortPressAsDown' [-Wunused-variable]
+2025-09-21T23:34:31.2140858Z              const bool shortPressAsDown =
+2025-09-21T23:34:31.2141594Z                         ^~~~~~~~~~~~~~~~
+2025-09-21T23:34:31.6109620Z Compiling .pio/build/tbeam/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:34:31.6213450Z src/graphics/Screen.cpp: In member function 'virtual int32_t graphics::Screen::runOnce()':
+2025-09-21T23:34:31.6218527Z src/graphics/Screen.cpp:1578:47: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2025-09-21T23:34:31.6219755Z              NotificationRenderer::pauseBanner = false;
+2025-09-21T23:34:31.6220755Z              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+2025-09-21T23:34:31.6221356Z src/graphics/Screen.cpp:1579:9: note: here
+2025-09-21T23:34:31.6222045Z          case Cmd::STOP_BOOT_SCREEN:
+2025-09-21T23:34:31.6222401Z          ^~~~
+2025-09-21T23:34:31.6591733Z src/graphics/Screen.cpp: At global scope:
+2025-09-21T23:34:31.6593495Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:34:31.6610093Z  static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:34:31.6613230Z              ^~~~~~~~~~~~~~~~~
+2025-09-21T23:34:31.6614304Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:31.6615482Z  static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:34:31.6616257Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:31.6617897Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:34:31.6619378Z  static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:34:31.6620037Z              ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:32.1089689Z Compiling .pio/build/tbeam/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:34:32.1624834Z Compiling .pio/build/tbeam/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:34:32.9201095Z Compiling .pio/build/tbeam/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:34:32.9843366Z src/graphics/VirtualKeyboard.cpp: In member function 'void graphics::VirtualKeyboard::drawInputArea(OLEDDisplay*, int16_t, int16_t, int16_t)':
+2025-09-21T23:34:32.9845621Z src/graphics/VirtualKeyboard.cpp:356:23: warning: unused variable 'innerLeft' [-Wunused-variable]
+2025-09-21T23:34:32.9847736Z              const int innerLeft = boxX + 1;
+2025-09-21T23:34:32.9848161Z                        ^~~~~~~~~
+2025-09-21T23:34:32.9849121Z src/graphics/VirtualKeyboard.cpp:357:23: warning: unused variable 'innerRight' [-Wunused-variable]
+2025-09-21T23:34:32.9849935Z              const int innerRight = boxX + boxWidth - 2;
+2025-09-21T23:34:32.9850415Z                        ^~~~~~~~~~
+2025-09-21T23:34:33.4986883Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawDigitalClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:33.4988967Z src/graphics/draw/ClockRenderer.cpp:195:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:33.4990050Z      int line = 0;
+2025-09-21T23:34:33.4990477Z          ^~~~
+2025-09-21T23:34:33.5021035Z src/graphics/draw/ClockRenderer.cpp: In function 'void graphics::ClockRenderer::drawAnalogClockFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:33.5023523Z src/graphics/draw/ClockRenderer.cpp:320:9: warning: unused variable 'line' [-Wunused-variable]
+2025-09-21T23:34:33.5024234Z      int line = 0;
+2025-09-21T23:34:33.5027169Z          ^~~~
+2025-09-21T23:34:33.5646025Z Compiling .pio/build/tbeam/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:34:33.8036262Z Compiling .pio/build/tbeam/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:34:33.9144865Z Compiling .pio/build/tbeam/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:34:34.9305911Z Compiling .pio/build/tbeam/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:34:35.1317094Z src/graphics/draw/MenuHandler.cpp: In static member function 'static void graphics::menuHandler::wifiConfigMenu()':
+2025-09-21T23:34:35.1318901Z src/graphics/draw/MenuHandler.cpp:1315:22: warning: operation on 'count' may be undefined [-Wsequence-point]
+2025-09-21T23:34:35.1319815Z          options[count++] = labels[count];
+2025-09-21T23:34:35.1320241Z                  ~~~~~^~
+2025-09-21T23:34:35.1930949Z src/graphics/draw/MessageRenderer.cpp: In function 'void graphics::MessageRenderer::drawTextMessageFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:34:35.1932485Z src/graphics/draw/MessageRenderer.cpp:386:15: warning: unused variable 'page' [-Wunused-variable]
+2025-09-21T23:34:35.1933318Z          float page = (float)usableScrollHeight * 0.9f;  // 90% page
+2025-09-21T23:34:35.1933806Z                ^~~~
+2025-09-21T23:34:35.2187858Z src/graphics/draw/NodeListRenderer.cpp: In function 'void graphics::NodeListRenderer::drawCompassArrow(OLEDDisplay*, meshtastic_NodeInfoLite*, int16_t, int16_t, int, float, double, double)':
+2025-09-21T23:34:35.2190164Z src/graphics/draw/NodeListRenderer.cpp:359:11: warning: unused variable 'angle' [-Wunused-variable]
+2025-09-21T23:34:35.2191219Z      float angle = relativeBearing * DEG_TO_RAD;
+2025-09-21T23:34:35.2191760Z            ^~~~~
+2025-09-21T23:34:35.6110252Z Compiling .pio/build/tbeam/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:34:35.8013829Z Compiling .pio/build/tbeam/src/graphics/emotes.cpp.o
+2025-09-21T23:34:36.4153451Z src/graphics/draw/NotificationRenderer.cpp: In static member function 'static void graphics::NotificationRenderer::drawTextInput(OLEDDisplay*, OLEDDisplayUiState*)':
+2025-09-21T23:34:36.4155691Z src/graphics/draw/NotificationRenderer.cpp:774:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:36.4158271Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:36.4158906Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:36.4159885Z src/graphics/draw/NotificationRenderer.cpp:775:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:36.4160942Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:36.4161442Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:36.4162426Z src/graphics/draw/NotificationRenderer.cpp:782:55: warning: unused variable 'graphics::rotaryEncoderInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:36.4163573Z                  extern ::RotaryEncoderInterruptImpl1 *rotaryEncoderInterruptImpl1;
+2025-09-21T23:34:36.4164185Z                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:36.4165151Z src/graphics/draw/NotificationRenderer.cpp:783:48: warning: unused variable 'graphics::upDownInterruptImpl1' [-Wunused-variable]
+2025-09-21T23:34:36.4166191Z                  extern ::UpDownInterruptImpl1 *upDownInterruptImpl1;
+2025-09-21T23:34:36.4166862Z                                                 ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:36.4728040Z Compiling .pio/build/tbeam/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:34:36.5294021Z Compiling .pio/build/tbeam/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:34:36.5852259Z Compiling .pio/build/tbeam/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:34:36.6412965Z Compiling .pio/build/tbeam/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:34:36.6976122Z Compiling .pio/build/tbeam/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:34:36.7612407Z Compiling .pio/build/tbeam/src/graphics/tftSetup.cpp.o
+2025-09-21T23:34:36.8136274Z Compiling .pio/build/tbeam/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:34:36.8488946Z Compiling .pio/build/tbeam/src/input/ButtonThread.cpp.o
+2025-09-21T23:34:36.9734673Z Compiling .pio/build/tbeam/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:34:37.7077095Z Compiling .pio/build/tbeam/src/input/InputBroker.cpp.o
+2025-09-21T23:34:37.9468956Z Compiling .pio/build/tbeam/src/input/LinuxInput.cpp.o
+2025-09-21T23:34:38.0945399Z Compiling .pio/build/tbeam/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:34:38.9323553Z Compiling .pio/build/tbeam/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:34:38.9661781Z Compiling .pio/build/tbeam/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:34:39.0188688Z Compiling .pio/build/tbeam/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:34:39.0674382Z Compiling .pio/build/tbeam/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:34:39.2227867Z Compiling .pio/build/tbeam/src/input/SeesawRotary.cpp.o
+2025-09-21T23:34:39.2706700Z Compiling .pio/build/tbeam/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:34:40.3013330Z Compiling .pio/build/tbeam/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:34:40.3194294Z Compiling .pio/build/tbeam/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:34:40.4483102Z Compiling .pio/build/tbeam/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:34:40.7578333Z Compiling .pio/build/tbeam/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:34:40.8078675Z Compiling .pio/build/tbeam/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:34:40.8580500Z Compiling .pio/build/tbeam/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:34:41.4441163Z Compiling .pio/build/tbeam/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:34:41.6050804Z Compiling .pio/build/tbeam/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:34:42.0427322Z Compiling .pio/build/tbeam/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:34:42.6927949Z Compiling .pio/build/tbeam/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:34:42.7685184Z Compiling .pio/build/tbeam/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:34:42.9498369Z Compiling .pio/build/tbeam/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:34:43.3168330Z Compiling .pio/build/tbeam/src/input/i2cButton.cpp.o
+2025-09-21T23:34:44.0122119Z Compiling .pio/build/tbeam/src/input/kbI2cBase.cpp.o
+2025-09-21T23:34:44.0454959Z Compiling .pio/build/tbeam/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:34:44.4743875Z Compiling .pio/build/tbeam/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:34:44.8593858Z Compiling .pio/build/tbeam/src/main.cpp.o
+2025-09-21T23:34:45.1981503Z Compiling .pio/build/tbeam/src/memGet.cpp.o
+2025-09-21T23:34:45.9126501Z Compiling .pio/build/tbeam/src/mesh/Channels.cpp.o
+2025-09-21T23:34:46.3507946Z Compiling .pio/build/tbeam/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:34:46.3849883Z Compiling .pio/build/tbeam/src/mesh/Default.cpp.o
+2025-09-21T23:34:46.5440449Z src/main.cpp: In function 'void setup()':
+2025-09-21T23:34:46.5447134Z src/main.cpp:1243:86: warning: 'new' of type 'RF95Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:34:46.5452525Z          rIf = new RF95Interface(RadioLibHAL, LORA_CS, RF95_IRQ, RF95_RESET, RF95_DIO1);
+2025-09-21T23:34:46.5458760Z                                                                                       ^
+2025-09-21T23:34:46.5489374Z src/main.cpp:1243:86: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:34:46.5495531Z src/main.cpp:1243:86: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:34:46.5503111Z src/main.cpp:1257:104: warning: 'new' of type 'SX1262Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:34:46.5509415Z          auto *sxIf = new SX1262Interface(RadioLibHAL, SX126X_CS, SX126X_DIO1, SX126X_RESET, SX126X_BUSY);
+2025-09-21T23:34:46.5515367Z                                                                                                         ^
+2025-09-21T23:34:46.5519551Z src/main.cpp:1257:104: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:34:46.5521242Z src/main.cpp:1257:104: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:34:46.5522614Z src/main.cpp:1321:97: warning: 'new' of type 'SX1268Interface' with extended alignment 16 [-Waligned-new=]
+2025-09-21T23:34:46.5526573Z          rIf = new SX1268Interface(RadioLibHAL, SX126X_CS, SX126X_DIO1, SX126X_RESET, SX126X_BUSY);
+2025-09-21T23:34:46.5529265Z                                                                                                  ^
+2025-09-21T23:34:46.5531996Z src/main.cpp:1321:97: note: uses 'void* operator new(std::size_t)', which does not have an alignment parameter
+2025-09-21T23:34:46.5534770Z src/main.cpp:1321:97: note: use '-faligned-new' to enable C++17 over-aligned new support
+2025-09-21T23:34:47.3880439Z Compiling .pio/build/tbeam/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:34:47.5895485Z Compiling .pio/build/tbeam/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:34:47.6409988Z Compiling .pio/build/tbeam/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:34:47.6940598Z Compiling .pio/build/tbeam/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:34:48.7400587Z Compiling .pio/build/tbeam/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:34:48.9580706Z Compiling .pio/build/tbeam/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:34:49.0945077Z Compiling .pio/build/tbeam/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:34:49.2034434Z Compiling .pio/build/tbeam/src/mesh/MeshModule.cpp.o
+2025-09-21T23:34:50.0757189Z Compiling .pio/build/tbeam/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:34:50.3534695Z Compiling .pio/build/tbeam/src/mesh/MeshService.cpp.o
+2025-09-21T23:34:50.4617861Z Compiling .pio/build/tbeam/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:34:50.7816717Z Compiling .pio/build/tbeam/src/mesh/NodeDB.cpp.o
+2025-09-21T23:34:51.4817067Z Compiling .pio/build/tbeam/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:34:51.9417906Z Compiling .pio/build/tbeam/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:34:52.5323857Z Compiling .pio/build/tbeam/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:34:52.7319835Z Compiling .pio/build/tbeam/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:34:53.0488683Z Compiling .pio/build/tbeam/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:34:53.7622383Z Compiling .pio/build/tbeam/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:34:54.1304344Z Compiling .pio/build/tbeam/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:34:54.1829974Z Compiling .pio/build/tbeam/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:34:55.1536809Z Compiling .pio/build/tbeam/src/mesh/Router.cpp.o
+2025-09-21T23:34:55.3448990Z Compiling .pio/build/tbeam/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:34:55.5301223Z Compiling .pio/build/tbeam/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:34:55.7654941Z Compiling .pio/build/tbeam/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:34:56.4502955Z Compiling .pio/build/tbeam/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:34:56.8400793Z Compiling .pio/build/tbeam/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:34:57.1664108Z Compiling .pio/build/tbeam/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:34:57.2315890Z Compiling .pio/build/tbeam/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:34:57.7934620Z Compiling .pio/build/tbeam/src/mesh/Throttle.cpp.o
+2025-09-21T23:34:58.1613820Z Compiling .pio/build/tbeam/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:34:58.4092294Z Compiling .pio/build/tbeam/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:34:58.4632609Z Compiling .pio/build/tbeam/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:34:58.5182747Z Compiling .pio/build/tbeam/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:34:58.5444168Z Compiling .pio/build/tbeam/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:34:59.4049226Z Compiling .pio/build/tbeam/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:34:59.4144589Z src/mesh/aes-ccm.cpp: In function 'int constant_time_compare(const void*, const void*, size_t)':
+2025-09-21T23:34:59.4145999Z src/mesh/aes-ccm.cpp:24:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:59.4148608Z      const volatile uint8_t *volatile a = (const volatile uint8_t *volatile)a_;
+2025-09-21T23:34:59.4149287Z                                                                             ^~
+2025-09-21T23:34:59.4150140Z src/mesh/aes-ccm.cpp:25:76: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+2025-09-21T23:34:59.4151121Z      const volatile uint8_t *volatile b = (const volatile uint8_t *volatile)b_;
+2025-09-21T23:34:59.4151749Z                                                                             ^~
+2025-09-21T23:34:59.5364838Z Compiling .pio/build/tbeam/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:34:59.6666012Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:34:59.7106450Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:34:59.7932307Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:34:59.8413051Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:34:59.8651386Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:34:59.9275059Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:34:59.9617285Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:34:59.9953985Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:35:00.0723275Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:35:00.1383506Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:35:00.1703064Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:35:00.2140215Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:35:00.3026275Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:35:00.3564424Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:35:00.4531986Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:35:00.5124721Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:35:00.5450361Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:35:00.5715405Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:35:00.6048147Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:35:00.6365454Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:35:00.6748586Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:35:00.7040419Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:35:00.7288309Z Compiling .pio/build/tbeam/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:35:00.8719632Z Compiling .pio/build/tbeam/src/mesh/http/ContentHandler.cpp.o
+2025-09-21T23:35:00.8938748Z Compiling .pio/build/tbeam/src/mesh/http/ContentHelper.cpp.o
+2025-09-21T23:35:00.9240818Z Compiling .pio/build/tbeam/src/mesh/http/WebServer.cpp.o
+2025-09-21T23:35:00.9557575Z Compiling .pio/build/tbeam/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:35:01.5415330Z In file included from /pio/workspace/libdeps/tbeam/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:35:01.5416808Z                  from /pio/workspace/libdeps/tbeam/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:35:01.5418080Z                  from src/mesh/http/ContentHandler.cpp:41:
+2025-09-21T23:35:01.5419997Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:35:01.5423678Z  #define NO_DATA         211
+2025-09-21T23:35:01.5424053Z  
+2025-09-21T23:35:01.5424610Z In file included from /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:35:01.5427736Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:35:01.5428261Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:35:01.5430318Z                  from src/main.h:69,
+2025-09-21T23:35:01.5431039Z                  from src/mesh/http/ContentHandler.cpp:6:
+2025-09-21T23:35:01.5432182Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:35:01.5433959Z  #define NO_DATA                          -32768
+2025-09-21T23:35:01.5434653Z  
+2025-09-21T23:35:01.5512578Z Compiling .pio/build/tbeam/src/mesh/wifi/WiFiAPClient.cpp.o
+2025-09-21T23:35:01.5594510Z In file included from /pio/workspace/libdeps/tbeam/esp32_https_server/src/HTTPServer.hpp:11,
+2025-09-21T23:35:01.5595596Z                  from /pio/workspace/libdeps/tbeam/esp32_https_server/src/HTTPSServer.hpp:16,
+2025-09-21T23:35:01.5596529Z                  from src/mesh/http/WebServer.cpp:44:
+2025-09-21T23:35:01.5597764Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/lwip/src/include/lwip/netdb.h:75: warning: "NO_DATA" redefined
+2025-09-21T23:35:01.5598967Z  #define NO_DATA         211
+2025-09-21T23:35:01.5602437Z  
+2025-09-21T23:35:01.5603046Z In file included from /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.h:13,
+2025-09-21T23:35:01.5627114Z                  from src/motion/BMM150Sensor.h:10,
+2025-09-21T23:35:01.5628752Z                  from src/motion/AccelerometerThread.h:13,
+2025-09-21T23:35:01.5630329Z                  from src/main.h:69,
+2025-09-21T23:35:01.5630957Z                  from src/mesh/http/WebServer.cpp:5:
+2025-09-21T23:35:01.5631918Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/bmm150_defs.h:430: note: this is the location of the previous definition
+2025-09-21T23:35:01.5632833Z  #define NO_DATA                          -32768
+2025-09-21T23:35:01.5633246Z  
+2025-09-21T23:35:02.1230389Z Compiling .pio/build/tbeam/src/meshUtils.cpp.o
+2025-09-21T23:35:02.9461073Z Compiling .pio/build/tbeam/src/modules/AdminModule.cpp.o
+2025-09-21T23:35:03.4176026Z Compiling .pio/build/tbeam/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:35:03.5085704Z Compiling .pio/build/tbeam/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:35:03.5375284Z Compiling .pio/build/tbeam/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:35:05.1153835Z Compiling .pio/build/tbeam/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:35:05.1173357Z src/modules/CannedMessageModule.cpp: In member function 'virtual void CannedMessageModule::drawFrame(OLEDDisplay*, OLEDDisplayUiState*, int16_t, int16_t)':
+2025-09-21T23:35:05.1197595Z src/modules/CannedMessageModule.cpp:2347:17: warning: unused variable 'textYOffset' [-Wunused-variable]
+2025-09-21T23:35:05.1198557Z              int textYOffset = (rowHeight - FONT_HEIGHT_SMALL) / 2;
+2025-09-21T23:35:05.1199070Z                  ^~~~~~~~~~~
+2025-09-21T23:35:05.3123558Z Compiling .pio/build/tbeam/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:35:05.3679681Z Compiling .pio/build/tbeam/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:35:05.4008708Z src/modules/CannedMessageModule.cpp: At global scope:
+2025-09-21T23:35:05.4010045Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:05.4011310Z  static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:35:05.4011942Z                ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:05.5721828Z Compiling .pio/build/tbeam/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:35:06.2128583Z Compiling .pio/build/tbeam/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:35:07.0037836Z Compiling .pio/build/tbeam/src/modules/Modules.cpp.o
+2025-09-21T23:35:07.0359962Z Compiling .pio/build/tbeam/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:35:07.2599614Z Compiling .pio/build/tbeam/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:35:08.1336841Z Compiling .pio/build/tbeam/src/modules/PositionModule.cpp.o
+2025-09-21T23:35:08.5812841Z Compiling .pio/build/tbeam/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:35:09.0168711Z Compiling .pio/build/tbeam/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:35:09.1415091Z Compiling .pio/build/tbeam/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:35:10.1173635Z Compiling .pio/build/tbeam/src/modules/ReplyModule.cpp.o
+2025-09-21T23:35:10.4581068Z Compiling .pio/build/tbeam/src/modules/RoutingModule.cpp.o
+2025-09-21T23:35:10.4952626Z Compiling .pio/build/tbeam/src/modules/SerialModule.cpp.o
+2025-09-21T23:35:11.0443641Z Compiling .pio/build/tbeam/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:35:11.9704682Z Compiling .pio/build/tbeam/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:35:12.3186987Z Compiling .pio/build/tbeam/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:35:12.4213793Z Compiling .pio/build/tbeam/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:35:12.7124490Z Compiling .pio/build/tbeam/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:35:13.9425583Z Compiling .pio/build/tbeam/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:35:14.3187789Z Compiling .pio/build/tbeam/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:35:14.4547931Z Compiling .pio/build/tbeam/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:35:14.8835514Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:35:15.0391578Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:35:15.7247459Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:35:16.1902490Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:35:16.3258802Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:35:16.3583786Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:35:17.0506235Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:35:17.4440444Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:35:17.6268512Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:35:17.6559654Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:35:18.3068131Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:35:18.7099203Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:35:18.9371190Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:35:18.9682767Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:35:19.5726642Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:35:19.9622808Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:35:20.2493163Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:35:20.2799206Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:35:20.6972275Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:35:21.2324685Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:35:21.5604449Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:35:21.6817227Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:35:21.8193712Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:35:22.5085548Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:35:22.8428314Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:35:22.9607167Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:35:23.1407095Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:35:23.7770094Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:35:24.0982573Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:35:24.1423368Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:35:24.2652625Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:35:25.0481477Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:35:25.3712721Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:35:25.4398185Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:35:25.5219612Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:35:26.1625070Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:35:26.6484358Z Compiling .pio/build/tbeam/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:35:26.7059894Z Compiling .pio/build/tbeam/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:35:26.7645550Z Compiling .pio/build/tbeam/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:35:27.2560468Z Compiling .pio/build/tbeam/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:35:27.4564253Z Compiling .pio/build/tbeam/src/modules/WaypointModule.cpp.o
+2025-09-21T23:35:27.9217258Z Compiling .pio/build/tbeam/src/modules/esp32/AudioModule.cpp.o
+2025-09-21T23:35:28.6256047Z Compiling .pio/build/tbeam/src/modules/esp32/PaxcounterModule.cpp.o
+2025-09-21T23:35:29.0889388Z Compiling .pio/build/tbeam/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:35:29.1551967Z Compiling .pio/build/tbeam/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:35:29.3143205Z Compiling .pio/build/tbeam/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:35:30.0099036Z Compiling .pio/build/tbeam/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:35:30.6805301Z Compiling .pio/build/tbeam/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:35:30.8061293Z Compiling .pio/build/tbeam/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:35:30.9216914Z Compiling .pio/build/tbeam/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:35:31.7221782Z Compiling .pio/build/tbeam/src/motion/MotionSensor.cpp.o
+2025-09-21T23:35:32.3194281Z Compiling .pio/build/tbeam/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:35:32.4378031Z Compiling .pio/build/tbeam/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:35:32.5618688Z Compiling .pio/build/tbeam/src/mqtt/MQTT.cpp.o
+2025-09-21T23:35:33.3831046Z Compiling .pio/build/tbeam/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:35:33.7097163Z Compiling .pio/build/tbeam/src/network-stubs.cpp.o
+2025-09-21T23:35:34.0030601Z Compiling .pio/build/tbeam/src/nimble/NimbleBluetooth.cpp.o
+2025-09-21T23:35:34.0569227Z Compiling .pio/build/tbeam/src/platform/esp32/BleOta.cpp.o
+2025-09-21T23:35:34.7518954Z Compiling .pio/build/tbeam/src/platform/esp32/ESP32CryptoEngine.cpp.o
+2025-09-21T23:35:34.8540026Z Compiling .pio/build/tbeam/src/platform/esp32/SimpleAllocator.cpp.o
+2025-09-21T23:35:35.1136523Z Compiling .pio/build/tbeam/src/platform/esp32/WiFiOTA.cpp.o
+2025-09-21T23:35:35.9058155Z Compiling .pio/build/tbeam/src/platform/esp32/iram-quirk.c.o
+2025-09-21T23:35:36.0113299Z Compiling .pio/build/tbeam/src/platform/esp32/main-esp32.cpp.o
+2025-09-21T23:35:36.0436869Z Compiling .pio/build/tbeam/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:35:36.2791124Z Compiling .pio/build/tbeam/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:35:36.2998431Z Compiling .pio/build/tbeam/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:35:37.1466262Z Compiling .pio/build/tbeam/src/serialization/JSON.cpp.o
+2025-09-21T23:35:37.3852014Z Compiling .pio/build/tbeam/src/serialization/JSONValue.cpp.o
+2025-09-21T23:35:37.4131026Z Compiling .pio/build/tbeam/src/serialization/MeshPacketSerializer.cpp.o
+2025-09-21T23:35:37.7255371Z Compiling .pio/build/tbeam/src/serialization/MeshPacketSerializer_nRF52.cpp.o
+2025-09-21T23:35:37.7734605Z Compiling .pio/build/tbeam/src/serialization/cobs.cpp.o
+2025-09-21T23:35:37.8610372Z Compiling .pio/build/tbeam/src/sleep.cpp.o
+2025-09-21T23:35:38.5038333Z Compiling .pio/build/tbeam/src/xmodem.cpp.o
+2025-09-21T23:35:38.8680213Z Building .pio/build/tbeam/bootloader.bin
+2025-09-21T23:35:38.9610349Z esptool.py v4.5.1
+2025-09-21T23:35:38.9615076Z Creating esp32 image...
+2025-09-21T23:35:38.9620479Z Merged 1 ELF section
+2025-09-21T23:35:38.9626486Z Successfully created esp32 image.
+2025-09-21T23:35:38.9770141Z Generating partitions .pio/build/tbeam/partitions.bin
+2025-09-21T23:35:39.2088764Z Compiling .pio/build/tbeam/lib062/Wire/Wire.cpp.o
+2025-09-21T23:35:39.3917921Z Compiling .pio/build/tbeam/lib207/SPI/SPI.cpp.o
+2025-09-21T23:35:39.7975055Z Compiling .pio/build/tbeam/lib207/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:35:39.8662879Z Archiving .pio/build/tbeam/lib062/libWire.a
+2025-09-21T23:35:39.8726940Z Indexing .pio/build/tbeam/lib062/libWire.a
+2025-09-21T23:35:39.8892637Z Compiling .pio/build/tbeam/lib207/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:35:39.9333233Z Compiling .pio/build/tbeam/lib207/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:35:40.0138701Z Archiving .pio/build/tbeam/lib207/libSPI.a
+2025-09-21T23:35:40.0200434Z Indexing .pio/build/tbeam/lib207/libSPI.a
+2025-09-21T23:35:40.1855362Z Compiling .pio/build/tbeam/lib48f/OneButton/OneButton.cpp.o
+2025-09-21T23:35:40.5106579Z Compiling .pio/build/tbeam/lib48f/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:35:40.6997634Z Compiling .pio/build/tbeam/libe0f/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:35:40.7100502Z Archiving .pio/build/tbeam/lib207/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:40.7171017Z Indexing .pio/build/tbeam/lib207/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:40.8746164Z Compiling .pio/build/tbeam/libe79/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:35:41.0601779Z Compiling .pio/build/tbeam/lib1d4/ArduinoThread/Thread.cpp.o
+2025-09-21T23:35:41.0714149Z Archiving .pio/build/tbeam/lib48f/libOneButton.a
+2025-09-21T23:35:41.0787403Z Indexing .pio/build/tbeam/lib48f/libOneButton.a
+2025-09-21T23:35:41.0958803Z Compiling .pio/build/tbeam/lib1d4/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:35:41.2986569Z Archiving .pio/build/tbeam/libe0f/libarduino-fsm.a
+2025-09-21T23:35:41.3046479Z Indexing .pio/build/tbeam/libe0f/libarduino-fsm.a
+2025-09-21T23:35:41.3245859Z Compiling .pio/build/tbeam/lib0e5/Nanopb/pb_common.c.o
+2025-09-21T23:35:41.4368803Z Compiling .pio/build/tbeam/lib0e5/Nanopb/pb_decode.c.o
+2025-09-21T23:35:41.5317489Z Archiving .pio/build/tbeam/libe79/libTinyGPSPlus.a
+2025-09-21T23:35:41.5386546Z Indexing .pio/build/tbeam/libe79/libTinyGPSPlus.a
+2025-09-21T23:35:41.5554045Z Compiling .pio/build/tbeam/lib0e5/Nanopb/pb_encode.c.o
+2025-09-21T23:35:41.6087815Z Compiling .pio/build/tbeam/lib93d/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:35:41.7514428Z Compiling .pio/build/tbeam/libb76/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:35:41.7652844Z Archiving .pio/build/tbeam/lib1d4/libArduinoThread.a
+2025-09-21T23:35:41.7667023Z Archiving .pio/build/tbeam/lib93d/libErriezCRC32.a
+2025-09-21T23:35:41.7691539Z Archiving .pio/build/tbeam/lib0e5/libNanopb.a
+2025-09-21T23:35:41.7708679Z Indexing .pio/build/tbeam/lib1d4/libArduinoThread.a
+2025-09-21T23:35:41.7736785Z Indexing .pio/build/tbeam/lib93d/libErriezCRC32.a
+2025-09-21T23:35:41.7745798Z Indexing .pio/build/tbeam/lib0e5/libNanopb.a
+2025-09-21T23:35:41.8741657Z Compiling .pio/build/tbeam/lib27d/TBPubSubClient/PubSubClient.cpp.o
+2025-09-21T23:35:41.9751004Z Compiling .pio/build/tbeam/lib7ba/NTPClient/NTPClient.cpp.o
+2025-09-21T23:35:42.1302023Z Compiling .pio/build/tbeam/lib65e/Syslog/Syslog.cpp.o
+2025-09-21T23:35:42.2789202Z Archiving .pio/build/tbeam/libb76/libNonBlockingRTTTL.a
+2025-09-21T23:35:42.2851887Z Indexing .pio/build/tbeam/libb76/libNonBlockingRTTTL.a
+2025-09-21T23:35:42.4649914Z Compiling .pio/build/tbeam/libf51/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:35:42.5872867Z Archiving .pio/build/tbeam/lib7ba/libNTPClient.a
+2025-09-21T23:35:42.5931762Z Archiving .pio/build/tbeam/lib27d/libTBPubSubClient.a
+2025-09-21T23:35:42.5988672Z Indexing .pio/build/tbeam/lib27d/libTBPubSubClient.a
+2025-09-21T23:35:42.5993689Z Indexing .pio/build/tbeam/lib7ba/libNTPClient.a
+2025-09-21T23:35:42.6182037Z Compiling .pio/build/tbeam/libf51/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:35:42.6433633Z Compiling .pio/build/tbeam/libf51/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:35:42.7354015Z Archiving .pio/build/tbeam/lib65e/libSyslog.a
+2025-09-21T23:35:42.7419389Z Indexing .pio/build/tbeam/lib65e/libSyslog.a
+2025-09-21T23:35:42.7591389Z Compiling .pio/build/tbeam/libf51/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:35:43.2134637Z Compiling .pio/build/tbeam/lib788/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:35:43.3677409Z Compiling .pio/build/tbeam/lib0d2/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:35:43.3810534Z Archiving .pio/build/tbeam/libf51/libAdafruit BusIO.a
+2025-09-21T23:35:43.3964727Z Indexing .pio/build/tbeam/libf51/libAdafruit BusIO.a
+2025-09-21T23:35:43.4851826Z Compiling .pio/build/tbeam/libfce/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:35:43.6481095Z Compiling .pio/build/tbeam/libeca/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:35:43.7815270Z Archiving .pio/build/tbeam/lib788/libAdafruit Unified Sensor.a
+2025-09-21T23:35:43.7879066Z Indexing .pio/build/tbeam/lib788/libAdafruit Unified Sensor.a
+2025-09-21T23:35:43.9787120Z Compiling .pio/build/tbeam/lib2f7/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:35:44.0105296Z Archiving .pio/build/tbeam/lib0d2/libAdafruit BMP280 Library.a
+2025-09-21T23:35:44.0159995Z Indexing .pio/build/tbeam/lib0d2/libAdafruit BMP280 Library.a
+2025-09-21T23:35:44.1780079Z Compiling .pio/build/tbeam/libb22/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:35:44.1920746Z Archiving .pio/build/tbeam/libfce/libAdafruit BMP085 Library.a
+2025-09-21T23:35:44.1984553Z Indexing .pio/build/tbeam/libfce/libAdafruit BMP085 Library.a
+2025-09-21T23:35:44.3169164Z Compiling .pio/build/tbeam/lib5a3/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:35:44.3285253Z Archiving .pio/build/tbeam/libeca/libAdafruit BME280 Library.a
+2025-09-21T23:35:44.3345184Z Indexing .pio/build/tbeam/libeca/libAdafruit BME280 Library.a
+2025-09-21T23:35:44.5061067Z Compiling .pio/build/tbeam/libd9b/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:35:44.5974940Z Archiving .pio/build/tbeam/lib2f7/libAdafruit DPS310.a
+2025-09-21T23:35:44.6037758Z Indexing .pio/build/tbeam/lib2f7/libAdafruit DPS310.a
+2025-09-21T23:35:44.7940179Z Compiling .pio/build/tbeam/lib909/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:35:44.8082068Z Archiving .pio/build/tbeam/libb22/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:44.8146103Z Indexing .pio/build/tbeam/libb22/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:44.8377510Z Compiling .pio/build/tbeam/lib909/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:35:44.9478550Z Archiving .pio/build/tbeam/lib5a3/libAdafruit INA260 Library.a
+2025-09-21T23:35:44.9554309Z Indexing .pio/build/tbeam/lib5a3/libAdafruit INA260 Library.a
+2025-09-21T23:35:44.9732599Z Compiling .pio/build/tbeam/lib909/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:35:45.1130708Z Archiving .pio/build/tbeam/libd9b/libAdafruit INA219.a
+2025-09-21T23:35:45.1193586Z Indexing .pio/build/tbeam/libd9b/libAdafruit INA219.a
+2025-09-21T23:35:45.1364777Z Compiling .pio/build/tbeam/lib909/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:35:45.4965128Z /pio/workspace/libdeps/tbeam/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp: In member function 'virtual bool Adafruit_PM25AQI_I2C::read(PM25_AQI_Data*)':
+2025-09-21T23:35:45.4967395Z /pio/workspace/libdeps/tbeam/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_I2C.cpp:50:10: warning: unused variable 'bufLen' [-Wunused-variable]
+2025-09-21T23:35:45.4968500Z    size_t bufLen = sizeof(buffer);
+2025-09-21T23:35:45.4969111Z           ^~~~~~
+2025-09-21T23:35:45.5171626Z Compiling .pio/build/tbeam/lib402/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:35:45.6420092Z /pio/workspace/libdeps/tbeam/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:35:45.6423611Z /pio/workspace/libdeps/tbeam/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:172:11: warning: unused variable 'csum' [-Wunused-variable]
+2025-09-21T23:35:45.6424657Z    uint8_t csum = 0;
+2025-09-21T23:35:45.6424960Z            ^~~~
+2025-09-21T23:35:45.6866819Z Compiling .pio/build/tbeam/lib29f/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:35:45.8607001Z Compiling .pio/build/tbeam/libd16/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:35:45.8761418Z Archiving .pio/build/tbeam/lib909/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:45.8826653Z Indexing .pio/build/tbeam/lib909/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:46.0637575Z Compiling .pio/build/tbeam/lib98b/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:35:46.1453859Z Archiving .pio/build/tbeam/lib402/libAdafruit MPU6050.a
+2025-09-21T23:35:46.1515222Z Indexing .pio/build/tbeam/lib402/libAdafruit MPU6050.a
+2025-09-21T23:35:46.1689503Z Compiling .pio/build/tbeam/lib98b/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:35:46.2597078Z Archiving .pio/build/tbeam/lib29f/libAdafruit LIS3DH.a
+2025-09-21T23:35:46.2666972Z Indexing .pio/build/tbeam/lib29f/libAdafruit LIS3DH.a
+2025-09-21T23:35:46.2868878Z Compiling .pio/build/tbeam/lib98b/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:35:46.4922614Z Archiving .pio/build/tbeam/libd16/libAdafruit AHTX0.a
+2025-09-21T23:35:46.4994669Z Indexing .pio/build/tbeam/libd16/libAdafruit AHTX0.a
+2025-09-21T23:35:46.5203128Z Compiling .pio/build/tbeam/lib98b/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:35:46.6733714Z Compiling .pio/build/tbeam/lib98b/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:35:46.8370065Z Compiling .pio/build/tbeam/lib98b/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:35:46.9177548Z Compiling .pio/build/tbeam/lib98b/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:35:47.1577577Z Compiling .pio/build/tbeam/lib98b/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:35:47.4612041Z Compiling .pio/build/tbeam/lib04b/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:35:47.6230333Z Compiling .pio/build/tbeam/lib252/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:35:47.7655225Z Compiling .pio/build/tbeam/lib8a3/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:35:47.7762255Z Archiving .pio/build/tbeam/lib98b/libAdafruit LSM6DS.a
+2025-09-21T23:35:47.7845266Z Indexing .pio/build/tbeam/lib98b/libAdafruit LSM6DS.a
+2025-09-21T23:35:47.9462496Z Compiling .pio/build/tbeam/liba39/INA3221/INA3221.cpp.o
+2025-09-21T23:35:48.1538861Z /pio/workspace/libdeps/tbeam/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'float MLX90632::getObjectTempF()':
+2025-09-21T23:35:48.1541612Z /pio/workspace/libdeps/tbeam/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:419:9: warning: unused variable 'AMB' [-Wunused-variable]
+2025-09-21T23:35:48.1543930Z    float AMB;
+2025-09-21T23:35:48.1544208Z          ^~~
+2025-09-21T23:35:48.1545153Z /pio/workspace/libdeps/tbeam/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:420:9: warning: unused variable 'Sto' [-Wunused-variable]
+2025-09-21T23:35:48.1546272Z    float Sto;
+2025-09-21T23:35:48.1546764Z          ^~~
+2025-09-21T23:35:48.1547836Z /pio/workspace/libdeps/tbeam/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp: In member function 'void MLX90632::setMeasurementRate(uint8_t)':
+2025-09-21T23:35:48.1549707Z /pio/workspace/libdeps/tbeam/EmotiBit MLX90632/src/SparkFun_MLX90632_Arduino_Library.cpp:775:19: warning: unused variable 'returnError' [-Wunused-variable]
+2025-09-21T23:35:48.1551155Z   MLX90632::status returnError = setMode(MODE_STEP);
+2025-09-21T23:35:48.1551663Z                    ^~~~~~~~~~~
+2025-09-21T23:35:48.1804227Z Archiving .pio/build/tbeam/lib04b/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:48.1868637Z Indexing .pio/build/tbeam/lib04b/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:48.3132622Z Compiling .pio/build/tbeam/lib3ab/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:35:48.3238502Z Archiving .pio/build/tbeam/lib252/libEmotiBit MLX90632.a
+2025-09-21T23:35:48.3302635Z Indexing .pio/build/tbeam/lib252/libEmotiBit MLX90632.a
+2025-09-21T23:35:48.4361302Z Compiling .pio/build/tbeam/libe03/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:35:48.4468307Z Archiving .pio/build/tbeam/lib8a3/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:48.4527328Z Indexing .pio/build/tbeam/lib8a3/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:48.6128944Z Compiling .pio/build/tbeam/libf4a/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:35:48.6282906Z Archiving .pio/build/tbeam/liba39/libINA3221.a
+2025-09-21T23:35:48.6335982Z Indexing .pio/build/tbeam/liba39/libINA3221.a
+2025-09-21T23:35:48.7986252Z Compiling .pio/build/tbeam/libfe6/INA226/INA226.cpp.o
+2025-09-21T23:35:48.8830422Z Archiving .pio/build/tbeam/lib3ab/libQMC5883LCompass.a
+2025-09-21T23:35:48.8887401Z Indexing .pio/build/tbeam/lib3ab/libQMC5883LCompass.a
+2025-09-21T23:35:49.0637703Z Compiling .pio/build/tbeam/lib5d5/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:35:49.0787910Z Archiving .pio/build/tbeam/libe03/libDFRobot_RTU.a
+2025-09-21T23:35:49.0845877Z Indexing .pio/build/tbeam/libe03/libDFRobot_RTU.a
+2025-09-21T23:35:49.1084558Z Compiling .pio/build/tbeam/lib5d5/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:35:49.2495493Z Archiving .pio/build/tbeam/libf4a/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:49.2561833Z Indexing .pio/build/tbeam/libf4a/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:49.2731728Z Compiling .pio/build/tbeam/lib5d5/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:35:49.3751182Z In file included from /pio/workspace/libdeps/tbeam/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:49.3753632Z /pio/workspace/libdeps/tbeam/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:42: warning: "I2C_BUFFER_LENGTH" redefined
+2025-09-21T23:35:49.3755706Z    #define I2C_BUFFER_LENGTH 32
+2025-09-21T23:35:49.3756066Z  
+2025-09-21T23:35:49.3756951Z In file included from /pio/workspace/libdeps/tbeam/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.h:20,
+2025-09-21T23:35:49.3758253Z                  from /pio/workspace/libdeps/tbeam/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:12:
+2025-09-21T23:35:49.3759639Z /pio/core/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h:43: note: this is the location of the previous definition
+2025-09-21T23:35:49.3760984Z      #define I2C_BUFFER_LENGTH 128  // Default size, if none is set using Wire::setBuffersize(size_t)
+2025-09-21T23:35:49.3761627Z  
+2025-09-21T23:35:49.4123537Z Archiving .pio/build/tbeam/libfe6/libINA226.a
+2025-09-21T23:35:49.4183625Z Indexing .pio/build/tbeam/libfe6/libINA226.a
+2025-09-21T23:35:49.5851596Z /pio/workspace/libdeps/tbeam/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp: In member function 'void MAX30105::enableSlot(uint8_t, uint8_t)':
+2025-09-21T23:35:49.5853738Z /pio/workspace/libdeps/tbeam/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/MAX30105.cpp:292:11: warning: unused variable 'originalContents' [-Wunused-variable]
+2025-09-21T23:35:49.5854981Z    uint8_t originalContents;
+2025-09-21T23:35:49.5855357Z            ^~~~~~~~~~~~~~~~
+2025-09-21T23:35:49.6116757Z Compiling .pio/build/tbeam/lib093/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:35:49.6510595Z /pio/workspace/libdeps/tbeam/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:35:49.6513431Z /pio/workspace/libdeps/tbeam/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:35:49.6516172Z      if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:35:49.6516882Z          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:35:49.7050397Z Compiling .pio/build/tbeam/lib093/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:35:49.8733810Z Compiling .pio/build/tbeam/liba3d/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:35:49.8862222Z Archiving .pio/build/tbeam/lib5d5/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:49.8981411Z Indexing .pio/build/tbeam/lib5d5/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:49.9927565Z Compiling .pio/build/tbeam/lib010/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:35:50.1522963Z Compiling .pio/build/tbeam/lib4bf/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:35:50.3701813Z Archiving .pio/build/tbeam/lib093/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:50.3778668Z Indexing .pio/build/tbeam/lib093/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:50.5327560Z Compiling .pio/build/tbeam/libab5/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:35:50.5415449Z Archiving .pio/build/tbeam/liba3d/libAdafruit LTR390 Library.a
+2025-09-21T23:35:50.5473134Z Indexing .pio/build/tbeam/liba3d/libAdafruit LTR390 Library.a
+2025-09-21T23:35:50.6606919Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::sensorInit()':
+2025-09-21T23:35:50.6609108Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp:23:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:50.6611263Z    int8_t  rslt    = 0;
+2025-09-21T23:35:50.6611624Z            ^~~~
+2025-09-21T23:35:50.6627941Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setMeasurementXYZ(uint8_t, uint8_t, uint8_t)':
+2025-09-21T23:35:50.6638241Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp:263:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:50.6643292Z    int8_t  rslt;
+2025-09-21T23:35:50.6650625Z            ^~~~
+2025-09-21T23:35:50.6660981Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setInterruputLatch(uint8_t)':
+2025-09-21T23:35:50.6663231Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp:489:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:50.6664685Z    int8_t  rslt;
+2025-09-21T23:35:50.6673715Z            ^~~~
+2025-09-21T23:35:50.6690162Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::normalSelfTest()':
+2025-09-21T23:35:50.6700085Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp:706:10: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:50.6701013Z    int8_t rslt;
+2025-09-21T23:35:50.6701342Z           ^~~~
+2025-09-21T23:35:50.6702179Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'int8_t DFRobot_BMM150::advSelfTest()':
+2025-09-21T23:35:50.6703704Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp:776:11: warning: unused variable 'selfTestCurrent' [-Wunused-variable]
+2025-09-21T23:35:50.6704760Z    uint8_t selfTestCurrent;
+2025-09-21T23:35:50.6705139Z            ^~~~~~~~~~~~~~~
+2025-09-21T23:35:50.6711033Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getDataOverrunState()':
+2025-09-21T23:35:50.6715268Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp:853:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:50.6719544Z    int8_t  rslt;
+2025-09-21T23:35:50.6727539Z            ^~~~
+2025-09-21T23:35:50.6729160Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'void DFRobot_BMM150::setOverflowPin(uint8_t)':
+2025-09-21T23:35:50.6734170Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp:865:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:50.6741885Z    int8_t  rslt;
+2025-09-21T23:35:50.6742716Z            ^~~~
+2025-09-21T23:35:50.6744617Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'bool DFRobot_BMM150::getOverflowState()':
+2025-09-21T23:35:50.6747316Z /pio/workspace/libdeps/tbeam/DFRobot_BMM150/DFRobot_BMM150.cpp:878:11: warning: unused variable 'rslt' [-Wunused-variable]
+2025-09-21T23:35:50.6748828Z    int8_t  rslt;
+2025-09-21T23:35:50.6749598Z            ^~~~
+2025-09-21T23:35:50.7105883Z Compiling .pio/build/tbeam/lib4db/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:35:50.7253085Z Archiving .pio/build/tbeam/lib010/libAdafruit PCT2075.a
+2025-09-21T23:35:50.7312202Z Indexing .pio/build/tbeam/lib010/libAdafruit PCT2075.a
+2025-09-21T23:35:50.7481167Z Compiling .pio/build/tbeam/lib4db/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:35:50.7669017Z Archiving .pio/build/tbeam/lib4bf/libDFRobot_BMM150.a
+2025-09-21T23:35:50.7724453Z Indexing .pio/build/tbeam/lib4bf/libDFRobot_BMM150.a
+2025-09-21T23:35:50.9459827Z Compiling .pio/build/tbeam/lib2b8/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:35:51.0708308Z /pio/workspace/libdeps/tbeam/Adafruit TSL2561/Adafruit_TSL2561_U.cpp: In member function 'uint32_t Adafruit_TSL2561_Unified::calculateLux(uint16_t, uint16_t)':
+2025-09-21T23:35:51.0710252Z /pio/workspace/libdeps/tbeam/Adafruit TSL2561/Adafruit_TSL2561_U.cpp:421:14: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+2025-09-21T23:35:51.0711463Z    if ((ratio >= 0) && (ratio <= TSL2561_LUX_K1T)) {
+2025-09-21T23:35:51.0711937Z         ~~~~~~^~~~
+2025-09-21T23:35:51.1353831Z Compiling .pio/build/tbeam/liba02/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:35:51.1519183Z Archiving .pio/build/tbeam/libab5/libAdafruit TSL2561.a
+2025-09-21T23:35:51.1566564Z Indexing .pio/build/tbeam/libab5/libAdafruit TSL2561.a
+2025-09-21T23:35:51.3335599Z Compiling .pio/build/tbeam/libcac/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:35:51.3485172Z Archiving .pio/build/tbeam/lib4db/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:51.3543095Z Indexing .pio/build/tbeam/lib4db/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:51.3717028Z Compiling .pio/build/tbeam/libcac/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:35:51.5869569Z Archiving .pio/build/tbeam/lib2b8/libAdafruit MAX1704X.a
+2025-09-21T23:35:51.5929060Z Indexing .pio/build/tbeam/lib2b8/libAdafruit MAX1704X.a
+2025-09-21T23:35:51.6096652Z Compiling .pio/build/tbeam/libcac/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:35:51.7162017Z Archiving .pio/build/tbeam/liba02/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:51.7221924Z Indexing .pio/build/tbeam/liba02/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:51.8851081Z Compiling .pio/build/tbeam/lib7cd/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:35:52.1197748Z Compiling .pio/build/tbeam/lib6c0/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:35:52.3071920Z Compiling .pio/build/tbeam/liba3b/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:35:52.3179595Z Archiving .pio/build/tbeam/libcac/libAdafruit LPS2X.a
+2025-09-21T23:35:52.3251396Z Indexing .pio/build/tbeam/libcac/libAdafruit LPS2X.a
+2025-09-21T23:35:52.4840509Z Compiling .pio/build/tbeam/libdaf/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:35:52.4996949Z Archiving .pio/build/tbeam/lib7cd/libAdafruit SHT31 Library.a
+2025-09-21T23:35:52.5071421Z Indexing .pio/build/tbeam/lib7cd/libAdafruit SHT31 Library.a
+2025-09-21T23:35:52.6902674Z Compiling .pio/build/tbeam/lib185/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:35:52.7512983Z Archiving .pio/build/tbeam/lib6c0/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:52.7575990Z Indexing .pio/build/tbeam/lib6c0/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:52.7756994Z Compiling .pio/build/tbeam/lib1cf/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:35:52.9270314Z Archiving .pio/build/tbeam/liba3b/libAdafruit SHT4x Library.a
+2025-09-21T23:35:52.9482369Z Indexing .pio/build/tbeam/liba3b/libAdafruit SHT4x Library.a
+2025-09-21T23:35:53.0949011Z Compiling .pio/build/tbeam/lib1cf/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:35:53.1218514Z /pio/workspace/libdeps/tbeam/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp: In member function 'OPT3001_ErrorCode ClosedCube_OPT3001::begin(uint8_t)':
+2025-09-21T23:35:53.1220955Z /pio/workspace/libdeps/tbeam/ClosedCube OPT3001/src/ClosedCube_OPT3001.cpp:39:20: warning: unused variable 'error' [-Wunused-variable]
+2025-09-21T23:35:53.1223112Z   OPT3001_ErrorCode error = NO_ERROR;
+2025-09-21T23:35:53.1223553Z                     ^~~~~
+2025-09-21T23:35:53.2454454Z Compiling .pio/build/tbeam/lib410/bsec2/bsec2.cpp.o
+2025-09-21T23:35:53.2580270Z Archiving .pio/build/tbeam/lib185/libClosedCube OPT3001.a
+2025-09-21T23:35:53.2599258Z Archiving .pio/build/tbeam/libdaf/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:53.2640724Z Indexing .pio/build/tbeam/lib185/libClosedCube OPT3001.a
+2025-09-21T23:35:53.2656994Z Indexing .pio/build/tbeam/libdaf/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:53.2775396Z Compiling .pio/build/tbeam/lib410/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:35:53.4451726Z Compiling .pio/build/tbeam/lib68c/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:35:53.6974580Z Archiving .pio/build/tbeam/lib1cf/libBME68x Sensor library.a
+2025-09-21T23:35:53.7040512Z Indexing .pio/build/tbeam/lib1cf/libBME68x Sensor library.a
+2025-09-21T23:35:53.7233233Z Compiling .pio/build/tbeam/lib613/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:35:53.8249512Z Compiling .pio/build/tbeam/lib613/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:35:53.9905716Z Compiling .pio/build/tbeam/lib613/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:35:54.0047546Z Archiving .pio/build/tbeam/lib410/libbsec2.a
+2025-09-21T23:35:54.0107855Z Indexing .pio/build/tbeam/lib410/libbsec2.a
+2025-09-21T23:35:54.0153646Z Compiling .pio/build/tbeam/lib613/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:35:54.0263818Z Archiving .pio/build/tbeam/lib68c/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:54.0338539Z Indexing .pio/build/tbeam/lib68c/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:54.0394718Z Compiling .pio/build/tbeam/lib613/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:35:54.0538158Z Compiling .pio/build/tbeam/lib613/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:35:54.1410389Z Compiling .pio/build/tbeam/lib613/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:35:54.6874441Z Compiling .pio/build/tbeam/lib4b5/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:35:54.8001211Z Compiling .pio/build/tbeam/lib8cd/RadioLib/Hal.cpp.o
+2025-09-21T23:35:54.8095857Z Archiving .pio/build/tbeam/lib613/libSensirion Core.a
+2025-09-21T23:35:54.8191249Z Indexing .pio/build/tbeam/lib613/libSensirion Core.a
+2025-09-21T23:35:54.8260138Z Compiling .pio/build/tbeam/lib8cd/RadioLib/Module.cpp.o
+2025-09-21T23:35:54.8449081Z Compiling .pio/build/tbeam/lib8cd/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:35:55.2821712Z Archiving .pio/build/tbeam/lib4b5/libSensirion I2C SCD4x.a
+2025-09-21T23:35:55.2890421Z Indexing .pio/build/tbeam/lib4b5/libSensirion I2C SCD4x.a
+2025-09-21T23:35:55.4194239Z Compiling .pio/build/tbeam/lib8cd/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:35:55.4381790Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:35:55.4564392Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:35:55.4765250Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:35:55.4969192Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:35:55.5471478Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:35:56.0908686Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:35:56.1164367Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:35:56.1387893Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:35:56.1700229Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:35:56.7669664Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:35:56.8199660Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:35:56.8580612Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:35:56.8841398Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:35:57.4047765Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:35:57.4271245Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:35:57.4468473Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:35:57.4678801Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:35:57.9990494Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:35:58.0258992Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:35:58.0574116Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:35:58.0928190Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:35:58.6345509Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:35:58.6977208Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:35:58.7297590Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:35:58.7513575Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:35:59.3060202Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:35:59.3493798Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:35:59.3727274Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:35:59.3951952Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:35:59.9318437Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:36:00.0071990Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:36:00.0297633Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:36:00.1354796Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:36:00.5603407Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:36:00.6260168Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:36:00.6548018Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:36:00.8710770Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:36:01.1445951Z Compiling .pio/build/tbeam/lib8cd/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:36:01.2213292Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:36:01.2421652Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:36:01.2630021Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:36:01.4504203Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:36:01.8084140Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:36:01.8278054Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:36:01.8515702Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:36:02.0414546Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:36:02.1412472Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:36:02.1903787Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:36:02.2575286Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:36:02.3900181Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:36:02.4123321Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:36:02.4328969Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:36:02.4545918Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:36:03.0147885Z Compiling .pio/build/tbeam/lib8cd/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:36:03.0367371Z Compiling .pio/build/tbeam/lib8cd/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:36:03.0573741Z Compiling .pio/build/tbeam/lib8cd/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:36:03.0847198Z Compiling .pio/build/tbeam/lib8cd/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:36:03.6029686Z Compiling .pio/build/tbeam/lib8cd/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:36:03.7825213Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/ConnectionContext.cpp.o
+2025-09-21T23:36:03.8114709Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPConnection.cpp.o
+2025-09-21T23:36:03.8298500Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPHeader.cpp.o
+2025-09-21T23:36:04.1418838Z Archiving .pio/build/tbeam/lib8cd/libRadioLib.a
+2025-09-21T23:36:04.1793478Z Indexing .pio/build/tbeam/lib8cd/libRadioLib.a
+2025-09-21T23:36:04.2450386Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPHeaders.cpp.o
+2025-09-21T23:36:04.4114977Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPMultipartBodyParser.cpp.o
+2025-09-21T23:36:04.6894490Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPNode.cpp.o
+2025-09-21T23:36:04.9663606Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPRequest.cpp.o
+2025-09-21T23:36:04.9932548Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPResponse.cpp.o
+2025-09-21T23:36:05.3051606Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPSConnection.cpp.o
+2025-09-21T23:36:05.4347251Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPSServer.cpp.o
+2025-09-21T23:36:05.7036875Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPServer.cpp.o
+2025-09-21T23:36:05.7551404Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPURLEncodedBodyParser.cpp.o
+2025-09-21T23:36:06.1678317Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/HTTPValidator.cpp.o
+2025-09-21T23:36:06.2956900Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/ResolvedResource.cpp.o
+2025-09-21T23:36:06.4951274Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/ResourceNode.cpp.o
+2025-09-21T23:36:06.5513676Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/ResourceParameters.cpp.o
+2025-09-21T23:36:06.5769836Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/ResourceResolver.cpp.o
+2025-09-21T23:36:06.9535894Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/SSLCert.cpp.o
+2025-09-21T23:36:07.1940968Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/ValidatorFunctions.cpp.o
+2025-09-21T23:36:07.3330592Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/WebsocketHandler.cpp.o
+2025-09-21T23:36:07.5724938Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/WebsocketInputStreambuf.cpp.o
+2025-09-21T23:36:07.6164742Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/WebsocketNode.cpp.o
+2025-09-21T23:36:07.8527768Z Compiling .pio/build/tbeam/libc3e/esp32_https_server/util.cpp.o
+2025-09-21T23:36:08.3471213Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLE2904.cpp.o
+2025-09-21T23:36:08.3747358Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEAddress.cpp.o
+2025-09-21T23:36:08.4557607Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEAdvertisedDevice.cpp.o
+2025-09-21T23:36:08.4951178Z Archiving .pio/build/tbeam/libc3e/libesp32_https_server.a
+2025-09-21T23:36:08.5147249Z Indexing .pio/build/tbeam/libc3e/libesp32_https_server.a
+2025-09-21T23:36:08.5590665Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEAdvertising.cpp.o
+2025-09-21T23:36:08.9151713Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEBeacon.cpp.o
+2025-09-21T23:36:09.0746147Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLECharacteristic.cpp.o
+2025-09-21T23:36:09.3827399Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEClient.cpp.o
+2025-09-21T23:36:09.4428950Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEDescriptor.cpp.o
+2025-09-21T23:36:09.7195329Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEDevice.cpp.o
+2025-09-21T23:36:10.1094940Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEEddystoneTLM.cpp.o
+2025-09-21T23:36:10.2327035Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEEddystoneURL.cpp.o
+2025-09-21T23:36:10.4823973Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEExtAdvertising.cpp.o
+2025-09-21T23:36:10.5285004Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEHIDDevice.cpp.o
+2025-09-21T23:36:10.5452333Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLERemoteCharacteristic.cpp.o
+2025-09-21T23:36:10.6920933Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLERemoteDescriptor.cpp.o
+2025-09-21T23:36:10.8331777Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLERemoteService.cpp.o
+2025-09-21T23:36:11.2823828Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEScan.cpp.o
+2025-09-21T23:36:11.4398913Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLESecurity.cpp.o
+2025-09-21T23:36:11.4893553Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEServer.cpp.o
+2025-09-21T23:36:11.7545589Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEService.cpp.o
+2025-09-21T23:36:12.2188901Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEUUID.cpp.o
+2025-09-21T23:36:12.2612586Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/NimBLEUtils.cpp.o
+2025-09-21T23:36:12.5658006Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/esp_port/esp-hci/src/esp_nimble_hci.c.o
+2025-09-21T23:36:12.7209661Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/esp_port/port/src/esp_nimble_mem.c.o
+2025-09-21T23:36:12.7463424Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_decrypt.c.o
+2025-09-21T23:36:12.7617730Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_encrypt.c.o
+2025-09-21T23:36:12.7857594Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/cbc_mode.c.o
+2025-09-21T23:36:12.8105414Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/ccm_mode.c.o
+2025-09-21T23:36:12.8284521Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/cmac_mode.c.o
+2025-09-21T23:36:12.8462433Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_mode.c.o
+2025-09-21T23:36:12.8632891Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_prng.c.o
+2025-09-21T23:36:12.8907774Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc.c.o
+2025-09-21T23:36:12.9103101Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dh.c.o
+2025-09-21T23:36:12.9328312Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dsa.c.o
+2025-09-21T23:36:12.9532129Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_platform_specific.c.o
+2025-09-21T23:36:12.9934889Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac.c.o
+2025-09-21T23:36:13.0104563Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac_prng.c.o
+2025-09-21T23:36:13.0261839Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/sha256.c.o
+2025-09-21T23:36:13.0433122Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/ext/tinycrypt/src/utils.c.o
+2025-09-21T23:36:13.1036136Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll.c.o
+2025-09-21T23:36:13.1256180Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_adv.c.o
+2025-09-21T23:36:13.1429762Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn.c.o
+2025-09-21T23:36:13.1562617Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn_hci.c.o
+2025-09-21T23:36:13.1674701Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_ctrl.c.o
+2025-09-21T23:36:13.1834635Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_dtm.c.o
+2025-09-21T23:36:13.2012318Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci.c.o
+2025-09-21T23:36:13.2122376Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci_ev.c.o
+2025-09-21T23:36:13.2267530Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_iso.c.o
+2025-09-21T23:36:13.2406062Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rand.c.o
+2025-09-21T23:36:13.2561827Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_resolv.c.o
+2025-09-21T23:36:13.2672354Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rfmgmt.c.o
+2025-09-21T23:36:13.2817997Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_scan.c.o
+2025-09-21T23:36:13.2958678Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sched.c.o
+2025-09-21T23:36:13.3091443Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_supp_cmd.c.o
+2025-09-21T23:36:13.3231445Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sync.c.o
+2025-09-21T23:36:13.3373778Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_trace.c.o
+2025-09-21T23:36:13.3510557Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_utils.c.o
+2025-09-21T23:36:13.3645977Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_whitelist.c.o
+2025-09-21T23:36:13.3870207Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_hw.c.o
+2025-09-21T23:36:13.4055896Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_phy.c.o
+2025-09-21T23:36:13.4267765Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_hw.c.o
+2025-09-21T23:36:13.4459075Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy.c.o
+2025-09-21T23:36:13.4585300Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy_trace.c.o
+2025-09-21T23:36:13.5100111Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/access.c.o
+2025-09-21T23:36:13.5407956Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/adv.c.o
+2025-09-21T23:36:13.5543293Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/aes-ccm.c.o
+2025-09-21T23:36:13.5682339Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/app_keys.c.o
+2025-09-21T23:36:13.5873937Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/beacon.c.o
+2025-09-21T23:36:13.6019610Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/cdb.c.o
+2025-09-21T23:36:13.6189796Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg.c.o
+2025-09-21T23:36:13.6322009Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_cli.c.o
+2025-09-21T23:36:13.6471089Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_srv.c.o
+2025-09-21T23:36:13.6686808Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/crypto.c.o
+2025-09-21T23:36:13.6853833Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/friend.c.o
+2025-09-21T23:36:13.6970917Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/glue.c.o
+2025-09-21T23:36:13.7134814Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_cli.c.o
+2025-09-21T23:36:13.7275890Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_srv.c.o
+2025-09-21T23:36:13.7423476Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/heartbeat.c.o
+2025-09-21T23:36:13.7570068Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/light_model.c.o
+2025-09-21T23:36:13.7704837Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/lpn.c.o
+2025-09-21T23:36:13.7869385Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/mesh.c.o
+2025-09-21T23:36:13.8005727Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_cli.c.o
+2025-09-21T23:36:13.8164568Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_srv.c.o
+2025-09-21T23:36:13.8305726Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/net.c.o
+2025-09-21T23:36:13.8464994Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/nodes.c.o
+2025-09-21T23:36:13.8623560Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_adv.c.o
+2025-09-21T23:36:13.8766990Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_gatt.c.o
+2025-09-21T23:36:13.8914263Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov.c.o
+2025-09-21T23:36:13.9061027Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov_device.c.o
+2025-09-21T23:36:13.9210222Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/provisioner.c.o
+2025-09-21T23:36:13.9450108Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/proxy.c.o
+2025-09-21T23:36:13.9611278Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/rpl.c.o
+2025-09-21T23:36:13.9735385Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/settings.c.o
+2025-09-21T23:36:13.9911933Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/shell.c.o
+2025-09-21T23:36:14.0057993Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/subnet.c.o
+2025-09-21T23:36:14.0212917Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/mesh/src/transport.c.o
+2025-09-21T23:36:14.0402505Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/services/ans/src/ble_svc_ans.c.o
+2025-09-21T23:36:14.0589784Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/services/bas/src/ble_svc_bas.c.o
+2025-09-21T23:36:14.0828283Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/services/dis/src/ble_svc_dis.c.o
+2025-09-21T23:36:14.1092173Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/services/gap/src/ble_svc_gap.c.o
+2025-09-21T23:36:14.2087445Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/services/gatt/src/ble_svc_gatt.c.o
+2025-09-21T23:36:14.2327815Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/services/ias/src/ble_svc_ias.c.o
+2025-09-21T23:36:14.2648751Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/services/ipss/src/ble_svc_ipss.c.o
+2025-09-21T23:36:14.2879655Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/services/lls/src/ble_svc_lls.c.o
+2025-09-21T23:36:14.3720644Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_att.c.o
+2025-09-21T23:36:14.4016799Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_att_clt.c.o
+2025-09-21T23:36:14.4257021Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_att_cmd.c.o
+2025-09-21T23:36:14.4573820Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_att_svr.c.o
+2025-09-21T23:36:14.5754962Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_eddystone.c.o
+2025-09-21T23:36:14.6137021Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_gap.c.o
+2025-09-21T23:36:14.6388727Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_gattc.c.o
+2025-09-21T23:36:14.7239432Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts.c.o
+2025-09-21T23:36:14.7496824Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts_lcl.c.o
+2025-09-21T23:36:14.9292437Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs.c.o
+2025-09-21T23:36:14.9482520Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_adv.c.o
+2025-09-21T23:36:14.9688545Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_atomic.c.o
+2025-09-21T23:36:14.9906240Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_cfg.c.o
+2025-09-21T23:36:15.1421232Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_conn.c.o
+2025-09-21T23:36:15.1611167Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_flow.c.o
+2025-09-21T23:36:15.1773959Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci.c.o
+2025-09-21T23:36:15.1980856Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_cmd.c.o
+2025-09-21T23:36:15.3328602Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_evt.c.o
+2025-09-21T23:36:15.3558079Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_util.c.o
+2025-09-21T23:36:15.3750320Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_id.c.o
+2025-09-21T23:36:15.3989703Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_log.c.o
+2025-09-21T23:36:15.5312231Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mbuf.c.o
+2025-09-21T23:36:15.5506540Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_misc.c.o
+2025-09-21T23:36:15.5739503Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mqueue.c.o
+2025-09-21T23:36:15.5947901Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_periodic_sync.c.o
+2025-09-21T23:36:15.7024798Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_pvcy.c.o
+2025-09-21T23:36:15.7356819Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_resolv.c.o
+2025-09-21T23:36:15.7584666Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_shutdown.c.o
+2025-09-21T23:36:15.7823716Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_startup.c.o
+2025-09-21T23:36:15.8099250Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_stop.c.o
+2025-09-21T23:36:15.8823070Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_ibeacon.c.o
+2025-09-21T23:36:15.9285038Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap.c.o
+2025-09-21T23:36:15.9591586Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_coc.c.o
+2025-09-21T23:36:15.9940806Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig.c.o
+2025-09-21T23:36:16.0539255Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig_cmd.c.o
+2025-09-21T23:36:16.1275297Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_monitor.c.o
+2025-09-21T23:36:16.1518263Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_sm.c.o
+2025-09-21T23:36:16.1867578Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_alg.c.o
+2025-09-21T23:36:16.2053743Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_cmd.c.o
+2025-09-21T23:36:16.2273563Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_lgcy.c.o
+2025-09-21T23:36:16.3721378Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_sc.c.o
+2025-09-21T23:36:16.3891138Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_store.c.o
+2025-09-21T23:36:16.4136609Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_store_util.c.o
+2025-09-21T23:36:16.4303619Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/src/ble_uuid.c.o
+2025-09-21T23:36:16.5715767Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config.c.o
+2025-09-21T23:36:16.5916749Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config_conf.c.o
+2025-09-21T23:36:16.6092507Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_nvs.c.o
+2025-09-21T23:36:16.6271881Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/host/util/src/addr.c.o
+2025-09-21T23:36:16.6592606Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/nimble/transport/ram/src/ble_hci_ram.c.o
+2025-09-21T23:36:16.6965918Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/endian.c.o
+2025-09-21T23:36:16.7613875Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/hal_timer.c.o
+2025-09-21T23:36:16.7923207Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/hal_uart.c.o
+2025-09-21T23:36:16.8124207Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/mem.c.o
+2025-09-21T23:36:16.8380527Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/nimble_port.c.o
+2025-09-21T23:36:16.8522698Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime.c.o
+2025-09-21T23:36:16.8698977Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime_pwr2.c.o
+2025-09-21T23:36:16.9350965Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/os_mbuf.c.o
+2025-09-21T23:36:16.9510876Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/os_mempool.c.o
+2025-09-21T23:36:16.9688950Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/nimble/src/os_msys_init.c.o
+2025-09-21T23:36:17.0043095Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/npl/freertos/src/nimble_port_freertos.c.o
+2025-09-21T23:36:17.1160509Z Compiling .pio/build/tbeam/lib9a4/NimBLE-Arduino/nimble/porting/npl/freertos/src/npl_os_freertos.c.o
+2025-09-21T23:36:17.2244351Z Compiling .pio/build/tbeam/libc06/libpax/blescan.cpp.o
+2025-09-21T23:36:17.2430494Z Compiling .pio/build/tbeam/libc06/libpax/bt_hci_common.c.o
+2025-09-21T23:36:17.2549812Z Compiling .pio/build/tbeam/libc06/libpax/libpax.cpp.o
+2025-09-21T23:36:17.2728207Z Archiving .pio/build/tbeam/lib9a4/libNimBLE-Arduino.a
+2025-09-21T23:36:17.3445582Z Indexing .pio/build/tbeam/lib9a4/libNimBLE-Arduino.a
+2025-09-21T23:36:17.3597441Z Compiling .pio/build/tbeam/libc06/libpax/libpax_api.cpp.o
+2025-09-21T23:36:17.4477226Z Compiling .pio/build/tbeam/libc06/libpax/wifiscan.cpp.o
+2025-09-21T23:36:17.9949549Z Compiling .pio/build/tbeam/lib646/XPowersLib/XPowersLibInterface.cpp.o
+2025-09-21T23:36:18.0154728Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/ButterworthFilter.cpp.o
+2025-09-21T23:36:18.0260940Z Archiving .pio/build/tbeam/libc06/libpax.a
+2025-09-21T23:36:18.0347758Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/SampleFilter.cpp.o
+2025-09-21T23:36:18.0411180Z Indexing .pio/build/tbeam/libc06/libpax.a
+2025-09-21T23:36:18.0590242Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebook.c.o
+2025-09-21T23:36:18.0775266Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookd.c.o
+2025-09-21T23:36:18.0987019Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookdt.c.o
+2025-09-21T23:36:18.1213077Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookge.c.o
+2025-09-21T23:36:18.1409972Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookjnd.c.o
+2025-09-21T23:36:18.1583319Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookjvm.c.o
+2025-09-21T23:36:18.1809602Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebooklspmelvq.c.o
+2025-09-21T23:36:18.2322412Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookmel.c.o
+2025-09-21T23:36:18.2665071Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookres.c.o
+2025-09-21T23:36:18.3052055Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookvq.c.o
+2025-09-21T23:36:18.3214067Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codebookvqanssi.c.o
+2025-09-21T23:36:18.3447297Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/codec2.c.o
+2025-09-21T23:36:18.4064846Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/dump.c.o
+2025-09-21T23:36:18.5147591Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/fifo.c.o
+2025-09-21T23:36:18.5378767Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/interp.c.o
+2025-09-21T23:36:18.5694479Z Archiving .pio/build/tbeam/lib646/libXPowersLib.a
+2025-09-21T23:36:18.5745202Z Indexing .pio/build/tbeam/lib646/libXPowersLib.a
+2025-09-21T23:36:18.5889348Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/kiss_fft.c.o
+2025-09-21T23:36:18.6114296Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/lpc.c.o
+2025-09-21T23:36:18.6324185Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/lsp.c.o
+2025-09-21T23:36:18.6524540Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/nlp.c.o
+2025-09-21T23:36:18.7009716Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/pack.c.o
+2025-09-21T23:36:18.7257893Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/phase.c.o
+2025-09-21T23:36:18.7463049Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/phaseexp.c.o
+2025-09-21T23:36:18.7790320Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/postfilter.c.o
+2025-09-21T23:36:18.8101597Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/quantise.c.o
+2025-09-21T23:36:18.8361328Z Compiling .pio/build/tbeam/lib298/ESP32 Codec2/sine.c.o
+2025-09-21T23:36:18.8903190Z Compiling .pio/build/tbeam/lib4b4/Crypto/AES128.cpp.o
+2025-09-21T23:36:18.9230257Z Compiling .pio/build/tbeam/lib4b4/Crypto/AES192.cpp.o
+2025-09-21T23:36:18.9702477Z Compiling .pio/build/tbeam/lib4b4/Crypto/AES256.cpp.o
+2025-09-21T23:36:19.1058493Z Compiling .pio/build/tbeam/lib4b4/Crypto/AESCommon.cpp.o
+2025-09-21T23:36:19.1180384Z Archiving .pio/build/tbeam/lib298/libESP32 Codec2.a
+2025-09-21T23:36:19.1278296Z Compiling .pio/build/tbeam/lib4b4/Crypto/AESEsp32.cpp.o
+2025-09-21T23:36:19.1359896Z Indexing .pio/build/tbeam/lib298/libESP32 Codec2.a
+2025-09-21T23:36:19.1624751Z Compiling .pio/build/tbeam/lib4b4/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:36:19.1822675Z Compiling .pio/build/tbeam/lib4b4/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:36:19.2070942Z Compiling .pio/build/tbeam/lib4b4/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:36:19.2263652Z Compiling .pio/build/tbeam/lib4b4/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:36:19.2465852Z Compiling .pio/build/tbeam/lib4b4/Crypto/BlockCipher.cpp.o
+2025-09-21T23:36:19.3081468Z Compiling .pio/build/tbeam/lib4b4/Crypto/CTR.cpp.o
+2025-09-21T23:36:19.3225332Z Compiling .pio/build/tbeam/lib4b4/Crypto/ChaCha.cpp.o
+2025-09-21T23:36:19.3412565Z Compiling .pio/build/tbeam/lib4b4/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:36:19.3660305Z Compiling .pio/build/tbeam/lib4b4/Crypto/Cipher.cpp.o
+2025-09-21T23:36:19.4154012Z Compiling .pio/build/tbeam/lib4b4/Crypto/Crypto.cpp.o
+2025-09-21T23:36:19.4331275Z Compiling .pio/build/tbeam/lib4b4/Crypto/Curve25519.cpp.o
+2025-09-21T23:36:19.4482978Z Compiling .pio/build/tbeam/lib4b4/Crypto/EAX.cpp.o
+2025-09-21T23:36:19.4668367Z Compiling .pio/build/tbeam/lib4b4/Crypto/Ed25519.cpp.o
+2025-09-21T23:36:19.4870361Z Compiling .pio/build/tbeam/lib4b4/Crypto/GCM.cpp.o
+2025-09-21T23:36:19.5660444Z Compiling .pio/build/tbeam/lib4b4/Crypto/GF128.cpp.o
+2025-09-21T23:36:19.5881849Z Compiling .pio/build/tbeam/lib4b4/Crypto/GHASH.cpp.o
+2025-09-21T23:36:19.6026610Z Compiling .pio/build/tbeam/lib4b4/Crypto/HKDF.cpp.o
+2025-09-21T23:36:19.6204792Z Compiling .pio/build/tbeam/lib4b4/Crypto/Hash.cpp.o
+2025-09-21T23:36:19.6743400Z Compiling .pio/build/tbeam/lib4b4/Crypto/KeccakCore.cpp.o
+2025-09-21T23:36:19.6929803Z Compiling .pio/build/tbeam/lib4b4/Crypto/NoiseSource.cpp.o
+2025-09-21T23:36:19.7123795Z Compiling .pio/build/tbeam/lib4b4/Crypto/OMAC.cpp.o
+2025-09-21T23:36:19.7310130Z Compiling .pio/build/tbeam/lib4b4/Crypto/P521.cpp.o
+2025-09-21T23:36:19.7559136Z Compiling .pio/build/tbeam/lib4b4/Crypto/Poly1305.cpp.o
+2025-09-21T23:36:19.9138708Z Compiling .pio/build/tbeam/lib4b4/Crypto/RNG.cpp.o
+2025-09-21T23:36:19.9313835Z Compiling .pio/build/tbeam/lib4b4/Crypto/SHA224.cpp.o
+2025-09-21T23:36:19.9429058Z Compiling .pio/build/tbeam/lib4b4/Crypto/SHA256.cpp.o
+2025-09-21T23:36:19.9588916Z Compiling .pio/build/tbeam/lib4b4/Crypto/SHA3.cpp.o
+2025-09-21T23:36:19.9938094Z Compiling .pio/build/tbeam/lib4b4/Crypto/SHA384.cpp.o
+2025-09-21T23:36:20.0347326Z Compiling .pio/build/tbeam/lib4b4/Crypto/SHA512.cpp.o
+2025-09-21T23:36:20.0678217Z Compiling .pio/build/tbeam/lib4b4/Crypto/SHAKE.cpp.o
+2025-09-21T23:36:20.0939611Z Compiling .pio/build/tbeam/lib4b4/Crypto/XOF.cpp.o
+2025-09-21T23:36:20.1400130Z Compiling .pio/build/tbeam/lib4b4/Crypto/XTS.cpp.o
+2025-09-21T23:36:20.2843611Z Compiling .pio/build/tbeam/lib937/FS/FS.cpp.o
+2025-09-21T23:36:20.3049646Z Compiling .pio/build/tbeam/lib937/FS/vfs_api.cpp.o
+2025-09-21T23:36:20.4629819Z Compiling .pio/build/tbeam/lib998/SD/SD.cpp.o
+2025-09-21T23:36:20.4790654Z Archiving .pio/build/tbeam/lib4b4/libCrypto.a
+2025-09-21T23:36:20.4933846Z Indexing .pio/build/tbeam/lib4b4/libCrypto.a
+2025-09-21T23:36:20.5502103Z Compiling .pio/build/tbeam/lib998/SD/sd_diskio.cpp.o
+2025-09-21T23:36:21.0044961Z Compiling .pio/build/tbeam/lib998/SD/sd_diskio_crc.c.o
+2025-09-21T23:36:21.1712336Z Compiling .pio/build/tbeam/libabe/WiFi/WiFi.cpp.o
+2025-09-21T23:36:21.1886627Z Archiving .pio/build/tbeam/lib937/libFS.a
+2025-09-21T23:36:21.1990102Z Indexing .pio/build/tbeam/lib937/libFS.a
+2025-09-21T23:36:21.2031481Z Compiling .pio/build/tbeam/libabe/WiFi/WiFiAP.cpp.o
+2025-09-21T23:36:21.2263959Z Compiling .pio/build/tbeam/libabe/WiFi/WiFiClient.cpp.o
+2025-09-21T23:36:21.2373096Z Archiving .pio/build/tbeam/lib998/libSD.a
+2025-09-21T23:36:21.2439788Z Indexing .pio/build/tbeam/lib998/libSD.a
+2025-09-21T23:36:21.2645751Z Compiling .pio/build/tbeam/libabe/WiFi/WiFiGeneric.cpp.o
+2025-09-21T23:36:21.8923386Z Compiling .pio/build/tbeam/libabe/WiFi/WiFiMulti.cpp.o
+2025-09-21T23:36:21.9603868Z Compiling .pio/build/tbeam/libabe/WiFi/WiFiSTA.cpp.o
+2025-09-21T23:36:22.0769667Z Compiling .pio/build/tbeam/libabe/WiFi/WiFiScan.cpp.o
+2025-09-21T23:36:22.2248485Z Compiling .pio/build/tbeam/libabe/WiFi/WiFiServer.cpp.o
+2025-09-21T23:36:22.7010464Z Compiling .pio/build/tbeam/libabe/WiFi/WiFiUdp.cpp.o
+2025-09-21T23:36:22.8632853Z Compiling .pio/build/tbeam/lib46d/Preferences/Preferences.cpp.o
+2025-09-21T23:36:23.0841078Z Compiling .pio/build/tbeam/libfb1/WiFiClientSecure/WiFiClientSecure.cpp.o
+2025-09-21T23:36:23.1118486Z Compiling .pio/build/tbeam/libfb1/WiFiClientSecure/esp_crt_bundle.c.o
+2025-09-21T23:36:23.2848333Z Compiling .pio/build/tbeam/libfb1/WiFiClientSecure/ssl_client.cpp.o
+2025-09-21T23:36:23.2940510Z Archiving .pio/build/tbeam/libabe/libWiFi.a
+2025-09-21T23:36:23.3050831Z Indexing .pio/build/tbeam/libabe/libWiFi.a
+2025-09-21T23:36:23.5245319Z Compiling .pio/build/tbeam/lib042/HTTPClient/HTTPClient.cpp.o
+2025-09-21T23:36:23.5383130Z Archiving .pio/build/tbeam/lib46d/libPreferences.a
+2025-09-21T23:36:23.5450660Z Indexing .pio/build/tbeam/lib46d/libPreferences.a
+2025-09-21T23:36:23.7304019Z Compiling .pio/build/tbeam/liba0d/WebServer/Parsing.cpp.o
+2025-09-21T23:36:23.8964075Z Compiling .pio/build/tbeam/liba0d/WebServer/WebServer.cpp.o
+2025-09-21T23:36:24.1270050Z Archiving .pio/build/tbeam/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:24.1352498Z Indexing .pio/build/tbeam/libfb1/libWiFiClientSecure.a
+2025-09-21T23:36:24.1528650Z Compiling .pio/build/tbeam/liba0d/WebServer/detail/mimetable.cpp.o
+2025-09-21T23:36:24.3561570Z Compiling .pio/build/tbeam/libf52/ESPmDNS/ESPmDNS.cpp.o
+2025-09-21T23:36:24.7517375Z Compiling .pio/build/tbeam/lib917/LittleFS/LittleFS.cpp.o
+2025-09-21T23:36:24.7614896Z Archiving .pio/build/tbeam/lib042/libHTTPClient.a
+2025-09-21T23:36:24.7680146Z Indexing .pio/build/tbeam/lib042/libHTTPClient.a
+2025-09-21T23:36:24.9599841Z Compiling .pio/build/tbeam/lib1cb/AsyncUDP/AsyncUDP.cpp.o
+2025-09-21T23:36:24.9735844Z Archiving .pio/build/tbeam/liba0d/libWebServer.a
+2025-09-21T23:36:24.9813920Z Indexing .pio/build/tbeam/liba0d/libWebServer.a
+2025-09-21T23:36:25.1503535Z Compiling .pio/build/tbeam/lib359/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:36:25.1651271Z Archiving .pio/build/tbeam/libf52/libESPmDNS.a
+2025-09-21T23:36:25.1708066Z Indexing .pio/build/tbeam/libf52/libESPmDNS.a
+2025-09-21T23:36:25.1883137Z Compiling .pio/build/tbeam/lib359/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:36:25.2344653Z Compiling .pio/build/tbeam/lib359/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:36:25.4242011Z Compiling .pio/build/tbeam/lib359/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:36:25.4733694Z Compiling .pio/build/tbeam/lib359/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:36:25.4890781Z Archiving .pio/build/tbeam/lib917/libLittleFS.a
+2025-09-21T23:36:25.4964617Z Indexing .pio/build/tbeam/lib917/libLittleFS.a
+2025-09-21T23:36:25.6876084Z Compiling .pio/build/tbeam/FrameworkArduino/Esp.cpp.o
+2025-09-21T23:36:25.7031423Z Archiving .pio/build/tbeam/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:25.7096232Z Indexing .pio/build/tbeam/lib1cb/libAsyncUDP.a
+2025-09-21T23:36:25.7163867Z Compiling .pio/build/tbeam/FrameworkArduino/FirmwareMSC.cpp.o
+2025-09-21T23:36:25.7333765Z Compiling .pio/build/tbeam/FrameworkArduino/FunctionalInterrupt.cpp.o
+2025-09-21T23:36:25.7763007Z Compiling .pio/build/tbeam/FrameworkArduino/HWCDC.cpp.o
+2025-09-21T23:36:25.7905005Z Archiving .pio/build/tbeam/lib359/libAdafruit NeoPixel.a
+2025-09-21T23:36:25.7967582Z Indexing .pio/build/tbeam/lib359/libAdafruit NeoPixel.a
+2025-09-21T23:36:25.8181202Z Compiling .pio/build/tbeam/FrameworkArduino/HardwareSerial.cpp.o
+2025-09-21T23:36:25.8462344Z Compiling .pio/build/tbeam/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:36:26.3112748Z Compiling .pio/build/tbeam/FrameworkArduino/IPv6Address.cpp.o
+2025-09-21T23:36:26.4072004Z Compiling .pio/build/tbeam/FrameworkArduino/MD5Builder.cpp.o
+2025-09-21T23:36:26.4492427Z Compiling .pio/build/tbeam/FrameworkArduino/Print.cpp.o
+2025-09-21T23:36:26.4985238Z Compiling .pio/build/tbeam/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:36:26.9175393Z Compiling .pio/build/tbeam/FrameworkArduino/StreamString.cpp.o
+2025-09-21T23:36:27.0102671Z Compiling .pio/build/tbeam/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:36:27.0761435Z Compiling .pio/build/tbeam/FrameworkArduino/USB.cpp.o
+2025-09-21T23:36:27.1182315Z Compiling .pio/build/tbeam/FrameworkArduino/USBCDC.cpp.o
+2025-09-21T23:36:27.1402590Z Compiling .pio/build/tbeam/FrameworkArduino/USBMSC.cpp.o
+2025-09-21T23:36:27.1659552Z Compiling .pio/build/tbeam/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:36:27.1936080Z Compiling .pio/build/tbeam/FrameworkArduino/WString.cpp.o
+2025-09-21T23:36:27.3023806Z Compiling .pio/build/tbeam/FrameworkArduino/base64.cpp.o
+2025-09-21T23:36:27.5168238Z Compiling .pio/build/tbeam/FrameworkArduino/cbuf.cpp.o
+2025-09-21T23:36:27.6053109Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-adc.c.o
+2025-09-21T23:36:27.6308422Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-bt.c.o
+2025-09-21T23:36:27.8283744Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-cpu.c.o
+2025-09-21T23:36:27.8530117Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-dac.c.o
+2025-09-21T23:36:27.8968006Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-gpio.c.o
+2025-09-21T23:36:27.9293315Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-i2c-slave.c.o
+2025-09-21T23:36:28.0181906Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-i2c.c.o
+2025-09-21T23:36:28.0478181Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-ledc.c.o
+2025-09-21T23:36:28.1107271Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-matrix.c.o
+2025-09-21T23:36:28.1513936Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-misc.c.o
+2025-09-21T23:36:28.2214748Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-psram.c.o
+2025-09-21T23:36:28.2458655Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-rgb-led.c.o
+2025-09-21T23:36:28.2652038Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-rmt.c.o
+2025-09-21T23:36:28.3771281Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-sigmadelta.c.o
+2025-09-21T23:36:28.4114905Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-spi.c.o
+2025-09-21T23:36:28.4368391Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-time.c.o
+2025-09-21T23:36:28.4594101Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-timer.c.o
+2025-09-21T23:36:28.5672136Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-tinyusb.c.o
+2025-09-21T23:36:28.6153279Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-touch.c.o
+2025-09-21T23:36:28.6435187Z Compiling .pio/build/tbeam/FrameworkArduino/esp32-hal-uart.c.o
+2025-09-21T23:36:28.6641028Z Compiling .pio/build/tbeam/FrameworkArduino/firmware_msc_fat.c.o
+2025-09-21T23:36:28.6826154Z Compiling .pio/build/tbeam/FrameworkArduino/libb64/cdecode.c.o
+2025-09-21T23:36:28.7376624Z Compiling .pio/build/tbeam/FrameworkArduino/libb64/cencode.c.o
+2025-09-21T23:36:28.7808814Z Compiling .pio/build/tbeam/FrameworkArduino/main.cpp.o
+2025-09-21T23:36:28.7979085Z Compiling .pio/build/tbeam/FrameworkArduino/stdlib_noniso.c.o
+2025-09-21T23:36:28.8150305Z Compiling .pio/build/tbeam/FrameworkArduino/wiring_pulse.c.o
+2025-09-21T23:36:28.8958410Z Compiling .pio/build/tbeam/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:36:29.2202299Z Archiving .pio/build/tbeam/libFrameworkArduino.a
+2025-09-21T23:36:29.2357632Z Indexing .pio/build/tbeam/libFrameworkArduino.a
+2025-09-21T23:36:29.2837784Z Linking .pio/build/tbeam/firmware.elf
+2025-09-21T23:36:57.4428299Z /pio/workspace/libdeps/tbeam/Crypto/AESEsp32.cpp:33:5: warning: type of 'esp_aes_setkey' does not match original declaration [-Wlto-type-mismatch]
+2025-09-21T23:36:57.4429460Z  int esp_aes_setkey(unsigned char *ctx, const unsigned char *key,
+2025-09-21T23:36:57.4429951Z      ^
+2025-09-21T23:36:57.4431043Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: 'esp_aes_setkey' was previously declared here
+2025-09-21T23:36:57.4432513Z  int mbedtls_aes_setkey_dec(mbedtls_aes_context *ctx, const unsigned char *key,
+2025-09-21T23:36:57.4433067Z      ^
+2025-09-21T23:36:57.4434253Z /pio/core/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/mbedtls/include/mbedtls/aes.h:184:5: note: code may be misoptimized unless -fno-strict-aliasing is used
+2025-09-21T23:36:57.4934312Z Retrieving maximum program size .pio/build/tbeam/firmware.elf
+2025-09-21T23:36:57.4935773Z Checking size .pio/build/tbeam/firmware.elf
+2025-09-21T23:36:57.5000578Z Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+2025-09-21T23:36:57.5001361Z RAM:   [=         ]   9.4% (used 123564 bytes from 1310720 bytes)
+2025-09-21T23:36:57.5001926Z Flash: [==========]  95.2% (used 2308829 bytes from 2424832 bytes)
+2025-09-21T23:36:57.5015631Z Building .pio/build/tbeam/firmware.bin
+2025-09-21T23:36:57.6724199Z esptool.py v4.5.1
+2025-09-21T23:36:57.6724627Z Creating esp32 image...
+2025-09-21T23:36:57.6725031Z Merged 27 ELF sections
+2025-09-21T23:36:57.6725394Z Successfully created esp32 image.
+2025-09-21T23:36:57.6812118Z esp32_create_combined_bin([".pio/build/tbeam/firmware.bin"], [".pio/build/tbeam/firmware.elf"])
+2025-09-21T23:36:57.6812667Z Generating combined binary for serial flashing
+2025-09-21T23:36:57.6818947Z     Offset | File
+2025-09-21T23:36:57.6819471Z  -  0x1000 | /workspace/.pio/build/tbeam/bootloader.bin
+2025-09-21T23:36:57.6819987Z  -  0x8000 | /workspace/.pio/build/tbeam/partitions.bin
+2025-09-21T23:36:57.6820792Z  -  0xe000 | /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin
+2025-09-21T23:36:57.6821610Z  - 0x10000 | /workspace/.pio/build/tbeam/firmware.bin
+2025-09-21T23:36:57.6824077Z Using esptool.py arguments: --chip esp32 merge_bin -o /workspace/.pio/build/tbeam/firmware.factory.bin --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 /workspace/.pio/build/tbeam/bootloader.bin 0x8000 /workspace/.pio/build/tbeam/partitions.bin 0xe000 /pio/core/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin 0x10000 /workspace/.pio/build/tbeam/firmware.bin
+2025-09-21T23:36:57.6864821Z esptool.py v4.5.1
+2025-09-21T23:36:57.6887674Z Wrote 0x245520 bytes to file /workspace/.pio/build/tbeam/firmware.factory.bin, ready to flash to offset 0x0
+2025-09-21T23:36:58.3136758Z ======================== [SUCCESS] Took 175.81 seconds ========================
+2025-09-21T23:36:58.3137201Z 
+2025-09-21T23:36:58.3142600Z Environment    Status    Duration
+2025-09-21T23:36:58.3143034Z -------------  --------  ------------
+2025-09-21T23:36:58.3143431Z tbeam          SUCCESS   00:02:55.807
+2025-09-21T23:36:58.3144091Z ========================= 1 succeeded in 00:02:55.807 =========================
+2025-09-21T23:36:58.3560399Z Copying ESP32 bin file
+2025-09-21T23:36:58.3588353Z Copying ESP32 update bin file
+2025-09-21T23:36:58.3615015Z Building Filesystem for ESP32 targets
+2025-09-21T23:36:59.1207922Z Processing tbeam (board: ttgo-t-beam; platform: 
+2025-09-21T23:36:59.1208619Z platformio/espressif32@6.11.0; framework: arduino)
+2025-09-21T23:36:59.1209162Z --------------------------------------------------------------------------------
+2025-09-21T23:37:00.1626980Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:37:00.1777602Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/ttgo-t-beam.html
+2025-09-21T23:37:00.1778564Z PLATFORM: Espressif 32 (6.11.0) > TTGO T-Beam
+2025-09-21T23:37:00.1779085Z HARDWARE: ESP32 240MHz, 1.25MB RAM, 4MB Flash
+2025-09-21T23:37:00.1780446Z DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2025-09-21T23:37:00.1781701Z PACKAGES: 
+2025-09-21T23:37:00.1782156Z  - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+2025-09-21T23:37:00.1782741Z  - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+2025-09-21T23:37:00.1783194Z  - tool-mklittlefs @ 1.203.210628 (2.3) 
+2025-09-21T23:37:00.1783664Z  - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+2025-09-21T23:37:00.2079886Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:37:00.2080560Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:37:00.3308657Z [nanopb] No generation needed.
+2025-09-21T23:37:00.7927867Z Found 96 compatible libraries
+2025-09-21T23:37:00.7928376Z Scanning dependencies...
+2025-09-21T23:37:11.5139030Z Dependency Graph
+2025-09-21T23:37:11.5141565Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:37:11.5145143Z |-- OneButton @ 2.6.1
+2025-09-21T23:37:11.5145595Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:37:11.5146175Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:37:11.5146852Z |-- ArduinoThread @ 0.0.0+20250919052328
+2025-09-21T23:37:11.5149435Z |-- Nanopb @ 0.4.91
+2025-09-21T23:37:11.5150780Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:37:11.5152347Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:37:11.5153431Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:37:11.5155799Z |-- NTPClient @ 3.2.1
+2025-09-21T23:37:11.5157526Z |-- Syslog @ 2.0.0
+2025-09-21T23:37:11.5159140Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:37:11.5159494Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:37:11.5160520Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:37:11.5161372Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:37:11.5162925Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:37:11.5165974Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:37:11.5166515Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:37:11.5168702Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:37:11.5170151Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:37:11.5172561Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:37:11.5173970Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:37:11.5176079Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:37:11.5178553Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:37:11.5179632Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:37:11.5181716Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:37:11.5183867Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:37:11.5186860Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:37:11.5187613Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:37:11.5189626Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:37:11.5191454Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:37:11.5193943Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:37:11.5195538Z |-- INA226 @ 0.6.4
+2025-09-21T23:37:11.5197898Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:37:11.5199659Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:37:11.5201599Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:37:11.5203446Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:37:11.5205869Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:37:11.5207855Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:37:11.5209880Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:37:11.5212021Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:37:11.5213699Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:37:11.5215199Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:37:11.5217834Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:37:11.5219504Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:37:11.5221190Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:37:11.5222783Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:37:11.5224491Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:37:11.5226028Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:37:11.5228042Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:37:11.5230288Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:37:11.5232350Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:37:11.5234077Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:37:11.5236530Z |-- RadioLib @ 7.3.0
+2025-09-21T23:37:11.5238185Z |-- esp32_https_server @ 1.0.0
+2025-09-21T23:37:11.5240322Z |-- NimBLE-Arduino @ 1.4.3
+2025-09-21T23:37:11.5242675Z |-- libpax @ 1.1.0
+2025-09-21T23:37:11.5244047Z |-- XPowersLib @ 0.3.0
+2025-09-21T23:37:11.5245522Z |-- ESP32 Codec2 @ 1.0.1
+2025-09-21T23:37:11.5247823Z |-- Crypto @ 0.4.0
+2025-09-21T23:37:11.5248707Z |-- SD @ 2.0.0
+2025-09-21T23:37:11.5250978Z |-- SPI @ 2.0.0
+2025-09-21T23:37:11.5251582Z |-- WiFi @ 2.0.0
+2025-09-21T23:37:11.5251867Z |-- Wire @ 2.0.0
+2025-09-21T23:37:11.5252833Z |-- Preferences @ 2.0.0
+2025-09-21T23:37:11.5255168Z |-- HTTPClient @ 2.0.0
+2025-09-21T23:37:11.5256137Z |-- WiFiClientSecure @ 2.0.0
+2025-09-21T23:37:11.5257612Z |-- WebServer @ 2.0.0
+2025-09-21T23:37:11.5258157Z |-- ESPmDNS @ 2.0.0
+2025-09-21T23:37:11.5258681Z |-- LittleFS @ 2.0.0
+2025-09-21T23:37:11.5259615Z |-- ESP32 Async UDP @ 2.0.0
+2025-09-21T23:37:11.5261492Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:37:12.0888401Z Building in release mode
+2025-09-21T23:37:12.2095005Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on tbeam
+2025-09-21T23:37:12.2113031Z Using flags:
+2025-09-21T23:37:12.2113490Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:37:12.2113866Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:37:12.2114240Z -DAPP_ENV=tbeam
+2025-09-21T23:37:12.2114568Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:37:12.2114979Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:37:12.2115711Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:37:12.2116934Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:37:12.2211355Z Building FS image from 'data' directory to .pio/build/tbeam/littlefs.bin
+2025-09-21T23:37:12.2238172Z /static/.gitkeep
+2025-09-21T23:37:12.3664986Z ========================= [SUCCESS] Took 13.25 seconds =========================
+2025-09-21T23:37:12.3665536Z 
+2025-09-21T23:37:12.3670325Z Environment    Status    Duration
+2025-09-21T23:37:12.3670837Z -------------  --------  ------------
+2025-09-21T23:37:12.3671200Z tbeam          SUCCESS   00:00:13.246
+2025-09-21T23:37:12.3671509Z ========================= 1 succeeded in 00:00:13.246 =========================
+2025-09-21T23:37:12.4004070Z Build artifacts are located at: /workspace/.pio/build
+2025-09-21T23:37:12.4004805Z Downloading OTA firmware firmware.bin from https://github.com/meshtastic/firmware-ota
+2025-09-21T23:37:12.4076942Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-09-21T23:37:12.4077489Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-09-21T23:37:12.4077708Z 
+2025-09-21T23:37:12.5160344Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:12.5161040Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-21T23:37:12.5657731Z 
+2025-09-21T23:37:12.5658440Z 100  604k  100  604k    0     0  3816k      0 --:--:-- --:--:-- --:--:-- 3816k
+2025-09-21T23:37:12.7203658Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:37:12.7203931Z with:
+2025-09-21T23:37:12.7204144Z   name: firmware-esp32-tbeam-2.7.10.3d51287.zip
+2025-09-21T23:37:12.7204424Z   overwrite: true
+2025-09-21T23:37:12.7204723Z   path: release/*.bin
+release/*.elf
+release/*.uf2
+release/*.hex
+release/*-ota.zip
+
+2025-09-21T23:37:12.7205073Z   if-no-files-found: warn
+2025-09-21T23:37:12.7205278Z   compression-level: 6
+2025-09-21T23:37:12.7205468Z   include-hidden-files: false
+2025-09-21T23:37:12.7205674Z ##[endgroup]
+2025-09-21T23:37:12.9435076Z With the provided path, there will be 5 files uploaded
+2025-09-21T23:37:13.0365138Z Artifact name is valid!
+2025-09-21T23:37:13.0366853Z Root directory input is valid!
+2025-09-21T23:37:13.0685568Z Beginning upload of artifact content to blob storage
+2025-09-21T23:37:13.8832651Z Uploaded bytes 8388608
+2025-09-21T23:37:14.0433914Z Uploaded bytes 10982304
+2025-09-21T23:37:14.0593601Z Finished uploading artifact content to blob storage!
+2025-09-21T23:37:14.0597378Z SHA256 digest of uploaded artifact zip is d9efb51b245340197ac2647af1c4cdc8b982cd3566eb009206dd907e8989a36a
+2025-09-21T23:37:14.0598581Z Finalizing artifact upload
+2025-09-21T23:37:14.1454920Z Artifact firmware-esp32-tbeam-2.7.10.3d51287.zip.zip successfully finalized. Artifact ID 4067354849
+2025-09-21T23:37:14.1456142Z Artifact firmware-esp32-tbeam-2.7.10.3d51287.zip has been successfully uploaded! Final size is 10982304 bytes. Artifact ID is 4067354849
+2025-09-21T23:37:14.1462062Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067354849
+2025-09-21T23:37:14.1619038Z Post job cleanup.
+2025-09-21T23:37:14.2389416Z [command]/usr/bin/git version
+2025-09-21T23:37:14.2426264Z git version 2.51.0
+2025-09-21T23:37:14.2463807Z Temporarily overriding HOME='/home/runner/work/_temp/6d9910fa-ff99-46b8-9e06-e16214e90e92' before making global git config changes
+2025-09-21T23:37:14.2465069Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:37:14.2469676Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:37:14.2506484Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:37:14.2538508Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:37:14.2750341Z Entering 'meshtestic'
+2025-09-21T23:37:14.2792173Z Entering 'protobufs'
+2025-09-21T23:37:14.2848925Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:37:14.2870723Z http.https://github.com/.extraheader
+2025-09-21T23:37:14.2881587Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:37:14.2912196Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:37:14.3122533Z Entering 'meshtestic'
+2025-09-21T23:37:14.3146250Z http.https://github.com/.extraheader
+2025-09-21T23:37:14.3179619Z Entering 'protobufs'
+2025-09-21T23:37:14.3202889Z http.https://github.com/.extraheader
+2025-09-21T23:37:14.3360751Z Cleaning up orphan processes

@@ -1,0 +1,127 @@
+﻿2025-09-21T23:11:33.4846732Z Current runner version: '2.327.1'
+2025-09-21T23:11:33.4854560Z Runner name: 'fifield-3038-4-c7d0'
+2025-09-21T23:11:33.4855573Z Runner group name: 'mesh-x86'
+2025-09-21T23:11:33.4856586Z Machine name: 'f0deb76432f7'
+2025-09-21T23:11:33.4862068Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:11:33.4864899Z Actions: write
+2025-09-21T23:11:33.4865659Z Attestations: write
+2025-09-21T23:11:33.4866326Z Checks: write
+2025-09-21T23:11:33.4867143Z Contents: write
+2025-09-21T23:11:33.4867777Z Deployments: write
+2025-09-21T23:11:33.4868492Z Discussions: write
+2025-09-21T23:11:33.4869141Z Issues: write
+2025-09-21T23:11:33.4869939Z Metadata: read
+2025-09-21T23:11:33.4870623Z Models: read
+2025-09-21T23:11:33.4871266Z Packages: write
+2025-09-21T23:11:33.4871966Z Pages: write
+2025-09-21T23:11:33.4872592Z PullRequests: write
+2025-09-21T23:11:33.4873329Z RepositoryProjects: write
+2025-09-21T23:11:33.4874059Z SecurityEvents: write
+2025-09-21T23:11:33.4874786Z Statuses: write
+2025-09-21T23:11:33.4875759Z ##[endgroup]
+2025-09-21T23:11:33.4879017Z Secret source: Actions
+2025-09-21T23:11:33.4880092Z Prepare workflow directory
+2025-09-21T23:11:33.5457589Z Prepare all required actions
+2025-09-21T23:11:33.5506501Z Getting action download info
+2025-09-21T23:11:34.4838652Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:11:35.4453578Z Complete job name: version
+2025-09-21T23:11:35.5187667Z ##[group]Run actions/checkout@v5
+2025-09-21T23:11:35.5189047Z with:
+2025-09-21T23:11:35.5189827Z   repository: meshtastic/firmware
+2025-09-21T23:11:35.5190905Z   token: ***
+2025-09-21T23:11:35.5191554Z   ssh-strict: true
+2025-09-21T23:11:35.5192202Z   ssh-user: git
+2025-09-21T23:11:35.5192872Z   persist-credentials: true
+2025-09-21T23:11:35.5193617Z   clean: true
+2025-09-21T23:11:35.5194287Z   sparse-checkout-cone-mode: true
+2025-09-21T23:11:35.5195088Z   fetch-depth: 1
+2025-09-21T23:11:35.5195753Z   fetch-tags: false
+2025-09-21T23:11:35.5196424Z   show-progress: true
+2025-09-21T23:11:35.5197168Z   lfs: false
+2025-09-21T23:11:35.5197808Z   submodules: false
+2025-09-21T23:11:35.5198499Z   set-safe-directory: true
+2025-09-21T23:11:35.5199741Z ##[endgroup]
+2025-09-21T23:11:35.6467825Z Syncing repository: meshtastic/firmware
+2025-09-21T23:11:35.6470630Z ##[group]Getting Git version info
+2025-09-21T23:11:35.6471844Z Working directory is '/home/ubuntu/runner/_work/firmware/firmware'
+2025-09-21T23:11:35.6473625Z [command]/usr/bin/git version
+2025-09-21T23:11:35.6474440Z git version 2.43.0
+2025-09-21T23:11:35.6476945Z ##[endgroup]
+2025-09-21T23:11:35.6484907Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/b03b37a1-9a6f-49e7-bb1a-199d1d2f9e67' before making global git config changes
+2025-09-21T23:11:35.6487198Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:11:35.6490264Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:11:35.6538059Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-09-21T23:11:35.6562565Z https://github.com/meshtastic/firmware
+2025-09-21T23:11:35.6581221Z ##[group]Removing previously created refs, to avoid conflicts
+2025-09-21T23:11:35.6585321Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-09-21T23:11:35.6617869Z refs/heads/develop
+2025-09-21T23:11:35.6627849Z [command]/usr/bin/git checkout --detach
+2025-09-21T23:11:35.6885080Z HEAD is now at 3d51287 Introduce Radio Preset elections through BaseUI (#8071)
+2025-09-21T23:11:35.6932595Z [command]/usr/bin/git branch --delete --force develop
+2025-09-21T23:11:35.6967398Z Deleted branch develop (was 3d51287).
+2025-09-21T23:11:35.7014384Z ##[endgroup]
+2025-09-21T23:11:35.7016109Z [command]/usr/bin/git submodule status
+2025-09-21T23:11:35.7456811Z  dcac7e5673005f4d8a2b1f0f6e06877b689d7519 meshtestic (heads/master)
+2025-09-21T23:11:35.7559901Z  46b81e822af1b8e408f437092337f129dee693e6 protobufs (heads/master)
+2025-09-21T23:11:35.7573564Z ##[group]Cleaning the repository
+2025-09-21T23:11:35.7576846Z [command]/usr/bin/git clean -ffdx
+2025-09-21T23:11:35.9158727Z Removing .pio/
+2025-09-21T23:11:35.9166490Z Removing bin/__pycache__/
+2025-09-21T23:11:35.9177488Z [command]/usr/bin/git reset --hard HEAD
+2025-09-21T23:11:35.9316730Z HEAD is now at 3d51287 Introduce Radio Preset elections through BaseUI (#8071)
+2025-09-21T23:11:35.9326179Z ##[endgroup]
+2025-09-21T23:11:35.9329874Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:11:35.9338081Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:11:35.9375247Z ##[endgroup]
+2025-09-21T23:11:35.9377416Z ##[group]Setting up auth
+2025-09-21T23:11:35.9392963Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:11:35.9441502Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:11:35.9742794Z Entering 'meshtestic'
+2025-09-21T23:11:35.9807877Z Entering 'protobufs'
+2025-09-21T23:11:35.9899831Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:11:35.9937386Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:11:36.0226052Z Entering 'meshtestic'
+2025-09-21T23:11:36.0282305Z Entering 'protobufs'
+2025-09-21T23:11:36.0375585Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:11:36.0418561Z ##[endgroup]
+2025-09-21T23:11:36.0421043Z ##[group]Fetching the repository
+2025-09-21T23:11:36.0432918Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3d51287ba77693e5b0140d81abfe4cd218e0c2ae:refs/remotes/origin/develop
+2025-09-21T23:11:36.6927939Z ##[endgroup]
+2025-09-21T23:11:36.6932214Z ##[group]Determining the checkout info
+2025-09-21T23:11:36.6936946Z ##[endgroup]
+2025-09-21T23:11:36.6951676Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:11:36.7056355Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:11:36.7132005Z ##[group]Checking out the ref
+2025-09-21T23:11:36.7138087Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:11:36.7250561Z Switched to a new branch 'develop'
+2025-09-21T23:11:36.7255012Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:11:36.7263569Z ##[endgroup]
+2025-09-21T23:11:36.7334590Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:11:36.7368637Z 3d51287ba77693e5b0140d81abfe4cd218e0c2ae
+2025-09-21T23:11:36.8066519Z ##[group]Run echo "long=$(./bin/buildinfo.py long)" >> $GITHUB_OUTPUT
+2025-09-21T23:11:36.8071958Z [36;1mecho "long=$(./bin/buildinfo.py long)" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:11:36.8076277Z [36;1mecho "deb=$(./bin/buildinfo.py deb)" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:11:36.8113669Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:11:36.8116194Z env:
+2025-09-21T23:11:36.8118048Z   BUILD_LOCATION: local
+2025-09-21T23:11:36.8120275Z ##[endgroup]
+2025-09-21T23:11:36.9631937Z Post job cleanup.
+2025-09-21T23:11:37.0697271Z [command]/usr/bin/git version
+2025-09-21T23:11:37.0741718Z git version 2.43.0
+2025-09-21T23:11:37.0792237Z Temporarily overriding HOME='/home/ubuntu/runner/_work/_temp/6a7a7a8b-b99a-4533-b17c-a23f49c7f5d0' before making global git config changes
+2025-09-21T23:11:37.0797525Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:11:37.0801954Z [command]/usr/bin/git config --global --add safe.directory /home/ubuntu/runner/_work/firmware/firmware
+2025-09-21T23:11:37.0846985Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:11:37.0889850Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:11:37.1156744Z Entering 'meshtestic'
+2025-09-21T23:11:37.1234308Z Entering 'protobufs'
+2025-09-21T23:11:37.1311092Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:11:37.1334772Z http.https://github.com/.extraheader
+2025-09-21T23:11:37.1345435Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:11:37.1384765Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:11:37.1671994Z Entering 'meshtestic'
+2025-09-21T23:11:37.1731686Z Entering 'protobufs'
+2025-09-21T23:11:37.2060819Z Evaluate and set job outputs
+2025-09-21T23:11:37.2084615Z Set output 'long'
+2025-09-21T23:11:37.2092206Z Set output 'deb'
+2025-09-21T23:11:37.2097672Z Cleaning up orphan processes

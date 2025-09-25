@@ -12,7 +12,6 @@ class menuHandler
         lora_Menu,
         lora_picker,
         device_role_picker,
-        radio_preset_picker,
         no_timeout_lora_picker,
         TZ_picker,
         twelve_hour_picker,
@@ -34,16 +33,30 @@ class menuHandler
         test_menu,
         number_test,
         wifi_toggle_menu,
+        wifi_config_menu,
+        wifi_password_prompt,
+        mqtt_base_menu,
+        mqtt_toggle_menu,
+        mqtt_server_config,
+        mqtt_credentials_config,
+        mqtt_server_prompt,
+        mqtt_username_prompt,
+        mqtt_password_prompt,
+        mqtt_root_prompt,
         bluetooth_toggle_menu,
         notifications_menu,
         screen_options_menu,
         power_menu,
         system_base_menu,
+        silent_mode_toggle,
         key_verification_init,
         key_verification_final_prompt,
         trace_route_menu,
+        node_info_menu,
         throttle_message,
-        FrameToggles
+        FrameToggles,
+        sleep_menu,
+        sleep_timer_config
     };
     static screenMenus menuQueue;
 
@@ -51,7 +64,6 @@ class menuHandler
     static void LoraRegionPicker(uint32_t duration = 30000);
     static void loraMenu();
     static void DeviceRolePicker();
-    static void RadioPresetPicker();
     static void handleMenuSwitch(OLEDDisplay *display);
     static void showConfirmationBanner(const char *message, std::function<void()> onConfirm);
     static void clockMenu();
@@ -82,11 +94,20 @@ class menuHandler
     static void numberTest();
     static void wifiBaseMenu();
     static void wifiToggleMenu();
+    static void wifiConfigMenu();
+    static void mqttBaseMenu();
+    static void mqttToggleMenu();
+    static void mqttServerConfig();
+    static void mqttCredentialsConfig();
     static void notificationsMenu();
     static void screenOptionsMenu();
     static void powerMenu();
     static void FrameToggles_menu();
-    static void textMessageMenu();
+    static void silentModeToggle();
+    static void sleepMenu();
+    static void sleepTimerConfig();
+    static void openChatActionsForNode(uint32_t nodeId);
+    static void openChatActionsForChannel(uint8_t ch);
 
   private:
     static void saveUIConfig();

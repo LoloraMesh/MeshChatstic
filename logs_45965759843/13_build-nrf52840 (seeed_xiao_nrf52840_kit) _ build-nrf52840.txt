@@ -1,0 +1,1437 @@
+﻿2025-09-21T23:34:05.8624540Z Current runner version: '2.328.0'
+2025-09-21T23:34:05.8648568Z ##[group]Runner Image Provisioner
+2025-09-21T23:34:05.8649459Z Hosted Compute Agent
+2025-09-21T23:34:05.8650007Z Version: 20250829.383
+2025-09-21T23:34:05.8650550Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:34:05.8651282Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:34:05.8651823Z ##[endgroup]
+2025-09-21T23:34:05.8652766Z ##[group]Operating System
+2025-09-21T23:34:05.8653370Z Ubuntu
+2025-09-21T23:34:05.8653864Z 24.04.3
+2025-09-21T23:34:05.8654350Z LTS
+2025-09-21T23:34:05.8654805Z ##[endgroup]
+2025-09-21T23:34:05.8655309Z ##[group]Runner Image
+2025-09-21T23:34:05.8655836Z Image: ubuntu-24.04
+2025-09-21T23:34:05.8656362Z Version: 20250907.24.1
+2025-09-21T23:34:05.8657352Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:34:05.8658878Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:34:05.8659891Z ##[endgroup]
+2025-09-21T23:34:05.8662320Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:34:05.8664583Z Actions: read
+2025-09-21T23:34:05.8665157Z Attestations: read
+2025-09-21T23:34:05.8665609Z Checks: read
+2025-09-21T23:34:05.8666191Z Contents: read
+2025-09-21T23:34:05.8666669Z Deployments: read
+2025-09-21T23:34:05.8667143Z Discussions: read
+2025-09-21T23:34:05.8667692Z Issues: read
+2025-09-21T23:34:05.8668153Z Metadata: read
+2025-09-21T23:34:05.8668583Z Models: read
+2025-09-21T23:34:05.8669099Z Packages: read
+2025-09-21T23:34:05.8669586Z Pages: read
+2025-09-21T23:34:05.8670023Z PullRequests: read
+2025-09-21T23:34:05.8670614Z RepositoryProjects: read
+2025-09-21T23:34:05.8671122Z SecurityEvents: read
+2025-09-21T23:34:05.8671722Z Statuses: read
+2025-09-21T23:34:05.8672479Z ##[endgroup]
+2025-09-21T23:34:05.8674585Z Secret source: Actions
+2025-09-21T23:34:05.8675570Z Prepare workflow directory
+2025-09-21T23:34:05.9002058Z Prepare all required actions
+2025-09-21T23:34:05.9042459Z Getting action download info
+2025-09-21T23:34:06.2385287Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:34:06.3994067Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:34:06.8508015Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:34:07.0952407Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:34:07.0957597Z ##[group] Inputs
+2025-09-21T23:34:07.0958088Z   version: 2.7.10.3d51287
+2025-09-21T23:34:07.0958553Z   platform: nrf52840
+2025-09-21T23:34:07.0958992Z   pio_env: seeed_xiao_nrf52840_kit
+2025-09-21T23:34:07.0959488Z ##[endgroup]
+2025-09-21T23:34:07.0960088Z Complete job name: build-nrf52840 (seeed_xiao_nrf52840_kit) / build-nrf52840
+2025-09-21T23:34:07.1577027Z ##[group]Run actions/checkout@v5
+2025-09-21T23:34:07.1577874Z with:
+2025-09-21T23:34:07.1578287Z   submodules: recursive
+2025-09-21T23:34:07.1578715Z   ref: develop
+2025-09-21T23:34:07.1579153Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:07.1579880Z   token: ***
+2025-09-21T23:34:07.1580254Z   ssh-strict: true
+2025-09-21T23:34:07.1580637Z   ssh-user: git
+2025-09-21T23:34:07.1581025Z   persist-credentials: true
+2025-09-21T23:34:07.1581491Z   clean: true
+2025-09-21T23:34:07.1581938Z   sparse-checkout-cone-mode: true
+2025-09-21T23:34:07.1582572Z   fetch-depth: 1
+2025-09-21T23:34:07.1582954Z   fetch-tags: false
+2025-09-21T23:34:07.1583354Z   show-progress: true
+2025-09-21T23:34:07.1583744Z   lfs: false
+2025-09-21T23:34:07.1584129Z   set-safe-directory: true
+2025-09-21T23:34:07.1584834Z ##[endgroup]
+2025-09-21T23:34:07.2535366Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:07.2537255Z ##[group]Getting Git version info
+2025-09-21T23:34:07.2538017Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:34:07.2538959Z [command]/usr/bin/git version
+2025-09-21T23:34:07.2595901Z git version 2.51.0
+2025-09-21T23:34:07.2617001Z ##[endgroup]
+2025-09-21T23:34:07.2631169Z Temporarily overriding HOME='/home/runner/work/_temp/1cc95095-cab9-46cb-a8ec-832a27a3df40' before making global git config changes
+2025-09-21T23:34:07.2632859Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:34:07.2636501Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:34:07.2673378Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:34:07.2677044Z ##[group]Initializing the repository
+2025-09-21T23:34:07.2681100Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:34:07.2777605Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:34:07.2779119Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:34:07.2780050Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:34:07.2781116Z hint:
+2025-09-21T23:34:07.2781977Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:34:07.2783002Z hint:
+2025-09-21T23:34:07.2784010Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:34:07.2785642Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:34:07.2786966Z hint:
+2025-09-21T23:34:07.2787653Z hint: 	git branch -m <name>
+2025-09-21T23:34:07.2788473Z hint:
+2025-09-21T23:34:07.2789516Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:34:07.2791184Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:34:07.2795419Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:07.2834013Z ##[endgroup]
+2025-09-21T23:34:07.2835226Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:34:07.2838302Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:34:07.2866525Z ##[endgroup]
+2025-09-21T23:34:07.2867719Z ##[group]Setting up auth
+2025-09-21T23:34:07.2873712Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:34:07.2904877Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:34:07.3226592Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:34:07.3259215Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:34:07.3481597Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:34:07.3517797Z ##[endgroup]
+2025-09-21T23:34:07.3519049Z ##[group]Fetching the repository
+2025-09-21T23:34:07.3528515Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:34:08.1109448Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:08.1110028Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:34:08.1164220Z ##[endgroup]
+2025-09-21T23:34:08.1165004Z ##[group]Determining the checkout info
+2025-09-21T23:34:08.1175066Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:34:08.1200762Z   origin/develop
+2025-09-21T23:34:08.1216455Z ##[endgroup]
+2025-09-21T23:34:08.1217019Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:34:08.1254083Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:34:08.1280588Z ##[group]Checking out the ref
+2025-09-21T23:34:08.1285316Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:34:08.2325878Z Switched to a new branch 'develop'
+2025-09-21T23:34:08.2329308Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:34:08.2336472Z ##[endgroup]
+2025-09-21T23:34:08.2337243Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:34:08.2343556Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:34:08.2380388Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:34:08.2443786Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:34:08.2472395Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:34:08.2496660Z ##[endgroup]
+2025-09-21T23:34:08.2497220Z ##[group]Fetching submodules
+2025-09-21T23:34:08.2499898Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:34:08.2724743Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:34:08.2933586Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:34:08.2937023Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:34:08.2962403Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:34:08.6679876Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:34:09.0306293Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:34:09.0418341Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:34:09.0449022Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:34:09.0669385Z Entering 'meshtestic'
+2025-09-21T23:34:09.0706572Z Entering 'protobufs'
+2025-09-21T23:34:09.0751911Z ##[endgroup]
+2025-09-21T23:34:09.0752918Z ##[group]Persisting credentials for submodules
+2025-09-21T23:34:09.0760477Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:34:09.0986620Z Entering 'meshtestic'
+2025-09-21T23:34:09.1029762Z Entering 'protobufs'
+2025-09-21T23:34:09.1094521Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:34:09.1313143Z Entering 'meshtestic'
+2025-09-21T23:34:09.1351753Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:34:09.1370918Z Entering 'protobufs'
+2025-09-21T23:34:09.1409336Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:34:09.1454239Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:34:09.1661144Z Entering 'meshtestic'
+2025-09-21T23:34:09.1697723Z Entering 'protobufs'
+2025-09-21T23:34:09.1747303Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:34:09.1956792Z Entering 'meshtestic'
+2025-09-21T23:34:09.1993941Z Entering 'protobufs'
+2025-09-21T23:34:09.2038910Z ##[endgroup]
+2025-09-21T23:34:09.2076547Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:34:09.2098782Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:34:09.2329846Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:34:09.2330176Z with:
+2025-09-21T23:34:09.2330355Z   pio_platform: nrf52840
+2025-09-21T23:34:09.2330588Z   pio_env: seeed_xiao_nrf52840_kit
+2025-09-21T23:34:09.2330823Z   pio_target: build
+2025-09-21T23:34:09.2331008Z ##[endgroup]
+2025-09-21T23:34:09.2415452Z ##[group]Run docker run --rm \
+2025-09-21T23:34:09.2415795Z [36;1mdocker run --rm \[0m
+2025-09-21T23:34:09.2416060Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:34:09.2416322Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:34:09.2416546Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:34:09.2416750Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:34:09.2416978Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:34:09.2417217Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:34:09.2417474Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:34:09.2417729Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:34:09.2418048Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:34:09.2418397Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-nrf52840[0m
+2025-09-21T23:34:09.2476711Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:34:09.2477044Z env:
+2025-09-21T23:34:09.2477218Z   MT_ENV: seeed_xiao_nrf52840_kit
+2025-09-21T23:34:09.2477481Z   MT_PLATFORM: nrf52840
+2025-09-21T23:34:09.2477670Z   MT_TARGET: build
+2025-09-21T23:34:09.2477855Z   MT_OTA_FIRMWARE_SOURCE: 
+2025-09-21T23:34:09.2478057Z   MT_OTA_FIRMWARE_TARGET: 
+2025-09-21T23:34:09.2478278Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:34:09.2478532Z ##[endgroup]
+2025-09-21T23:34:10.2687185Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-nrf52840' locally
+2025-09-21T23:34:10.7573556Z master-nrf52840: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:34:10.8701977Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:34:10.8702632Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:34:10.8703909Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:34:10.8704680Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:34:10.8705379Z 815e87185931: Pulling fs layer
+2025-09-21T23:34:10.8705665Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:34:10.8705931Z da9989870cf6: Pulling fs layer
+2025-09-21T23:34:10.8706175Z 9900591a02d8: Pulling fs layer
+2025-09-21T23:34:10.8706489Z d47368ccdb52: Pulling fs layer
+2025-09-21T23:34:10.8706833Z 0b0a90cba924: Pulling fs layer
+2025-09-21T23:34:10.8707206Z f1d53622d37c: Pulling fs layer
+2025-09-21T23:34:10.8707656Z b4174266f6e9: Pulling fs layer
+2025-09-21T23:34:10.8707995Z b789b525833f: Pulling fs layer
+2025-09-21T23:34:10.8708353Z d9b2841dabc1: Pulling fs layer
+2025-09-21T23:34:10.8708716Z d47368ccdb52: Waiting
+2025-09-21T23:34:10.8709066Z c611f5bb386b: Waiting
+2025-09-21T23:34:10.8709384Z 0b0a90cba924: Waiting
+2025-09-21T23:34:10.8709705Z f1d53622d37c: Waiting
+2025-09-21T23:34:10.8710028Z b4174266f6e9: Waiting
+2025-09-21T23:34:10.8710341Z b789b525833f: Waiting
+2025-09-21T23:34:10.8710666Z 815e87185931: Waiting
+2025-09-21T23:34:10.8711039Z d9b2841dabc1: Waiting
+2025-09-21T23:34:10.8711355Z 71c11f7c6832: Waiting
+2025-09-21T23:34:10.8711678Z 9900591a02d8: Waiting
+2025-09-21T23:34:10.8712006Z da9989870cf6: Waiting
+2025-09-21T23:34:11.1976264Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:34:11.1977314Z ccbbb2080a06: Download complete
+2025-09-21T23:34:11.3218919Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:34:11.3219400Z 7d5073558d5a: Download complete
+2025-09-21T23:34:11.3766419Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:34:11.3767371Z 8fb375ec14f3: Download complete
+2025-09-21T23:34:11.5829696Z 815e87185931: Verifying Checksum
+2025-09-21T23:34:11.5830478Z 815e87185931: Download complete
+2025-09-21T23:34:11.6824343Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:34:11.6825782Z 71c11f7c6832: Download complete
+2025-09-21T23:34:11.7271586Z da9989870cf6: Verifying Checksum
+2025-09-21T23:34:11.7275801Z da9989870cf6: Download complete
+2025-09-21T23:34:11.9009120Z d47368ccdb52: Verifying Checksum
+2025-09-21T23:34:11.9010608Z d47368ccdb52: Download complete
+2025-09-21T23:34:11.9992343Z 9900591a02d8: Verifying Checksum
+2025-09-21T23:34:11.9993273Z 9900591a02d8: Download complete
+2025-09-21T23:34:12.0667172Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:34:12.0667653Z c611f5bb386b: Download complete
+2025-09-21T23:34:12.2193252Z b4174266f6e9: Download complete
+2025-09-21T23:34:12.2376925Z 0b0a90cba924: Verifying Checksum
+2025-09-21T23:34:12.2377747Z 0b0a90cba924: Download complete
+2025-09-21T23:34:12.3751699Z b789b525833f: Verifying Checksum
+2025-09-21T23:34:12.3752418Z b789b525833f: Download complete
+2025-09-21T23:34:12.4149355Z d9b2841dabc1: Download complete
+2025-09-21T23:34:13.3681964Z 8fb375ec14f3: Pull complete
+2025-09-21T23:34:14.0368126Z ccbbb2080a06: Pull complete
+2025-09-21T23:34:16.3429868Z f1d53622d37c: Verifying Checksum
+2025-09-21T23:34:16.3430391Z f1d53622d37c: Download complete
+2025-09-21T23:34:18.1607428Z 7d5073558d5a: Pull complete
+2025-09-21T23:34:24.5649022Z c611f5bb386b: Pull complete
+2025-09-21T23:34:24.8344051Z 815e87185931: Pull complete
+2025-09-21T23:34:25.5368512Z 71c11f7c6832: Pull complete
+2025-09-21T23:34:25.5514057Z da9989870cf6: Pull complete
+2025-09-21T23:34:26.6083856Z 9900591a02d8: Pull complete
+2025-09-21T23:34:26.6217841Z d47368ccdb52: Pull complete
+2025-09-21T23:34:28.1341223Z 0b0a90cba924: Pull complete
+2025-09-21T23:34:57.1606783Z f1d53622d37c: Pull complete
+2025-09-21T23:34:57.2033763Z b4174266f6e9: Pull complete
+2025-09-21T23:34:57.2167344Z b789b525833f: Pull complete
+2025-09-21T23:34:57.2270404Z d9b2841dabc1: Pull complete
+2025-09-21T23:34:57.2315037Z Digest: sha256:ffa8225c3c4384645d1d6147f70390b55eb3616694869ddf1aca034ab72430a9
+2025-09-21T23:34:57.2335893Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-nrf52840
+2025-09-21T23:34:57.9871643Z Building PlatformIO environment: seeed_xiao_nrf52840_kit
+2025-09-21T23:34:58.2872425Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:34:58.9853385Z Resolving seeed_xiao_nrf52840_kit dependencies...
+2025-09-21T23:34:59.0087992Z Removing unused dependencies...
+2025-09-21T23:34:59.0165170Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:34:59.1429871Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:34:59.1929309Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:35:02.7326205Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:35:02.9507627Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:35:03.0462303Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:35:03.9148102Z Building for seeed_xiao_nrf52840_kit with 
+2025-09-21T23:35:04.6883891Z Processing seeed_xiao_nrf52840_kit (board: xiao_ble_sense; platform: 
+2025-09-21T23:35:04.6884646Z platformio/nordicnrf52@^10.8.0; framework: arduino)
+2025-09-21T23:35:04.6885259Z --------------------------------------------------------------------------------
+2025-09-21T23:35:05.8765973Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:35:05.8914448Z CONFIGURATION: https://docs.platformio.org/page/boards/nordicnrf52/xiao_ble_sense.html
+2025-09-21T23:35:05.8915475Z PLATFORM: Nordic nRF52 (10.9.0) > Seeed Xiao BLE Sense
+2025-09-21T23:35:05.8916005Z HARDWARE: NRF52840 64MHz, 243KB RAM, 796KB Flash
+2025-09-21T23:35:05.8916590Z DEBUG: Current (jlink) External (blackmagic, cmsis-dap, jlink, stlink)
+2025-09-21T23:35:05.8917148Z PACKAGES: 
+2025-09-21T23:35:05.8917545Z  - framework-arduinoadafruitnrf52 @ 1.10601.0+sha.e13f5820 
+2025-09-21T23:35:05.8918085Z  - framework-cmsis @ 2.50700.210515 (5.7.0) 
+2025-09-21T23:35:05.8918411Z  - tool-adafruit-nrfutil @ 1.503.0 (5.3) 
+2025-09-21T23:35:05.8918678Z  - tool-sreccat @ 1.164.0 (1.64) 
+2025-09-21T23:35:05.8918939Z  - toolchain-gccarmnoneeabi @ 1.90301.200702 (9.3.1)
+2025-09-21T23:35:05.9200939Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:35:05.9201644Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:35:05.9957323Z [nanopb] No generation needed.
+2025-09-21T23:35:06.3075953Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:35:09.0413922Z Downloading 0% 10%
+2025-09-21T23:35:09.0463462Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:35:09.0497739Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:35:09.1216605Z [nanopb] No generation needed.
+2025-09-21T23:35:09.1609333Z Found 70 compatible libraries
+2025-09-21T23:35:09.1610206Z Scanning dependencies...
+2025-09-21T23:35:17.8820423Z Dependency Graph
+2025-09-21T23:35:17.8821019Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:35:17.8821580Z |-- OneButton @ 2.6.1
+2025-09-21T23:35:17.8824895Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:35:17.8825292Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:35:17.8827061Z |-- ArduinoThread @ 0.0.0+20250919051847
+2025-09-21T23:35:17.8828732Z |-- Nanopb @ 0.4.91
+2025-09-21T23:35:17.8830491Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:35:17.8833505Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:35:17.8835319Z |-- RadioLib @ 7.3.0
+2025-09-21T23:35:17.8837324Z |-- Crypto @ 0.4.0
+2025-09-21T23:35:17.8838772Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:35:17.8841689Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:35:17.8844176Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:35:17.8844584Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:35:17.8845597Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:35:17.8847919Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:35:17.8849729Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:35:17.8851755Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:35:17.8854256Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:35:17.8856917Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:35:17.8857736Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:35:17.8860251Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:35:17.8862318Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:35:17.8864130Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:35:17.8866128Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:35:17.8868029Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:35:17.8870572Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:35:17.8872668Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:35:17.8874750Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:35:17.8879561Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:35:17.8880196Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:35:17.8880983Z |-- INA226 @ 0.6.4
+2025-09-21T23:35:17.8881654Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:35:17.8882941Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:35:17.8885187Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:35:17.8890018Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:35:17.8890489Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:35:17.8890898Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:35:17.8891304Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:35:17.8893244Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:35:17.8898079Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:35:17.8898461Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:35:17.8898864Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:35:17.8899731Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:35:17.8902514Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:35:17.8903157Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:35:17.8905032Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:35:17.8906707Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:35:17.8908515Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:35:17.8913505Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:35:17.8913967Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:35:17.8914497Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:35:17.8918846Z |-- Adafruit nRFCrypto @ 0.0.5
+2025-09-21T23:35:17.8919793Z |-- SPI @ 1.0
+2025-09-21T23:35:17.8920102Z |-- Wire @ 1.0
+2025-09-21T23:35:17.8920479Z |-- Rotary Encoder @ 0.8.0
+2025-09-21T23:35:17.8920876Z |-- Adafruit Bluefruit nRF52 Libraries @ 0.21.0
+2025-09-21T23:35:17.8921294Z |-- Adafruit TinyUSB Library
+2025-09-21T23:35:17.8921791Z |-- Adafruit Internal File System on Bluefruit nRF52 @ 0.11.0
+2025-09-21T23:35:17.8926364Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:35:18.1459611Z Building in debug mode
+2025-09-21T23:35:18.2599124Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on seeed_xiao_nrf52840_kit
+2025-09-21T23:35:18.2615592Z Using flags:
+2025-09-21T23:35:18.2617370Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:35:18.2617761Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:35:18.2618133Z -DAPP_ENV=seeed_xiao_nrf52840_kit
+2025-09-21T23:35:18.2618548Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:18.2618976Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:35:18.2619701Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:35:18.2620297Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:35:18.4219328Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_TinyUSB_API.cpp.o
+2025-09-21T23:35:18.4312717Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_CDC.cpp.o
+2025-09-21T23:35:18.4393235Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Device.cpp.o
+2025-09-21T23:35:18.4472879Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Interface.cpp.o
+2025-09-21T23:35:18.6083302Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBH_Host.cpp.o
+2025-09-21T23:35:18.7090513Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/cdc/Adafruit_USBH_CDC.cpp.o
+2025-09-21T23:35:18.7564827Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/hid/Adafruit_USBD_HID.cpp.o
+2025-09-21T23:35:18.7668020Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/midi/Adafruit_USBD_MIDI.cpp.o
+2025-09-21T23:35:18.9059475Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBD_MSC.cpp.o
+2025-09-21T23:35:18.9132288Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBH_MSC.cpp.o
+2025-09-21T23:35:18.9807935Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/esp32/Adafruit_TinyUSB_esp32.cpp.o
+2025-09-21T23:35:18.9973879Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/nrf/Adafruit_TinyUSB_nrf.cpp.o
+2025-09-21T23:35:19.0559374Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp.o
+2025-09-21T23:35:19.0867940Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/samd/Adafruit_TinyUSB_samd.cpp.o
+2025-09-21T23:35:19.1188395Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/video/Adafruit_USBD_Video.cpp.o
+2025-09-21T23:35:19.1325824Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/arduino/webusb/Adafruit_USBD_WebUSB.cpp.o
+2025-09-21T23:35:19.1635888Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/audio/audio_device.c.o
+2025-09-21T23:35:19.2266703Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/bth/bth_device.c.o
+2025-09-21T23:35:19.2842344Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/cdc/cdc_device.c.o
+2025-09-21T23:35:19.2984408Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/cdc/cdc_host.c.o
+2025-09-21T23:35:19.3105144Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/dfu/dfu_device.c.o
+2025-09-21T23:35:19.3669750Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/dfu/dfu_rt_device.c.o
+2025-09-21T23:35:19.4347691Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/hid/hid_device.c.o
+2025-09-21T23:35:19.4511206Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/hid/hid_host.c.o
+2025-09-21T23:35:19.4648042Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/midi/midi_device.c.o
+2025-09-21T23:35:19.5994811Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/msc/msc_device.c.o
+2025-09-21T23:35:19.6456064Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/msc/msc_host.c.o
+2025-09-21T23:35:19.6739439Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/net/ecm_rndis_device.c.o
+2025-09-21T23:35:19.6863716Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/net/ncm_device.c.o
+2025-09-21T23:35:19.7334112Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/usbtmc/usbtmc_device.c.o
+2025-09-21T23:35:19.7474196Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/vendor/vendor_device.c.o
+2025-09-21T23:35:19.7896080Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/class/video/video_device.c.o
+2025-09-21T23:35:19.8027426Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/common/tusb_fifo.c.o
+2025-09-21T23:35:19.8298450Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/device/usbd.c.o
+2025-09-21T23:35:19.8964808Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/device/usbd_control.c.o
+2025-09-21T23:35:20.0187314Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/host/hub.c.o
+2025-09-21T23:35:20.0403050Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/host/usbh.c.o
+2025-09-21T23:35:20.1087605Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/analog/max3421/hcd_max3421.c.o
+2025-09-21T23:35:20.1217497Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/microchip/samd/dcd_samd.c.o
+2025-09-21T23:35:20.1974398Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/nordic/nrf5x/dcd_nrf5x.c.o
+2025-09-21T23:35:20.2100717Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/pio_usb/dcd_pio_usb.c.o
+2025-09-21T23:35:20.2697313Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/pio_usb/hcd_pio_usb.c.o
+2025-09-21T23:35:20.3269050Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+2025-09-21T23:35:20.3379246Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/hcd_rp2040.c.o
+2025-09-21T23:35:20.3838135Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/rp2040_usb.c.o
+2025-09-21T23:35:20.3978684Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/portable/synopsys/dwc2/dcd_dwc2.c.o
+2025-09-21T23:35:20.4123463Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib62c/Adafruit_TinyUSB_Arduino/tusb.c.o
+2025-09-21T23:35:20.4815712Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd0c/Adafruit nRFCrypto/Adafruit_nRFCrypto.cpp.o
+2025-09-21T23:35:20.4968895Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd0c/Adafruit nRFCrypto/ecc/nRFCrypto_ECC.cpp.o
+2025-09-21T23:35:20.5098204Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd0c/Adafruit nRFCrypto/ecc/nRFCrypto_ECC_PrivateKey.cpp.o
+2025-09-21T23:35:20.5864014Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd0c/Adafruit nRFCrypto/ecc/nRFCrypto_ECC_PublicKey.cpp.o
+2025-09-21T23:35:20.6665555Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd0c/Adafruit nRFCrypto/nRFCrypto_AES.cpp.o
+2025-09-21T23:35:20.6834685Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd0c/Adafruit nRFCrypto/nRFCrypto_Chacha.cpp.o
+2025-09-21T23:35:20.7559690Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd0c/Adafruit nRFCrypto/nRFCrypto_Hash.cpp.o
+2025-09-21T23:35:20.7693479Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd0c/Adafruit nRFCrypto/nRFCrypto_Random.cpp.o
+2025-09-21T23:35:20.8544416Z Compiling .pio/build/seeed_xiao_nrf52840_kit/variants/nrf52840/seeed_xiao_nrf52840_kit/variant.cpp.o
+2025-09-21T23:35:20.8905696Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Adafruit nRFCrypto/src/nRFCrypto_Chacha.cpp: In member function 'CRYSError_t nRFCrypto_Chacha::Process(uint8_t*, uint32_t, uint8_t*, CRYS_CHACHA_EncryptMode_t)':
+2025-09-21T23:35:20.8918750Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Adafruit nRFCrypto/src/nRFCrypto_Chacha.cpp:59:39: warning: 'initialCounter' is used uninitialized in this function [-Wuninitialized]
+2025-09-21T23:35:20.8920920Z    59 |   CRYSError_t error = CRYS_CHACHA_Init(&pContextID, pNonce, (CRYS_CHACHA_NonceSize_t) 1, myKey, initialCounter++, mode);
+2025-09-21T23:35:20.8922558Z       |                       ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:20.9260766Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/BluetoothCommon.cpp.o
+2025-09-21T23:35:21.0357962Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/DebugConfiguration.cpp.o
+2025-09-21T23:35:21.0548420Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/DisplayFormatters.cpp.o
+2025-09-21T23:35:21.6794582Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/FSCommon.cpp.o
+2025-09-21T23:35:21.7022332Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:35:21.7821026Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/Fusion/FusionCompass.c.o
+2025-09-21T23:35:21.9162588Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/Fusion/FusionOffset.c.o
+2025-09-21T23:35:21.9562603Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/GpioLogic.cpp.o
+2025-09-21T23:35:22.0826113Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/Led.cpp.o
+2025-09-21T23:35:22.1016200Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/Observer.cpp.o
+2025-09-21T23:35:22.5625247Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/Power.cpp.o
+2025-09-21T23:35:22.7598680Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/PowerFSM.cpp.o
+2025-09-21T23:35:22.8523815Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/PowerMon.cpp.o
+2025-09-21T23:35:23.5494058Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/RedirectablePrint.cpp.o
+2025-09-21T23:35:23.8082808Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/SPILock.cpp.o
+2025-09-21T23:35:24.2050304Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/SafeFile.cpp.o
+2025-09-21T23:35:24.2918714Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/SerialConsole.cpp.o
+2025-09-21T23:35:24.5760439Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/airtime.cpp.o
+2025-09-21T23:35:25.0168893Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:35:25.0885737Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/buzz/buzz.cpp.o
+2025-09-21T23:35:25.2856000Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:35:25.6068729Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:35:26.0574397Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:35:26.0727579Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/concurrency/Lock.cpp.o
+2025-09-21T23:35:26.0938276Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:35:26.3576792Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:35:26.8174203Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/concurrency/OSThread.cpp.o
+2025-09-21T23:35:26.8461998Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/detect/ScanI2C.cpp.o
+2025-09-21T23:35:26.8698327Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:35:26.9861639Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/gps/GPS.cpp.o
+2025-09-21T23:35:27.5896839Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:35:27.7939597Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/gps/GeoCoord.cpp.o
+2025-09-21T23:35:28.0517093Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:35:28.4933697Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/gps/RTC.cpp.o
+2025-09-21T23:35:28.5861255Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:35:29.0838222Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:35:29.3320986Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/Screen.cpp.o
+2025-09-21T23:35:29.4919286Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:35:29.8344188Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:35:29.9532396Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:35:30.1018391Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:35:30.2038930Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:35:31.1006762Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:35:31.1013620Z  1061 | static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:35:31.1014540Z       |             ^~~~~~~~~~~~~~~~~
+2025-09-21T23:35:31.1015888Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:31.1017112Z   222 | static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:35:31.1017753Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:31.1019226Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:35:31.1020694Z   166 | static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:35:31.1021224Z       |             ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:31.1879969Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:35:31.4915292Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:35:31.5108920Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:35:32.7759735Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:35:32.9413989Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:35:32.9833000Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:35:33.5369882Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:35:34.4337305Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:35:34.7862004Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:35:34.9941268Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/emotes.cpp.o
+2025-09-21T23:35:35.2797954Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:35:35.3765074Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:35:35.4747071Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:35:35.5739958Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:35:35.6663292Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:35:35.7590175Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/graphics/tftSetup.cpp.o
+2025-09-21T23:35:35.8500801Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:35:36.1050922Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/ButtonThread.cpp.o
+2025-09-21T23:35:36.1746373Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:35:36.6224093Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/InputBroker.cpp.o
+2025-09-21T23:35:36.8940456Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/LinuxInput.cpp.o
+2025-09-21T23:35:36.9231554Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:35:37.4727065Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:35:37.6440952Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:35:37.6585880Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:35:37.6831665Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:35:37.7343128Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/SeesawRotary.cpp.o
+2025-09-21T23:35:37.8227349Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:35:38.6093076Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:35:38.6436092Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:35:38.6823225Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:35:38.9284545Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:35:39.0304448Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:35:39.1315425Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:35:39.4068041Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:35:39.4764944Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:35:39.9725118Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:35:40.4400958Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:35:40.5055116Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:35:40.5666834Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:35:40.9704042Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/i2cButton.cpp.o
+2025-09-21T23:35:41.4470911Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/kbI2cBase.cpp.o
+2025-09-21T23:35:41.4829650Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:35:41.7652934Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:35:42.0095590Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/main.cpp.o
+2025-09-21T23:35:42.2392474Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/memGet.cpp.o
+2025-09-21T23:35:42.9330133Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/Channels.cpp.o
+2025-09-21T23:35:43.0218280Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:35:43.1443383Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/Default.cpp.o
+2025-09-21T23:35:43.1834163Z src/main.cpp: In function 'void setup()':
+2025-09-21T23:35:43.1835515Z src/main.cpp:981:9: warning: variable 'pullup_sense' set but not used [-Wunused-but-set-variable]
+2025-09-21T23:35:43.1838201Z   981 |     int pullup_sense = 0;
+2025-09-21T23:35:43.1838601Z       |         ^~~~~~~~~~~~
+2025-09-21T23:35:43.9707805Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:35:44.0538946Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:35:44.0932568Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:35:44.1872638Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:35:44.9649642Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:35:45.1169481Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:35:45.2173687Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:35:45.6068933Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/MeshModule.cpp.o
+2025-09-21T23:35:45.9863254Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:35:46.1476533Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/MeshService.cpp.o
+2025-09-21T23:35:46.3001527Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:35:46.9441997Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/NodeDB.cpp.o
+2025-09-21T23:35:47.0628191Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:35:47.5067079Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:35:47.8897418Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:35:48.0524495Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:35:48.8874017Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:35:49.1160317Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:35:49.1358056Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:35:49.3541775Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:35:49.9692709Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/Router.cpp.o
+2025-09-21T23:35:50.4711673Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:35:50.6086080Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:35:50.7458411Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:35:51.2417431Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:35:51.6217581Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:35:51.6411723Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:35:51.7826395Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:35:52.2937970Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/Throttle.cpp.o
+2025-09-21T23:35:52.5809003Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:35:52.5994495Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:35:52.6661160Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:35:52.6837281Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:35:52.8409160Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:35:52.9521553Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:35:53.0679038Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:35:53.1698283Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:35:53.1903990Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:35:53.2785796Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:35:53.3167787Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:35:53.3717175Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:35:53.4211551Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:35:53.4366905Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:35:53.4901975Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:35:53.5360581Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:35:53.5539352Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:35:53.5967277Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:35:53.6734869Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:35:53.7121816Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:35:53.7285263Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:35:53.7648678Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:35:53.7804743Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:35:53.8037004Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:35:53.8219844Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:35:53.8588891Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:35:53.8777346Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:35:53.9096742Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/meshUtils.cpp.o
+2025-09-21T23:35:53.9637392Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/AdminModule.cpp.o
+2025-09-21T23:35:53.9848125Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:35:54.6534884Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:35:54.7465423Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:35:55.4835529Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:35:55.8072015Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:35:55.9111505Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:35:56.1305711Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:56.1308570Z    76 | static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:35:56.1309160Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:56.9487791Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:35:56.9906340Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:35:57.4010578Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Modules.cpp.o
+2025-09-21T23:35:57.4685592Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:35:57.9591417Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:35:58.5633194Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/PositionModule.cpp.o
+2025-09-21T23:35:58.8103201Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:35:59.0084575Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:35:59.4417725Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:36:00.1125156Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/ReplyModule.cpp.o
+2025-09-21T23:36:00.2193918Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/RoutingModule.cpp.o
+2025-09-21T23:36:00.2636864Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/SerialModule.cpp.o
+2025-09-21T23:36:00.9393854Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:36:01.5713617Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:36:01.7183566Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:36:01.8348743Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:36:02.3376881Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:36:03.1133030Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:36:03.2585243Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:36:03.4715427Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:36:03.8414897Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:36:04.2451470Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:36:04.3636051Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:36:04.8629379Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:36:05.0576362Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:36:05.2311327Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:36:05.4028456Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:36:05.8434114Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:36:06.0836035Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:36:06.2246322Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:36:06.3793630Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:36:06.8250943Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:36:07.0778396Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:36:07.2016222Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:36:07.3611363Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:36:07.8289282Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:36:08.0938386Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:36:08.1296974Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:36:08.1968380Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:36:08.8515955Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:36:08.9585591Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:36:09.1181888Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:36:09.2651224Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:36:09.8575772Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:36:09.9356403Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:36:10.1135308Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:36:10.3005496Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:36:10.8496320Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:36:10.8935972Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:36:10.9390896Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:36:11.0527643Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:36:11.8399961Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:36:11.8704652Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:36:11.9193424Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:36:12.0252353Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:36:12.6050164Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:36:12.8456038Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:36:12.8984508Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:36:13.0096695Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:36:13.4249703Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:36:13.6129575Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/modules/WaypointModule.cpp.o
+2025-09-21T23:36:13.8217609Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:36:14.4248359Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:36:15.0782997Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:36:15.1067713Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:36:15.1261136Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:36:15.6816994Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:36:16.3411924Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:36:16.3928654Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/MotionSensor.cpp.o
+2025-09-21T23:36:16.4651378Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:36:16.9498501Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:36:17.6163443Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mqtt/MQTT.cpp.o
+2025-09-21T23:36:17.6763269Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:36:17.7119742Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/network-stubs.cpp.o
+2025-09-21T23:36:17.9353052Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:36:18.1940291Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:36:18.4801542Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:36:18.6868921Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/AsyncUDP.cpp.o
+2025-09-21T23:36:18.9531972Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/BLEDfuScure.cpp.o
+2025-09-21T23:36:19.2624001Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/NRF52Bluetooth.cpp.o
+2025-09-21T23:36:19.3771926Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/NRF52CryptoEngine.cpp.o
+2025-09-21T23:36:19.4350545Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/aes-256/tiny-aes.cpp.o
+2025-09-21T23:36:19.5083806Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/alloc.cpp.o
+2025-09-21T23:36:19.5653689Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/hardfault.cpp.o
+2025-09-21T23:36:20.1590510Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/main-bare.cpp.o
+2025-09-21T23:36:20.2903844Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/platform/nrf52/main-nrf52.cpp.o
+2025-09-21T23:36:20.3389993Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/sleep.cpp.o
+2025-09-21T23:36:20.4285211Z Compiling .pio/build/seeed_xiao_nrf52840_kit/src/xmodem.cpp.o
+2025-09-21T23:36:21.2949108Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib1c0/Wire/Wire_nRF52.cpp.o
+2025-09-21T23:36:21.4073662Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc79/SPI/SPI.cpp.o
+2025-09-21T23:36:21.7262988Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc79/SPI/SPI_nrf52832.cpp.o
+2025-09-21T23:36:21.7354210Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib1c0/libWire.a
+2025-09-21T23:36:21.7403836Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib1c0/libWire.a
+2025-09-21T23:36:21.7553508Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf50/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:36:21.7676279Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf50/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:36:21.7893646Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libc79/libSPI.a
+2025-09-21T23:36:21.7935123Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libc79/libSPI.a
+2025-09-21T23:36:21.8029787Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf50/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:36:21.8277295Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf97/OneButton/OneButton.cpp.o
+2025-09-21T23:36:22.0646135Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf97/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:36:22.1438059Z Compiling .pio/build/seeed_xiao_nrf52840_kit/liba6b/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:36:22.3037166Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib63b/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:36:22.3238362Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libf97/libOneButton.a
+2025-09-21T23:36:22.3290547Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libf97/libOneButton.a
+2025-09-21T23:36:22.3547662Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf30/ArduinoThread/Thread.cpp.o
+2025-09-21T23:36:22.4233477Z Archiving .pio/build/seeed_xiao_nrf52840_kit/liba6b/libarduino-fsm.a
+2025-09-21T23:36:22.4279731Z Indexing .pio/build/seeed_xiao_nrf52840_kit/liba6b/libarduino-fsm.a
+2025-09-21T23:36:22.4407744Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf30/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:36:22.4736844Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libf50/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:36:22.4794701Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libf50/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:36:22.4924707Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libece/Nanopb/pb_common.c.o
+2025-09-21T23:36:22.5985353Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libece/Nanopb/pb_decode.c.o
+2025-09-21T23:36:22.6173309Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libece/Nanopb/pb_encode.c.o
+2025-09-21T23:36:22.7037850Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib63b/libTinyGPSPlus.a
+2025-09-21T23:36:22.7076608Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib63b/libTinyGPSPlus.a
+2025-09-21T23:36:22.7158844Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libf30/libArduinoThread.a
+2025-09-21T23:36:22.7208048Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libf30/libArduinoThread.a
+2025-09-21T23:36:22.7249341Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libca0/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:36:22.7537035Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libe26/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:36:22.7977403Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/Hal.cpp.o
+2025-09-21T23:36:22.8041405Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libca0/libErriezCRC32.a
+2025-09-21T23:36:22.8072789Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libca0/libErriezCRC32.a
+2025-09-21T23:36:22.8197233Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/Module.cpp.o
+2025-09-21T23:36:22.8684952Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libece/libNanopb.a
+2025-09-21T23:36:22.8746994Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libece/libNanopb.a
+2025-09-21T23:36:22.8893102Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:36:23.0202946Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libe26/libNonBlockingRTTTL.a
+2025-09-21T23:36:23.0249154Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libe26/libNonBlockingRTTTL.a
+2025-09-21T23:36:23.0606146Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:36:23.0788771Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:36:23.1437473Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:36:23.1731329Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:36:23.1818913Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:36:23.1971825Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:36:23.4584404Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:36:23.4724435Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:36:23.4859907Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:36:23.5006524Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:36:23.8021905Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:36:23.9495185Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:36:23.9600984Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:36:24.0910095Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:36:24.1312388Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:36:24.1861470Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:36:24.1981781Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:36:24.3307580Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:36:24.3715016Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:36:24.4251630Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:36:24.4798617Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:36:24.6337359Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:36:24.6695174Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:36:24.8216969Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:36:24.9466935Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:36:24.9599348Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:36:25.0789177Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:36:25.2057045Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:36:25.2404659Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:36:25.2563828Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:36:25.3764658Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:36:25.5280984Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:36:25.6031591Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:36:25.6877614Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:36:25.7829461Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:36:25.8656735Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:36:25.9165322Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:36:26.0161587Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:36:26.1021888Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:36:26.1650687Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:36:26.1828652Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:36:26.2512280Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:36:26.2940166Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:36:26.4014260Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:36:26.4214406Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:36:26.4916168Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:36:26.5452486Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:36:26.6298971Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:36:26.6610262Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:36:26.6866424Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:36:26.7075523Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:36:26.7331726Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:36:26.7485206Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:36:26.7822816Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:36:27.0077386Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:36:27.0264038Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:36:27.0418943Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:36:27.0721395Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:36:27.2479876Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6ca/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:36:27.2958911Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/AES128.cpp.o
+2025-09-21T23:36:27.3679001Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/AES192.cpp.o
+2025-09-21T23:36:27.4033763Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/AES256.cpp.o
+2025-09-21T23:36:27.4426476Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/AESCommon.cpp.o
+2025-09-21T23:36:27.4649238Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/AESEsp32.cpp.o
+2025-09-21T23:36:27.4934539Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib6ca/libRadioLib.a
+2025-09-21T23:36:27.5350809Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib6ca/libRadioLib.a
+2025-09-21T23:36:27.5409011Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:36:27.5799675Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:36:27.5897135Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:36:27.6028673Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:36:27.6161442Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/BlockCipher.cpp.o
+2025-09-21T23:36:27.6962474Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/CTR.cpp.o
+2025-09-21T23:36:27.7263630Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/ChaCha.cpp.o
+2025-09-21T23:36:27.7366636Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:36:27.7486394Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/Cipher.cpp.o
+2025-09-21T23:36:27.7963339Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/Crypto.cpp.o
+2025-09-21T23:36:27.8349243Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/Curve25519.cpp.o
+2025-09-21T23:36:27.8510026Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/EAX.cpp.o
+2025-09-21T23:36:27.8628188Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/Ed25519.cpp.o
+2025-09-21T23:36:27.8828359Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/GCM.cpp.o
+2025-09-21T23:36:27.9666663Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/GF128.cpp.o
+2025-09-21T23:36:28.0094426Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/GHASH.cpp.o
+2025-09-21T23:36:28.0190226Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/HKDF.cpp.o
+2025-09-21T23:36:28.0281502Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/Hash.cpp.o
+2025-09-21T23:36:28.0692530Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/KeccakCore.cpp.o
+2025-09-21T23:36:28.1008382Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/NoiseSource.cpp.o
+2025-09-21T23:36:28.1121533Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/OMAC.cpp.o
+2025-09-21T23:36:28.1247214Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/P521.cpp.o
+2025-09-21T23:36:28.1819699Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/Poly1305.cpp.o
+2025-09-21T23:36:28.2231771Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/RNG.cpp.o
+2025-09-21T23:36:28.2362289Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/SHA224.cpp.o
+2025-09-21T23:36:28.2945931Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/SHA256.cpp.o
+2025-09-21T23:36:28.3208976Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Crypto/RNG.cpp:63:2: warning: #warning "no hardware random number source detected for this platform" [-Wcpp]
+2025-09-21T23:36:28.3210631Z    63 | #warning "no hardware random number source detected for this platform"
+2025-09-21T23:36:28.3211434Z       |  ^~~~~~~
+2025-09-21T23:36:28.3239506Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/SHA3.cpp.o
+2025-09-21T23:36:28.3762883Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/SHA384.cpp.o
+2025-09-21T23:36:28.4307564Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/SHA512.cpp.o
+2025-09-21T23:36:28.4431060Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/SHAKE.cpp.o
+2025-09-21T23:36:28.4589769Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/XOF.cpp.o
+2025-09-21T23:36:28.5185416Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib539/Crypto/XTS.cpp.o
+2025-09-21T23:36:28.5491159Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libbe5/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:36:28.5585271Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libbe5/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:36:28.5947097Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libbe5/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:36:28.6384443Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib539/libCrypto.a
+2025-09-21T23:36:28.6580369Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib539/libCrypto.a
+2025-09-21T23:36:28.6808543Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libbe5/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:36:28.8152230Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libe69/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:36:28.8572720Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libbf3/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:36:28.8886393Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib7db/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:36:28.9759207Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libbe5/libAdafruit BusIO.a
+2025-09-21T23:36:28.9826226Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libbe5/libAdafruit BusIO.a
+2025-09-21T23:36:29.0170327Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib8ff/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:36:29.0661020Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libe69/libAdafruit Unified Sensor.a
+2025-09-21T23:36:29.0699540Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libe69/libAdafruit Unified Sensor.a
+2025-09-21T23:36:29.1027259Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib855/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:36:29.1570734Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib7db/libAdafruit BMP085 Library.a
+2025-09-21T23:36:29.1611505Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib7db/libAdafruit BMP085 Library.a
+2025-09-21T23:36:29.1926581Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd25/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:36:29.2032476Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libbf3/libAdafruit BMP280 Library.a
+2025-09-21T23:36:29.2076742Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libbf3/libAdafruit BMP280 Library.a
+2025-09-21T23:36:29.2384898Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc70/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:36:29.3969250Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib8ff/libAdafruit BME280 Library.a
+2025-09-21T23:36:29.4028948Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib8ff/libAdafruit BME280 Library.a
+2025-09-21T23:36:29.4321312Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib26f/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:36:29.4455861Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib855/libAdafruit DPS310.a
+2025-09-21T23:36:29.4499546Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib855/libAdafruit DPS310.a
+2025-09-21T23:36:29.4779967Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib432/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:36:29.4861126Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libd25/libAdafruit MCP9808 Library.a
+2025-09-21T23:36:29.4898829Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libd25/libAdafruit MCP9808 Library.a
+2025-09-21T23:36:29.5010190Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib432/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:36:29.5403132Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libc70/libAdafruit INA260 Library.a
+2025-09-21T23:36:29.5442019Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libc70/libAdafruit INA260 Library.a
+2025-09-21T23:36:29.5547291Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib432/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:36:29.7247674Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib26f/libAdafruit INA219.a
+2025-09-21T23:36:29.7295957Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib26f/libAdafruit INA219.a
+2025-09-21T23:36:29.7415019Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib432/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:36:29.7754440Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib64c/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:36:29.8077327Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libe76/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:36:29.8365540Z Compiling .pio/build/seeed_xiao_nrf52840_kit/liba99/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:36:29.9310794Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In static member function 'static bool UARTDevice::uart_read(void*, uint8_t*, size_t)':
+2025-09-21T23:36:29.9314854Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:120:40: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:36:29.9320112Z   120 |   while (dev->_serial_dev->available() < len && timeout--) {
+2025-09-21T23:36:29.9320738Z       |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+2025-09-21T23:36:29.9322028Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:36:29.9324650Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:198:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:36:29.9326271Z   198 |   if (_uart_dev->available() < bufLen)
+2025-09-21T23:36:29.9328647Z       |       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2025-09-21T23:36:29.9343980Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM1006(PM25_AQI_Data*)':
+2025-09-21T23:36:29.9346401Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:271:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:36:29.9348008Z   271 |   if (_uart_dev->available() < bufLen) {
+2025-09-21T23:36:29.9348495Z       |       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2025-09-21T23:36:30.0188128Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib432/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:36:30.0248076Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib432/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:36:30.0555000Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a6/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:36:30.1387530Z Archiving .pio/build/seeed_xiao_nrf52840_kit/liba99/libAdafruit AHTX0.a
+2025-09-21T23:36:30.1444897Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libe76/libAdafruit LIS3DH.a
+2025-09-21T23:36:30.1459036Z Indexing .pio/build/seeed_xiao_nrf52840_kit/liba99/libAdafruit AHTX0.a
+2025-09-21T23:36:30.1477872Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libe76/libAdafruit LIS3DH.a
+2025-09-21T23:36:30.1591884Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a6/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:36:30.1675429Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib64c/libAdafruit MPU6050.a
+2025-09-21T23:36:30.1739029Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a6/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:36:30.1765916Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib64c/libAdafruit MPU6050.a
+2025-09-21T23:36:30.1886883Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a6/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:36:30.3143395Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a6/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:36:30.4432842Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a6/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:36:30.4554135Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a6/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:36:30.5671236Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a6/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:36:30.6124879Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib7ce/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:36:30.7327076Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib838/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:36:30.7718475Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3e9/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:36:30.8379228Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib3a6/libAdafruit LSM6DS.a
+2025-09-21T23:36:30.8463332Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib3a6/libAdafruit LSM6DS.a
+2025-09-21T23:36:30.8795883Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc72/INA3221/INA3221.cpp.o
+2025-09-21T23:36:30.9125182Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib7ce/libAdafruit TSL2591 Library.a
+2025-09-21T23:36:30.9163144Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib7ce/libAdafruit TSL2591 Library.a
+2025-09-21T23:36:30.9425655Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib159/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:36:31.0462734Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib3e9/libAdafruit MLX90614 Library.a
+2025-09-21T23:36:31.0505969Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib3e9/libAdafruit MLX90614 Library.a
+2025-09-21T23:36:31.0764836Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib4b8/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:36:31.0815410Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::reset()':
+2025-09-21T23:36:31.0823163Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:88:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.0830949Z    88 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.0831480Z       |                                                  ^
+2025-09-21T23:36:31.0832376Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.0833429Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.0834136Z   101 |     typedef struct {
+2025-09-21T23:36:31.0844022Z       |                    ^
+2025-09-21T23:36:31.0846952Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:90:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.0851260Z    90 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.0851722Z       |                                                   ^
+2025-09-21T23:36:31.0852603Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.0853690Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.0854474Z   101 |     typedef struct {
+2025-09-21T23:36:31.0854861Z       |                    ^
+2025-09-21T23:36:31.0855731Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModePowerDown()':
+2025-09-21T23:36:31.0858080Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:96:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.0859846Z    96 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.0860316Z       |                                                  ^
+2025-09-21T23:36:31.0880706Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.0881852Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.0908990Z   101 |     typedef struct {
+2025-09-21T23:36:31.0920648Z       |                    ^
+2025-09-21T23:36:31.0922582Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:99:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.0924482Z    99 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.0924973Z       |                                                   ^
+2025-09-21T23:36:31.0925724Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.0926854Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.0927640Z   101 |     typedef struct {
+2025-09-21T23:36:31.0928010Z       |                    ^
+2025-09-21T23:36:31.0928869Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeContinious()':
+2025-09-21T23:36:31.0931055Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:105:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.0932971Z   105 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.0933427Z       |                                                  ^
+2025-09-21T23:36:31.0974251Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.0975310Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.0976048Z   101 |     typedef struct {
+2025-09-21T23:36:31.0976379Z       |                    ^
+2025-09-21T23:36:31.0978022Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:107:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.0979756Z   107 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.0980258Z       |                                                   ^
+2025-09-21T23:36:31.0980981Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.0981998Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.0983024Z   101 |     typedef struct {
+2025-09-21T23:36:31.0983337Z       |                    ^
+2025-09-21T23:36:31.0986035Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeTriggered()':
+2025-09-21T23:36:31.0988283Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:113:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.0990024Z   113 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.0990463Z       |                                                  ^
+2025-09-21T23:36:31.0991153Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.0992348Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.0993093Z   101 |     typedef struct {
+2025-09-21T23:36:31.0993665Z       |                    ^
+2025-09-21T23:36:31.0995312Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:115:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.0997270Z   115 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.0997739Z       |                                                   ^
+2025-09-21T23:36:31.0998449Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.0999456Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1000168Z   101 |     typedef struct {
+2025-09-21T23:36:31.1000500Z       |                    ^
+2025-09-21T23:36:31.1001339Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasEnable()':
+2025-09-21T23:36:31.1003719Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:121:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1005479Z   121 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1006013Z       |                                                  ^
+2025-09-21T23:36:31.1006707Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1007707Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1008423Z   101 |     typedef struct {
+2025-09-21T23:36:31.1008749Z       |                    ^
+2025-09-21T23:36:31.1010349Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:123:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1012069Z   123 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1021199Z       |                                                   ^
+2025-09-21T23:36:31.1021972Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1023199Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1023907Z   101 |     typedef struct {
+2025-09-21T23:36:31.1024254Z       |                    ^
+2025-09-21T23:36:31.1025130Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasDisable()':
+2025-09-21T23:36:31.1027382Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:129:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1029251Z   129 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1029715Z       |                                                  ^
+2025-09-21T23:36:31.1030424Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1031429Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1032315Z   101 |     typedef struct {
+2025-09-21T23:36:31.1032650Z       |                    ^
+2025-09-21T23:36:31.1034263Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:131:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1036227Z   131 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1036761Z       |                                                   ^
+2025-09-21T23:36:31.1037465Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1038735Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1039441Z   101 |     typedef struct {
+2025-09-21T23:36:31.1039769Z       |                    ^
+2025-09-21T23:36:31.1040590Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasEnable()':
+2025-09-21T23:36:31.1078911Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:137:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1080801Z   137 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1081288Z       |                                                  ^
+2025-09-21T23:36:31.1082019Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1083259Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1083967Z   101 |     typedef struct {
+2025-09-21T23:36:31.1084302Z       |                    ^
+2025-09-21T23:36:31.1085898Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:139:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1087686Z   139 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1088174Z       |                                                   ^
+2025-09-21T23:36:31.1088904Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1089938Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1090634Z   101 |     typedef struct {
+2025-09-21T23:36:31.1090988Z       |                    ^
+2025-09-21T23:36:31.1091838Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasDisable()':
+2025-09-21T23:36:31.1094379Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:145:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1096669Z   145 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1107776Z       |                                                  ^
+2025-09-21T23:36:31.1108512Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1109521Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1110230Z   101 |     typedef struct {
+2025-09-21T23:36:31.1110567Z       |                    ^
+2025-09-21T23:36:31.1112419Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:147:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1114140Z   147 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1114597Z       |                                                   ^
+2025-09-21T23:36:31.1115300Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1116520Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1117240Z   101 |     typedef struct {
+2025-09-21T23:36:31.1117563Z       |                    ^
+2025-09-21T23:36:31.1118476Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setAveragingMode(ina3221_avg_mode_t)':
+2025-09-21T23:36:31.1120913Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:153:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1127027Z   153 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1127499Z       |                                                  ^
+2025-09-21T23:36:31.1128210Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1129243Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1129970Z   101 |     typedef struct {
+2025-09-21T23:36:31.1130299Z       |                    ^
+2025-09-21T23:36:31.1131949Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:155:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1133866Z   155 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1134340Z       |                                                   ^
+2025-09-21T23:36:31.1135059Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1136075Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1136802Z   101 |     typedef struct {
+2025-09-21T23:36:31.1137148Z       |                    ^
+2025-09-21T23:36:31.1138124Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:36:31.1140528Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:161:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1142454Z   161 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1142936Z       |                                                  ^
+2025-09-21T23:36:31.1143665Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1144697Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1145421Z   101 |     typedef struct {
+2025-09-21T23:36:31.1145761Z       |                    ^
+2025-09-21T23:36:31.1147419Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:163:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1149141Z   163 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1149605Z       |                                                   ^
+2025-09-21T23:36:31.1150324Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1151345Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1152055Z   101 |     typedef struct {
+2025-09-21T23:36:31.1152535Z       |                    ^
+2025-09-21T23:36:31.1153706Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:36:31.1155998Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:169:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1157872Z   169 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1158340Z       |                                                  ^
+2025-09-21T23:36:31.1159043Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1160048Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1160811Z   101 |     typedef struct {
+2025-09-21T23:36:31.1161140Z       |                    ^
+2025-09-21T23:36:31.1162917Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:171:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1164652Z   171 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1165117Z       |                                                   ^
+2025-09-21T23:36:31.1165809Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1166801Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1167493Z   101 |     typedef struct {
+2025-09-21T23:36:31.1167816Z       |                    ^
+2025-09-21T23:36:31.1168678Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchEnable()':
+2025-09-21T23:36:31.1170901Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:197:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1172823Z   197 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1173324Z       |                                                           ^
+2025-09-21T23:36:31.1174027Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1175027Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1175721Z   115 |     typedef struct {
+2025-09-21T23:36:31.1176042Z       |                    ^
+2025-09-21T23:36:31.1177653Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:199:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1179413Z   199 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1179918Z       |                                                            ^
+2025-09-21T23:36:31.1180616Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1181598Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1182424Z   115 |     typedef struct {
+2025-09-21T23:36:31.1182773Z       |                    ^
+2025-09-21T23:36:31.1183649Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchDisable()':
+2025-09-21T23:36:31.1185992Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:206:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1187755Z   206 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1188219Z       |                                                           ^
+2025-09-21T23:36:31.1189076Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1190063Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1190741Z   115 |     typedef struct {
+2025-09-21T23:36:31.1191060Z       |                    ^
+2025-09-21T23:36:31.1192779Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:208:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1194583Z   208 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1195118Z       |                                                            ^
+2025-09-21T23:36:31.1195830Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1196822Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1197520Z   115 |     typedef struct {
+2025-09-21T23:36:31.1197844Z       |                    ^
+2025-09-21T23:36:31.1198725Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchEnable()':
+2025-09-21T23:36:31.1200943Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:215:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1202874Z   215 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1203381Z       |                                                           ^
+2025-09-21T23:36:31.1204091Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1205097Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1205825Z   115 |     typedef struct {
+2025-09-21T23:36:31.1206160Z       |                    ^
+2025-09-21T23:36:31.1207855Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:217:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1209629Z   217 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1210154Z       |                                                            ^
+2025-09-21T23:36:31.1210863Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1211870Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1212742Z   115 |     typedef struct {
+2025-09-21T23:36:31.1213078Z       |                    ^
+2025-09-21T23:36:31.1214004Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchDisable()':
+2025-09-21T23:36:31.1216244Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:224:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1218019Z   224 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1218807Z       |                                                           ^
+2025-09-21T23:36:31.1219554Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1220603Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1221476Z   115 |     typedef struct {
+2025-09-21T23:36:31.1221808Z       |                    ^
+2025-09-21T23:36:31.1223552Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:226:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1225265Z   226 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1225764Z       |                                                            ^
+2025-09-21T23:36:31.1226460Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1227452Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1228151Z   115 |     typedef struct {
+2025-09-21T23:36:31.1228468Z       |                    ^
+2025-09-21T23:36:31.1229363Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelEnable(ina3221_ch_t)':
+2025-09-21T23:36:31.1231536Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:265:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1233382Z   265 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1233847Z       |                                                  ^
+2025-09-21T23:36:31.1234555Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1235564Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1236253Z   101 |     typedef struct {
+2025-09-21T23:36:31.1236575Z       |                    ^
+2025-09-21T23:36:31.1238190Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:279:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1239979Z   279 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1240415Z       |                                                   ^
+2025-09-21T23:36:31.1241072Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1242019Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1242822Z   101 |     typedef struct {
+2025-09-21T23:36:31.1243139Z       |                    ^
+2025-09-21T23:36:31.1243975Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelDisable(ina3221_ch_t)':
+2025-09-21T23:36:31.1246084Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:285:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1247774Z   285 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1248214Z       |                                                  ^
+2025-09-21T23:36:31.1248876Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1250006Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1250684Z   101 |     typedef struct {
+2025-09-21T23:36:31.1251000Z       |                    ^
+2025-09-21T23:36:31.1252693Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:299:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1254600Z   299 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:36:31.1255075Z       |                                                   ^
+2025-09-21T23:36:31.1255779Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1256790Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:36:31.1257499Z   101 |     typedef struct {
+2025-09-21T23:36:31.1257836Z       |                    ^
+2025-09-21T23:36:31.1258763Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumEnable(ina3221_ch_t)':
+2025-09-21T23:36:31.1261032Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:359:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1262980Z   359 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1263483Z       |                                                           ^
+2025-09-21T23:36:31.1264186Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1265181Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1265890Z   115 |     typedef struct {
+2025-09-21T23:36:31.1266221Z       |                    ^
+2025-09-21T23:36:31.1267843Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:373:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1269693Z   373 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1270225Z       |                                                            ^
+2025-09-21T23:36:31.1270953Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1271964Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1272829Z   115 |     typedef struct {
+2025-09-21T23:36:31.1273168Z       |                    ^
+2025-09-21T23:36:31.1274100Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumDisable(ina3221_ch_t)':
+2025-09-21T23:36:31.1287285Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:380:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1289090Z   380 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1289580Z       |                                                           ^
+2025-09-21T23:36:31.1290295Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1291282Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1291968Z   115 |     typedef struct {
+2025-09-21T23:36:31.1292474Z       |                    ^
+2025-09-21T23:36:31.1294275Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:394:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:36:31.1296009Z   394 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:36:31.1296657Z       |                                                            ^
+2025-09-21T23:36:31.1297346Z In file included from /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:36:31.1298293Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:36:31.1298936Z   115 |     typedef struct {
+2025-09-21T23:36:31.1299237Z       |                    ^
+2025-09-21T23:36:31.1423604Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib838/libEmotiBit MLX90632.a
+2025-09-21T23:36:31.1483183Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib838/libEmotiBit MLX90632.a
+2025-09-21T23:36:31.1761509Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libb83/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:36:31.2256339Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libc72/libINA3221.a
+2025-09-21T23:36:31.2296861Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libc72/libINA3221.a
+2025-09-21T23:36:31.2568282Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc52/INA226/INA226.cpp.o
+2025-09-21T23:36:31.2655238Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib159/libQMC5883LCompass.a
+2025-09-21T23:36:31.2698954Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib159/libQMC5883LCompass.a
+2025-09-21T23:36:31.3001832Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc77/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:36:31.4775956Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib4b8/libDFRobot_RTU.a
+2025-09-21T23:36:31.4821403Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libb83/libDFRobot_RainfallSensor.a
+2025-09-21T23:36:31.4860154Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib4b8/libDFRobot_RTU.a
+2025-09-21T23:36:31.4869648Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libb83/libDFRobot_RainfallSensor.a
+2025-09-21T23:36:31.4986434Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc77/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:36:31.5106491Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc77/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:36:31.5761119Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libc52/libINA226.a
+2025-09-21T23:36:31.5797530Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libc52/libINA226.a
+2025-09-21T23:36:31.6089680Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a1/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:36:31.6430907Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a1/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:36:31.6959560Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:36:31.6967532Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:36:31.6969070Z   108 |     if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:36:31.6969609Z       |         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:36:31.7696018Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib534/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:36:31.8019805Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libc77/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:36:31.8084251Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libc77/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:36:31.8386182Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd45/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:36:32.0280818Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd90/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:36:32.0719721Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib534/libAdafruit LTR390 Library.a
+2025-09-21T23:36:32.0764657Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib534/libAdafruit LTR390 Library.a
+2025-09-21T23:36:32.1046363Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib8bc/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:36:32.1147561Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libd45/libAdafruit PCT2075.a
+2025-09-21T23:36:32.1187339Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libd45/libAdafruit PCT2075.a
+2025-09-21T23:36:32.1472772Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a2/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:36:32.1780379Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib3a1/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:36:32.1846608Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib3a1/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:36:32.1983619Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib3a2/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:36:32.3122702Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'uint8_t DFRobot_BMM150::getRate()':
+2025-09-21T23:36:32.3129214Z /pio/workspace/libdeps/seeed_xiao_nrf52840_kit/DFRobot_BMM150/DFRobot_BMM150.cpp:161:10: warning: 'result' may be used uninitialized in this function [-Wmaybe-uninitialized]
+2025-09-21T23:36:32.3134887Z   161 |   return result;
+2025-09-21T23:36:32.3139122Z       |          ^~~~~~
+2025-09-21T23:36:32.3998735Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib8bc/libAdafruit TSL2561.a
+2025-09-21T23:36:32.4044669Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib8bc/libAdafruit TSL2561.a
+2025-09-21T23:36:32.4356237Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd90/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:36:32.4743711Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib42a/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:36:32.4854212Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib3a2/libAdafruit BMP3XX Library.a
+2025-09-21T23:36:32.4855450Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libd90/libDFRobot_BMM150.a
+2025-09-21T23:36:32.4876764Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib3a2/libAdafruit BMP3XX Library.a
+2025-09-21T23:36:32.4897050Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libd90/libDFRobot_BMM150.a
+2025-09-21T23:36:32.5157787Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib2a8/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:36:32.5284989Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib2a8/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:36:32.7421621Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libd90/libAdafruit MAX1704X.a
+2025-09-21T23:36:32.7460766Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libd90/libAdafruit MAX1704X.a
+2025-09-21T23:36:32.7564200Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib2a8/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:36:32.7640150Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib42a/libAdafruit SHTC3 Library.a
+2025-09-21T23:36:32.7668788Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib42a/libAdafruit SHTC3 Library.a
+2025-09-21T23:36:32.7948519Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libb77/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:36:32.8237556Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libc9b/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:36:32.8526402Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib1a5/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:36:33.0466572Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libb77/libAdafruit SHT31 Library.a
+2025-09-21T23:36:33.0508013Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib2a8/libAdafruit LPS2X.a
+2025-09-21T23:36:33.0537750Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libb77/libAdafruit SHT31 Library.a
+2025-09-21T23:36:33.0563359Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib2a8/libAdafruit LPS2X.a
+2025-09-21T23:36:33.0829513Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib750/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:36:33.1098332Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib6d0/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:36:33.1235180Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libc9b/libAdafruit VEML7700 Library.a
+2025-09-21T23:36:33.1273703Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libc9b/libAdafruit VEML7700 Library.a
+2025-09-21T23:36:33.1390567Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib234/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:36:33.1594505Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib1a5/libAdafruit SHT4x Library.a
+2025-09-21T23:36:33.1638872Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib1a5/libAdafruit SHT4x Library.a
+2025-09-21T23:36:33.1943499Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib234/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:36:33.3855725Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib6d0/libClosedCube OPT3001.a
+2025-09-21T23:36:33.3905851Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib6d0/libClosedCube OPT3001.a
+2025-09-21T23:36:33.4075610Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf4b/bsec2/bsec2.cpp.o
+2025-09-21T23:36:33.4165263Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf4b/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:36:33.4239679Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib750/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:36:33.4313506Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib750/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:36:33.4678578Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libd09/SoftwareSerial/SoftwareSerial.cpp.o
+2025-09-21T23:36:33.5324861Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib234/libBME68x Sensor library.a
+2025-09-21T23:36:33.5372936Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib234/libBME68x Sensor library.a
+2025-09-21T23:36:33.5662287Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib91b/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:36:33.6813182Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib344/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:36:33.7223771Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libf4b/libbsec2.a
+2025-09-21T23:36:33.7264828Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libf4b/libbsec2.a
+2025-09-21T23:36:33.7395510Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib344/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:36:33.7828603Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib344/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:36:33.8053015Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libd09/libSoftwareSerial.a
+2025-09-21T23:36:33.8113038Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libd09/libSoftwareSerial.a
+2025-09-21T23:36:33.8243215Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib344/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:36:33.8362967Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib344/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:36:33.9026663Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib91b/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:36:33.9064782Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib91b/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:36:33.9188248Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib344/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:36:33.9497165Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib344/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:36:34.0609962Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib985/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:36:34.1222458Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib947/RotaryEncoder/RotaryEncoder.cpp.o
+2025-09-21T23:36:34.1970959Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib947/RotaryEncoder/SwRotaryEncoder.cpp.o
+2025-09-21T23:36:34.2061347Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib344/libSensirion Core.a
+2025-09-21T23:36:34.2133232Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib344/libSensirion Core.a
+2025-09-21T23:36:34.2575113Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf88/Adafruit_LittleFS/Adafruit_LittleFS.cpp.o
+2025-09-21T23:36:34.4334604Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf88/Adafruit_LittleFS/Adafruit_LittleFS_File.cpp.o
+2025-09-21T23:36:34.4488683Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib985/libSensirion I2C SCD4x.a
+2025-09-21T23:36:34.4534291Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib985/libSensirion I2C SCD4x.a
+2025-09-21T23:36:34.4591054Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib947/libRotaryEncoder.a
+2025-09-21T23:36:34.4639212Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib947/libRotaryEncoder.a
+2025-09-21T23:36:34.4677759Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf88/Adafruit_LittleFS/littlefs/lfs.c.o
+2025-09-21T23:36:34.4816363Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf88/Adafruit_LittleFS/littlefs/lfs_util.c.o
+2025-09-21T23:36:34.5608970Z Compiling .pio/build/seeed_xiao_nrf52840_kit/liba05/InternalFileSytem/InternalFileSystem.cpp.o
+2025-09-21T23:36:34.5987870Z Compiling .pio/build/seeed_xiao_nrf52840_kit/liba05/InternalFileSytem/flash/flash_cache.c.o
+2025-09-21T23:36:34.7107500Z Compiling .pio/build/seeed_xiao_nrf52840_kit/liba05/InternalFileSytem/flash/flash_nrf5x.c.o
+2025-09-21T23:36:34.7739038Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEAdvertising.cpp.o
+2025-09-21T23:36:34.7876418Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLECentral.cpp.o
+2025-09-21T23:36:34.8383791Z Archiving .pio/build/seeed_xiao_nrf52840_kit/liba05/libInternalFileSytem.a
+2025-09-21T23:36:34.8430513Z Indexing .pio/build/seeed_xiao_nrf52840_kit/liba05/libInternalFileSytem.a
+2025-09-21T23:36:34.8551647Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLECharacteristic.cpp.o
+2025-09-21T23:36:34.8989075Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libf88/libAdafruit_LittleFS.a
+2025-09-21T23:36:34.9044561Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libf88/libAdafruit_LittleFS.a
+2025-09-21T23:36:34.9173881Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEClientCharacteristic.cpp.o
+2025-09-21T23:36:35.1451455Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEClientService.cpp.o
+2025-09-21T23:36:35.2039350Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEConnection.cpp.o
+2025-09-21T23:36:35.3507172Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEDiscovery.cpp.o
+2025-09-21T23:36:35.3674881Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEGatt.cpp.o
+2025-09-21T23:36:35.5127013Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEPeriph.cpp.o
+2025-09-21T23:36:35.6327332Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEScanner.cpp.o
+2025-09-21T23:36:35.7269502Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLESecurity.cpp.o
+2025-09-21T23:36:35.7618392Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEService.cpp.o
+2025-09-21T23:36:35.8763332Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/BLEUuid.cpp.o
+2025-09-21T23:36:36.0595362Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/bluefruit.cpp.o
+2025-09-21T23:36:36.1110783Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/clients/BLEAncs.cpp.o
+2025-09-21T23:36:36.1220078Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/clients/BLEClientBas.cpp.o
+2025-09-21T23:36:36.1777621Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/clients/BLEClientCts.cpp.o
+2025-09-21T23:36:36.4740098Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/clients/BLEClientDis.cpp.o
+2025-09-21T23:36:36.5046614Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/clients/BLEClientHidAdafruit.cpp.o
+2025-09-21T23:36:36.5536629Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/clients/BLEClientIas.cpp.o
+2025-09-21T23:36:36.5679859Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/clients/BLEClientUart.cpp.o
+2025-09-21T23:36:36.8338194Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEBas.cpp.o
+2025-09-21T23:36:36.8917666Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEBeacon.cpp.o
+2025-09-21T23:36:36.9071708Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEDfu.cpp.o
+2025-09-21T23:36:36.9361090Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEDis.cpp.o
+2025-09-21T23:36:37.1827011Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEHidAdafruit.cpp.o
+2025-09-21T23:36:37.2471595Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEHidGamepad.cpp.o
+2025-09-21T23:36:37.2797315Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEHidGeneric.cpp.o
+2025-09-21T23:36:37.3028699Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEIas.cpp.o
+2025-09-21T23:36:37.5878869Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEMidi.cpp.o
+2025-09-21T23:36:37.6208115Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/BLEUart.cpp.o
+2025-09-21T23:36:37.6589525Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/services/EddyStone.cpp.o
+2025-09-21T23:36:37.6858179Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/utility/AdaMsg.cpp.o
+2025-09-21T23:36:37.9462604Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/utility/bonding.cpp.o
+2025-09-21T23:36:37.9809733Z Compiling .pio/build/seeed_xiao_nrf52840_kit/lib982/Bluefruit52Lib/utility/bootloader_util.c.o
+2025-09-21T23:36:38.0412289Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf39/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:36:38.0566773Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf39/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:36:38.0703781Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf39/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:36:38.1271451Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf39/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:36:38.1411298Z Compiling .pio/build/seeed_xiao_nrf52840_kit/libf39/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:36:38.1839873Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libFrameworkArduinoVariant.a
+2025-09-21T23:36:38.1871972Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libFrameworkArduinoVariant.a
+2025-09-21T23:36:38.2195317Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/HardwarePWM.cpp.o
+2025-09-21T23:36:38.2363014Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:36:38.3306648Z Archiving .pio/build/seeed_xiao_nrf52840_kit/lib982/libBluefruit52Lib.a
+2025-09-21T23:36:38.3617238Z Indexing .pio/build/seeed_xiao_nrf52840_kit/lib982/libBluefruit52Lib.a
+2025-09-21T23:36:38.4041977Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/Print.cpp.o
+2025-09-21T23:36:38.4302353Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libf39/libAdafruit NeoPixel.a
+2025-09-21T23:36:38.4358398Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libf39/libAdafruit NeoPixel.a
+2025-09-21T23:36:38.4474347Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/RingBuffer.cpp.o
+2025-09-21T23:36:38.4956002Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:36:38.5309506Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:36:38.5433557Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/Uart.cpp.o
+2025-09-21T23:36:38.7138210Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/WInterrupts.c.o
+2025-09-21T23:36:38.7947840Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:36:38.8130552Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/WString.cpp.o
+2025-09-21T23:36:38.8372602Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/abi.cpp.o
+2025-09-21T23:36:38.8493786Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/avr/dtostrf.c.o
+2025-09-21T23:36:38.8763031Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/delay.c.o
+2025-09-21T23:36:38.9150601Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/Source/croutine.c.o
+2025-09-21T23:36:38.9318351Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/Source/event_groups.c.o
+2025-09-21T23:36:38.9889923Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/Source/list.c.o
+2025-09-21T23:36:39.0094556Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/Source/portable/MemMang/heap_3.c.o
+2025-09-21T23:36:39.0621833Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/Source/queue.c.o
+2025-09-21T23:36:39.0745339Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/Source/stream_buffer.c.o
+2025-09-21T23:36:39.0924708Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/Source/tasks.c.o
+2025-09-21T23:36:39.1173449Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/Source/timers.c.o
+2025-09-21T23:36:39.2346754Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis.c.o
+2025-09-21T23:36:39.2721779Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis_systick.c.o
+2025-09-21T23:36:39.2878005Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/freertos/portable/GCC/nrf52/port.c.o
+2025-09-21T23:36:39.3374333Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/hooks.c.o
+2025-09-21T23:36:39.3801536Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/itoa.c.o
+2025-09-21T23:36:39.3930937Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/linker/gcc_startup_nrf52.S.o
+2025-09-21T23:36:39.4035911Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/linker/gcc_startup_nrf52833.S.o
+2025-09-21T23:36:39.4159311Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/linker/gcc_startup_nrf52840.S.o
+2025-09-21T23:36:39.4275936Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/main.cpp.o
+2025-09-21T23:36:39.4388414Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/new.cpp.o
+2025-09-21T23:36:39.4527813Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_gpiote.c.o
+2025-09-21T23:36:39.4685633Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_power.c.o
+2025-09-21T23:36:39.5458911Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_pwm.c.o
+2025-09-21T23:36:39.6009232Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_qspi.c.o
+2025-09-21T23:36:39.6139850Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spim.c.o
+2025-09-21T23:36:39.6444439Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spis.c.o
+2025-09-21T23:36:39.6733145Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_temp.c.o
+2025-09-21T23:36:39.7299826Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_timer.c.o
+2025-09-21T23:36:39.7599114Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/mdk/system_nrf52.c.o
+2025-09-21T23:36:39.7757469Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/mdk/system_nrf52833.c.o
+2025-09-21T23:36:39.7917031Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/nordic/nrfx/mdk/system_nrf52840.c.o
+2025-09-21T23:36:39.8090403Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/pulse.c.o
+2025-09-21T23:36:39.8202917Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/pulse_asm.S.o
+2025-09-21T23:36:39.8344832Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/rtos.cpp.o
+2025-09-21T23:36:39.8516513Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/sysview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c.o
+2025-09-21T23:36:39.9107946Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/sysview/SEGGER/SEGGER_RTT.c.o
+2025-09-21T23:36:39.9271254Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S.o
+2025-09-21T23:36:39.9416545Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_printf.c.o
+2025-09-21T23:36:39.9589716Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/sysview/SEGGER/SEGGER_SYSVIEW.c.o
+2025-09-21T23:36:40.0460982Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/sysview/SEGGER_SYSVIEW_FreeRTOS.c.o
+2025-09-21T23:36:40.0841180Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/utility/AdaCallback.c.o
+2025-09-21T23:36:40.0963427Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/utility/SoftwareTimer.cpp.o
+2025-09-21T23:36:40.1102555Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/utility/adafruit_fifo.cpp.o
+2025-09-21T23:36:40.2115717Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/utility/debug.cpp.o
+2025-09-21T23:36:40.3202781Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/utility/utilities.c.o
+2025-09-21T23:36:40.3648210Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/wiring.c.o
+2025-09-21T23:36:40.3953780Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/wiring_analog.cpp.o
+2025-09-21T23:36:40.4401424Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/wiring_analog_nRF52.c.o
+2025-09-21T23:36:40.4979186Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/wiring_digital.c.o
+2025-09-21T23:36:40.5083649Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/wiring_private.c.o
+2025-09-21T23:36:40.5848645Z Compiling .pio/build/seeed_xiao_nrf52840_kit/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:36:40.6501044Z Archiving .pio/build/seeed_xiao_nrf52840_kit/libFrameworkArduino.a
+2025-09-21T23:36:40.6721415Z Indexing .pio/build/seeed_xiao_nrf52840_kit/libFrameworkArduino.a
+2025-09-21T23:36:40.7169768Z Linking .pio/build/seeed_xiao_nrf52840_kit/firmware.elf
+2025-09-21T23:36:41.6173147Z /pio/core/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/bin/ld: .pio/build/seeed_xiao_nrf52840_kit/firmware.elf section `.text' will not fit in region `FLASH'
+2025-09-21T23:36:41.6175133Z /pio/core/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/bin/ld: region `FLASH' overflowed by 85488 bytes
+2025-09-21T23:36:41.6175829Z collect2: error: ld returned 1 exit status
+2025-09-21T23:36:41.6180451Z *** [.pio/build/seeed_xiao_nrf52840_kit/firmware.elf] Error 1
+2025-09-21T23:36:42.0161529Z ========================= [FAILED] Took 97.33 seconds =========================
+2025-09-21T23:36:42.0162289Z 
+2025-09-21T23:36:42.0166995Z Environment              Status    Duration
+2025-09-21T23:36:42.0167423Z -----------------------  --------  ------------
+2025-09-21T23:36:42.0167729Z seeed_xiao_nrf52840_kit  FAILED    00:01:37.328
+2025-09-21T23:36:42.0168056Z ==================== 1 failed, 0 succeeded in 00:01:37.328 ====================
+2025-09-21T23:36:42.1778088Z ##[error]Process completed with exit code 1.
+2025-09-21T23:36:42.1950089Z Post job cleanup.
+2025-09-21T23:36:42.2724429Z [command]/usr/bin/git version
+2025-09-21T23:36:42.2760766Z git version 2.51.0
+2025-09-21T23:36:42.2800335Z Temporarily overriding HOME='/home/runner/work/_temp/d075c6c7-973e-441d-9cd3-902fc07079d5' before making global git config changes
+2025-09-21T23:36:42.2801327Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:36:42.2805904Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:36:42.2842357Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:36:42.2875103Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:36:42.3086935Z Entering 'meshtestic'
+2025-09-21T23:36:42.3129113Z Entering 'protobufs'
+2025-09-21T23:36:42.3188184Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:36:42.3211791Z http.https://github.com/.extraheader
+2025-09-21T23:36:42.3223024Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:36:42.3254564Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:36:42.3470235Z Entering 'meshtestic'
+2025-09-21T23:36:42.3493978Z http.https://github.com/.extraheader
+2025-09-21T23:36:42.3528038Z Entering 'protobufs'
+2025-09-21T23:36:42.3552695Z http.https://github.com/.extraheader
+2025-09-21T23:36:42.3726135Z Cleaning up orphan processes

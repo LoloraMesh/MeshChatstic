@@ -1,0 +1,1494 @@
+﻿2025-09-21T23:33:18.8725832Z Current runner version: '2.328.0'
+2025-09-21T23:33:18.8752418Z ##[group]Runner Image Provisioner
+2025-09-21T23:33:18.8753323Z Hosted Compute Agent
+2025-09-21T23:33:18.8753983Z Version: 20250829.383
+2025-09-21T23:33:18.8754577Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:33:18.8755274Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:33:18.8755890Z ##[endgroup]
+2025-09-21T23:33:18.8756476Z ##[group]Operating System
+2025-09-21T23:33:18.8757009Z Ubuntu
+2025-09-21T23:33:18.8757543Z 24.04.3
+2025-09-21T23:33:18.8758003Z LTS
+2025-09-21T23:33:18.8758466Z ##[endgroup]
+2025-09-21T23:33:18.8759009Z ##[group]Runner Image
+2025-09-21T23:33:18.8759575Z Image: ubuntu-24.04
+2025-09-21T23:33:18.8760092Z Version: 20250907.24.1
+2025-09-21T23:33:18.8761322Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:33:18.8762923Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:33:18.8763978Z ##[endgroup]
+2025-09-21T23:33:18.8766242Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:33:18.8768226Z Actions: read
+2025-09-21T23:33:18.8768827Z Attestations: read
+2025-09-21T23:33:18.8769321Z Checks: read
+2025-09-21T23:33:18.8769875Z Contents: read
+2025-09-21T23:33:18.8770803Z Deployments: read
+2025-09-21T23:33:18.8771348Z Discussions: read
+2025-09-21T23:33:18.8771800Z Issues: read
+2025-09-21T23:33:18.8772407Z Metadata: read
+2025-09-21T23:33:18.8772874Z Models: read
+2025-09-21T23:33:18.8773357Z Packages: read
+2025-09-21T23:33:18.8773977Z Pages: read
+2025-09-21T23:33:18.8774431Z PullRequests: read
+2025-09-21T23:33:18.8774946Z RepositoryProjects: read
+2025-09-21T23:33:18.8775541Z SecurityEvents: read
+2025-09-21T23:33:18.8776182Z Statuses: read
+2025-09-21T23:33:18.8776646Z ##[endgroup]
+2025-09-21T23:33:18.8778881Z Secret source: Actions
+2025-09-21T23:33:18.8779667Z Prepare workflow directory
+2025-09-21T23:33:18.9119172Z Prepare all required actions
+2025-09-21T23:33:18.9158922Z Getting action download info
+2025-09-21T23:33:19.2638008Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:33:19.4458289Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:33:19.6759488Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:33:19.8805846Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:33:19.8811029Z ##[group] Inputs
+2025-09-21T23:33:19.8811518Z   version: 2.7.10.3d51287
+2025-09-21T23:33:19.8812013Z   platform: nrf52840
+2025-09-21T23:33:19.8812426Z   pio_env: t-echo
+2025-09-21T23:33:19.8812968Z ##[endgroup]
+2025-09-21T23:33:19.8813482Z Complete job name: build-nrf52840 (t-echo) / build-nrf52840
+2025-09-21T23:33:19.9422649Z ##[group]Run actions/checkout@v5
+2025-09-21T23:33:19.9423498Z with:
+2025-09-21T23:33:19.9423881Z   submodules: recursive
+2025-09-21T23:33:19.9424317Z   ref: develop
+2025-09-21T23:33:19.9424748Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:19.9425431Z   token: ***
+2025-09-21T23:33:19.9425805Z   ssh-strict: true
+2025-09-21T23:33:19.9426378Z   ssh-user: git
+2025-09-21T23:33:19.9426778Z   persist-credentials: true
+2025-09-21T23:33:19.9427308Z   clean: true
+2025-09-21T23:33:19.9427704Z   sparse-checkout-cone-mode: true
+2025-09-21T23:33:19.9428173Z   fetch-depth: 1
+2025-09-21T23:33:19.9428556Z   fetch-tags: false
+2025-09-21T23:33:19.9428953Z   show-progress: true
+2025-09-21T23:33:19.9429349Z   lfs: false
+2025-09-21T23:33:19.9429732Z   set-safe-directory: true
+2025-09-21T23:33:19.9430922Z ##[endgroup]
+2025-09-21T23:33:20.0388140Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:20.0390070Z ##[group]Getting Git version info
+2025-09-21T23:33:20.0391170Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:20.0392295Z [command]/usr/bin/git version
+2025-09-21T23:33:20.0428196Z git version 2.51.0
+2025-09-21T23:33:20.0449468Z ##[endgroup]
+2025-09-21T23:33:20.0463469Z Temporarily overriding HOME='/home/runner/work/_temp/d5d3befb-ceaf-4b8b-a51c-174c9a05c88a' before making global git config changes
+2025-09-21T23:33:20.0465939Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:33:20.0467928Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:33:20.0504205Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:33:20.0507542Z ##[group]Initializing the repository
+2025-09-21T23:33:20.0511930Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:33:20.0603806Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:33:20.0605582Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:33:20.0606723Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:33:20.0608047Z hint:
+2025-09-21T23:33:20.0608729Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:33:20.0609596Z hint:
+2025-09-21T23:33:20.0611007Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:33:20.0612378Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:33:20.0613919Z hint:
+2025-09-21T23:33:20.0614685Z hint: 	git branch -m <name>
+2025-09-21T23:33:20.0615273Z hint:
+2025-09-21T23:33:20.0615859Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:33:20.0616946Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:33:20.0618928Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:20.0658759Z ##[endgroup]
+2025-09-21T23:33:20.0659491Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:33:20.0662939Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:33:20.0693663Z ##[endgroup]
+2025-09-21T23:33:20.0694920Z ##[group]Setting up auth
+2025-09-21T23:33:20.0701454Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:33:20.0732484Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:33:20.1101983Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:33:20.1133837Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:33:20.1357000Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:20.1391018Z ##[endgroup]
+2025-09-21T23:33:20.1392255Z ##[group]Fetching the repository
+2025-09-21T23:33:20.1401421Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:33:20.8162471Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:33:20.8164328Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:33:20.8192071Z ##[endgroup]
+2025-09-21T23:33:20.8193178Z ##[group]Determining the checkout info
+2025-09-21T23:33:20.8198715Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:33:20.8222311Z   origin/develop
+2025-09-21T23:33:20.8227701Z ##[endgroup]
+2025-09-21T23:33:20.8231429Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:33:20.8268306Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:33:20.8295345Z ##[group]Checking out the ref
+2025-09-21T23:33:20.8298815Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:33:20.9436683Z Switched to a new branch 'develop'
+2025-09-21T23:33:20.9438462Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:33:20.9448702Z ##[endgroup]
+2025-09-21T23:33:20.9450841Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:33:20.9455379Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:33:20.9529873Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:33:20.9561559Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:33:20.9593153Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:33:20.9620792Z ##[endgroup]
+2025-09-21T23:33:20.9622622Z ##[group]Fetching submodules
+2025-09-21T23:33:20.9624478Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:33:20.9851612Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:33:21.0066958Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:33:21.0072411Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:33:21.0095975Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:33:21.3083642Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:33:21.6280576Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:33:21.6400748Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:33:21.6433071Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:33:21.6655605Z Entering 'meshtestic'
+2025-09-21T23:33:21.6694008Z Entering 'protobufs'
+2025-09-21T23:33:21.6739882Z ##[endgroup]
+2025-09-21T23:33:21.6741046Z ##[group]Persisting credentials for submodules
+2025-09-21T23:33:21.6747357Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:33:21.6960773Z Entering 'meshtestic'
+2025-09-21T23:33:21.7003886Z Entering 'protobufs'
+2025-09-21T23:33:21.7058587Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:33:21.7266453Z Entering 'meshtestic'
+2025-09-21T23:33:21.7304467Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:33:21.7323623Z Entering 'protobufs'
+2025-09-21T23:33:21.7361912Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:33:21.7404329Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:33:21.7611440Z Entering 'meshtestic'
+2025-09-21T23:33:21.7648569Z Entering 'protobufs'
+2025-09-21T23:33:21.7698419Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:33:21.7907793Z Entering 'meshtestic'
+2025-09-21T23:33:21.7945849Z Entering 'protobufs'
+2025-09-21T23:33:21.8022398Z ##[endgroup]
+2025-09-21T23:33:21.8025486Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:33:21.8048114Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:33:21.8288156Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:33:21.8288531Z with:
+2025-09-21T23:33:21.8288758Z   pio_platform: nrf52840
+2025-09-21T23:33:21.8289021Z   pio_env: t-echo
+2025-09-21T23:33:21.8289243Z   pio_target: build
+2025-09-21T23:33:21.8289476Z ##[endgroup]
+2025-09-21T23:33:21.8377790Z ##[group]Run docker run --rm \
+2025-09-21T23:33:21.8378375Z [36;1mdocker run --rm \[0m
+2025-09-21T23:33:21.8378683Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:33:21.8379006Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:33:21.8379280Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:33:21.8379543Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:33:21.8379808Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:33:21.8380086Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:33:21.8380774Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:33:21.8381088Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:33:21.8381404Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:33:21.8381846Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-nrf52840[0m
+2025-09-21T23:33:21.8436309Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:33:21.8436687Z env:
+2025-09-21T23:33:21.8436898Z   MT_ENV: t-echo
+2025-09-21T23:33:21.8437125Z   MT_PLATFORM: nrf52840
+2025-09-21T23:33:21.8437387Z   MT_TARGET: build
+2025-09-21T23:33:21.8437609Z   MT_OTA_FIRMWARE_SOURCE: 
+2025-09-21T23:33:21.8437862Z   MT_OTA_FIRMWARE_TARGET: 
+2025-09-21T23:33:21.8438142Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:33:21.8438454Z ##[endgroup]
+2025-09-21T23:33:21.9158633Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-nrf52840' locally
+2025-09-21T23:33:22.2338450Z master-nrf52840: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:33:22.3192878Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:33:22.3194312Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:33:22.3196030Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:33:22.3196530Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:33:22.3196927Z 815e87185931: Pulling fs layer
+2025-09-21T23:33:22.3197303Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:33:22.3197692Z da9989870cf6: Pulling fs layer
+2025-09-21T23:33:22.3198088Z 9900591a02d8: Pulling fs layer
+2025-09-21T23:33:22.3198465Z d47368ccdb52: Pulling fs layer
+2025-09-21T23:33:22.3198861Z 0b0a90cba924: Pulling fs layer
+2025-09-21T23:33:22.3199279Z f1d53622d37c: Pulling fs layer
+2025-09-21T23:33:22.3199670Z b4174266f6e9: Pulling fs layer
+2025-09-21T23:33:22.3200059Z b789b525833f: Pulling fs layer
+2025-09-21T23:33:22.3200694Z d9b2841dabc1: Pulling fs layer
+2025-09-21T23:33:22.3201073Z c611f5bb386b: Waiting
+2025-09-21T23:33:22.3201443Z 815e87185931: Waiting
+2025-09-21T23:33:22.3201766Z 71c11f7c6832: Waiting
+2025-09-21T23:33:22.3202103Z da9989870cf6: Waiting
+2025-09-21T23:33:22.3202687Z 9900591a02d8: Waiting
+2025-09-21T23:33:22.3203016Z d47368ccdb52: Waiting
+2025-09-21T23:33:22.3203337Z 0b0a90cba924: Waiting
+2025-09-21T23:33:22.3203653Z f1d53622d37c: Waiting
+2025-09-21T23:33:22.3203994Z b789b525833f: Waiting
+2025-09-21T23:33:22.3204297Z b4174266f6e9: Waiting
+2025-09-21T23:33:22.3204608Z d9b2841dabc1: Waiting
+2025-09-21T23:33:22.5404290Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:33:22.5406350Z ccbbb2080a06: Download complete
+2025-09-21T23:33:22.6022515Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:33:22.6024141Z 8fb375ec14f3: Download complete
+2025-09-21T23:33:22.6346130Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:33:22.6349485Z 7d5073558d5a: Download complete
+2025-09-21T23:33:22.7279058Z 815e87185931: Verifying Checksum
+2025-09-21T23:33:22.7281116Z 815e87185931: Download complete
+2025-09-21T23:33:22.8232622Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:33:22.8234500Z 71c11f7c6832: Download complete
+2025-09-21T23:33:22.8305541Z da9989870cf6: Verifying Checksum
+2025-09-21T23:33:22.8306328Z da9989870cf6: Download complete
+2025-09-21T23:33:22.9242463Z d47368ccdb52: Verifying Checksum
+2025-09-21T23:33:22.9243184Z d47368ccdb52: Download complete
+2025-09-21T23:33:22.9831505Z 9900591a02d8: Download complete
+2025-09-21T23:33:23.1654252Z 0b0a90cba924: Verifying Checksum
+2025-09-21T23:33:23.1657323Z 0b0a90cba924: Download complete
+2025-09-21T23:33:23.2642184Z b4174266f6e9: Verifying Checksum
+2025-09-21T23:33:23.2643291Z b4174266f6e9: Download complete
+2025-09-21T23:33:23.3524443Z b789b525833f: Download complete
+2025-09-21T23:33:23.3964715Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:33:23.3965637Z c611f5bb386b: Download complete
+2025-09-21T23:33:23.4422181Z d9b2841dabc1: Verifying Checksum
+2025-09-21T23:33:23.4423987Z d9b2841dabc1: Download complete
+2025-09-21T23:33:24.8954231Z f1d53622d37c: Verifying Checksum
+2025-09-21T23:33:24.8954710Z f1d53622d37c: Download complete
+2025-09-21T23:33:24.9643109Z 8fb375ec14f3: Pull complete
+2025-09-21T23:33:27.9677308Z ccbbb2080a06: Pull complete
+2025-09-21T23:33:30.2609523Z 7d5073558d5a: Pull complete
+2025-09-21T23:33:36.7217786Z c611f5bb386b: Pull complete
+2025-09-21T23:33:36.9673717Z 815e87185931: Pull complete
+2025-09-21T23:33:37.6820767Z 71c11f7c6832: Pull complete
+2025-09-21T23:33:37.6918339Z da9989870cf6: Pull complete
+2025-09-21T23:33:38.7480945Z 9900591a02d8: Pull complete
+2025-09-21T23:33:38.7594404Z d47368ccdb52: Pull complete
+2025-09-21T23:33:40.2670748Z 0b0a90cba924: Pull complete
+2025-09-21T23:34:09.9087836Z f1d53622d37c: Pull complete
+2025-09-21T23:34:09.9633000Z b4174266f6e9: Pull complete
+2025-09-21T23:34:09.9722701Z b789b525833f: Pull complete
+2025-09-21T23:34:09.9802167Z d9b2841dabc1: Pull complete
+2025-09-21T23:34:09.9837250Z Digest: sha256:ffa8225c3c4384645d1d6147f70390b55eb3616694869ddf1aca034ab72430a9
+2025-09-21T23:34:09.9848224Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-nrf52840
+2025-09-21T23:34:10.1492880Z Building PlatformIO environment: t-echo
+2025-09-21T23:34:10.4571001Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:34:11.1539561Z Resolving t-echo dependencies...
+2025-09-21T23:34:11.1765516Z Removing unused dependencies...
+2025-09-21T23:34:11.1844143Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:34:11.2899166Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:34:11.3408209Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:34:14.4517016Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:34:14.6695628Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:34:14.7642322Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:34:15.4495163Z Building for t-echo with 
+2025-09-21T23:34:16.2179797Z Processing t-echo (board: t-echo; platform: 
+2025-09-21T23:34:16.2180726Z platformio/nordicnrf52@^10.8.0; framework: arduino)
+2025-09-21T23:34:16.2181580Z --------------------------------------------------------------------------------
+2025-09-21T23:34:17.4147863Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:34:17.4297473Z CONFIGURATION: https://docs.platformio.org/page/boards/nordicnrf52/t-echo.html
+2025-09-21T23:34:17.4298354Z PLATFORM: Nordic nRF52 (10.9.0) > TTGO eink (Adafruit BSP)
+2025-09-21T23:34:17.4298942Z HARDWARE: NRF52840 64MHz, 243KB RAM, 796KB Flash
+2025-09-21T23:34:17.4299487Z DEBUG: Current (jlink) On-board (jlink) External (stlink)
+2025-09-21T23:34:17.4299984Z PACKAGES: 
+2025-09-21T23:34:17.4300780Z  - framework-arduinoadafruitnrf52 @ 1.10601.0+sha.e13f5820 
+2025-09-21T23:34:17.4301506Z  - framework-cmsis @ 2.50700.210515 (5.7.0) 
+2025-09-21T23:34:17.4301982Z  - tool-adafruit-nrfutil @ 1.503.0 (5.3) 
+2025-09-21T23:34:17.4302427Z  - tool-sreccat @ 1.164.0 (1.64) 
+2025-09-21T23:34:17.4302892Z  - toolchain-gccarmnoneeabi @ 1.90301.200702 (9.3.1)
+2025-09-21T23:34:17.4592433Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:34:17.4593605Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:34:17.5398118Z [nanopb] No generation needed.
+2025-09-21T23:34:17.8727316Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:20.0981892Z Downloading 0% 10%
+2025-09-21T23:34:20.1031563Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:34:20.1065923Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:34:20.1835317Z [nanopb] No generation needed.
+2025-09-21T23:34:20.2285154Z Found 72 compatible libraries
+2025-09-21T23:34:20.2285763Z Scanning dependencies...
+2025-09-21T23:34:29.7951809Z Dependency Graph
+2025-09-21T23:34:29.7954873Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:34:29.7956115Z |-- OneButton @ 2.6.1
+2025-09-21T23:34:29.7960011Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:34:29.7960655Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:34:29.7961127Z |-- ArduinoThread @ 0.0.0+20250919051325
+2025-09-21T23:34:29.7961885Z |-- Nanopb @ 0.4.91
+2025-09-21T23:34:29.7964677Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:34:29.7965209Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:34:29.7967557Z |-- RadioLib @ 7.3.0
+2025-09-21T23:34:29.7969611Z |-- Crypto @ 0.4.0
+2025-09-21T23:34:29.7971144Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:34:29.7973186Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:34:29.7974981Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:34:29.7975995Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:34:29.7978297Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:34:29.7982039Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:34:29.7982467Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:34:29.7985842Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:34:29.7986352Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:34:29.7989193Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:34:29.7991231Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:34:29.7993912Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:34:29.7995820Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:34:29.7996512Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:34:29.7999743Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:34:29.8000845Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:34:29.8003753Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:34:29.8004401Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:34:29.8008723Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:34:29.8009101Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:34:29.8009584Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:34:29.8012016Z |-- INA226 @ 0.6.4
+2025-09-21T23:34:29.8012473Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:34:29.8016963Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:34:29.8017551Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:34:29.8021631Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:34:29.8022927Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:34:29.8023444Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:34:29.8023926Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:34:29.8028033Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:34:29.8028557Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:34:29.8029337Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:34:29.8030005Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:34:29.8032450Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:34:29.8035562Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:34:29.8036062Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:34:29.8037937Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:34:29.8039807Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:34:29.8042101Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:34:29.8044293Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:34:29.8046614Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:34:29.8048482Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:34:29.8050824Z |-- Adafruit nRFCrypto @ 0.0.5
+2025-09-21T23:34:29.8052259Z |-- GxEPD2 @ 1.3.4
+2025-09-21T23:34:29.8054727Z |-- PCF8563_Library @ 1.0.1
+2025-09-21T23:34:29.8055597Z |-- SPI @ 1.0
+2025-09-21T23:34:29.8056918Z |-- Wire @ 1.0
+2025-09-21T23:34:29.8058219Z |-- Rotary Encoder @ 0.8.0
+2025-09-21T23:34:29.8059580Z |-- Adafruit Bluefruit nRF52 Libraries @ 0.21.0
+2025-09-21T23:34:29.8060047Z |-- Adafruit TinyUSB Library
+2025-09-21T23:34:29.8061175Z |-- Adafruit Internal File System on Bluefruit nRF52 @ 0.11.0
+2025-09-21T23:34:29.8062244Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:34:30.0550038Z Building in debug mode
+2025-09-21T23:34:30.1671546Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on t-echo
+2025-09-21T23:34:30.1686407Z Using flags:
+2025-09-21T23:34:30.1687082Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:34:30.1687862Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:34:30.1688215Z -DAPP_ENV=t-echo
+2025-09-21T23:34:30.1688572Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:34:30.1689017Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:34:30.1689765Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:34:30.1690588Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:34:30.3272912Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_TinyUSB_API.cpp.o
+2025-09-21T23:34:30.3367846Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_CDC.cpp.o
+2025-09-21T23:34:30.3469933Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Device.cpp.o
+2025-09-21T23:34:30.3573658Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Interface.cpp.o
+2025-09-21T23:34:30.5225828Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBH_Host.cpp.o
+2025-09-21T23:34:30.6264375Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/cdc/Adafruit_USBH_CDC.cpp.o
+2025-09-21T23:34:30.6620443Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/hid/Adafruit_USBD_HID.cpp.o
+2025-09-21T23:34:30.6764084Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/midi/Adafruit_USBD_MIDI.cpp.o
+2025-09-21T23:34:30.8223601Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBD_MSC.cpp.o
+2025-09-21T23:34:30.8363185Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBH_MSC.cpp.o
+2025-09-21T23:34:30.8866175Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/esp32/Adafruit_TinyUSB_esp32.cpp.o
+2025-09-21T23:34:30.9067876Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/nrf/Adafruit_TinyUSB_nrf.cpp.o
+2025-09-21T23:34:30.9695896Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp.o
+2025-09-21T23:34:30.9955034Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/ports/samd/Adafruit_TinyUSB_samd.cpp.o
+2025-09-21T23:34:31.0330746Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/video/Adafruit_USBD_Video.cpp.o
+2025-09-21T23:34:31.0489944Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/arduino/webusb/Adafruit_USBD_WebUSB.cpp.o
+2025-09-21T23:34:31.0717837Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/audio/audio_device.c.o
+2025-09-21T23:34:31.1301802Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/bth/bth_device.c.o
+2025-09-21T23:34:31.1944642Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/cdc/cdc_device.c.o
+2025-09-21T23:34:31.2141831Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/cdc/cdc_host.c.o
+2025-09-21T23:34:31.2316121Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/dfu/dfu_device.c.o
+2025-09-21T23:34:31.2913784Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/dfu/dfu_rt_device.c.o
+2025-09-21T23:34:31.3536941Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/hid/hid_device.c.o
+2025-09-21T23:34:31.3662592Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/hid/hid_host.c.o
+2025-09-21T23:34:31.3824753Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/midi/midi_device.c.o
+2025-09-21T23:34:31.5179687Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/msc/msc_device.c.o
+2025-09-21T23:34:31.5641525Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/msc/msc_host.c.o
+2025-09-21T23:34:31.5867632Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/net/ecm_rndis_device.c.o
+2025-09-21T23:34:31.6002994Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/net/ncm_device.c.o
+2025-09-21T23:34:31.6465960Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/usbtmc/usbtmc_device.c.o
+2025-09-21T23:34:31.6596131Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/vendor/vendor_device.c.o
+2025-09-21T23:34:31.7042204Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/class/video/video_device.c.o
+2025-09-21T23:34:31.7210633Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/common/tusb_fifo.c.o
+2025-09-21T23:34:31.7536374Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/device/usbd.c.o
+2025-09-21T23:34:31.8069175Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/device/usbd_control.c.o
+2025-09-21T23:34:31.9393355Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/host/hub.c.o
+2025-09-21T23:34:31.9536629Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/host/usbh.c.o
+2025-09-21T23:34:32.0191067Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/analog/max3421/hcd_max3421.c.o
+2025-09-21T23:34:32.0334733Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/microchip/samd/dcd_samd.c.o
+2025-09-21T23:34:32.1081494Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/nordic/nrf5x/dcd_nrf5x.c.o
+2025-09-21T23:34:32.1230784Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/pio_usb/dcd_pio_usb.c.o
+2025-09-21T23:34:32.1807484Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/pio_usb/hcd_pio_usb.c.o
+2025-09-21T23:34:32.2404022Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+2025-09-21T23:34:32.2565825Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/hcd_rp2040.c.o
+2025-09-21T23:34:32.3003067Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/rp2040_usb.c.o
+2025-09-21T23:34:32.3143548Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/portable/synopsys/dwc2/dcd_dwc2.c.o
+2025-09-21T23:34:32.3254416Z Compiling .pio/build/t-echo/lib62c/Adafruit_TinyUSB_Arduino/tusb.c.o
+2025-09-21T23:34:32.3770630Z Compiling .pio/build/t-echo/libb06/Adafruit nRFCrypto/Adafruit_nRFCrypto.cpp.o
+2025-09-21T23:34:32.3885198Z Compiling .pio/build/t-echo/libb06/Adafruit nRFCrypto/ecc/nRFCrypto_ECC.cpp.o
+2025-09-21T23:34:32.4012320Z Compiling .pio/build/t-echo/libb06/Adafruit nRFCrypto/ecc/nRFCrypto_ECC_PrivateKey.cpp.o
+2025-09-21T23:34:32.4967665Z Compiling .pio/build/t-echo/libb06/Adafruit nRFCrypto/ecc/nRFCrypto_ECC_PublicKey.cpp.o
+2025-09-21T23:34:32.5573548Z Compiling .pio/build/t-echo/libb06/Adafruit nRFCrypto/nRFCrypto_AES.cpp.o
+2025-09-21T23:34:32.5697324Z Compiling .pio/build/t-echo/libb06/Adafruit nRFCrypto/nRFCrypto_Chacha.cpp.o
+2025-09-21T23:34:32.6525771Z Compiling .pio/build/t-echo/libb06/Adafruit nRFCrypto/nRFCrypto_Hash.cpp.o
+2025-09-21T23:34:32.6689007Z Compiling .pio/build/t-echo/libb06/Adafruit nRFCrypto/nRFCrypto_Random.cpp.o
+2025-09-21T23:34:32.6973119Z Compiling .pio/build/t-echo/variants/nrf52840/t-echo/variant.cpp.o
+2025-09-21T23:34:32.7804067Z /pio/workspace/libdeps/t-echo/Adafruit nRFCrypto/src/nRFCrypto_Chacha.cpp: In member function 'CRYSError_t nRFCrypto_Chacha::Process(uint8_t*, uint32_t, uint8_t*, CRYS_CHACHA_EncryptMode_t)':
+2025-09-21T23:34:32.7813235Z /pio/workspace/libdeps/t-echo/Adafruit nRFCrypto/src/nRFCrypto_Chacha.cpp:59:39: warning: 'initialCounter' is used uninitialized in this function [-Wuninitialized]
+2025-09-21T23:34:32.7816482Z    59 |   CRYSError_t error = CRYS_CHACHA_Init(&pContextID, pNonce, (CRYS_CHACHA_NonceSize_t) 1, myKey, initialCounter++, mode);
+2025-09-21T23:34:32.7818073Z       |                       ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:32.8590795Z Compiling .pio/build/t-echo/src/BluetoothCommon.cpp.o
+2025-09-21T23:34:32.9319468Z Compiling .pio/build/t-echo/src/DebugConfiguration.cpp.o
+2025-09-21T23:34:32.9471079Z Compiling .pio/build/t-echo/src/DisplayFormatters.cpp.o
+2025-09-21T23:34:32.9671067Z Compiling .pio/build/t-echo/src/FSCommon.cpp.o
+2025-09-21T23:34:33.5977638Z Compiling .pio/build/t-echo/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:34:33.6876700Z Compiling .pio/build/t-echo/src/Fusion/FusionCompass.c.o
+2025-09-21T23:34:33.8230296Z Compiling .pio/build/t-echo/src/Fusion/FusionOffset.c.o
+2025-09-21T23:34:33.8495794Z Compiling .pio/build/t-echo/src/GpioLogic.cpp.o
+2025-09-21T23:34:33.9359664Z Compiling .pio/build/t-echo/src/Led.cpp.o
+2025-09-21T23:34:33.9535546Z Compiling .pio/build/t-echo/src/Observer.cpp.o
+2025-09-21T23:34:33.9781967Z Compiling .pio/build/t-echo/src/Power.cpp.o
+2025-09-21T23:34:34.6063927Z Compiling .pio/build/t-echo/src/PowerFSM.cpp.o
+2025-09-21T23:34:34.7107335Z Compiling .pio/build/t-echo/src/PowerMon.cpp.o
+2025-09-21T23:34:35.4097615Z Compiling .pio/build/t-echo/src/RedirectablePrint.cpp.o
+2025-09-21T23:34:35.6320851Z Compiling .pio/build/t-echo/src/SPILock.cpp.o
+2025-09-21T23:34:35.6871234Z Compiling .pio/build/t-echo/src/SafeFile.cpp.o
+2025-09-21T23:34:36.1743585Z Compiling .pio/build/t-echo/src/SerialConsole.cpp.o
+2025-09-21T23:34:36.3890642Z Compiling .pio/build/t-echo/src/airtime.cpp.o
+2025-09-21T23:34:36.4902815Z Compiling .pio/build/t-echo/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:34:36.9600430Z Compiling .pio/build/t-echo/src/buzz/buzz.cpp.o
+2025-09-21T23:34:37.1583159Z Compiling .pio/build/t-echo/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:34:37.3456472Z Compiling .pio/build/t-echo/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:34:37.5001807Z Compiling .pio/build/t-echo/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:34:37.9170619Z Compiling .pio/build/t-echo/src/concurrency/Lock.cpp.o
+2025-09-21T23:34:37.9342046Z Compiling .pio/build/t-echo/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:34:38.0989296Z Compiling .pio/build/t-echo/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:34:38.2602070Z Compiling .pio/build/t-echo/src/concurrency/OSThread.cpp.o
+2025-09-21T23:34:38.6665539Z Compiling .pio/build/t-echo/src/detect/ScanI2C.cpp.o
+2025-09-21T23:34:38.6855728Z Compiling .pio/build/t-echo/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:34:38.7967533Z Compiling .pio/build/t-echo/src/gps/GPS.cpp.o
+2025-09-21T23:34:39.0749547Z Compiling .pio/build/t-echo/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:34:39.5403219Z Compiling .pio/build/t-echo/src/gps/GeoCoord.cpp.o
+2025-09-21T23:34:39.8616199Z Compiling .pio/build/t-echo/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:34:40.0351280Z Compiling .pio/build/t-echo/src/gps/RTC.cpp.o
+2025-09-21T23:34:40.2444420Z Compiling .pio/build/t-echo/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:34:40.9039655Z Compiling .pio/build/t-echo/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:34:41.3865944Z Compiling .pio/build/t-echo/src/graphics/Screen.cpp.o
+2025-09-21T23:34:41.5501740Z Compiling .pio/build/t-echo/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:34:41.7874640Z Compiling .pio/build/t-echo/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:34:41.8127449Z Compiling .pio/build/t-echo/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:34:42.1357421Z Compiling .pio/build/t-echo/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:34:42.1573464Z Compiling .pio/build/t-echo/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:34:43.1311305Z Compiling .pio/build/t-echo/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:34:43.1335920Z src/graphics/Screen.cpp:1061:13: warning: 'bool graphics::shouldDrawMessage(const meshtastic_MeshPacket*)' defined but not used [-Wunused-function]
+2025-09-21T23:34:43.1337291Z  1061 | static bool shouldDrawMessage(const meshtastic_MeshPacket *packet)
+2025-09-21T23:34:43.1338055Z       |             ^~~~~~~~~~~~~~~~~
+2025-09-21T23:34:43.1339563Z src/graphics/Screen.cpp:222:15: warning: 'String graphics::currentChatAgeLabel(uint32_t, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:34:43.1341077Z   222 | static String currentChatAgeLabel(uint32_t nodeIdOrDest, uint8_t ch)
+2025-09-21T23:34:43.1341857Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:43.1343403Z src/graphics/Screen.cpp:166:13: warning: 'void graphics::showMenuFilteredByCardKB(const char*, const char* const*, const int*, uint8_t, std::function<void(int)>)' defined but not used [-Wunused-function]
+2025-09-21T23:34:43.1345340Z   166 | static void showMenuFilteredByCardKB(const char* title,
+2025-09-21T23:34:43.1346013Z       |             ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:34:43.4402848Z Compiling .pio/build/t-echo/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:34:43.5754475Z Compiling .pio/build/t-echo/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:34:44.9155273Z Compiling .pio/build/t-echo/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:34:44.9464766Z Compiling .pio/build/t-echo/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:34:44.9781365Z Compiling .pio/build/t-echo/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:34:45.5511803Z Compiling .pio/build/t-echo/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:34:46.6049482Z Compiling .pio/build/t-echo/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:34:46.7974867Z Compiling .pio/build/t-echo/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:34:47.0487439Z Compiling .pio/build/t-echo/src/graphics/emotes.cpp.o
+2025-09-21T23:34:47.3344674Z Compiling .pio/build/t-echo/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:34:47.6719355Z Compiling .pio/build/t-echo/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:34:47.7617902Z Compiling .pio/build/t-echo/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:34:47.8530072Z Compiling .pio/build/t-echo/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:34:47.9475517Z Compiling .pio/build/t-echo/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:34:48.0415020Z Compiling .pio/build/t-echo/src/graphics/tftSetup.cpp.o
+2025-09-21T23:34:48.1297969Z Compiling .pio/build/t-echo/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:34:48.2056697Z Compiling .pio/build/t-echo/src/input/ButtonThread.cpp.o
+2025-09-21T23:34:48.3528384Z Compiling .pio/build/t-echo/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:34:48.9117173Z Compiling .pio/build/t-echo/src/input/InputBroker.cpp.o
+2025-09-21T23:34:48.9993844Z Compiling .pio/build/t-echo/src/input/LinuxInput.cpp.o
+2025-09-21T23:34:49.0714485Z Compiling .pio/build/t-echo/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:34:49.7451217Z Compiling .pio/build/t-echo/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:34:49.7657975Z Compiling .pio/build/t-echo/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:34:49.8304812Z Compiling .pio/build/t-echo/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:34:49.8471432Z Compiling .pio/build/t-echo/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:34:49.8605496Z Compiling .pio/build/t-echo/src/input/SeesawRotary.cpp.o
+2025-09-21T23:34:49.9508808Z Compiling .pio/build/t-echo/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:34:50.7272740Z Compiling .pio/build/t-echo/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:34:50.8056987Z Compiling .pio/build/t-echo/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:34:50.8493627Z Compiling .pio/build/t-echo/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:34:51.2379638Z Compiling .pio/build/t-echo/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:34:51.3392506Z Compiling .pio/build/t-echo/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:34:51.4392633Z Compiling .pio/build/t-echo/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:34:51.5759579Z Compiling .pio/build/t-echo/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:34:51.6472050Z Compiling .pio/build/t-echo/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:34:52.1437939Z Compiling .pio/build/t-echo/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:34:52.6128452Z Compiling .pio/build/t-echo/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:34:52.6739792Z Compiling .pio/build/t-echo/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:34:52.9073483Z Compiling .pio/build/t-echo/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:34:53.1413742Z Compiling .pio/build/t-echo/src/input/i2cButton.cpp.o
+2025-09-21T23:34:53.6322579Z Compiling .pio/build/t-echo/src/input/kbI2cBase.cpp.o
+2025-09-21T23:34:53.6551168Z Compiling .pio/build/t-echo/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:34:53.9409958Z Compiling .pio/build/t-echo/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:34:54.4992830Z Compiling .pio/build/t-echo/src/main.cpp.o
+2025-09-21T23:34:54.5154291Z Compiling .pio/build/t-echo/src/memGet.cpp.o
+2025-09-21T23:34:55.1875225Z Compiling .pio/build/t-echo/src/mesh/Channels.cpp.o
+2025-09-21T23:34:55.2745031Z Compiling .pio/build/t-echo/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:34:55.3864620Z Compiling .pio/build/t-echo/src/mesh/Default.cpp.o
+2025-09-21T23:34:56.2320857Z Compiling .pio/build/t-echo/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:34:56.3147553Z Compiling .pio/build/t-echo/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:34:56.3453767Z Compiling .pio/build/t-echo/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:34:56.7654937Z Compiling .pio/build/t-echo/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:34:57.2252524Z Compiling .pio/build/t-echo/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:34:57.3707902Z Compiling .pio/build/t-echo/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:34:57.8147102Z Compiling .pio/build/t-echo/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:34:57.8609839Z Compiling .pio/build/t-echo/src/mesh/MeshModule.cpp.o
+2025-09-21T23:34:58.2437953Z Compiling .pio/build/t-echo/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:34:58.4012369Z Compiling .pio/build/t-echo/src/mesh/MeshService.cpp.o
+2025-09-21T23:34:58.8599765Z Compiling .pio/build/t-echo/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:34:59.2027044Z Compiling .pio/build/t-echo/src/mesh/NodeDB.cpp.o
+2025-09-21T23:34:59.3120492Z Compiling .pio/build/t-echo/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:35:00.0779085Z Compiling .pio/build/t-echo/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:35:00.1621644Z Compiling .pio/build/t-echo/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:35:00.3089972Z Compiling .pio/build/t-echo/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:35:01.1346270Z Compiling .pio/build/t-echo/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:35:01.3583202Z Compiling .pio/build/t-echo/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:35:01.4128619Z Compiling .pio/build/t-echo/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:35:01.9325723Z Compiling .pio/build/t-echo/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:35:02.2207620Z Compiling .pio/build/t-echo/src/mesh/Router.cpp.o
+2025-09-21T23:35:02.8780490Z Compiling .pio/build/t-echo/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:35:02.9877973Z Compiling .pio/build/t-echo/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:35:03.0308858Z Compiling .pio/build/t-echo/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:35:03.6224668Z Compiling .pio/build/t-echo/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:35:03.8981087Z Compiling .pio/build/t-echo/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:35:04.0085314Z Compiling .pio/build/t-echo/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:35:04.0558649Z Compiling .pio/build/t-echo/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:35:04.6842041Z Compiling .pio/build/t-echo/src/mesh/Throttle.cpp.o
+2025-09-21T23:35:04.8701669Z Compiling .pio/build/t-echo/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:35:04.9173404Z Compiling .pio/build/t-echo/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:35:04.9692294Z Compiling .pio/build/t-echo/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:35:05.0697966Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:35:05.2360366Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:35:05.3395664Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:35:05.4396611Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:35:05.4535413Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:35:05.5346229Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:35:05.5539537Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:35:05.6547701Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:35:05.7034496Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:35:05.7224964Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:35:05.7660394Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:35:05.8183509Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:35:05.8356639Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:35:05.8594430Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:35:05.9494452Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:35:05.9684969Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:35:06.0162414Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:35:06.0508494Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:35:06.0644123Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:35:06.0778443Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:35:06.1111086Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:35:06.1459092Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:35:06.1618546Z Compiling .pio/build/t-echo/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:35:06.1770416Z Compiling .pio/build/t-echo/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:35:06.2197907Z Compiling .pio/build/t-echo/src/meshUtils.cpp.o
+2025-09-21T23:35:06.2616027Z Compiling .pio/build/t-echo/src/modules/AdminModule.cpp.o
+2025-09-21T23:35:06.3035690Z Compiling .pio/build/t-echo/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:35:06.9453796Z Compiling .pio/build/t-echo/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:35:07.0640060Z Compiling .pio/build/t-echo/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:35:07.8673223Z Compiling .pio/build/t-echo/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:35:08.1261411Z Compiling .pio/build/t-echo/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:35:08.2298567Z Compiling .pio/build/t-echo/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:35:08.4578842Z src/modules/CannedMessageModule.cpp:76:15: warning: 'String currentChatAgeLabel(NodeNum, uint8_t)' defined but not used [-Wunused-function]
+2025-09-21T23:35:08.4581659Z    76 | static String currentChatAgeLabel(NodeNum dest, uint8_t ch)
+2025-09-21T23:35:08.4582243Z       |               ^~~~~~~~~~~~~~~~~~~
+2025-09-21T23:35:09.3390618Z Compiling .pio/build/t-echo/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:35:09.3951080Z Compiling .pio/build/t-echo/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:35:09.7294710Z Compiling .pio/build/t-echo/src/modules/Modules.cpp.o
+2025-09-21T23:35:09.8214405Z Compiling .pio/build/t-echo/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:35:10.3358457Z Compiling .pio/build/t-echo/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:35:11.0310363Z Compiling .pio/build/t-echo/src/modules/PositionModule.cpp.o
+2025-09-21T23:35:11.0893960Z Compiling .pio/build/t-echo/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:35:11.4547093Z Compiling .pio/build/t-echo/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:35:11.8607338Z Compiling .pio/build/t-echo/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:35:12.5513328Z Compiling .pio/build/t-echo/src/modules/ReplyModule.cpp.o
+2025-09-21T23:35:12.5881181Z Compiling .pio/build/t-echo/src/modules/RoutingModule.cpp.o
+2025-09-21T23:35:12.7618913Z Compiling .pio/build/t-echo/src/modules/SerialModule.cpp.o
+2025-09-21T23:35:13.4080650Z Compiling .pio/build/t-echo/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:35:14.0135211Z Compiling .pio/build/t-echo/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:35:14.0733306Z Compiling .pio/build/t-echo/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:35:14.3398295Z Compiling .pio/build/t-echo/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:35:14.7866454Z Compiling .pio/build/t-echo/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:35:15.5677904Z Compiling .pio/build/t-echo/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:35:15.7093355Z Compiling .pio/build/t-echo/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:35:16.0160064Z Compiling .pio/build/t-echo/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:35:16.3085643Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:35:16.7220921Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:35:16.8191372Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:35:17.2979175Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:35:17.6198727Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:35:17.7145539Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:35:17.8726755Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:35:18.2663330Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:35:18.6386187Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:35:18.7133871Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:35:18.8541212Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:35:19.2555849Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:35:19.6148419Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:35:19.6982174Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:35:19.8505355Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:35:20.2418567Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:35:20.5943443Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:35:20.6161158Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:35:20.6720763Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:35:21.2235031Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:35:21.4242482Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:35:21.5983202Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:35:21.7469577Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:35:22.2041537Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:35:22.3985949Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:35:22.5712824Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:35:22.7725555Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:35:23.1720363Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:35:23.3258546Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:35:23.3880654Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:35:23.5371594Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:35:24.1489426Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:35:24.2966318Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:35:24.4462866Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:35:24.5145907Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:35:24.8920515Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:35:25.2722154Z Compiling .pio/build/t-echo/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:35:25.4101616Z Compiling .pio/build/t-echo/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:35:25.5182595Z Compiling .pio/build/t-echo/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:35:25.8802238Z Compiling .pio/build/t-echo/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:35:25.9451219Z Compiling .pio/build/t-echo/src/modules/WaypointModule.cpp.o
+2025-09-21T23:35:26.2397971Z Compiling .pio/build/t-echo/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:35:26.9772864Z Compiling .pio/build/t-echo/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:35:27.4895416Z Compiling .pio/build/t-echo/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:35:27.5349610Z Compiling .pio/build/t-echo/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:35:27.6006212Z Compiling .pio/build/t-echo/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:35:28.2995283Z Compiling .pio/build/t-echo/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:35:28.7957533Z Compiling .pio/build/t-echo/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:35:28.8915225Z Compiling .pio/build/t-echo/src/motion/MotionSensor.cpp.o
+2025-09-21T23:35:28.9190327Z Compiling .pio/build/t-echo/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:35:29.6157642Z Compiling .pio/build/t-echo/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:35:30.1414920Z Compiling .pio/build/t-echo/src/mqtt/MQTT.cpp.o
+2025-09-21T23:35:30.1784262Z Compiling .pio/build/t-echo/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:35:30.1928620Z Compiling .pio/build/t-echo/src/network-stubs.cpp.o
+2025-09-21T23:35:30.4120972Z Compiling .pio/build/t-echo/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:35:30.9043484Z Compiling .pio/build/t-echo/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:35:30.9406477Z Compiling .pio/build/t-echo/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:35:31.1730270Z Compiling .pio/build/t-echo/src/platform/nrf52/AsyncUDP.cpp.o
+2025-09-21T23:35:31.6759875Z Compiling .pio/build/t-echo/src/platform/nrf52/BLEDfuScure.cpp.o
+2025-09-21T23:35:31.6999835Z Compiling .pio/build/t-echo/src/platform/nrf52/NRF52Bluetooth.cpp.o
+2025-09-21T23:35:31.9253230Z Compiling .pio/build/t-echo/src/platform/nrf52/NRF52CryptoEngine.cpp.o
+2025-09-21T23:35:32.0634054Z Compiling .pio/build/t-echo/src/platform/nrf52/aes-256/tiny-aes.cpp.o
+2025-09-21T23:35:32.0840363Z Compiling .pio/build/t-echo/src/platform/nrf52/alloc.cpp.o
+2025-09-21T23:35:32.1930087Z Compiling .pio/build/t-echo/src/platform/nrf52/hardfault.cpp.o
+2025-09-21T23:35:32.7221821Z Compiling .pio/build/t-echo/src/platform/nrf52/main-bare.cpp.o
+2025-09-21T23:35:32.8431106Z Compiling .pio/build/t-echo/src/platform/nrf52/main-nrf52.cpp.o
+2025-09-21T23:35:32.9625812Z Compiling .pio/build/t-echo/src/sleep.cpp.o
+2025-09-21T23:35:33.0059965Z Compiling .pio/build/t-echo/src/xmodem.cpp.o
+2025-09-21T23:35:33.7376865Z Compiling .pio/build/t-echo/lib1c0/Wire/Wire_nRF52.cpp.o
+2025-09-21T23:35:33.8256610Z Compiling .pio/build/t-echo/libc79/SPI/SPI.cpp.o
+2025-09-21T23:35:34.0836126Z Archiving .pio/build/t-echo/lib1c0/libWire.a
+2025-09-21T23:35:34.0886461Z Indexing .pio/build/t-echo/lib1c0/libWire.a
+2025-09-21T23:35:34.1023133Z Compiling .pio/build/t-echo/libc79/SPI/SPI_nrf52832.cpp.o
+2025-09-21T23:35:34.1747204Z Compiling .pio/build/t-echo/lib2c2/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:35:34.1820898Z Archiving .pio/build/t-echo/libc79/libSPI.a
+2025-09-21T23:35:34.1851903Z Indexing .pio/build/t-echo/libc79/libSPI.a
+2025-09-21T23:35:34.1970685Z Compiling .pio/build/t-echo/lib2c2/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:35:34.4030415Z Compiling .pio/build/t-echo/lib2c2/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:35:34.4762512Z Compiling .pio/build/t-echo/liba6e/OneButton/OneButton.cpp.o
+2025-09-21T23:35:34.5032978Z Compiling .pio/build/t-echo/liba6e/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:35:34.7235885Z Compiling .pio/build/t-echo/lib614/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:35:34.7789224Z Compiling .pio/build/t-echo/lib2b4/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:35:34.7870989Z Archiving .pio/build/t-echo/liba6e/libOneButton.a
+2025-09-21T23:35:34.7922087Z Indexing .pio/build/t-echo/liba6e/libOneButton.a
+2025-09-21T23:35:34.8204291Z Compiling .pio/build/t-echo/lib378/ArduinoThread/Thread.cpp.o
+2025-09-21T23:35:34.9870523Z Archiving .pio/build/t-echo/lib614/libarduino-fsm.a
+2025-09-21T23:35:34.9910829Z Indexing .pio/build/t-echo/lib614/libarduino-fsm.a
+2025-09-21T23:35:35.0029670Z Compiling .pio/build/t-echo/lib378/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:35:35.0540893Z Archiving .pio/build/t-echo/lib2c2/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:35.0594643Z Indexing .pio/build/t-echo/lib2c2/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:35:35.0705612Z Compiling .pio/build/t-echo/lib802/Nanopb/pb_common.c.o
+2025-09-21T23:35:35.0845018Z Compiling .pio/build/t-echo/lib802/Nanopb/pb_decode.c.o
+2025-09-21T23:35:35.1692122Z Compiling .pio/build/t-echo/lib802/Nanopb/pb_encode.c.o
+2025-09-21T23:35:35.1870819Z Archiving .pio/build/t-echo/lib2b4/libTinyGPSPlus.a
+2025-09-21T23:35:35.1920820Z Indexing .pio/build/t-echo/lib2b4/libTinyGPSPlus.a
+2025-09-21T23:35:35.2047368Z Compiling .pio/build/t-echo/libea2/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:35:35.2654150Z Archiving .pio/build/t-echo/lib378/libArduinoThread.a
+2025-09-21T23:35:35.2708328Z Indexing .pio/build/t-echo/lib378/libArduinoThread.a
+2025-09-21T23:35:35.2725202Z Archiving .pio/build/t-echo/libea2/libErriezCRC32.a
+2025-09-21T23:35:35.2756108Z Indexing .pio/build/t-echo/libea2/libErriezCRC32.a
+2025-09-21T23:35:35.2903457Z Compiling .pio/build/t-echo/lib31a/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:35:35.3196094Z Compiling .pio/build/t-echo/libf7d/RadioLib/Hal.cpp.o
+2025-09-21T23:35:35.3387330Z Compiling .pio/build/t-echo/libf7d/RadioLib/Module.cpp.o
+2025-09-21T23:35:35.3473167Z Archiving .pio/build/t-echo/lib802/libNanopb.a
+2025-09-21T23:35:35.3507035Z Indexing .pio/build/t-echo/lib802/libNanopb.a
+2025-09-21T23:35:35.3653454Z Compiling .pio/build/t-echo/libf7d/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:35:35.5575289Z Archiving .pio/build/t-echo/lib31a/libNonBlockingRTTTL.a
+2025-09-21T23:35:35.5616940Z Indexing .pio/build/t-echo/lib31a/libNonBlockingRTTTL.a
+2025-09-21T23:35:35.5798507Z Compiling .pio/build/t-echo/libf7d/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:35:35.5913619Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:35:35.6517393Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:35:35.6655560Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:35:35.6786580Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:35:35.7049482Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:35:35.9589798Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:35:35.9717174Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:35:35.9872113Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:35:36.0013937Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:35:36.3059300Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:35:36.4500556Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:35:36.4610598Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:35:36.5821097Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:35:36.6392796Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:35:36.6903939Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:35:36.7042243Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:35:36.8185793Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:35:36.8785652Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:35:36.9298990Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:35:36.9774901Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:35:37.1152614Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:35:37.1759791Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:35:37.3245015Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:35:37.4371140Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:35:37.4549073Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:35:37.5958449Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:35:37.7116055Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:35:37.7251344Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:35:37.7454213Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:35:37.8942095Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:35:38.0063233Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:35:38.1059107Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:35:38.2038763Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:35:38.2665549Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:35:38.3733161Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:35:38.3976960Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:35:38.5066831Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:35:38.6118882Z Compiling .pio/build/t-echo/libf7d/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:35:38.6434892Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:35:38.6925475Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:35:38.7483946Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:35:38.8120575Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:35:38.8759956Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:35:38.9310780Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:35:38.9924364Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:35:39.0604261Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:35:39.1408423Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:35:39.1551002Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:35:39.1741740Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:35:39.2165152Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:35:39.2301165Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:35:39.2449636Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:35:39.2622270Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:35:39.4937151Z Compiling .pio/build/t-echo/libf7d/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:35:39.5126798Z Compiling .pio/build/t-echo/libf7d/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:35:39.5472642Z Compiling .pio/build/t-echo/libf7d/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:35:39.5633472Z Compiling .pio/build/t-echo/libf7d/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:35:39.7321266Z Compiling .pio/build/t-echo/libf7d/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:35:39.7795767Z Compiling .pio/build/t-echo/libabb/Crypto/AES128.cpp.o
+2025-09-21T23:35:39.8704313Z Compiling .pio/build/t-echo/libabb/Crypto/AES192.cpp.o
+2025-09-21T23:35:39.8917527Z Compiling .pio/build/t-echo/libabb/Crypto/AES256.cpp.o
+2025-09-21T23:35:39.9266639Z Compiling .pio/build/t-echo/libabb/Crypto/AESCommon.cpp.o
+2025-09-21T23:35:39.9651188Z Compiling .pio/build/t-echo/libabb/Crypto/AESEsp32.cpp.o
+2025-09-21T23:35:39.9762401Z Archiving .pio/build/t-echo/libf7d/libRadioLib.a
+2025-09-21T23:35:40.0165988Z Indexing .pio/build/t-echo/libf7d/libRadioLib.a
+2025-09-21T23:35:40.0487976Z Compiling .pio/build/t-echo/libabb/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:35:40.0690687Z Compiling .pio/build/t-echo/libabb/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:35:40.0844395Z Compiling .pio/build/t-echo/libabb/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:35:40.0961188Z Compiling .pio/build/t-echo/libabb/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:35:40.1255048Z Compiling .pio/build/t-echo/libabb/Crypto/BlockCipher.cpp.o
+2025-09-21T23:35:40.2057586Z Compiling .pio/build/t-echo/libabb/Crypto/CTR.cpp.o
+2025-09-21T23:35:40.2208265Z Compiling .pio/build/t-echo/libabb/Crypto/ChaCha.cpp.o
+2025-09-21T23:35:40.2329626Z Compiling .pio/build/t-echo/libabb/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:35:40.2471326Z Compiling .pio/build/t-echo/libabb/Crypto/Cipher.cpp.o
+2025-09-21T23:35:40.3028166Z Compiling .pio/build/t-echo/libabb/Crypto/Crypto.cpp.o
+2025-09-21T23:35:40.3243401Z Compiling .pio/build/t-echo/libabb/Crypto/Curve25519.cpp.o
+2025-09-21T23:35:40.3422249Z Compiling .pio/build/t-echo/libabb/Crypto/EAX.cpp.o
+2025-09-21T23:35:40.3524959Z Compiling .pio/build/t-echo/libabb/Crypto/Ed25519.cpp.o
+2025-09-21T23:35:40.3901977Z Compiling .pio/build/t-echo/libabb/Crypto/GCM.cpp.o
+2025-09-21T23:35:40.4589873Z Compiling .pio/build/t-echo/libabb/Crypto/GF128.cpp.o
+2025-09-21T23:35:40.5049969Z Compiling .pio/build/t-echo/libabb/Crypto/GHASH.cpp.o
+2025-09-21T23:35:40.5176340Z Compiling .pio/build/t-echo/libabb/Crypto/HKDF.cpp.o
+2025-09-21T23:35:40.5306444Z Compiling .pio/build/t-echo/libabb/Crypto/Hash.cpp.o
+2025-09-21T23:35:40.5614928Z Compiling .pio/build/t-echo/libabb/Crypto/KeccakCore.cpp.o
+2025-09-21T23:35:40.5920505Z Compiling .pio/build/t-echo/libabb/Crypto/NoiseSource.cpp.o
+2025-09-21T23:35:40.6148555Z Compiling .pio/build/t-echo/libabb/Crypto/OMAC.cpp.o
+2025-09-21T23:35:40.6270663Z Compiling .pio/build/t-echo/libabb/Crypto/P521.cpp.o
+2025-09-21T23:35:40.6741073Z Compiling .pio/build/t-echo/libabb/Crypto/Poly1305.cpp.o
+2025-09-21T23:35:40.7201035Z Compiling .pio/build/t-echo/libabb/Crypto/RNG.cpp.o
+2025-09-21T23:35:40.7338781Z Compiling .pio/build/t-echo/libabb/Crypto/SHA224.cpp.o
+2025-09-21T23:35:40.7748111Z Compiling .pio/build/t-echo/libabb/Crypto/SHA256.cpp.o
+2025-09-21T23:35:40.8097289Z /pio/workspace/libdeps/t-echo/Crypto/RNG.cpp:63:2: warning: #warning "no hardware random number source detected for this platform" [-Wcpp]
+2025-09-21T23:35:40.8098566Z    63 | #warning "no hardware random number source detected for this platform"
+2025-09-21T23:35:40.8099916Z       |  ^~~~~~~
+2025-09-21T23:35:40.8189934Z Compiling .pio/build/t-echo/libabb/Crypto/SHA3.cpp.o
+2025-09-21T23:35:40.8917236Z Compiling .pio/build/t-echo/libabb/Crypto/SHA384.cpp.o
+2025-09-21T23:35:40.9043780Z Compiling .pio/build/t-echo/libabb/Crypto/SHA512.cpp.o
+2025-09-21T23:35:40.9287897Z Compiling .pio/build/t-echo/libabb/Crypto/SHAKE.cpp.o
+2025-09-21T23:35:40.9815286Z Compiling .pio/build/t-echo/libabb/Crypto/XOF.cpp.o
+2025-09-21T23:35:41.0085471Z Compiling .pio/build/t-echo/libabb/Crypto/XTS.cpp.o
+2025-09-21T23:35:41.0436353Z Compiling .pio/build/t-echo/lib4c0/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:35:41.0607841Z Compiling .pio/build/t-echo/lib4c0/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:35:41.0735146Z Compiling .pio/build/t-echo/lib4c0/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:35:41.1278507Z Archiving .pio/build/t-echo/libabb/libCrypto.a
+2025-09-21T23:35:41.1461719Z Indexing .pio/build/t-echo/libabb/libCrypto.a
+2025-09-21T23:35:41.1722830Z Compiling .pio/build/t-echo/lib4c0/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:35:41.3355104Z Compiling .pio/build/t-echo/lib6a6/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:35:41.3569306Z Compiling .pio/build/t-echo/lib53f/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:35:41.3835631Z Compiling .pio/build/t-echo/libe2a/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:35:41.4806522Z Archiving .pio/build/t-echo/lib4c0/libAdafruit BusIO.a
+2025-09-21T23:35:41.4842757Z Indexing .pio/build/t-echo/lib4c0/libAdafruit BusIO.a
+2025-09-21T23:35:41.5171535Z Compiling .pio/build/t-echo/lib3f1/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:35:41.5873062Z Archiving .pio/build/t-echo/lib6a6/libAdafruit Unified Sensor.a
+2025-09-21T23:35:41.5913687Z Indexing .pio/build/t-echo/lib6a6/libAdafruit Unified Sensor.a
+2025-09-21T23:35:41.6201983Z Compiling .pio/build/t-echo/lib7fc/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:35:41.6565795Z Archiving .pio/build/t-echo/libe2a/libAdafruit BMP085 Library.a
+2025-09-21T23:35:41.6609190Z Indexing .pio/build/t-echo/libe2a/libAdafruit BMP085 Library.a
+2025-09-21T23:35:41.6876859Z Compiling .pio/build/t-echo/lib35a/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:35:41.7048988Z Archiving .pio/build/t-echo/lib53f/libAdafruit BMP280 Library.a
+2025-09-21T23:35:41.7094058Z Indexing .pio/build/t-echo/lib53f/libAdafruit BMP280 Library.a
+2025-09-21T23:35:41.7350931Z Compiling .pio/build/t-echo/lib773/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:35:41.8867070Z Archiving .pio/build/t-echo/lib3f1/libAdafruit BME280 Library.a
+2025-09-21T23:35:41.8909864Z Indexing .pio/build/t-echo/lib3f1/libAdafruit BME280 Library.a
+2025-09-21T23:35:41.9184592Z Compiling .pio/build/t-echo/lib8f5/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:35:41.9653436Z Archiving .pio/build/t-echo/lib7fc/libAdafruit DPS310.a
+2025-09-21T23:35:41.9693722Z Indexing .pio/build/t-echo/lib7fc/libAdafruit DPS310.a
+2025-09-21T23:35:41.9949515Z Compiling .pio/build/t-echo/libf1d/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:35:42.0035897Z Archiving .pio/build/t-echo/lib35a/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:42.0075963Z Indexing .pio/build/t-echo/lib35a/libAdafruit MCP9808 Library.a
+2025-09-21T23:35:42.0197281Z Compiling .pio/build/t-echo/libf1d/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:35:42.0265455Z Archiving .pio/build/t-echo/lib773/libAdafruit INA260 Library.a
+2025-09-21T23:35:42.0321458Z Indexing .pio/build/t-echo/lib773/libAdafruit INA260 Library.a
+2025-09-21T23:35:42.0412934Z Compiling .pio/build/t-echo/libf1d/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:35:42.2022628Z Archiving .pio/build/t-echo/lib8f5/libAdafruit INA219.a
+2025-09-21T23:35:42.2061851Z Indexing .pio/build/t-echo/lib8f5/libAdafruit INA219.a
+2025-09-21T23:35:42.2176283Z Compiling .pio/build/t-echo/libf1d/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:35:42.2941614Z Compiling .pio/build/t-echo/lib134/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:35:42.3176175Z Compiling .pio/build/t-echo/lib20c/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:35:42.3451227Z Compiling .pio/build/t-echo/lib7cf/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:35:42.4133029Z /pio/workspace/libdeps/t-echo/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In static member function 'static bool UARTDevice::uart_read(void*, uint8_t*, size_t)':
+2025-09-21T23:35:42.4136333Z /pio/workspace/libdeps/t-echo/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:120:40: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:35:42.4139457Z   120 |   while (dev->_serial_dev->available() < len && timeout--) {
+2025-09-21T23:35:42.4140036Z       |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+2025-09-21T23:35:42.4184314Z /pio/workspace/libdeps/t-echo/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM25(PM25_AQI_Data*)':
+2025-09-21T23:35:42.4191343Z /pio/workspace/libdeps/t-echo/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:198:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:35:42.4194438Z   198 |   if (_uart_dev->available() < bufLen)
+2025-09-21T23:35:42.4194915Z       |       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2025-09-21T23:35:42.4196103Z /pio/workspace/libdeps/t-echo/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp: In member function 'bool Adafruit_PM25AQI_UART::read_PM1006(PM25_AQI_Data*)':
+2025-09-21T23:35:42.4198240Z /pio/workspace/libdeps/t-echo/Adafruit PM25 AQI Sensor/src/Adafruit_PM25AQI_UART.cpp:271:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+2025-09-21T23:35:42.4228306Z   271 |   if (_uart_dev->available() < bufLen) {
+2025-09-21T23:35:42.4231001Z       |       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2025-09-21T23:35:42.5053840Z Archiving .pio/build/t-echo/libf1d/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:42.5114872Z Indexing .pio/build/t-echo/libf1d/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:35:42.5432250Z Compiling .pio/build/t-echo/lib453/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:35:42.6387458Z Archiving .pio/build/t-echo/lib7cf/libAdafruit AHTX0.a
+2025-09-21T23:35:42.6437244Z Indexing .pio/build/t-echo/lib7cf/libAdafruit AHTX0.a
+2025-09-21T23:35:42.6446187Z Archiving .pio/build/t-echo/lib20c/libAdafruit LIS3DH.a
+2025-09-21T23:35:42.6506501Z Indexing .pio/build/t-echo/lib20c/libAdafruit LIS3DH.a
+2025-09-21T23:35:42.6537149Z Compiling .pio/build/t-echo/lib453/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:35:42.6650093Z Compiling .pio/build/t-echo/lib453/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:35:42.6826356Z Archiving .pio/build/t-echo/lib134/libAdafruit MPU6050.a
+2025-09-21T23:35:42.6869661Z Indexing .pio/build/t-echo/lib134/libAdafruit MPU6050.a
+2025-09-21T23:35:42.6994236Z Compiling .pio/build/t-echo/lib453/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:35:42.8117358Z Compiling .pio/build/t-echo/lib453/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:35:42.9349794Z Compiling .pio/build/t-echo/lib453/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:35:42.9623090Z Compiling .pio/build/t-echo/lib453/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:35:43.0446532Z Compiling .pio/build/t-echo/lib453/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:35:43.1072507Z Compiling .pio/build/t-echo/lib3ed/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:35:43.2165911Z Compiling .pio/build/t-echo/lib443/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:35:43.2653563Z Compiling .pio/build/t-echo/lib1db/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:35:43.3146101Z Archiving .pio/build/t-echo/lib453/libAdafruit LSM6DS.a
+2025-09-21T23:35:43.3215442Z Indexing .pio/build/t-echo/lib453/libAdafruit LSM6DS.a
+2025-09-21T23:35:43.3543155Z Compiling .pio/build/t-echo/libeb5/INA3221/INA3221.cpp.o
+2025-09-21T23:35:43.4082295Z Archiving .pio/build/t-echo/lib3ed/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:43.4130029Z Indexing .pio/build/t-echo/lib3ed/libAdafruit TSL2591 Library.a
+2025-09-21T23:35:43.4432039Z Compiling .pio/build/t-echo/libe98/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:35:43.5337144Z Archiving .pio/build/t-echo/lib1db/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:43.5378613Z Indexing .pio/build/t-echo/lib1db/libAdafruit MLX90614 Library.a
+2025-09-21T23:35:43.5634021Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::reset()':
+2025-09-21T23:35:43.5636393Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:88:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5638475Z    88 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5639254Z       |                                                  ^
+2025-09-21T23:35:43.5639943Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5641014Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5641702Z   101 |     typedef struct {
+2025-09-21T23:35:43.5642069Z       |                    ^
+2025-09-21T23:35:43.5643678Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:90:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5645530Z    90 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5646027Z       |                                                   ^
+2025-09-21T23:35:43.5649526Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5650862Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5651844Z   101 |     typedef struct {
+2025-09-21T23:35:43.5653669Z       |                    ^
+2025-09-21T23:35:43.5655949Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModePowerDown()':
+2025-09-21T23:35:43.5657868Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:96:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5659456Z    96 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5659931Z       |                                                  ^
+2025-09-21T23:35:43.5661109Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5661979Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5662630Z   101 |     typedef struct {
+2025-09-21T23:35:43.5662979Z       |                    ^
+2025-09-21T23:35:43.5664573Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:99:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5666271Z    99 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5666737Z       |                                                   ^
+2025-09-21T23:35:43.5667367Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5668196Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5668840Z   101 |     typedef struct {
+2025-09-21T23:35:43.5669187Z       |                    ^
+2025-09-21T23:35:43.5670524Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeContinious()':
+2025-09-21T23:35:43.5672547Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:105:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5674401Z   105 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5674876Z       |                                                  ^
+2025-09-21T23:35:43.5675485Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5676299Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5676905Z   101 |     typedef struct {
+2025-09-21T23:35:43.5677244Z       |                    ^
+2025-09-21T23:35:43.5679445Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:107:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5681311Z   107 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5681809Z       |                                                   ^
+2025-09-21T23:35:43.5682452Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5683273Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5683890Z   101 |     typedef struct {
+2025-09-21T23:35:43.5684214Z       |                    ^
+2025-09-21T23:35:43.5684959Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeTriggered()':
+2025-09-21T23:35:43.5686922Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:113:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5688559Z   113 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5689028Z       |                                                  ^
+2025-09-21T23:35:43.5689626Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5690634Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5691249Z   101 |     typedef struct {
+2025-09-21T23:35:43.5691600Z       |                    ^
+2025-09-21T23:35:43.5693163Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:115:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5694797Z   115 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5695286Z       |                                                   ^
+2025-09-21T23:35:43.5695916Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5696768Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5697397Z   101 |     typedef struct {
+2025-09-21T23:35:43.5697749Z       |                    ^
+2025-09-21T23:35:43.5698517Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasEnable()':
+2025-09-21T23:35:43.5713127Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:121:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5714857Z   121 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5715387Z       |                                                  ^
+2025-09-21T23:35:43.5716407Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5717296Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5717941Z   101 |     typedef struct {
+2025-09-21T23:35:43.5718289Z       |                    ^
+2025-09-21T23:35:43.5720085Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:123:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5721956Z   123 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5722409Z       |                                                   ^
+2025-09-21T23:35:43.5723010Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5723787Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5724411Z   101 |     typedef struct {
+2025-09-21T23:35:43.5724753Z       |                    ^
+2025-09-21T23:35:43.5725514Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasDisable()':
+2025-09-21T23:35:43.5754627Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:129:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5756465Z   129 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5757076Z       |                                                  ^
+2025-09-21T23:35:43.5757679Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5758474Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5759082Z   101 |     typedef struct {
+2025-09-21T23:35:43.5759420Z       |                    ^
+2025-09-21T23:35:43.5761091Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:131:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5762795Z   131 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5763283Z       |                                                   ^
+2025-09-21T23:35:43.5763907Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5764727Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5765355Z   101 |     typedef struct {
+2025-09-21T23:35:43.5765698Z       |                    ^
+2025-09-21T23:35:43.5766470Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasEnable()':
+2025-09-21T23:35:43.5768467Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:137:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5770110Z   137 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5770810Z       |                                                  ^
+2025-09-21T23:35:43.5771424Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5772289Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5772916Z   101 |     typedef struct {
+2025-09-21T23:35:43.5773254Z       |                    ^
+2025-09-21T23:35:43.5775062Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:139:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5776761Z   139 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5777265Z       |                                                   ^
+2025-09-21T23:35:43.5777905Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5779019Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5779705Z   101 |     typedef struct {
+2025-09-21T23:35:43.5780055Z       |                    ^
+2025-09-21T23:35:43.5781064Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasDisable()':
+2025-09-21T23:35:43.5811956Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:145:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5816261Z   145 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5818934Z       |                                                  ^
+2025-09-21T23:35:43.5819575Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5820808Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5821444Z   101 |     typedef struct {
+2025-09-21T23:35:43.5821813Z       |                    ^
+2025-09-21T23:35:43.5826398Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:147:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5828095Z   147 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5828602Z       |                                                   ^
+2025-09-21T23:35:43.5829254Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5836992Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5837708Z   101 |     typedef struct {
+2025-09-21T23:35:43.5838070Z       |                    ^
+2025-09-21T23:35:43.5838990Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setAveragingMode(ina3221_avg_mode_t)':
+2025-09-21T23:35:43.5841411Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:153:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5843091Z   153 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5843567Z       |                                                  ^
+2025-09-21T23:35:43.5844179Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5845030Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5845675Z   101 |     typedef struct {
+2025-09-21T23:35:43.5846044Z       |                    ^
+2025-09-21T23:35:43.5848133Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:155:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5849974Z   155 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5850646Z       |                                                   ^
+2025-09-21T23:35:43.5851280Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5852130Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5852766Z   101 |     typedef struct {
+2025-09-21T23:35:43.5853111Z       |                    ^
+2025-09-21T23:35:43.5854246Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:35:43.5856394Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:161:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5858195Z   161 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5858678Z       |                                                  ^
+2025-09-21T23:35:43.5859295Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5860337Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5860957Z   101 |     typedef struct {
+2025-09-21T23:35:43.5861298Z       |                    ^
+2025-09-21T23:35:43.5862828Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:163:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5864515Z   163 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5865018Z       |                                                   ^
+2025-09-21T23:35:43.5865641Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5866442Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5867073Z   101 |     typedef struct {
+2025-09-21T23:35:43.5867412Z       |                    ^
+2025-09-21T23:35:43.5868311Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:35:43.5870665Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:169:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5873640Z   169 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5874337Z       |                                                  ^
+2025-09-21T23:35:43.5874962Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5875815Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5876709Z   101 |     typedef struct {
+2025-09-21T23:35:43.5877042Z       |                    ^
+2025-09-21T23:35:43.5878812Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:171:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5880905Z   171 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5881362Z       |                                                   ^
+2025-09-21T23:35:43.5881984Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5883098Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5883741Z   101 |     typedef struct {
+2025-09-21T23:35:43.5884094Z       |                    ^
+2025-09-21T23:35:43.5885133Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchEnable()':
+2025-09-21T23:35:43.5887424Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:197:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5889627Z   197 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5890366Z       |                                                           ^
+2025-09-21T23:35:43.5891267Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5892069Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5893349Z   115 |     typedef struct {
+2025-09-21T23:35:43.5893677Z       |                    ^
+2025-09-21T23:35:43.5895417Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:199:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5897410Z   199 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5897902Z       |                                                            ^
+2025-09-21T23:35:43.5898548Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5899770Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5900568Z   115 |     typedef struct {
+2025-09-21T23:35:43.5900914Z       |                    ^
+2025-09-21T23:35:43.5901709Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchDisable()':
+2025-09-21T23:35:43.5903808Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:206:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5905513Z   206 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5906024Z       |                                                           ^
+2025-09-21T23:35:43.5906667Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5907589Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5908231Z   115 |     typedef struct {
+2025-09-21T23:35:43.5908579Z       |                    ^
+2025-09-21T23:35:43.5910662Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:208:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5912396Z   208 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5912933Z       |                                                            ^
+2025-09-21T23:35:43.5913581Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5914420Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5915052Z   115 |     typedef struct {
+2025-09-21T23:35:43.5915410Z       |                    ^
+2025-09-21T23:35:43.5916212Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchEnable()':
+2025-09-21T23:35:43.5918308Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:215:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5920009Z   215 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5920739Z       |                                                           ^
+2025-09-21T23:35:43.5921372Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5922215Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5922832Z   115 |     typedef struct {
+2025-09-21T23:35:43.5923193Z       |                    ^
+2025-09-21T23:35:43.5923928Z Compiling .pio/build/t-echo/lib4b1/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:35:43.5925799Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:217:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5927788Z   217 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5928294Z       |                                                            ^
+2025-09-21T23:35:43.5928919Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5929777Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5930602Z   115 |     typedef struct {
+2025-09-21T23:35:43.5930954Z       |                    ^
+2025-09-21T23:35:43.5931802Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchDisable()':
+2025-09-21T23:35:43.5933905Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:224:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5935644Z   224 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5936174Z       |                                                           ^
+2025-09-21T23:35:43.5936824Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5937649Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5938287Z   115 |     typedef struct {
+2025-09-21T23:35:43.5938632Z       |                    ^
+2025-09-21T23:35:43.5940406Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:226:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5942215Z   226 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5942756Z       |                                                            ^
+2025-09-21T23:35:43.5943407Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5944254Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5944904Z   115 |     typedef struct {
+2025-09-21T23:35:43.5945249Z       |                    ^
+2025-09-21T23:35:43.5946074Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelEnable(ina3221_ch_t)':
+2025-09-21T23:35:43.5948185Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:265:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5949819Z   265 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5950601Z       |                                                  ^
+2025-09-21T23:35:43.5951203Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5952065Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5952705Z   101 |     typedef struct {
+2025-09-21T23:35:43.5953052Z       |                    ^
+2025-09-21T23:35:43.5954592Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:279:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5956254Z   279 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5956962Z       |                                                   ^
+2025-09-21T23:35:43.5957612Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5958417Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5959034Z   101 |     typedef struct {
+2025-09-21T23:35:43.5959365Z       |                    ^
+2025-09-21T23:35:43.5960639Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelDisable(ina3221_ch_t)':
+2025-09-21T23:35:43.5962774Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:285:50: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5964469Z   285 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5964965Z       |                                                  ^
+2025-09-21T23:35:43.5965620Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5966485Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5967136Z   101 |     typedef struct {
+2025-09-21T23:35:43.5967511Z       |                    ^
+2025-09-21T23:35:43.5969092Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:299:51: warning: converting a packed 'INA3221::conf_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5970992Z   299 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:35:43.5971491Z       |                                                   ^
+2025-09-21T23:35:43.5972135Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5972981Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:101:20: note: defined here
+2025-09-21T23:35:43.5973639Z   101 |     typedef struct {
+2025-09-21T23:35:43.5973992Z       |                    ^
+2025-09-21T23:35:43.5974863Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumEnable(ina3221_ch_t)':
+2025-09-21T23:35:43.5976986Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:359:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5978727Z   359 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5979262Z       |                                                           ^
+2025-09-21T23:35:43.5979905Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5981092Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5981750Z   115 |     typedef struct {
+2025-09-21T23:35:43.5982133Z       |                    ^
+2025-09-21T23:35:43.5983812Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:373:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5985568Z   373 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5986130Z       |                                                            ^
+2025-09-21T23:35:43.5986777Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5987639Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5988292Z   115 |     typedef struct {
+2025-09-21T23:35:43.5988671Z       |                    ^
+2025-09-21T23:35:43.5989780Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumDisable(ina3221_ch_t)':
+2025-09-21T23:35:43.5992166Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:380:59: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.5994103Z   380 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.5994629Z       |                                                           ^
+2025-09-21T23:35:43.5995274Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.5996121Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.5996753Z   115 |     typedef struct {
+2025-09-21T23:35:43.5997109Z       |                    ^
+2025-09-21T23:35:43.5998689Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:394:60: warning: converting a packed 'INA3221::masken_reg_t' pointer (alignment 1) to a 'uint16_t' {aka 'short unsigned int'} pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+2025-09-21T23:35:43.6000680Z   394 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:35:43.6001225Z       |                                                            ^
+2025-09-21T23:35:43.6001911Z In file included from /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.cpp:29:
+2025-09-21T23:35:43.6002781Z /pio/workspace/libdeps/t-echo/INA3221/src/INA3221.h:115:20: note: defined here
+2025-09-21T23:35:43.6003439Z   115 |     typedef struct {
+2025-09-21T23:35:43.6003808Z       |                    ^
+2025-09-21T23:35:43.6261599Z Archiving .pio/build/t-echo/lib443/libEmotiBit MLX90632.a
+2025-09-21T23:35:43.6285235Z Indexing .pio/build/t-echo/lib443/libEmotiBit MLX90632.a
+2025-09-21T23:35:43.6546100Z Compiling .pio/build/t-echo/lib849/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:35:43.7229880Z Archiving .pio/build/t-echo/libeb5/libINA3221.a
+2025-09-21T23:35:43.7277493Z Indexing .pio/build/t-echo/libeb5/libINA3221.a
+2025-09-21T23:35:43.7526734Z Compiling .pio/build/t-echo/lib572/INA226/INA226.cpp.o
+2025-09-21T23:35:43.7630642Z Archiving .pio/build/t-echo/libe98/libQMC5883LCompass.a
+2025-09-21T23:35:43.7675302Z Indexing .pio/build/t-echo/libe98/libQMC5883LCompass.a
+2025-09-21T23:35:43.7926469Z Compiling .pio/build/t-echo/libc29/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:35:43.9497158Z Archiving .pio/build/t-echo/lib4b1/libDFRobot_RTU.a
+2025-09-21T23:35:43.9560467Z Indexing .pio/build/t-echo/lib4b1/libDFRobot_RTU.a
+2025-09-21T23:35:43.9577792Z Archiving .pio/build/t-echo/lib849/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:43.9623111Z Indexing .pio/build/t-echo/lib849/libDFRobot_RainfallSensor.a
+2025-09-21T23:35:43.9739962Z Compiling .pio/build/t-echo/libc29/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:35:43.9901459Z Compiling .pio/build/t-echo/libc29/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:35:44.0591803Z Archiving .pio/build/t-echo/lib572/libINA226.a
+2025-09-21T23:35:44.0631386Z Indexing .pio/build/t-echo/lib572/libINA226.a
+2025-09-21T23:35:44.0937861Z Compiling .pio/build/t-echo/libef9/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:35:44.1434878Z Compiling .pio/build/t-echo/libef9/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:35:44.1807031Z /pio/workspace/libdeps/t-echo/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp: In function 'bool checkForBeat(int32_t)':
+2025-09-21T23:35:44.1809052Z /pio/workspace/libdeps/t-echo/SparkFun MAX3010x Pulse and Proximity Sensor Library/src/heartRate.cpp:108:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+2025-09-21T23:35:44.1810718Z   108 |     if ((IR_AC_Max - IR_AC_Min) > 20 & (IR_AC_Max - IR_AC_Min) < 1000)
+2025-09-21T23:35:44.1811616Z       |         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+2025-09-21T23:35:44.2539080Z Compiling .pio/build/t-echo/libc34/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:35:44.2697662Z Archiving .pio/build/t-echo/libc29/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:44.2752254Z Indexing .pio/build/t-echo/libc29/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:35:44.3035948Z Compiling .pio/build/t-echo/libb1b/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:35:44.5244966Z Compiling .pio/build/t-echo/lib061/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:35:44.5543360Z Archiving .pio/build/t-echo/libc34/libAdafruit LTR390 Library.a
+2025-09-21T23:35:44.5582030Z Indexing .pio/build/t-echo/libc34/libAdafruit LTR390 Library.a
+2025-09-21T23:35:44.5848084Z Compiling .pio/build/t-echo/lib8ab/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:35:44.5932537Z Archiving .pio/build/t-echo/libb1b/libAdafruit PCT2075.a
+2025-09-21T23:35:44.5969072Z Indexing .pio/build/t-echo/libb1b/libAdafruit PCT2075.a
+2025-09-21T23:35:44.6240542Z Compiling .pio/build/t-echo/lib094/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:35:44.6687066Z Archiving .pio/build/t-echo/libef9/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:44.6753612Z Indexing .pio/build/t-echo/libef9/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:35:44.6885066Z Compiling .pio/build/t-echo/lib094/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:35:44.7913798Z /pio/workspace/libdeps/t-echo/DFRobot_BMM150/DFRobot_BMM150.cpp: In member function 'uint8_t DFRobot_BMM150::getRate()':
+2025-09-21T23:35:44.7932852Z /pio/workspace/libdeps/t-echo/DFRobot_BMM150/DFRobot_BMM150.cpp:161:10: warning: 'result' may be used uninitialized in this function [-Wmaybe-uninitialized]
+2025-09-21T23:35:44.7933903Z   161 |   return result;
+2025-09-21T23:35:44.7934223Z       |          ^~~~~~
+2025-09-21T23:35:44.8827413Z Archiving .pio/build/t-echo/lib8ab/libAdafruit TSL2561.a
+2025-09-21T23:35:44.8868078Z Indexing .pio/build/t-echo/lib8ab/libAdafruit TSL2561.a
+2025-09-21T23:35:44.9128204Z Compiling .pio/build/t-echo/libc66/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:35:44.9322504Z Archiving .pio/build/t-echo/lib061/libDFRobot_BMM150.a
+2025-09-21T23:35:44.9478592Z Indexing .pio/build/t-echo/lib061/libDFRobot_BMM150.a
+2025-09-21T23:35:44.9583496Z Compiling .pio/build/t-echo/libb0f/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:35:44.9847731Z Compiling .pio/build/t-echo/lib25f/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:35:44.9940640Z Archiving .pio/build/t-echo/lib094/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:44.9997459Z Indexing .pio/build/t-echo/lib094/libAdafruit BMP3XX Library.a
+2025-09-21T23:35:45.0130360Z Compiling .pio/build/t-echo/lib25f/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:35:45.2111430Z Archiving .pio/build/t-echo/libc66/libAdafruit MAX1704X.a
+2025-09-21T23:35:45.2130098Z Indexing .pio/build/t-echo/libc66/libAdafruit MAX1704X.a
+2025-09-21T23:35:45.2257556Z Compiling .pio/build/t-echo/lib25f/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:35:45.2484780Z Archiving .pio/build/t-echo/libb0f/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:45.2529132Z Indexing .pio/build/t-echo/libb0f/libAdafruit SHTC3 Library.a
+2025-09-21T23:35:45.2723804Z Compiling .pio/build/t-echo/lib7ec/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:35:45.2975052Z Compiling .pio/build/t-echo/libf11/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:35:45.3265708Z Compiling .pio/build/t-echo/lib556/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:35:45.5206423Z Archiving .pio/build/t-echo/lib25f/libAdafruit LPS2X.a
+2025-09-21T23:35:45.5256520Z Indexing .pio/build/t-echo/lib25f/libAdafruit LPS2X.a
+2025-09-21T23:35:45.5485665Z Compiling .pio/build/t-echo/libb7c/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:35:45.5540054Z Archiving .pio/build/t-echo/lib7ec/libAdafruit SHT31 Library.a
+2025-09-21T23:35:45.5577574Z Indexing .pio/build/t-echo/lib7ec/libAdafruit SHT31 Library.a
+2025-09-21T23:35:45.5829620Z Compiling .pio/build/t-echo/lib7f3/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:35:45.6077626Z Archiving .pio/build/t-echo/libf11/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:45.6119085Z Indexing .pio/build/t-echo/libf11/libAdafruit VEML7700 Library.a
+2025-09-21T23:35:45.6229141Z Compiling .pio/build/t-echo/lib03c/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:35:45.6348430Z Archiving .pio/build/t-echo/lib556/libAdafruit SHT4x Library.a
+2025-09-21T23:35:45.6393578Z Indexing .pio/build/t-echo/lib556/libAdafruit SHT4x Library.a
+2025-09-21T23:35:45.6658129Z Compiling .pio/build/t-echo/lib03c/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:35:45.8537353Z Archiving .pio/build/t-echo/lib7f3/libClosedCube OPT3001.a
+2025-09-21T23:35:45.8577681Z Indexing .pio/build/t-echo/lib7f3/libClosedCube OPT3001.a
+2025-09-21T23:35:45.8794554Z Compiling .pio/build/t-echo/libc6b/bsec2/bsec2.cpp.o
+2025-09-21T23:35:45.8872490Z Archiving .pio/build/t-echo/libb7c/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:45.8930351Z Indexing .pio/build/t-echo/libb7c/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:35:45.8944349Z Compiling .pio/build/t-echo/libc6b/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:35:45.9313087Z Compiling .pio/build/t-echo/libd09/SoftwareSerial/SoftwareSerial.cpp.o
+2025-09-21T23:35:45.9837362Z Archiving .pio/build/t-echo/lib03c/libBME68x Sensor library.a
+2025-09-21T23:35:45.9893229Z Indexing .pio/build/t-echo/lib03c/libBME68x Sensor library.a
+2025-09-21T23:35:46.0199860Z Compiling .pio/build/t-echo/libbc1/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:35:46.1683495Z Compiling .pio/build/t-echo/libb1d/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:35:46.1991089Z Archiving .pio/build/t-echo/libc6b/libbsec2.a
+2025-09-21T23:35:46.2044340Z Indexing .pio/build/t-echo/libc6b/libbsec2.a
+2025-09-21T23:35:46.2165727Z Compiling .pio/build/t-echo/libb1d/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:35:46.2668572Z Compiling .pio/build/t-echo/libb1d/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:35:46.2733842Z Archiving .pio/build/t-echo/libd09/libSoftwareSerial.a
+2025-09-21T23:35:46.2776685Z Indexing .pio/build/t-echo/libd09/libSoftwareSerial.a
+2025-09-21T23:35:46.2905053Z Compiling .pio/build/t-echo/libb1d/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:35:46.3091004Z Compiling .pio/build/t-echo/libb1d/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:35:46.3512299Z Archiving .pio/build/t-echo/libbc1/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:46.3557127Z Indexing .pio/build/t-echo/libbc1/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:35:46.3698502Z Compiling .pio/build/t-echo/libb1d/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:35:46.4154980Z Compiling .pio/build/t-echo/libb1d/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:35:46.5472639Z Compiling .pio/build/t-echo/lib4a5/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:35:46.5782494Z Compiling .pio/build/t-echo/libc80/Adafruit GFX Library/Adafruit_GFX.cpp.o
+2025-09-21T23:35:46.6431890Z Compiling .pio/build/t-echo/libc80/Adafruit GFX Library/Adafruit_GrayOLED.cpp.o
+2025-09-21T23:35:46.6799219Z Archiving .pio/build/t-echo/libb1d/libSensirion Core.a
+2025-09-21T23:35:46.6867472Z Indexing .pio/build/t-echo/libb1d/libSensirion Core.a
+2025-09-21T23:35:46.7033522Z Compiling .pio/build/t-echo/libc80/Adafruit GFX Library/Adafruit_SPITFT.cpp.o
+2025-09-21T23:35:46.9333291Z Archiving .pio/build/t-echo/lib4a5/libSensirion I2C SCD4x.a
+2025-09-21T23:35:46.9384745Z Indexing .pio/build/t-echo/lib4a5/libSensirion I2C SCD4x.a
+2025-09-21T23:35:46.9508368Z Compiling .pio/build/t-echo/libc80/Adafruit GFX Library/glcdfont.c.o
+2025-09-21T23:35:46.9848586Z Compiling .pio/build/t-echo/libe7b/GxEPD2/GxEPD2_EPD.cpp.o
+2025-09-21T23:35:47.0227236Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_1160_T91.cpp.o
+2025-09-21T23:35:47.1295156Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_1248.cpp.o
+2025-09-21T23:35:47.3097164Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_154.cpp.o
+2025-09-21T23:35:47.3261043Z Archiving .pio/build/t-echo/libc80/libAdafruit GFX Library.a
+2025-09-21T23:35:47.3325488Z Indexing .pio/build/t-echo/libc80/libAdafruit GFX Library.a
+2025-09-21T23:35:47.3464103Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_154_D67.cpp.o
+2025-09-21T23:35:47.3917524Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_154_M09.cpp.o
+2025-09-21T23:35:47.6077031Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_154_M10.cpp.o
+2025-09-21T23:35:47.6797369Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_154_T8.cpp.o
+2025-09-21T23:35:47.7080358Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213.cpp.o
+2025-09-21T23:35:47.7752617Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213_B72.cpp.o
+2025-09-21T23:35:47.9721629Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213_B73.cpp.o
+2025-09-21T23:35:48.0492272Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213_B74.cpp.o
+2025-09-21T23:35:48.0765180Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213_BN.cpp.o
+2025-09-21T23:35:48.1492705Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213_FC1.cpp.o
+2025-09-21T23:35:48.3401055Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213_M21.cpp.o
+2025-09-21T23:35:48.4163201Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213_T5D.cpp.o
+2025-09-21T23:35:48.4464819Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_213_flex.cpp.o
+2025-09-21T23:35:48.4711410Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_260.cpp.o
+2025-09-21T23:35:48.7276703Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_260_M01.cpp.o
+2025-09-21T23:35:48.7858490Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_270.cpp.o
+2025-09-21T23:35:48.8128039Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_290.cpp.o
+2025-09-21T23:35:48.8440509Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_290_M06.cpp.o
+2025-09-21T23:35:49.0917746Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_290_T5.cpp.o
+2025-09-21T23:35:49.1598542Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_290_T5D.cpp.o
+2025-09-21T23:35:49.1771318Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_290_T94.cpp.o
+2025-09-21T23:35:49.2102817Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_371.cpp.o
+2025-09-21T23:35:49.4587838Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_420.cpp.o
+2025-09-21T23:35:49.5278811Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_420_M01.cpp.o
+2025-09-21T23:35:49.5414449Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_583.cpp.o
+2025-09-21T23:35:49.5825717Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_583_T8.cpp.o
+2025-09-21T23:35:49.8344492Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_750.cpp.o
+2025-09-21T23:35:49.8964650Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd/GxEPD2_750_T7.cpp.o
+2025-09-21T23:35:49.9121449Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_154_Z90c.cpp.o
+2025-09-21T23:35:49.9449753Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_154c.cpp.o
+2025-09-21T23:35:50.2059631Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_213_Z19c.cpp.o
+2025-09-21T23:35:50.2685772Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_213c.cpp.o
+2025-09-21T23:35:50.2849347Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_270c.cpp.o
+2025-09-21T23:35:50.3200440Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_290_C90c.cpp.o
+2025-09-21T23:35:50.5844078Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_290_Z13c.cpp.o
+2025-09-21T23:35:50.6471546Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_290c.cpp.o
+2025-09-21T23:35:50.6677373Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_420c.cpp.o
+2025-09-21T23:35:50.6941029Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_565c.cpp.o
+2025-09-21T23:35:50.9657441Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_583c.cpp.o
+2025-09-21T23:35:51.0215304Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_750c.cpp.o
+2025-09-21T23:35:51.0415600Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_750c_Z08.cpp.o
+2025-09-21T23:35:51.1192218Z Compiling .pio/build/t-echo/libe7b/GxEPD2/epd3c/GxEPD2_750c_Z90.cpp.o
+2025-09-21T23:35:51.3503966Z Compiling .pio/build/t-echo/libe7b/GxEPD2/it8951/GxEPD2_it60.cpp.o
+2025-09-21T23:35:51.4069412Z Compiling .pio/build/t-echo/libe7b/GxEPD2/it8951/GxEPD2_it60_1448x1072.cpp.o
+2025-09-21T23:35:51.4376111Z Compiling .pio/build/t-echo/lib6e2/PCF8563_Library/pcf8563.cpp.o
+2025-09-21T23:35:51.5168320Z Compiling .pio/build/t-echo/lib947/RotaryEncoder/RotaryEncoder.cpp.o
+2025-09-21T23:35:51.7823222Z Compiling .pio/build/t-echo/lib947/RotaryEncoder/SwRotaryEncoder.cpp.o
+2025-09-21T23:35:51.8498612Z Compiling .pio/build/t-echo/libf88/Adafruit_LittleFS/Adafruit_LittleFS.cpp.o
+2025-09-21T23:35:51.8595860Z Archiving .pio/build/t-echo/lib6e2/libPCF8563_Library.a
+2025-09-21T23:35:51.8635152Z Archiving .pio/build/t-echo/libe7b/libGxEPD2.a
+2025-09-21T23:35:51.8656112Z Indexing .pio/build/t-echo/lib6e2/libPCF8563_Library.a
+2025-09-21T23:35:51.8784732Z Compiling .pio/build/t-echo/libf88/Adafruit_LittleFS/Adafruit_LittleFS_File.cpp.o
+2025-09-21T23:35:51.9041009Z Indexing .pio/build/t-echo/libe7b/libGxEPD2.a
+2025-09-21T23:35:51.9502424Z Compiling .pio/build/t-echo/libf88/Adafruit_LittleFS/littlefs/lfs.c.o
+2025-09-21T23:35:52.0210943Z Archiving .pio/build/t-echo/lib947/libRotaryEncoder.a
+2025-09-21T23:35:52.0262732Z Indexing .pio/build/t-echo/lib947/libRotaryEncoder.a
+2025-09-21T23:35:52.0378862Z Compiling .pio/build/t-echo/libf88/Adafruit_LittleFS/littlefs/lfs_util.c.o
+2025-09-21T23:35:52.1202475Z Compiling .pio/build/t-echo/liba05/InternalFileSytem/InternalFileSystem.cpp.o
+2025-09-21T23:35:52.1781521Z Compiling .pio/build/t-echo/liba05/InternalFileSytem/flash/flash_cache.c.o
+2025-09-21T23:35:52.2139221Z Compiling .pio/build/t-echo/liba05/InternalFileSytem/flash/flash_nrf5x.c.o
+2025-09-21T23:35:52.3201034Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEAdvertising.cpp.o
+2025-09-21T23:35:52.3310895Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLECentral.cpp.o
+2025-09-21T23:35:52.3408288Z Archiving .pio/build/t-echo/liba05/libInternalFileSytem.a
+2025-09-21T23:35:52.3455241Z Indexing .pio/build/t-echo/liba05/libInternalFileSytem.a
+2025-09-21T23:35:52.3579427Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLECharacteristic.cpp.o
+2025-09-21T23:35:52.3942944Z Archiving .pio/build/t-echo/libf88/libAdafruit_LittleFS.a
+2025-09-21T23:35:52.4004502Z Indexing .pio/build/t-echo/libf88/libAdafruit_LittleFS.a
+2025-09-21T23:35:52.4144864Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEClientCharacteristic.cpp.o
+2025-09-21T23:35:52.6927126Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEClientService.cpp.o
+2025-09-21T23:35:52.7501939Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEConnection.cpp.o
+2025-09-21T23:35:52.8496732Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEDiscovery.cpp.o
+2025-09-21T23:35:52.9411729Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEGatt.cpp.o
+2025-09-21T23:35:53.0506056Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEPeriph.cpp.o
+2025-09-21T23:35:53.1722333Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEScanner.cpp.o
+2025-09-21T23:35:53.3018405Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLESecurity.cpp.o
+2025-09-21T23:35:53.3134290Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEService.cpp.o
+2025-09-21T23:35:53.4171303Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/BLEUuid.cpp.o
+2025-09-21T23:35:53.6025281Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/bluefruit.cpp.o
+2025-09-21T23:35:53.6603198Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/clients/BLEAncs.cpp.o
+2025-09-21T23:35:53.6951634Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/clients/BLEClientBas.cpp.o
+2025-09-21T23:35:53.7226703Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/clients/BLEClientCts.cpp.o
+2025-09-21T23:35:54.0448954Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/clients/BLEClientDis.cpp.o
+2025-09-21T23:35:54.0577685Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/clients/BLEClientHidAdafruit.cpp.o
+2025-09-21T23:35:54.0910694Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/clients/BLEClientIas.cpp.o
+2025-09-21T23:35:54.1055267Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/clients/BLEClientUart.cpp.o
+2025-09-21T23:35:54.4029934Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEBas.cpp.o
+2025-09-21T23:35:54.4383668Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEBeacon.cpp.o
+2025-09-21T23:35:54.4521590Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEDfu.cpp.o
+2025-09-21T23:35:54.4716342Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEDis.cpp.o
+2025-09-21T23:35:54.7516212Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEHidAdafruit.cpp.o
+2025-09-21T23:35:54.7953377Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEHidGamepad.cpp.o
+2025-09-21T23:35:54.8199001Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEHidGeneric.cpp.o
+2025-09-21T23:35:54.8373544Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEIas.cpp.o
+2025-09-21T23:35:55.1544271Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEMidi.cpp.o
+2025-09-21T23:35:55.1690596Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/BLEUart.cpp.o
+2025-09-21T23:35:55.1926656Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/services/EddyStone.cpp.o
+2025-09-21T23:35:55.2069074Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/utility/AdaMsg.cpp.o
+2025-09-21T23:35:55.4708244Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/utility/bonding.cpp.o
+2025-09-21T23:35:55.5426447Z Compiling .pio/build/t-echo/lib982/Bluefruit52Lib/utility/bootloader_util.c.o
+2025-09-21T23:35:55.5801990Z Compiling .pio/build/t-echo/lib9c6/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:35:55.5954098Z Compiling .pio/build/t-echo/lib9c6/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:35:55.6102127Z Compiling .pio/build/t-echo/lib9c6/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:35:55.6669491Z Compiling .pio/build/t-echo/lib9c6/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:35:55.6823355Z Compiling .pio/build/t-echo/lib9c6/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:35:55.7343973Z Archiving .pio/build/t-echo/libFrameworkArduinoVariant.a
+2025-09-21T23:35:55.7390535Z Indexing .pio/build/t-echo/libFrameworkArduinoVariant.a
+2025-09-21T23:35:55.7645467Z Compiling .pio/build/t-echo/FrameworkArduino/HardwarePWM.cpp.o
+2025-09-21T23:35:55.7804148Z Compiling .pio/build/t-echo/FrameworkArduino/IPAddress.cpp.o
+2025-09-21T23:35:55.8636523Z Archiving .pio/build/t-echo/lib982/libBluefruit52Lib.a
+2025-09-21T23:35:55.8935717Z Indexing .pio/build/t-echo/lib982/libBluefruit52Lib.a
+2025-09-21T23:35:55.9346723Z Compiling .pio/build/t-echo/FrameworkArduino/Print.cpp.o
+2025-09-21T23:35:55.9449776Z Archiving .pio/build/t-echo/lib9c6/libAdafruit NeoPixel.a
+2025-09-21T23:35:55.9505845Z Indexing .pio/build/t-echo/lib9c6/libAdafruit NeoPixel.a
+2025-09-21T23:35:55.9623814Z Compiling .pio/build/t-echo/FrameworkArduino/RingBuffer.cpp.o
+2025-09-21T23:35:56.0388827Z Compiling .pio/build/t-echo/FrameworkArduino/Stream.cpp.o
+2025-09-21T23:35:56.0538943Z Compiling .pio/build/t-echo/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:35:56.0688800Z Compiling .pio/build/t-echo/FrameworkArduino/Uart.cpp.o
+2025-09-21T23:35:56.2386345Z Compiling .pio/build/t-echo/FrameworkArduino/WInterrupts.c.o
+2025-09-21T23:35:56.3253800Z Compiling .pio/build/t-echo/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:35:56.3386823Z Compiling .pio/build/t-echo/FrameworkArduino/WString.cpp.o
+2025-09-21T23:35:56.3649063Z Compiling .pio/build/t-echo/FrameworkArduino/abi.cpp.o
+2025-09-21T23:35:56.3751070Z Compiling .pio/build/t-echo/FrameworkArduino/avr/dtostrf.c.o
+2025-09-21T23:35:56.4117867Z Compiling .pio/build/t-echo/FrameworkArduino/delay.c.o
+2025-09-21T23:35:56.4364234Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/Source/croutine.c.o
+2025-09-21T23:35:56.4496114Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/Source/event_groups.c.o
+2025-09-21T23:35:56.5273435Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/Source/list.c.o
+2025-09-21T23:35:56.5402040Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/Source/portable/MemMang/heap_3.c.o
+2025-09-21T23:35:56.5791575Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/Source/queue.c.o
+2025-09-21T23:35:56.5958616Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/Source/stream_buffer.c.o
+2025-09-21T23:35:56.6359046Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/Source/tasks.c.o
+2025-09-21T23:35:56.6489999Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/Source/timers.c.o
+2025-09-21T23:35:56.7534083Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis.c.o
+2025-09-21T23:35:56.7891739Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis_systick.c.o
+2025-09-21T23:35:56.8056049Z Compiling .pio/build/t-echo/FrameworkArduino/freertos/portable/GCC/nrf52/port.c.o
+2025-09-21T23:35:56.8564270Z Compiling .pio/build/t-echo/FrameworkArduino/hooks.c.o
+2025-09-21T23:35:56.8955733Z Compiling .pio/build/t-echo/FrameworkArduino/itoa.c.o
+2025-09-21T23:35:56.9157008Z Compiling .pio/build/t-echo/FrameworkArduino/linker/gcc_startup_nrf52.S.o
+2025-09-21T23:35:56.9272845Z Compiling .pio/build/t-echo/FrameworkArduino/linker/gcc_startup_nrf52833.S.o
+2025-09-21T23:35:56.9410734Z Compiling .pio/build/t-echo/FrameworkArduino/linker/gcc_startup_nrf52840.S.o
+2025-09-21T23:35:56.9532008Z Compiling .pio/build/t-echo/FrameworkArduino/main.cpp.o
+2025-09-21T23:35:56.9660836Z Compiling .pio/build/t-echo/FrameworkArduino/new.cpp.o
+2025-09-21T23:35:56.9812499Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_gpiote.c.o
+2025-09-21T23:35:56.9963907Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_power.c.o
+2025-09-21T23:35:57.0719800Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_pwm.c.o
+2025-09-21T23:35:57.1349641Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_qspi.c.o
+2025-09-21T23:35:57.1500420Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spim.c.o
+2025-09-21T23:35:57.1665981Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spis.c.o
+2025-09-21T23:35:57.1914996Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_temp.c.o
+2025-09-21T23:35:57.2540343Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_timer.c.o
+2025-09-21T23:35:57.2963582Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/mdk/system_nrf52.c.o
+2025-09-21T23:35:57.3086898Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/mdk/system_nrf52833.c.o
+2025-09-21T23:35:57.3214209Z Compiling .pio/build/t-echo/FrameworkArduino/nordic/nrfx/mdk/system_nrf52840.c.o
+2025-09-21T23:35:57.3348284Z Compiling .pio/build/t-echo/FrameworkArduino/pulse.c.o
+2025-09-21T23:35:57.3513512Z Compiling .pio/build/t-echo/FrameworkArduino/pulse_asm.S.o
+2025-09-21T23:35:57.3711210Z Compiling .pio/build/t-echo/FrameworkArduino/rtos.cpp.o
+2025-09-21T23:35:57.3852546Z Compiling .pio/build/t-echo/FrameworkArduino/sysview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c.o
+2025-09-21T23:35:57.4421766Z Compiling .pio/build/t-echo/FrameworkArduino/sysview/SEGGER/SEGGER_RTT.c.o
+2025-09-21T23:35:57.4543292Z Compiling .pio/build/t-echo/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S.o
+2025-09-21T23:35:57.4808402Z Compiling .pio/build/t-echo/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_printf.c.o
+2025-09-21T23:35:57.5007763Z Compiling .pio/build/t-echo/FrameworkArduino/sysview/SEGGER/SEGGER_SYSVIEW.c.o
+2025-09-21T23:35:57.5833510Z Compiling .pio/build/t-echo/FrameworkArduino/sysview/SEGGER_SYSVIEW_FreeRTOS.c.o
+2025-09-21T23:35:57.6197195Z Compiling .pio/build/t-echo/FrameworkArduino/utility/AdaCallback.c.o
+2025-09-21T23:35:57.6322009Z Compiling .pio/build/t-echo/FrameworkArduino/utility/SoftwareTimer.cpp.o
+2025-09-21T23:35:57.6451627Z Compiling .pio/build/t-echo/FrameworkArduino/utility/adafruit_fifo.cpp.o
+2025-09-21T23:35:57.7522877Z Compiling .pio/build/t-echo/FrameworkArduino/utility/debug.cpp.o
+2025-09-21T23:35:57.8551100Z Compiling .pio/build/t-echo/FrameworkArduino/utility/utilities.c.o
+2025-09-21T23:35:57.8978652Z Compiling .pio/build/t-echo/FrameworkArduino/wiring.c.o
+2025-09-21T23:35:57.9177313Z Compiling .pio/build/t-echo/FrameworkArduino/wiring_analog.cpp.o
+2025-09-21T23:35:57.9822788Z Compiling .pio/build/t-echo/FrameworkArduino/wiring_analog_nRF52.c.o
+2025-09-21T23:35:58.0304216Z Compiling .pio/build/t-echo/FrameworkArduino/wiring_digital.c.o
+2025-09-21T23:35:58.0462512Z Compiling .pio/build/t-echo/FrameworkArduino/wiring_private.c.o
+2025-09-21T23:35:58.1116370Z Compiling .pio/build/t-echo/FrameworkArduino/wiring_shift.c.o
+2025-09-21T23:35:58.1668551Z Archiving .pio/build/t-echo/libFrameworkArduino.a
+2025-09-21T23:35:58.1888172Z Indexing .pio/build/t-echo/libFrameworkArduino.a
+2025-09-21T23:35:58.2342457Z Linking .pio/build/t-echo/firmware.elf
+2025-09-21T23:35:59.1517807Z /pio/core/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/bin/ld: .pio/build/t-echo/firmware.elf section `.text' will not fit in region `FLASH'
+2025-09-21T23:35:59.1520368Z /pio/core/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/bin/ld: region `FLASH' overflowed by 102368 bytes
+2025-09-21T23:35:59.1521576Z collect2: error: ld returned 1 exit status
+2025-09-21T23:35:59.1522294Z *** [.pio/build/t-echo/firmware.elf] Error 1
+2025-09-21T23:35:59.5543421Z ========================= [FAILED] Took 103.34 seconds =========================
+2025-09-21T23:35:59.5544007Z 
+2025-09-21T23:35:59.5549332Z Environment    Status    Duration
+2025-09-21T23:35:59.5549918Z -------------  --------  ------------
+2025-09-21T23:35:59.5550760Z t-echo         FAILED    00:01:43.336
+2025-09-21T23:35:59.5551389Z ==================== 1 failed, 0 succeeded in 00:01:43.336 ====================
+2025-09-21T23:35:59.7299611Z ##[error]Process completed with exit code 1.
+2025-09-21T23:35:59.7473782Z Post job cleanup.
+2025-09-21T23:35:59.8259875Z [command]/usr/bin/git version
+2025-09-21T23:35:59.8297569Z git version 2.51.0
+2025-09-21T23:35:59.8336515Z Temporarily overriding HOME='/home/runner/work/_temp/5f651bdb-eecb-4fd7-bb82-2a900fcf6696' before making global git config changes
+2025-09-21T23:35:59.8337767Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:35:59.8342023Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:35:59.8379114Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:35:59.8412079Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:35:59.8622472Z Entering 'meshtestic'
+2025-09-21T23:35:59.8665126Z Entering 'protobufs'
+2025-09-21T23:35:59.8721782Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:35:59.8743856Z http.https://github.com/.extraheader
+2025-09-21T23:35:59.8754213Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:35:59.8786119Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:35:59.8998433Z Entering 'meshtestic'
+2025-09-21T23:35:59.9022814Z http.https://github.com/.extraheader
+2025-09-21T23:35:59.9056894Z Entering 'protobufs'
+2025-09-21T23:35:59.9081824Z http.https://github.com/.extraheader
+2025-09-21T23:35:59.9248281Z Cleaning up orphan processes

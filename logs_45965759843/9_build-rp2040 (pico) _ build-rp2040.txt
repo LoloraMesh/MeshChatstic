@@ -1,0 +1,1376 @@
+﻿2025-09-21T23:35:00.8002406Z Current runner version: '2.328.0'
+2025-09-21T23:35:00.8024461Z ##[group]Runner Image Provisioner
+2025-09-21T23:35:00.8025211Z Hosted Compute Agent
+2025-09-21T23:35:00.8025834Z Version: 20250829.383
+2025-09-21T23:35:00.8026472Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:35:00.8027364Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:35:00.8028017Z ##[endgroup]
+2025-09-21T23:35:00.8028647Z ##[group]Operating System
+2025-09-21T23:35:00.8029202Z Ubuntu
+2025-09-21T23:35:00.8029625Z 24.04.3
+2025-09-21T23:35:00.8030142Z LTS
+2025-09-21T23:35:00.8030594Z ##[endgroup]
+2025-09-21T23:35:00.8031063Z ##[group]Runner Image
+2025-09-21T23:35:00.8031621Z Image: ubuntu-24.04
+2025-09-21T23:35:00.8032121Z Version: 20250907.24.1
+2025-09-21T23:35:00.8033113Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:35:00.8034692Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:35:00.8035656Z ##[endgroup]
+2025-09-21T23:35:00.8038340Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:35:00.8040244Z Actions: read
+2025-09-21T23:35:00.8040883Z Attestations: read
+2025-09-21T23:35:00.8041391Z Checks: read
+2025-09-21T23:35:00.8041869Z Contents: read
+2025-09-21T23:35:00.8042418Z Deployments: read
+2025-09-21T23:35:00.8042890Z Discussions: read
+2025-09-21T23:35:00.8043377Z Issues: read
+2025-09-21T23:35:00.8043852Z Metadata: read
+2025-09-21T23:35:00.8044388Z Models: read
+2025-09-21T23:35:00.8044866Z Packages: read
+2025-09-21T23:35:00.8045388Z Pages: read
+2025-09-21T23:35:00.8045854Z PullRequests: read
+2025-09-21T23:35:00.8046391Z RepositoryProjects: read
+2025-09-21T23:35:00.8046890Z SecurityEvents: read
+2025-09-21T23:35:00.8048002Z Statuses: read
+2025-09-21T23:35:00.8048517Z ##[endgroup]
+2025-09-21T23:35:00.8050437Z Secret source: Actions
+2025-09-21T23:35:00.8051230Z Prepare workflow directory
+2025-09-21T23:35:00.8365344Z Prepare all required actions
+2025-09-21T23:35:00.8405536Z Getting action download info
+2025-09-21T23:35:01.2915054Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:35:01.4726176Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:35:01.9136510Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:35:02.1225418Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:35:02.1230607Z ##[group] Inputs
+2025-09-21T23:35:02.1231137Z   version: 2.7.10.3d51287
+2025-09-21T23:35:02.1231635Z   platform: rp2040
+2025-09-21T23:35:02.1232065Z   pio_env: pico
+2025-09-21T23:35:02.1232499Z ##[endgroup]
+2025-09-21T23:35:02.1232999Z Complete job name: build-rp2040 (pico) / build-rp2040
+2025-09-21T23:35:02.1871317Z ##[group]Run actions/checkout@v5
+2025-09-21T23:35:02.1872212Z with:
+2025-09-21T23:35:02.1872641Z   submodules: recursive
+2025-09-21T23:35:02.1873121Z   ref: develop
+2025-09-21T23:35:02.1873631Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:02.1874371Z   token: ***
+2025-09-21T23:35:02.1874798Z   ssh-strict: true
+2025-09-21T23:35:02.1875225Z   ssh-user: git
+2025-09-21T23:35:02.1875662Z   persist-credentials: true
+2025-09-21T23:35:02.1876135Z   clean: true
+2025-09-21T23:35:02.1876551Z   sparse-checkout-cone-mode: true
+2025-09-21T23:35:02.1877065Z   fetch-depth: 1
+2025-09-21T23:35:02.1877881Z   fetch-tags: false
+2025-09-21T23:35:02.1878341Z   show-progress: true
+2025-09-21T23:35:02.1878778Z   lfs: false
+2025-09-21T23:35:02.1879182Z   set-safe-directory: true
+2025-09-21T23:35:02.1879975Z ##[endgroup]
+2025-09-21T23:35:02.2771241Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:02.2773135Z ##[group]Getting Git version info
+2025-09-21T23:35:02.2773970Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:35:02.2774979Z [command]/usr/bin/git version
+2025-09-21T23:35:02.2830801Z git version 2.51.0
+2025-09-21T23:35:02.2851181Z ##[endgroup]
+2025-09-21T23:35:02.2864384Z Temporarily overriding HOME='/home/runner/work/_temp/02519b2c-70a4-4015-a69f-82897f2badec' before making global git config changes
+2025-09-21T23:35:02.2866329Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:35:02.2868984Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:35:02.2904933Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:35:02.2908470Z ##[group]Initializing the repository
+2025-09-21T23:35:02.2912881Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:35:02.3023840Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:35:02.3025031Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:35:02.3025981Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:35:02.3026845Z hint:
+2025-09-21T23:35:02.3028035Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:35:02.3028763Z hint:
+2025-09-21T23:35:02.3029675Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:35:02.3031518Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:35:02.3032972Z hint:
+2025-09-21T23:35:02.3033800Z hint: 	git branch -m <name>
+2025-09-21T23:35:02.3034704Z hint:
+2025-09-21T23:35:02.3035891Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:35:02.3038055Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:35:02.3041497Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:02.3080194Z ##[endgroup]
+2025-09-21T23:35:02.3081550Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:35:02.3084431Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:35:02.3112962Z ##[endgroup]
+2025-09-21T23:35:02.3114387Z ##[group]Setting up auth
+2025-09-21T23:35:02.3120443Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:35:02.3151226Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:35:02.3502723Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:35:02.3535107Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:35:02.3755926Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:35:02.3791079Z ##[endgroup]
+2025-09-21T23:35:02.3792503Z ##[group]Fetching the repository
+2025-09-21T23:35:02.3801956Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:35:03.5130902Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:03.5133552Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:35:03.5166054Z ##[endgroup]
+2025-09-21T23:35:03.5169439Z ##[group]Determining the checkout info
+2025-09-21T23:35:03.5173347Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:35:03.5198575Z   origin/develop
+2025-09-21T23:35:03.5212797Z ##[endgroup]
+2025-09-21T23:35:03.5214028Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:35:03.5253966Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:35:03.5284427Z ##[group]Checking out the ref
+2025-09-21T23:35:03.5288846Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:35:03.6305482Z Switched to a new branch 'develop'
+2025-09-21T23:35:03.6309332Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:35:03.6320821Z ##[endgroup]
+2025-09-21T23:35:03.6323115Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:35:03.6328812Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:35:03.6382506Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:35:03.6421557Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:35:03.6452920Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:35:03.6478803Z ##[endgroup]
+2025-09-21T23:35:03.6480818Z ##[group]Fetching submodules
+2025-09-21T23:35:03.6482402Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:35:03.6705193Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:35:03.6918896Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:35:03.6923217Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:35:03.6946735Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:35:04.2098380Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:35:04.7304181Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:35:04.7414259Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:35:04.7443786Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:35:04.7647920Z Entering 'meshtestic'
+2025-09-21T23:35:04.7684099Z Entering 'protobufs'
+2025-09-21T23:35:04.7726996Z ##[endgroup]
+2025-09-21T23:35:04.7727768Z ##[group]Persisting credentials for submodules
+2025-09-21T23:35:04.7733209Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:35:04.7937953Z Entering 'meshtestic'
+2025-09-21T23:35:04.7978992Z Entering 'protobufs'
+2025-09-21T23:35:04.8031281Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:35:04.8233722Z Entering 'meshtestic'
+2025-09-21T23:35:04.8270800Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:35:04.8289624Z Entering 'protobufs'
+2025-09-21T23:35:04.8326293Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:35:04.8366467Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:35:04.8570600Z Entering 'meshtestic'
+2025-09-21T23:35:04.8607371Z Entering 'protobufs'
+2025-09-21T23:35:04.8655643Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:35:04.8858463Z Entering 'meshtestic'
+2025-09-21T23:35:04.8894086Z Entering 'protobufs'
+2025-09-21T23:35:04.8939019Z ##[endgroup]
+2025-09-21T23:35:04.8974170Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:35:04.8996576Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:35:04.9229702Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:35:04.9230108Z with:
+2025-09-21T23:35:04.9230285Z   pio_platform: rp2040
+2025-09-21T23:35:04.9230496Z   pio_env: pico
+2025-09-21T23:35:04.9230744Z   pio_target: build
+2025-09-21T23:35:04.9230982Z ##[endgroup]
+2025-09-21T23:35:04.9316524Z ##[group]Run docker run --rm \
+2025-09-21T23:35:04.9317042Z [36;1mdocker run --rm \[0m
+2025-09-21T23:35:04.9317532Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:35:04.9317773Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:35:04.9317994Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:35:04.9318206Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:35:04.9318429Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:35:04.9318654Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:35:04.9318904Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:35:04.9319154Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:35:04.9319415Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:35:04.9319795Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-rp2040[0m
+2025-09-21T23:35:04.9376079Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:35:04.9376401Z env:
+2025-09-21T23:35:04.9376564Z   MT_ENV: pico
+2025-09-21T23:35:04.9376739Z   MT_PLATFORM: rp2040
+2025-09-21T23:35:04.9376928Z   MT_TARGET: build
+2025-09-21T23:35:04.9377275Z   MT_OTA_FIRMWARE_SOURCE: 
+2025-09-21T23:35:04.9377483Z   MT_OTA_FIRMWARE_TARGET: 
+2025-09-21T23:35:04.9377705Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:35:04.9377953Z ##[endgroup]
+2025-09-21T23:35:05.0583871Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-rp2040' locally
+2025-09-21T23:35:05.6845329Z master-rp2040: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:35:05.8544906Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:35:05.8545366Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:35:05.8545834Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:35:05.8546160Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:35:05.8546396Z 815e87185931: Pulling fs layer
+2025-09-21T23:35:05.8546604Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:35:05.8546927Z da9989870cf6: Pulling fs layer
+2025-09-21T23:35:05.8547428Z 72cfb3118413: Pulling fs layer
+2025-09-21T23:35:05.8547772Z c328651112e9: Pulling fs layer
+2025-09-21T23:35:05.8548114Z f278140f2b14: Pulling fs layer
+2025-09-21T23:35:05.8548462Z 57981b7012e9: Pulling fs layer
+2025-09-21T23:35:05.8548668Z 70c95df9e7cf: Pulling fs layer
+2025-09-21T23:35:05.8549017Z 5b5aa9df2c05: Pulling fs layer
+2025-09-21T23:35:05.8549367Z 9eb143cecfd1: Pulling fs layer
+2025-09-21T23:35:05.8549699Z c611f5bb386b: Waiting
+2025-09-21T23:35:05.8549882Z 815e87185931: Waiting
+2025-09-21T23:35:05.8550046Z 71c11f7c6832: Waiting
+2025-09-21T23:35:05.8550214Z c328651112e9: Waiting
+2025-09-21T23:35:05.8550375Z 72cfb3118413: Waiting
+2025-09-21T23:35:05.8550544Z f278140f2b14: Waiting
+2025-09-21T23:35:05.8550718Z 57981b7012e9: Waiting
+2025-09-21T23:35:05.8550879Z da9989870cf6: Waiting
+2025-09-21T23:35:05.8551054Z 5b5aa9df2c05: Waiting
+2025-09-21T23:35:05.8551220Z 70c95df9e7cf: Waiting
+2025-09-21T23:35:05.8551393Z 9eb143cecfd1: Waiting
+2025-09-21T23:35:06.4808906Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:35:06.9091935Z ccbbb2080a06: Download complete
+2025-09-21T23:35:06.9092472Z 8fb375ec14f3: Download complete
+2025-09-21T23:35:07.2798315Z 815e87185931: Verifying Checksum
+2025-09-21T23:35:07.2800023Z 815e87185931: Download complete
+2025-09-21T23:35:07.3898026Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:35:07.3898486Z 7d5073558d5a: Download complete
+2025-09-21T23:35:07.6344574Z da9989870cf6: Verifying Checksum
+2025-09-21T23:35:07.6345062Z da9989870cf6: Download complete
+2025-09-21T23:35:07.8922720Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:35:07.8923253Z 71c11f7c6832: Download complete
+2025-09-21T23:35:08.1212733Z c328651112e9: Verifying Checksum
+2025-09-21T23:35:08.1213185Z c328651112e9: Download complete
+2025-09-21T23:35:08.1969095Z 72cfb3118413: Verifying Checksum
+2025-09-21T23:35:08.1969882Z 72cfb3118413: Download complete
+2025-09-21T23:35:08.7834343Z 8fb375ec14f3: Pull complete
+2025-09-21T23:35:09.3166114Z f278140f2b14: Verifying Checksum
+2025-09-21T23:35:09.3166604Z f278140f2b14: Download complete
+2025-09-21T23:35:09.5493707Z 70c95df9e7cf: Download complete
+2025-09-21T23:35:09.7916580Z 5b5aa9df2c05: Verifying Checksum
+2025-09-21T23:35:09.7917953Z 5b5aa9df2c05: Download complete
+2025-09-21T23:35:10.1851637Z 9eb143cecfd1: Verifying Checksum
+2025-09-21T23:35:10.1877647Z 9eb143cecfd1: Download complete
+2025-09-21T23:35:10.2556281Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:35:10.2556743Z c611f5bb386b: Download complete
+2025-09-21T23:35:11.5384013Z ccbbb2080a06: Pull complete
+2025-09-21T23:35:14.5888356Z 7d5073558d5a: Pull complete
+2025-09-21T23:35:22.5066907Z c611f5bb386b: Pull complete
+2025-09-21T23:35:22.7979473Z 815e87185931: Pull complete
+2025-09-21T23:35:23.1018514Z 57981b7012e9: Verifying Checksum
+2025-09-21T23:35:23.1018970Z 57981b7012e9: Download complete
+2025-09-21T23:35:23.5308630Z 71c11f7c6832: Pull complete
+2025-09-21T23:35:23.5447960Z da9989870cf6: Pull complete
+2025-09-21T23:35:24.5846611Z 72cfb3118413: Pull complete
+2025-09-21T23:35:24.5948992Z c328651112e9: Pull complete
+2025-09-21T23:35:26.0779148Z f278140f2b14: Pull complete
+2025-09-21T23:35:43.3496740Z 57981b7012e9: Pull complete
+2025-09-21T23:35:43.3598900Z 70c95df9e7cf: Pull complete
+2025-09-21T23:35:43.3702767Z 5b5aa9df2c05: Pull complete
+2025-09-21T23:35:43.3790093Z 9eb143cecfd1: Pull complete
+2025-09-21T23:35:43.3830407Z Digest: sha256:38dfb80eeb7496ca4359918a4cf881e6726a994ee5ad68c65829324a9decb6d5
+2025-09-21T23:35:43.3842648Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-rp2040
+2025-09-21T23:35:44.1144808Z Building PlatformIO environment: pico
+2025-09-21T23:35:44.4038039Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:35:45.1010916Z Resolving pico dependencies...
+2025-09-21T23:35:45.1172890Z Removing unused dependencies...
+2025-09-21T23:35:45.1246326Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:35:45.2492417Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:35:45.5062603Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:35:49.2537089Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:35:49.4698619Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:35:49.5639024Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:35:50.2049011Z Building for pico with 
+2025-09-21T23:35:50.9729013Z Processing pico (board: rpipico; platform: 
+2025-09-21T23:35:50.9730148Z https://github.com/maxgerhardt/platform-raspberrypi#76ecf3c7e9dd4503af0331154c4ca1cddc4b03e5; framework: arduino)
+2025-09-21T23:35:50.9731205Z --------------------------------------------------------------------------------
+2025-09-21T23:35:52.1274520Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:35:52.1420259Z CONFIGURATION: https://docs.platformio.org/page/boards/raspberrypi/rpipico.html
+2025-09-21T23:35:52.1421370Z PLATFORM: Raspberry Pi RP2040 (1.15.0+sha.76ecf3c) > Pico
+2025-09-21T23:35:52.1421968Z HARDWARE: RP2040 133MHz, 256KB RAM, 2MB Flash
+2025-09-21T23:35:52.1422681Z DEBUG: Current (cmsis-dap) External (blackmagic, cmsis-dap, jlink, picoprobe, raspberrypi-swd)
+2025-09-21T23:35:52.1423516Z PACKAGES: 
+2025-09-21T23:35:52.1423992Z  - framework-arduinopico @ 1.40403.0+sha.5e2fbf3 
+2025-09-21T23:35:52.1424687Z  - tool-picotool-rp2040-earlephilhower @ 5.140200.240929 (14.2.0) 
+2025-09-21T23:35:52.1425346Z  - toolchain-rp2040-earlephilhower @ 5.140200.240929 (14.2.0)
+2025-09-21T23:35:52.1511716Z Flash size: 2.00MB
+2025-09-21T23:35:52.1512145Z Sketch size: 1.50MB
+2025-09-21T23:35:52.1512450Z Filesystem size: 0.50MB
+2025-09-21T23:35:52.1512775Z PSRAM size: 0.00MB
+2025-09-21T23:35:52.1513272Z Maximium Sketch size: 1568768 EEPROM start: 0x101ff000 Filesystem start: 0x1017f000 Filesystem end: 0x101ff000
+2025-09-21T23:35:52.1661196Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:35:52.1662237Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:35:52.2418207Z [nanopb] No generation needed.
+2025-09-21T23:35:52.6540549Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:35:55.1753363Z Downloading 0% 10%
+2025-09-21T23:35:55.1803417Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:35:55.1837396Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:35:55.2561924Z [nanopb] No generation needed.
+2025-09-21T23:35:55.3889886Z Found 124 compatible libraries
+2025-09-21T23:35:55.3890329Z Scanning dependencies...
+2025-09-21T23:36:05.3099484Z Dependency Graph
+2025-09-21T23:36:05.3100048Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:36:05.3100609Z |-- OneButton @ 2.6.1
+2025-09-21T23:36:05.3103797Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:36:05.3104137Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:36:05.3106320Z |-- ArduinoThread @ 0.0.0+20250919055249
+2025-09-21T23:36:05.3108301Z |-- Nanopb @ 0.4.91
+2025-09-21T23:36:05.3110747Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:36:05.3111398Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:36:05.3113537Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:36:05.3115209Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:36:05.3117675Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:36:05.3119678Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:36:05.3121709Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:36:05.3124027Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:36:05.3125034Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:36:05.3127398Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:36:05.3128299Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:36:05.3130771Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:36:05.3131590Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:36:05.3133554Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:36:05.3135449Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:36:05.3137356Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:36:05.3139167Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:36:05.3140725Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:36:05.3141620Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:36:05.3143349Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:36:05.3145393Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:36:05.3146726Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:36:05.3148888Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:36:05.3150677Z |-- INA226 @ 0.6.4
+2025-09-21T23:36:05.3152390Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:36:05.3153598Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:36:05.3155296Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:36:05.3157033Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:36:05.3158141Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:36:05.3159926Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:36:05.3161138Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:36:05.3162852Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:36:05.3165344Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:36:05.3166047Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:36:05.3167930Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:36:05.3169614Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:36:05.3172068Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:36:05.3173633Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:36:05.3175772Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:36:05.3177512Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:36:05.3180471Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:36:05.3181165Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:36:05.3182702Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:36:05.3185059Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:36:05.3186501Z |-- RadioLib @ 7.3.0
+2025-09-21T23:36:05.3188797Z |-- Crypto @ 0.4.0
+2025-09-21T23:36:05.3189114Z |-- SD @ 2.0.0
+2025-09-21T23:36:05.3190811Z |-- SPI @ 1.0
+2025-09-21T23:36:05.3191114Z |-- WiFi @ 1.0.0
+2025-09-21T23:36:05.3191723Z |-- Wire @ 1.0
+2025-09-21T23:36:05.3192026Z |-- LittleFS @ 0.1.0
+2025-09-21T23:36:05.3193689Z |-- FreeRTOS @ 1.0.0
+2025-09-21T23:36:05.3194044Z |-- AsyncUDP @ 1.1.0
+2025-09-21T23:36:05.3195676Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:36:05.5284205Z Building in release mode
+2025-09-21T23:36:05.6402414Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on pico
+2025-09-21T23:36:05.6417533Z Using flags:
+2025-09-21T23:36:05.6418300Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:36:05.6418741Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:36:05.6419214Z -DAPP_ENV=pico
+2025-09-21T23:36:05.6419504Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:05.6419780Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:36:05.6420231Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:36:05.6420790Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:36:05.6723907Z Compiling .pio/build/pico/FrameworkArduinoBootloader/boot2_w25q080_2_padded_checksum.S.o
+2025-09-21T23:36:05.7714037Z Compiling .pio/build/pico/src/BluetoothCommon.cpp.o
+2025-09-21T23:36:05.8353778Z Compiling .pio/build/pico/src/DebugConfiguration.cpp.o
+2025-09-21T23:36:05.8470881Z Compiling .pio/build/pico/src/DisplayFormatters.cpp.o
+2025-09-21T23:36:05.8953467Z Compiling .pio/build/pico/src/FSCommon.cpp.o
+2025-09-21T23:36:06.8719480Z Compiling .pio/build/pico/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:36:06.9143491Z Compiling .pio/build/pico/src/Fusion/FusionCompass.c.o
+2025-09-21T23:36:07.0176563Z Compiling .pio/build/pico/src/Fusion/FusionOffset.c.o
+2025-09-21T23:36:07.0984659Z Compiling .pio/build/pico/src/GpioLogic.cpp.o
+2025-09-21T23:36:07.1982720Z Compiling .pio/build/pico/src/Led.cpp.o
+2025-09-21T23:36:07.2169923Z Compiling .pio/build/pico/src/Observer.cpp.o
+2025-09-21T23:36:07.2781967Z Compiling .pio/build/pico/src/Power.cpp.o
+2025-09-21T23:36:08.2551076Z Compiling .pio/build/pico/src/PowerFSM.cpp.o
+2025-09-21T23:36:08.3176241Z Compiling .pio/build/pico/src/PowerMon.cpp.o
+2025-09-21T23:36:09.0028399Z Compiling .pio/build/pico/src/RedirectablePrint.cpp.o
+2025-09-21T23:36:09.3434495Z Compiling .pio/build/pico/src/SPILock.cpp.o
+2025-09-21T23:36:09.6628686Z Compiling .pio/build/pico/src/SafeFile.cpp.o
+2025-09-21T23:36:10.1265414Z Compiling .pio/build/pico/src/SerialConsole.cpp.o
+2025-09-21T23:36:10.4608378Z Compiling .pio/build/pico/src/airtime.cpp.o
+2025-09-21T23:36:10.8922392Z Compiling .pio/build/pico/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:36:10.9416630Z Compiling .pio/build/pico/src/buzz/buzz.cpp.o
+2025-09-21T23:36:11.5106916Z Compiling .pio/build/pico/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:36:11.8708466Z Compiling .pio/build/pico/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:36:12.2884182Z Compiling .pio/build/pico/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:36:12.3123951Z Compiling .pio/build/pico/src/concurrency/Lock.cpp.o
+2025-09-21T23:36:12.6348806Z Compiling .pio/build/pico/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:36:12.9682630Z Compiling .pio/build/pico/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:36:13.3868924Z Compiling .pio/build/pico/src/concurrency/OSThread.cpp.o
+2025-09-21T23:36:13.4215463Z Compiling .pio/build/pico/src/detect/ScanI2C.cpp.o
+2025-09-21T23:36:13.5175651Z Compiling .pio/build/pico/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:36:13.7451793Z Compiling .pio/build/pico/src/gps/GPS.cpp.o
+2025-09-21T23:36:14.5015240Z Compiling .pio/build/pico/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:36:14.7849856Z Compiling .pio/build/pico/src/gps/GeoCoord.cpp.o
+2025-09-21T23:36:15.2505279Z Compiling .pio/build/pico/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:36:15.8198822Z Compiling .pio/build/pico/src/gps/RTC.cpp.o
+2025-09-21T23:36:15.9354802Z Compiling .pio/build/pico/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:36:16.5794452Z Compiling .pio/build/pico/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:36:17.0265209Z Compiling .pio/build/pico/src/graphics/Screen.cpp.o
+2025-09-21T23:36:17.0974779Z Compiling .pio/build/pico/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:36:17.6487941Z Compiling .pio/build/pico/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:36:17.7723549Z Compiling .pio/build/pico/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:36:17.8827681Z Compiling .pio/build/pico/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:36:18.1355813Z Compiling .pio/build/pico/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:36:19.5915101Z Compiling .pio/build/pico/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:36:19.6637491Z Compiling .pio/build/pico/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:36:19.7265772Z Compiling .pio/build/pico/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:36:21.2830792Z Compiling .pio/build/pico/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:36:21.4798552Z Compiling .pio/build/pico/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:36:21.6293888Z Compiling .pio/build/pico/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:36:21.8354925Z Compiling .pio/build/pico/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:36:23.4611477Z Compiling .pio/build/pico/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:36:23.7911347Z Compiling .pio/build/pico/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:36:23.9316437Z Compiling .pio/build/pico/src/graphics/emotes.cpp.o
+2025-09-21T23:36:24.6865757Z Compiling .pio/build/pico/src/graphics/fonts/EinkDisplayFonts.cpp.o
+2025-09-21T23:36:24.7286224Z Compiling .pio/build/pico/src/graphics/fonts/OLEDDisplayFontsCS.cpp.o
+2025-09-21T23:36:24.7733591Z Compiling .pio/build/pico/src/graphics/fonts/OLEDDisplayFontsPL.cpp.o
+2025-09-21T23:36:24.8180699Z Compiling .pio/build/pico/src/graphics/fonts/OLEDDisplayFontsRU.cpp.o
+2025-09-21T23:36:24.8621686Z Compiling .pio/build/pico/src/graphics/fonts/OLEDDisplayFontsUA.cpp.o
+2025-09-21T23:36:24.9088233Z Compiling .pio/build/pico/src/graphics/tftSetup.cpp.o
+2025-09-21T23:36:24.9496514Z Compiling .pio/build/pico/src/input/BBQ10Keyboard.cpp.o
+2025-09-21T23:36:25.2830089Z Compiling .pio/build/pico/src/input/ButtonThread.cpp.o
+2025-09-21T23:36:25.7425429Z Compiling .pio/build/pico/src/input/ExpressLRSFiveWay.cpp.o
+2025-09-21T23:36:26.0698695Z Compiling .pio/build/pico/src/input/InputBroker.cpp.o
+2025-09-21T23:36:26.4452559Z Compiling .pio/build/pico/src/input/LinuxInput.cpp.o
+2025-09-21T23:36:26.8102779Z Compiling .pio/build/pico/src/input/LinuxInputImpl.cpp.o
+2025-09-21T23:36:27.2997790Z Compiling .pio/build/pico/src/input/MPR121Keyboard.cpp.o
+2025-09-21T23:36:27.3137086Z Compiling .pio/build/pico/src/input/RotaryEncoderImpl.cpp.o
+2025-09-21T23:36:27.3511632Z Compiling .pio/build/pico/src/input/RotaryEncoderInterruptBase.cpp.o
+2025-09-21T23:36:27.5340594Z Compiling .pio/build/pico/src/input/RotaryEncoderInterruptImpl1.cpp.o
+2025-09-21T23:36:27.9107298Z Compiling .pio/build/pico/src/input/SeesawRotary.cpp.o
+2025-09-21T23:36:27.9497055Z Compiling .pio/build/pico/src/input/SerialKeyboard.cpp.o
+2025-09-21T23:36:28.7294774Z Compiling .pio/build/pico/src/input/SerialKeyboardImpl.cpp.o
+2025-09-21T23:36:28.9003239Z Compiling .pio/build/pico/src/input/TCA8418Keyboard.cpp.o
+2025-09-21T23:36:29.0800389Z Compiling .pio/build/pico/src/input/TCA8418KeyboardBase.cpp.o
+2025-09-21T23:36:29.1775668Z Compiling .pio/build/pico/src/input/TDeckProKeyboard.cpp.o
+2025-09-21T23:36:29.2172517Z Compiling .pio/build/pico/src/input/TLoraPagerKeyboard.cpp.o
+2025-09-21T23:36:29.2573941Z Compiling .pio/build/pico/src/input/TouchScreenBase.cpp.o
+2025-09-21T23:36:30.0476097Z Compiling .pio/build/pico/src/input/TouchScreenImpl1.cpp.o
+2025-09-21T23:36:30.2919503Z Compiling .pio/build/pico/src/input/TrackballInterruptBase.cpp.o
+2025-09-21T23:36:30.5194719Z Compiling .pio/build/pico/src/input/TrackballInterruptImpl1.cpp.o
+2025-09-21T23:36:31.0989564Z Compiling .pio/build/pico/src/input/UpDownInterruptBase.cpp.o
+2025-09-21T23:36:31.4436309Z Compiling .pio/build/pico/src/input/UpDownInterruptImpl1.cpp.o
+2025-09-21T23:36:31.6755436Z Compiling .pio/build/pico/src/input/cardKbI2cImpl.cpp.o
+2025-09-21T23:36:31.8831534Z Compiling .pio/build/pico/src/input/i2cButton.cpp.o
+2025-09-21T23:36:32.5199906Z Compiling .pio/build/pico/src/input/kbI2cBase.cpp.o
+2025-09-21T23:36:32.7889361Z Compiling .pio/build/pico/src/input/kbMatrixBase.cpp.o
+2025-09-21T23:36:33.0341603Z Compiling .pio/build/pico/src/input/kbMatrixImpl.cpp.o
+2025-09-21T23:36:33.5865932Z Compiling .pio/build/pico/src/main.cpp.o
+2025-09-21T23:36:33.9152792Z Compiling .pio/build/pico/src/memGet.cpp.o
+2025-09-21T23:36:34.4673736Z Compiling .pio/build/pico/src/mesh/Channels.cpp.o
+2025-09-21T23:36:34.8378037Z Compiling .pio/build/pico/src/mesh/CryptoEngine.cpp.o
+2025-09-21T23:36:35.0257526Z Compiling .pio/build/pico/src/mesh/Default.cpp.o
+2025-09-21T23:36:36.0156305Z Compiling .pio/build/pico/src/mesh/FloodingRouter.cpp.o
+2025-09-21T23:36:36.2974656Z Compiling .pio/build/pico/src/mesh/InterfacesTemplates.cpp.o
+2025-09-21T23:36:36.3600632Z Compiling .pio/build/pico/src/mesh/LLCC68Interface.cpp.o
+2025-09-21T23:36:36.4287369Z Compiling .pio/build/pico/src/mesh/LR1110Interface.cpp.o
+2025-09-21T23:36:37.4236141Z Compiling .pio/build/pico/src/mesh/LR1120Interface.cpp.o
+2025-09-21T23:36:37.8441628Z Compiling .pio/build/pico/src/mesh/LR1121Interface.cpp.o
+2025-09-21T23:36:37.9342995Z Compiling .pio/build/pico/src/mesh/LR11x0Interface.cpp.o
+2025-09-21T23:36:38.5344142Z Compiling .pio/build/pico/src/mesh/MeshModule.cpp.o
+2025-09-21T23:36:38.9606701Z Compiling .pio/build/pico/src/mesh/MeshPacketQueue.cpp.o
+2025-09-21T23:36:39.3407703Z Compiling .pio/build/pico/src/mesh/MeshService.cpp.o
+2025-09-21T23:36:39.4632283Z Compiling .pio/build/pico/src/mesh/NextHopRouter.cpp.o
+2025-09-21T23:36:40.2517897Z Compiling .pio/build/pico/src/mesh/NodeDB.cpp.o
+2025-09-21T23:36:40.4807721Z Compiling .pio/build/pico/src/mesh/PacketHistory.cpp.o
+2025-09-21T23:36:41.1119631Z Compiling .pio/build/pico/src/mesh/PhoneAPI.cpp.o
+2025-09-21T23:36:41.4556505Z Compiling .pio/build/pico/src/mesh/ProtobufModule.cpp.o
+2025-09-21T23:36:41.8789886Z Compiling .pio/build/pico/src/mesh/RF95Interface.cpp.o
+2025-09-21T23:36:42.8248010Z Compiling .pio/build/pico/src/mesh/RadioInterface.cpp.o
+2025-09-21T23:36:42.9416045Z Compiling .pio/build/pico/src/mesh/RadioLibInterface.cpp.o
+2025-09-21T23:36:43.4032454Z Compiling .pio/build/pico/src/mesh/RadioLibRF95.cpp.o
+2025-09-21T23:36:43.4641755Z Compiling .pio/build/pico/src/mesh/ReliableRouter.cpp.o
+2025-09-21T23:36:44.7807312Z Compiling .pio/build/pico/src/mesh/Router.cpp.o
+2025-09-21T23:36:44.9404993Z Compiling .pio/build/pico/src/mesh/STM32WLE5JCInterface.cpp.o
+2025-09-21T23:36:44.9874544Z Compiling .pio/build/pico/src/mesh/SX1262Interface.cpp.o
+2025-09-21T23:36:45.0310437Z Compiling .pio/build/pico/src/mesh/SX1268Interface.cpp.o
+2025-09-21T23:36:46.0059656Z Compiling .pio/build/pico/src/mesh/SX126xInterface.cpp.o
+2025-09-21T23:36:46.4824166Z Compiling .pio/build/pico/src/mesh/SX1280Interface.cpp.o
+2025-09-21T23:36:46.5422176Z Compiling .pio/build/pico/src/mesh/SX128xInterface.cpp.o
+2025-09-21T23:36:46.8028412Z Compiling .pio/build/pico/src/mesh/StreamAPI.cpp.o
+2025-09-21T23:36:47.5429774Z Compiling .pio/build/pico/src/mesh/Throttle.cpp.o
+2025-09-21T23:36:47.9715966Z Compiling .pio/build/pico/src/mesh/TypeConversions.cpp.o
+2025-09-21T23:36:47.9920888Z Compiling .pio/build/pico/src/mesh/aes-ccm.cpp.o
+2025-09-21T23:36:48.0596845Z Compiling .pio/build/pico/src/mesh/api/PacketAPI.cpp.o
+2025-09-21T23:36:48.0972816Z Compiling .pio/build/pico/src/mesh/api/ServerAPI.cpp.o
+2025-09-21T23:36:48.2436538Z Compiling .pio/build/pico/src/mesh/api/WiFiServerAPI.cpp.o
+2025-09-21T23:36:49.1654379Z Compiling .pio/build/pico/src/mesh/api/ethServerAPI.cpp.o
+2025-09-21T23:36:49.1849048Z Compiling .pio/build/pico/src/mesh/compression/unishox2.cpp.o
+2025-09-21T23:36:49.3044780Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/admin.pb.cpp.o
+2025-09-21T23:36:49.3405863Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/apponly.pb.cpp.o
+2025-09-21T23:36:49.4286530Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/atak.pb.cpp.o
+2025-09-21T23:36:49.4576499Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/cannedmessages.pb.cpp.o
+2025-09-21T23:36:49.5209310Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/channel.pb.cpp.o
+2025-09-21T23:36:49.5474841Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/clientonly.pb.cpp.o
+2025-09-21T23:36:49.6104567Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/config.pb.cpp.o
+2025-09-21T23:36:49.6589979Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/connection_status.pb.cpp.o
+2025-09-21T23:36:49.7516788Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/device_ui.pb.cpp.o
+2025-09-21T23:36:49.7708021Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/deviceonly.pb.cpp.o
+2025-09-21T23:36:49.8744394Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/interdevice.pb.cpp.o
+2025-09-21T23:36:49.9593611Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/localonly.pb.cpp.o
+2025-09-21T23:36:49.9728390Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/mesh.pb.cpp.o
+2025-09-21T23:36:50.0650817Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/module_config.pb.cpp.o
+2025-09-21T23:36:50.1345647Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/mqtt.pb.cpp.o
+2025-09-21T23:36:50.1701080Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/paxcount.pb.cpp.o
+2025-09-21T23:36:50.2148170Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/portnums.pb.cpp.o
+2025-09-21T23:36:50.2454519Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/powermon.pb.cpp.o
+2025-09-21T23:36:50.2589047Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/remote_hardware.pb.cpp.o
+2025-09-21T23:36:50.2756898Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/rtttl.pb.cpp.o
+2025-09-21T23:36:50.2989308Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/storeforward.pb.cpp.o
+2025-09-21T23:36:50.3315157Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/telemetry.pb.cpp.o
+2025-09-21T23:36:50.3511759Z Compiling .pio/build/pico/src/mesh/generated/meshtastic/xmodem.pb.cpp.o
+2025-09-21T23:36:50.3747903Z Compiling .pio/build/pico/src/mesh/mesh-pb-constants.cpp.o
+2025-09-21T23:36:50.3885075Z Compiling .pio/build/pico/src/meshUtils.cpp.o
+2025-09-21T23:36:50.4403970Z Compiling .pio/build/pico/src/modules/AdminModule.cpp.o
+2025-09-21T23:36:50.4768601Z Compiling .pio/build/pico/src/modules/AtakPluginModule.cpp.o
+2025-09-21T23:36:51.5967953Z Compiling .pio/build/pico/src/modules/CannedMessageModule.cpp.o
+2025-09-21T23:36:51.6289423Z Compiling .pio/build/pico/src/modules/ChatHistoryStore.cpp.o
+2025-09-21T23:36:52.3671597Z Compiling .pio/build/pico/src/modules/DetectionSensorModule.cpp.o
+2025-09-21T23:36:52.8972460Z Compiling .pio/build/pico/src/modules/DropzoneModule.cpp.o
+2025-09-21T23:36:52.9447348Z Compiling .pio/build/pico/src/modules/ExternalNotificationModule.cpp.o
+2025-09-21T23:36:54.3557405Z Compiling .pio/build/pico/src/modules/GenericThreadModule.cpp.o
+2025-09-21T23:36:54.3790324Z Compiling .pio/build/pico/src/modules/KeyVerificationModule.cpp.o
+2025-09-21T23:36:55.0114836Z Compiling .pio/build/pico/src/modules/Modules.cpp.o
+2025-09-21T23:36:55.0425034Z Compiling .pio/build/pico/src/modules/NeighborInfoModule.cpp.o
+2025-09-21T23:36:55.6955547Z Compiling .pio/build/pico/src/modules/NodeInfoModule.cpp.o
+2025-09-21T23:36:56.2956764Z Compiling .pio/build/pico/src/modules/PositionModule.cpp.o
+2025-09-21T23:36:56.7837299Z Compiling .pio/build/pico/src/modules/PowerStressModule.cpp.o
+2025-09-21T23:36:57.0945525Z Compiling .pio/build/pico/src/modules/RangeTestModule.cpp.o
+2025-09-21T23:36:57.5478673Z Compiling .pio/build/pico/src/modules/RemoteHardwareModule.cpp.o
+2025-09-21T23:36:58.3933989Z Compiling .pio/build/pico/src/modules/ReplyModule.cpp.o
+2025-09-21T23:36:58.6467730Z Compiling .pio/build/pico/src/modules/RoutingModule.cpp.o
+2025-09-21T23:36:58.6818473Z Compiling .pio/build/pico/src/modules/SerialModule.cpp.o
+2025-09-21T23:36:59.4393826Z Compiling .pio/build/pico/src/modules/StoreForwardModule.cpp.o
+2025-09-21T23:37:00.2000823Z Compiling .pio/build/pico/src/modules/SystemCommandsModule.cpp.o
+2025-09-21T23:37:00.5180684Z Compiling .pio/build/pico/src/modules/Telemetry/AirQualityTelemetry.cpp.o
+2025-09-21T23:37:00.7038135Z Compiling .pio/build/pico/src/modules/Telemetry/DeviceTelemetry.cpp.o
+2025-09-21T23:37:01.3151177Z Compiling .pio/build/pico/src/modules/Telemetry/EnvironmentTelemetry.cpp.o
+2025-09-21T23:37:02.1380998Z Compiling .pio/build/pico/src/modules/Telemetry/HealthTelemetry.cpp.o
+2025-09-21T23:37:02.5390637Z Compiling .pio/build/pico/src/modules/Telemetry/HostMetrics.cpp.o
+2025-09-21T23:37:02.7149257Z Compiling .pio/build/pico/src/modules/Telemetry/PowerTelemetry.cpp.o
+2025-09-21T23:37:03.2309188Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/AHT10.cpp.o
+2025-09-21T23:37:03.7095201Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/BME280Sensor.cpp.o
+2025-09-21T23:37:04.0687700Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/BME680Sensor.cpp.o
+2025-09-21T23:37:04.7219813Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/BMP085Sensor.cpp.o
+2025-09-21T23:37:04.7435261Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/BMP280Sensor.cpp.o
+2025-09-21T23:37:05.2319643Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/BMP3XXSensor.cpp.o
+2025-09-21T23:37:05.7326272Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/CGRadSensSensor.cpp.o
+2025-09-21T23:37:06.1208368Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/DFRobotGravitySensor.cpp.o
+2025-09-21T23:37:06.2852385Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/DFRobotLarkSensor.cpp.o
+2025-09-21T23:37:06.7786631Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/DPS310Sensor.cpp.o
+2025-09-21T23:37:07.1139956Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/INA219Sensor.cpp.o
+2025-09-21T23:37:07.5098127Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/INA226Sensor.cpp.o
+2025-09-21T23:37:07.7300007Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/INA260Sensor.cpp.o
+2025-09-21T23:37:08.3305791Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/INA3221Sensor.cpp.o
+2025-09-21T23:37:08.6089083Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/IndicatorSensor.cpp.o
+2025-09-21T23:37:08.9073113Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/LPS22HBSensor.cpp.o
+2025-09-21T23:37:09.2932098Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/LTR390UVSensor.cpp.o
+2025-09-21T23:37:09.6686984Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/MAX17048Sensor.cpp.o
+2025-09-21T23:37:09.7768695Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/MAX30102Sensor.cpp.o
+2025-09-21T23:37:10.4410401Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/MCP9808Sensor.cpp.o
+2025-09-21T23:37:10.8093536Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/MLX90614Sensor.cpp.o
+2025-09-21T23:37:10.9128582Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/MLX90632Sensor.cpp.o
+2025-09-21T23:37:11.3164548Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/NAU7802Sensor.cpp.o
+2025-09-21T23:37:11.9662750Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/OPT3001Sensor.cpp.o
+2025-09-21T23:37:12.2044756Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/PCT2075Sensor.cpp.o
+2025-09-21T23:37:12.3480405Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/RAK12035Sensor.cpp.o
+2025-09-21T23:37:12.8258804Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/RAK9154Sensor.cpp.o
+2025-09-21T23:37:13.3654162Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/RCWL9620Sensor.cpp.o
+2025-09-21T23:37:13.4852067Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/SHT31Sensor.cpp.o
+2025-09-21T23:37:13.7025359Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/SHT4XSensor.cpp.o
+2025-09-21T23:37:13.9193309Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/SHTC3Sensor.cpp.o
+2025-09-21T23:37:14.8033361Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/T1000xSensor.cpp.o
+2025-09-21T23:37:14.9035743Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/TSL2561Sensor.cpp.o
+2025-09-21T23:37:15.0706654Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/TSL2591Sensor.cpp.o
+2025-09-21T23:37:15.2828779Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/TelemetrySensor.cpp.o
+2025-09-21T23:37:15.9022530Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/VEML7700Sensor.cpp.o
+2025-09-21T23:37:16.3356180Z Compiling .pio/build/pico/src/modules/Telemetry/Sensor/nullSensor.cpp.o
+2025-09-21T23:37:16.4454326Z Compiling .pio/build/pico/src/modules/Telemetry/UnitConversions.cpp.o
+2025-09-21T23:37:16.5023806Z Compiling .pio/build/pico/src/modules/TextMessageModule.cpp.o
+2025-09-21T23:37:16.9958682Z Compiling .pio/build/pico/src/modules/TraceRouteModule.cpp.o
+2025-09-21T23:37:17.4333494Z Compiling .pio/build/pico/src/modules/WaypointModule.cpp.o
+2025-09-21T23:37:17.7443439Z Compiling .pio/build/pico/src/motion/BMA423Sensor.cpp.o
+2025-09-21T23:37:18.2658650Z Compiling .pio/build/pico/src/motion/BMM150Sensor.cpp.o
+2025-09-21T23:37:19.1858243Z Compiling .pio/build/pico/src/motion/BMX160Sensor.cpp.o
+2025-09-21T23:37:19.4085778Z Compiling .pio/build/pico/src/motion/ICM20948Sensor.cpp.o
+2025-09-21T23:37:19.4882245Z Compiling .pio/build/pico/src/motion/LIS3DHSensor.cpp.o
+2025-09-21T23:37:19.9951033Z Compiling .pio/build/pico/src/motion/LSM6DS3Sensor.cpp.o
+2025-09-21T23:37:20.8343110Z Compiling .pio/build/pico/src/motion/MPU6050Sensor.cpp.o
+2025-09-21T23:37:21.2418407Z Compiling .pio/build/pico/src/motion/MotionSensor.cpp.o
+2025-09-21T23:37:21.2588275Z Compiling .pio/build/pico/src/motion/QMA6100PSensor.cpp.o
+2025-09-21T23:37:21.7194424Z Compiling .pio/build/pico/src/motion/STK8XXXSensor.cpp.o
+2025-09-21T23:37:22.5686675Z Compiling .pio/build/pico/src/mqtt/MQTT.cpp.o
+2025-09-21T23:37:22.8876052Z Compiling .pio/build/pico/src/mqtt/ServiceEnvelope.cpp.o
+2025-09-21T23:37:22.9326486Z Compiling .pio/build/pico/src/network-stubs.cpp.o
+2025-09-21T23:37:23.2890829Z Compiling .pio/build/pico/src/platform/extra_variants/heltec_wireless_tracker/variant.cpp.o
+2025-09-21T23:37:23.4088741Z Compiling .pio/build/pico/src/platform/extra_variants/t_deck_pro/variant.cpp.o
+2025-09-21T23:37:23.9921614Z Compiling .pio/build/pico/src/platform/extra_variants/t_lora_pager/variant.cpp.o
+2025-09-21T23:37:24.4826809Z Compiling .pio/build/pico/src/platform/rp2xx0/hardware_rosc/rosc.c.o
+2025-09-21T23:37:24.5560455Z Compiling .pio/build/pico/src/platform/rp2xx0/main-rp2xx0.cpp.o
+2025-09-21T23:37:24.5948659Z Compiling .pio/build/pico/src/platform/rp2xx0/pico_sleep/sleep.c.o
+2025-09-21T23:37:24.7464508Z Compiling .pio/build/pico/src/serialization/JSON.cpp.o
+2025-09-21T23:37:25.1039778Z Compiling .pio/build/pico/src/serialization/JSONValue.cpp.o
+2025-09-21T23:37:25.2038146Z Compiling .pio/build/pico/src/serialization/MeshPacketSerializer.cpp.o
+2025-09-21T23:37:25.3175014Z Compiling .pio/build/pico/src/serialization/MeshPacketSerializer_nRF52.cpp.o
+2025-09-21T23:37:25.3565869Z Compiling .pio/build/pico/src/serialization/cobs.cpp.o
+2025-09-21T23:37:25.6646152Z Compiling .pio/build/pico/src/sleep.cpp.o
+2025-09-21T23:37:26.5249662Z Compiling .pio/build/pico/src/xmodem.cpp.o
+2025-09-21T23:37:26.5821994Z Generating linkerscript /workspace/.pio/build/pico/memmap_default.ld
+2025-09-21T23:37:26.6406240Z Compiling .pio/build/pico/lib2a4/Wire/Wire.cpp.o
+2025-09-21T23:37:27.2767602Z Compiling .pio/build/pico/lib0fc/SPI/SPI.cpp.o
+2025-09-21T23:37:27.5259395Z Archiving .pio/build/pico/lib2a4/libWire.a
+2025-09-21T23:37:27.5331106Z Indexing .pio/build/pico/lib2a4/libWire.a
+2025-09-21T23:37:27.5448323Z Compiling .pio/build/pico/lib34b/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplay.cpp.o
+2025-09-21T23:37:27.5584258Z Compiling .pio/build/pico/lib34b/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayFonts.cpp.o
+2025-09-21T23:37:27.9159372Z Compiling .pio/build/pico/lib34b/ESP8266 and ESP32 OLED driver for SSD1306 displays/OLEDDisplayUi.cpp.o
+2025-09-21T23:37:28.2100711Z Compiling .pio/build/pico/lib641/OneButton/OneButton.cpp.o
+2025-09-21T23:37:28.3416640Z Archiving .pio/build/pico/lib0fc/libSPI.a
+2025-09-21T23:37:28.3455638Z Indexing .pio/build/pico/lib0fc/libSPI.a
+2025-09-21T23:37:28.3564931Z Compiling .pio/build/pico/lib641/OneButton/OneButtonTiny.cpp.o
+2025-09-21T23:37:28.8015181Z Compiling .pio/build/pico/lib999/arduino-fsm/Fsm.cpp.o
+2025-09-21T23:37:28.9499003Z Compiling .pio/build/pico/liba86/TinyGPSPlus/TinyGPS++.cpp.o
+2025-09-21T23:37:28.9566106Z Archiving .pio/build/pico/lib34b/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:37:28.9605427Z Indexing .pio/build/pico/lib34b/libESP8266 and ESP32 OLED driver for SSD1306 displays.a
+2025-09-21T23:37:28.9749099Z Compiling .pio/build/pico/lib5ed/ArduinoThread/Thread.cpp.o
+2025-09-21T23:37:29.0117621Z Archiving .pio/build/pico/lib641/libOneButton.a
+2025-09-21T23:37:29.0153021Z Indexing .pio/build/pico/lib641/libOneButton.a
+2025-09-21T23:37:29.0245405Z Compiling .pio/build/pico/lib5ed/ArduinoThread/ThreadController.cpp.o
+2025-09-21T23:37:29.4582920Z Archiving .pio/build/pico/lib999/libarduino-fsm.a
+2025-09-21T23:37:29.4610359Z Indexing .pio/build/pico/lib999/libarduino-fsm.a
+2025-09-21T23:37:29.4726024Z Compiling .pio/build/pico/libeed/Nanopb/pb_common.c.o
+2025-09-21T23:37:29.5962626Z Compiling .pio/build/pico/libeed/Nanopb/pb_decode.c.o
+2025-09-21T23:37:29.6098694Z Compiling .pio/build/pico/libeed/Nanopb/pb_encode.c.o
+2025-09-21T23:37:29.7238332Z Archiving .pio/build/pico/lib5ed/libArduinoThread.a
+2025-09-21T23:37:29.7274157Z Indexing .pio/build/pico/lib5ed/libArduinoThread.a
+2025-09-21T23:37:29.7375823Z Compiling .pio/build/pico/libe60/ErriezCRC32/ErriezCRC32.c.o
+2025-09-21T23:37:29.7963747Z Archiving .pio/build/pico/liba86/libTinyGPSPlus.a
+2025-09-21T23:37:29.8001660Z Indexing .pio/build/pico/liba86/libTinyGPSPlus.a
+2025-09-21T23:37:29.8054525Z Archiving .pio/build/pico/libe60/libErriezCRC32.a
+2025-09-21T23:37:29.8116412Z Indexing .pio/build/pico/libe60/libErriezCRC32.a
+2025-09-21T23:37:29.8191265Z Compiling .pio/build/pico/libc2e/NonBlockingRTTTL/NonBlockingRtttl.cpp.o
+2025-09-21T23:37:29.8368357Z Compiling .pio/build/pico/lib2b5/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+2025-09-21T23:37:29.8549202Z Compiling .pio/build/pico/lib2b5/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+2025-09-21T23:37:30.0125682Z Archiving .pio/build/pico/libeed/libNanopb.a
+2025-09-21T23:37:30.0166178Z Indexing .pio/build/pico/libeed/libNanopb.a
+2025-09-21T23:37:30.0252620Z Compiling .pio/build/pico/lib2b5/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+2025-09-21T23:37:30.4534911Z Compiling .pio/build/pico/lib2b5/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+2025-09-21T23:37:30.4747713Z Archiving .pio/build/pico/libc2e/libNonBlockingRTTTL.a
+2025-09-21T23:37:30.4788669Z Indexing .pio/build/pico/libc2e/libNonBlockingRTTTL.a
+2025-09-21T23:37:30.4945642Z Compiling .pio/build/pico/lib9c1/Adafruit Unified Sensor/Adafruit_Sensor.cpp.o
+2025-09-21T23:37:30.6309632Z Compiling .pio/build/pico/lib6e6/Adafruit BMP280 Library/Adafruit_BMP280.cpp.o
+2025-09-21T23:37:30.7052498Z Compiling .pio/build/pico/lib9c1/Adafruit BMP085 Library/Adafruit_BMP085.cpp.o
+2025-09-21T23:37:31.1360724Z Archiving .pio/build/pico/lib9c1/libAdafruit Unified Sensor.a
+2025-09-21T23:37:31.1405362Z Indexing .pio/build/pico/lib9c1/libAdafruit Unified Sensor.a
+2025-09-21T23:37:31.1601690Z Compiling .pio/build/pico/lib0ba/Adafruit BME280 Library/Adafruit_BME280.cpp.o
+2025-09-21T23:37:31.2701623Z Archiving .pio/build/pico/lib2b5/libAdafruit BusIO.a
+2025-09-21T23:37:31.2739226Z Indexing .pio/build/pico/lib2b5/libAdafruit BusIO.a
+2025-09-21T23:37:31.2920320Z Compiling .pio/build/pico/libe9e/Adafruit DPS310/Adafruit_DPS310.cpp.o
+2025-09-21T23:37:31.3867586Z Archiving .pio/build/pico/lib9c1/libAdafruit BMP085 Library.a
+2025-09-21T23:37:31.3897955Z Indexing .pio/build/pico/lib9c1/libAdafruit BMP085 Library.a
+2025-09-21T23:37:31.4048179Z Compiling .pio/build/pico/libcb7/Adafruit MCP9808 Library/Adafruit_MCP9808.cpp.o
+2025-09-21T23:37:31.5277434Z Archiving .pio/build/pico/lib6e6/libAdafruit BMP280 Library.a
+2025-09-21T23:37:31.5308262Z Indexing .pio/build/pico/lib6e6/libAdafruit BMP280 Library.a
+2025-09-21T23:37:31.5464735Z Compiling .pio/build/pico/libf7d/Adafruit INA260 Library/Adafruit_INA260.cpp.o
+2025-09-21T23:37:32.0988225Z Archiving .pio/build/pico/lib0ba/libAdafruit BME280 Library.a
+2025-09-21T23:37:32.1024284Z Indexing .pio/build/pico/lib0ba/libAdafruit BME280 Library.a
+2025-09-21T23:37:32.1200961Z Compiling .pio/build/pico/lib0b1/Adafruit INA219/Adafruit_INA219.cpp.o
+2025-09-21T23:37:32.1642255Z Archiving .pio/build/pico/libe9e/libAdafruit DPS310.a
+2025-09-21T23:37:32.1676986Z Indexing .pio/build/pico/libe9e/libAdafruit DPS310.a
+2025-09-21T23:37:32.1842367Z Compiling .pio/build/pico/libca4/Adafruit PM25 AQI Sensor/Adafruit_AQIUtils.cpp.o
+2025-09-21T23:37:32.2208883Z Archiving .pio/build/pico/libcb7/libAdafruit MCP9808 Library.a
+2025-09-21T23:37:32.2241042Z Indexing .pio/build/pico/libcb7/libAdafruit MCP9808 Library.a
+2025-09-21T23:37:32.2337534Z Compiling .pio/build/pico/libca4/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI.cpp.o
+2025-09-21T23:37:32.3670979Z Archiving .pio/build/pico/libf7d/libAdafruit INA260 Library.a
+2025-09-21T23:37:32.3720415Z Indexing .pio/build/pico/libf7d/libAdafruit INA260 Library.a
+2025-09-21T23:37:32.3792849Z Compiling .pio/build/pico/libca4/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_I2C.cpp.o
+2025-09-21T23:37:32.8568468Z Compiling .pio/build/pico/libca4/Adafruit PM25 AQI Sensor/Adafruit_PM25AQI_UART.cpp.o
+2025-09-21T23:37:32.8974820Z Compiling .pio/build/pico/libb24/Adafruit MPU6050/Adafruit_MPU6050.cpp.o
+2025-09-21T23:37:32.9037893Z Archiving .pio/build/pico/lib0b1/libAdafruit INA219.a
+2025-09-21T23:37:32.9067761Z Indexing .pio/build/pico/lib0b1/libAdafruit INA219.a
+2025-09-21T23:37:32.9228793Z Compiling .pio/build/pico/libc06/Adafruit LIS3DH/Adafruit_LIS3DH.cpp.o
+2025-09-21T23:37:33.0407436Z Compiling .pio/build/pico/lib67e/Adafruit AHTX0/Adafruit_AHTX0.cpp.o
+2025-09-21T23:37:33.5541711Z Archiving .pio/build/pico/libca4/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:37:33.5581846Z Indexing .pio/build/pico/libca4/libAdafruit PM25 AQI Sensor.a
+2025-09-21T23:37:33.5775466Z Compiling .pio/build/pico/lib7f6/Adafruit LSM6DS/Adafruit_ISM330DHCX.cpp.o
+2025-09-21T23:37:33.7747797Z Archiving .pio/build/pico/libc06/libAdafruit LIS3DH.a
+2025-09-21T23:37:33.7780916Z Indexing .pio/build/pico/libc06/libAdafruit LIS3DH.a
+2025-09-21T23:37:33.7886576Z Compiling .pio/build/pico/lib7f6/Adafruit LSM6DS/Adafruit_LSM6DS.cpp.o
+2025-09-21T23:37:33.8030721Z Archiving .pio/build/pico/libb24/libAdafruit MPU6050.a
+2025-09-21T23:37:33.8063201Z Indexing .pio/build/pico/libb24/libAdafruit MPU6050.a
+2025-09-21T23:37:33.8154480Z Compiling .pio/build/pico/lib7f6/Adafruit LSM6DS/Adafruit_LSM6DS3.cpp.o
+2025-09-21T23:37:33.8353622Z Archiving .pio/build/pico/lib67e/libAdafruit AHTX0.a
+2025-09-21T23:37:33.8380676Z Indexing .pio/build/pico/lib67e/libAdafruit AHTX0.a
+2025-09-21T23:37:33.8476925Z Compiling .pio/build/pico/lib7f6/Adafruit LSM6DS/Adafruit_LSM6DS33.cpp.o
+2025-09-21T23:37:34.3295082Z Compiling .pio/build/pico/lib7f6/Adafruit LSM6DS/Adafruit_LSM6DS3TRC.cpp.o
+2025-09-21T23:37:34.5597856Z Compiling .pio/build/pico/lib7f6/Adafruit LSM6DS/Adafruit_LSM6DSL.cpp.o
+2025-09-21T23:37:34.6033733Z Compiling .pio/build/pico/lib7f6/Adafruit LSM6DS/Adafruit_LSM6DSO32.cpp.o
+2025-09-21T23:37:34.7175315Z Compiling .pio/build/pico/lib7f6/Adafruit LSM6DS/Adafruit_LSM6DSOX.cpp.o
+2025-09-21T23:37:35.1030961Z Compiling .pio/build/pico/libbe1/Adafruit TSL2591 Library/Adafruit_TSL2591.cpp.o
+2025-09-21T23:37:35.3144289Z Compiling .pio/build/pico/libc12/EmotiBit MLX90632/SparkFun_MLX90632_Arduino_Library.cpp.o
+2025-09-21T23:37:35.4086958Z Compiling .pio/build/pico/lib844/Adafruit MLX90614 Library/Adafruit_MLX90614.cpp.o
+2025-09-21T23:37:35.4814844Z Archiving .pio/build/pico/lib7f6/libAdafruit LSM6DS.a
+2025-09-21T23:37:35.4852479Z Indexing .pio/build/pico/lib7f6/libAdafruit LSM6DS.a
+2025-09-21T23:37:35.4992993Z Compiling .pio/build/pico/lib158/INA3221/INA3221.cpp.o
+2025-09-21T23:37:35.8177922Z Archiving .pio/build/pico/libbe1/libAdafruit TSL2591 Library.a
+2025-09-21T23:37:35.8218959Z Indexing .pio/build/pico/libbe1/libAdafruit TSL2591 Library.a
+2025-09-21T23:37:35.8390487Z Compiling .pio/build/pico/lib83f/QMC5883LCompass/QMC5883LCompass.cpp.o
+2025-09-21T23:37:36.0696403Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::reset()':
+2025-09-21T23:37:36.0698524Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:88:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0699836Z    88 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0700520Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0720735Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:90:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0722217Z    90 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0725324Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0727776Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModePowerDown()':
+2025-09-21T23:37:36.0730017Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:96:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0731301Z    96 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0733509Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0736532Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:99:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0738365Z    99 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0740706Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0744297Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeContinious()':
+2025-09-21T23:37:36.0750025Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:105:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0753026Z   105 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0753494Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0758754Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:107:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0763011Z   107 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0765082Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0767975Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setModeTriggered()':
+2025-09-21T23:37:36.0773167Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:113:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0787708Z   113 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0788744Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0790021Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:115:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0792832Z   115 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0793316Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0795168Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasEnable()':
+2025-09-21T23:37:36.0798112Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:121:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0799552Z   121 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0800026Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0801398Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:123:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0802856Z   123 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0803307Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0804113Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntMeasDisable()':
+2025-09-21T23:37:36.0805748Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:129:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0807007Z   129 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0807619Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0808956Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:131:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0854951Z   131 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0855516Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0856400Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasEnable()':
+2025-09-21T23:37:36.0858448Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:137:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0859802Z   137 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0860279Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0861550Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:139:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0862848Z   139 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0863317Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0864154Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusMeasDisable()':
+2025-09-21T23:37:36.0865822Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:145:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0867332Z   145 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0867798Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0869073Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:147:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0870352Z   147 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0870817Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0871731Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setAveragingMode(ina3221_avg_mode_t)':
+2025-09-21T23:37:36.0873473Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:153:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0874784Z   153 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0875235Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0876700Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:155:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0883398Z   155 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0883875Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0885082Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setBusConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:37:36.0886885Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:161:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0893842Z   161 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0894362Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0895686Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:163:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0896991Z   163 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0897604Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0898599Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setShuntConversionTime(ina3221_conv_time_t)':
+2025-09-21T23:37:36.0900472Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:169:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0907314Z   169 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0907810Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0909105Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:171:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0910449Z   171 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0910926Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0911805Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchEnable()':
+2025-09-21T23:37:36.0913561Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:197:36: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0914915Z   197 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0915422Z       |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0916700Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:199:37: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0918279Z   199 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0918788Z       |                                     ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0919665Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setWarnAlertLatchDisable()':
+2025-09-21T23:37:36.0921374Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:206:36: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0922728Z   206 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0923235Z       |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0924735Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:208:37: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0926144Z   208 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0926796Z       |                                     ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0927850Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchEnable()':
+2025-09-21T23:37:36.0929866Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:215:36: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0931234Z   215 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0931752Z       |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0933037Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:217:37: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0934366Z   217 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0934883Z       |                                     ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0935752Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCritAlertLatchDisable()':
+2025-09-21T23:37:36.0937665Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:224:36: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0939169Z   224 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0939701Z       |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0940982Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:226:37: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0942352Z   226 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0942863Z       |                                     ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0943637Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::readFlags()':
+2025-09-21T23:37:36.0945257Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:231:36: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0946599Z   231 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&_masken_reg);
+2025-09-21T23:37:36.0947284Z       |                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0948189Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelEnable(ina3221_ch_t)':
+2025-09-21T23:37:36.0949882Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:265:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0951164Z   265 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0951626Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0952869Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:279:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0954255Z Archiving .pio/build/pico/lib844/libAdafruit MLX90614 Library.a
+2025-09-21T23:37:36.0954894Z   279 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0955407Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0956473Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setChannelDisable(ina3221_ch_t)':
+2025-09-21T23:37:36.0958629Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:285:29: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0959993Z   285 |     _read(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0960452Z       |                             ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0961870Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:299:30: warning: cast from 'INA3221::conf_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0963204Z   299 |     _write(INA3221_REG_CONF, (uint16_t *)&conf_reg);
+2025-09-21T23:37:36.0963668Z       |                              ^~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0964575Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumEnable(ina3221_ch_t)':
+2025-09-21T23:37:36.0966380Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:359:36: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0968022Z   359 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0968545Z       |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0969853Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:373:37: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0971256Z   373 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0971781Z       |                                     ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0972723Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp: In member function 'void INA3221::setCurrentSumDisable(ina3221_ch_t)':
+2025-09-21T23:37:36.0974481Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:380:36: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0975834Z   380 |     _read(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0976407Z       |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0978019Z /pio/workspace/libdeps/pico/INA3221/src/INA3221.cpp:394:37: warning: cast from 'INA3221::masken_reg_t*' to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:36.0979459Z   394 |     _write(INA3221_REG_MASK_ENABLE, (uint16_t *)&masken_reg);
+2025-09-21T23:37:36.0980006Z       |                                     ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:36.0980619Z Indexing .pio/build/pico/lib844/libAdafruit MLX90614 Library.a
+2025-09-21T23:37:36.1137410Z Compiling .pio/build/pico/lib2a7/DFRobot_RTU/DFRobot_RTU.cpp.o
+2025-09-21T23:37:36.1840051Z Archiving .pio/build/pico/libc12/libEmotiBit MLX90632.a
+2025-09-21T23:37:36.1881308Z Indexing .pio/build/pico/libc12/libEmotiBit MLX90632.a
+2025-09-21T23:37:36.2081642Z Compiling .pio/build/pico/lib447/DFRobot_RainfallSensor/DFRobot_RainfallSensor.cpp.o
+2025-09-21T23:37:36.2927833Z Archiving .pio/build/pico/lib158/libINA3221.a
+2025-09-21T23:37:36.2956403Z Indexing .pio/build/pico/lib158/libINA3221.a
+2025-09-21T23:37:36.3088244Z Compiling .pio/build/pico/lib6fe/INA226/INA226.cpp.o
+2025-09-21T23:37:36.5828220Z Archiving .pio/build/pico/lib83f/libQMC5883LCompass.a
+2025-09-21T23:37:36.5868547Z Indexing .pio/build/pico/lib83f/libQMC5883LCompass.a
+2025-09-21T23:37:36.6053142Z Compiling .pio/build/pico/libb07/SparkFun MAX3010x Pulse and Proximity Sensor Library/MAX30105.cpp.o
+2025-09-21T23:37:36.9235057Z Archiving .pio/build/pico/lib447/libDFRobot_RainfallSensor.a
+2025-09-21T23:37:36.9274904Z Indexing .pio/build/pico/lib447/libDFRobot_RainfallSensor.a
+2025-09-21T23:37:36.9385144Z Compiling .pio/build/pico/libb07/SparkFun MAX3010x Pulse and Proximity Sensor Library/heartRate.cpp.o
+2025-09-21T23:37:36.9552552Z Archiving .pio/build/pico/lib2a7/libDFRobot_RTU.a
+2025-09-21T23:37:36.9618314Z Indexing .pio/build/pico/lib2a7/libDFRobot_RTU.a
+2025-09-21T23:37:36.9681472Z Compiling .pio/build/pico/libb07/SparkFun MAX3010x Pulse and Proximity Sensor Library/spo2_algorithm.cpp.o
+2025-09-21T23:37:37.0679228Z Archiving .pio/build/pico/lib6fe/libINA226.a
+2025-09-21T23:37:37.0710529Z Indexing .pio/build/pico/lib6fe/libINA226.a
+2025-09-21T23:37:37.0855469Z Compiling .pio/build/pico/lib259/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/ICM_20948.cpp.o
+2025-09-21T23:37:37.4079412Z Compiling .pio/build/pico/lib259/SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library/util/ICM_20948_C.c.o
+2025-09-21T23:37:37.6332910Z Compiling .pio/build/pico/lib024/Adafruit LTR390 Library/Adafruit_LTR390.cpp.o
+2025-09-21T23:37:37.6893004Z Archiving .pio/build/pico/libb07/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:37:37.6928615Z Indexing .pio/build/pico/libb07/libSparkFun MAX3010x Pulse and Proximity Sensor Library.a
+2025-09-21T23:37:37.7131047Z Compiling .pio/build/pico/libe43/Adafruit PCT2075/Adafruit_PCT2075.cpp.o
+2025-09-21T23:37:38.0010736Z Compiling .pio/build/pico/lib017/DFRobot_BMM150/DFRobot_BMM150.cpp.o
+2025-09-21T23:37:38.3467357Z Archiving .pio/build/pico/lib259/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:37:38.3507997Z Indexing .pio/build/pico/lib259/libSparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library.a
+2025-09-21T23:37:38.3687265Z Compiling .pio/build/pico/lib0e6/Adafruit TSL2561/Adafruit_TSL2561_U.cpp.o
+2025-09-21T23:37:38.4282179Z Archiving .pio/build/pico/lib024/libAdafruit LTR390 Library.a
+2025-09-21T23:37:38.4322250Z Indexing .pio/build/pico/lib024/libAdafruit LTR390 Library.a
+2025-09-21T23:37:38.4501762Z Compiling .pio/build/pico/lib145/Adafruit BMP3XX Library/Adafruit_BMP3XX.cpp.o
+2025-09-21T23:37:38.5118412Z Archiving .pio/build/pico/libe43/libAdafruit PCT2075.a
+2025-09-21T23:37:38.5126857Z Indexing .pio/build/pico/libe43/libAdafruit PCT2075.a
+2025-09-21T23:37:38.5231310Z Compiling .pio/build/pico/lib145/Adafruit BMP3XX Library/bmp3.c.o
+2025-09-21T23:37:38.9407014Z Compiling .pio/build/pico/libd57/Adafruit MAX1704X/Adafruit_MAX1704X.cpp.o
+2025-09-21T23:37:39.0481461Z Archiving .pio/build/pico/lib017/libDFRobot_BMM150.a
+2025-09-21T23:37:39.0517316Z Indexing .pio/build/pico/lib017/libDFRobot_BMM150.a
+2025-09-21T23:37:39.0720921Z Compiling .pio/build/pico/libe40/Adafruit SHTC3 Library/Adafruit_SHTC3.cpp.o
+2025-09-21T23:37:39.0867529Z Archiving .pio/build/pico/lib0e6/libAdafruit TSL2561.a
+2025-09-21T23:37:39.0902653Z Indexing .pio/build/pico/lib0e6/libAdafruit TSL2561.a
+2025-09-21T23:37:39.1061558Z Compiling .pio/build/pico/lib113/Adafruit LPS2X/Adafruit_LPS22.cpp.o
+2025-09-21T23:37:39.2944429Z Archiving .pio/build/pico/lib145/libAdafruit BMP3XX Library.a
+2025-09-21T23:37:39.2977816Z Indexing .pio/build/pico/lib145/libAdafruit BMP3XX Library.a
+2025-09-21T23:37:39.3065191Z Compiling .pio/build/pico/lib113/Adafruit LPS2X/Adafruit_LPS25.cpp.o
+2025-09-21T23:37:39.7712411Z Archiving .pio/build/pico/libe40/libAdafruit SHTC3 Library.a
+2025-09-21T23:37:39.7781745Z Archiving .pio/build/pico/libd57/libAdafruit MAX1704X.a
+2025-09-21T23:37:39.7807237Z Indexing .pio/build/pico/libe40/libAdafruit SHTC3 Library.a
+2025-09-21T23:37:39.7821027Z Indexing .pio/build/pico/libd57/libAdafruit MAX1704X.a
+2025-09-21T23:37:39.7918670Z Compiling .pio/build/pico/lib113/Adafruit LPS2X/Adafruit_LPS2X.cpp.o
+2025-09-21T23:37:39.8131801Z Compiling .pio/build/pico/lib7a2/Adafruit SHT31 Library/Adafruit_SHT31.cpp.o
+2025-09-21T23:37:39.9027031Z Compiling .pio/build/pico/lib557/Adafruit VEML7700 Library/Adafruit_VEML7700.cpp.o
+2025-09-21T23:37:40.0891263Z Compiling .pio/build/pico/lib0b9/Adafruit SHT4x Library/Adafruit_SHT4x.cpp.o
+2025-09-21T23:37:40.4778522Z Archiving .pio/build/pico/lib7a2/libAdafruit SHT31 Library.a
+2025-09-21T23:37:40.4814337Z Indexing .pio/build/pico/lib7a2/libAdafruit SHT31 Library.a
+2025-09-21T23:37:40.4974808Z Compiling .pio/build/pico/libf2a/SparkFun Qwiic Scale NAU7802 Arduino Library/SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.cpp.o
+2025-09-21T23:37:40.5994752Z Archiving .pio/build/pico/lib113/libAdafruit LPS2X.a
+2025-09-21T23:37:40.6032405Z Indexing .pio/build/pico/lib113/libAdafruit LPS2X.a
+2025-09-21T23:37:40.6190613Z Compiling .pio/build/pico/libcb3/ClosedCube OPT3001/ClosedCube_OPT3001.cpp.o
+2025-09-21T23:37:40.7372247Z Archiving .pio/build/pico/lib557/libAdafruit VEML7700 Library.a
+2025-09-21T23:37:40.7405756Z Indexing .pio/build/pico/lib557/libAdafruit VEML7700 Library.a
+2025-09-21T23:37:40.7509944Z Compiling .pio/build/pico/lib3af/BME68x Sensor library/bme68x/bme68x.c.o
+2025-09-21T23:37:40.8271940Z Archiving .pio/build/pico/lib0b9/libAdafruit SHT4x Library.a
+2025-09-21T23:37:40.8314778Z Indexing .pio/build/pico/lib0b9/libAdafruit SHT4x Library.a
+2025-09-21T23:37:40.8482146Z Compiling .pio/build/pico/lib3af/BME68x Sensor library/bme68xLibrary.cpp.o
+2025-09-21T23:37:41.2124502Z Compiling .pio/build/pico/lib34f/bsec2/bsec2.cpp.o
+2025-09-21T23:37:41.2661558Z Archiving .pio/build/pico/libf2a/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:37:41.2699257Z Indexing .pio/build/pico/libf2a/libSparkFun Qwiic Scale NAU7802 Arduino Library.a
+2025-09-21T23:37:41.2804474Z Compiling .pio/build/pico/lib34f/bsec2/commMux/commMux.cpp.o
+2025-09-21T23:37:41.2940386Z Archiving .pio/build/pico/libcb3/libClosedCube OPT3001.a
+2025-09-21T23:37:41.2972667Z Indexing .pio/build/pico/libcb3/libClosedCube OPT3001.a
+2025-09-21T23:37:41.3117539Z Compiling .pio/build/pico/libfaa/DFRobot_LarkWeatherStation/DFRobot_LarkWeatherStation.cpp.o
+2025-09-21T23:37:41.7247496Z Archiving .pio/build/pico/lib3af/libBME68x Sensor library.a
+2025-09-21T23:37:41.7279548Z Indexing .pio/build/pico/lib3af/libBME68x Sensor library.a
+2025-09-21T23:37:41.7395162Z Compiling .pio/build/pico/lib879/Sensirion Core/SensirionCrc.cpp.o
+2025-09-21T23:37:41.8261538Z Compiling .pio/build/pico/lib879/Sensirion Core/SensirionErrors.cpp.o
+2025-09-21T23:37:41.9420463Z Compiling .pio/build/pico/lib879/Sensirion Core/SensirionI2CCommunication.cpp.o
+2025-09-21T23:37:42.0668822Z Compiling .pio/build/pico/lib879/Sensirion Core/SensirionI2CTxFrame.cpp.o
+2025-09-21T23:37:42.0739533Z Archiving .pio/build/pico/lib34f/libbsec2.a
+2025-09-21T23:37:42.0771030Z Indexing .pio/build/pico/lib34f/libbsec2.a
+2025-09-21T23:37:42.0833172Z Archiving .pio/build/pico/libfaa/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:37:42.0875430Z Indexing .pio/build/pico/libfaa/libDFRobot_LarkWeatherStation.a
+2025-09-21T23:37:42.0906664Z Compiling .pio/build/pico/lib879/Sensirion Core/SensirionRxFrame.cpp.o
+2025-09-21T23:37:42.1011176Z Compiling .pio/build/pico/lib879/Sensirion Core/SensirionShdlcCommunication.cpp.o
+2025-09-21T23:37:42.2043794Z Compiling .pio/build/pico/lib879/Sensirion Core/SensirionShdlcTxFrame.cpp.o
+2025-09-21T23:37:42.5877321Z Compiling .pio/build/pico/lib1c4/Sensirion I2C SCD4x/SensirionI2cScd4x.cpp.o
+2025-09-21T23:37:42.7333536Z Compiling .pio/build/pico/lib084/RadioLib/Hal.cpp.o
+2025-09-21T23:37:42.7553518Z Compiling .pio/build/pico/lib084/RadioLib/Module.cpp.o
+2025-09-21T23:37:42.8592067Z Archiving .pio/build/pico/lib879/libSensirion Core.a
+2025-09-21T23:37:42.8626242Z Indexing .pio/build/pico/lib879/libSensirion Core.a
+2025-09-21T23:37:42.8736877Z Compiling .pio/build/pico/lib084/RadioLib/hal/Arduino/ArduinoHal.cpp.o
+2025-09-21T23:37:43.3667840Z Compiling .pio/build/pico/lib084/RadioLib/hal/RPiPico/PicoHal.cpp.o
+2025-09-21T23:37:43.4022524Z Compiling .pio/build/pico/lib084/RadioLib/modules/CC1101/CC1101.cpp.o
+2025-09-21T23:37:43.4355438Z Archiving .pio/build/pico/lib1c4/libSensirion I2C SCD4x.a
+2025-09-21T23:37:43.4392365Z Indexing .pio/build/pico/lib1c4/libSensirion I2C SCD4x.a
+2025-09-21T23:37:43.4492394Z Compiling .pio/build/pico/lib084/RadioLib/modules/LLCC68/LLCC68.cpp.o
+2025-09-21T23:37:43.6829513Z Compiling .pio/build/pico/lib084/RadioLib/modules/LR11x0/LR1110.cpp.o
+2025-09-21T23:37:43.6968742Z Compiling .pio/build/pico/lib084/RadioLib/modules/LR11x0/LR1120.cpp.o
+2025-09-21T23:37:43.7274923Z Compiling .pio/build/pico/lib084/RadioLib/modules/LR11x0/LR1121.cpp.o
+2025-09-21T23:37:44.2809027Z Compiling .pio/build/pico/lib084/RadioLib/modules/LR11x0/LR11x0.cpp.o
+2025-09-21T23:37:44.4674672Z Compiling .pio/build/pico/lib084/RadioLib/modules/LR11x0/LR11x0_commands.cpp.o
+2025-09-21T23:37:44.4820521Z Compiling .pio/build/pico/lib084/RadioLib/modules/LR11x0/LR11x0_crypto.cpp.o
+2025-09-21T23:37:44.5265760Z Compiling .pio/build/pico/lib084/RadioLib/modules/LR11x0/LR11x0_gnss.cpp.o
+2025-09-21T23:37:45.2909983Z Compiling .pio/build/pico/lib084/RadioLib/modules/LR11x0/LR11x0_wifi.cpp.o
+2025-09-21T23:37:45.6073897Z Compiling .pio/build/pico/lib084/RadioLib/modules/RF69/RF69.cpp.o
+2025-09-21T23:37:45.6199469Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX123x/SX1231.cpp.o
+2025-09-21T23:37:45.6974286Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX123x/SX1233.cpp.o
+2025-09-21T23:37:45.9074786Z /pio/workspace/libdeps/pico/RadioLib/src/modules/LR11x0/LR11x0_wifi.cpp: In member function 'int16_t LR11x0::getWifiScanResult(LR11x0WifiResult_t*, uint8_t, bool)':
+2025-09-21T23:37:45.9076991Z /pio/workspace/libdeps/pico/RadioLib/src/modules/LR11x0/LR11x0_wifi.cpp:101:52: warning: cast from 'LR11x0WifiResult_t*' to 'LR11x0WifiResultExtended_t*' increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:45.9079083Z   101 |       LR11x0WifiResultExtended_t* resultExtended = reinterpret_cast<LR11x0WifiResultExtended_t*>(result);
+2025-09-21T23:37:45.9080066Z       |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:45.9089993Z /pio/workspace/libdeps/pico/RadioLib/src/modules/LR11x0/LR11x0_wifi.cpp:128:42: warning: cast from 'LR11x0WifiResult_t*' to 'LR11x0WifiResultFull_t*' increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:45.9091806Z   128 |     LR11x0WifiResultFull_t* resultFull = reinterpret_cast<LR11x0WifiResultFull_t*>(result);
+2025-09-21T23:37:45.9092556Z       |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:46.1514032Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/STM32WLx.cpp.o
+2025-09-21T23:37:46.2181442Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+2025-09-21T23:37:46.2592944Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/SX1261.cpp.o
+2025-09-21T23:37:46.3152738Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/SX1262.cpp.o
+2025-09-21T23:37:46.7586362Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/SX1268.cpp.o
+2025-09-21T23:37:46.8242762Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/SX126x.cpp.o
+2025-09-21T23:37:47.0069356Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/SX126x_LR_FHSS.cpp.o
+2025-09-21T23:37:47.0893638Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/SX126x_commands.cpp.o
+2025-09-21T23:37:47.5558472Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX126x/SX126x_config.cpp.o
+2025-09-21T23:37:47.9343632Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX127x/SX1272.cpp.o
+2025-09-21T23:37:47.9620080Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX127x/SX1273.cpp.o
+2025-09-21T23:37:48.0484181Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX127x/SX1276.cpp.o
+2025-09-21T23:37:48.5798343Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX127x/SX1277.cpp.o
+2025-09-21T23:37:48.7419320Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX127x/SX1278.cpp.o
+2025-09-21T23:37:48.8229395Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX127x/SX1279.cpp.o
+2025-09-21T23:37:48.8950211Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX127x/SX127x.cpp.o
+2025-09-21T23:37:49.3876984Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX128x/SX1280.cpp.o
+2025-09-21T23:37:49.6013866Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX128x/SX1281.cpp.o
+2025-09-21T23:37:49.7198462Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX128x/SX1282.cpp.o
+2025-09-21T23:37:50.2223796Z Compiling .pio/build/pico/lib084/RadioLib/modules/SX128x/SX128x.cpp.o
+2025-09-21T23:37:50.3298909Z Compiling .pio/build/pico/lib084/RadioLib/modules/Si443x/Si4430.cpp.o
+2025-09-21T23:37:50.3437793Z Compiling .pio/build/pico/lib084/RadioLib/modules/Si443x/Si4431.cpp.o
+2025-09-21T23:37:50.4591349Z Compiling .pio/build/pico/lib084/RadioLib/modules/Si443x/Si4432.cpp.o
+2025-09-21T23:37:50.9407086Z Compiling .pio/build/pico/lib084/RadioLib/modules/Si443x/Si443x.cpp.o
+2025-09-21T23:37:50.9543965Z Compiling .pio/build/pico/lib084/RadioLib/modules/nRF24/nRF24.cpp.o
+2025-09-21T23:37:51.0100385Z Compiling .pio/build/pico/lib084/RadioLib/protocols/AFSK/AFSK.cpp.o
+2025-09-21T23:37:51.0696718Z Compiling .pio/build/pico/lib084/RadioLib/protocols/APRS/APRS.cpp.o
+2025-09-21T23:37:51.5401437Z Compiling .pio/build/pico/lib084/RadioLib/protocols/AX25/AX25.cpp.o
+2025-09-21T23:37:51.5551262Z Compiling .pio/build/pico/lib084/RadioLib/protocols/BellModem/BellModem.cpp.o
+2025-09-21T23:37:51.6348408Z Compiling .pio/build/pico/lib084/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+2025-09-21T23:37:51.6793756Z Compiling .pio/build/pico/lib084/RadioLib/protocols/FSK4/FSK4.cpp.o
+2025-09-21T23:37:52.1386072Z Compiling .pio/build/pico/lib084/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+2025-09-21T23:37:52.2759228Z Compiling .pio/build/pico/lib084/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+2025-09-21T23:37:52.2907068Z Compiling .pio/build/pico/lib084/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+2025-09-21T23:37:52.3235237Z Compiling .pio/build/pico/lib084/RadioLib/protocols/Morse/Morse.cpp.o
+2025-09-21T23:37:52.3348343Z Compiling .pio/build/pico/lib084/RadioLib/protocols/Pager/Pager.cpp.o
+2025-09-21T23:37:52.3655596Z Compiling .pio/build/pico/lib084/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+2025-09-21T23:37:52.3850665Z Compiling .pio/build/pico/lib084/RadioLib/protocols/Print/ITA2String.cpp.o
+2025-09-21T23:37:52.5859996Z Compiling .pio/build/pico/lib084/RadioLib/protocols/Print/Print.cpp.o
+2025-09-21T23:37:52.7453160Z Compiling .pio/build/pico/lib084/RadioLib/protocols/RTTY/RTTY.cpp.o
+2025-09-21T23:37:53.0392171Z Compiling .pio/build/pico/lib084/RadioLib/protocols/SSTV/SSTV.cpp.o
+2025-09-21T23:37:53.2152339Z Compiling .pio/build/pico/lib084/RadioLib/utils/CRC.cpp.o
+2025-09-21T23:37:53.3504544Z Compiling .pio/build/pico/lib084/RadioLib/utils/Cryptography.cpp.o
+2025-09-21T23:37:53.3627815Z Compiling .pio/build/pico/lib084/RadioLib/utils/FEC.cpp.o
+2025-09-21T23:37:53.6436702Z Compiling .pio/build/pico/lib084/RadioLib/utils/Utils.cpp.o
+2025-09-21T23:37:53.9591841Z Compiling .pio/build/pico/libf93/Crypto/AES128.cpp.o
+2025-09-21T23:37:54.1547341Z Compiling .pio/build/pico/libf93/Crypto/AES192.cpp.o
+2025-09-21T23:37:54.2390461Z Compiling .pio/build/pico/libf93/Crypto/AES256.cpp.o
+2025-09-21T23:37:54.2489207Z Compiling .pio/build/pico/libf93/Crypto/AESCommon.cpp.o
+2025-09-21T23:37:54.2827819Z Compiling .pio/build/pico/libf93/Crypto/AESEsp32.cpp.o
+2025-09-21T23:37:54.2994434Z Archiving .pio/build/pico/lib084/libRadioLib.a
+2025-09-21T23:37:54.3104485Z Indexing .pio/build/pico/lib084/libRadioLib.a
+2025-09-21T23:37:54.3258117Z Compiling .pio/build/pico/libf93/Crypto/AuthenticatedCipher.cpp.o
+2025-09-21T23:37:54.3424351Z Compiling .pio/build/pico/libf93/Crypto/BLAKE2b.cpp.o
+2025-09-21T23:37:54.3791627Z Compiling .pio/build/pico/libf93/Crypto/BLAKE2s.cpp.o
+2025-09-21T23:37:54.4129246Z Compiling .pio/build/pico/libf93/Crypto/BigNumberUtil.cpp.o
+2025-09-21T23:37:54.4930871Z Compiling .pio/build/pico/libf93/Crypto/BlockCipher.cpp.o
+2025-09-21T23:37:54.5444810Z Compiling .pio/build/pico/libf93/Crypto/CTR.cpp.o
+2025-09-21T23:37:54.5531766Z Compiling .pio/build/pico/libf93/Crypto/ChaCha.cpp.o
+2025-09-21T23:37:54.5650675Z Compiling .pio/build/pico/libf93/Crypto/ChaChaPoly.cpp.o
+2025-09-21T23:37:54.5773554Z Compiling .pio/build/pico/libf93/Crypto/Cipher.cpp.o
+2025-09-21T23:37:54.6008215Z /pio/workspace/libdeps/pico/Crypto/ChaCha.cpp: In member function 'virtual void ChaCha::encrypt(uint8_t*, const uint8_t*, size_t)':
+2025-09-21T23:37:54.6010453Z /pio/workspace/libdeps/pico/Crypto/ChaCha.cpp:163:22: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint32_t*' {aka 'long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:54.6011901Z   163 |             hashCore((uint32_t *)stream, (const uint32_t *)block, rounds);
+2025-09-21T23:37:54.6012460Z       |                      ^~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:54.6013762Z /pio/workspace/libdeps/pico/Crypto/ChaCha.cpp:163:42: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'const uint32_t*' {aka 'const long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:54.6015368Z   163 |             hashCore((uint32_t *)stream, (const uint32_t *)block, rounds);
+2025-09-21T23:37:54.6015948Z       |                                          ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:54.6041017Z /pio/workspace/libdeps/pico/Crypto/ChaCha.cpp: In member function 'void ChaCha::keystreamBlock(uint32_t*)':
+2025-09-21T23:37:54.6043849Z /pio/workspace/libdeps/pico/Crypto/ChaCha.cpp:210:22: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'const uint32_t*' {aka 'const long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:54.6045282Z   210 |     hashCore(output, (const uint32_t *)block, rounds);
+2025-09-21T23:37:54.6045815Z       |                      ^~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:54.6260485Z Compiling .pio/build/pico/libf93/Crypto/Crypto.cpp.o
+2025-09-21T23:37:54.6435808Z Compiling .pio/build/pico/libf93/Crypto/Curve25519.cpp.o
+2025-09-21T23:37:54.6730229Z Compiling .pio/build/pico/libf93/Crypto/EAX.cpp.o
+2025-09-21T23:37:54.6909909Z Compiling .pio/build/pico/libf93/Crypto/Ed25519.cpp.o
+2025-09-21T23:37:54.7027694Z Compiling .pio/build/pico/libf93/Crypto/GCM.cpp.o
+2025-09-21T23:37:54.8000933Z Compiling .pio/build/pico/libf93/Crypto/GF128.cpp.o
+2025-09-21T23:37:54.8514085Z Compiling .pio/build/pico/libf93/Crypto/GHASH.cpp.o
+2025-09-21T23:37:54.8720848Z Compiling .pio/build/pico/libf93/Crypto/HKDF.cpp.o
+2025-09-21T23:37:54.8870690Z Compiling .pio/build/pico/libf93/Crypto/Hash.cpp.o
+2025-09-21T23:37:54.9106223Z Compiling .pio/build/pico/libf93/Crypto/KeccakCore.cpp.o
+2025-09-21T23:37:54.9408792Z Compiling .pio/build/pico/libf93/Crypto/NoiseSource.cpp.o
+2025-09-21T23:37:54.9588636Z Compiling .pio/build/pico/libf93/Crypto/OMAC.cpp.o
+2025-09-21T23:37:54.9710172Z Compiling .pio/build/pico/libf93/Crypto/P521.cpp.o
+2025-09-21T23:37:54.9976443Z Compiling .pio/build/pico/libf93/Crypto/Poly1305.cpp.o
+2025-09-21T23:37:55.0587848Z Compiling .pio/build/pico/libf93/Crypto/RNG.cpp.o
+2025-09-21T23:37:55.1038167Z Compiling .pio/build/pico/libf93/Crypto/SHA224.cpp.o
+2025-09-21T23:37:55.1366540Z Compiling .pio/build/pico/libf93/Crypto/SHA256.cpp.o
+2025-09-21T23:37:55.1635597Z Compiling .pio/build/pico/libf93/Crypto/SHA3.cpp.o
+2025-09-21T23:37:55.2501621Z Compiling .pio/build/pico/libf93/Crypto/SHA384.cpp.o
+2025-09-21T23:37:55.2915323Z Compiling .pio/build/pico/libf93/Crypto/SHA512.cpp.o
+2025-09-21T23:37:55.2950381Z /pio/workspace/libdeps/pico/Crypto/RNG.cpp:63:2: warning: #warning "no hardware random number source detected for this platform" [-Wcpp]
+2025-09-21T23:37:55.2957355Z    63 | #warning "no hardware random number source detected for this platform"
+2025-09-21T23:37:55.2958229Z       |  ^~~~~~~
+2025-09-21T23:37:55.3232782Z Compiling .pio/build/pico/libf93/Crypto/SHAKE.cpp.o
+2025-09-21T23:37:55.3356906Z Compiling .pio/build/pico/libf93/Crypto/XOF.cpp.o
+2025-09-21T23:37:55.3931700Z Compiling .pio/build/pico/libf93/Crypto/XTS.cpp.o
+2025-09-21T23:37:55.4166110Z Compiling .pio/build/pico/libc12/SdFat/ExFatLib/ExFatDbg.cpp.o
+2025-09-21T23:37:55.4700437Z Compiling .pio/build/pico/libc12/SdFat/ExFatLib/ExFatFile.cpp.o
+2025-09-21T23:37:55.5580629Z Compiling .pio/build/pico/libc12/SdFat/ExFatLib/ExFatFilePrint.cpp.o
+2025-09-21T23:37:55.7496184Z Archiving .pio/build/pico/libf93/libCrypto.a
+2025-09-21T23:37:55.7588142Z Indexing .pio/build/pico/libf93/libCrypto.a
+2025-09-21T23:37:55.7693366Z Compiling .pio/build/pico/libc12/SdFat/ExFatLib/ExFatFileWrite.cpp.o
+2025-09-21T23:37:56.0654628Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/ExFatLib/ExFatDbg.cpp: In member function 'void ExFatPartition::dmpFat(print_t*, uint32_t, uint32_t)':
+2025-09-21T23:37:56.0657475Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/ExFatLib/ExFatDbg.cpp:386:27: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint32_t*' {aka 'long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:56.0659650Z   386 |     const uint32_t* fat = reinterpret_cast<uint32_t*>(cache);
+2025-09-21T23:37:56.0660385Z       |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:56.4300402Z Compiling .pio/build/pico/libc12/SdFat/ExFatLib/ExFatFormatter.cpp.o
+2025-09-21T23:37:56.4641285Z Compiling .pio/build/pico/libc12/SdFat/ExFatLib/ExFatName.cpp.o
+2025-09-21T23:37:56.5148401Z Compiling .pio/build/pico/libc12/SdFat/ExFatLib/ExFatPartition.cpp.o
+2025-09-21T23:37:56.8029028Z Compiling .pio/build/pico/libc12/SdFat/ExFatLib/ExFatVolume.cpp.o
+2025-09-21T23:37:57.2844315Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatDbg.cpp.o
+2025-09-21T23:37:57.3593335Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatFile.cpp.o
+2025-09-21T23:37:57.3956163Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatFileLFN.cpp.o
+2025-09-21T23:37:57.5904891Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatFilePrint.cpp.o
+2025-09-21T23:37:57.9343136Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/FatLib/FatDbg.cpp: In member function 'void FatPartition::dmpSector(print_t*, uint32_t, uint8_t)':
+2025-09-21T23:37:57.9347462Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/FatLib/FatDbg.cpp:226:21: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint32_t*' {aka 'long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:57.9349307Z   226 |       printHex(pr, *reinterpret_cast<uint32_t*>(data + i));
+2025-09-21T23:37:57.9349858Z       |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:57.9351247Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/FatLib/FatDbg.cpp:229:21: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:57.9352882Z   229 |       printHex(pr, *reinterpret_cast<uint16_t*>(data + i));
+2025-09-21T23:37:57.9353441Z       |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:58.2029169Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatFileSFN.cpp.o
+2025-09-21T23:37:58.3812698Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatFormatter.cpp.o
+2025-09-21T23:37:58.4389993Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatName.cpp.o
+2025-09-21T23:37:58.6041700Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatPartition.cpp.o
+2025-09-21T23:37:59.0697273Z Compiling .pio/build/pico/libc12/SdFat/FatLib/FatVolume.cpp.o
+2025-09-21T23:37:59.2741398Z Compiling .pio/build/pico/libc12/SdFat/FreeStack.cpp.o
+2025-09-21T23:37:59.2835549Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/FatLib/FatPartition.cpp: In member function 'int32_t FatPartition::freeClusterCount()':
+2025-09-21T23:37:59.2838223Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/FatLib/FatPartition.cpp:365:31: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:59.2839876Z   365 |         const uint16_t* p16 = reinterpret_cast<uint16_t*>(pc);
+2025-09-21T23:37:59.2841211Z       |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:59.2842920Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/FatLib/FatPartition.cpp:372:31: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint32_t*' {aka 'long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:37:59.2853927Z   372 |         const uint32_t* p32 = reinterpret_cast<uint32_t*>(pc);
+2025-09-21T23:37:59.2857425Z       |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:37:59.3306124Z Compiling .pio/build/pico/libc12/SdFat/FsLib/FsFile.cpp.o
+2025-09-21T23:37:59.3432951Z Compiling .pio/build/pico/libc12/SdFat/FsLib/FsNew.cpp.o
+2025-09-21T23:37:59.3917431Z Compiling .pio/build/pico/libc12/SdFat/FsLib/FsVolume.cpp.o
+2025-09-21T23:37:59.4964069Z Compiling .pio/build/pico/libc12/SdFat/MinimumSerial.cpp.o
+2025-09-21T23:37:59.8431847Z Compiling .pio/build/pico/libc12/SdFat/SdCard/Rp2040Sdio/PioSdioCard.cpp.o
+2025-09-21T23:38:00.1047696Z Compiling .pio/build/pico/libc12/SdFat/SdCard/SdCardInfo.cpp.o
+2025-09-21T23:38:00.2168534Z Compiling .pio/build/pico/libc12/SdFat/SdCard/SdSpiCard.cpp.o
+2025-09-21T23:38:00.2325103Z Compiling .pio/build/pico/libc12/SdFat/SdCard/TeensySdio/TeensySdio.cpp.o
+2025-09-21T23:38:00.2624312Z Compiling .pio/build/pico/libc12/SdFat/SpiDriver/SdSpiArtemis.cpp.o
+2025-09-21T23:38:00.4150976Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/SdCard/Rp2040Sdio/PioSdioCard.cpp: In function 'bool writeDat(const uint8_t*)':
+2025-09-21T23:38:00.4153626Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/SdCard/Rp2040Sdio/PioSdioCard.cpp:531:13: warning: cast from 'const uint8_t*' {aka 'const unsigned char*'} to 'const uint32_t*' {aka 'const long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:00.4155555Z   531 |     src32 = (const uint32_t*)src;
+2025-09-21T23:38:00.4155990Z       |             ^~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:00.7620028Z Compiling .pio/build/pico/libc12/SdFat/SpiDriver/SdSpiChipSelect.cpp.o
+2025-09-21T23:38:00.9656338Z Compiling .pio/build/pico/libc12/SdFat/SpiDriver/SdSpiDue.cpp.o
+2025-09-21T23:38:00.9863362Z Compiling .pio/build/pico/libc12/SdFat/SpiDriver/SdSpiParticle.cpp.o
+2025-09-21T23:38:01.1975051Z Compiling .pio/build/pico/libc12/SdFat/SpiDriver/SdSpiSTM32.cpp.o
+2025-09-21T23:38:01.4904621Z Compiling .pio/build/pico/libc12/SdFat/SpiDriver/SdSpiSTM32Core.cpp.o
+2025-09-21T23:38:01.6882726Z Compiling .pio/build/pico/libc12/SdFat/SpiDriver/SdSpiTeensy3.cpp.o
+2025-09-21T23:38:01.7165207Z Compiling .pio/build/pico/libc12/SdFat/common/FmtNumber.cpp.o
+2025-09-21T23:38:01.9284176Z Compiling .pio/build/pico/libc12/SdFat/common/FsCache.cpp.o
+2025-09-21T23:38:02.1604766Z Compiling .pio/build/pico/libc12/SdFat/common/FsDateTime.cpp.o
+2025-09-21T23:38:02.2288052Z Compiling .pio/build/pico/libc12/SdFat/common/FsName.cpp.o
+2025-09-21T23:38:02.4116293Z Compiling .pio/build/pico/libc12/SdFat/common/FsStructs.cpp.o
+2025-09-21T23:38:02.4408233Z In file included from /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.cpp:25:
+2025-09-21T23:38:02.4415976Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h: In function 'uint16_t getLe16(const uint8_t*)':
+2025-09-21T23:38:02.4423024Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h:41:11: warning: cast from 'const uint8_t*' {aka 'const unsigned char*'} to 'const uint16_t*' {aka 'const short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:02.4431280Z    41 |   return *reinterpret_cast<const uint16_t*>(src);
+2025-09-21T23:38:02.4436346Z       |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:02.4443471Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h: In function 'uint32_t getLe32(const uint8_t*)':
+2025-09-21T23:38:02.4451634Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h:44:11: warning: cast from 'const uint8_t*' {aka 'const unsigned char*'} to 'const uint32_t*' {aka 'const long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:02.4458394Z    44 |   return *reinterpret_cast<const uint32_t*>(src);
+2025-09-21T23:38:02.4463428Z       |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:02.4472854Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h: In function 'uint64_t getLe64(const uint8_t*)':
+2025-09-21T23:38:02.4478139Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h:47:11: warning: cast from 'const uint8_t*' {aka 'const unsigned char*'} to 'const uint64_t*' {aka 'const long long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:02.4480164Z    47 |   return *reinterpret_cast<const uint64_t*>(src);
+2025-09-21T23:38:02.4481246Z       |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:02.4503872Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h: In function 'void setLe16(uint8_t*, uint16_t)':
+2025-09-21T23:38:02.4510532Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h:50:4: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint16_t*' {aka 'short unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:02.4519310Z    50 |   *reinterpret_cast<uint16_t*>(dst) = src;
+2025-09-21T23:38:02.4530894Z       |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:02.4537824Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h: In function 'void setLe32(uint8_t*, uint32_t)':
+2025-09-21T23:38:02.4540019Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h:53:4: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint32_t*' {aka 'long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:02.4541657Z    53 |   *reinterpret_cast<uint32_t*>(dst) = src;
+2025-09-21T23:38:02.4542134Z       |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:02.4543154Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h: In function 'void setLe64(uint8_t*, uint64_t)':
+2025-09-21T23:38:02.4545357Z /pio/core/packages/framework-arduinopico/libraries/SdFat/src/common/FsStructs.h:56:4: warning: cast from 'uint8_t*' {aka 'unsigned char*'} to 'uint64_t*' {aka 'long long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:02.4546960Z    56 |   *reinterpret_cast<uint64_t*>(dst) = src;
+2025-09-21T23:38:02.4547629Z       |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:02.4932572Z Compiling .pio/build/pico/libc12/SdFat/common/FsUtf.cpp.o
+2025-09-21T23:38:02.5791753Z Compiling .pio/build/pico/libc12/SdFat/common/PrintBasic.cpp.o
+2025-09-21T23:38:02.7019171Z Compiling .pio/build/pico/libc12/SdFat/common/upcase.cpp.o
+2025-09-21T23:38:02.7673673Z Compiling .pio/build/pico/libc12/SdFat/iostream/StdioStream.cpp.o
+2025-09-21T23:38:02.8313559Z Compiling .pio/build/pico/libc12/SdFat/iostream/StreamBaseClass.cpp.o
+2025-09-21T23:38:02.8525562Z Compiling .pio/build/pico/libc12/SdFat/iostream/istream.cpp.o
+2025-09-21T23:38:03.1886808Z Compiling .pio/build/pico/libc12/SdFat/iostream/ostream.cpp.o
+2025-09-21T23:38:03.7167029Z Compiling .pio/build/pico/lib7d0/SDFS/SDFS.cpp.o
+2025-09-21T23:38:03.7580062Z Compiling .pio/build/pico/libf62/SD/SD.cpp.o
+2025-09-21T23:38:03.8012691Z Compiling .pio/build/pico/lib086/lwIP_Ethernet/LwipEthernet.cpp.o
+2025-09-21T23:38:04.1282847Z Archiving .pio/build/pico/libc12/libSdFat.a
+2025-09-21T23:38:04.1374254Z Indexing .pio/build/pico/libc12/libSdFat.a
+2025-09-21T23:38:04.1518813Z Compiling .pio/build/pico/lib086/lwIP_Ethernet/LwipIntf.cpp.o
+2025-09-21T23:38:04.6640145Z Compiling .pio/build/pico/lib086/lwIP_Ethernet/LwipIntfCB.cpp.o
+2025-09-21T23:38:04.7055673Z Archiving .pio/build/pico/libf62/libSD.a
+2025-09-21T23:38:04.7084605Z Indexing .pio/build/pico/libf62/libSD.a
+2025-09-21T23:38:04.7223157Z Compiling .pio/build/pico/lib586/MD5Builder/MD5Builder.cpp.o
+2025-09-21T23:38:04.7841581Z Compiling .pio/build/pico/libc71/LittleFS/LittleFS.cpp.o
+2025-09-21T23:38:05.1977353Z Archiving .pio/build/pico/lib7d0/libSDFS.a
+2025-09-21T23:38:05.2021215Z Indexing .pio/build/pico/lib7d0/libSDFS.a
+2025-09-21T23:38:05.2135325Z Compiling .pio/build/pico/libc71/LittleFS/lfs.c.o
+2025-09-21T23:38:05.4386510Z Archiving .pio/build/pico/lib086/liblwIP_Ethernet.a
+2025-09-21T23:38:05.4430377Z Indexing .pio/build/pico/lib086/liblwIP_Ethernet.a
+2025-09-21T23:38:05.4535308Z Compiling .pio/build/pico/libc71/LittleFS/lfs_util.c.o
+2025-09-21T23:38:05.4806676Z Archiving .pio/build/pico/lib586/libMD5Builder.a
+2025-09-21T23:38:05.4836605Z Indexing .pio/build/pico/lib586/libMD5Builder.a
+2025-09-21T23:38:05.4989123Z Compiling .pio/build/pico/libf67/PicoOTA/PicoOTA.cpp.o
+2025-09-21T23:38:05.5276912Z Compiling .pio/build/pico/lib0fa/Updater/Updater.cpp.o
+2025-09-21T23:38:06.1639512Z Compiling .pio/build/pico/lib11f/WiFi/BearSSLHelpers.cpp.o
+2025-09-21T23:38:06.2334479Z Archiving .pio/build/pico/libf67/libPicoOTA.a
+2025-09-21T23:38:06.2366219Z Indexing .pio/build/pico/libf67/libPicoOTA.a
+2025-09-21T23:38:06.2467769Z Compiling .pio/build/pico/lib11f/WiFi/CertStoreBearSSL.cpp.o
+2025-09-21T23:38:06.6475968Z Archiving .pio/build/pico/lib0fa/libUpdater.a
+2025-09-21T23:38:06.6517992Z Indexing .pio/build/pico/lib0fa/libUpdater.a
+2025-09-21T23:38:06.6685863Z Compiling .pio/build/pico/lib11f/WiFi/WiFiClass.cpp.o
+2025-09-21T23:38:06.7308495Z Archiving .pio/build/pico/libc71/libLittleFS.a
+2025-09-21T23:38:06.7359308Z Indexing .pio/build/pico/libc71/libLittleFS.a
+2025-09-21T23:38:06.7494120Z Compiling .pio/build/pico/lib11f/WiFi/WiFiClient.cpp.o
+2025-09-21T23:38:07.2085817Z Compiling .pio/build/pico/lib11f/WiFi/WiFiClientSecureBearSSL.cpp.o
+2025-09-21T23:38:07.6107942Z Compiling .pio/build/pico/lib11f/WiFi/WiFiMulti.cpp.o
+2025-09-21T23:38:08.0277372Z Compiling .pio/build/pico/lib11f/WiFi/WiFiNTP.cpp.o
+2025-09-21T23:38:08.2386431Z Compiling .pio/build/pico/lib11f/WiFi/WiFiServer.cpp.o
+2025-09-21T23:38:08.2726784Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp: In function 'void BearSSL::insecure_start_chain(const br_x509_class**, const char*)':
+2025-09-21T23:38:08.2730563Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp:696:40: warning: cast from 'const br_x509_class**' {aka 'const br_x509_class_**'} to 'BearSSL::br_x509_insecure_context*' increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:08.2735592Z   696 |         br_x509_insecure_context *xc = (br_x509_insecure_context *)ctx;
+2025-09-21T23:38:08.2738877Z       |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:08.2745545Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp: In function 'void BearSSL::insecure_append(const br_x509_class**, const unsigned char*, size_t)':
+2025-09-21T23:38:08.2752855Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp:714:40: warning: cast from 'const br_x509_class**' {aka 'const br_x509_class_**'} to 'BearSSL::br_x509_insecure_context*' increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:08.2757649Z   714 |         br_x509_insecure_context *xc = (br_x509_insecure_context *)ctx;
+2025-09-21T23:38:08.2758262Z       |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:08.2759572Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp: In function 'void BearSSL::insecure_end_cert(const br_x509_class**)':
+2025-09-21T23:38:08.2762114Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp:731:40: warning: cast from 'const br_x509_class**' {aka 'const br_x509_class_**'} to 'BearSSL::br_x509_insecure_context*' increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:08.2763899Z   731 |         br_x509_insecure_context *xc = (br_x509_insecure_context *)ctx;
+2025-09-21T23:38:08.2789782Z       |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:08.2791297Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp: In function 'unsigned int BearSSL::insecure_end_chain(const br_x509_class**)':
+2025-09-21T23:38:08.2795668Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp:738:46: warning: cast from 'const br_x509_class**' {aka 'const br_x509_class_**'} to 'const BearSSL::br_x509_insecure_context*' increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:08.2798040Z   738 |         const br_x509_insecure_context *xc = (const br_x509_insecure_context *)ctx;
+2025-09-21T23:38:08.2798711Z       |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:08.2800461Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp: In function 'const br_x509_pkey* BearSSL::insecure_get_pkey(const br_x509_class* const*, unsigned int*)':
+2025-09-21T23:38:08.2803438Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClientSecureBearSSL.cpp:785:46: warning: cast from 'const br_x509_class* const*' {aka 'const br_x509_class_* const*'} to 'const BearSSL::br_x509_insecure_context*' increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:08.2805571Z   785 |         const br_x509_insecure_context *xc = (const br_x509_insecure_context *)ctx;
+2025-09-21T23:38:08.2806240Z       |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:08.8909191Z Compiling .pio/build/pico/lib11f/WiFi/WiFiServerSecureBearSSL.cpp.o
+2025-09-21T23:38:09.1930445Z Compiling .pio/build/pico/lib11f/WiFi/WiFiUdp.cpp.o
+2025-09-21T23:38:09.2397070Z Compiling .pio/build/pico/lib11f/WiFi/dhcpserver/dhcpserver.c.o
+2025-09-21T23:38:09.4053222Z Compiling .pio/build/pico/libcfe/FreeRTOS/croutine.c.o
+2025-09-21T23:38:09.4663807Z Compiling .pio/build/pico/libcfe/FreeRTOS/event_groups.c.o
+2025-09-21T23:38:09.4786758Z Compiling .pio/build/pico/libcfe/FreeRTOS/heap_3.c.o
+2025-09-21T23:38:09.5556296Z Compiling .pio/build/pico/libcfe/FreeRTOS/list.c.o
+2025-09-21T23:38:09.6233167Z Compiling .pio/build/pico/libcfe/FreeRTOS/mpu_wrappers_v2_asm.c.o
+2025-09-21T23:38:09.6448964Z Compiling .pio/build/pico/libcfe/FreeRTOS/port.c.o
+2025-09-21T23:38:09.6599111Z Compiling .pio/build/pico/libcfe/FreeRTOS/portASM.S.o
+2025-09-21T23:38:09.6868088Z Compiling .pio/build/pico/libcfe/FreeRTOS/portasm.c.o
+2025-09-21T23:38:09.7177707Z Compiling .pio/build/pico/libcfe/FreeRTOS/queue.c.o
+2025-09-21T23:38:09.8198794Z Compiling .pio/build/pico/libcfe/FreeRTOS/stream_buffer.c.o
+2025-09-21T23:38:10.0693046Z Compiling .pio/build/pico/libcfe/FreeRTOS/tasks.c.o
+2025-09-21T23:38:10.0975648Z Compiling .pio/build/pico/libcfe/FreeRTOS/timers.c.o
+2025-09-21T23:38:10.1813712Z Compiling .pio/build/pico/libcfe/FreeRTOS/variantHooks.cpp.o
+2025-09-21T23:38:10.3212060Z Compiling .pio/build/pico/lib710/AsyncUDP/AsyncUDP.cpp.o
+2025-09-21T23:38:10.5214972Z Archiving .pio/build/pico/lib11f/libWiFi.a
+2025-09-21T23:38:10.5271226Z Indexing .pio/build/pico/lib11f/libWiFi.a
+2025-09-21T23:38:10.5435749Z Compiling .pio/build/pico/lib57e/Adafruit NeoPixel/Adafruit_NeoPixel.cpp.o
+2025-09-21T23:38:10.9070802Z Compiling .pio/build/pico/lib57e/Adafruit NeoPixel/Adafruit_Neopixel_RP2.cpp.o
+2025-09-21T23:38:10.9477066Z Archiving .pio/build/pico/libcfe/libFreeRTOS.a
+2025-09-21T23:38:10.9521874Z Indexing .pio/build/pico/libcfe/libFreeRTOS.a
+2025-09-21T23:38:10.9616907Z Compiling .pio/build/pico/lib57e/Adafruit NeoPixel/esp.c.o
+2025-09-21T23:38:10.9899672Z Compiling .pio/build/pico/lib57e/Adafruit NeoPixel/esp8266.c.o
+2025-09-21T23:38:11.0189776Z Compiling .pio/build/pico/lib57e/Adafruit NeoPixel/kendyte_k210.c.o
+2025-09-21T23:38:11.0541127Z Compiling .pio/build/pico/FrameworkArduino/BluetoothDebug.cpp.o
+2025-09-21T23:38:11.0849353Z Compiling .pio/build/pico/FrameworkArduino/Bootsel.cpp.o
+2025-09-21T23:38:11.3225659Z Compiling .pio/build/pico/FrameworkArduino/CoreMutex.cpp.o
+2025-09-21T23:38:11.5423645Z Archiving .pio/build/pico/lib57e/libAdafruit NeoPixel.a
+2025-09-21T23:38:11.5461618Z Indexing .pio/build/pico/lib57e/libAdafruit NeoPixel.a
+2025-09-21T23:38:11.5564977Z Compiling .pio/build/pico/FrameworkArduino/FS.cpp.o
+2025-09-21T23:38:11.6598174Z Archiving .pio/build/pico/lib710/libAsyncUDP.a
+2025-09-21T23:38:11.6647283Z Indexing .pio/build/pico/lib710/libAsyncUDP.a
+2025-09-21T23:38:11.6763295Z Compiling .pio/build/pico/FrameworkArduino/PIOProgram.cpp.o
+2025-09-21T23:38:11.7216423Z Compiling .pio/build/pico/FrameworkArduino/RP2040Support.cpp.o
+2025-09-21T23:38:11.9633840Z Compiling .pio/build/pico/FrameworkArduino/RP2040USB.cpp.o
+2025-09-21T23:38:12.3530335Z Compiling .pio/build/pico/FrameworkArduino/Semihosting.cpp.o
+2025-09-21T23:38:12.4758156Z Compiling .pio/build/pico/FrameworkArduino/SerialPIO.cpp.o
+2025-09-21T23:38:12.5622865Z Compiling .pio/build/pico/FrameworkArduino/SerialUART.cpp.o
+2025-09-21T23:38:12.7628492Z Compiling .pio/build/pico/FrameworkArduino/SerialUSB.cpp.o
+2025-09-21T23:38:13.2874322Z Compiling .pio/build/pico/FrameworkArduino/StackThunk.cpp.o
+2025-09-21T23:38:13.3814240Z Compiling .pio/build/pico/FrameworkArduino/Tone.cpp.o
+2025-09-21T23:38:13.3920777Z Compiling .pio/build/pico/FrameworkArduino/WMath.cpp.o
+2025-09-21T23:38:13.4391840Z Compiling .pio/build/pico/FrameworkArduino/_freertos.cpp.o
+2025-09-21T23:38:13.4605996Z Compiling .pio/build/pico/FrameworkArduino/api/Common.cpp.o
+2025-09-21T23:38:13.5068000Z Compiling .pio/build/pico/FrameworkArduino/api/IPAddress.cpp.o
+2025-09-21T23:38:13.5187686Z Compiling .pio/build/pico/FrameworkArduino/api/PluggableUSB.cpp.o
+2025-09-21T23:38:13.5896217Z Compiling .pio/build/pico/FrameworkArduino/api/Print.cpp.o
+2025-09-21T23:38:14.0411816Z Compiling .pio/build/pico/FrameworkArduino/api/Stream.cpp.o
+2025-09-21T23:38:14.0573448Z In file included from /pio/core/packages/framework-arduinopico/cores/rp2040/api/IPAddress.cpp:1:
+2025-09-21T23:38:14.0575385Z /pio/core/packages/framework-arduinopico/cores/rp2040/api/../../../ArduinoCore-API/api/IPAddress.cpp: In member function 'arduino::IPAddress& arduino::IPAddress::operator=(const uint8_t*)':
+2025-09-21T23:38:14.0584760Z /pio/core/packages/framework-arduinopico/cores/rp2040/api/../../../ArduinoCore-API/api/IPAddress.cpp:114:13: warning: cast from 'const uint8_t*' {aka 'const unsigned char*'} to 'const uint32_t*' {aka 'const long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:14.0586571Z   114 |     v4() = *reinterpret_cast<const uint32_t*>(address);
+2025-09-21T23:38:14.0587063Z       |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:14.0588507Z /pio/core/packages/framework-arduinopico/cores/rp2040/api/../../../ArduinoCore-API/api/IPAddress.cpp: In member function 'bool arduino::IPAddress::operator==(const uint8_t*) const':
+2025-09-21T23:38:14.0591149Z /pio/core/packages/framework-arduinopico/cores/rp2040/api/../../../ArduinoCore-API/api/IPAddress.cpp:125:31: warning: cast from 'const uint8_t*' {aka 'const unsigned char*'} to 'const uint32_t*' {aka 'const long unsigned int*'} increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:14.0593042Z   125 |     return isV4() && v4() == *reinterpret_cast<const uint32_t*>(addr);
+2025-09-21T23:38:14.0593627Z       |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:38:14.0649329Z Compiling .pio/build/pico/FrameworkArduino/api/String.cpp.o
+2025-09-21T23:38:14.1644852Z Compiling .pio/build/pico/FrameworkArduino/cyw43_wrappers.cpp.o
+2025-09-21T23:38:14.1852817Z Compiling .pio/build/pico/FrameworkArduino/delay.cpp.o
+2025-09-21T23:38:14.1972479Z Compiling .pio/build/pico/FrameworkArduino/gprof_gmon.c.o
+2025-09-21T23:38:14.2438717Z Compiling .pio/build/pico/FrameworkArduino/gprof_shim.S.o
+2025-09-21T23:38:14.2585398Z Compiling .pio/build/pico/FrameworkArduino/libb64/cdecode.cpp.o
+2025-09-21T23:38:14.2695448Z /pio/core/packages/framework-arduinopico/cores/rp2040/gprof_gmon.c: In function 'profile_ctl':
+2025-09-21T23:38:14.2697493Z /pio/core/packages/framework-arduinopico/cores/rp2040/gprof_gmon.c:196:24: warning: cast increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:14.2716554Z   196 |         prof.counter = (uint16_t*)samples;
+2025-09-21T23:38:14.2717630Z       |                        ^
+2025-09-21T23:38:14.2718658Z /pio/core/packages/framework-arduinopico/cores/rp2040/gprof_gmon.c: In function 'monstartup':
+2025-09-21T23:38:14.2720353Z /pio/core/packages/framework-arduinopico/cores/rp2040/gprof_gmon.c:259:14: warning: cast increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:14.2721444Z   259 |     p->tos = (struct tostruct *)cp;
+2025-09-21T23:38:14.2721844Z       |              ^
+2025-09-21T23:38:14.2722831Z /pio/core/packages/framework-arduinopico/cores/rp2040/gprof_gmon.c:261:17: warning: cast increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:14.2724082Z   261 |     p->kcount = (uint16_t *)cp;
+2025-09-21T23:38:14.2724450Z       |                 ^
+2025-09-21T23:38:14.2725407Z /pio/core/packages/framework-arduinopico/cores/rp2040/gprof_gmon.c:263:16: warning: cast increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:14.2726413Z   263 |     p->froms = (uint16_t *)cp;
+2025-09-21T23:38:14.2726769Z       |                ^
+2025-09-21T23:38:14.2727956Z /pio/core/packages/framework-arduinopico/cores/rp2040/gprof_gmon.c: In function '_mcount_internal':
+2025-09-21T23:38:14.2731224Z /pio/core/packages/framework-arduinopico/cores/rp2040/gprof_gmon.c:327:19: warning: cast increases required alignment of target type [-Wcast-align]
+2025-09-21T23:38:14.2732429Z Compiling .pio/build/pico/FrameworkArduino/libb64/cencode.cpp.o
+2025-09-21T23:38:14.2733254Z   327 |     frompcindex = (uint32_t*)&p->froms[((long)frompcindex) / (HASHFRACTION * sizeof(*p->froms))];
+2025-09-21T23:38:14.2733904Z       |                   ^
+2025-09-21T23:38:14.3443069Z Compiling .pio/build/pico/FrameworkArduino/lock.cpp.o
+2025-09-21T23:38:14.3588286Z Compiling .pio/build/pico/FrameworkArduino/lwip_wrap.cpp.o
+2025-09-21T23:38:14.3708932Z Compiling .pio/build/pico/FrameworkArduino/main.cpp.o
+2025-09-21T23:38:14.4428520Z Compiling .pio/build/pico/FrameworkArduino/malloc-lock.cpp.o
+2025-09-21T23:38:14.4626212Z Compiling .pio/build/pico/FrameworkArduino/posix.cpp.o
+2025-09-21T23:38:15.0661484Z Compiling .pio/build/pico/FrameworkArduino/psram.cpp.o
+2025-09-21T23:38:15.0777495Z Compiling .pio/build/pico/FrameworkArduino/rp2350-memcpy.S.o
+2025-09-21T23:38:15.1051348Z Compiling .pio/build/pico/FrameworkArduino/sdkoverride/btstack_flash_bank.cpp.o
+2025-09-21T23:38:15.1188844Z Compiling .pio/build/pico/FrameworkArduino/sdkoverride/inet_chksum.cpp.o
+2025-09-21T23:38:15.1379342Z Compiling .pio/build/pico/FrameworkArduino/sdkoverride/newlib_interface.c.o
+2025-09-21T23:38:15.1707645Z Compiling .pio/build/pico/FrameworkArduino/sdkoverride/pico_bootsel_via_double_reset.c.o
+2025-09-21T23:38:15.2278405Z Compiling .pio/build/pico/FrameworkArduino/stdlib_noniso.cpp.o
+2025-09-21T23:38:15.2415540Z Compiling .pio/build/pico/FrameworkArduino/wiring_analog.cpp.o
+2025-09-21T23:38:15.2572046Z Compiling .pio/build/pico/FrameworkArduino/wiring_digital.cpp.o
+2025-09-21T23:38:15.5539885Z Compiling .pio/build/pico/FrameworkArduino/wiring_private.cpp.o
+2025-09-21T23:38:15.6594070Z Compiling .pio/build/pico/FrameworkArduino/wiring_pulse.cpp.o
+2025-09-21T23:38:15.8995157Z Compiling .pio/build/pico/FrameworkArduino/wiring_shift.cpp.o
+2025-09-21T23:38:16.3836832Z Archiving .pio/build/pico/libFrameworkArduino.a
+2025-09-21T23:38:16.3894984Z Indexing .pio/build/pico/libFrameworkArduino.a
+2025-09-21T23:38:16.4210596Z Linking .pio/build/pico/firmware.elf
+2025-09-21T23:38:16.7962979Z Generating UF2 image
+2025-09-21T23:38:16.7963635Z picotool uf2 convert -t elf ".pio/build/pico/firmware.elf" ".pio/build/pico/firmware.uf2"
+2025-09-21T23:38:16.8394345Z Retrieving maximum program size .pio/build/pico/firmware.elf
+2025-09-21T23:38:16.8394998Z Flash size: 2.00MB
+2025-09-21T23:38:16.8395293Z Sketch size: 1.50MB
+2025-09-21T23:38:16.8395571Z Filesystem size: 0.50MB
+2025-09-21T23:38:16.8395784Z PSRAM size: 0.00MB
+2025-09-21T23:38:16.8396221Z Maximium Sketch size: 1568768 EEPROM start: 0x101ff000 Filesystem start: 0x1017f000 Filesystem end: 0x101ff000
+2025-09-21T23:38:16.8396748Z Checking size .pio/build/pico/firmware.elf
+2025-09-21T23:38:16.8415221Z Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+2025-09-21T23:38:16.8416238Z RAM:   [===       ]  31.8% (used 83328 bytes from 262144 bytes)
+2025-09-21T23:38:16.8416604Z Flash: [======    ]  56.5% (used 885668 bytes from 1568768 bytes)
+2025-09-21T23:38:16.8443503Z Building .pio/build/pico/firmware.bin
+2025-09-21T23:38:16.8544544Z Building .pio/build/pico/firmware.bin.signed
+2025-09-21T23:38:17.2468217Z ======================== [SUCCESS] Took 146.27 seconds ========================
+2025-09-21T23:38:17.2469191Z 
+2025-09-21T23:38:17.2473910Z Environment    Status    Duration
+2025-09-21T23:38:17.2474319Z -------------  --------  ------------
+2025-09-21T23:38:17.2474706Z pico           SUCCESS   00:02:26.274
+2025-09-21T23:38:17.2475047Z ========================= 1 succeeded in 00:02:26.274 =========================
+2025-09-21T23:38:17.2837002Z Copying uf2 file
+2025-09-21T23:38:17.2885365Z Build artifacts are located at: /workspace/.pio/build
+2025-09-21T23:38:17.4356901Z ##[group]Run actions/upload-artifact@v4
+2025-09-21T23:38:17.4357363Z with:
+2025-09-21T23:38:17.4357593Z   name: firmware-rp2040-pico-2.7.10.3d51287.zip
+2025-09-21T23:38:17.4357860Z   overwrite: true
+2025-09-21T23:38:17.4358162Z   path: release/*.bin
+release/*.elf
+release/*.uf2
+release/*.hex
+release/*-ota.zip
+
+2025-09-21T23:38:17.4358514Z   if-no-files-found: warn
+2025-09-21T23:38:17.4358724Z   compression-level: 6
+2025-09-21T23:38:17.4358918Z   include-hidden-files: false
+2025-09-21T23:38:17.4359144Z ##[endgroup]
+2025-09-21T23:38:17.6542728Z With the provided path, there will be 2 files uploaded
+2025-09-21T23:38:17.9256285Z Artifact name is valid!
+2025-09-21T23:38:17.9258223Z Root directory input is valid!
+2025-09-21T23:38:18.0174776Z Beginning upload of artifact content to blob storage
+2025-09-21T23:38:19.4169874Z Uploaded bytes 4349353
+2025-09-21T23:38:19.5075434Z Finished uploading artifact content to blob storage!
+2025-09-21T23:38:19.5078597Z SHA256 digest of uploaded artifact zip is 51aab8b7d5e20ccddf42f12d2be085c8d1d0ce8cad544f016fa6d1004a627ee7
+2025-09-21T23:38:19.5079132Z Finalizing artifact upload
+2025-09-21T23:38:19.6511552Z Artifact firmware-rp2040-pico-2.7.10.3d51287.zip.zip successfully finalized. Artifact ID 4067357178
+2025-09-21T23:38:19.6512951Z Artifact firmware-rp2040-pico-2.7.10.3d51287.zip has been successfully uploaded! Final size is 4349353 bytes. Artifact ID is 4067357178
+2025-09-21T23:38:19.6520017Z Artifact download URL: https://github.com/meshtastic/firmware/actions/runs/17900192253/artifacts/4067357178
+2025-09-21T23:38:19.6658164Z Post job cleanup.
+2025-09-21T23:38:19.7415728Z [command]/usr/bin/git version
+2025-09-21T23:38:19.7481612Z git version 2.51.0
+2025-09-21T23:38:19.7519244Z Temporarily overriding HOME='/home/runner/work/_temp/53acf3ce-1720-4a10-bd72-53b840cd0f73' before making global git config changes
+2025-09-21T23:38:19.7520505Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:38:19.7524937Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:38:19.7559615Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:38:19.7591524Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:38:19.7798776Z Entering 'meshtestic'
+2025-09-21T23:38:19.7840407Z Entering 'protobufs'
+2025-09-21T23:38:19.7895017Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:38:19.7915942Z http.https://github.com/.extraheader
+2025-09-21T23:38:19.7925631Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:38:19.7955209Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:38:19.8159464Z Entering 'meshtestic'
+2025-09-21T23:38:19.8182439Z http.https://github.com/.extraheader
+2025-09-21T23:38:19.8214715Z Entering 'protobufs'
+2025-09-21T23:38:19.8238541Z http.https://github.com/.extraheader
+2025-09-21T23:38:19.8397762Z Cleaning up orphan processes

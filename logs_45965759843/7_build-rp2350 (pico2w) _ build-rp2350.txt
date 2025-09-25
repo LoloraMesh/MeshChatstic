@@ -1,0 +1,462 @@
+﻿2025-09-21T23:35:04.9201609Z Current runner version: '2.328.0'
+2025-09-21T23:35:04.9224672Z ##[group]Runner Image Provisioner
+2025-09-21T23:35:04.9225487Z Hosted Compute Agent
+2025-09-21T23:35:04.9226034Z Version: 20250829.383
+2025-09-21T23:35:04.9226586Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:35:04.9227360Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:35:04.9227908Z ##[endgroup]
+2025-09-21T23:35:04.9228617Z ##[group]Operating System
+2025-09-21T23:35:04.9229228Z Ubuntu
+2025-09-21T23:35:04.9229710Z 24.04.3
+2025-09-21T23:35:04.9230155Z LTS
+2025-09-21T23:35:04.9230691Z ##[endgroup]
+2025-09-21T23:35:04.9231179Z ##[group]Runner Image
+2025-09-21T23:35:04.9231677Z Image: ubuntu-24.04
+2025-09-21T23:35:04.9232269Z Version: 20250907.24.1
+2025-09-21T23:35:04.9233226Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:35:04.9234861Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:35:04.9235820Z ##[endgroup]
+2025-09-21T23:35:04.9238054Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:35:04.9240185Z Actions: read
+2025-09-21T23:35:04.9240806Z Attestations: read
+2025-09-21T23:35:04.9241338Z Checks: read
+2025-09-21T23:35:04.9241809Z Contents: read
+2025-09-21T23:35:04.9242242Z Deployments: read
+2025-09-21T23:35:04.9242798Z Discussions: read
+2025-09-21T23:35:04.9243245Z Issues: read
+2025-09-21T23:35:04.9243752Z Metadata: read
+2025-09-21T23:35:04.9244257Z Models: read
+2025-09-21T23:35:04.9244744Z Packages: read
+2025-09-21T23:35:04.9245274Z Pages: read
+2025-09-21T23:35:04.9245735Z PullRequests: read
+2025-09-21T23:35:04.9246255Z RepositoryProjects: read
+2025-09-21T23:35:04.9246746Z SecurityEvents: read
+2025-09-21T23:35:04.9247425Z Statuses: read
+2025-09-21T23:35:04.9247879Z ##[endgroup]
+2025-09-21T23:35:04.9250615Z Secret source: Actions
+2025-09-21T23:35:04.9251353Z Prepare workflow directory
+2025-09-21T23:35:04.9563834Z Prepare all required actions
+2025-09-21T23:35:04.9601154Z Getting action download info
+2025-09-21T23:35:05.2374793Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:35:05.3251336Z Download action repository 'meshtastic/gh-action-firmware@main' (SHA:c7ddeab97976e5554510b000d19b5af78814f587)
+2025-09-21T23:35:05.5884396Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-21T23:35:05.7855457Z Uses: meshtastic/firmware/.github/workflows/build_firmware.yml@refs/heads/develop (3d51287ba77693e5b0140d81abfe4cd218e0c2ae)
+2025-09-21T23:35:05.7860191Z ##[group] Inputs
+2025-09-21T23:35:05.7860670Z   version: 2.7.10.3d51287
+2025-09-21T23:35:05.7861123Z   platform: rp2350
+2025-09-21T23:35:05.7861533Z   pio_env: pico2w
+2025-09-21T23:35:05.7861943Z ##[endgroup]
+2025-09-21T23:35:05.7862429Z Complete job name: build-rp2350 (pico2w) / build-rp2350
+2025-09-21T23:35:05.8471075Z ##[group]Run actions/checkout@v5
+2025-09-21T23:35:05.8471891Z with:
+2025-09-21T23:35:05.8472266Z   submodules: recursive
+2025-09-21T23:35:05.8472708Z   ref: develop
+2025-09-21T23:35:05.8473129Z   repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:05.8473794Z   token: ***
+2025-09-21T23:35:05.8474166Z   ssh-strict: true
+2025-09-21T23:35:05.8474538Z   ssh-user: git
+2025-09-21T23:35:05.8474931Z   persist-credentials: true
+2025-09-21T23:35:05.8475356Z   clean: true
+2025-09-21T23:35:05.8475749Z   sparse-checkout-cone-mode: true
+2025-09-21T23:35:05.8476214Z   fetch-depth: 1
+2025-09-21T23:35:05.8476591Z   fetch-tags: false
+2025-09-21T23:35:05.8476977Z   show-progress: true
+2025-09-21T23:35:05.8477368Z   lfs: false
+2025-09-21T23:35:05.8477734Z   set-safe-directory: true
+2025-09-21T23:35:05.8478515Z ##[endgroup]
+2025-09-21T23:35:05.9422930Z Syncing repository: LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:05.9424851Z ##[group]Getting Git version info
+2025-09-21T23:35:05.9425800Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:35:05.9426739Z [command]/usr/bin/git version
+2025-09-21T23:35:05.9452260Z git version 2.51.0
+2025-09-21T23:35:05.9504841Z ##[endgroup]
+2025-09-21T23:35:05.9521443Z Temporarily overriding HOME='/home/runner/work/_temp/745f889c-cbef-4731-9792-051aada388f3' before making global git config changes
+2025-09-21T23:35:05.9523763Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:35:05.9527188Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:35:05.9567752Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:35:05.9571790Z ##[group]Initializing the repository
+2025-09-21T23:35:05.9576527Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:35:05.9654921Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:35:05.9658820Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:35:05.9660262Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:35:05.9661455Z hint:
+2025-09-21T23:35:05.9662280Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:35:05.9663251Z hint:
+2025-09-21T23:35:05.9664182Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:35:05.9665714Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:35:05.9666976Z hint:
+2025-09-21T23:35:05.9667641Z hint: 	git branch -m <name>
+2025-09-21T23:35:05.9668590Z hint:
+2025-09-21T23:35:05.9669597Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:35:05.9671362Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:35:05.9674227Z [command]/usr/bin/git remote add origin https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:05.9719917Z ##[endgroup]
+2025-09-21T23:35:05.9721330Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:35:05.9722321Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:35:05.9744676Z ##[endgroup]
+2025-09-21T23:35:05.9745332Z ##[group]Setting up auth
+2025-09-21T23:35:05.9752062Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:35:05.9782277Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:35:06.0059706Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:35:06.0091200Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:35:06.0317166Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:35:06.0351467Z ##[endgroup]
+2025-09-21T23:35:06.0352462Z ##[group]Fetching the repository
+2025-09-21T23:35:06.0360672Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/develop*:refs/remotes/origin/develop* +refs/tags/develop*:refs/tags/develop*
+2025-09-21T23:35:06.6486235Z From https://github.com/LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:35:06.6487384Z  * [new branch]      develop    -> origin/develop
+2025-09-21T23:35:06.6565108Z ##[endgroup]
+2025-09-21T23:35:06.6566361Z ##[group]Determining the checkout info
+2025-09-21T23:35:06.6573223Z [command]/usr/bin/git branch --list --remote origin/develop
+2025-09-21T23:35:06.6598917Z   origin/develop
+2025-09-21T23:35:06.6605068Z ##[endgroup]
+2025-09-21T23:35:06.6610857Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:35:06.6670861Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:35:06.6701687Z ##[group]Checking out the ref
+2025-09-21T23:35:06.6704965Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:35:06.7719339Z Switched to a new branch 'develop'
+2025-09-21T23:35:06.7720682Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:35:06.7730176Z ##[endgroup]
+2025-09-21T23:35:06.7731054Z ##[group]Setting up auth for fetching submodules
+2025-09-21T23:35:06.7736933Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:35:06.7784956Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-21T23:35:06.7815715Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-21T23:35:06.7845923Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-61627050@github.com:
+2025-09-21T23:35:06.7875164Z ##[endgroup]
+2025-09-21T23:35:06.7876658Z ##[group]Fetching submodules
+2025-09-21T23:35:06.7877999Z [command]/usr/bin/git submodule sync --recursive
+2025-09-21T23:35:06.8103230Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-21T23:35:06.8332099Z Submodule 'meshtestic' (https://github.com/meshtastic/meshTestic) registered for path 'meshtestic'
+2025-09-21T23:35:06.8335459Z Submodule 'protobufs' (https://github.com/meshtastic/protobufs.git) registered for path 'protobufs'
+2025-09-21T23:35:06.8360588Z Cloning into '/home/runner/work/firmware/firmware/meshtestic'...
+2025-09-21T23:35:07.0843921Z Cloning into '/home/runner/work/firmware/firmware/protobufs'...
+2025-09-21T23:35:07.3323025Z Submodule path 'meshtestic': checked out 'dcac7e5673005f4d8a2b1f0f6e06877b689d7519'
+2025-09-21T23:35:07.3432586Z Submodule path 'protobufs': checked out '46b81e822af1b8e408f437092337f129dee693e6'
+2025-09-21T23:35:07.3470864Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-21T23:35:07.3694406Z Entering 'meshtestic'
+2025-09-21T23:35:07.3731466Z Entering 'protobufs'
+2025-09-21T23:35:07.3780677Z ##[endgroup]
+2025-09-21T23:35:07.3781510Z ##[group]Persisting credentials for submodules
+2025-09-21T23:35:07.3784738Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-21T23:35:07.3991340Z Entering 'meshtestic'
+2025-09-21T23:35:07.4033708Z Entering 'protobufs'
+2025-09-21T23:35:07.4085538Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-21T23:35:07.4288900Z Entering 'meshtestic'
+2025-09-21T23:35:07.4325888Z file:/home/runner/work/firmware/firmware/.git/modules/meshtestic/config	remote.origin.url
+2025-09-21T23:35:07.4344529Z Entering 'protobufs'
+2025-09-21T23:35:07.4382258Z file:/home/runner/work/firmware/firmware/.git/modules/protobufs/config	remote.origin.url
+2025-09-21T23:35:07.4423232Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-21T23:35:07.4625456Z Entering 'meshtestic'
+2025-09-21T23:35:07.4661418Z Entering 'protobufs'
+2025-09-21T23:35:07.4711409Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-61627050@github.com:'
+2025-09-21T23:35:07.4914045Z Entering 'meshtestic'
+2025-09-21T23:35:07.4949881Z Entering 'protobufs'
+2025-09-21T23:35:07.4994047Z ##[endgroup]
+2025-09-21T23:35:07.5030672Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:35:07.5053568Z e2365350a63c248d055a29ac0f35ed9b44da350b
+2025-09-21T23:35:07.5292151Z ##[group]Run meshtastic/gh-action-firmware@main
+2025-09-21T23:35:07.5292524Z with:
+2025-09-21T23:35:07.5292748Z   pio_platform: rp2350
+2025-09-21T23:35:07.5293000Z   pio_env: pico2w
+2025-09-21T23:35:07.5293224Z   pio_target: build
+2025-09-21T23:35:07.5293452Z ##[endgroup]
+2025-09-21T23:35:07.5380869Z ##[group]Run docker run --rm \
+2025-09-21T23:35:07.5381450Z [36;1mdocker run --rm \[0m
+2025-09-21T23:35:07.5381757Z [36;1m  --env GITHUB_ACTIONS \[0m
+2025-09-21T23:35:07.5382059Z [36;1m  --env XDG_CACHE_HOME \[0m
+2025-09-21T23:35:07.5382328Z [36;1m  --env MT_ENV \[0m
+2025-09-21T23:35:07.5382572Z [36;1m  --env MT_PLATFORM \[0m
+2025-09-21T23:35:07.5382829Z [36;1m  --env MT_TARGET \[0m
+2025-09-21T23:35:07.5383094Z [36;1m  --env MT_OTA_FIRMWARE_SOURCE \[0m
+2025-09-21T23:35:07.5383378Z [36;1m  --env MT_OTA_FIRMWARE_TARGET \[0m
+2025-09-21T23:35:07.5383667Z [36;1m  --env PLATFORMIO_BUILD_DIR \[0m
+2025-09-21T23:35:07.5383968Z [36;1m  -v $GITHUB_WORKSPACE:/workspace \[0m
+2025-09-21T23:35:07.5384390Z [36;1m  ghcr.io/meshtastic/gh-action-firmware:master-rp2350[0m
+2025-09-21T23:35:07.5631591Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:35:07.5632128Z env:
+2025-09-21T23:35:07.5632436Z   MT_ENV: pico2w
+2025-09-21T23:35:07.5632756Z   MT_PLATFORM: rp2350
+2025-09-21T23:35:07.5633100Z   MT_TARGET: build
+2025-09-21T23:35:07.5633484Z   MT_OTA_FIRMWARE_SOURCE: 
+2025-09-21T23:35:07.5633808Z   MT_OTA_FIRMWARE_TARGET: 
+2025-09-21T23:35:07.5701595Z   PLATFORMIO_BUILD_DIR: /workspace/.pio/build
+2025-09-21T23:35:07.5701928Z ##[endgroup]
+2025-09-21T23:35:07.6225440Z Unable to find image 'ghcr.io/meshtastic/gh-action-firmware:master-rp2350' locally
+2025-09-21T23:35:07.8165690Z master-rp2350: Pulling from meshtastic/gh-action-firmware
+2025-09-21T23:35:07.8703398Z 8fb375ec14f3: Pulling fs layer
+2025-09-21T23:35:07.8704350Z ccbbb2080a06: Pulling fs layer
+2025-09-21T23:35:07.8705590Z 7d5073558d5a: Pulling fs layer
+2025-09-21T23:35:07.8706095Z c611f5bb386b: Pulling fs layer
+2025-09-21T23:35:07.8706487Z 815e87185931: Pulling fs layer
+2025-09-21T23:35:07.8706854Z 71c11f7c6832: Pulling fs layer
+2025-09-21T23:35:07.8707276Z da9989870cf6: Pulling fs layer
+2025-09-21T23:35:07.8707639Z c562d59d0e1c: Pulling fs layer
+2025-09-21T23:35:07.8708000Z 2ac1b945a860: Pulling fs layer
+2025-09-21T23:35:07.8708580Z a2e6f109d6e5: Pulling fs layer
+2025-09-21T23:35:07.8708971Z ef86de877452: Pulling fs layer
+2025-09-21T23:35:07.8709315Z 12164a7e14c5: Pulling fs layer
+2025-09-21T23:35:07.8709670Z a29ceb9dad4c: Pulling fs layer
+2025-09-21T23:35:07.8710021Z 41263bdb46c1: Pulling fs layer
+2025-09-21T23:35:07.8710374Z c611f5bb386b: Waiting
+2025-09-21T23:35:07.8710704Z 815e87185931: Waiting
+2025-09-21T23:35:07.8711026Z 71c11f7c6832: Waiting
+2025-09-21T23:35:07.8711352Z da9989870cf6: Waiting
+2025-09-21T23:35:07.8711672Z c562d59d0e1c: Waiting
+2025-09-21T23:35:07.8712004Z 2ac1b945a860: Waiting
+2025-09-21T23:35:07.8712422Z 12164a7e14c5: Waiting
+2025-09-21T23:35:07.8712750Z a2e6f109d6e5: Waiting
+2025-09-21T23:35:07.8713086Z a29ceb9dad4c: Waiting
+2025-09-21T23:35:07.8713411Z ef86de877452: Waiting
+2025-09-21T23:35:08.1136727Z 8fb375ec14f3: Verifying Checksum
+2025-09-21T23:35:08.1137544Z 8fb375ec14f3: Download complete
+2025-09-21T23:35:08.1228647Z ccbbb2080a06: Verifying Checksum
+2025-09-21T23:35:08.1229173Z ccbbb2080a06: Download complete
+2025-09-21T23:35:08.2443300Z 7d5073558d5a: Verifying Checksum
+2025-09-21T23:35:08.2443802Z 7d5073558d5a: Download complete
+2025-09-21T23:35:08.2593034Z 815e87185931: Download complete
+2025-09-21T23:35:08.3365921Z da9989870cf6: Verifying Checksum
+2025-09-21T23:35:08.3366682Z da9989870cf6: Download complete
+2025-09-21T23:35:08.4402060Z 71c11f7c6832: Verifying Checksum
+2025-09-21T23:35:08.4402643Z 71c11f7c6832: Download complete
+2025-09-21T23:35:08.5159005Z 2ac1b945a860: Verifying Checksum
+2025-09-21T23:35:08.5159484Z 2ac1b945a860: Download complete
+2025-09-21T23:35:08.5889215Z c562d59d0e1c: Verifying Checksum
+2025-09-21T23:35:08.5889720Z c562d59d0e1c: Download complete
+2025-09-21T23:35:08.9204418Z a2e6f109d6e5: Download complete
+2025-09-21T23:35:09.0093872Z 12164a7e14c5: Verifying Checksum
+2025-09-21T23:35:09.0094775Z 12164a7e14c5: Download complete
+2025-09-21T23:35:09.0972879Z a29ceb9dad4c: Verifying Checksum
+2025-09-21T23:35:09.0974700Z a29ceb9dad4c: Download complete
+2025-09-21T23:35:09.2496430Z c611f5bb386b: Verifying Checksum
+2025-09-21T23:35:09.2498214Z c611f5bb386b: Download complete
+2025-09-21T23:35:09.3973677Z 41263bdb46c1: Verifying Checksum
+2025-09-21T23:35:09.3974441Z 41263bdb46c1: Download complete
+2025-09-21T23:35:10.1589441Z 8fb375ec14f3: Pull complete
+2025-09-21T23:35:12.9193610Z ccbbb2080a06: Pull complete
+2025-09-21T23:35:14.8103655Z ef86de877452: Verifying Checksum
+2025-09-21T23:35:14.8104114Z ef86de877452: Download complete
+2025-09-21T23:35:16.6909356Z 7d5073558d5a: Pull complete
+2025-09-21T23:35:23.0276599Z c611f5bb386b: Pull complete
+2025-09-21T23:35:23.2884187Z 815e87185931: Pull complete
+2025-09-21T23:35:23.9909700Z 71c11f7c6832: Pull complete
+2025-09-21T23:35:24.0035771Z da9989870cf6: Pull complete
+2025-09-21T23:35:25.0553698Z c562d59d0e1c: Pull complete
+2025-09-21T23:35:25.0680612Z 2ac1b945a860: Pull complete
+2025-09-21T23:35:26.5663200Z a2e6f109d6e5: Pull complete
+2025-09-21T23:35:41.1835731Z ef86de877452: Pull complete
+2025-09-21T23:35:41.1933250Z 12164a7e14c5: Pull complete
+2025-09-21T23:35:41.2047051Z a29ceb9dad4c: Pull complete
+2025-09-21T23:35:41.2139375Z 41263bdb46c1: Pull complete
+2025-09-21T23:35:41.2182592Z Digest: sha256:7457bfe56a0b399f60f56a3edc2e6d4d330453b48f20751de42a915196bfc08e
+2025-09-21T23:35:41.2196098Z Status: Downloaded newer image for ghcr.io/meshtastic/gh-action-firmware:master-rp2350
+2025-09-21T23:35:41.3955370Z Building PlatformIO environment: pico2w
+2025-09-21T23:35:41.6868798Z rm: cannot remove 'release//*': No such file or directory
+2025-09-21T23:35:42.3874665Z Resolving pico2w dependencies...
+2025-09-21T23:35:42.4046019Z Removing unused dependencies...
+2025-09-21T23:35:42.4131662Z Library Manager: Removing RadioLib @ 7.2.1
+2025-09-21T23:35:42.5739280Z Library Manager: RadioLib@7.2.1 has been removed!
+2025-09-21T23:35:42.8401885Z Library Manager: Installing jgromes/RadioLib @ 7.3.0
+2025-09-21T23:35:45.7722353Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:35:45.9910832Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2025-09-21T23:35:46.0844799Z Library Manager: RadioLib@7.3.0 has been installed!
+2025-09-21T23:35:46.5420758Z Building for pico2w with 
+2025-09-21T23:35:47.3055643Z Processing pico2w (board: rpipico2w; platform: 
+2025-09-21T23:35:47.3056599Z https://github.com/maxgerhardt/platform-raspberrypi#76ecf3c7e9dd4503af0331154c4ca1cddc4b03e5; framework: arduino)
+2025-09-21T23:35:47.3057329Z --------------------------------------------------------------------------------
+2025-09-21T23:35:48.4825480Z Verbose mode can be enabled via `-v, --verbose` option
+2025-09-21T23:35:48.4977206Z CONFIGURATION: https://docs.platformio.org/page/boards/raspberrypi/rpipico2w.html
+2025-09-21T23:35:48.4978645Z PLATFORM: Raspberry Pi RP2040 (1.15.0+sha.76ecf3c) > Pico 2W
+2025-09-21T23:35:48.4979376Z HARDWARE: RP2350 150MHz, 512KB RAM, 4MB Flash
+2025-09-21T23:35:48.4980290Z DEBUG: Current (custom) External (blackmagic, cmsis-dap, jlink, picoprobe, raspberrypi-swd)
+2025-09-21T23:35:48.4981126Z PACKAGES: 
+2025-09-21T23:35:48.4981564Z  - framework-arduinopico @ 1.40403.0+sha.5e2fbf3 
+2025-09-21T23:35:48.4982282Z  - tool-picotool-rp2040-earlephilhower @ 5.140200.240929 (14.2.0) 
+2025-09-21T23:35:48.4983115Z  - toolchain-rp2040-earlephilhower @ 5.140200.240929 (14.2.0)
+2025-09-21T23:35:48.5071618Z Flash size: 4.00MB
+2025-09-21T23:35:48.5072098Z Sketch size: 3.50MB
+2025-09-21T23:35:48.5072378Z Filesystem size: 0.50MB
+2025-09-21T23:35:48.5072591Z PSRAM size: 0.00MB
+2025-09-21T23:35:48.5073129Z Maximium Sketch size: 3665920 EEPROM start: 0x103ff000 Filesystem start: 0x1037f000 Filesystem end: 0x103ff000
+2025-09-21T23:35:48.5233314Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2025-09-21T23:35:48.5235407Z LDF Modes: Finder ~ chain, Compatibility ~ soft
+2025-09-21T23:35:48.6117467Z [nanopb] No generation needed.
+2025-09-21T23:35:49.0822160Z Library Manager: Installing ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:35:51.2499102Z Downloading 0% 10%
+2025-09-21T23:35:51.2552340Z Unpacking 0% 10% 20% 30% 40% 50% 60% 70%
+2025-09-21T23:35:51.2586723Z Library Manager: ClosedCube OPT3001@1.1.2 has been installed!
+2025-09-21T23:35:51.3425020Z [nanopb] No generation needed.
+2025-09-21T23:35:51.4985157Z Found 127 compatible libraries
+2025-09-21T23:35:51.4985792Z Scanning dependencies...
+2025-09-21T23:36:01.9533632Z Dependency Graph
+2025-09-21T23:36:01.9534312Z |-- ESP8266 and ESP32 OLED driver for SSD1306 displays @ 4.4.1
+2025-09-21T23:36:01.9535166Z |-- OneButton @ 2.6.1
+2025-09-21T23:36:01.9537876Z |-- arduino-fsm @ 2.2.0
+2025-09-21T23:36:01.9538968Z |-- TinyGPSPlus @ 1.0.3
+2025-09-21T23:36:01.9540900Z |-- ArduinoThread @ 0.0.0+20250919052624
+2025-09-21T23:36:01.9545011Z |-- Nanopb @ 0.4.91
+2025-09-21T23:36:01.9545757Z |-- ErriezCRC32 @ 1.0.1
+2025-09-21T23:36:01.9546371Z |-- NonBlockingRTTTL @ 1.3.0
+2025-09-21T23:36:01.9551792Z |-- Adafruit BusIO @ 1.17.3
+2025-09-21T23:36:01.9552284Z |-- Adafruit Unified Sensor @ 1.1.15
+2025-09-21T23:36:01.9552711Z |-- Adafruit BMP280 Library @ 2.6.8
+2025-09-21T23:36:01.9553125Z |-- Adafruit BMP085 Library @ 1.2.4
+2025-09-21T23:36:01.9554937Z |-- Adafruit BME280 Library @ 2.3.0
+2025-09-21T23:36:01.9557140Z |-- Adafruit DPS310 @ 1.1.5
+2025-09-21T23:36:01.9559207Z |-- Adafruit MCP9808 Library @ 2.0.2
+2025-09-21T23:36:01.9560446Z |-- Adafruit INA260 Library @ 1.5.3
+2025-09-21T23:36:01.9562920Z |-- Adafruit INA219 @ 1.2.3
+2025-09-21T23:36:01.9566427Z |-- Adafruit PM25 AQI Sensor @ 2.0.0
+2025-09-21T23:36:01.9568758Z |-- Adafruit MPU6050 @ 2.2.6
+2025-09-21T23:36:01.9569320Z |-- Adafruit LIS3DH @ 1.3.0
+2025-09-21T23:36:01.9571017Z |-- Adafruit AHTX0 @ 2.0.5
+2025-09-21T23:36:01.9572730Z |-- Adafruit LSM6DS @ 4.7.4
+2025-09-21T23:36:01.9574604Z |-- Adafruit TSL2591 Library @ 1.4.5
+2025-09-21T23:36:01.9576576Z |-- EmotiBit MLX90632 @ 1.0.8
+2025-09-21T23:36:01.9578452Z |-- Adafruit MLX90614 Library @ 2.1.5
+2025-09-21T23:36:01.9580476Z |-- INA3221 @ 1.0.1+sha.bb03d7e
+2025-09-21T23:36:01.9582228Z |-- QMC5883LCompass @ 1.2.3
+2025-09-21T23:36:01.9584766Z |-- DFRobot_RTU @ 1.0.3
+2025-09-21T23:36:01.9586092Z |-- DFRobot_RainfallSensor @ 1.0.0
+2025-09-21T23:36:01.9588578Z |-- INA226 @ 0.6.4
+2025-09-21T23:36:01.9590613Z |-- SparkFun MAX3010x Pulse and Proximity Sensor Library @ 1.1.2
+2025-09-21T23:36:01.9592731Z |-- SparkFun 9DoF IMU Breakout - ICM 20948 - Arduino Library @ 1.3.2
+2025-09-21T23:36:01.9593955Z |-- Adafruit LTR390 Library @ 1.1.2
+2025-09-21T23:36:01.9596014Z |-- Adafruit PCT2075 @ 1.0.5
+2025-09-21T23:36:01.9597999Z |-- DFRobot_BMM150 @ 1.0.0
+2025-09-21T23:36:01.9601686Z |-- Adafruit TSL2561 @ 1.1.2
+2025-09-21T23:36:01.9602126Z |-- Adafruit BMP3XX Library @ 2.1.6
+2025-09-21T23:36:01.9604913Z |-- Adafruit MAX1704X @ 1.0.3
+2025-09-21T23:36:01.9605490Z |-- Adafruit SHTC3 Library @ 1.0.2
+2025-09-21T23:36:01.9608437Z |-- Adafruit LPS2X @ 2.0.6
+2025-09-21T23:36:01.9609243Z |-- Adafruit SHT31 Library @ 2.2.2
+2025-09-21T23:36:01.9611903Z |-- Adafruit VEML7700 Library @ 2.1.6
+2025-09-21T23:36:01.9612785Z |-- Adafruit SHT4x Library @ 1.0.5
+2025-09-21T23:36:01.9614471Z |-- SparkFun Qwiic Scale NAU7802 Arduino Library @ 1.0.6
+2025-09-21T23:36:01.9619182Z |-- ClosedCube OPT3001 @ 1.1.2
+2025-09-21T23:36:01.9620233Z |-- bsec2 @ 1.10.2610
+2025-09-21T23:36:01.9620855Z |-- BME68x Sensor library @ 1.3.40408
+2025-09-21T23:36:01.9622004Z |-- DFRobot_LarkWeatherStation @ 1.0.0
+2025-09-21T23:36:01.9627442Z |-- Sensirion Core @ 0.7.1
+2025-09-21T23:36:01.9627838Z |-- Sensirion I2C SCD4x @ 1.1.0
+2025-09-21T23:36:01.9628421Z |-- RadioLib @ 7.3.0
+2025-09-21T23:36:01.9628995Z |-- Crypto @ 0.4.0
+2025-09-21T23:36:01.9631755Z |-- TBPubSubClient @ 2.12.1
+2025-09-21T23:36:01.9632066Z |-- NTPClient @ 3.2.1
+2025-09-21T23:36:01.9637517Z |-- Syslog @ 2.0.0
+2025-09-21T23:36:01.9637843Z |-- SD @ 2.0.0
+2025-09-21T23:36:01.9638163Z |-- SPI @ 1.0
+2025-09-21T23:36:01.9639085Z |-- WiFi @ 1.0.0
+2025-09-21T23:36:01.9639560Z |-- Wire @ 1.0
+2025-09-21T23:36:01.9639989Z |-- SimpleMDNS @ 1.0
+2025-09-21T23:36:01.9640413Z |-- LittleFS @ 0.1.0
+2025-09-21T23:36:01.9642628Z |-- FreeRTOS @ 1.0.0
+2025-09-21T23:36:01.9643220Z |-- AsyncUDP @ 1.1.0
+2025-09-21T23:36:01.9643584Z |-- Adafruit NeoPixel @ 1.15.1
+2025-09-21T23:36:02.1813107Z Building in release mode
+2025-09-21T23:36:02.2933610Z Using meshtastic platformio-custom.py, firmware version 2.7.10.e236535 on pico2w
+2025-09-21T23:36:02.2948597Z Using flags:
+2025-09-21T23:36:02.2948933Z -DAPP_VERSION=2.7.10.e236535
+2025-09-21T23:36:02.2949315Z -DAPP_VERSION_SHORT=2.7.10
+2025-09-21T23:36:02.2949649Z -DAPP_ENV=pico2w
+2025-09-21T23:36:02.2949999Z -DAPP_REPO=LoLoRaMeshChatstic/MeshChatstic
+2025-09-21T23:36:02.2950409Z -DBUILD_EPOCH=1758412800
+2025-09-21T23:36:02.2951095Z -DUSERPREFS_RINGTONE_RTTTL=\"24:d=32,o=5,b=565:f6,p,f6,4p,p,f6,p,f6,2p,p,b6,p,b6,p,b6,p,b6,p,b,p,b,p,b,p,b,p,b,p,b,p,b,p,b,1p.,2p.,p\"
+2025-09-21T23:36:02.2951710Z -DUSERPREFS_TZ_STRING=\"tzplaceholder                                         \"
+2025-09-21T23:36:02.3425979Z Compiling .pio/build/pico2w/FrameworkArduinoVariant/digital.cpp.o
+2025-09-21T23:36:02.3546498Z Compiling .pio/build/pico2w/FrameworkArduinoVariant/init.cpp.o
+2025-09-21T23:36:02.3676678Z Compiling .pio/build/pico2w/FrameworkArduinoBootloader/none.S.o
+2025-09-21T23:36:02.4615773Z Compiling .pio/build/pico2w/src/BluetoothCommon.cpp.o
+2025-09-21T23:36:02.5724561Z Compiling .pio/build/pico2w/src/DebugConfiguration.cpp.o
+2025-09-21T23:36:02.9793352Z Compiling .pio/build/pico2w/src/DisplayFormatters.cpp.o
+2025-09-21T23:36:03.0328710Z Compiling .pio/build/pico2w/src/FSCommon.cpp.o
+2025-09-21T23:36:04.0881952Z Compiling .pio/build/pico2w/src/Fusion/FusionAhrs.c.o
+2025-09-21T23:36:04.2161136Z Compiling .pio/build/pico2w/src/Fusion/FusionCompass.c.o
+2025-09-21T23:36:04.3131914Z Compiling .pio/build/pico2w/src/Fusion/FusionOffset.c.o
+2025-09-21T23:36:04.3334780Z Compiling .pio/build/pico2w/src/GpioLogic.cpp.o
+2025-09-21T23:36:04.4591555Z Compiling .pio/build/pico2w/src/Led.cpp.o
+2025-09-21T23:36:04.6414842Z Compiling .pio/build/pico2w/src/Observer.cpp.o
+2025-09-21T23:36:04.8751697Z Compiling .pio/build/pico2w/src/Power.cpp.o
+2025-09-21T23:36:05.9799509Z Compiling .pio/build/pico2w/src/PowerFSM.cpp.o
+2025-09-21T23:36:06.2174819Z Compiling .pio/build/pico2w/src/PowerMon.cpp.o
+2025-09-21T23:36:06.5567800Z Compiling .pio/build/pico2w/src/RedirectablePrint.cpp.o
+2025-09-21T23:36:07.2926277Z Compiling .pio/build/pico2w/src/SPILock.cpp.o
+2025-09-21T23:36:07.9526079Z Compiling .pio/build/pico2w/src/SafeFile.cpp.o
+2025-09-21T23:36:08.2125987Z Compiling .pio/build/pico2w/src/SerialConsole.cpp.o
+2025-09-21T23:36:08.7551853Z Compiling .pio/build/pico2w/src/airtime.cpp.o
+2025-09-21T23:36:08.8975462Z Compiling .pio/build/pico2w/src/buzz/BuzzerFeedbackThread.cpp.o
+2025-09-21T23:36:09.6627366Z Compiling .pio/build/pico2w/src/buzz/buzz.cpp.o
+2025-09-21T23:36:10.0005165Z Compiling .pio/build/pico2w/src/concurrency/BinarySemaphoreFreeRTOS.cpp.o
+2025-09-21T23:36:10.5274561Z Compiling .pio/build/pico2w/src/concurrency/BinarySemaphorePosix.cpp.o
+2025-09-21T23:36:10.7102558Z Compiling .pio/build/pico2w/src/concurrency/InterruptableDelay.cpp.o
+2025-09-21T23:36:11.3927283Z Compiling .pio/build/pico2w/src/concurrency/Lock.cpp.o
+2025-09-21T23:36:11.6144996Z Compiling .pio/build/pico2w/src/concurrency/LockGuard.cpp.o
+2025-09-21T23:36:12.1341458Z Compiling .pio/build/pico2w/src/concurrency/NotifiedWorkerThread.cpp.o
+2025-09-21T23:36:12.3120290Z Compiling .pio/build/pico2w/src/concurrency/OSThread.cpp.o
+2025-09-21T23:36:13.0084495Z Compiling .pio/build/pico2w/src/detect/ScanI2C.cpp.o
+2025-09-21T23:36:13.1244514Z Compiling .pio/build/pico2w/src/detect/ScanI2CTwoWire.cpp.o
+2025-09-21T23:36:13.2222967Z Compiling .pio/build/pico2w/src/gps/GPS.cpp.o
+2025-09-21T23:36:13.9485318Z Compiling .pio/build/pico2w/src/gps/GPSUpdateScheduling.cpp.o
+2025-09-21T23:36:14.2526740Z Compiling .pio/build/pico2w/src/gps/GeoCoord.cpp.o
+2025-09-21T23:36:15.2121712Z Compiling .pio/build/pico2w/src/gps/NMEAWPL.cpp.o
+2025-09-21T23:36:15.3710939Z Compiling .pio/build/pico2w/src/gps/RTC.cpp.o
+2025-09-21T23:36:15.7163088Z Compiling .pio/build/pico2w/src/graphics/EInkDisplay2.cpp.o
+2025-09-21T23:36:16.4362799Z Compiling .pio/build/pico2w/src/graphics/EInkDynamicDisplay.cpp.o
+2025-09-21T23:36:17.3428565Z Compiling .pio/build/pico2w/src/graphics/Screen.cpp.o
+2025-09-21T23:36:17.3699928Z Compiling .pio/build/pico2w/src/graphics/ScreenChatHistory.cpp.o
+2025-09-21T23:36:17.5190032Z Compiling .pio/build/pico2w/src/graphics/ScreenGlobals.cpp.o
+2025-09-21T23:36:18.0345934Z Compiling .pio/build/pico2w/src/graphics/SharedUIDisplay.cpp.o
+2025-09-21T23:36:18.1081403Z Compiling .pio/build/pico2w/src/graphics/TFTDisplay.cpp.o
+2025-09-21T23:36:18.1321817Z Compiling .pio/build/pico2w/src/graphics/TimeFormatters.cpp.o
+2025-09-21T23:36:19.8562021Z Compiling .pio/build/pico2w/src/graphics/VirtualKeyboard.cpp.o
+2025-09-21T23:36:20.2364609Z Compiling .pio/build/pico2w/src/graphics/draw/ClockRenderer.cpp.o
+2025-09-21T23:36:20.2963431Z Compiling .pio/build/pico2w/src/graphics/draw/CompassRenderer.cpp.o
+2025-09-21T23:36:21.9857013Z Compiling .pio/build/pico2w/src/graphics/draw/DebugRenderer.cpp.o
+2025-09-21T23:36:22.3133746Z Compiling .pio/build/pico2w/src/graphics/draw/MenuHandler.cpp.o
+2025-09-21T23:36:22.4052366Z Compiling .pio/build/pico2w/src/graphics/draw/MessageRenderer.cpp.o
+2025-09-21T23:36:22.5737448Z Compiling .pio/build/pico2w/src/graphics/draw/NodeListRenderer.cpp.o
+2025-09-21T23:36:24.2662748Z src/graphics/draw/MenuHandler.cpp: In static member function 'static void graphics::menuHandler::wifiConfigMenu()':
+2025-09-21T23:36:24.2663912Z src/graphics/draw/MenuHandler.cpp:1281:30: error: no matching function for call to 'WiFiClass::scanNetworks(bool, bool)'
+2025-09-21T23:36:24.2664887Z  1281 |     int n = WiFi.scanNetworks(/*async=*/false, /*show_hidden=*/true);
+2025-09-21T23:36:24.2665464Z       |             ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-09-21T23:36:24.2666233Z In file included from /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFi.h:6,
+2025-09-21T23:36:24.2667001Z                  from src/DebugConfiguration.h:160,
+2025-09-21T23:36:24.2667479Z                  from src/configuration.h:473,
+2025-09-21T23:36:24.2667953Z                  from src/graphics/draw/MenuHandler.cpp:1:
+2025-09-21T23:36:24.2669171Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClass.h:336:12: note: candidate: 'int8_t WiFiClass::scanNetworks(bool)'
+2025-09-21T23:36:24.2670221Z   336 |     int8_t scanNetworks(bool async = false);
+2025-09-21T23:36:24.2670652Z       |            ^~~~~~~~~~~~
+2025-09-21T23:36:24.2671502Z /pio/core/packages/framework-arduinopico/libraries/WiFi/src/WiFiClass.h:336:12: note:   candidate expects 1 argument, 2 provided
+2025-09-21T23:36:24.3101074Z src/graphics/draw/MenuHandler.cpp:1291:49: error: 'WIFI_AUTH_OPEN' was not declared in this scope; did you mean 'CYW43_AUTH_OPEN'?
+2025-09-21T23:36:24.3102340Z  1291 |         bool open  = (WiFi.encryptionType(i) == WIFI_AUTH_OPEN);
+2025-09-21T23:36:24.3103623Z       |                                                 ^~~~~~~~~~~~~~
+2025-09-21T23:36:24.3105597Z       |                                                 CYW43_AUTH_OPEN
+2025-09-21T23:36:24.4693245Z Compiling .pio/build/pico2w/src/graphics/draw/NotificationRenderer.cpp.o
+2025-09-21T23:36:24.7572511Z Compiling .pio/build/pico2w/src/graphics/draw/UIRenderer.cpp.o
+2025-09-21T23:36:24.9074078Z Compiling .pio/build/pico2w/src/graphics/emotes.cpp.o
+2025-09-21T23:36:25.0091252Z *** [.pio/build/pico2w/src/graphics/draw/MenuHandler.cpp.o] Error 1
+2025-09-21T23:36:27.1104277Z ========================= [FAILED] Took 39.80 seconds =========================
+2025-09-21T23:36:27.1105052Z 
+2025-09-21T23:36:27.1111361Z Environment    Status    Duration
+2025-09-21T23:36:27.1111857Z -------------  --------  ------------
+2025-09-21T23:36:27.1112260Z pico2w         FAILED    00:00:39.805
+2025-09-21T23:36:27.1113069Z ==================== 1 failed, 0 succeeded in 00:00:39.805 ====================
+2025-09-21T23:36:27.2602762Z ##[error]Process completed with exit code 1.
+2025-09-21T23:36:27.2725402Z Post job cleanup.
+2025-09-21T23:36:27.3527803Z [command]/usr/bin/git version
+2025-09-21T23:36:27.3564541Z git version 2.51.0
+2025-09-21T23:36:27.3602963Z Temporarily overriding HOME='/home/runner/work/_temp/becddc27-ec66-4493-9d8d-64a50a21d280' before making global git config changes
+2025-09-21T23:36:27.3604475Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:36:27.3607472Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:36:27.3641298Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:36:27.3676176Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:36:27.3883305Z Entering 'meshtestic'
+2025-09-21T23:36:27.3925268Z Entering 'protobufs'
+2025-09-21T23:36:27.3980285Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:36:27.4001123Z http.https://github.com/.extraheader
+2025-09-21T23:36:27.4011433Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:36:27.4041748Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:36:27.4247166Z Entering 'meshtestic'
+2025-09-21T23:36:27.4270266Z http.https://github.com/.extraheader
+2025-09-21T23:36:27.4302358Z Entering 'protobufs'
+2025-09-21T23:36:27.4325882Z http.https://github.com/.extraheader
+2025-09-21T23:36:27.4488082Z Cleaning up orphan processes

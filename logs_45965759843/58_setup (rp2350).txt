@@ -1,0 +1,263 @@
+﻿2025-09-21T23:15:03.5501491Z Current runner version: '2.328.0'
+2025-09-21T23:15:03.5538310Z ##[group]Runner Image Provisioner
+2025-09-21T23:15:03.5539890Z Hosted Compute Agent
+2025-09-21T23:15:03.5540972Z Version: 20250829.383
+2025-09-21T23:15:03.5541993Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-21T23:15:03.5543368Z Build Date: 2025-08-29T13:48:48Z
+2025-09-21T23:15:03.5544407Z ##[endgroup]
+2025-09-21T23:15:03.5545340Z ##[group]Operating System
+2025-09-21T23:15:03.5546434Z Ubuntu
+2025-09-21T23:15:03.5547287Z 24.04.3
+2025-09-21T23:15:03.5548049Z LTS
+2025-09-21T23:15:03.5549256Z ##[endgroup]
+2025-09-21T23:15:03.5550059Z ##[group]Runner Image
+2025-09-21T23:15:03.5551162Z Image: ubuntu-24.04
+2025-09-21T23:15:03.5552084Z Version: 20250907.24.1
+2025-09-21T23:15:03.5553821Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-21T23:15:03.5556794Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+2025-09-21T23:15:03.5558513Z ##[endgroup]
+2025-09-21T23:15:03.5563177Z ##[group]GITHUB_TOKEN Permissions
+2025-09-21T23:15:03.5566025Z Actions: write
+2025-09-21T23:15:03.5567062Z Attestations: write
+2025-09-21T23:15:03.5567870Z Checks: write
+2025-09-21T23:15:03.5569037Z Contents: write
+2025-09-21T23:15:03.5570018Z Deployments: write
+2025-09-21T23:15:03.5570923Z Discussions: write
+2025-09-21T23:15:03.5571781Z Issues: write
+2025-09-21T23:15:03.5572698Z Metadata: read
+2025-09-21T23:15:03.5573506Z Models: read
+2025-09-21T23:15:03.5574506Z Packages: write
+2025-09-21T23:15:03.5575408Z Pages: write
+2025-09-21T23:15:03.5576242Z PullRequests: write
+2025-09-21T23:15:03.5577384Z RepositoryProjects: write
+2025-09-21T23:15:03.5578411Z SecurityEvents: write
+2025-09-21T23:15:03.5579675Z Statuses: write
+2025-09-21T23:15:03.5580786Z ##[endgroup]
+2025-09-21T23:15:03.5583786Z Secret source: Actions
+2025-09-21T23:15:03.5584858Z Prepare workflow directory
+2025-09-21T23:15:03.6057484Z Prepare all required actions
+2025-09-21T23:15:03.6114821Z Getting action download info
+2025-09-21T23:15:03.8569489Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-09-21T23:15:04.4483779Z Download action repository 'actions/setup-python@v6' (SHA:e797f83bcb11b83ae66e0230d6156d7c80228e7c)
+2025-09-21T23:15:04.8098072Z Complete job name: setup (rp2350)
+2025-09-21T23:15:04.8785696Z ##[group]Run actions/checkout@v5
+2025-09-21T23:15:04.8786610Z with:
+2025-09-21T23:15:04.8787083Z   repository: meshtastic/firmware
+2025-09-21T23:15:04.8787804Z   token: ***
+2025-09-21T23:15:04.8788237Z   ssh-strict: true
+2025-09-21T23:15:04.8788917Z   ssh-user: git
+2025-09-21T23:15:04.8789402Z   persist-credentials: true
+2025-09-21T23:15:04.8789919Z   clean: true
+2025-09-21T23:15:04.8790373Z   sparse-checkout-cone-mode: true
+2025-09-21T23:15:04.8790918Z   fetch-depth: 1
+2025-09-21T23:15:04.8791357Z   fetch-tags: false
+2025-09-21T23:15:04.8791820Z   show-progress: true
+2025-09-21T23:15:04.8792297Z   lfs: false
+2025-09-21T23:15:04.8792732Z   submodules: false
+2025-09-21T23:15:04.8793270Z   set-safe-directory: true
+2025-09-21T23:15:04.8794068Z ##[endgroup]
+2025-09-21T23:15:04.9766313Z Syncing repository: meshtastic/firmware
+2025-09-21T23:15:04.9768300Z ##[group]Getting Git version info
+2025-09-21T23:15:04.9769384Z Working directory is '/home/runner/work/firmware/firmware'
+2025-09-21T23:15:04.9770700Z [command]/usr/bin/git version
+2025-09-21T23:15:05.1082427Z git version 2.51.0
+2025-09-21T23:15:05.1108209Z ##[endgroup]
+2025-09-21T23:15:05.1126280Z Temporarily overriding HOME='/home/runner/work/_temp/6714b718-262a-445e-8b66-a125019e3da6' before making global git config changes
+2025-09-21T23:15:05.1129400Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:15:05.1132599Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:15:05.1250722Z Deleting the contents of '/home/runner/work/firmware/firmware'
+2025-09-21T23:15:05.1255234Z ##[group]Initializing the repository
+2025-09-21T23:15:05.1260813Z [command]/usr/bin/git init /home/runner/work/firmware/firmware
+2025-09-21T23:15:05.2323069Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-21T23:15:05.2324973Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-21T23:15:05.2326672Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-21T23:15:05.2327899Z hint:
+2025-09-21T23:15:05.2328971Z hint: 	git config --global init.defaultBranch <name>
+2025-09-21T23:15:05.2330039Z hint:
+2025-09-21T23:15:05.2331030Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-21T23:15:05.2332681Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-21T23:15:05.2333891Z hint:
+2025-09-21T23:15:05.2334514Z hint: 	git branch -m <name>
+2025-09-21T23:15:05.2335223Z hint:
+2025-09-21T23:15:05.2336165Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-21T23:15:05.2380218Z Initialized empty Git repository in /home/runner/work/firmware/firmware/.git/
+2025-09-21T23:15:05.2395479Z [command]/usr/bin/git remote add origin https://github.com/meshtastic/firmware
+2025-09-21T23:15:05.2572344Z ##[endgroup]
+2025-09-21T23:15:05.2574817Z ##[group]Disabling automatic garbage collection
+2025-09-21T23:15:05.2577534Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-21T23:15:05.2611380Z ##[endgroup]
+2025-09-21T23:15:05.2612995Z ##[group]Setting up auth
+2025-09-21T23:15:05.2619662Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:15:05.2653807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:15:05.4943677Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:15:05.4978578Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:15:05.5211908Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-21T23:15:05.5250636Z ##[endgroup]
+2025-09-21T23:15:05.5253197Z ##[group]Fetching the repository
+2025-09-21T23:15:05.5262707Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3d51287ba77693e5b0140d81abfe4cd218e0c2ae:refs/remotes/origin/develop
+2025-09-21T23:15:06.1833582Z From https://github.com/meshtastic/firmware
+2025-09-21T23:15:06.1835657Z  * [new ref]         3d51287ba77693e5b0140d81abfe4cd218e0c2ae -> origin/develop
+2025-09-21T23:15:06.1934217Z ##[endgroup]
+2025-09-21T23:15:06.1934983Z ##[group]Determining the checkout info
+2025-09-21T23:15:06.1936987Z ##[endgroup]
+2025-09-21T23:15:06.1942839Z [command]/usr/bin/git sparse-checkout disable
+2025-09-21T23:15:06.2061105Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-21T23:15:06.2091905Z ##[group]Checking out the ref
+2025-09-21T23:15:06.2096006Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2025-09-21T23:15:06.3220110Z Switched to a new branch 'develop'
+2025-09-21T23:15:06.3221189Z branch 'develop' set up to track 'origin/develop'.
+2025-09-21T23:15:06.3232176Z ##[endgroup]
+2025-09-21T23:15:06.3274402Z [command]/usr/bin/git log -1 --format=%H
+2025-09-21T23:15:06.3299316Z 3d51287ba77693e5b0140d81abfe4cd218e0c2ae
+2025-09-21T23:15:06.3550080Z ##[group]Run actions/setup-python@v6
+2025-09-21T23:15:06.3550484Z with:
+2025-09-21T23:15:06.3550732Z   python-version: 3.x
+2025-09-21T23:15:06.3551017Z   cache: pip
+2025-09-21T23:15:06.3551261Z   check-latest: false
+2025-09-21T23:15:06.3551700Z   token: ***
+2025-09-21T23:15:06.3551967Z   update-environment: true
+2025-09-21T23:15:06.3552262Z   allow-prereleases: false
+2025-09-21T23:15:06.3552776Z   freethreaded: false
+2025-09-21T23:15:06.3553033Z ##[endgroup]
+2025-09-21T23:15:06.4902361Z ##[group]Installed versions
+2025-09-21T23:15:06.5552990Z (node:2181) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-09-21T23:15:06.5554569Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-09-21T23:15:06.5555708Z Successfully set up CPython (3.13.7)
+2025-09-21T23:15:06.5556543Z ##[endgroup]
+2025-09-21T23:15:06.7605579Z [command]/opt/hostedtoolcache/Python/3.13.7/x64/bin/pip cache dir
+2025-09-21T23:15:09.6538869Z /home/runner/.cache/pip
+2025-09-21T23:15:09.7670894Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-c50caa6b2fbf00af7b0c455dab4a9f86d8498719abb31ef159fc8b2ae83ab5e0
+2025-09-21T23:15:09.7779337Z (node:2181) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2025-09-21T23:15:09.9123213Z Received 2502167 of 2502167 (100.0%), 26.5 MBs/sec
+2025-09-21T23:15:09.9123751Z Cache Size: ~2 MB (2502167 B)
+2025-09-21T23:15:09.9149613Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c5f0c83a-3f88-409c-ad30-c2e2338e64d5/cache.tzst -P -C /home/runner/work/firmware/firmware --use-compress-program unzstd
+2025-09-21T23:15:09.9498983Z Cache restored successfully
+2025-09-21T23:15:09.9509348Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-c50caa6b2fbf00af7b0c455dab4a9f86d8498719abb31ef159fc8b2ae83ab5e0
+2025-09-21T23:15:09.9664675Z ##[group]Run pip install -U platformio
+2025-09-21T23:15:09.9665106Z [36;1mpip install -U platformio[0m
+2025-09-21T23:15:09.9903283Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:15:09.9903760Z env:
+2025-09-21T23:15:09.9904247Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:09.9905075Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:15:09.9905886Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:09.9906585Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:09.9907277Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:09.9907983Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib
+2025-09-21T23:15:09.9908564Z ##[endgroup]
+2025-09-21T23:15:12.3889205Z Collecting platformio
+2025-09-21T23:15:12.3903253Z   Using cached platformio-6.1.18-py3-none-any.whl.metadata (7.1 kB)
+2025-09-21T23:15:12.4187420Z Collecting bottle==0.13.* (from platformio)
+2025-09-21T23:15:12.4199338Z   Using cached bottle-0.13.4-py2.py3-none-any.whl.metadata (1.6 kB)
+2025-09-21T23:15:12.4440727Z Collecting click<8.1.8,>=8.0.4 (from platformio)
+2025-09-21T23:15:12.4451776Z   Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+2025-09-21T23:15:12.4581327Z Collecting colorama (from platformio)
+2025-09-21T23:15:12.4592758Z   Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+2025-09-21T23:15:12.5064460Z Collecting marshmallow==3.* (from platformio)
+2025-09-21T23:15:12.5077463Z   Using cached marshmallow-3.26.1-py3-none-any.whl.metadata (7.3 kB)
+2025-09-21T23:15:12.5191508Z Collecting pyelftools<1,>=0.27 (from platformio)
+2025-09-21T23:15:12.5203720Z   Using cached pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2025-09-21T23:15:12.5292874Z Collecting pyserial==3.5.* (from platformio)
+2025-09-21T23:15:12.5304321Z   Using cached pyserial-3.5-py2.py3-none-any.whl.metadata (1.6 kB)
+2025-09-21T23:15:12.5607458Z Collecting requests==2.* (from platformio)
+2025-09-21T23:15:12.5618565Z   Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+2025-09-21T23:15:12.5738052Z Collecting semantic_version==2.10.* (from platformio)
+2025-09-21T23:15:12.5752243Z   Using cached semantic_version-2.10.0-py2.py3-none-any.whl.metadata (9.7 kB)
+2025-09-21T23:15:12.5883337Z Collecting tabulate==0.* (from platformio)
+2025-09-21T23:15:12.5894292Z   Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+2025-09-21T23:15:12.6025495Z Collecting ajsonrpc==1.2.* (from platformio)
+2025-09-21T23:15:12.6036328Z   Using cached ajsonrpc-1.2.0-py3-none-any.whl.metadata (6.9 kB)
+2025-09-21T23:15:12.6375657Z Collecting starlette<0.47,>=0.19 (from platformio)
+2025-09-21T23:15:12.6386991Z   Using cached starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+2025-09-21T23:15:12.6695388Z Collecting uvicorn<0.35,>=0.16 (from platformio)
+2025-09-21T23:15:12.6706673Z   Using cached uvicorn-0.34.3-py3-none-any.whl.metadata (6.5 kB)
+2025-09-21T23:15:12.6823394Z Collecting wsproto==1.* (from platformio)
+2025-09-21T23:15:12.6834111Z   Using cached wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+2025-09-21T23:15:12.7003920Z Collecting packaging>=17.0 (from marshmallow==3.*->platformio)
+2025-09-21T23:15:12.7015141Z   Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+2025-09-21T23:15:12.7765857Z Collecting charset_normalizer<4,>=2 (from requests==2.*->platformio)
+2025-09-21T23:15:12.7783634Z   Using cached charset_normalizer-3.4.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+2025-09-21T23:15:12.7931480Z Collecting idna<4,>=2.5 (from requests==2.*->platformio)
+2025-09-21T23:15:12.7942231Z   Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-09-21T23:15:12.8195799Z Collecting urllib3<3,>=1.21.1 (from requests==2.*->platformio)
+2025-09-21T23:15:12.8207588Z   Using cached urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+2025-09-21T23:15:12.8400473Z Collecting certifi>=2017.4.17 (from requests==2.*->platformio)
+2025-09-21T23:15:12.8412345Z   Using cached certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+2025-09-21T23:15:12.8609148Z Collecting anyio<5,>=3.6.2 (from starlette<0.47,>=0.19->platformio)
+2025-09-21T23:15:12.8620424Z   Using cached anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+2025-09-21T23:15:12.8791913Z Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.47,>=0.19->platformio)
+2025-09-21T23:15:12.8803165Z   Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2025-09-21T23:15:12.8986026Z Collecting h11>=0.8 (from uvicorn<0.35,>=0.16->platformio)
+2025-09-21T23:15:12.8997120Z   Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2025-09-21T23:15:12.9090937Z Using cached platformio-6.1.18-py3-none-any.whl (420 kB)
+2025-09-21T23:15:12.9105125Z Using cached ajsonrpc-1.2.0-py3-none-any.whl (22 kB)
+2025-09-21T23:15:12.9116202Z Using cached bottle-0.13.4-py2.py3-none-any.whl (103 kB)
+2025-09-21T23:15:12.9127706Z Using cached click-8.1.7-py3-none-any.whl (97 kB)
+2025-09-21T23:15:12.9139290Z Using cached marshmallow-3.26.1-py3-none-any.whl (50 kB)
+2025-09-21T23:15:12.9150215Z Using cached pyelftools-0.32-py3-none-any.whl (188 kB)
+2025-09-21T23:15:12.9162335Z Using cached pyserial-3.5-py2.py3-none-any.whl (90 kB)
+2025-09-21T23:15:12.9173565Z Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+2025-09-21T23:15:12.9185116Z Using cached charset_normalizer-3.4.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+2025-09-21T23:15:12.9196449Z Using cached idna-3.10-py3-none-any.whl (70 kB)
+2025-09-21T23:15:12.9208357Z Using cached semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+2025-09-21T23:15:12.9219240Z Using cached starlette-0.46.2-py3-none-any.whl (72 kB)
+2025-09-21T23:15:12.9230687Z Using cached anyio-4.10.0-py3-none-any.whl (107 kB)
+2025-09-21T23:15:12.9242096Z Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+2025-09-21T23:15:12.9252966Z Using cached urllib3-2.5.0-py3-none-any.whl (129 kB)
+2025-09-21T23:15:12.9264451Z Using cached uvicorn-0.34.3-py3-none-any.whl (62 kB)
+2025-09-21T23:15:12.9275404Z Using cached wsproto-1.2.0-py3-none-any.whl (24 kB)
+2025-09-21T23:15:12.9285976Z Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+2025-09-21T23:15:12.9296799Z Using cached certifi-2025.8.3-py3-none-any.whl (161 kB)
+2025-09-21T23:15:12.9308251Z Using cached packaging-25.0-py3-none-any.whl (66 kB)
+2025-09-21T23:15:12.9319208Z Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+2025-09-21T23:15:12.9330213Z Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+2025-09-21T23:15:13.2176266Z Installing collected packages: pyserial, pyelftools, bottle, urllib3, tabulate, sniffio, semantic_version, packaging, idna, h11, colorama, click, charset_normalizer, certifi, ajsonrpc, wsproto, uvicorn, requests, marshmallow, anyio, starlette, platformio
+2025-09-21T23:15:14.4986577Z 
+2025-09-21T23:15:14.5018394Z Successfully installed ajsonrpc-1.2.0 anyio-4.10.0 bottle-0.13.4 certifi-2025.8.3 charset_normalizer-3.4.3 click-8.1.7 colorama-0.4.6 h11-0.16.0 idna-3.10 marshmallow-3.26.1 packaging-25.0 platformio-6.1.18 pyelftools-0.32 pyserial-3.5 requests-2.32.5 semantic_version-2.10.0 sniffio-1.3.1 starlette-0.46.2 tabulate-0.9.0 urllib3-2.5.0 uvicorn-0.34.3 wsproto-1.2.0
+2025-09-21T23:15:14.6594302Z ##[group]Run sed -i 's/#-DBUILD_EPOCH=$UNIX_TIME/-DBUILD_EPOCH=$UNIX_TIME/' platformio.ini
+2025-09-21T23:15:14.6595111Z [36;1msed -i 's/#-DBUILD_EPOCH=$UNIX_TIME/-DBUILD_EPOCH=$UNIX_TIME/' platformio.ini[0m
+2025-09-21T23:15:14.6628747Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-21T23:15:14.6629185Z env:
+2025-09-21T23:15:14.6629539Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:14.6630180Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:15:14.6630801Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:14.6631351Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:14.6631907Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:14.6632459Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib
+2025-09-21T23:15:14.6632921Z ##[endgroup]
+2025-09-21T23:15:14.6751155Z ##[group]Run if [[ "$GITHUB_HEAD_REF" == "" ]]; then
+2025-09-21T23:15:14.6751529Z [36;1mif [[ "$GITHUB_HEAD_REF" == "" ]]; then[0m
+2025-09-21T23:15:14.6751883Z [36;1m  TARGETS=$(./bin/generate_ci_matrix.py rp2350)[0m
+2025-09-21T23:15:14.6752196Z [36;1melse  [0m
+2025-09-21T23:15:14.6752472Z [36;1m  TARGETS=$(./bin/generate_ci_matrix.py rp2350 pr)[0m
+2025-09-21T23:15:14.6752775Z [36;1mfi[0m
+2025-09-21T23:15:14.6753139Z [36;1mecho "Name: $GITHUB_REF_NAME Base: $GITHUB_BASE_REF Ref: $GITHUB_REF Targets: $TARGETS"[0m
+2025-09-21T23:15:14.6753802Z [36;1mecho "rp2350=$(jq -cn --argjson environments "$TARGETS" '{board: $environments}')" >> $GITHUB_OUTPUT[0m
+2025-09-21T23:15:14.6781823Z shell: /usr/bin/bash -e {0}
+2025-09-21T23:15:14.6782068Z env:
+2025-09-21T23:15:14.6782329Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:14.6782793Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib/pkgconfig
+2025-09-21T23:15:14.6783280Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:14.6783665Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:14.6784060Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+2025-09-21T23:15:14.6784460Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib
+2025-09-21T23:15:14.6784793Z ##[endgroup]
+2025-09-21T23:15:15.6849103Z Name: develop Base: develop Ref: refs/heads/develop Targets: ["pico2", "pico2w"]
+2025-09-21T23:15:15.6990082Z Post job cleanup.
+2025-09-21T23:15:15.8168236Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.13.7-pip-c50caa6b2fbf00af7b0c455dab4a9f86d8498719abb31ef159fc8b2ae83ab5e0, not saving cache.
+2025-09-21T23:15:15.8171114Z (node:2245) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-09-21T23:15:15.8172694Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-09-21T23:15:15.8306321Z Post job cleanup.
+2025-09-21T23:15:15.9105692Z [command]/usr/bin/git version
+2025-09-21T23:15:15.9152271Z git version 2.51.0
+2025-09-21T23:15:15.9191824Z Temporarily overriding HOME='/home/runner/work/_temp/84841e02-a960-424f-827a-be5441e93579' before making global git config changes
+2025-09-21T23:15:15.9193292Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-21T23:15:15.9198370Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/firmware/firmware
+2025-09-21T23:15:15.9238160Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-21T23:15:15.9274819Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-21T23:15:15.9564502Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-21T23:15:15.9590769Z http.https://github.com/.extraheader
+2025-09-21T23:15:15.9602136Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-21T23:15:15.9636683Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-21T23:15:16.0007390Z Evaluate and set job outputs
+2025-09-21T23:15:16.0017340Z Set output 'rp2350'
+2025-09-21T23:15:16.0019548Z Cleaning up orphan processes
