@@ -653,6 +653,9 @@ bool CannedMessageModule::handleMessageSelectorInput(const InputEvent *event, bo
             // Set runState to inactive so we return to main UI
             runState = CANNED_MESSAGE_RUN_STATE_INACTIVE;
             currentMessageIndex = -1;
+            // Clear custom callback state
+            customHeader = "";
+            customCallback = false;
 
             // Notify UI to regenerate frame set and redraw
             UIFrameEvent e;
@@ -665,6 +668,10 @@ bool CannedMessageModule::handleMessageSelectorInput(const InputEvent *event, bo
         // === [Free Text] triggers the free text input (virtual keyboard) ===
 #if defined(USE_VIRTUAL_KEYBOARD)
         if (strcmp(current, "[-- Free Text --]") == 0) {
+            // Clear any custom callback state when using normal free text
+            customHeader = "";
+            customCallback = false;
+            
             runState = CANNED_MESSAGE_RUN_STATE_FREETEXT;
             requestFocus();
             UIFrameEvent e;
@@ -1094,6 +1101,9 @@ int32_t CannedMessageModule::runOnce()
         this->currentMessageIndex = -1;
         this->freetext = "";
         this->cursor = 0;
+        // Clear custom callback state
+        customHeader = "";
+        customCallback = false;
         this->notifyObservers(&e);
     }
     // Handle SENDING_ACTIVE state transition after virtual keyboard message
@@ -1106,6 +1116,9 @@ int32_t CannedMessageModule::runOnce()
         this->currentMessageIndex = -1;
         this->freetext = "";
         this->cursor = 0;
+        // Clear custom callback state
+        customHeader = "";
+        customCallback = false;
         this->notifyObservers(&e);
     } else if (((this->runState == CANNED_MESSAGE_RUN_STATE_ACTIVE) || (this->runState == CANNED_MESSAGE_RUN_STATE_FREETEXT)) &&
                !Throttle::isWithinTimespanMs(this->lastTouchMillis, INACTIVATE_AFTER_MS)) {
