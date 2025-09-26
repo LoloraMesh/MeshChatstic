@@ -71,6 +71,10 @@ CannedMessageModule::CannedMessageModule()
 
 void CannedMessageModule::LaunchWithDestination(NodeNum newDest, uint8_t newChannel)
 {
+    // Clear any custom callback state when using normal messaging
+    customHeader = "";
+    customCallback = false;
+    
     // Use the requested destination, unless it's "broadcast" and we have a previous node/channel
     if (newDest == NODENUM_BROADCAST && lastDestSet) {
         newDest = lastDest;
@@ -112,6 +116,10 @@ void CannedMessageModule::LaunchRepeatDestination()
 
 void CannedMessageModule::LaunchFreetextWithDestination(NodeNum newDest, uint8_t newChannel)
 {
+    // Clear any custom callback state when using normal messaging
+    customHeader = "";
+    customCallback = false;
+    
     // Use the requested destination, unless it's "broadcast" and we have a previous node/channel
     if (newDest == NODENUM_BROADCAST && lastDestSet) {
         newDest = lastDest;
@@ -123,6 +131,22 @@ void CannedMessageModule::LaunchFreetextWithDestination(NodeNum newDest, uint8_t
     lastChannel = channel;
     lastDestSet = true;
 
+    runState = CANNED_MESSAGE_RUN_STATE_FREETEXT;
+    requestFocus();
+    UIFrameEvent e;
+    e.action = UIFrameEvent::Action::REGENERATE_FRAMESET;
+    notifyObservers(&e);
+}
+
+void CannedMessageModule::LaunchFreetextKbPrompt(const String &header)
+{
+    // Set custom header and callback mode
+    customHeader = header;
+    customCallback = true;
+    
+    // Don't set a specific destination for custom prompts
+    // This allows the prompt to be used for configuration rather than messaging
+    
     runState = CANNED_MESSAGE_RUN_STATE_FREETEXT;
     requestFocus();
     UIFrameEvent e;
@@ -193,6 +217,13 @@ int CannedMessageModule::splitConfiguredMessages()
 }
 void CannedMessageModule::drawHeader(OLEDDisplay *display, int16_t x, int16_t y, char *buffer)
 {
+    // Use custom header if available and in callback mode
+    if (customCallback && !customHeader.isEmpty()) {
+        display->drawStringf(x, y, buffer, "%s", customHeader.c_str());
+        return;
+    }
+    
+    // Default node/channel header
     if (graphics::isHighResolution) {
         if (this->dest == NODENUM_BROADCAST) {
             display->drawStringf(x, y, buffer, "To: Broadcast@%s", channels.getName(this->channel));
@@ -581,6 +612,10 @@ bool CannedMessageModule::handleMessageSelectorInput(const InputEvent *event, bo
         cursor = 0;
         payload = 0;
         currentMessageIndex = -1;
+        
+        // Clear custom callback state
+        customHeader = "";
+        customCallback = false;
 
         // Notify UI that we want to redraw/close this screen
         UIFrameEvent e;
@@ -1830,7 +1865,8 @@ void CannedMessageModule::drawFrame(OLEDDisplay *display, OLEDDisplayUiState *st
         drawHeader(display, x, y, buffer);
 
         // --- Char count right-aligned ---
-        if (runState != CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION) {
+        // Only show character count for normal messaging, not for custom callbacks (like WiFi)
+        if (runState != CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION && !customCallback) {
             uint16_t charsLeft =
                 meshtastic_Constants_DATA_PAYLOAD_LEN - this->freetext.length() - (moduleConfig.canned_message.send_bell ? 1 : 0);
             snprintf(buffer, sizeof(buffer), "%d left", charsLeft);
