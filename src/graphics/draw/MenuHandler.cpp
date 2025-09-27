@@ -709,7 +709,7 @@ void menuHandler::messageResponseMenu()
 
 void menuHandler::homeBaseMenu()
 {
-    enum optionsNumbers { Back, Backlight, Position, Preset, Freetext, Sleep, enumEnd };
+    enum optionsNumbers { Back, Backlight, Position, Preset, Freetext, Emote, Sleep, enumEnd };
 
     static const char *optionsArray[enumEnd] = {"Back"};
     static int optionsEnumArray[enumEnd] = {Back};
@@ -738,6 +738,9 @@ void menuHandler::homeBaseMenu()
         optionsArray[options] = "New Freetext Msg";
         optionsEnumArray[options++] = Freetext;
     }
+    // Always add emote option since it works without keyboard
+    optionsArray[options] = "New Emote Msg";
+    optionsEnumArray[options++] = Emote;
 
     BannerOverlayOptions bannerOptions;
 #if defined(M5STACK_UNITC6L)
@@ -778,6 +781,8 @@ void menuHandler::homeBaseMenu()
             cannedMessageModule->LaunchWithDestination(NODENUM_BROADCAST);
         } else if (selected == Freetext) {
             cannedMessageModule->LaunchFreetextWithDestination(NODENUM_BROADCAST);
+        } else if (selected == Emote) {
+            cannedMessageModule->LaunchEmoteDestinationSelection();
         }
     };
     screen->showOverlayBanner(bannerOptions);
@@ -790,7 +795,7 @@ void menuHandler::textMessageMenu()
 
 void menuHandler::textMessageBaseMenu()
 {
-    enum optionsNumbers { Back, Preset, Freetext, enumEnd };
+    enum optionsNumbers { Back, Preset, Freetext, Emote, enumEnd };
 
     static const char *optionsArray[enumEnd] = {"Back"};
     static int optionsEnumArray[enumEnd] = {Back};
@@ -801,6 +806,9 @@ void menuHandler::textMessageBaseMenu()
         optionsArray[options] = "New Freetext Msg";
         optionsEnumArray[options++] = Freetext;
     }
+    // Always add emote option since it works without keyboard
+    optionsArray[options] = "New Emote Msg";
+    optionsEnumArray[options++] = Emote;
 
     BannerOverlayOptions bannerOptions;
     bannerOptions.message = "Message Action";
@@ -812,6 +820,8 @@ void menuHandler::textMessageBaseMenu()
             cannedMessageModule->LaunchWithDestination(NODENUM_BROADCAST);
         } else if (selected == Freetext) {
             cannedMessageModule->LaunchFreetextWithDestination(NODENUM_BROADCAST);
+        } else if (selected == Emote) {
+            cannedMessageModule->LaunchEmoteDestinationSelection();
         }
     };
     screen->showOverlayBanner(bannerOptions);
@@ -892,7 +902,7 @@ void menuHandler::systemBaseMenu()
 
 void menuHandler::favoriteBaseMenu()
 {
-    enum optionsNumbers { Back, Preset, Freetext, Remove, TraceRoute, enumEnd };
+    enum optionsNumbers { Back, Preset, Freetext, Emote, Remove, TraceRoute, enumEnd };
 #if defined(M5STACK_UNITC6L)
     static const char *optionsArray[enumEnd] = {"Back", "New Preset"};
 #else
@@ -905,6 +915,9 @@ void menuHandler::favoriteBaseMenu()
         optionsArray[options] = "New Freetext Msg";
         optionsEnumArray[options++] = Freetext;
     }
+    // Always add emote option since it works without keyboard
+    optionsArray[options] = "New Emote Msg";
+    optionsEnumArray[options++] = Emote;
 #if !defined(M5STACK_UNITC6L)
     optionsArray[options] = "Trace Route";
     optionsEnumArray[options++] = TraceRoute;
@@ -926,6 +939,8 @@ void menuHandler::favoriteBaseMenu()
             cannedMessageModule->LaunchWithDestination(graphics::UIRenderer::currentFavoriteNodeNum);
         } else if (selected == Freetext) {
             cannedMessageModule->LaunchFreetextWithDestination(graphics::UIRenderer::currentFavoriteNodeNum);
+        } else if (selected == Emote) {
+            cannedMessageModule->LaunchEmoteDestinationSelection();
         } else if (selected == Remove) {
             menuHandler::menuQueue = menuHandler::remove_favorite;
             screen->runNow();

@@ -18,6 +18,7 @@ enum cannedMessageModuleRunState {
     CANNED_MESSAGE_RUN_STATE_ACTION_UP,
     CANNED_MESSAGE_RUN_STATE_ACTION_DOWN,
     CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION,
+    CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE, // New state for emote destination selection
     CANNED_MESSAGE_RUN_STATE_FREETEXT,
     CANNED_MESSAGE_RUN_STATE_MESSAGE_SELECTION,
     CANNED_MESSAGE_RUN_STATE_EMOTE_PICKER
@@ -62,12 +63,21 @@ class CannedMessageModule : public SinglePortModule, public Observable<const UIF
     void LaunchWithDestination(NodeNum, uint8_t newChannel = 0);
     void LaunchRepeatDestination();
     void LaunchFreetextWithDestination(NodeNum, uint8_t newChannel = 0);
+    void LaunchEmotePickerWithDestination(NodeNum, uint8_t newChannel = 0);
+    void LaunchEmoteDestinationSelection();                  // Launch destination selection for emote messages
+    void LaunchEmoteCarousel(NodeNum dest, uint8_t channel); // Launch emoji carousel for sending
     void LaunchFreetextPrompt(const char *header, const std::string &initial, std::function<void(const std::string &)> onSubmit);
     void LaunchFreetextKbPrompt(const char *header, const std::string &initial,
                                 std::function<void(const std::string &)> onSubmit);
 
     // === Emote Picker navigation ===
     int emotePickerIndex = 0; // Tracks currently selected emote in the picker
+
+    // === Emoji Carousel ===
+    bool emoteCarouselActive = false;
+    NodeNum emoteCarouselDest = NODENUM_BROADCAST;
+    uint8_t emoteCarouselChannel = 0;
+    int emoteCarouselIndex = 0; // Current emoji index in carousel
 
     // === Message navigation ===
     const char *getCurrentMessage();
@@ -199,6 +209,7 @@ class CannedMessageModule : public SinglePortModule, public Observable<const UIF
     bool shift = false;
     int charSet = 0; // 0=ABC, 1=123
 #endif
+    bool emoteDirectSend = false;
 
     bool isUpEvent(const InputEvent *event);
     bool isDownEvent(const InputEvent *event);

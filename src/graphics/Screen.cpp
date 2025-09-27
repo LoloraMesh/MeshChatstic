@@ -40,6 +40,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "draw/UIRenderer.h"
 #include "modules/CannedMessageModule.h"
 
+// External module references
+extern CannedMessageModule *cannedMessageModule;
+
 #if !MESHTASTIC_EXCLUDE_GPS
 #include "GPS.h"
 #include "buzz.h"
@@ -279,6 +282,77 @@ static void drawModuleFrame(OLEDDisplay *display, OLEDDisplayUiState *state, int
     // LOG_DEBUG("Draw Module Frame %d", module_frame);
     MeshModule &pi = *moduleFrames.at(module_frame);
     pi.drawFrame(display, state, x, y);
+}
+
+// Custom emoji selection display - shows left, center (selected), right emojis
+static void drawEmojiSelectionFrame(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y)
+{
+    // Get unique emojis and current index
+    int uniqueEmoteCount;
+    const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+
+    if (uniqueEmoteCount == 0 || !cannedMessageModule) {
+        display->setFont(FONT_MEDIUM);
+        display->setTextAlignment(TEXT_ALIGN_CENTER);
+        display->drawString(display->getWidth() / 2, 30, "No emojis available");
+        return;
+    }
+
+    int currentIndex = cannedMessageModule->emoteCarouselIndex;
+
+    // Ensure index is within bounds
+    if (currentIndex >= uniqueEmoteCount) {
+        currentIndex = 0;
+        cannedMessageModule->emoteCarouselIndex = 0;
+    }
+
+    // Calculate previous and next emoji indices with wrapping
+    int prevIndex = (currentIndex - 1 + uniqueEmoteCount) % uniqueEmoteCount;
+    int nextIndex = (currentIndex + 1) % uniqueEmoteCount;
+
+    // Clear screen
+    display->clear();
+    display->setColor(WHITE);
+
+    // Screen center coordinates
+    int centerX = display->getWidth() / 2;
+    int centerY = display->getHeight() / 2;
+
+    // Draw center emoji (selected) - larger and more prominent
+    const graphics::Emote &centerEmote = uniqueEmotes[currentIndex];
+    int centerEmoteX = centerX - centerEmote.width / 2;
+    int centerEmoteY = centerY - centerEmote.height / 2 - 5;
+    display->drawXbm(centerEmoteX, centerEmoteY, centerEmote.width, centerEmote.height, centerEmote.bitmap);
+
+    // Draw selection box around center emoji
+    display->drawRect(centerEmoteX - 2, centerEmoteY - 2, centerEmote.width + 4, centerEmote.height + 4);
+
+    // Draw left emoji (smaller, semi-transparent effect by drawing at different position)
+    const graphics::Emote &leftEmote = uniqueEmotes[prevIndex];
+    int leftEmoteX = centerX / 2 - leftEmote.width / 2;
+    int leftEmoteY = centerY - leftEmote.height / 2;
+    display->drawXbm(leftEmoteX, leftEmoteY, leftEmote.width, leftEmote.height, leftEmote.bitmap);
+
+    // Draw right emoji (smaller, semi-transparent effect by drawing at different position)
+    const graphics::Emote &rightEmote = uniqueEmotes[nextIndex];
+    int rightEmoteX = centerX + centerX / 2 - rightEmote.width / 2;
+    int rightEmoteY = centerY - rightEmote.height / 2;
+    display->drawXbm(rightEmoteX, rightEmoteY, rightEmote.width, rightEmote.height, rightEmote.bitmap);
+
+    // Draw emoji label below center emoji
+    display->setFont(FONT_SMALL);
+    display->setTextAlignment(TEXT_ALIGN_CENTER);
+    display->drawString(centerX, centerEmoteY + centerEmote.height + 8, centerEmote.label);
+
+    // Draw position indicator (like "3/20") at bottom of screen
+    String positionInfo = String(currentIndex + 1) + "/" + String(uniqueEmoteCount);
+    display->drawString(centerX, display->getHeight() - 10, positionInfo);
+
+    // Draw navigation arrows
+    display->setTextAlignment(TEXT_ALIGN_LEFT);
+    display->drawString(5, centerY, "<");
+    display->setTextAlignment(TEXT_ALIGN_RIGHT);
+    display->drawString(display->getWidth() - 5, centerY, ">");
 }
 
 // Ignore messages originating from phone (from the current node 0x0) unless range test or store and forward module are enabled
@@ -1122,6 +1196,22 @@ void Screen::setFrames(FrameFocus focus)
 
     fsi.frameCount = numframes;   // Total framecount is used to apply FOCUS_PRESERVE
     this->frameCount = numframes; // ✅ Save frame count for use in custom overlay
+
+    // === Custom Emoji Display Logic ===
+    if (cannedMessageModule && cannedMessageModule->emoteCarouselActive) {
+        LOG_DEBUG("Creating custom emoji display");
+        numframes = 0;          // Reset frame count
+        indicatorIcons.clear(); // Clear all indicators
+
+        // Add a single frame that shows the custom emoji interface
+        normalFrames[numframes++] = drawEmojiSelectionFrame;
+        // No indicators needed for emoji carousel (single frame only)
+
+        fsi.frameCount = numframes;
+        this->frameCount = numframes;
+        LOG_DEBUG("Created custom emoji display frame");
+    }
+
     LOG_DEBUG("Finished build frames. numframes: %d", numframes);
 
     ui->setFrames(normalFrames, numframes);

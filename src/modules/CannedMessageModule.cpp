@@ -131,6 +131,68 @@ void CannedMessageModule::LaunchFreetextWithDestination(NodeNum newDest, uint8_t
     notifyObservers(&e);
 }
 
+void CannedMessageModule::LaunchEmotePickerWithDestination(NodeNum newDest, uint8_t newChannel)
+{
+    // Use the requested destination, unless it's "broadcast" and we have a previous node/channel
+    if (newDest == NODENUM_BROADCAST && lastDestSet) {
+        newDest = lastDest;
+        newChannel = lastChannel;
+    }
+    dest = newDest;
+    channel = newChannel;
+    lastDest = dest;
+    lastChannel = channel;
+    lastDestSet = true;
+    emoteDirectSend = true; // Flag to send directly instead of inserting
+
+    runState = CANNED_MESSAGE_RUN_STATE_EMOTE_PICKER;
+    requestFocus();
+    UIFrameEvent e;
+    e.action = UIFrameEvent::Action::REGENERATE_FRAMESET;
+    notifyObservers(&e);
+}
+
+void CannedMessageModule::LaunchEmoteDestinationSelection()
+{
+    // Start with destination selection for emote messages
+    runState = CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE;
+
+    // Initialize destination selection indices
+    destIndex = 0;
+    scrollIndex = 0;
+    searchQuery = "";
+
+    // Update the destination list
+    updateDestinationSelectionList();
+
+    requestFocus();
+    UIFrameEvent e;
+    e.action = UIFrameEvent::Action::REGENERATE_FRAMESET;
+    notifyObservers(&e);
+}
+
+void CannedMessageModule::LaunchEmoteCarousel(NodeNum dest, uint8_t channel)
+{
+    // Store destination and channel for sending
+    emoteCarouselDest = dest;
+    emoteCarouselChannel = channel;
+    emoteCarouselActive = true;
+    emoteCarouselIndex = 0; // Start with first emoji
+
+    // Save as last destination
+    lastDest = dest;
+    lastChannel = channel;
+    lastDestSet = true;
+
+    // Request focus and regenerate frameset to show emoji carousel
+    requestFocus();
+    UIFrameEvent e;
+    e.action = UIFrameEvent::Action::REGENERATE_FRAMESET;
+    notifyObservers(&e);
+
+    LOG_INFO("Launched emoji carousel for dest=%x, channel=%d", dest, channel);
+}
+
 void CannedMessageModule::LaunchFreetextKbPrompt(const char *header, const std::string &initial,
                                                  std::function<void(const std::string &)> onSubmit)
 {
@@ -332,7 +394,8 @@ void CannedMessageModule::updateDestinationSelectionList()
 
     scrollIndex = 0; // Show first result at the top
     destIndex = 0;   // Highlight the first entry
-    if (nodesChanged && runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION) {
+    if (nodesChanged && (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+                         runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE)) {
         LOG_INFO("Nodes changed, forcing UI refresh.");
         screen->forceDisplay();
     }
@@ -341,7 +404,8 @@ void CannedMessageModule::updateDestinationSelectionList()
 // Returns true if character input is currently allowed (used for search/freetext states)
 bool CannedMessageModule::isCharInputAllowed() const
 {
-    return runState == CANNED_MESSAGE_RUN_STATE_FREETEXT || runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION;
+    return runState == CANNED_MESSAGE_RUN_STATE_FREETEXT || runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+           runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE;
 }
 /**
  * Main input event dispatcher for CannedMessageModule.
@@ -378,6 +442,7 @@ int CannedMessageModule::handleInputEvent(const InputEvent *event)
     switch (runState) {
     // Node/Channel destination selection mode: Handles character search, arrows, select, cancel, backspace
     case CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION:
+    case CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE:
         if (handleDestinationSelectionInput(event, isUp, isDown, isSelect))
             return 1;
         return 0; // prevent fall-through to selector input
@@ -398,15 +463,88 @@ int CannedMessageModule::handleInputEvent(const InputEvent *event)
 
     case CANNED_MESSAGE_RUN_STATE_INACTIVE:
         if (isSelect) {
+            // Handle emoji carousel selection
+            if (emoteCarouselActive) {
+                // Use unique emojis for selection
+                int uniqueEmoteCount;
+                const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+
+                if (emoteCarouselIndex >= 0 && emoteCarouselIndex < uniqueEmoteCount) {
+                    // Send the selected emoji
+                    String emoteLabel = uniqueEmotes[emoteCarouselIndex].label;
+                    LOG_INFO("Sending unique emoji from carousel: %s to dest=%x, channel=%d", emoteLabel.c_str(),
+                             emoteCarouselDest, emoteCarouselChannel);
+
+                    // Send the message
+                    sendText(emoteCarouselDest, emoteCarouselChannel, emoteLabel.c_str(), false);
+
+                    // Reset carousel state and go directly to inactive (no "Sending..." message for emojis)
+                    emoteCarouselActive = false;
+                    emoteCarouselIndex = 0;
+                    runState = CANNED_MESSAGE_RUN_STATE_INACTIVE;
+
+                    // Return to normal screen frames
+                    screen->setFrames(graphics::Screen::FOCUS_DEFAULT);
+                    return 1;
+                }
+            }
             return 0; // Main button press no longer runs through powerFSM
         }
-        // Let LEFT/RIGHT pass through so frame navigation works
-        if (event->inputEvent == INPUT_BROKER_LEFT || event->inputEvent == INPUT_BROKER_RIGHT) {
+        // Handle USER_PRESS when in emoji carousel (navigate right like standard button behavior)
+        if (event->inputEvent == INPUT_BROKER_USER_PRESS && emoteCarouselActive) {
+            // Track emoji carousel navigation using unique emojis
+            int uniqueEmoteCount;
+            graphics::getUniqueEmotes(uniqueEmoteCount);
+
+            // USER_PRESS = navigate to next emoji (RIGHT behavior)
+            emoteCarouselIndex = (emoteCarouselIndex + 1) % uniqueEmoteCount;
+
+            const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+            LOG_DEBUG("Emoji carousel navigation via USER_PRESS: index=%d, emoji=%s", emoteCarouselIndex,
+                      uniqueEmotes[emoteCarouselIndex].label);
+
+            // Force screen update to show new emoji immediately
+            screen->forceDisplay(true);
+            return 1;
+        }
+
+        // Let LEFT/RIGHT pass through so frame navigation works, but track carousel position
+        // Also support UP/DOWN for rotary encoders that might be configured differently
+        if (event->inputEvent == INPUT_BROKER_LEFT || event->inputEvent == INPUT_BROKER_RIGHT ||
+            (emoteCarouselActive && (event->inputEvent == INPUT_BROKER_UP || event->inputEvent == INPUT_BROKER_DOWN))) {
+            if (emoteCarouselActive) {
+                // Track emoji carousel navigation using unique emojis
+                int uniqueEmoteCount;
+                graphics::getUniqueEmotes(uniqueEmoteCount);
+
+                // Handle LEFT/UP as previous emoji, RIGHT/DOWN as next emoji
+                if (event->inputEvent == INPUT_BROKER_LEFT || event->inputEvent == INPUT_BROKER_UP) {
+                    emoteCarouselIndex = (emoteCarouselIndex - 1 + uniqueEmoteCount) % uniqueEmoteCount;
+                } else {
+                    emoteCarouselIndex = (emoteCarouselIndex + 1) % uniqueEmoteCount;
+                }
+
+                const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+                LOG_DEBUG("Emoji carousel navigation: index=%d, emoji=%s", emoteCarouselIndex,
+                          uniqueEmotes[emoteCarouselIndex].label);
+
+                // Force screen update to show new emoji immediately
+                screen->forceDisplay(true);
+                return 1;
+            }
             break;
         }
-        // Handle UP/DOWN: activate canned message list!
-        if (event->inputEvent == INPUT_BROKER_UP || event->inputEvent == INPUT_BROKER_DOWN ||
-            event->inputEvent == INPUT_BROKER_ALT_LONG) {
+        // Handle CANCEL to exit emoji carousel
+        if ((event->inputEvent == INPUT_BROKER_CANCEL || event->inputEvent == INPUT_BROKER_ALT_LONG) && emoteCarouselActive) {
+            LOG_INFO("Cancelling emoji carousel");
+            emoteCarouselActive = false;
+            emoteCarouselIndex = 0;
+            screen->setFrames(graphics::Screen::FOCUS_DEFAULT);
+            return 1;
+        }
+        // Handle UP/DOWN: activate canned message list (only if not in emoji carousel)
+        if (!emoteCarouselActive && (event->inputEvent == INPUT_BROKER_UP || event->inputEvent == INPUT_BROKER_DOWN ||
+                                     event->inputEvent == INPUT_BROKER_ALT_LONG)) {
             LaunchWithDestination(NODENUM_BROADCAST);
             return 1;
         }
@@ -440,14 +578,16 @@ bool CannedMessageModule::isUpEvent(const InputEvent *event)
 {
     return event->inputEvent == INPUT_BROKER_UP ||
            ((runState == CANNED_MESSAGE_RUN_STATE_ACTIVE || runState == CANNED_MESSAGE_RUN_STATE_EMOTE_PICKER ||
-             runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION) &&
+             runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+             runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE) &&
             (event->inputEvent == INPUT_BROKER_LEFT || event->inputEvent == INPUT_BROKER_ALT_PRESS));
 }
 bool CannedMessageModule::isDownEvent(const InputEvent *event)
 {
     return event->inputEvent == INPUT_BROKER_DOWN ||
            ((runState == CANNED_MESSAGE_RUN_STATE_ACTIVE || runState == CANNED_MESSAGE_RUN_STATE_EMOTE_PICKER ||
-             runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION) &&
+             runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+             runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE) &&
             (event->inputEvent == INPUT_BROKER_RIGHT || event->inputEvent == INPUT_BROKER_USER_PRESS));
 }
 bool CannedMessageModule::isSelectEvent(const InputEvent *event)
@@ -460,13 +600,16 @@ bool CannedMessageModule::handleTabSwitch(const InputEvent *event)
     if (event->kbchar != 0x09)
         return false;
 
-    runState = (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION) ? CANNED_MESSAGE_RUN_STATE_FREETEXT
-                                                                            : CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION;
+    runState = (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+                runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE)
+                   ? CANNED_MESSAGE_RUN_STATE_FREETEXT
+                   : CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION;
 
     destIndex = 0;
     scrollIndex = 0;
     // RESTORE THIS!
-    if (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION)
+    if (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+        runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE)
         updateDestinationSelectionList();
     requestFocus();
 
@@ -480,7 +623,8 @@ bool CannedMessageModule::handleTabSwitch(const InputEvent *event)
 int CannedMessageModule::handleDestinationSelectionInput(const InputEvent *event, bool isUp, bool isDown, bool isSelect)
 {
     // Override isDown and isSelect ONLY for destination selector behavior
-    if (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION) {
+    if (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+        runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE) {
         if (event->inputEvent == INPUT_BROKER_USER_PRESS) {
             isDown = true;
         } else if (event->inputEvent == INPUT_BROKER_SELECT) {
@@ -574,16 +718,30 @@ int CannedMessageModule::handleDestinationSelectionInput(const InputEvent *event
             }
         }
 
-        runState = returnToCannedList ? CANNED_MESSAGE_RUN_STATE_ACTIVE : CANNED_MESSAGE_RUN_STATE_FREETEXT;
-        returnToCannedList = false;
+        // Decide next state based on current state
+        if (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE) {
+            // For emote selection, launch the emoji carousel after selecting destination
+            runState = CANNED_MESSAGE_RUN_STATE_INACTIVE; // Return to inactive to allow carousel takeover
+            LaunchEmoteCarousel(dest, channel);
+        } else {
+            // Regular destination selection behavior
+            runState = returnToCannedList ? CANNED_MESSAGE_RUN_STATE_ACTIVE : CANNED_MESSAGE_RUN_STATE_FREETEXT;
+            returnToCannedList = false;
+        }
         screen->forceDisplay(true);
         return 1;
     }
 
     // CANCEL
     if (event->inputEvent == INPUT_BROKER_CANCEL || event->inputEvent == INPUT_BROKER_ALT_LONG) {
-        runState = returnToCannedList ? CANNED_MESSAGE_RUN_STATE_ACTIVE : CANNED_MESSAGE_RUN_STATE_FREETEXT;
-        returnToCannedList = false;
+        if (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE) {
+            // For emote destination selection, go back to inactive state
+            runState = CANNED_MESSAGE_RUN_STATE_INACTIVE;
+        } else {
+            // Regular destination selection behavior
+            runState = returnToCannedList ? CANNED_MESSAGE_RUN_STATE_ACTIVE : CANNED_MESSAGE_RUN_STATE_FREETEXT;
+            returnToCannedList = false;
+        }
         searchQuery = "";
 
         // UIFrameEvent e;
@@ -607,7 +765,8 @@ bool CannedMessageModule::handleMessageSelectorInput(const InputEvent *event, bo
         }
     }
 
-    if (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION)
+    if (runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+        runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE)
         return false;
 
     // === Handle Cancel key: go inactive, clear UI state ===
@@ -845,6 +1004,7 @@ bool CannedMessageModule::handleFreeTextInput(const InputEvent *event)
     // ---- All hardware keys fall through to here (CardKB, physical, etc.) ----
 
     if (event->kbchar == INPUT_BROKER_MSG_EMOTE_LIST) {
+        emoteDirectSend = false; // Reset flag - this is freetext insertion mode
         runState = CANNED_MESSAGE_RUN_STATE_EMOTE_PICKER;
         requestFocus();
         screen->forceDisplay();
@@ -960,17 +1120,10 @@ int CannedMessageModule::handleEmotePickerInput(const InputEvent *event)
 {
     int numEmotes = graphics::numEmotes;
 
-    // Override isDown and isSelect ONLY for emote picker behavior
+    // Use standard event detection - no override needed
     bool isUp = isUpEvent(event);
     bool isDown = isDownEvent(event);
     bool isSelect = isSelectEvent(event);
-    if (runState == CANNED_MESSAGE_RUN_STATE_EMOTE_PICKER) {
-        if (event->inputEvent == INPUT_BROKER_USER_PRESS) {
-            isDown = true;
-        } else if (event->inputEvent == INPUT_BROKER_SELECT) {
-            isSelect = true;
-        }
-    }
 
     // Scroll emote list
     if (isUp && emotePickerIndex > 0) {
@@ -984,24 +1137,41 @@ int CannedMessageModule::handleEmotePickerInput(const InputEvent *event)
         return 1;
     }
 
-    // Select emote: insert into freetext at cursor and return to freetext
+    // Select emote: either send directly or insert into freetext
     if (isSelect) {
         String label = graphics::emotes[emotePickerIndex].label;
-        String emoteInsert = label; // Just the text label, e.g., ":thumbsup:"
-        if (cursor == freetext.length()) {
-            freetext += emoteInsert;
+
+        if (emoteDirectSend) {
+            // Direct send mode - send the emoji message directly
+            LOG_INFO("Sending emote directly: %s", label.c_str());
+            sendText(dest, channel, label.c_str(), false);
+            emoteDirectSend = false;                            // Reset flag
+            runState = CANNED_MESSAGE_RUN_STATE_SENDING_ACTIVE; // Show "Sending..." state
         } else {
-            freetext = freetext.substring(0, cursor) + emoteInsert + freetext.substring(cursor);
+            // Insert into freetext mode - original behavior
+            String emoteInsert = label; // Just the text label, e.g., ":thumbsup:"
+            if (cursor == freetext.length()) {
+                freetext += emoteInsert;
+            } else {
+                freetext = freetext.substring(0, cursor) + emoteInsert + freetext.substring(cursor);
+            }
+            cursor += emoteInsert.length();
+            runState = CANNED_MESSAGE_RUN_STATE_FREETEXT;
         }
-        cursor += emoteInsert.length();
-        runState = CANNED_MESSAGE_RUN_STATE_FREETEXT;
         screen->forceDisplay();
         return 1;
     }
 
-    // Cancel returns to freetext
+    // Cancel returns to freetext or inactive depending on mode
     if (event->inputEvent == INPUT_BROKER_CANCEL || event->inputEvent == INPUT_BROKER_ALT_LONG) {
-        runState = CANNED_MESSAGE_RUN_STATE_FREETEXT;
+        if (emoteDirectSend) {
+            // Direct send mode - return to inactive and reset flag
+            emoteDirectSend = false;
+            runState = CANNED_MESSAGE_RUN_STATE_INACTIVE;
+        } else {
+            // Freetext mode - return to freetext
+            runState = CANNED_MESSAGE_RUN_STATE_FREETEXT;
+        }
         screen->forceDisplay();
         return 1;
     }
@@ -1713,25 +1883,18 @@ void CannedMessageModule::drawDestinationSelectionScreen(OLEDDisplay *display, O
 
 void CannedMessageModule::drawEmotePickerScreen(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y)
 {
-    const int headerFontHeight = FONT_HEIGHT_SMALL; // Make sure this matches your actual small font height
-    const int headerMargin = 2;                     // Extra pixels below header
+    const int headerFontHeight = FONT_HEIGHT_SMALL;
+    const int headerMargin = 2;
     const int labelGap = 6;
     const int bitmapGapX = 4;
-
-    // Find max emote height (assume all same, or precalculated)
-    int maxEmoteHeight = 0;
-    for (int i = 0; i < graphics::numEmotes; ++i)
-        if (graphics::emotes[i].height > maxEmoteHeight)
-            maxEmoteHeight = graphics::emotes[i].height;
-
-    const int rowHeight = maxEmoteHeight + 2;
+    const int rowHeight = 32; // Increased to accommodate emoji heights (25-30px) plus spacing
 
     // Place header at top, then compute start of emote list
     int headerY = y;
     int listTop = headerY + headerFontHeight + headerMargin;
 
-    int _visibleRows = (display->getHeight() - listTop - 2) / rowHeight;
     int numEmotes = graphics::numEmotes;
+    int _visibleRows = (display->getHeight() - listTop - 2) / rowHeight;
 
     // Clamp highlight index
     if (emotePickerIndex < 0)
@@ -1739,12 +1902,14 @@ void CannedMessageModule::drawEmotePickerScreen(OLEDDisplay *display, OLEDDispla
     if (emotePickerIndex >= numEmotes)
         emotePickerIndex = numEmotes - 1;
 
-    // Determine which emote is at the top
-    int topIndex = emotePickerIndex - _visibleRows / 2;
-    if (topIndex < 0)
-        topIndex = 0;
-    if (topIndex > numEmotes - _visibleRows)
+    // Simple scroll logic - keep selected item visible
+    int topIndex = 0;
+    if (emotePickerIndex >= _visibleRows) {
+        topIndex = emotePickerIndex - _visibleRows + 1;
+    }
+    if (topIndex > numEmotes - _visibleRows) {
         topIndex = std::max(0, numEmotes - _visibleRows);
+    }
 
     // Draw header/title
     display->setFont(FONT_SMALL);
@@ -1754,26 +1919,24 @@ void CannedMessageModule::drawEmotePickerScreen(OLEDDisplay *display, OLEDDispla
     // Draw emote rows
     display->setTextAlignment(TEXT_ALIGN_LEFT);
 
-    for (int vis = 0; vis < visibleRows; ++vis) {
+    for (int vis = 0; vis < _visibleRows && vis < numEmotes - topIndex; ++vis) {
         int emoteIdx = topIndex + vis;
-        if (emoteIdx >= numEmotes)
-            break;
         const graphics::Emote &emote = graphics::emotes[emoteIdx];
         int rowY = listTop + vis * rowHeight;
 
-        // Draw highlight box 2px taller than emote (1px margin above and below)
+        // Draw highlight box for selected item
         if (emoteIdx == emotePickerIndex) {
-            display->fillRect(x, rowY, display->getWidth() - 8, emote.height + 2);
+            display->fillRect(x, rowY, display->getWidth() - 8, rowHeight);
             display->setColor(BLACK);
         }
 
-        // Emote bitmap (left), 1px margin from highlight bar top
-        int emoteY = rowY + 1;
+        // Center emote bitmap vertically in row
+        int emoteY = rowY + (rowHeight - emote.height) / 2;
         display->drawXbm(x + bitmapGapX, emoteY, emote.width, emote.height, emote.bitmap);
 
-        // Emote label (right of bitmap)
+        // Center emote label vertically in row
         display->setFont(FONT_MEDIUM);
-        int labelY = rowY + ((rowHeight - FONT_HEIGHT_MEDIUM) / 2);
+        int labelY = rowY + (rowHeight - FONT_HEIGHT_MEDIUM) / 2;
         display->drawString(x + bitmapGapX + emote.width + labelGap, labelY, emote.label);
 
         if (emoteIdx == emotePickerIndex)
@@ -1781,11 +1944,11 @@ void CannedMessageModule::drawEmotePickerScreen(OLEDDisplay *display, OLEDDispla
     }
 
     // Draw scrollbar if needed
-    if (numEmotes > visibleRows) {
-        int scrollbarHeight = visibleRows * rowHeight;
+    if (numEmotes > _visibleRows) {
+        int scrollbarHeight = _visibleRows * rowHeight;
         int scrollTrackX = display->getWidth() - 6;
         display->drawRect(scrollTrackX, listTop, 4, scrollbarHeight);
-        int scrollBarLen = std::max(6, (scrollbarHeight * visibleRows) / numEmotes);
+        int scrollBarLen = std::max(6, (scrollbarHeight * _visibleRows) / numEmotes);
         int scrollBarPos = listTop + (scrollbarHeight * topIndex) / numEmotes;
         display->fillRect(scrollTrackX, scrollBarPos, 4, scrollBarLen);
     }
@@ -1815,7 +1978,8 @@ void CannedMessageModule::drawFrame(OLEDDisplay *display, OLEDDisplayUiState *st
     }
 
     // === Destination Selection ===
-    if (this->runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION) {
+    if (this->runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
+        this->runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE) {
         drawDestinationSelectionScreen(display, state, x, y);
         return;
     }
