@@ -61,6 +61,7 @@ class CannedMessageModule : public SinglePortModule, public Observable<const UIF
     void LaunchWithDestination(NodeNum, uint8_t newChannel = 0);
     void LaunchRepeatDestination();
     void LaunchFreetextWithDestination(NodeNum, uint8_t newChannel = 0);
+    void LaunchFreetextKbPrompt(const String &header);
 
     // === Emote Picker navigation ===
     int emotePickerIndex = 0; // Tracks currently selected emote in the picker
@@ -186,6 +187,10 @@ class CannedMessageModule : public SinglePortModule, public Observable<const UIF
     static constexpr uint32_t filterDebounceMs = 30;
     std::vector<uint8_t> activeChannelIndices;
     std::vector<NodeEntry> filteredNodes;
+    
+    // === Custom Prompt Support ===
+    String customHeader;
+    bool customCallback = false;
 
 #if defined(USE_VIRTUAL_KEYBOARD)
     bool shift = false;
