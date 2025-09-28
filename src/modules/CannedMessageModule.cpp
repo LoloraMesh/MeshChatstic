@@ -176,13 +176,15 @@ void CannedMessageModule::LaunchEmoteCarousel(NodeNum dest, uint8_t channel)
     // Store destination and channel for sending
     emoteCarouselDest = dest;
     emoteCarouselChannel = channel;
-    emoteCarouselActive = true;
     emoteCarouselIndex = 0; // Start with first emoji
 
     // Save as last destination
     lastDest = dest;
     lastChannel = channel;
     lastDestSet = true;
+
+    // Set runState to emote carousel
+    runState = CANNED_MESSAGE_RUN_STATE_EMOTE_CAROUSEL;
 
     // Request focus and regenerate frameset to show emoji carousel
     requestFocus();
@@ -249,6 +251,9 @@ int CannedMessageModule::splitConfiguredMessages()
     // Insert at position 0 (top)
     tempMessages[tempCount++] = "[Select Destination]";
 #if defined(USE_VIRTUAL_KEYBOARD)
+    static bool shiftLock = false;
+    static unsigned long lastShiftPress = 0;
+    static const unsigned long SHIFT_LOCK_DOUBLECLICK_MS = 500;
     // Add a "Free Text" entry at the top if using a touch screen virtual keyboard
     tempMessages[tempCount++] = "[-- Free Text --]";
 #else
@@ -461,101 +466,22 @@ int CannedMessageModule::handleInputEvent(const InputEvent *event)
     case CANNED_MESSAGE_RUN_STATE_EMOTE_PICKER:
         return handleEmotePickerInput(event);
 
+    case CANNED_MESSAGE_RUN_STATE_EMOTE_CAROUSEL:
+        return handleEmoteCarouselInput(event);
+
     case CANNED_MESSAGE_RUN_STATE_INACTIVE:
-        if (isSelect) {
-            // Handle emoji carousel selection
-            if (emoteCarouselActive) {
-                // Use unique emojis for selection
-                int uniqueEmoteCount;
-                const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
-
-                if (emoteCarouselIndex >= 0 && emoteCarouselIndex < uniqueEmoteCount) {
-                    // Send the selected emoji
-                    String emoteLabel = uniqueEmotes[emoteCarouselIndex].label;
-                    LOG_INFO("Sending unique emoji from carousel: %s to dest=%x, channel=%d", emoteLabel.c_str(),
-                             emoteCarouselDest, emoteCarouselChannel);
-
-                    // Send the message
-                    sendText(emoteCarouselDest, emoteCarouselChannel, emoteLabel.c_str(), false);
-
-                    // Reset carousel state and go directly to inactive (no "Sending..." message for emojis)
-                    emoteCarouselActive = false;
-                    emoteCarouselIndex = 0;
-                    runState = CANNED_MESSAGE_RUN_STATE_INACTIVE;
-
-                    // Return to normal screen frames
-                    screen->setFrames(graphics::Screen::FOCUS_DEFAULT);
-                    return 1;
-                }
-            }
-            return 0; // Main button press no longer runs through powerFSM
-        }
-        // Handle USER_PRESS when in emoji carousel (navigate right like standard button behavior)
-        if (event->inputEvent == INPUT_BROKER_USER_PRESS && emoteCarouselActive) {
-            // Track emoji carousel navigation using unique emojis
-            int uniqueEmoteCount;
-            graphics::getUniqueEmotes(uniqueEmoteCount);
-
-            // USER_PRESS = navigate to next emoji (RIGHT behavior)
-            emoteCarouselIndex = (emoteCarouselIndex + 1) % uniqueEmoteCount;
-
-            const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
-            LOG_DEBUG("Emoji carousel navigation via USER_PRESS: index=%d, emoji=%s", emoteCarouselIndex,
-                      uniqueEmotes[emoteCarouselIndex].label);
-
-            // Force screen update to show new emoji immediately
-            screen->forceDisplay(true);
-            return 1;
-        }
-
-        // Let LEFT/RIGHT pass through so frame navigation works, but track carousel position
-        // Also support UP/DOWN for rotary encoders that might be configured differently
-        if (event->inputEvent == INPUT_BROKER_LEFT || event->inputEvent == INPUT_BROKER_RIGHT ||
-            (emoteCarouselActive && (event->inputEvent == INPUT_BROKER_UP || event->inputEvent == INPUT_BROKER_DOWN))) {
-            if (emoteCarouselActive) {
-                // Track emoji carousel navigation using unique emojis
-                int uniqueEmoteCount;
-                graphics::getUniqueEmotes(uniqueEmoteCount);
-
-                // Handle LEFT/UP as previous emoji, RIGHT/DOWN as next emoji
-                if (event->inputEvent == INPUT_BROKER_LEFT || event->inputEvent == INPUT_BROKER_UP) {
-                    emoteCarouselIndex = (emoteCarouselIndex - 1 + uniqueEmoteCount) % uniqueEmoteCount;
-                } else {
-                    emoteCarouselIndex = (emoteCarouselIndex + 1) % uniqueEmoteCount;
-                }
-
-                const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
-                LOG_DEBUG("Emoji carousel navigation: index=%d, emoji=%s", emoteCarouselIndex,
-                          uniqueEmotes[emoteCarouselIndex].label);
-
-                // Force screen update to show new emoji immediately
-                screen->forceDisplay(true);
-                return 1;
-            }
-            break;
-        }
-        // Handle CANCEL to exit emoji carousel
-        if ((event->inputEvent == INPUT_BROKER_CANCEL || event->inputEvent == INPUT_BROKER_ALT_LONG) && emoteCarouselActive) {
-            LOG_INFO("Cancelling emoji carousel");
-            emoteCarouselActive = false;
-            emoteCarouselIndex = 0;
-            screen->setFrames(graphics::Screen::FOCUS_DEFAULT);
-            return 1;
-        }
-        // Handle UP/DOWN: activate canned message list (only if not in emoji carousel)
-        if (!emoteCarouselActive && (event->inputEvent == INPUT_BROKER_UP || event->inputEvent == INPUT_BROKER_DOWN ||
-                                     event->inputEvent == INPUT_BROKER_ALT_LONG)) {
+        // El resto del menú funciona normalmente
+        if (event->inputEvent == INPUT_BROKER_UP || event->inputEvent == INPUT_BROKER_DOWN ||
+            event->inputEvent == INPUT_BROKER_ALT_LONG) {
             LaunchWithDestination(NODENUM_BROADCAST);
             return 1;
         }
-        // Printable char (ASCII) opens free text compose
         if (event->kbchar >= 32 && event->kbchar <= 126) {
             runState = CANNED_MESSAGE_RUN_STATE_FREETEXT;
             requestFocus();
             UIFrameEvent e;
             e.action = UIFrameEvent::Action::REGENERATE_FRAMESET;
             notifyObservers(&e);
-            // Immediately process the input in the new state (freetext)
             return handleFreeTextInput(event);
         }
         break;
@@ -954,7 +880,20 @@ bool CannedMessageModule::handleFreeTextInput(const InputEvent *event)
         if (keyTapped == "⇧") {
             highlight = -1;
             payload = 0x00;
-            shift = !shift;
+            unsigned long now = millis();
+            if (shift && !shiftLock && (now - lastShiftPress < SHIFT_LOCK_DOUBLECLICK_MS)) {
+                // Double press: enable shift lock
+                shiftLock = true;
+                shift = true;
+            } else if (shiftLock) {
+                // Third press: disable shift lock
+                shiftLock = false;
+                shift = false;
+            } else {
+                // First press: enable shift (momentary)
+                shift = true;
+            }
+            lastShiftPress = now;
             valid = true;
         } else if (keyTapped == "⌫") {
 #ifndef RAK14014
@@ -988,7 +927,8 @@ bool CannedMessageModule::handleFreeTextInput(const InputEvent *event)
             highlight = keyTapped[0];
 #endif
             payload = shift ? keyTapped[0] : std::tolower(keyTapped[0]);
-            shift = false;
+            if (!shiftLock)
+                shift = false;
             valid = true;
         }
 
@@ -1177,6 +1117,168 @@ int CannedMessageModule::handleEmotePickerInput(const InputEvent *event)
     }
 
     return 0;
+}
+
+int CannedMessageModule::handleEmoteCarouselInput(const InputEvent *event)
+{
+    // Use standard event detection - no override needed
+    bool isUp = isUpEvent(event);
+    bool isDown = isDownEvent(event);
+    bool isSelect = isSelectEvent(event);
+
+    // Handle emoji selection (SELECT)
+    if (isSelect) {
+        int uniqueEmoteCount;
+        const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+        if (emoteCarouselIndex >= 0 && emoteCarouselIndex < uniqueEmoteCount) {
+            String emoteLabel = uniqueEmotes[emoteCarouselIndex].label;
+            LOG_INFO("Sending unique emoji from carousel: %s to dest=%x, channel=%d", emoteLabel.c_str(), emoteCarouselDest,
+                     emoteCarouselChannel);
+            sendText(emoteCarouselDest, emoteCarouselChannel, emoteLabel.c_str(), false);
+            // Reset carousel
+            emoteCarouselIndex = 0;
+            runState = CANNED_MESSAGE_RUN_STATE_SENDING_ACTIVE;
+            // Return to normal screen frames
+            screen->setFrames(graphics::Screen::FOCUS_DEFAULT);
+            return 1;
+        }
+        return 0;
+    }
+
+    // Handle USER_PRESS (advance emoji)
+    if (event->inputEvent == INPUT_BROKER_USER_PRESS) {
+        int uniqueEmoteCount;
+        graphics::getUniqueEmotes(uniqueEmoteCount);
+        if (uniqueEmoteCount > 0) {
+            emoteCarouselIndex = (emoteCarouselIndex + 1) % uniqueEmoteCount;
+            const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+            LOG_DEBUG("Emoji carousel navigation via USER_PRESS: index=%d, emoji=%s", emoteCarouselIndex,
+                      uniqueEmotes[emoteCarouselIndex].label);
+            screen->forceDisplay(true);
+        }
+        return 1;
+    }
+
+    // Handle UP (rotary encoder up)
+    if (event->inputEvent == INPUT_BROKER_UP) {
+        int uniqueEmoteCount;
+        graphics::getUniqueEmotes(uniqueEmoteCount);
+        if (uniqueEmoteCount > 0) {
+            emoteCarouselIndex = (emoteCarouselIndex - 1 + uniqueEmoteCount) % uniqueEmoteCount;
+            const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+            LOG_DEBUG("Emoji carousel navigation UP: index=%d, emoji=%s", emoteCarouselIndex,
+                      uniqueEmotes[emoteCarouselIndex].label);
+            screen->forceDisplay(true);
+        }
+        return 1;
+    }
+
+    // Handle DOWN (rotary encoder down)
+    if (event->inputEvent == INPUT_BROKER_DOWN) {
+        int uniqueEmoteCount;
+        graphics::getUniqueEmotes(uniqueEmoteCount);
+        if (uniqueEmoteCount > 0) {
+            emoteCarouselIndex = (emoteCarouselIndex + 1) % uniqueEmoteCount;
+            const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+            LOG_DEBUG("Emoji carousel navigation DOWN: index=%d, emoji=%s", emoteCarouselIndex,
+                      uniqueEmotes[emoteCarouselIndex].label);
+            screen->forceDisplay(true);
+        }
+        return 1;
+    }
+
+    // Handle LEFT/RIGHT (opcional, por si hay navegación lateral)
+    if (event->inputEvent == INPUT_BROKER_LEFT || event->inputEvent == INPUT_BROKER_RIGHT) {
+        int uniqueEmoteCount;
+        graphics::getUniqueEmotes(uniqueEmoteCount);
+        if (uniqueEmoteCount > 0) {
+            if (event->inputEvent == INPUT_BROKER_LEFT) {
+                emoteCarouselIndex = (emoteCarouselIndex - 1 + uniqueEmoteCount) % uniqueEmoteCount;
+            } else {
+                emoteCarouselIndex = (emoteCarouselIndex + 1) % uniqueEmoteCount;
+            }
+            const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+            LOG_DEBUG("Emoji carousel navigation LEFT/RIGHT: index=%d, emoji=%s", emoteCarouselIndex,
+                      uniqueEmotes[emoteCarouselIndex].label);
+            screen->forceDisplay(true);
+        }
+        return 1;
+    }
+
+    // Handle CANCEL to exit emoji carousel
+    if (event->inputEvent == INPUT_BROKER_CANCEL || event->inputEvent == INPUT_BROKER_ALT_LONG) {
+        LOG_INFO("Cancelling emoji carousel");
+        emoteCarouselIndex = 0;
+        runState = CANNED_MESSAGE_RUN_STATE_INACTIVE;
+        screen->setFrames(graphics::Screen::FOCUS_DEFAULT);
+        return 1;
+    }
+
+    return 0;
+}
+
+void CannedMessageModule::drawEmoteCarouselScreen(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y)
+{
+    requestFocus();
+
+    // Get unique emotes for carousel
+    int uniqueEmoteCount;
+    const graphics::Emote *uniqueEmotes = graphics::getUniqueEmotes(uniqueEmoteCount);
+
+    if (uniqueEmoteCount == 0 || emoteCarouselIndex < 0 || emoteCarouselIndex >= uniqueEmoteCount) {
+        // Fallback if no emotes or invalid index
+        display->setTextAlignment(TEXT_ALIGN_CENTER);
+        display->setFont(FONT_MEDIUM);
+        display->drawString(display->getWidth() / 2 + x, display->getHeight() / 2 + y, "No emotes available");
+        return;
+    }
+
+    // Draw header with destination info
+    display->setTextAlignment(TEXT_ALIGN_LEFT);
+    display->setFont(FONT_SMALL);
+    char headerBuffer[64];
+    if (emoteCarouselDest == NODENUM_BROADCAST) {
+        snprintf(headerBuffer, sizeof(headerBuffer), "To: @%s", channels.getName(emoteCarouselChannel));
+    } else {
+        snprintf(headerBuffer, sizeof(headerBuffer), "To: %s", getNodeName(emoteCarouselDest));
+    }
+    display->drawString(x + 2, y + 2, headerBuffer);
+
+    // Calculate positions for 3 emotes: previous, current, next
+    int centerX = display->getWidth() / 2;
+    int emoteY = display->getHeight() / 2 - 16 + y; // Center vertically, adjust for text
+    int spacing = 48;                               // Space between emotes
+
+    // Previous emote (left)
+    int prevIndex = (emoteCarouselIndex - 1 + uniqueEmoteCount) % uniqueEmoteCount;
+    const graphics::Emote &prevEmote = uniqueEmotes[prevIndex];
+    int prevX = centerX - spacing - (prevEmote.width / 2) + x;
+    display->drawXbm(prevX, emoteY, prevEmote.width, prevEmote.height, prevEmote.bitmap);
+
+    // Current emote (center) - with rectangle
+    const graphics::Emote &currentEmote = uniqueEmotes[emoteCarouselIndex];
+    int currentX = centerX - (currentEmote.width / 2) + x;
+    // Draw selection rectangle
+    display->drawRect(currentX - 4, emoteY - 4, currentEmote.width + 8, currentEmote.height + 8);
+    display->drawXbm(currentX, emoteY, currentEmote.width, currentEmote.height, currentEmote.bitmap);
+
+    // Next emote (right)
+    int nextIndex = (emoteCarouselIndex + 1) % uniqueEmoteCount;
+    const graphics::Emote &nextEmote = uniqueEmotes[nextIndex];
+    int nextX = centerX + spacing - (nextEmote.width / 2) + x;
+    display->drawXbm(nextX, emoteY, nextEmote.width, nextEmote.height, nextEmote.bitmap);
+
+    // Draw emote label below the current bitmap
+    display->setFont(FONT_MEDIUM);
+    display->setTextAlignment(TEXT_ALIGN_CENTER);
+    int labelY = emoteY + currentEmote.height + 6;
+    display->drawString(centerX + x, labelY, currentEmote.label);
+
+    // Draw counter "X/Y" at bottom
+    display->setFont(FONT_SMALL);
+    char counter[16];
+    snprintf(counter, sizeof(counter), "%d/%d", emoteCarouselIndex + 1, uniqueEmoteCount);
+    display->drawString(centerX + x, display->getHeight() - FONT_HEIGHT_SMALL - 2 + y, counter);
 }
 
 void CannedMessageModule::sendText(NodeNum dest, ChannelIndex channel, const char *message, bool wantReplies)
@@ -1977,6 +2079,12 @@ void CannedMessageModule::drawFrame(OLEDDisplay *display, OLEDDisplayUiState *st
         return;
     }
 
+    // === Emote Carousel Screen ===
+    if (this->runState == CANNED_MESSAGE_RUN_STATE_EMOTE_CAROUSEL) {
+        drawEmoteCarouselScreen(display, state, x, y);
+        return;
+    }
+
     // === Destination Selection ===
     if (this->runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION ||
         this->runState == CANNED_MESSAGE_RUN_STATE_DESTINATION_SELECTION_FOR_EMOTE) {
@@ -1994,7 +2102,7 @@ void CannedMessageModule::drawFrame(OLEDDisplay *display, OLEDDisplayUiState *st
         display->setFont(FONT_SMALL);
         int yOffset = y + 10;
 #else
-        display->setFont(FONT_MEDIUM);
+        display->setFont(FONT_SMALL);
 #if defined(M5STACK_UNITC6L)
         int yOffset = y;
 #else
